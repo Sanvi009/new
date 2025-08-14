@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Prompt Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <button id="promptsBtn" class="nav-btn active">
+        <i class="fas fa-lightbulb"></i>
+        <span>Prompts</span>
+      </button>
+      <button id="searchBtn" class="nav-btn">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </button>
+      <button id="infoBtn" class="nav-btn">
+        <i class="fas fa-info-circle"></i>
+      </button>
+    </nav>
+
+    <div id="searchPanel" class="search-panel">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search prompts...">
+        <button id="closeSearch" class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="promptsGrid" class="prompts-grid">
+      <!-- Cards will be inserted here by JavaScript -->
+    </div>
+
+    <div id="expandedView" class="expanded-view">
+      <button id="closeExpanded" class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="expanded-content">
+        <img id="expandedImage" src="" alt="">
+        <h2 id="expandedTitle"></h2>
+        <div class="instruction-box">
+          <h3>Instructions</h3>
+          <p id="expandedInstruction"></p>
+        </div>
+        <div class="prompt-box">
+          <h3>Prompt</h3>
+          <div class="prompt-content">
+            <p id="expandedPrompt"></p>
+            <button id="copyPrompt" class="copy-btn">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <button id="closeInfo" class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <h2>Contact Information</h2>
+        <p>For any inquiries, please contact:</p>
+        <p><i class="fas fa-envelope"></i> sanvialevan2121@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

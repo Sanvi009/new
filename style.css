@@ -1,0 +1,384 @@
+:root {
+  --primary-bg: #e0e5ec;
+  --shadow-dark: #a3b1c6;
+  --shadow-light: #ffffff;
+  --text-color: #2d3748;
+  --accent-color: #6a5acd;
+  --card-radius: 15px;
+  --transition-speed: 0.2s;
+}
+
+body {
+  margin: 0;
+  padding: 15px;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  box-shadow: 8px 8px 15px var(--shadow-dark), 
+              -8px -8px 15px var(--shadow-light);
+}
+
+.nav-btn {
+  border: none;
+  border-radius: var(--card-radius);
+  padding: 12px 20px;
+  background: var(--primary-bg);
+  box-shadow: 5px 5px 10px var(--shadow-dark), 
+              -5px -5px 10px var(--shadow-light);
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 1em;
+  transition: all var(--transition-speed) ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-btn.active {
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+              inset -3px -3px 6px var(--shadow-light);
+  color: var(--accent-color);
+}
+
+/* Modal */
+.modal {
+  display: none; /* Changed from 'flex' to 'none' */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: var(--primary-bg);
+  padding: 30px;
+  border-radius: var(--card-radius);
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: var(--accent-color);
+}
+
+.modal p {
+  margin: 15px 0;
+}
+
+.modal i.fa-envelope {
+  margin-right: 10px;
+  color: var(--accent-color);
+}
+
+/* Rest of your existing CSS remains the same */
+/* ... (all your existing CSS styles below this point) ... */
+
+/* Search Panel */
+.search-panel {
+  display: none;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  box-shadow: inset 5px 5px 10px var(--shadow-dark), 
+              inset -5px -5px 10px var(--shadow-light);
+}
+
+.search-container {
+  display: flex;
+  gap: 10px;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+              inset -3px -3px 6px var(--shadow-light);
+  font-size: 1em;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primary-bg);
+  box-shadow: 3px 3px 6px var(--shadow-dark), 
+              -3px -3px 6px var(--shadow-light);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all var(--transition-speed) ease;
+}
+
+.close-btn:hover {
+  transform: scale(0.95);
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Image Fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Prompts Grid */
+.prompts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.prompt-card {
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  box-shadow: 6px 6px 12px var(--shadow-dark), 
+              -6px -6px 12px var(--shadow-light);
+  overflow: hidden;
+  transition: all var(--transition-speed) ease;
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.prompt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 20px var(--shadow-dark), 
+              -10px -10px 20px var(--shadow-light);
+}
+
+.prompt-card.loading .card-image {
+  background: var(--primary-bg);
+  height: 70%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.prompt-card.loading .card-title {
+  width: 80%;
+  height: 1em;
+  margin: 15px;
+  background: var(--primary-bg);
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.card-image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.card-image.loaded {
+  opacity: 1;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 0.95em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Empty State */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.empty-state i {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+/* Expanded View */
+.expanded-view {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.expanded-content {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#expandedImage {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: var(--card-radius);
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.instruction-box, .prompt-box {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+              inset -3px -3px 6px var(--shadow-light);
+}
+
+.prompt-content {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+#expandedPrompt {
+  flex: 1;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.copy-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary-bg);
+  box-shadow: 3px 3px 6px var(--shadow-dark), 
+              -3px -3px 6px var(--shadow-light);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9em;
+  color: var(--accent-color);
+}
+
+.copy-btn:hover {
+  box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+              inset -2px -2px 5px var(--shadow-light);
+}
+
+.copy-btn.copied {
+  background: rgba(106, 90, 205, 0.1);
+}
+
+.copy-btn i {
+  transition: transform 0.2s ease;
+}
+
+.copy-btn.copied i {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .prompts-grid {
+    grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
+    gap: 15px;
+  }
+
+  .card-image {
+    height: 65%;
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+
+  .card-title {
+    font-size: 0.9em;
+  }
+
+  .expanded-content {
+    padding: 20px;
+  }
+
+  .copy-btn {
+    padding: 8px 12px;
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .prompts-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smallest screens */
+    gap: 10px;
+  }
+
+  .card-title {
+    font-size: 0.85em;
+  }
+
+  .navbar {
+    gap: 8px;
+  }
+
+  .nav-btn {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+
+  .expanded-content {
+    padding: 15px;
+  }
+
+  .instruction-box, .prompt-box {
+    padding: 15px;
+  }
+}
