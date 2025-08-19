@@ -2,23 +2,20 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8F3RQ2LNLK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-8F3RQ2LNLK');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8F3RQ2LNLK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8F3RQ2LNLK');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Prompt Gallery</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622"
-     crossorigin="anonymous"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622"
-     crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
@@ -27,26 +24,40 @@
         <i class="fas fa-lightbulb"></i>
         <span>Prompts</span>
       </button>
-      <button id="searchBtn" class="nav-btn">
-        <i class="fas fa-search"></i>
-        <span>Search</span>
-      </button>
-      <button id="infoBtn" class="nav-btn">
+      <button id="aboutBtn" class="nav-btn">
         <i class="fas fa-info-circle"></i>
+        <span>About</span>
       </button>
     </nav>
 
     <div id="searchPanel" class="search-panel">
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search prompts...">
-        <button id="closeSearch" class="close-btn">
+        <button id="clearSearch" class="close-btn">
           <i class="fas fa-times"></i>
         </button>
       </div>
     </div>
 
-    <div id="promptsGrid" class="prompts-grid">
-      <!-- Cards will be inserted here by JavaScript -->
+    <div id="promptsPage" class="page-content active">
+      <div id="promptsGrid" class="prompts-grid">
+        <!-- Cards will be inserted here by JavaScript -->
+      </div>
+    </div>
+
+    <div id="aboutPage" class="page-content">
+      <div class="about-content">
+        <h2>About AI Prompt Gallery</h2>
+        <p>Welcome to the AI Prompt Gallery, a curated collection of creative prompts designed to inspire and enhance your AI-generated artwork. Our mission is to provide a platform where artists, designers, and creators can discover new ideas and share their creative process.</p>
+
+        <p>Each prompt in our gallery is carefully crafted to produce unique and interesting results when used with AI image generation tools. Whether you're a beginner looking for inspiration or an experienced creator seeking new challenges, you'll find valuable resources here.</p>
+
+        <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>If you have any questions, suggestions, or would like to contribute to our gallery, please feel free to reach out:</p>
+          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:sanvialevan2121@gmail.com">sanvialevan2121@gmail.com</a></p>
+        </div>
+      </div>
     </div>
 
     <div id="expandedView" class="expanded-view">
@@ -69,17 +80,6 @@
             </button>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div id="infoModal" class="modal">
-      <div class="modal-content">
-        <button id="closeInfo" class="close-btn">
-          <i class="fas fa-times"></i>
-        </button>
-        <h2>Contact Information</h2>
-        <p>For any inquiries, please contact:</p>
-        <p><i class="fas fa-envelope"></i> sanvialevan2121@gmail.com</p>
       </div>
     </div>
   </div>
