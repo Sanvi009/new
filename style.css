@@ -56,56 +56,15 @@ body {
   color: var(--accent-color);
 }
 
-/* Modal */
-.modal {
-  display: none; /* Changed from 'flex' to 'none' */
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  background: var(--primary-bg);
-  padding: 30px;
-  border-radius: var(--card-radius);
-  max-width: 400px;
-  width: 90%;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  position: relative;
-}
-
-.modal h2 {
-  margin-top: 0;
-  color: var(--accent-color);
-}
-
-.modal p {
-  margin: 15px 0;
-}
-
-.modal i.fa-envelope {
-  margin-right: 10px;
-  color: var(--accent-color);
-}
-
-/* Rest of your existing CSS remains the same */
-/* ... (all your existing CSS styles below this point) ... */
-
 /* Search Panel */
 .search-panel {
-  display: none;
   margin-bottom: 20px;
   padding: 15px;
   border-radius: var(--card-radius);
   background: var(--primary-bg);
   box-shadow: inset 5px 5px 10px var(--shadow-dark), 
               inset -5px -5px 10px var(--shadow-light);
+  display: none;
 }
 
 .search-container {
@@ -140,6 +99,45 @@ body {
 
 .close-btn:hover {
   transform: scale(0.95);
+}
+
+/* Page Content */
+.page-content {
+  display: none;
+}
+
+.page-content.active {
+  display: block;
+}
+
+/* About Page */
+.about-content {
+  padding: 30px;
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  box-shadow: 8px 8px 15px var(--shadow-dark), 
+              -8px -8px 15px var(--shadow-light);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.contact-info {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+              inset -3px -3px 6px var(--shadow-light);
+}
+
+.contact-info a {
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 /* Loading Animation */
@@ -329,7 +327,7 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .prompts-grid {
-    grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
 
@@ -357,7 +355,7 @@ body {
 
 @media (max-width: 480px) {
   .prompts-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smallest screens */
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 
