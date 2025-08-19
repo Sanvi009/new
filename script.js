@@ -9,10 +9,12 @@ const CONFIG = {
 // DOM Elements
 const elements = {
   promptsBtn: document.getElementById('promptsBtn'),
-  searchBtn: document.getElementById('searchBtn'),
+  aboutBtn: document.getElementById('aboutBtn'),
   searchPanel: document.getElementById('searchPanel'),
   searchInput: document.getElementById('searchInput'),
-  closeSearch: document.getElementById('closeSearch'),
+  clearSearch: document.getElementById('clearSearch'),
+  promptsPage: document.getElementById('promptsPage'),
+  aboutPage: document.getElementById('aboutPage'),
   promptsGrid: document.getElementById('promptsGrid'),
   expandedView: document.getElementById('expandedView'),
   closeExpanded: document.getElementById('closeExpanded'),
@@ -20,10 +22,7 @@ const elements = {
   expandedTitle: document.getElementById('expandedTitle'),
   expandedInstruction: document.getElementById('expandedInstruction'),
   expandedPrompt: document.getElementById('expandedPrompt'),
-  copyPrompt: document.getElementById('copyPrompt'),
-  infoBtn: document.getElementById('infoBtn'),
-  infoModal: document.getElementById('infoModal'),
-  closeInfo: document.getElementById('closeInfo')
+  copyPrompt: document.getElementById('copyPrompt')
 };
 
 // State
@@ -36,28 +35,37 @@ let isLoadingImages = false;
 function init() {
   setupEventListeners();
   loadPromptsFromGoogleSheet();
+
+  // Show search panel on initial load since we're on the Prompts page
+  elements.searchPanel.style.display = 'block';
 }
 
 // Event Listeners
 function setupEventListeners() {
   elements.promptsBtn.addEventListener('click', () => {
     elements.promptsBtn.classList.add('active');
-    elements.searchBtn.classList.remove('active');
-    hideSearchPanel();
+    elements.aboutBtn.classList.remove('active');
+    elements.promptsPage.classList.add('active');
+    elements.aboutPage.classList.remove('active');
+    elements.searchPanel.style.display = 'block'; // Show search on prompts page
   });
 
-  elements.searchBtn.addEventListener('click', () => {
-    elements.searchBtn.classList.add('active');
+  elements.aboutBtn.addEventListener('click', () => {
+    elements.aboutBtn.classList.add('active');
     elements.promptsBtn.classList.remove('active');
-    showSearchPanel();
+    elements.aboutPage.classList.add('active');
+    elements.promptsPage.classList.remove('active');
+    elements.searchPanel.style.display = 'none'; // Hide search on about page
   });
 
-  elements.closeSearch.addEventListener('click', hideSearchPanel);
+  elements.clearSearch.addEventListener('click', () => {
+    elements.searchInput.value = '';
+    filterPrompts();
+  });
+
   elements.searchInput.addEventListener('input', throttle(filterPrompts, 300));
   elements.closeExpanded.addEventListener('click', hideExpandedView);
   elements.copyPrompt.addEventListener('click', copyPromptToClipboard);
-  elements.infoBtn.addEventListener('click', showInfoModal);
-  elements.closeInfo.addEventListener('click', hideInfoModal);
 
   // Lazy load images when scrolling
   window.addEventListener('scroll', throttle(lazyLoadImages, 200));
@@ -87,17 +95,6 @@ function throttle(func, limit) {
 }
 
 // Search Functions
-function showSearchPanel() {
-  elements.searchPanel.style.display = 'block';
-  elements.searchInput.focus();
-}
-
-function hideSearchPanel() {
-  elements.searchPanel.style.display = 'none';
-  elements.searchInput.value = '';
-  filterPrompts();
-}
-
 function filterPrompts() {
   const searchTerm = elements.searchInput.value.toLowerCase();
 
@@ -153,7 +150,7 @@ function processSheetData(rows) {
 
 function showError() {
   elements.promptsGrid.innerHTML = `
-    <div class="error-message">
+    <div class="empty-state">
       <i class="fas fa-exclamation-triangle"></i>
       <p>Failed to load prompts. Please try again later.</p>
     </div>
@@ -282,15 +279,6 @@ function showExpandedView(title) {
 function hideExpandedView() {
   elements.expandedView.style.display = 'none';
   document.body.style.overflow = 'auto';
-}
-
-// Info Modal
-function showInfoModal() {
-  elements.infoModal.style.display = 'block';
-}
-
-function hideInfoModal() {
-  elements.infoModal.style.display = 'none';
 }
 
 // Clipboard
