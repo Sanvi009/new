@@ -10,11 +10,13 @@ const CONFIG = {
 const elements = {
   promptsBtn: document.getElementById('promptsBtn'),
   aboutBtn: document.getElementById('aboutBtn'),
+  contactBtn: document.getElementById('contactBtn'),
   searchPanel: document.getElementById('searchPanel'),
   searchInput: document.getElementById('searchInput'),
   clearSearch: document.getElementById('clearSearch'),
   promptsPage: document.getElementById('promptsPage'),
   aboutPage: document.getElementById('aboutPage'),
+  contactPage: document.getElementById('contactPage'),
   promptsGrid: document.getElementById('promptsGrid'),
   expandedView: document.getElementById('expandedView'),
   closeExpanded: document.getElementById('closeExpanded'),
@@ -22,7 +24,10 @@ const elements = {
   expandedTitle: document.getElementById('expandedTitle'),
   expandedInstruction: document.getElementById('expandedInstruction'),
   expandedPrompt: document.getElementById('expandedPrompt'),
-  copyPrompt: document.getElementById('copyPrompt')
+  copyPrompt: document.getElementById('copyPrompt'),
+  contactForm: document.getElementById('contactForm'),
+  footerAbout: document.getElementById('footerAbout'),
+  footerContact: document.getElementById('footerContact')
 };
 
 // State
@@ -43,19 +48,25 @@ function init() {
 // Event Listeners
 function setupEventListeners() {
   elements.promptsBtn.addEventListener('click', () => {
-    elements.promptsBtn.classList.add('active');
-    elements.aboutBtn.classList.remove('active');
-    elements.promptsPage.classList.add('active');
-    elements.aboutPage.classList.remove('active');
-    elements.searchPanel.style.display = 'block'; // Show search on prompts page
+    switchToPage('prompts');
   });
 
   elements.aboutBtn.addEventListener('click', () => {
-    elements.aboutBtn.classList.add('active');
-    elements.promptsBtn.classList.remove('active');
-    elements.aboutPage.classList.add('active');
-    elements.promptsPage.classList.remove('active');
-    elements.searchPanel.style.display = 'none'; // Hide search on about page
+    switchToPage('about');
+  });
+
+  elements.contactBtn.addEventListener('click', () => {
+    switchToPage('contact');
+  });
+
+  elements.footerAbout.addEventListener('click', (e) => {
+    e.preventDefault();
+    switchToPage('about');
+  });
+
+  elements.footerContact.addEventListener('click', (e) => {
+    e.preventDefault();
+    switchToPage('contact');
   });
 
   elements.clearSearch.addEventListener('click', () => {
@@ -67,9 +78,43 @@ function setupEventListeners() {
   elements.closeExpanded.addEventListener('click', hideExpandedView);
   elements.copyPrompt.addEventListener('click', copyPromptToClipboard);
 
+  // Contact form submission
+  elements.contactForm.addEventListener('submit', handleContactSubmit);
+
   // Lazy load images when scrolling
   window.addEventListener('scroll', throttle(lazyLoadImages, 200));
   window.addEventListener('resize', throttle(lazyLoadImages, 200));
+}
+
+// Switch between pages
+function switchToPage(page) {
+  // Reset all pages and buttons
+  elements.promptsPage.classList.remove('active');
+  elements.aboutPage.classList.remove('active');
+  elements.contactPage.classList.remove('active');
+  elements.promptsBtn.classList.remove('active');
+  elements.aboutBtn.classList.remove('active');
+  elements.contactBtn.classList.remove('active');
+
+  // Show search only on prompts page
+  elements.searchPanel.style.display = 'none';
+
+  // Activate selected page and button
+  switch(page) {
+    case 'prompts':
+      elements.promptsPage.classList.add('active');
+      elements.promptsBtn.classList.add('active');
+      elements.searchPanel.style.display = 'block';
+      break;
+    case 'about':
+      elements.aboutPage.classList.add('active');
+      elements.aboutBtn.classList.add('active');
+      break;
+    case 'contact':
+      elements.contactPage.classList.add('active');
+      elements.contactBtn.classList.add('active');
+      break;
+  }
 }
 
 // Throttle function for performance
@@ -92,6 +137,19 @@ function throttle(func, limit) {
       }, limit - (Date.now() - lastRan));
     }
   };
+}
+
+// Handle contact form submission
+function handleContactSubmit(e) {
+  e.preventDefault();
+
+  // In a real implementation, you would send this data to a server
+  // For now, we'll just show a confirmation and reset the form
+  alert('Thank you for your message! We will get back to you soon.');
+  elements.contactForm.reset();
+
+  // Here you would typically send the form data to your backend
+  // using fetch() or XMLHttpRequest
 }
 
 // Search Functions
