@@ -11,13 +11,35 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Prompt Gallery</title>
+  <title>AI Prompt Gallery - Discover Creative AI Art Prompts</title>
+  <meta name="description" content="A curated collection of creative AI art prompts to inspire your next masterpiece. Find the perfect prompt for AI image generation tools.">
+  <meta property="og:title" content="AI Prompt Gallery - Creative AI Art Prompts">
+  <meta property="og:description" content="Discover a curated collection of creative AI art prompts to inspire your next masterpiece.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brainloom.online">
+  <meta property="og:image" content="https://brainloom.online/images/og-image.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622" crossorigin="anonymous"></script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622"
-     crossorigin="anonymous"></script>
   <meta name="google-adsense-account" content="ca-pub-5794152823767622">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Prompt Gallery",
+    "url": "https://yourdomain.com",
+    "description": "A curated collection of creative AI art prompts for image generation tools",
+    "applicationCategory": "ArtApplication",
+    "operatingSystem": "Any",
+    "permissions": "browser",
+    "creator": {
+      "@type": "Person",
+      "name": "Levan Sanvia",
+      "email": "sanvialevan2121@gmail.com"
+    }
+  }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -30,11 +52,15 @@
         <i class="fas fa-info-circle"></i>
         <span>About</span>
       </button>
+      <button id="contactBtn" class="nav-btn">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </button>
     </nav>
 
     <div id="searchPanel" class="search-panel">
       <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search prompts...">
+        <input type="text" id="searchInput" placeholder="Search prompts..." aria-label="Search prompts">
         <button id="clearSearch" class="close-btn">
           <i class="fas fa-times"></i>
         </button>
@@ -49,21 +75,47 @@
 
     <div id="aboutPage" class="page-content">
       <div class="about-content">
-        <h2>About AI Prompt Gallery</h2>
+        <h1>About AI Prompt Gallery</h1>
         <p>Welcome to the AI Prompt Gallery, a curated collection of creative prompts designed to inspire and enhance your AI-generated artwork. Our mission is to provide a platform where artists, designers, and creators can discover new ideas and share their creative process.</p>
 
         <p>Each prompt in our gallery is carefully crafted to produce unique and interesting results when used with AI image generation tools. Whether you're a beginner looking for inspiration or an experienced creator seeking new challenges, you'll find valuable resources here.</p>
 
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p>If you have any questions, suggestions, or would like to contribute to our gallery, please feel free to reach out:</p>
-          <p><i class="fas fa-envelope"></i> Email: <a href="mailto:sanvialevan2121@gmail.com">sanvialevan2121@gmail.com</a></p>
+        <p>This site is maintained by Levan Sanvia, an AI art enthusiast passionate about helping others explore the creative possibilities of AI tools.</p>
+      </div>
+    </div>
+
+    <div id="contactPage" class="page-content">
+      <div class="contact-content">
+        <h1>Contact Us</h1>
+        <p>Have questions, suggestions, or want to contribute to our gallery? We'd love to hear from you!</p>
+
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="direct-contact">
+          <p>Or reach us directly at: <a href="mailto:sanvialevan2121@gmail.com">sanvialevan2121@gmail.com</a></p>
         </div>
       </div>
     </div>
 
     <div id="expandedView" class="expanded-view">
-      <button id="closeExpanded" class="close-btn">
+      <button id="closeExpanded" class="close-btn" aria-label="Close expanded view">
         <i class="fas fa-times"></i>
       </button>
       <div class="expanded-content">
@@ -84,6 +136,19 @@
         </div>
       </div>
     </div>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 AI Prompt Gallery. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="#" id="footerAbout">About</a>
+          <a href="#" id="footerContact">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </nav>
+        <p class="disclaimer">This site uses Google Analytics and AdSense to improve user experience.</p>
+      </div>
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>
