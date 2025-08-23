@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622"
      crossorigin="anonymous"></script>
+  <script type='text/javascript' src='//pl27490254.profitableratecpm.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js'></script>
   <meta name="google-adsense-account" content="ca-pub-5794152823767622">
   <script type="application/ld+json">
   {
@@ -41,6 +42,70 @@
     }
   }
   </script>
+  <style>
+    /* Additional styles for the ad card */
+    .ad-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 16px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    
+    .ad-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .ad-card h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+    
+    .ad-card p {
+      color: #34495e;
+      margin-bottom: 15px;
+    }
+    
+    .ad-link {
+      display: inline-block;
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .ad-link:hover {
+      background-color: #2980b9;
+    }
+    
+    .ad-label {
+      font-size: 12px;
+      color: #7f8c8d;
+      margin-top: 10px;
+      display: block;
+    }
+    
+    .footer-ad {
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 14px;
+    }
+    
+    .footer-ad a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    
+    .footer-ad a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -71,6 +136,14 @@
     <div id="promptsPage" class="page-content active">
       <div id="promptsGrid" class="prompts-grid">
         <!-- Cards will be inserted here by JavaScript -->
+        
+        <!-- Adsterra Ad Card - Will be positioned by JavaScript -->
+        <div class="ad-card" id="adsterraCard" style="display: none;">
+          <h3>Boost Your Creativity</h3>
+          <p>Discover tools that can enhance your AI art journey</p>
+          <a href="https://www.profitableratecpm.com/z8puvq1hf8?key=3abe48333152311bc6f5afeb4d3032b0" target="_blank" class="ad-link">Explore Now</a>
+          <span class="ad-label">Advertisement</span>
+        </div>
       </div>
     </div>
 
@@ -82,6 +155,11 @@
         <p>Each prompt in our gallery is carefully crafted to produce unique and interesting results when used with AI image generation tools. Whether you're a beginner looking for inspiration or an experienced creator seeking new challenges, you'll find valuable resources here.</p>
 
         <p>This site is maintained by Levan Sanvia, an AI art enthusiast passionate about helping others explore the creative possibilities of AI tools.</p>
+        
+        <!-- Adsterra Banner Ad in About Page -->
+        <div class="footer-ad">
+          <p>Sponsored: <a href="https://www.profitableratecpm.com/z8puvq1hf8?key=3abe48333152311bc6f5afeb4d3032b0" target="_blank">Tools for AI Artists</a></p>
+        </div>
       </div>
     </div>
 
@@ -111,6 +189,11 @@
 
         <div class="direct-contact">
           <p>Or reach us directly at: <a href="mailto:sanvialevan2121@gmail.com">sanvialevan2121@gmail.com</a></p>
+        </div>
+        
+        <!-- Adsterra Banner Ad in Contact Page -->
+        <div class="footer-ad">
+          <p>Sponsored: <a href="https://www.profitableratecpm.com/z8puvq1hf8?key=3abe48333152311bc6f5afeb4d3032b0" target="_blank">Resources for Digital Creators</a></p>
         </div>
       </div>
     </div>
@@ -147,10 +230,40 @@
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
         </nav>
+        
+        <!-- Adsterra Footer Link -->
+        <div class="footer-ad">
+          <a href="https://www.profitableratecpm.com/z8puvq1hf8?key=3abe48333152311bc6f5afeb4d3032b0" target="_blank">Creative Resources for AI Artists</a>
+        </div>
+        
         <p class="disclaimer">This site uses Google Analytics and AdSense to improve user experience.</p>
       </div>
     </footer>
   </div>
   <script src="script.js"></script>
+  <script>
+    // JavaScript to position the ad card within the prompts grid
+    document.addEventListener('DOMContentLoaded', function() {
+      // Wait for prompts to be loaded (you'll need to integrate this with your existing script)
+      setTimeout(function() {
+        const promptsGrid = document.getElementById('promptsGrid');
+        const adCard = document.getElementById('adsterraCard');
+        
+        if (promptsGrid && adCard && promptsGrid.children.length > 0) {
+          // Show the ad card
+          adCard.style.display = 'block';
+          
+          // Position the ad after every 5th prompt card
+          const promptCards = promptsGrid.querySelectorAll('.prompt-card');
+          
+          for (let i = 4; i < promptCards.length; i += 5) {
+            if (promptCards[i]) {
+              promptsGrid.insertBefore(adCard.cloneNode(true), promptCards[i].nextSibling);
+            }
+          }
+        }
+      }, 1000); // Adjust timing based on how long it takes your prompts to load
+    });
+  </script>
 </body>
 </html>
