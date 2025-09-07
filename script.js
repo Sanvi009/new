@@ -9,6 +9,9 @@ const CONFIG = {
 // DOM Elements
 const elements = {
   promptsBtn: document.getElementById('promptsBtn'),
+  qnaBtn: document.getElementById('qnaBtn'), // Add this line
+  qnaPage: document.getElementById('qnaPage'),
+  qnaGrid: document.getElementById('qnaGrid'),
   aboutBtn: document.getElementById('aboutBtn'),
   contactBtn: document.getElementById('contactBtn'),
   searchPanel: document.getElementById('searchPanel'),
@@ -51,6 +54,10 @@ function setupEventListeners() {
     switchToPage('prompts');
   });
 
+  elements.qnaBtn.addEventListener('click', () => {
+    switchToPage('qna');
+  });
+
   elements.aboutBtn.addEventListener('click', () => {
     switchToPage('about');
   });
@@ -90,9 +97,11 @@ function setupEventListeners() {
 function switchToPage(page) {
   // Reset all pages and buttons
   elements.promptsPage.classList.remove('active');
+  elements.qnaPage.classList.remove('active');
   elements.aboutPage.classList.remove('active');
   elements.contactPage.classList.remove('active');
   elements.promptsBtn.classList.remove('active');
+  elements.qnaBtn.classList.remove('active');
   elements.aboutBtn.classList.remove('active');
   elements.contactBtn.classList.remove('active');
 
@@ -105,6 +114,11 @@ function switchToPage(page) {
       elements.promptsPage.classList.add('active');
       elements.promptsBtn.classList.add('active');
       elements.searchPanel.style.display = 'block';
+      break;
+    case 'qna':
+      elements.qnaPage.classList.add('active');
+      elements.qnaBtn.classList.add('active');
+      loadQnAData();
       break;
     case 'about':
       elements.aboutPage.classList.add('active');
@@ -166,6 +180,24 @@ function filterPrompts() {
   renderPromptCards();
 }
 
+// Add new function to load QnA data
+async function loadQnAData() {
+  try {
+    const response = await fetch('qna.json');
+    const qnaData = await response.json();
+    renderQnACards(qnaData.reverse()); // Reverse to show newest first
+  } catch (error) {
+    console.error('Error loading QnA data:', error);
+    elements.qnaGrid.innerHTML = `
+      <div class="empty-state">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p>Failed to load QnA content. Please try again later.</p>
+      </div>
+    `;
+  }
+}
+
+
 // Data Loading
 async function loadPromptsFromGoogleSheet() {
   try {
@@ -204,6 +236,35 @@ function processSheetData(rows) {
 
   filteredPrompts = [...allPrompts];
   renderPromptCards();
+}
+
+function renderQnACards(qnaData) {
+  if (qnaData.length === 0) {
+    elements.qnaGrid.innerHTML = `
+      <div class="empty-state">
+        <i class="fas fa-question-circle"></i>
+        <p>No QnA content available yet.</p>
+      </div>
+    `;
+    return;
+  }
+
+  elements.qnaGrid.innerHTML = qnaData.map(item => `
+    <div class="qna-card" data-filename="${item.fileName}">
+      <img class="qna-image" src="images/${item.image}" alt="${item.title}">
+      <div class="qna-content">
+        <h3 class="qna-title">${item.title}</h3>
+      </div>
+    </div>
+  `).join('');
+
+  // Add click event listeners to QnA cards
+  document.querySelectorAll('.qna-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const filename = card.dataset.filename;
+      window.location.href = `qna/${filename}`;
+    });
+  });
 }
 
 function showError() {
