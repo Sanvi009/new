@@ -1,4 +1,3 @@
-
 :root {
   --primary-bg: #e0e5ec;
   --shadow-dark: #a3b1c6;
@@ -325,6 +324,121 @@ body {
   transform: scale(1.2);
 }
 
+/* QnA Grid and Cards - Updated for both desktop and mobile */
+.qna-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduced gap for mobile */
+}
+
+.qna-card {
+  display: flex;
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  box-shadow: 6px 6px 12px var(--shadow-dark), 
+              -6px -6px 12px var(--shadow-light);
+  overflow: hidden;
+  transition: all var(--transition-speed) ease;
+  cursor: pointer;
+  height: 100px; /* Reduced height for all devices */
+}
+
+.qna-card:hover {
+  transform: translateY(-3px); /* Reduced hover effect for smaller cards */
+  box-shadow: 8px 8px 16px var(--shadow-dark), 
+              -8px -8px 16px var(--shadow-light);
+}
+
+.qna-image {
+  width: 90px; /* Reduced width for all devices */
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.qna-content {
+  padding: 12px 15px; /* Reduced padding */
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.qna-title {
+  margin: 0;
+  font-size: 1em; /* Slightly smaller font */
+  font-weight: bold;
+  color: var(--text-color);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* For desktop - keep the horizontal layout */
+@media (min-width: 769px) {
+  .qna-card {
+    height: 100px; /* Consistent height */
+  }
+
+  .qna-image {
+    width: 90px; /* Consistent width */
+  }
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .qna-card {
+    height: 90px; /* Slightly smaller for tablet */
+  }
+
+  .qna-image {
+    width: 80px; /* Slightly smaller for tablet */
+  }
+
+  .qna-title {
+    font-size: 0.95em;
+  }
+}
+
+/* Mobile view - keep horizontal layout with smaller dimensions */
+@media (max-width: 480px) {
+  .qna-card {
+    height: 80px; /* Even smaller for mobile */
+    flex-direction: row; /* Force horizontal layout */
+  }
+
+  .qna-image {
+    width: 70px; /* Smaller image for mobile */
+    height: 100%;
+  }
+
+  .qna-content {
+    padding: 8px 12px;
+  }
+
+  .qna-title {
+    font-size: 0.9em;
+    -webkit-line-clamp: 2; /* Show 2 lines max */
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 350px) {
+  .qna-card {
+    height: 70px;
+  }
+
+  .qna-image {
+    width: 60px;
+  }
+
+  .qna-title {
+    font-size: 0.85em;
+    -webkit-line-clamp: 2;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .prompts-grid {
@@ -381,7 +495,6 @@ body {
     padding: 15px;
   }
 }
-/* Add to your existing style.css */
 
 /* Legal pages styling */
 .legal-header {
@@ -499,7 +612,7 @@ body {
 .site-footer {
   margin-top: 40px;
   padding: 25px 15px;
-  border-radius: var(--card-radius);
+  край: var(--card-radius);
   background: var(--primary-bg);
   box-shadow: 8px 8px 15px var(--shadow-dark), 
               -8px -8px 15px var(--shadow-light);
