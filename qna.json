@@ -12,5 +12,12 @@
     "title": "10 photos that will blow your mind",
     "image": "2.2.jpeg",
     "description": "Here 10 images that will blow your mind"
+  },
+  {
+    "id": 3,
+    "fileName": "3.html",
+    "title": "The War That Lasted Less Than 40 Minutes",
+    "image": "3.2.jpeg",
+    "description": "war that lasted less than 40 minutes"
   }
 ]
