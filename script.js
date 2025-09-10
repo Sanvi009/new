@@ -96,6 +96,10 @@ function setupEventListeners() {
   // Initialize ads when they become visible
   window.addEventListener('scroll', throttle(initializeVisibleAds, 200));
   window.addEventListener('resize', throttle(initializeVisibleAds, 200));
+  // Handle window resize to adjust navigation if needed
+  window.addEventListener('resize', throttle(() => {
+    // Recalculate anything that might need adjustment
+  }, 250));
 }
 
 // Initialize ads that are visible
