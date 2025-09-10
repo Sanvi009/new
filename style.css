@@ -22,32 +22,43 @@ body {
 }
 
 /* Navigation */
+/* Navigation Bar Improvements */
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 25px;
-  padding: 15px;
+  gap: 8px; /* Reduced gap for mobile */
+  margin-bottom: 20px;
+  padding: 12px; /* Reduced padding for mobile */
   border-radius: var(--card-radius);
   background: var(--primary-bg);
   box-shadow: 8px 8px 15px var(--shadow-dark), 
               -8px -8px 15px var(--shadow-light);
+  flex-wrap: wrap; /* Allow buttons to wrap if needed */
 }
 
 .nav-btn {
   border: none;
   border-radius: var(--card-radius);
-  padding: 12px 20px;
+  padding: 10px 15px; /* Adjusted padding for mobile */
   background: var(--primary-bg);
   box-shadow: 5px 5px 10px var(--shadow-dark), 
               -5px -5px 10px var(--shadow-light);
   cursor: pointer;
   color: var(--text-color);
-  font-size: 1em;
+  font-size: 0.9em; /* Slightly smaller font */
   transition: all var(--transition-speed) ease;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px; /* Reduced gap between icon and text */
+  flex: 1; /* Allow buttons to grow equally */
+  min-width: 0; /* Allow text truncation */
+  justify-content: center;
+}
+
+.nav-btn span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav-btn.active {
@@ -710,4 +721,26 @@ body {
   border: none;
   width: 100%;
   height: 100%;
+}
+/* For very small screens, make buttons stack vertically */
+@media (max-width: 350px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-btn {
+    width: 100%;
+  }
+}
+
+/* Adjust font size for very small text */
+@media (max-width: 380px) {
+  .nav-btn {
+    font-size: 0.85em;
+    padding: 8px 12px;
+  }
+
+  .nav-btn i {
+    font-size: 0.9em;
+  }
 }
