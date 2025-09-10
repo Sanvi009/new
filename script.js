@@ -9,7 +9,7 @@ const CONFIG = {
 // DOM Elements
 const elements = {
   promptsBtn: document.getElementById('promptsBtn'),
-  qnaBtn: document.getElementById('qnaBtn'), // Add this line
+  qnaBtn: document.getElementById('qnaBtn'),
   qnaPage: document.getElementById('qnaPage'),
   qnaGrid: document.getElementById('qnaGrid'),
   aboutBtn: document.getElementById('aboutBtn'),
@@ -38,6 +38,7 @@ let allPrompts = [];
 let filteredPrompts = [];
 let loadedImages = 0;
 let isLoadingImages = false;
+let adContainers = []; // Track ad containers for later initialization
 
 // Initialize
 function init() {
@@ -91,6 +92,47 @@ function setupEventListeners() {
   // Lazy load images when scrolling
   window.addEventListener('scroll', throttle(lazyLoadImages, 200));
   window.addEventListener('resize', throttle(lazyLoadImages, 200));
+
+  // Initialize ads when they become visible
+  window.addEventListener('scroll', throttle(initializeVisibleAds, 200));
+  window.addEventListener('resize', throttle(initializeVisibleAds, 200));
+}
+
+// Initialize ads that are visible
+function initializeVisibleAds() {
+  const viewportHeight = window.innerHeight;
+  const scrollPosition = window.scrollY || window.pageYOffset;
+
+  adContainers.forEach(container => {
+    if (container.initialized) return;
+
+    const rect = container.element.getBoundingClientRect();
+    const isVisible = (rect.top <= viewportHeight * 2) && 
+                     (rect.bottom >= -viewportHeight * 0.5);
+
+    if (isVisible && rect.width > 0) {
+      initializeAd(container);
+    }
+  });
+}
+
+// Initialize a single ad
+function initializeAd(container) {
+  try {
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    container.initialized = true;
+  } catch (e) {
+    console.error('AdSense error:', e);
+    // Fallback content if ad fails to load
+    container.element.innerHTML = `
+      <div style="height:100%; display:flex; align-items:center; justify-content:center; background:#f5f5f5; color:#666;">
+        <div style="text-align:center; padding:10px;">
+          <i class="fas fa-ad" style="font-size:24px; margin-bottom:5px;"></i>
+          <p style="margin:0; font-size:12px;">Advertisement</p>
+        </div>
+      </div>
+    `;
+  }
 }
 
 // Switch between pages
@@ -197,7 +239,6 @@ async function loadQnAData() {
   }
 }
 
-
 // Data Loading
 async function loadPromptsFromGoogleSheet() {
   try {
@@ -231,7 +272,8 @@ function processSheetData(rows) {
     image: row.c[1]?.v || '',
     instruction: row.c[2]?.v || '',
     prompt: row.c[3]?.v || '',
-    tags: row.c[4]?.v || ''
+    tags: row.c[4]?.v || '',
+    isSponsored: (row.c[0]?.v || '').toLowerCase().includes('sponsored')
   })).reverse(); // Added reverse() here to show newest first
 
   filteredPrompts = [...allPrompts];
@@ -290,7 +332,7 @@ function renderPromptCards() {
 
   // Show loading state initially
   elements.promptsGrid.innerHTML = filteredPrompts.map((prompt, index) => `
-    <div class="prompt-card loading" data-index="${index}" data-title="${prompt.title}">
+    <div class="prompt-card loading" data-index="${index}" data-title="${prompt.title}" data-sponsored="${prompt.isSponsored}">
       <div class="card-image"></div>
       <div class="card-content">
         <div class="card-title"></div>
@@ -341,6 +383,45 @@ function lazyLoadImages() {
 }
 
 function loadImageForCard(card, prompt) {
+  // Handle sponsored content (ads)
+  if (prompt.isSponsored) {
+    card.classList.remove('loading');
+    card.innerHTML = `
+      <div class="sponsored-label">Sponsored</div>
+      <div class="ad-container" data-ad-title="${prompt.title}">
+        <!-- Ad content will be loaded here -->
+        <ins class="adsbygoogle"
+             style="display:block; width:100%; height:100%;"
+             data-ad-client="ca-pub-5794152823767622"
+             data-ad-slot=""
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+      </div>
+      <div class="card-content">
+        <h3 class="card-title">${prompt.title.replace(/sponsored/gi, '').trim()}</h3>
+        <div class="tags" hidden>${prompt.tags}</div>
+      </div>
+    `;
+
+    // Track this ad container for later initialization
+    const adContainer = card.querySelector('.ad-container');
+    adContainers.push({
+      element: adContainer,
+      initialized: false
+    });
+
+    card.addEventListener('click', (e) => {
+      // Don't show expanded view for ads, but allow ad clicks
+      if (!e.target.closest('.ad-container')) {
+        e.stopPropagation();
+      }
+    });
+
+    loadedImages++;
+    return;
+  }
+
+  // Original code for non-sponsored content
   const img = new Image();
   img.src = `images/${prompt.image}`;
 
@@ -383,7 +464,7 @@ function loadImageForCard(card, prompt) {
 // Expanded View
 function showExpandedView(title) {
   const prompt = allPrompts.find(p => p.title === title);
-  if (!prompt) return;
+  if (!prompt || prompt.isSponsored) return; // Don't show expanded view for ads
 
   elements.expandedImage.src = `images/${prompt.image}`;
   elements.expandedImage.alt = prompt.title;
