@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google Analytics & Adsense -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SDCHCVJFG6"></script>
+  <meta name="google-adsense-account" content="ca-pub-5794152823767622">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622"
+     crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surreal Motion Portrait | identity shift | multiple transparency</title>
+  <meta name="description" content="template.description">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-bg: #e0e5ec;
+      --shadow-dark: #a3b1c6;
+      --shadow-light: #ffffff;
+      --text-color: #2d3748;
+      --accent-color: #6a5acd;
+      --card-radius: 15px;
+      --transition-speed: 0.2s;
+    }
+
+    body {
+      margin: 0;
+      padding: 15px;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--primary-bg);
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-color);
+      text-decoration: none;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+
+    /* Content Sections */
+    .content-section {
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+    }
+
+    .prompt-image {
+      width: 100%;
+      border-radius: var(--card-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      color: var(--accent-color);
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .instruction-box, .prompt-box {
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                  inset -3px -3px 6px var(--shadow-light);
+    }
+
+    .prompt-content {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .prompt-text {
+      flex: 1;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+
+    .copy-btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+      position: relative;
+      overflow: hidden;
+      min-width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.9em;
+      color: var(--accent-color);
+    }
+
+    .copy-btn:hover {
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                  inset -2px -2px 5px var(--shadow-light);
+    }
+
+    .copy-btn.copied {
+      background: rgba(106, 90, 205, 0.1);
+    }
+
+    /* Relevant Prompts */
+    .relevant-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .relevant-link {
+      padding: 12px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .relevant-link:hover {
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                  inset -2px -2px 5px var(--shadow-light);
+      color: var(--accent-color);
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: 40px;
+      padding: 25px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 15px 0;
+    }
+
+    .footer-nav a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-section {
+        padding: 20px;
+      }
+      .prompt-content {
+        flex-direction: column;
+      }
+      .copy-btn {
+        align-self: flex-end;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content-section {
+        padding: 15px;
+      }
+      .instruction-box, .prompt-box {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>Surreal Motion Portrait with Multiple Blurred Copies</h1>
+      <a href="../index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Gallery
+      </a>
+    </header>
+
+    <main>
+      <section class="content-section">
+        <img src="../images/107.jpeg" alt="" class="prompt-image">
+
+        <div class="instruction-box">
+          <h2 class="section-title">How to use this prompt</h2>
+          <p>To use this prompt professionally, integrate it into motion portraits, identity art, or surreal photography for personal and editorial. Preserve "surreal vertical portrait," "use uploaded face," "blurred, semi-transparent copies," and "8k resolution" for mysterious mood. Do not modify the sharp center or light blue background. Changing outfit to "suit" could yield professional visuals, leading to shifts, while streetwear keeps cinematic, moody outcomes.</p>
+        </div>
+
+        <div class="prompt-box">
+          <h2 class="section-title">Prompt</h2>
+          <div class="prompt-content">
+            <p class="prompt-text">Create a surreal vertical portrait of the person (use uploaded face). Keep the main face sharp in the center. Add blurred, semi-transparent copies of the face and upper body fading out on both sides to show motion or shifting identity.
+Background should be soft light blue or grey. Dress the person in a dark, streetwear outfit and rounnd black glasses with comma hair style. Use dramatic lighting on the face.
+Mood: cinematic, moody, and mysterious. 8k resolution.</p>
+            <button class="copy-btn">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Sections for SEO/AdSense -->
+      <section class="content-section">
+        <h2 class="section-title">Why this prompt works</h2>
+        <p>This prompt works by creating a surreal vertical portrait with blurred transparent copies that show motion or identity shift the dramatic lighting and streetwear outfit add a modern mysterious vibe making the image engaging and versatile perfect for personal branding artistic portfolios or social media content that aims to convey depth and intrigue.</p>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Example Output</h2>
+        <p>Here’s an example result generated  with this exact prompt:</p>
+        <img src="../images/107.107.jpeg" alt="Example output generated with this prompt" class="prompt-image">
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Prompt Variations</h2>
+        <ul>
+          <li>Effect: Swap “blurred, semi-transparent copies” → “sharp, fractured mirror copies” for a different surreal effect. Swap “showing motion or shifting identity” → “showing different emotional expressions” .</li>
+          <li>Effect: Swap “blurred, semi-transparent copies” → “sharp, fractured mirror copies” for a different surreal effect. Swap “showing motion or shifting identity” → “showing different emotional expressions” .</li>
+          <li>Effect: Swap “blurred, semi-transparent copies” → “sharp, fractured mirror copies” for a different surreal effect. Swap “showing motion or shifting identity” → “showing different emotional expressions” .</li>
+          <li>Lighting: Swap “dramatic lighting on the face” → “dramatic lighting from behind” creating a silhouette with copies.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">FAQ</h2>
+        <p><strong>What surreal effect is used in the portrait?</strong>Blurred, semi-transparent copies of the face and upper body fade out on both sides to show motion or shifting identity.</p>
+        <p><strong>What should the person wear?</strong>The person should wear a dark, streetwear outfit and round black glasses.</p>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Relevant Prompts</h2>
+        <div class="relevant-links">
+          <a href="Surreal_Motion_Portrait_with_Multiple_Blurred_Copies.html" class="relevant-link">Surreal Motion Portrait with Multiple Blurred Copies</a>
+          <a href="Extreme_Slow_Motion_of_a_Punch_Through_Glass.html" class="relevant-link">Extreme Slow Motion of a Punch Through Glass</a>
+          <a href="Mona_Lisa_Redesigned_in_a_Different_Art_Style.html" class="relevant-link">Mona Lisa Redesigned in a Different Art Style</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 AI Prompt Gallery. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Service</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Copy button functionality
+    document.querySelector('.copy-btn').addEventListener('click', function() {
+      const promptText = document.querySelector('.prompt-text').textContent;
+      navigator.clipboard.writeText(promptText).then(() => {
+        const btn = this;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        btn.classList.add('copied');
+
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+        this.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+        setTimeout(() => {
+          this.innerHTML = '<i class="fas fa-copy"></i> Copy';
+        }, 2000);
+      });
+    });
+  </script>
+  <script>
+  // Handle back button with animation
+  document.querySelector('.back-link').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Add exit animation to current page
+    document.querySelector('.container').style.opacity = '0';
+    document.querySelector('.container').style.transform = 'translateY(20px)';
+    document.querySelector('.container').style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+    // Navigate after animation completes
+    setTimeout(() => {
+      window.location.href = this.href;
+    }, 300);
+  });
+  </script>
+</body>
+</html>

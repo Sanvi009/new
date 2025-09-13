@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google Analytics & Adsense -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SDCHCVJFG6"></script>
+  <meta name="google-adsense-account" content="ca-pub-5794152823767622">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622"
+     crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lava Flow from Polaroid | surreal photography | creative illusion</title>
+  <meta name="description" content="template.description">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-bg: #e0e5ec;
+      --shadow-dark: #a3b1c6;
+      --shadow-light: #ffffff;
+      --text-color: #2d3748;
+      --accent-color: #6a5acd;
+      --card-radius: 15px;
+      --transition-speed: 0.2s;
+    }
+
+    body {
+      margin: 0;
+      padding: 15px;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--primary-bg);
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-color);
+      text-decoration: none;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+
+    /* Content Sections */
+    .content-section {
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+    }
+
+    .prompt-image {
+      width: 100%;
+      border-radius: var(--card-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      color: var(--accent-color);
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .instruction-box, .prompt-box {
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                  inset -3px -3px 6px var(--shadow-light);
+    }
+
+    .prompt-content {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .prompt-text {
+      flex: 1;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+
+    .copy-btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+      position: relative;
+      overflow: hidden;
+      min-width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.9em;
+      color: var(--accent-color);
+    }
+
+    .copy-btn:hover {
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                  inset -2px -2px 5px var(--shadow-light);
+    }
+
+    .copy-btn.copied {
+      background: rgba(106, 90, 205, 0.1);
+    }
+
+    /* Relevant Prompts */
+    .relevant-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .relevant-link {
+      padding: 12px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .relevant-link:hover {
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                  inset -2px -2px 5px var(--shadow-light);
+      color: var(--accent-color);
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: 40px;
+      padding: 25px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 15px 0;
+    }
+
+    .footer-nav a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-section {
+        padding: 20px;
+      }
+      .prompt-content {
+        flex-direction: column;
+      }
+      .copy-btn {
+        align-self: flex-end;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content-section {
+        padding: 15px;
+      }
+      .instruction-box, .prompt-box {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>Surreal Photo of Lava Flowing from a Polaroid</h1>
+      <a href="../index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Gallery
+      </a>
+    </header>
+
+    <main>
+      <section class="content-section">
+        <img src="../images/43.jpeg" alt="" class="prompt-image">
+
+        <div class="instruction-box">
+          <h2 class="section-title">How to use this prompt</h2>
+          <p>To use this prompt professionally, integrate it into surreal art, photography exhibits, or volcanic tourism promotions for dramatic visuals. Use generators by keeping "hyper-realistic surreal photo," "hand holding a vintage Polaroid," "glowing lava," and "8K photography style" intact for seamless blending. Do not modify the flowing lava or wooden table. Optionally vary the picture content; for example, changing to "ocean wave" could produce watery escapes, leading to textured smoke, whereas original yields bright, sharp-focused results.</p>
+        </div>
+
+        <div class="prompt-box">
+          <h2 class="section-title">Prompt</h2>
+          <div class="prompt-content">
+            <p class="prompt-text">A hyper-realistic surreal photo of a hand holding a vintage Polaroid picture of an erupting volcano, with glowing lava and thick smoke. The lava appears to flow out of the photograph and onto the wooden table below, seamlessly blending with the real world. Highly detailed textures of molten lava, bright orange and red glowing veins, realistic smoke, dramatic lighting, and sharp focus, ultra-realistic 8K photography style.</p>
+            <button class="copy-btn">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Sections for SEO/AdSense -->
+      <section class="content-section">
+        <h2 class="section-title">Why this prompt works</h2>
+        <p>This prompt works by blending reality with surrealism in a hyper-realistic photo the concept of lava flowing out of a Polaroid picture onto a wooden table creates a magical and unexpected visual the highly detailed textures of molten lava and smoke enhance the realism making the scene believable yet fantastic the dramatic lighting and sharp focus ensure the image is striking and memorable ideal for artistic displays promotional materials or social media content that aims to wow audiences with creative illusion.</p>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Example Output</h2>
+        <p>Here’s an example result generated  with this exact prompt:</p>
+        <img src="../images/43.43.jpeg" alt="Example output generated with this prompt" class="prompt-image">
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Prompt Variations</h2>
+        <ul>
+          <li>Natural Disaster: Swap “erupting volcano” → “a massive hurricane” seen from space. Swap “erupting volcano” → “a towering tsunami wave”.</li>
+          <li>Surface: Swap “wooden table” → “a stone table” for a different texture. Swap “wooden table” → “a map” so the lava flows across the geography.</li>
+          <li>Medium: Swap “vintage Polaroid picture” → “a smartphone screen” for a modern twist. Swap “Polaroid” → “an old parchment map” for a fantasy twist.</li>
+          <li>Flowing Material: Swap “lava” → “water” flowing from a waterfall photo. Swap “lava” → “light” flowing from a photo of the sun.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">FAQ</h2>
+        <p><strong>What creates the surreal effect in this image?</strong>The lava from the Polaroid picture appears to flow out of the photograph and onto the wooden table below, blending with the real world.</p>
+        <p><strong>What is the quality and style of the image?</strong>It is a highly detailed, ultra-realistic 8K photography style.</p>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Relevant Prompts</h2>
+        <div class="relevant-links">
+          <a href="Surreal_Photo_of_Lava_Flowing_from_a_Polaroid.html" class="relevant-link">Surreal Photo of Lava Flowing from a Polaroid</a>
+          <a href="Comical_Photo_of_a_Person_Trapped_in_a_Bottle.html" class="relevant-link">Comical Photo of a Person Trapped in a Bottle</a>
+          <a href="Render_of_a_Glass_Bottle_with_Objects_Inside.html" class="relevant-link">Render of a Glass Bottle with Objects Inside</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 AI Prompt Gallery. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Service</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Copy button functionality
+    document.querySelector('.copy-btn').addEventListener('click', function() {
+      const promptText = document.querySelector('.prompt-text').textContent;
+      navigator.clipboard.writeText(promptText).then(() => {
+        const btn = this;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        btn.classList.add('copied');
+
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+        this.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+        setTimeout(() => {
+          this.innerHTML = '<i class="fas fa-copy"></i> Copy';
+        }, 2000);
+      });
+    });
+  </script>
+  <script>
+  // Handle back button with animation
+  document.querySelector('.back-link').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Add exit animation to current page
+    document.querySelector('.container').style.opacity = '0';
+    document.querySelector('.container').style.transform = 'translateY(20px)';
+    document.querySelector('.container').style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+    // Navigate after animation completes
+    setTimeout(() => {
+      window.location.href = this.href;
+    }, 300);
+  });
+  </script>
+</body>
+</html>
