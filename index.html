@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- adsense -->
-  <!-- In the head section of index.html -->
+
+  <!-- Google Analytics & Adsense -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SDCHCVJFG6"></script>
   <meta name="google-adsense-account" content="ca-pub-5794152823767622">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622" crossorigin="anonymous"></script>
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDCHCVJFG6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SDCHCVJFG6');
-</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622"
+     crossorigin="anonymous"></script>
 
   
   <meta charset="UTF-8">
@@ -42,7 +34,7 @@
     "permissions": "browser",
     "creator": {
       "@type": "Person",
-      "name": "Levan Sanvia",
+      "name": "RAFI",
       "email": "sanvialevan2121@gmail.com"
     }
   }
@@ -54,10 +46,6 @@
       <button id="promptsBtn" class="nav-btn active">
         <i class="fas fa-lightbulb"></i>
         <span>Prompts</span>
-      </button>
-      <button id="qnaBtn" class="nav-btn">
-        <i class="fas fa-question-circle"></i>
-        <span>QnA</span>
       </button>
       <button id="aboutBtn" class="nav-btn">
         <i class="fas fa-info-circle"></i>
@@ -78,15 +66,108 @@
       </div>
     </div>
 
-    <div id="promptsPage" class="page-content active">
-      <div id="promptsGrid" class="prompts-grid">
-        <!-- Cards will be inserted here by JavaScript -->
+    <!-- Filter Panel -->
+    <div id="filterPanel" class="filter-panel">
+      <button id="filterToggle" class="filter-toggle">
+        <i class="fas fa-filter"></i>
+        <span>Filter</span>
+      </button>
+
+      <div id="categoryDropdown" class="category-dropdown">
+        <div class="category-container">
+          <button class="category-btn active" data-category="all">
+            <i class="fas fa-layer-group"></i>
+            <span>All</span>
+          </button>
+          <button class="category-btn" data-category="image conversion">
+            <i class="fas fa-exchange-alt"></i>
+            <span>Image Conversion</span>
+          </button>
+          <button class="category-btn" data-category="logo">
+            <i class="fas fa-pen-fancy"></i>
+            <span>Logo</span>
+          </button>
+          <button class="category-btn" data-category="product">
+            <i class="fas fa-box-open"></i>
+            <span>Product</span>
+          </button>
+          <button class="category-btn" data-category="food">
+            <i class="fas fa-utensils"></i>
+            <span>Foods</span>
+          </button>
+          <button class="category-btn" data-category="funny">
+            <i class="fas fa-laugh"></i>
+            <span>Funny</span>
+          </button>
+          <button class="category-btn" data-category="arts">
+            <i class="fas fa-palette"></i>
+            <span>Arts</span>
+          </button>
+          <button class="category-btn" data-category="gif">
+            <i class="fas fa-film"></i>
+            <span>GIF</span>
+          </button>
+        </div>
+        <div class="filter-actions">
+          <button id="applyFilters" class="filter-action-btn apply-btn">Apply</button>
+          <button id="resetFilters" class="filter-action-btn reset-btn">Reset</button>
+        </div>
       </div>
     </div>
 
-    <div id="qnaPage" class="page-content">
-      <div id="qnaGrid" class="qna-grid">
-        <!-- QnA cards will be inserted here by JavaScript -->
+    <!-- Mobile Filter Overlay -->
+    <div id="mobileFilterOverlay" class="mobile-filter-overlay">
+      <div class="mobile-filter-content">
+        <div class="mobile-filter-header">
+          <h3>Filter Categories</h3>
+          <button id="closeMobileFilter" class="close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="mobile-category-container">
+          <button class="category-btn active" data-category="all">
+            <i class="fas fa-layer-group"></i>
+            <span>All</span>
+          </button>
+          <button class="category-btn" data-category="image conversion">
+            <i class="fas fa-exchange-alt"></i>
+            <span>Image Conversion</span>
+          </button>
+          <button class="category-btn" data-category="logo">
+            <i class="fas fa-pen-fancy"></i>
+            <span>Logo</span>
+          </button>
+          <button class="category-btn" data-category="product">
+            <i class="fas fa-box-open"></i>
+            <span>Product</span>
+          </button>
+          <button class="category-btn" data-category="food">
+            <i class="fas fa-utensils"></i>
+            <span>Foods</span>
+          </button>
+          <button class="category-btn" data-category="funny">
+            <i class="fas fa-laugh"></i>
+            <span>Funny</span>
+          </button>
+          <button class="category-btn" data-category="arts">
+            <i class="fas fa-palette"></i>
+            <span>Arts</span>
+          </button>
+          <button class="category-btn" data-category="gif">
+            <i class="fas fa-film"></i>
+            <span>GIF</span>
+          </button>
+        </div>
+        <div class="mobile-filter-actions">
+          <button id="mobileApplyFilters" class="filter-action-btn apply-btn">Apply Filters</button>
+          <button id="mobileResetFilters" class="filter-action-btn reset-btn">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="promptsPage" class="page-content active">
+      <div id="promptsGrid" class="prompts-grid">
+        <!-- Cards will be inserted here by JavaScript -->
       </div>
     </div>
 
@@ -129,29 +210,6 @@
 
         <div class="direct-contact">
           <p>Or reach us directly at: <a href="mailto:sanvialevan2121@gmail.com">sanvialevan2121@gmail.com</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div id="expandedView" class="expanded-view">
-      <button id="closeExpanded" class="close-btn" aria-label="Close expanded view">
-        <i class="fas fa-times"></i>
-      </button>
-      <div class="expanded-content">
-        <img id="expandedImage" src="" alt="">
-        <h2 id="expandedTitle"></h2>
-        <div class="instruction-box">
-          <h3>Instructions</h3>
-          <p id="expandedInstruction"></p>
-        </div>
-        <div class="prompt-box">
-          <h3>Prompt</h3>
-          <div class="prompt-content">
-            <p id="expandedPrompt"></p>
-            <button id="copyPrompt" class="copy-btn">
-              <i class="fas fa-copy"></i> Copy
-            </button>
-          </div>
         </div>
       </div>
     </div>
