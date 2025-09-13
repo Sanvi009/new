@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google Analytics & Adsense -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SDCHCVJFG6"></script>
+  <meta name="google-adsense-account" content="ca-pub-5794152823767622">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622"
+     crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinematic Food Splash Shot | dynamic food photography | advertising style</title>
+  <meta name="description" content="template.description">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-bg: #e0e5ec;
+      --shadow-dark: #a3b1c6;
+      --shadow-light: #ffffff;
+      --text-color: #2d3748;
+      --accent-color: #6a5acd;
+      --card-radius: 15px;
+      --transition-speed: 0.2s;
+    }
+
+    body {
+      margin: 0;
+      padding: 15px;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--primary-bg);
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-color);
+      text-decoration: none;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+
+    /* Content Sections */
+    .content-section {
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+    }
+
+    .prompt-image {
+      width: 100%;
+      border-radius: var(--card-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      color: var(--accent-color);
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .instruction-box, .prompt-box {
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                  inset -3px -3px 6px var(--shadow-light);
+    }
+
+    .prompt-content {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .prompt-text {
+      flex: 1;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+
+    .copy-btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+      position: relative;
+      overflow: hidden;
+      min-width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.9em;
+      color: var(--accent-color);
+    }
+
+    .copy-btn:hover {
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                  inset -2px -2px 5px var(--shadow-light);
+    }
+
+    .copy-btn.copied {
+      background: rgba(106, 90, 205, 0.1);
+    }
+
+    /* Relevant Prompts */
+    .relevant-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .relevant-link {
+      padding: 12px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .relevant-link:hover {
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                  inset -2px -2px 5px var(--shadow-light);
+      color: var(--accent-color);
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: 40px;
+      padding: 25px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 15px 0;
+    }
+
+    .footer-nav a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-section {
+        padding: 20px;
+      }
+      .prompt-content {
+        flex-direction: column;
+      }
+      .copy-btn {
+        align-self: flex-end;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content-section {
+        padding: 15px;
+      }
+      .instruction-box, .prompt-box {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>Cinematic Photo of Food Falling into a Bowl</h1>
+      <a href="../index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Gallery
+      </a>
+    </header>
+
+    <main>
+      <section class="content-section">
+        <img src="../images/15.jpeg" alt="" class="prompt-image">
+
+        <div class="instruction-box">
+          <h2 class="section-title">How to use this prompt</h2>
+          <p>To use this prompt professionally, integrate it into food advertising, product transformations, or dynamic photography for brands and e-commerce. Apply it in AI tools with an uploaded image, customizing "[bowl/plate]," "[water]," and "[contrasting backdrop]" like "ceramic bowl," "milk," and "dark wood," but preserving "dynamically falling," "cinematic food photography," "ultra-detailed textures," and "motion frozen in time" for hyper-realistic appeal. Do not modify the professional studio lighting or advertising-style composition. For example, changing to "glass plate" could yield elegant dessert ads, resulting in splashing visuals, while "metal bowl" might create industrial soup shots with vibrant, mouth-watering effects.</p>
+        </div>
+
+        <div class="prompt-box">
+          <h2 class="section-title">Prompt</h2>
+          <div class="prompt-content">
+            <p class="prompt-text">Analyze my food photo and transform to delicious [uploaded image] dynamically falling into a [bowl/plate], with splashing [water], cinematic food photography, professional studio lighting, [contrasting backdrop], advertising-style composition, ultra-detailed textures, hyper-realistic, 8K UHD, sharp focus, garnishes gracefully scattering, vibrant colors, mouth-watering presentation, motion frozen in time.</p>
+            <button class="copy-btn">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Sections for SEO/AdSense -->
+      <section class="content-section">
+        <h2 class="section-title">Why this prompt works</h2>
+        <p>This prompt works by leveraging dynamic action and professional food photography techniques to transform a static image into a captivating scene the instruction to have food dynamically falling into a bowl with splashing water creates movement and energy which is highly engaging in advertising the use of cinematic lighting contrasting backdrop and ultra-detailed textures ensures a mouth-watering and high-quality result the focus on garnishes scattering and motion frozen in time adds to the drama making the image perfect for social media ads restaurant menus or food packaging where grabbing attention is crucial.</p>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Example Output</h2>
+        <p>Here’s an example result generated  with this exact prompt:</p>
+        <img src="../images/15.15.jpeg" alt="Example output generated with this prompt" class="prompt-image">
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Prompt Variations</h2>
+        <ul>
+          <li>Destination: Swap “[bowl/plate]” → “a sizzling hot pan” for a cooking action shot. Swap “[bowl/plate]” → “a fresh salad” for a topping scene.</li>
+          <li>Splashing Element: Swap “[water]” → “rich gravy” for a more indulgent, dramatic splash. Swap “[water]” → “sparkling soda” for a fizzy, refreshing effect.</li>
+          <li>Backdrop: Swap “[contrasting backdrop]” → “a dark slate backdrop” for high contrast. Swap “[contrasting backdrop]” → “a bright white backdrop” for a clean, studio look.</li>
+          <li>Garnish: Specify garnish: “with fresh herbs gracefully scattering”. Specify garnish: “with sesame seeds and chili flakes gracefully scattering”.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">FAQ</h2>
+        <p><strong>What is the key action happening in the transformed image?</strong>The food is dynamically falling into a [bowl/plate] with splashing [water], with motion frozen in time.</p>
+        <p><strong>What is the desired quality and style of the final image?</strong>It should be hyper-realistic, 8K UHD, with cinematic food photography, professional studio lighting, and an advertising-style composition.</p>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Relevant Prompts</h2>
+        <div class="relevant-links">
+          <a href="Cinematic_Photo_of_a_Drink_Falling_into_a_Cup.html" class="relevant-link">Cinematic Photo of a Drink Falling into a Cup</a>
+          <a href="Cake_Disguised_as_an_Object_with_a_Bite_Mark.html" class="relevant-link">Cake Disguised as an Object with a Bite Mark</a>
+          <a href="Cinematic_Spicy_Fried_Chicken_with_Flames.html" class="relevant-link">Cinematic Spicy Fried Chicken with Flames</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 AI Prompt Gallery. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Service</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Copy button functionality
+    document.querySelector('.copy-btn').addEventListener('click', function() {
+      const promptText = document.querySelector('.prompt-text').textContent;
+      navigator.clipboard.writeText(promptText).then(() => {
+        const btn = this;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        btn.classList.add('copied');
+
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+        this.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+        setTimeout(() => {
+          this.innerHTML = '<i class="fas fa-copy"></i> Copy';
+        }, 2000);
+      });
+    });
+  </script>
+  <script>
+  // Handle back button with animation
+  document.querySelector('.back-link').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Add exit animation to current page
+    document.querySelector('.container').style.opacity = '0';
+    document.querySelector('.container').style.transform = 'translateY(20px)';
+    document.querySelector('.container').style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+    // Navigate after animation completes
+    setTimeout(() => {
+      window.location.href = this.href;
+    }, 300);
+  });
+  </script>
+</body>
+</html>
