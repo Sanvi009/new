@@ -902,5 +902,13 @@
         "image": "113.jpeg",
         "description": "Generate high-quality AI renders with this prompt that creates a 1/7 scale commercialized figurine of any chosen character in a realistic style. The figurine is displayed on a computer desk with a transparent acrylic base, placed next to the life-sized real person in matching attire who carefully cleans the figure with a fine brush. Set in a modern, brightly lit studio room with a collection of toys and action figures, this prompt is perfect for collectors, hobbyists, and realistic figure photography projects.",
         "category": "funny"
+    },
+    {
+        "id": 114,
+        "fileName": "2010s_iPhone_Selfie_Candid_Style_AI_Prompt_for_LoFi_Portraits.html",
+        "title": "2010s iPhone Selfie Candid Style – AI Prompt for Lo-Fi Portraits",
+        "image": "114.jpeg",
+        "description": "Generate realistic AI selfies with this prompt, recreating a 2010s iPhone-style candid photo. The image features Kirsten Stewart and yourself (matching your facial structure from a reference image) perched on Billie Eilish’s shoulder, with a blank expression and no specific composition. Designed to mimic imperfect moments, it includes slight blur, grainy texture, flash photography, soft focus, and optional accessories like eyeliner, jewelry, or face stickers. Perfect for creating nostalgic, lo-fi, and artistic candid portraits in 9:16 aspect ratio.",
+        "category": "image conversion"
     }
 ]
