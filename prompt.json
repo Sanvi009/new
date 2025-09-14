@@ -886,5 +886,13 @@
         "image": "111.jpeg",
         "description": "Learn the fundamentals of crafting prompts that generate stunning AI artwork",
         "category": "image conversion"
+    },
+    {
+        "id": 112,
+        "fileName": "Glossy_3D_Emoji_Character_in_Apple_iPhone_Style_AI_prompt.html",
+        "title": "Glossy 3D Emoji Character in Apple iPhone Style AI prompt",
+        "image": "112.jpeg",
+        "description": "Create stunning AI renders with this prompt that transforms any name or character into a glossy 3D emoji figure inspired by the official Apple iPhone emoji style. Designed with smooth shiny textures, simplified cartoon proportions, and expressive yet minimal facial details, this prompt produces clean, high-resolution studio images on a plain white background. Perfect for profile icons, social media graphics, branding, and creative projects that need a modern, polished emoji-style character.",
+        "category": "funny"
     }
 ]
