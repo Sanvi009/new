@@ -910,5 +910,13 @@
         "image": "114.jpeg",
         "description": "Generate realistic AI selfies with this prompt, recreating a 2010s iPhone-style candid photo. The image features Kirsten Stewart and yourself (matching your facial structure from a reference image) perched on Billie Eilish’s shoulder, with a blank expression and no specific composition. Designed to mimic imperfect moments, it includes slight blur, grainy texture, flash photography, soft focus, and optional accessories like eyeliner, jewelry, or face stickers. Perfect for creating nostalgic, lo-fi, and artistic candid portraits in 9:16 aspect ratio.",
         "category": "image conversion"
+    },
+    {
+        "id": 115,
+        "fileName": "HyperRealistic_Skyscraper_Overhead_Shot_AI_Cinematic_Prompt.html",
+        "title": "Hyper-Realistic Overhead Cityscape Prompt – Cinematic 9:16 AI Shot",
+        "image": "115.jpeg",
+        "description": "Create ultra-realistic AI renders with this prompt, featuring a man wearing a backward cap sitting on the edge of a skyscraper during blue hour. The overhead 9:16 shot captures dangling legs and a glance over the shoulder, with the city skyline softly blurred below. Designed for cinematic results, the prompt includes natural lighting, cinematic color grading, strong bokeh, and shallow depth of field. Render in 8K resolution for ultra-detailed, photorealistic visuals perfect for digital art, storytelling, and cinematic compositions",
+        "category": "image conversion"
     }
 ]
