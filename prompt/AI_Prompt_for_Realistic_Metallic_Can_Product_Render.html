@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google Analytics & Adsense -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SDCHCVJFG6"></script>
+  <meta name="google-adsense-account" content="ca-pub-5794152823767622">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5794152823767622"
+     crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinematic Metallic Can Render with Condensation & Liquid Splash</title>
+  <meta name="description" content="Render your template design as a cold metallic can with realistic condensation, placed upright in the center of the frame. Surround the can with a glowing liquid splash that matches the flavor, creating a dynamic and eye-catching effect. The scene uses cinematic studio lighting with ultra-sharp focus and contrast, perfect for product mockups, advertising visuals, and photorealistic AI-generated marketing assets.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-bg: #e0e5ec;
+      --shadow-dark: #a3b1c6;
+      --shadow-light: #ffffff;
+      --text-color: #2d3748;
+      --accent-color: #6a5acd;
+      --card-radius: 15px;
+      --transition-speed: 0.2s;
+    }
+
+    body {
+      margin: 0;
+      padding: 15px;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--primary-bg);
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-color);
+      text-decoration: none;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+
+    /* Content Sections */
+    .content-section {
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+    }
+
+    .prompt-image {
+      width: 100%;
+      border-radius: var(--card-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      color: var(--accent-color);
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .instruction-box, .prompt-box {
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                  inset -3px -3px 6px var(--shadow-light);
+    }
+
+    .prompt-content {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .prompt-text {
+      flex: 1;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+
+    .copy-btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+      position: relative;
+      overflow: hidden;
+      min-width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.9em;
+      color: var(--accent-color);
+    }
+
+    .copy-btn:hover {
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                  inset -2px -2px 5px var(--shadow-light);
+    }
+
+    .copy-btn.copied {
+      background: rgba(106, 90, 205, 0.1);
+    }
+
+    /* Relevant Prompts */
+    .relevant-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .relevant-link {
+      padding: 12px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .relevant-link:hover {
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                  inset -2px -2px 5px var(--shadow-light);
+      color: var(--accent-color);
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: 40px;
+      padding: 25px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 15px 0;
+    }
+
+    .footer-nav a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-section {
+        padding: 20px;
+      }
+      .prompt-content {
+        flex-direction: column;
+      }
+      .copy-btn {
+        align-self: flex-end;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content-section {
+        padding: 15px;
+      }
+      .instruction-box, .prompt-box {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>AI Prompt for Realistic Metallic Can Product Render</h1>
+      <a href="../index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Gallery
+      </a>
+    </header>
+
+    <main>
+      <section class="content-section">
+        <img src="../images/117.jpeg" alt="" class="prompt-image">
+
+        <div class="instruction-box">
+          <h2 class="section-title">How to use this prompt</h2>
+          <p>Replace [insert template] with your logo, brand, or design you want displayed on the can. You can also change the liquid color to match the drink flavor (e.g., orange for citrus, red for cherry). Keep the cinematic studio lighting keywords intact for professional results.</p>
+        </div>
+
+        <div class="prompt-box">
+          <h2 class="section-title">Prompt</h2>
+          <div class="prompt-content">
+            <p class="prompt-text">Render [insert template] as a cold metallic can with condensation, standing vertically in the center of the frame. Around it — a splash of glowing liquid in a color matching the flavor. Lighting — cinematic, with ultra-sharp focus and contrast in a studio style.</p>
+            <button class="copy-btn">
+              <i class="fas fa-copy"></i> Copy
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Sections for SEO/AdSense -->
+      <section class="content-section">
+        <h2 class="section-title">Why this prompt works</h2>
+        <p>This prompt mimics high-end product photography by combining condensation, sharp cinematic lighting, and a glowing liquid splash. It highlights the can as the centerpiece while reinforcing brand identity through the color-matched liquid. The result feels polished, realistic, and instantly marketable — perfect for showcasing products in ads, presentations, or e-commerce visuals.</p>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Example Output</h2>
+        <p>Here’s an example result generated  with this exact prompt:</p>
+        <img src="../images/117.117.jpeg" alt="Example output generated with this prompt" class="prompt-image">
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Prompt Variations</h2>
+        <ul>
+          <li>Change “metallic can” → “frosted glass bottle” for a premium look.</li>
+          <li>Change “glowing liquid splash” → “ice cubes exploding around it” for an energetic vibe.</li>
+          <li>Change “cinematic studio lighting” → “soft natural daylight” for a fresh lifestyle look.</li>
+          <li>Change “cold metallic can” → “matte black can” for a sleek modern aesthetic.</li>
+        </ul>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">FAQ</h2>
+        <p><strong>Can I use this prompt to mock up my brand logo on the can?</strong>Yes — just replace [insert template] with your logo or label design to see it rendered realistically on the can.</p>
+        <p><strong>How do I change the splash color to match my drink?</strong>Add keywords like “orange glowing splash” or “green neon liquid burst” so the liquid visually represents the flavor.</p>
+      </section>
+
+      <section class="content-section">
+        <h2 class="section-title">Relevant Prompts</h2>
+        <div class="relevant-links">
+          <a href="Cinematic_Photo_of_a_Drink_Falling_into_a_Cup.html" class="relevant-link">Cinematic Photo of a Drink Falling into a Cup</a>
+          <a href="Hyper-Realistic_Splash_Ad_for_a_Sour_Apple_Drink.html" class="relevant-link">Hyper-Realistic Splash Ad for a Sour Apple Drink</a>
+          <a href="Luxury_Shower_Gel_Bottle_on_a_Mossy_Stone.html" class="relevant-link">Luxury Shower Gel Bottle on a Mossy Stone</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 AI Prompt Gallery. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Service</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Copy button functionality
+    document.querySelector('.copy-btn').addEventListener('click', function() {
+      const promptText = document.querySelector('.prompt-text').textContent;
+      navigator.clipboard.writeText(promptText).then(() => {
+        const btn = this;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        btn.classList.add('copied');
+
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fas fa-copy"></i> Copy';
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+        this.innerHTML = '<i class="fas fa-exclamation-circle"></i> Error';
+        setTimeout(() => {
+          this.innerHTML = '<i class="fas fa-copy"></i> Copy';
+        }, 2000);
+      });
+    });
+  </script>
+  <script>
+  // Handle back button with animation
+  document.querySelector('.back-link').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Add exit animation to current page
+    document.querySelector('.container').style.opacity = '0';
+    document.querySelector('.container').style.transform = 'translateY(20px)';
+    document.querySelector('.container').style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+    // Navigate after animation completes
+    setTimeout(() => {
+      window.location.href = this.href;
+    }, 300);
+  });
+  </script>
+</body>
+</html>
