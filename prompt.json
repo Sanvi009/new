@@ -918,5 +918,13 @@
         "image": "115.jpeg",
         "description": "Create ultra-realistic AI renders with this prompt, featuring a man wearing a backward cap sitting on the edge of a skyscraper during blue hour. The overhead 9:16 shot captures dangling legs and a glance over the shoulder, with the city skyline softly blurred below. Designed for cinematic results, the prompt includes natural lighting, cinematic color grading, strong bokeh, and shallow depth of field. Render in 8K resolution for ultra-detailed, photorealistic visuals perfect for digital art, storytelling, and cinematic compositions",
         "category": "image conversion"
+    },
+    {
+        "id": 116,
+        "fileName": "trending_Retro_90s_Cinematic_Portrait_AI_Prompt.html",
+        "title": "trending Retro 90s Cinematic Portrait AI Prompt",
+        "image": "116.jpeg",
+        "description": "Create a retro, vintage-inspired portrait with a bright yet grainy film aesthetic. This prompt ensures the subject’s face stays true to the reference photo while styling them in a Pinterest-inspired brown retro saree. With 90s movie vibes, red curls, a flower tucked into the hair, and golden-hour lighting against a plain wall, the result feels cinematic, artistic, and romantic with deep dramatic shadows.",
+        "category": "image conversion"
     }
 ]
