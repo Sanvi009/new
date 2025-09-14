@@ -894,5 +894,13 @@
         "image": "112.jpeg",
         "description": "Create stunning AI renders with this prompt that transforms any name or character into a glossy 3D emoji figure inspired by the official Apple iPhone emoji style. Designed with smooth shiny textures, simplified cartoon proportions, and expressive yet minimal facial details, this prompt produces clean, high-resolution studio images on a plain white background. Perfect for profile icons, social media graphics, branding, and creative projects that need a modern, polished emoji-style character.",
         "category": "funny"
+    },
+    {
+        "id": 113,
+        "fileName": "17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors.html",
+        "title": "1/7 Scale Figurine Realistic Style  AI Prompt for Collectors",
+        "image": "113.jpeg",
+        "description": "Generate high-quality AI renders with this prompt that creates a 1/7 scale commercialized figurine of any chosen character in a realistic style. The figurine is displayed on a computer desk with a transparent acrylic base, placed next to the life-sized real person in matching attire who carefully cleans the figure with a fine brush. Set in a modern, brightly lit studio room with a collection of toys and action figures, this prompt is perfect for collectors, hobbyists, and realistic figure photography projects.",
+        "category": "funny"
     }
 ]
