@@ -958,5 +958,13 @@
         "image": "120.jpeg",
         "description": "this prompt can be use to transform your image like this ",
         "category": "image conversion"
+    },
+    {
+        "id": 121,
+        "fileName": "AI_Prompt_for_Realistic_Collectible_Figurine_Diorama_in_Glass_Bottle.html",
+        "title": "AI Prompt for Realistic Collectible Figurine Diorama in Glass Bottle",
+        "image": "121.jpeg",
+        "description": "it can make your image like this ",
+        "category": "funny"
     }
 ]
