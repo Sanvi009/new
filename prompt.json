@@ -934,5 +934,13 @@
         "image": "117.jpeg",
         "description": "this prompt can be use to create product photography",
         "category": "product"
+    },
+    {
+        "id": 118,
+        "fileName": "AI_Prompt_for_HyperRealistic_8K_Portrait_with_Hairstyle_Variations.html",
+        "title": "8K Hyper-Realistic Portrait Grid with Hairstyle Variations",
+        "image": "118.jpeg",
+        "description": "this prompt can be use to create 8x8 hair style photo of your own ",
+        "category": "image conversion"
     }
 ]
