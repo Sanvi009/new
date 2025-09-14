@@ -926,5 +926,13 @@
         "image": "116.jpeg",
         "description": "Create a retro, vintage-inspired portrait with a bright yet grainy film aesthetic. This prompt ensures the subject’s face stays true to the reference photo while styling them in a Pinterest-inspired brown retro saree. With 90s movie vibes, red curls, a flower tucked into the hair, and golden-hour lighting against a plain wall, the result feels cinematic, artistic, and romantic with deep dramatic shadows.",
         "category": "image conversion"
+    },
+    {
+        "id": 117,
+        "fileName": "AI_Prompt_for_Realistic_Metallic_Can_Product_Render.html",
+        "title": "AI Prompt for Realistic Metallic Can Product Render",
+        "image": "117.jpeg",
+        "description": "this prompt can be use to create product photography",
+        "category": "product"
     }
 ]
