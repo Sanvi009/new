@@ -990,5 +990,13 @@
         "image": "124.jpeg",
         "description": " ",
         "category": "image conversion"
+    },
+    {
+        "id": 125,
+        "fileName": "AI_Prompt_Double_Exposure_Superhero_Poster_Art.html",
+        "title": "AI Prompt: Double Exposure Superhero Poster Art",
+        "image": "125.jpeg",
+        "description": " ",
+        "category": "image conversion"
     }
 ]
