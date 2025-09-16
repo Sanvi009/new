@@ -982,5 +982,13 @@
         "image": "123.jpeg",
         "description": "Create a hyperrealistic AI image of a person packaged like supermarket fruit. The human is placed in a red styrofoam tray, wrapped tightly in plastic with water droplets on the surface. A price tag with a barcode is stuck on their forehead, showing a serious expression. With a dark background and dramatic lighting, this prompt creates a surreal, unsettling photo that looks ultra-realistic and cinematic. ",
         "category": "funny"
+    },
+    {
+        "id": 124,
+        "fileName": "AI_Prompt_Futuristic_Urban_Portrait_with_Neon_Rifle_and_Graffiti_Background.html",
+        "title": "AI Prompt: Futuristic Urban Portrait with Neon Rifle and Graffiti Background",
+        "image": "124.jpeg",
+        "description": " ",
+        "category": "image conversion"
     }
 ]
