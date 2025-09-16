@@ -966,5 +966,13 @@
         "image": "121.jpeg",
         "description": "it can make your image like this ",
         "category": "funny"
+    },
+    {
+        "id": 122,
+        "fileName": "AI_Prompt_Man_Sleeping_on_Bananas.html",
+        "title": "AI Prompt: Man Sleeping on Bananas",
+        "image": "122.jpeg",
+        "description": "Turn a simple photo into a funny and surreal AI image: a man sleeping on top of a giant pile of bananas. Some are peeled, some unpeeled, with a few spilling over onto a wooden table. The warm light makes the yellow fruit glow, creating a playful and dream-like scene. This AI prompt is easy to use and perfect for making quirky, creative images that stand out. ",
+        "category": "funny"
     }
 ]
