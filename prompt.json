@@ -974,5 +974,13 @@
         "image": "122.jpeg",
         "description": "Turn a simple photo into a funny and surreal AI image: a man sleeping on top of a giant pile of bananas. Some are peeled, some unpeeled, with a few spilling over onto a wooden table. The warm light makes the yellow fruit glow, creating a playful and dream-like scene. This AI prompt is easy to use and perfect for making quirky, creative images that stand out. ",
         "category": "funny"
+    },
+    {
+        "id": 123,
+        "fileName": "AI_Prompt_Human_Wrapped_in_Plastic_Like_Supermarket_Fruit.html",
+        "title": "AI Prompt: Human Wrapped in Plastic Like Supermarket Fruit",
+        "image": "123.jpeg",
+        "description": "Create a hyperrealistic AI image of a person packaged like supermarket fruit. The human is placed in a red styrofoam tray, wrapped tightly in plastic with water droplets on the surface. A price tag with a barcode is stuck on their forehead, showing a serious expression. With a dark background and dramatic lighting, this prompt creates a surreal, unsettling photo that looks ultra-realistic and cinematic. ",
+        "category": "funny"
     }
 ]
