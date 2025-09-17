@@ -603,3 +603,108 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ... all existing CSS remains exactly the same ... */
+
+/* Links Dot Styles */
+.links-dot-container {
+  position: relative;
+  margin-top: 15px;
+}
+
+.links-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent-color);
+  color: white;
+  cursor: pointer;
+  box-shadow: 3px 3px 6px var(--shadow-dark);
+  transition: all var(--transition-speed) ease;
+  display: grid;
+  place-items: center;
+}
+
+.links-dot:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px var(--shadow-dark);
+}
+
+/* Links Modal Styles */
+.links-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.links-modal.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.links-modal-content {
+  background: var(--primary-bg);
+  border-radius: var(--card-radius);
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.links-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: var(--accent-color);
+  color: white;
+}
+
+.links-modal-header h3 {
+  margin: 0;
+}
+
+.links-container {
+  padding: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.links-container a {
+  display: block;
+  padding: 10px 15px;
+  border-radius: var(--card-radius);
+  background: var(--primary-bg);
+  box-shadow: 3px 3px 6px var(--shadow-dark), 
+              -3px -3px 6px var(--shadow-light);
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+}
+
+.links-container a:hover {
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+              inset -3px -3px 6px var(--shadow-light);
+  color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .links-container {
+    grid-template-columns: 1fr;
+  }
+}
