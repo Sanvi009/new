@@ -27,7 +27,11 @@ const elements = {
   mobileFilterOverlay: document.getElementById('mobileFilterOverlay'),
   closeMobileFilter: document.getElementById('closeMobileFilter'),
   mobileApplyFilters: document.getElementById('mobileApplyFilters'),
-  mobileResetFilters: document.getElementById('mobileResetFilters')
+  mobileResetFilters: document.getElementById('mobileResetFilters'),
+  // New elements for links functionality
+  linksDot: document.getElementById('linksDot'),
+  linksModal: document.getElementById('linksModal'),
+  closeLinksModal: document.getElementById('closeLinksModal')
 };
 
 // State
@@ -161,6 +165,29 @@ function setupEventListeners() {
   // Lazy load images when scrolling
   window.addEventListener('scroll', throttle(lazyLoadImages, 200));
   window.addEventListener('resize', throttle(lazyLoadImages, 200));
+
+  // New event listeners for links functionality
+  elements.linksDot.addEventListener('click', showLinksModal);
+  elements.closeLinksModal.addEventListener('click', hideLinksModal);
+
+  // Close modal when clicking outside
+  elements.linksModal.addEventListener('click', (e) => {
+    if (e.target === elements.linksModal) {
+      hideLinksModal();
+    }
+  });
+}
+
+// Show links modal
+function showLinksModal() {
+  elements.linksModal.classList.add('show');
+  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+// Hide links modal
+function hideLinksModal() {
+  elements.linksModal.classList.remove('show');
+  document.body.style.overflow = ''; // Re-enable scrolling
 }
 
 // Show mobile filter overlay
@@ -274,6 +301,9 @@ function switchToPage(page) {
 
   // Hide mobile filter overlay if visible
   hideMobileFilterOverlay();
+
+  // Hide links modal if visible
+  hideLinksModal();
 
   // Activate selected page and button
   switch(page) {
