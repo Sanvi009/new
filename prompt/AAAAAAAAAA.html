@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Complete Guide to Financial Planning and Wealth Building</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-bg: #e0e5ec;
+      --shadow-dark: #a3b1c6;
+      --shadow-light: #ffffff;
+      --text-color: #2d3748;
+      --accent-color: #6a5acd;
+      --card-radius: 15px;
+      --transition-speed: 0.2s;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--primary-bg);
+      color: var(--text-color);
+      line-height: 1.7;
+      font-size: 18px;
+      padding: 15px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Breadcrumb Navigation */
+    .breadcrumb {
+      padding: 10px 0;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: all var(--transition-speed) ease;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb span {
+      margin: 0 8px;
+      color: var(--shadow-dark);
+    }
+
+    /* Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+      position: relative;
+    }
+
+    .page-header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: var(--accent-color);
+    }
+
+    .header-actions {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .back-link, .copy-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all var(--transition-speed) ease;
+      padding: 10px 20px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .back-link:hover, .copy-link-btn:hover {
+      text-decoration: none;
+      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                  inset -3px -3px 6px var(--shadow-light);
+    }
+
+    .copy-link-btn.copied {
+      background: rgba(106, 90, 205, 0.1);
+    }
+
+    /* Content Sections */
+    .content-section {
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+    }
+
+    .prompt-image {
+      width: 100%;
+      border-radius: var(--card-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .prompt-image:hover {
+      transform: scale(1.02);
+    }
+
+    .section-title {
+      color: var(--accent-color);
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 10px;
+    }
+
+    .instruction-box, .prompt-box {
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                  inset -3px -3px 6px var(--shadow-light);
+    }
+
+    .prompt-content {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .prompt-text {
+      flex: 1;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      font-family: 'Courier New', monospace;
+      background: rgba(0,0,0,0.03);
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    .copy-btn {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 10px;
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+      position: relative;
+      overflow: hidden;
+      min-width: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 1em;
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .copy-btn:hover {
+      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
+                  inset -2px -2px 5px var(--shadow-light);
+    }
+
+    .copy-btn.copied {
+      background: rgba(106, 90, 205, 0.1);
+    }
+
+    /* Article Content */
+    .article-content h2 {
+      color: var(--accent-color);
+      margin: 30px 0 15px;
+      font-size: 1.6rem;
+    }
+
+    .article-content h3 {
+      color: var(--text-color);
+      margin: 25px 0 10px;
+      font-size: 1.3rem;
+    }
+
+    .article-content p {
+      margin-bottom: 20px;
+    }
+
+    .article-content ul, .article-content ol {
+      margin: 20px 0;
+      padding-left: 30px;
+    }
+
+    .article-content li {
+      margin-bottom: 10px;
+    }
+
+    .highlight-box {
+      background: rgba(106, 90, 205, 0.1);
+      padding: 20px;
+      border-radius: var(--card-radius);
+      margin: 25px 0;
+      border-left: 4px solid var(--accent-color);
+    }
+
+    /* Continue Button */
+    .continue-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: var(--card-radius);
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 40px 0;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+      transition: all var(--transition-speed) ease;
+    }
+
+    .continue-btn:hover {
+      background: #5a4db8;
+      transform: translateY(-3px);
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Plus Button */
+    .plus-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--accent-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 2rem;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+      transition: all var(--transition-speed) ease;
+      z-index: 100;
+    }
+
+    .plus-button:hover {
+      transform: scale(1.1);
+      background: #5a4db8;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.25);
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: 40px;
+      padding: 25px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 8px 8px 15px var(--shadow-dark), 
+                  -8px -8px 15px var(--shadow-light);
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 15px 0;
+    }
+
+    .footer-nav a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: all var(--transition-speed) ease;
+      padding: 8px 15px;
+      border-radius: var(--card-radius);
+      background: var(--primary-bg);
+      box-shadow: 3px 3px 6px var(--shadow-dark), 
+                  -3px -3px 6px var(--shadow-light);
+    }
+
+    .footer-nav a:hover {
+      text-decoration: none;
+      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                  inset -3px -3px 6px var(--shadow-light);
+    }
+
+    /* Toast notification for copy feedback */
+    .copy-toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary-bg);
+      color: var(--accent-color);
+      padding: 12px 20px;
+      border-radius: var(--card-radius);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .copy-toast.show {
+      opacity: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      .content-section {
+        padding: 20px;
+      }
+
+      .prompt-content {
+        flex-direction: column;
+      }
+
+      .copy-btn {
+        align-self: flex-end;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .page-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .header-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .plus-button {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content-section {
+        padding: 15px;
+      }
+
+      .instruction-box, .prompt-box {
+        padding: 15px;
+      }
+
+      .footer-nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-nav a {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span>></span>
+      <a href="../index.html#articles">Finance Articles</a>
+      <span>></span>
+      <span aria-current="page">The Complete Guide to Financial Planning and Wealth Building</span>
+    </nav>
+
+    <header class="page-header">
+      <h1>The Complete Guide to Financial Planning and Wealth Building</h1>
+      <div class="header-actions">
+        <a href="#" id="back-button" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back
+        </a>
+        <button id="copy-link-button" class="copy-link-btn">
+          <i class="fas fa-link"></i> Copy Link
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="content-section">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Financial planning and wealth management" class="prompt-image">
+
+        <div class="article-content">
+          <h2>Introduction to Financial Planning</h2>
+          <p>Financial planning is the process of managing your finances to achieve personal economic satisfaction. It allows you to control your financial situation by properly managing your cash flow, building wealth, preparing for emergencies, and securing your future. Every individual, regardless of age or income level, can benefit from having a solid financial plan.</p>
+
+          <p>This comprehensive guide will walk you through the essential components of financial planning, from budgeting and debt management to investing and retirement planning. By understanding and implementing these principles, you can build a secure financial foundation and work toward achieving your long-term financial goals.</p>
+
+          <div class="highlight-box">
+            <p><strong>Key Takeaway:</strong> Financial planning is not just for the wealthy—it's a crucial process that everyone should undertake to secure their financial future and achieve their life goals.</p>
+          </div>
+
+          <h2>The Fundamentals of Budgeting</h2>
+          <p>Budgeting is the cornerstone of any effective financial plan. It involves tracking your income and expenses to ensure you're living within your means and allocating funds toward your financial goals. A well-structured budget provides clarity about where your money is going and helps identify areas where you can cut back or reallocate funds.</p>
+
+          <h3>Creating an Effective Budget</h3>
+          <p>To create a budget that works, follow these steps:</p>
+
+          <ol>
+            <li><strong>Calculate your monthly income:</strong> Include all sources of income after taxes.</li>
+            <li><strong>Track your expenses:</strong> Categorize your spending into fixed expenses (rent, utilities) and variable expenses (entertainment, dining out).</li>
+            <li><strong>Set financial goals:</strong> Determine what you're saving for—emergency fund, retirement, down payment, etc.</li>
+            <li><strong>Allocate funds:</strong> Use a budgeting method like the 50/30/20 rule (50% needs, 30% wants, 20% savings) or zero-based budgeting.</li>
+            <li><strong>Review and adjust:</strong> Regularly monitor your budget and make adjustments as needed.</li>
+          </ol>
+
+          <h3>Popular Budgeting Methods</h3>
+          <p>Different budgeting approaches work for different people:</p>
+
+          <ul>
+            <li><strong>Zero-Based Budgeting:</strong> Every dollar of income is allocated to a specific purpose, leaving zero unassigned dollars.</li>
+            <li><strong>50/30/20 Rule:</strong> Allocate 50% of income to needs, 30% to wants, and 20% to savings and debt repayment.</li>
+            <li><strong>Envelope System:</strong> Use cash envelopes for different spending categories to control discretionary spending.</li>
+            <li><strong>Pay-Yourself-First:</strong> Prioritize savings by automatically transferring a portion of each paycheck to savings before paying other expenses.</li>
+          </ul>
+
+          <h2>Debt Management Strategies</h2>
+          <p>Debt can be a significant obstacle to building wealth. Effective debt management involves understanding your debt, creating a repayment plan, and avoiding accumulating new debt.</p>
+
+          <h3>Understanding Good Debt vs. Bad Debt</h3>
+          <p>Not all debt is created equal. Good debt is typically used to acquire assets that appreciate in value or generate income, such as a mortgage for a home or student loans for education. Bad debt, on the other hand, is used for consumables or depreciating assets, like credit card debt for discretionary spending.</p>
+
+          <h3>Debt Repayment Strategies</h3>
+          <p>Two popular methods for paying down debt are:</p>
+
+          <ul>
+            <li><strong>Debt Snowball Method:</strong> Focus on paying off your smallest debt first while making minimum payments on others. Once the smallest debt is paid, roll that payment amount into the next smallest debt.</li>
+            <li><strong>Debt Avalanche Method:</strong> Prioritize debts with the highest interest rates first, regardless of balance, to minimize the total interest paid over time.</li>
+          </ul>
+
+          <p>Both methods have their merits. The snowball method provides psychological wins that can keep you motivated, while the avalanche method is mathematically more efficient.</p>
+
+          <h2>Building an Emergency Fund</h2>
+          <p>An emergency fund is a crucial component of financial security. It serves as a financial buffer that can help you weather unexpected expenses without derailing your financial plan or accumulating high-interest debt.</p>
+
+          <h3>How Much Should You Save?</h3>
+          <p>Financial experts typically recommend saving 3-6 months' worth of essential living expenses in your emergency fund. The exact amount depends on your personal circumstances:</p>
+
+          <ul>
+            <li><strong>Single income households:</strong> Aim for 6+ months of expenses</li>
+            <li><strong>Dual income households:</strong> 3-6 months may be sufficient</li>
+            <li><strong>Self-employed or variable income:</strong> Consider 6-12 months of expenses</li>
+          </ul>
+
+          <h3>Where to Keep Your Emergency Fund</h3>
+          <p>Your emergency fund should be easily accessible but separate from your regular checking account to avoid temptation. Consider these options:</p>
+
+          <ul>
+            <li><strong>High-yield savings account:</strong> Offers better interest rates than traditional savings accounts while maintaining liquidity.</li>
+            <li><strong>Money market account:</strong> Typically provides check-writing privileges with slightly higher interest rates.</li>
+            <li><strong>Certificates of Deposit (CDs):</strong> Ladder CDs to maintain some accessibility while earning higher interest.</li>
+          </ul>
+
+          <h2>Investment Strategies for Wealth Building</h2>
+          <p>Investing is essential for building long-term wealth and achieving financial independence. It allows your money to work for you through compound growth over time.</p>
+
+          <h3>Understanding Investment Vehicles</h3>
+          <p>There are various investment options to consider:</p>
+
+          <ul>
+            <li><strong>Stocks:</strong> Represent ownership in companies and offer potential for high returns but come with higher risk.</li>
+            <li><strong>Bonds:</strong> Debt instruments that provide regular interest payments with lower risk than stocks.</li>
+            <li><strong>Mutual Funds:</strong> Professionally managed portfolios of stocks and/or bonds that offer diversification.</li>
+            <li><strong>Exchange-Traded Funds (ETFs):</strong> Similar to mutual funds but trade like stocks on exchanges.</li>
+            <li><strong>Real Estate:</strong> Can provide both rental income and appreciation potential.</li>
+          </ul>
+
+          <h3>Asset Allocation and Diversification</h3>
+          <p>Asset allocation involves dividing your investment portfolio among different asset categories. The right allocation depends on your risk tolerance, time horizon, and financial goals. Diversification across different asset classes and within asset classes helps reduce risk.</p>
+
+          <div class="highlight-box">
+            <p><strong>Pro Tip:</strong> A common rule of thumb for asset allocation is to subtract your age from 110 to determine the percentage of your portfolio that should be in stocks. For example, a 30-year-old would have 80% in stocks and 20% in bonds.</p>
+          </div>
+
+          <h3>Dollar-Cost Averaging</h3>
+          <p>This investment strategy involves regularly investing a fixed amount of money regardless of market conditions. This approach reduces the impact of market volatility and eliminates the need to time the market, which is notoriously difficult even for professionals.</p>
+
+          <h2>Retirement Planning</h2>
+          <p>Planning for retirement is one of the most critical aspects of financial planning. The earlier you start, the more time your money has to grow through compounding.</p>
+
+          <h3>Retirement Accounts</h3>
+          <p>Take advantage of tax-advantaged retirement accounts:</p>
+
+          <ul>
+            <li><strong>401(k) or 403(b):</strong> Employer-sponsored plans that often include matching contributions.</li>
+            <li><strong>Traditional IRA:</strong> Contributions may be tax-deductible, and earnings grow tax-deferred.</li>
+            <li><strong>Roth IRA:</strong> Contributions are made with after-tax dollars, but qualified withdrawals are tax-free.</li>
+            <li><strong>Health Savings Account (HSA):</strong> Triple tax advantage for medical expenses, but can also serve as a retirement account.</li>
+          </ul>
+
+          <h3>How Much to Save for Retirement</h3>
+          <p>A general guideline is to save 15% of your pre-tax income for retirement. However, the exact amount depends on when you start saving and your desired retirement lifestyle. Use retirement calculators to estimate your needs based on factors like life expectancy, inflation, and expected investment returns.</p>
+
+          <h2>Insurance and Risk Management</h2>
+          <p>Insurance is a critical component of financial planning that protects you from catastrophic financial losses.</p>
+
+          <h3>Essential Insurance Coverage</h3>
+          <p>Consider these types of insurance:</p>
+
+          <ul>
+            <li><strong>Health Insurance:</strong> Protects against high medical costs.</li>
+            <li><strong>Life Insurance:</strong> Provides for dependents if you pass away.</li>
+            <li><strong>Disability Insurance:</strong> Replaces income if you're unable to work due to illness or injury.</li>
+            <li><strong>Homeowners/Renters Insurance:</strong> Protects your home and belongings.</li>
+            <li><strong>Auto Insurance:</strong> Required by law and protects against vehicle-related losses.</li>
+            <li><strong>Umbrella Insurance:</strong> Provides additional liability coverage beyond standard policies.</li>
+          </ul>
+
+          <h2>Estate Planning</h2>
+          <p>Estate planning ensures your assets are distributed according to your wishes and can help minimize taxes and legal complications for your heirs.</p>
+
+          <h3>Essential Estate Planning Documents</h3>
+          <p>Key documents include:</p>
+
+          <ul>
+            <li><strong>Will:</strong> Specifies how your assets should be distributed and who should care for minor children.</li>
+            <li><strong>Living Trust:</strong> Can help avoid probate and provide more control over asset distribution.</li>
+            <li><strong>Power of Attorney:</strong> Authorizes someone to manage your financial affairs if you're unable.</li>
+            <li><strong>Healthcare Directive:</strong> Specifies your medical treatment preferences and designates a healthcare proxy.</li>
+          </ul>
+
+          <h2>Tax Planning Strategies</h2>
+          <p>Effective tax planning can significantly impact your net worth over time by minimizing your tax liability through legal means.</p>
+
+          <h3>Tax-Efficient Investing</h3>
+          <p>Strategies include:</p>
+
+          <ul>
+            <li>Utilizing tax-advantaged accounts like 401(k)s and IRAs</li>
+            <li>Holding investments for more than one year to qualify for long-term capital gains rates</li>
+            <li>Tax-loss harvesting to offset capital gains with losses</li>
+            <li>Considering municipal bonds for tax-free income</li>
+          </ul>
+
+          <h2>Putting It All Together: Your Financial Plan</h2>
+          <p>A comprehensive financial plan integrates all these elements into a cohesive strategy tailored to your unique circumstances, goals, and risk tolerance.</p>
+
+          <h3>Regular Review and Adjustment</h3>
+          <p>Your financial plan should be a living document that evolves with your life circumstances. Review it annually or whenever you experience significant life changes such as marriage, children, career changes, or inheritance.</p>
+
+          <h3>Working with Financial Professionals</h3>
+          <p>While many people can manage their finances independently, working with a qualified financial planner can provide valuable expertise, objectivity, and accountability. Look for fee-only planners who act as fiduciaries, meaning they're legally obligated to act in your best interest.</p>
+
+          <h2>Conclusion</h2>
+          <p>Financial planning is a lifelong process that requires discipline, patience, and regular attention. By implementing the strategies outlined in this guide—budgeting, debt management, saving, investing, and protecting your assets—you can build a solid financial foundation, achieve your goals, and create the financial future you desire.</p>
+
+          <p>Remember that financial success is not about getting everything perfect but about making consistent progress toward your goals. Start where you are, use what you have, and do what you can. Every positive financial decision, no matter how small, moves you closer to financial security and independence.</p>
+        </div>
+
+        <!-- Continue Button -->
+        <a href="https://www.effectivegatecpm.com/na8s8r337?key=aee1f09db3463ae60ce12530b056dc7e" class="continue-btn">Continue Reading</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Financial Wisdom. All rights reserved.</p>
+        <nav class="footer-nav">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#contact">Contact</a>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Service</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Plus Button -->
+  <a href="https://brainloom.online" class="plus-button">+</a>
+
+  <!-- Toast notification -->
+  <div id="copy-toast" class="copy-toast">
+    <i class="fas fa-check-circle"></i>
+    <span>Link copied to clipboard!</span>
+  </div>
+
+  <script>
+    // Back button functionality
+    document.getElementById('back-button').addEventListener('click', function(e) {
+      e.preventDefault();
+
+      // Add exit animation to current page
+      document.querySelector('.container').style.opacity = '0';
+      document.querySelector('.container').style.transform = 'translateY(20px)';
+      document.querySelector('.container').style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+      // Navigate after animation completes
+      setTimeout(() => {
+        // Go back to the previous page in browser history
+        if (document.referrer && document.referrer.includes(window.location.host)) {
+          window.history.back();
+        } else {
+          // If no previous page in our domain, go to home
+          window.location.href = '../index.html';
+        }
+      }, 300);
+    });
+
+    // Copy link functionality
+    document.getElementById('copy-link-button').addEventListener('click', function() {
+      const url = window.location.href;
+
+      navigator.clipboard.writeText(url).then(() => {
+        // Show toast notification
+        const toast = document.getElementById('copy-toast');
+        toast.classList.add('show');
+
+        // Update button state
+        const btn = this;
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        btn.classList.add('copied');
+
+        // Reset after 2 seconds
+        setTimeout(() => {
+          toast.classList.remove('show');
+          btn.innerHTML = originalHtml;
+          btn.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy URL:', err);
+        alert('Failed to copy link. Please try again.');
+      });
+    });
+
+    // Add fade-in animation on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('.container').style.opacity = '0';
+      document.querySelector('.container').style.transform = 'translateY(20px)';
+      document.querySelector('.container').style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+      setTimeout(() => {
+        document.querySelector('.container').style.opacity = '1';
+        document.querySelector('.container').style.transform = 'translateY(0)';
+      }, 100);
+    });
+  </script>
+</body>
+</html>
