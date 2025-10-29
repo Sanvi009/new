@@ -1,914 +1,1181 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Guide to Financial Planning and Wealth Building</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-  <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9KCLHJQ30"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f5f7fa;
+            --dark: #2c3e50;
+            --text: #333;
+            --gray: #7f8c8d;
+        }
 
-      gtag('config', 'G-Y9KCLHJQ30');
-    </script>
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
+        #content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Art of Mindful Living | Brainloom</title>
-  <meta name="description" content="Explore the transformative practice of mindful living and discover how to bring presence and awareness to every moment of your daily life.">
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../images/logo1.png">
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
 
-  <!-- SEO Meta Tags -->
-  <meta name="keywords" content="mindfulness, meditation, mindful living, presence, awareness, mental health">
-  <meta name="author" content="Brainloom">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="revisit-after" content="7 days">
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            position: relative;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
 
-  <!-- Open Graph meta tags -->
-  <meta property="og:title" content="The Art of Mindful Living - Brainloom">
-  <meta property="og:description" content="Explore the transformative practice of mindful living and discover how to bring presence and awareness to every moment of your daily life.">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Brainloom">
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
 
-  <!-- Twitter Card meta tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Art of Mindful Living - Brainloom">
-  <meta name="twitter:description" content="Explore the transformative practice of mindful living and discover how to bring presence and awareness to every moment of your daily life.">
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+            position: relative;
+        }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --primary-bg: #e0e5ec;
-      --shadow-dark: #a3b1c6;
-      --shadow-light: #ffffff;
-      --text-color: #2d3748;
-      --accent-color: #6a5acd;
-      --card-radius: 15px;
-      --transition-speed: 0.2s;
-    }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
 
-    body {
-      margin: 0;
-      padding: 15px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--primary-bg);
-      color: var(--text-color);
-      line-height: 1.7;
-      font-size: 18px;
-    }
+        .article-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+        h2, h3, h4 {
+            color: var(--primary);
+            margin: 30px 0 20px;
+            position: relative;
+        }
 
-    /* Breadcrumb Navigation */
-    .breadcrumb {
-      padding: 10px 0;
-      margin-bottom: 15px;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 12px;
+        }
 
-    .breadcrumb a {
-      color: var(--accent-color);
-      text-decoration: none;
-      transition: all var(--transition-speed) ease;
-    }
+        h2::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+        }
 
-    .breadcrumb a:hover {
-      text-decoration: underline;
-    }
+        h3 {
+            font-size: 1.6rem;
+            color: var(--secondary);
+            padding-left: 15px;
+            border-left: 4px solid var(--secondary);
+        }
 
-    .breadcrumb span {
-      margin: 0 8px;
-      color: var(--shadow-dark);
-    }
+        h4 {
+            font-size: 1.4rem;
+            color: var(--dark);
+        }
 
-    /* Header */
-    .page-header {
-      text-align: center;
-      margin-bottom: 30px;
-      padding: 20px;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: 8px 8px 15px var(--shadow-dark), 
-                  -8px -8px 15px var(--shadow-light);
-      position: relative;
-    }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
 
-    .page-header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 15px;
-      color: var(--accent-color);
-    }
+        .highlight-box {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
 
-    .header-actions {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-      flex-wrap: wrap;
-    }
+        .highlight-box strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
 
-    .back-link, .copy-link-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all var(--transition-speed) ease;
-      padding: 10px 20px;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: 3px 3px 6px var(--shadow-dark), 
-                  -3px -3px 6px var(--shadow-light);
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+        ul, ol {
+            margin: 0 0 20px 30px;
+        }
 
-    .back-link:hover, .copy-link-btn:hover {
-      text-decoration: none;
-      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
-                  inset -3px -3px 6px var(--shadow-light);
-    }
+        li {
+            margin-bottom: 12px;
+            position: relative;
+        }
 
-    .copy-link-btn.copied {
-      background: rgba(106, 90, 205, 0.1);
-    }
+        li::before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
 
-    /* Content Sections */
-    .content-section {
-      margin-bottom: 30px;
-      padding: 25px;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: 8px 8px 15px var(--shadow-dark), 
-                  -8px -8px 15px var(--shadow-light);
-    }
+        strong {
+            color: var(--primary);
+        }
 
-    .prompt-image {
-      width: 100%;
-      border-radius: var(--card-radius);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      margin-bottom: 25px;
-      height: auto;
-      transition: transform 0.3s ease;
-    }
+        .ad-container {
+            margin: 35px auto;
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 1px dashed #ddd;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .prompt-image:hover {
-      transform: scale(1.02);
-    }
+        .ad-container::before {
+            content: "Advertisement";
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 0.7rem;
+            color: var(--gray);
+            background: rgba(255,255,255,0.8);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
 
-    .section-title {
-      color: var(--accent-color);
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 1.8rem;
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 10px;
-    }
+        .ad-placeholder {
+            color: var(--gray);
+            font-style: italic;
+        }
 
-    .instruction-box, .prompt-box {
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
-                  inset -3px -3px 6px var(--shadow-light);
-    }
+        .continue-btn {
+            display: block;
+            width: 320px;
+            margin: 50px auto;
+            padding: 18px 30px;
+            background: linear-gradient(to right, var(--accent), #c0392b);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .continue-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 600;
-      transition: all var(--transition-speed) ease;
-      padding: 15px 30px;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: 3px 3px 6px var(--shadow-dark), 
-                  -3px -3px 6px var(--shadow-light);
-      border: none;
-      cursor: pointer;
-      font-size: 1.1rem;
-      margin: 20px 0;
-    }
+        .continue-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
+        }
 
-    .continue-button:hover {
-      text-decoration: none;
-      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
-                  inset -3px -3px 6px var(--shadow-light);
-    }
+        .continue-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.4);
+        }
 
-    .brainloom-link {
-      display: inline-block;
-      margin-top: 20px;
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 500;
-      padding: 10px 15px;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: 3px 3px 6px var(--shadow-dark), 
-                  -3px -3px 6px var(--shadow-light);
-      transition: all var(--transition-speed) ease;
-    }
+        .continue-btn:hover::before {
+            left: 100%;
+        }
 
-    .brainloom-link:hover {
-      text-decoration: none;
-      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
-                  inset -3px -3px 6px var(--shadow-light);
-    }
+        .continue-btn i {
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
 
-    /* Ad Container Styling */
-    .ad-container {
-      margin: 30px 0;
-      padding: 20px;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: 8px 8px 15px var(--shadow-dark), 
-                  -8px -8px 15px var(--shadow-light);
-      text-align: center;
-    }
+        .continue-btn:hover i {
+            transform: translateX(5px);
+        }
 
-    .ad-container h3 {
-      color: var(--accent-color);
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 1.2rem;
-      border-bottom: 1px solid var(--accent-color);
-      padding-bottom: 10px;
-    }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #ecf0f1;
+        }
 
-    /* Relevant Prompts */
-    .relevant-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
 
-    .relevant-link {
-      padding: 12px 15px;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: 3px 3px 6px var(--shadow-dark), 
-                  -3px -3px 6px var(--shadow-light);
-      color: var(--text-color);
-      text-decoration: none;
-      transition: all var(--transition-speed) ease;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--light);
+            color: var(--dark);
+            transition: all 0.3s;
+        }
 
-    .relevant-link:hover {
-      box-shadow: inset 2px 2px 5px var(--shadow-dark), 
-                  inset -2px -2px 5px var(--shadow-light);
-      color: var(--accent-color);
-    }
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
 
-    .relevant-link:before {
-      content: "→";
-      font-weight: bold;
-    }
+        .facebook:hover {
+            background: #3b5998;
+            color: white;
+        }
 
-    /* FAQ Styling */
-    .faq-item {
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
+        .twitter:hover {
+            background: #1da1f2;
+            color: white;
+        }
 
-    .faq-item:last-child {
-      border-bottom: none;
-    }
+        .linkedin:hover {
+            background: #0077b5;
+            color: white;
+        }
 
-    .faq-question {
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: var(--accent-color);
-      font-size: 1.2rem;
-    }
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: rgba(255,255,255,0.1);
+            z-index: 1000;
+        }
 
-    /* Footer */
-    .site-footer {
-      margin-top: 40px;
-      padding: 25px 15px;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: 8px 8px 15px var(--shadow-dark), 
-                  -8px -8px 15px var(--shadow-light);
-      text-align: center;
-    }
+        .progress-bar {
+            height: 5px;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            width: 0%;
+            transition: width 0.3s;
+        }
 
-    .footer-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
 
-    .footer-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 15px 0;
-    }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
 
-    .footer-nav a {
-      color: var(--accent-color);
-      text-decoration: none;
-      transition: all var(--transition-speed) ease;
-      padding: 8px 15px;
-      border-radius: var(--card-radius);
-      background: var(--primary-bg);
-      box-shadow: 3px 3px 6px var(--shadow-dark), 
-                  -3px -3px 6px var(--shadow-light);
-    }
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
 
-    .footer-nav a:hover {
-      text-decoration: none;
-      box-shadow: inset 3px 3px 6px var(--shadow-dark), 
-                  inset -3px -3px 6px var(--shadow-light);
-    }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted var(--secondary);
+            cursor: help;
+        }
 
-    /* Toast notification for copy feedback */
-    .copy-toast {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--primary-bg);
-      color: var(--accent-color);
-      padding: 12px 20px;
-      border-radius: var(--card-radius);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      z-index: 1000;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.9rem;
+            font-weight: normal;
+        }
 
-    .copy-toast.show {
-      opacity: 1;
-    }
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--dark) transparent transparent transparent;
+        }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      body {
-        font-size: 16px;
-        padding: 10px;
-      }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
 
-      .content-section {
-        padding: 20px;
-      }
+        /* Popup styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
 
-      .section-title {
-        font-size: 1.5rem;
-      }
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
-      .page-header h1 {
-        font-size: 1.8rem;
-      }
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            position: relative;
+        }
 
-      .header-actions {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--gray);
+        }
 
-    @media (max-width: 480px) {
-      .content-section {
-        padding: 15px;
-      }
+        .popup-close:hover {
+            color: var(--accent);
+        }
 
-      .instruction-box, .prompt-box {
-        padding: 15px;
-      }
+        /* Bottom countdown button */
+        .countdown-btn {
+            display: block;
+            width: 320px;
+            margin: 50px auto;
+            padding: 18px 30px;
+            background: linear-gradient(to right, #27ae60, #2ecc71);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+            position: relative;
+            overflow: hidden;
+            opacity: 0.7;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
 
-      .footer-nav {
-        flex-direction: column;
-        gap: 10px;
-      }
+        .countdown-btn.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
 
-      .footer-nav a {
-        text-align: center;
-      }
-    }
-  </style>
+        .countdown-btn.active:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(39, 174, 96, 0.4);
+        }
+
+        .countdown-display {
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .article-content {
+                padding: 25px;
+            }
+
+            .continue-btn, .countdown-btn {
+                width: 90%;
+                font-size: 1.1rem;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../index.html">Home</a>
-      <span>></span>
-      <a href="../index.html#articles">Articles</a>
-      <span>></span>
-      <span aria-current="page">The Art of Mindful Living</span>
-    </nav>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-    <header class="page-header">
-      <h1>The Art of Mindful Living</h1>
-      <div class="header-actions">
-        <a href="#" id="back-button" class="back-link">
-          <i class="fas fa-arrow-left"></i> Back
-        </a>
-        <button id="copy-link-button" class="copy-link-btn">
-          <i class="fas fa-link"></i> Copy Link
-        </button>
-      </div>
-    </header>
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-    <main>
-      <!-- Ad Unit 1 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '479576db2af273889a99b868e84c0ea0',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/479576db2af273889a99b868e84c0ea0/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 2 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '5cab57bfc9d147b9a97cae60b84e9454',
-            'format' : 'iframe',
-            'height' : 300,
-            'width' : 160,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/5cab57bfc9d147b9a97cae60b84e9454/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 3 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : 'cfa098c5182a464c094a0bc80da016ed',
-            'format' : 'iframe',
-            'height' : 600,
-            'width' : 160,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/cfa098c5182a464c094a0bc80da016ed/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 4 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : 'b5b042f924f523bc1fe015ec4c163c83',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/b5b042f924f523bc1fe015ec4c163c83/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 5 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '4073addde1f8295bf68abf917299d0d6',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/4073addde1f8295bf68abf917299d0d6/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 6 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script async="async" data-cfasync="false" src="//pl27925023.effectivegatecpm.com/2545f92bc79abdf7da2f2d3e95230cc4/invoke.js"></script>
-        <div id="container-2545f92bc79abdf7da2f2d3e95230cc4"></div>
-      </div>
-
-      <!-- Ad Unit 7 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script async="async" data-cfasync="false" src="//pl27490395.effectivegatecpm.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js"></script>
-        <div id="container-3872d0ade3fb1fd6bf5b02095d576f6f"></div>
-      </div>
-
-      <!-- Ad Unit 8 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '479576db2af273889a99b868e84c0ea0',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/479576db2af273889a99b868e84c0ea0/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 9 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '5cab57bfc9d147b9a97cae60b84e9454',
-            'format' : 'iframe',
-            'height' : 300,
-            'width' : 160,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/5cab57bfc9d147b9a97cae60b84e9454/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 10 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : 'cfa098c5182a464c094a0bc80da016ed',
-            'format' : 'iframe',
-            'height' : 600,
-            'width' : 160,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/cfa098c5182a464c094a0bc80da016ed/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 11 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : 'b5b042f924f523bc1fe015ec4c163c83',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/b5b042f924f523bc1fe015ec4c163c83/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 12 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '4073addde1f8295bf68abf917299d0d6',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/4073addde1f8295bf68abf917299d0d6/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 13 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script async="async" data-cfasync="false" src="//pl27925023.effectivegatecpm.com/2545f92bc79abdf7da2f2d3e95230cc4/invoke.js"></script>
-        <div id="container-2545f92bc79abdf7da2f2d3e95230cc4"></div>
-      </div>
-
-      <!-- Ad Unit 14 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script async="async" data-cfasync="false" src="//pl27490395.effectivegatecpm.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js"></script>
-        <div id="container-3872d0ade3fb1fd6bf5b02095d576f6f"></div>
-      </div>
-
-      <!-- Ad Unit 15 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '479576db2af273889a99b868e84c0ea0',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/479576db2af273889a99b868e84c0ea0/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 16 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '5cab57bfc9d147b9a97cae60b84e9454',
-            'format' : 'iframe',
-            'height' : 300,
-            'width' : 160,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/5cab57bfc9d147b9a97cae60b84e9454/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 17 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : 'cfa098c5182a464c094a0bc80da016ed',
-            'format' : 'iframe',
-            'height' : 600,
-            'width' : 160,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/cfa098c5182a464c094a0bc80da016ed/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 18 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : 'b5b042f924f523bc1fe015ec4c163c83',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/b5b042f924f523bc1fe015ec4c163c83/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 19 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '4073addde1f8295bf68abf917299d0d6',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/4073addde1f8295bf68abf917299d0d6/invoke.js"></script>
-      </div>
-
-      <!-- Ad Unit 20 -->
-      <div class="ad-container">
-        <h3>Advertisement</h3>
-        <script async="async" data-cfasync="false" src="//pl27925023.effectivegatecpm.com/2545f92bc79abdf7da2f2d3e95230cc4/invoke.js"></script>
-        <div id="container-2545f92bc79abdf7da2f2d3e95230cc4"></div>
-      </div>
-
-      <section class="content-section">
-        <h2 class="section-title">Introduction to Mindfulness</h2>
-        <p>Mindfulness is the practice of purposely bringing one's attention to the present moment without judgment, a skill one develops through meditation or other training. Mindfulness derives from Buddhist meditation practices and has been popularized in the West by figures like Jon Kabat-Zinn.</p>
-
-        <p>At its core, mindfulness is about being fully present in the moment, aware of where we are and what we're doing, without being overly reactive or overwhelmed by what's going on around us. It's a quality that every human being already possesses - you just have to learn how to access it.</p>
-
-        <p>The practice of mindfulness has been shown to have numerous benefits, including reduced stress, improved focus, better emotional regulation, and increased overall well-being. In our fast-paced, constantly connected world, mindfulness offers a way to slow down and reconnect with ourselves.</p>
-      </section>
-
-      <section class="content-section">
-        <h2 class="section-title">The Foundations of Mindful Living</h2>
-        <p>Mindful living is built on several key principles that guide how we approach our daily experiences:</p>
-
-        <h3>Non-Judgment</h3>
-        <p>This involves taking the role of an impartial witness to your own experience. Rather than labeling thoughts, feelings, or sensations as "good" or "bad," we simply observe them as they are.</p>
-
-        <h3>Patience</h3>
-        <p>Patience is a form of wisdom that demonstrates we understand and accept that sometimes things must unfold in their own time. We practice patience with our minds, our bodies, and the unfolding of each moment.</p>
-
-        <h3>Beginner's Mind</h3>
-        <p>This principle encourages us to approach experiences as if for the first time, free from expectations based on past experiences. It opens us to new possibilities and prevents us from getting stuck in the rut of our own expertise.</p>
-
-        <h3>Trust</h3>
-        <p>Developing trust in yourself and your feelings is an integral part of mindfulness training. It's about learning to listen to and trust your own intuition and authority.</p>
-
-        <h3>Non-Striving</h3>
-        <p>Mindfulness is about non-doing and simply being. The goal is to be with yourself right here, right now, without trying to get anywhere else or change anything.</p>
-
-        <h3>Acceptance</h3>
-        <p>Acceptance means seeing things as they actually are in the present. It doesn't mean we have to like everything or take a passive attitude toward injustice, but rather that we're better able to respond appropriately when we see things clearly.</p>
-
-        <h3>Letting Go</h3>
-        <p>Mindfulness practice involves letting our experience be what it is, without trying to hold onto the pleasant or push away the unpleasant. We practice allowing thoughts, feelings, and sensations to come and go.</p>
-      </section>
-
-      <section class="content-section">
-        <h2 class="section-title">Mindfulness in Daily Life</h2>
-        <p>Integrating mindfulness into your daily routine doesn't require hours of meditation. It's about bringing mindful awareness to everyday activities:</p>
-
-        <h3>Mindful Eating</h3>
-        <p>Pay attention to the colors, textures, aromas, and flavors of your food. Eat slowly, without distractions like TV or phones. Notice how your body feels before, during, and after eating.</p>
-
-        <h3>Mindful Walking</h3>
-        <p>Whether walking to your car or taking a dedicated walk, pay attention to the sensation of your feet touching the ground, the movement of your body, and your breathing.</p>
-
-        <h3>Mindful Listening</h3>
-        <p>When someone is speaking to you, give them your full attention. Notice when your mind wanders and gently bring it back to what the person is saying.</p>
-
-        <h3>Mindful Breathing</h3>
-        <p>Take a few moments throughout the day to simply notice your breath. You don't need to change it - just observe the natural rhythm of your inhalation and exhalation.</p>
-
-        <h3>Mindful Pauses</h3>
-        <p>Create intentional pauses in your day. Before starting a new task, take three conscious breaths. This helps transition between activities with awareness.</p>
-      </section>
-
-      <section class="content-section">
-        <h2 class="section-title">Scientific Benefits of Mindfulness</h2>
-        <p>Research has demonstrated numerous benefits associated with regular mindfulness practice:</p>
-
-        <h3>Stress Reduction</h3>
-        <p>Studies show mindfulness can significantly reduce stress by lowering cortisol levels and improving resilience to stressful situations.</p>
-
-        <h3>Improved Focus and Attention</h3>
-        <p>Regular mindfulness practice has been shown to enhance attention and concentration, even in distracting environments.</p>
-
-        <h3>Emotional Regulation</h3>
-        <p>Mindfulness helps create space between stimuli and our responses, allowing for more thoughtful reactions rather than emotional impulsivity.</p>
-
-        <h3>Enhanced Relationships</h3>
-        <p>By improving empathy and communication skills, mindfulness can lead to healthier, more satisfying relationships.</p>
-
-        <h3>Physical Health Benefits</h3>
-        <p>Research suggests mindfulness can help with various health conditions, including chronic pain, high blood pressure, and sleep disorders.</p>
-
-        <h3>Brain Changes</h3>
-        <p>Neuroimaging studies show that mindfulness practice can lead to structural changes in the brain, including increased gray matter density in areas associated with learning, memory, and emotional regulation.</p>
-      </section>
-
-      <section class="content-section">
-        <h2 class="section-title">Common Mindfulness Myths</h2>
-
-        <h3>Myth: Mindfulness is about emptying your mind</h3>
-        <p>Reality: Mindfulness is not about stopping thoughts but about changing your relationship with them - observing them without getting caught up in them.</p>
-
-        <h3>Myth: You need to meditate for hours</h3>
-        <p>Reality: Even a few minutes of daily practice can be beneficial. Consistency is more important than duration.</p>
-
-        <h3>Myth: Mindfulness is a religious practice</h3>
-        <p>Reality: While mindfulness has roots in Buddhism, it's taught in secular contexts and is compatible with any spiritual tradition or none at all.</p>
-
-        <h3>Myth: Mindfulness is about being passive</h3>
-        <p>Reality: Mindfulness actually helps you respond more effectively to challenges by providing clarity about what's actually happening.</p>
-
-        <h3>Myth: It's only for stress reduction</h3>
-        <p>Reality: While stress reduction is a common benefit, mindfulness also enhances positive qualities like joy, gratitude, and compassion.</p>
-      </section>
-
-      <section class="content-section">
-        <h2 class="section-title">Getting Started with Mindfulness</h2>
-        <p>Beginning a mindfulness practice is simpler than many people think:</p>
-
-        <h3>Start Small</h3>
-        <p>Begin with just 5-10 minutes of practice per day. You can gradually increase the duration as you become more comfortable.</p>
-
-        <h3>Find a Regular Time</h3>
-        <p>Choose a consistent time each day for your practice - perhaps first thing in the morning or before bed.</p>
-
-        <h3>Use Guided Meditations</h3>
-        <p>Apps and online resources offer guided meditations that can be helpful, especially when you're starting out.</p>
-
-        <h3>Be Kind to Yourself</h3>
-        <p>Your mind will wander - that's normal and expected. The practice is in gently bringing your attention back, without judgment.</p>
-
-        <h3>Integrate Mindfulness Throughout Your Day</h3>
-        <p>Look for opportunities to practice mindfulness during routine activities like brushing your teeth, washing dishes, or waiting in line.</p>
-
-        <h3>Join a Community</h3>
-        <p>Consider joining a meditation group or class for support and guidance in your practice.</p>
-      </section>
-
-      <section class="content-section">
-        <h2 class="section-title">Continue Your Journey</h2>
-        <p>If you're interested in exploring mindfulness further and discovering how it can transform your life, click the button below to continue to additional resources and guided practices.</p>
-
-        <a href="https://otieu.com/4/10104703" class="continue-button">
-          <i class="fas fa-arrow-right"></i> Continue
-        </a>
-
-        <div style="text-align: center; margin-top: 30px;">
-          <a href="https://www.brainloom.online" class="brainloom-link">
-            <i class="fas fa-external-link-alt"></i> Visit Brainloom
-          </a>
+    <!-- Popup 1 -->
+    <div class="popup-overlay" id="popup1">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup('popup1')">&times;</span>
+            <script type='text/javascript' src='//pl27595591.effectivegatecpm.com/13/a6/b8/13a6b8bc021de77c57115ae54117d296.js'></script>
         </div>
-      </section>
-    </main>
+    </div>
 
-    <footer class="site-footer">
-      <div class="footer-content">
-        <p>&copy; 2025 Brainloom. All rights reserved.</p>
-        <nav class="footer-nav">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#about">About</a>
-          <a href="../index.html#contact">Contact</a>
-          <a href="../privacy.html">Privacy Policy</a>
-          <a href="../terms.html">Terms of Service</a>
-        </nav>
-      </div>
-    </footer>
-  </div>
+    <!-- Popup 2 -->
+    <div class="popup-overlay" id="popup2">
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup('popup2')">&times;</span>
+            <script type='text/javascript' src='//pl27949428.effectivegatecpm.com/0c/18/53/0c18534d4c9ea00399ae07637217fc24.js'></script>
+        </div>
+    </div>
 
-  <!-- Toast notification -->
-  <div id="copy-toast" class="copy-toast">
-    <i class="fas fa-check-circle"></i>
-    <span>Link copied to clipboard!</span>
-  </div>
+    <div id="content">
+        <header>
+            <h1>The Complete Guide to Financial Planning and Wealth Building</h1>
+            <p class="subtitle">Your comprehensive roadmap to financial independence and long-term security</p>
+            <div class="article-meta">
+                <div class="meta-item">
+                    <i class="far fa-clock"></i>
+                    <span>15 min read</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-calendar"></i>
+                    <span>Updated: June 2023</span>
+                </div>
+                <div class="meta-item">
+                    <i class="far fa-user"></i>
+                    <span>Financial Experts</span>
+                </div>
+            </div>
+        </header>
 
-  <script>
-    // Back button functionality
-    document.getElementById('back-button').addEventListener('click', function(e) {
-      e.preventDefault();
+        <div class="article-content">
+            <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
 
-      // Add exit animation to current page
-      document.querySelector('.container').style.opacity = '0';
-      document.querySelector('.container').style.transform = 'translateY(20px)';
-      document.querySelector('.container').style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            <p>Financial planning is a systematic approach to managing your finances to achieve personal economic satisfaction. It empowers you to take control of your financial situation by effectively managing cash flow, building wealth, preparing for unexpected expenses, and securing your future. Regardless of your age, income level, or financial background, a well-crafted financial plan is essential for achieving long-term goals and financial stability.</p>
 
-      // Navigate after animation completes
-      setTimeout(() => {
-        // Go back to the previous page in browser history
-        if (document.referrer && document.referrer.includes(window.location.host)) {
-          window.history.back();
-        } else {
-          // If no previous page in our domain, go to home
-          window.location.href = '../index.html';
+            <div class="highlight-box">
+                <strong>Key Insight</strong>
+                <p>This guide provides a detailed roadmap to financial planning, covering budgeting, debt management, emergency funds, investing, retirement planning, insurance, estate planning, and tax strategies. By understanding and applying these principles, you can establish a strong financial foundation and work toward your dreams.</p>
+            </div>
+
+            <!-- Ad 1 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '078c9afeb468e2c44be3f4d700dfa8d0',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/078c9afeb468e2c44be3f4d700dfa8d0/invoke.js"></script>
+            </div>
+
+            <!-- Ad 2 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '2f16c43d6d09b79b38fee7596119d915',
+                        'format' : 'iframe',
+                        'height' : 300,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/2f16c43d6d09b79b38fee7596119d915/invoke.js"></script>
+            </div>
+
+            <!-- Ad 3 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '2e00e15df6dc9b42e4a24aea2bd835ed',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/2e00e15df6dc9b42e4a24aea2bd835ed/invoke.js"></script>
+            </div>
+
+            <!-- Ad 4 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '307aa93892b95df65d46a14782fb91e0',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/307aa93892b95df65d46a14782fb91e0/invoke.js"></script>
+            </div>
+
+            <h3>Introduction to Financial Planning</h3>
+            <p>Financial planning involves assessing your current financial situation, setting realistic goals, and creating a strategy to achieve them. It's not just for the wealthy; anyone can benefit from a plan that aligns their income and expenses with their aspirations. A solid financial plan helps you save for major life events—such as buying a home, funding education, or retiring comfortably—while preparing for unforeseen challenges like job loss or medical emergencies.</p>
+
+            <!-- Ad 5 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27936266.effectivegatecpm.com/9bdd34d9a96a7b5e7a40a6a5b31bfaa5/invoke.js"></script>
+                <div id="container-9bdd34d9a96a7b5e7a40a6a5b31bfaa5"></div>
+            </div>
+
+            <!-- Ad 6 -->
+            <div class="ad-container">
+                <script type='text/javascript' src='//pl27490254.effectivegatecpm.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js'></script>
+            </div>
+
+            <p>It requires discipline, regular review, and adaptability to life changes, but the rewards are significant: peace of mind, financial security, and the freedom to pursue your goals.</p>
+
+            <!-- Ad 7 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27490395.effectivegatecpm.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js"></script>
+                <div id="container-3872d0ade3fb1fd6bf5b02095d576f6f"></div>
+            </div>
+
+            <!-- Ad 8 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'b5b042f924f523bc1fe015ec4c163c83',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/b5b042f924f523bc1fe015ec4c163c83/invoke.js"></script>
+            </div>
+
+            <p>This guide will explore the essential components of financial planning, offering practical steps and strategies to help you take charge of your finances. Whether you're just starting out or looking to refine your approach, these principles will guide you toward building wealth and achieving financial independence.</p>
+
+            <div class="highlight-box">
+                <strong>Key Takeaway</strong>
+                <p>Financial planning is a universal tool for securing your financial future, accessible to everyone, regardless of wealth or income level.</p>
+            </div>
+
+            <!-- Ad 9 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '4073addde1f8295bf68abf917299d0d6',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/4073addde1f8295bf68abf917299d0d6/invoke.js"></script>
+            </div>
+
+            <!-- Ad 10 -->
+            <div class="ad-container">
+                <script type='text/javascript' src='//pl27934278.effectivegatecpm.com/cb/ef/d0/cbefd00da2a62dffbd21da4ab6d42321.js'></script>
+            </div>
+
+            <h3>The Fundamentals of Budgeting</h3>
+
+            <!-- Ad 11 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27925023.effectivegatecpm.com/2545f92bc79abdf7da2f2d3e95230cc4/invoke.js"></script>
+                <div id="container-2545f92bc79abdf7da2f2d3e95230cc4"></div>
+            </div>
+
+            <p>Budgeting is the foundation of financial planning. It involves tracking your income and expenses to ensure you live within your means while allocating funds toward your goals. A well-structured budget provides clarity on your spending habits, identifies areas for savings, and helps you prioritize financial objectives. Without a budget, it's easy to overspend, accumulate debt, or miss opportunities to save and invest.</p>
+
+            <!-- Ad 12 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'b75dc01633443b14f77dc29cc7f9bd23',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/b75dc01633443b14f77dc29cc7f9bd23/invoke.js"></script>
+            </div>
+
+            <!-- Ad 13 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'cfa098c5182a464c094a0bc80da016ed',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/cfa098c5182a464c094a0bc80da016ed/invoke.js"></script>
+            </div>
+
+            <h4>Creating an Effective Budget</h4>
+
+            <!-- Ad 14 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '5cab57bfc9d147b9a97cae60b84e9454',
+                        'format' : 'iframe',
+                        'height' : 300,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/5cab57bfc9d147b9a97cae60b84e9454/invoke.js"></script>
+            </div>
+
+            <p>To create a budget that works for you, follow these steps:</p>
+            <ol>
+                <li><strong>Calculate Your Monthly Income</strong>: Include all sources of income after taxes, such as your salary, freelance earnings, or side hustles. Knowing your take-home pay is the starting point for budgeting.</li>
+                <li><strong>Track Your Expenses</strong>: Categorize your spending into fixed expenses (e.g., rent, utilities, car payments) and variable expenses (e.g., groceries, entertainment). Use bank statements or budgeting apps to monitor your spending patterns over a month or two.</li>
+                <li><strong>Set Financial Goals</strong>: Identify short-term goals (e.g., building an emergency fund), mid-term goals (e.g., saving for a down payment), and long-term goals (e.g., retirement). Clear goals give your budget purpose.</li>
+                <li><strong>Allocate Funds</strong>: Use a budgeting method like the 50/30/20 rule, which allocates 50% of income to needs (housing, food), 30% to wants (dining out, hobbies), and 20% to savings and debt repayment. Alternatively, try zero-based budgeting, where every dollar is assigned a purpose, leaving no unallocated funds.</li>
+                <li><strong>Review and Adjust</strong>: Check your budget monthly to ensure it aligns with your goals and lifestyle. Adjust as needed to account for changes in income, expenses, or priorities.</li>
+            </ol>
+
+            <!-- Ad 15 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '479576db2af273889a99b868e84c0ea0',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/479576db2af273889a99b868e84c0ea0/invoke.js"></script>
+            </div>
+
+            <!-- Ad 16 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27595517.effectivegatecpm.com/3455e3acf51a2681e3b7a266c42c9509/invoke.js"></script>
+                <div id="container-3455e3acf51a2681e3b7a266c42c9509"></div>
+            </div>
+
+            <h4>Popular Budgeting Methods</h4>
+
+            <!-- Ad 17 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '078c9afeb468e2c44be3f4d700dfa8d0',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/078c9afeb468e2c44be3f4d700dfa8d0/invoke.js"></script>
+            </div>
+
+            <p>Different budgeting methods suit different personalities and financial situations:</p>
+            <ul>
+                <li><strong>Zero-Based Budgeting</strong>: Every dollar of income is assigned to a specific category, such as bills, savings, or debt repayment, ensuring no money is left unallocated. This method is ideal for those who want strict control over their finances.</li>
+                <li><strong>50/30/20 Rule</strong>: This simple approach divides income into needs (50%), wants (30%), and savings/debt repayment (20%). It's flexible and easy to implement for beginners.</li>
+                <li><strong>Envelope System</strong>: Allocate cash to specific spending categories (e.g., groceries, entertainment) and place it in labeled envelopes. Once an envelope is empty, you stop spending in that category. This method helps curb overspending.</li>
+                <li><strong>Pay-Yourself-First</strong>: Prioritize savings by automatically transferring a portion of each paycheck to savings or investment accounts before paying other expenses. This ensures savings goals are met consistently.</li>
+            </ul>
+
+            <!-- Ad 18 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '2f16c43d6d09b79b38fee7596119d915',
+                        'format' : 'iframe',
+                        'height' : 300,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/2f16c43d6d09b79b38fee7596119d915/invoke.js"></script>
+            </div>
+
+            <!-- Ad 19 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '2e00e15df6dc9b42e4a24aea2bd835ed',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/2e00e15df6dc9b42e4a24aea2bd835ed/invoke.js"></script>
+            </div>
+
+            <p>By choosing a budgeting method that aligns with your habits, you can maintain financial discipline and make steady progress toward your goals.</p>
+
+            <!-- Ad 20 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '307aa93892b95df65d46a14782fb91e0',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/307aa93892b95df65d46a14782fb91e0/invoke.js"></script>
+            </div>
+
+            <!-- Ad 21 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27936266.effectivegatecpm.com/9bdd34d9a96a7b5e7a40a6a5b31bfaa5/invoke.js"></script>
+                <div id="container-9bdd34d9a96a7b5e7a40a6a5b31bfaa5"></div>
+            </div>
+
+            <h3>Debt Management Strategies</h3>
+
+            <!-- Ad 22 -->
+            <div class="ad-container">
+                <script type='text/javascript' src='//pl27490254.effectivegatecpm.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js'></script>
+            </div>
+
+            <p>Debt can be a major barrier to wealth building if not managed properly. Effective debt management involves understanding your debt, creating a repayment plan, and avoiding new debt that could derail your financial progress.</p>
+
+            <!-- Ad 23 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27490395.effectivegatecpm.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js"></script>
+                <div id="container-3872d0ade3fb1fd6bf5b02095d576f6f"></div>
+            </div>
+
+            <!-- Ad 24 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'b5b042f924f523bc1fe015ec4c163c83',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/b5b042f924f523bc1fe015ec4c163c83/invoke.js"></script>
+            </div>
+
+            <h4>Understanding Good Debt vs. Bad Debt</h4>
+
+            <!-- Ad 25 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '4073addde1f8295bf68abf917299d0d6',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/4073addde1f8295bf68abf917299d0d6/invoke.js"></script>
+            </div>
+
+            <p>Not all debt is harmful. <span class="tooltip">Good debt<span class="tooltiptext">Debt used to acquire assets that appreciate or generate income</span></span> is used to acquire assets that appreciate or generate income, such as a mortgage for a home or student loans for education. These investments can increase your net worth or earning potential over time. <span class="tooltip">Bad debt<span class="tooltiptext">Debt used for consumables or depreciating assets</span></span>, however, is used for consumables or depreciating assets, like credit card debt for discretionary purchases. Bad debt often carries high interest rates, making it costly and detrimental to your financial health.</p>
+
+            <!-- Ad 26 -->
+            <div class="ad-container">
+                <script type='text/javascript' src='//pl27934278.effectivegatecpm.com/cb/ef/d0/cbefd00da2a62dffbd21da4ab6d42321.js'></script>
+            </div>
+
+            <!-- Ad 27 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27925023.effectivegatecpm.com/2545f92bc79abdf7da2f2d3e95230cc4/invoke.js"></script>
+                <div id="container-2545f92bc79abdf7da2f2d3e95230cc4"></div>
+            </div>
+
+            <h4>Debt Repayment Strategies</h4>
+
+            <!-- Ad 28 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'b75dc01633443b14f77dc29cc7f9bd23',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/b75dc01633443b14f77dc29cc7f9bd23/invoke.js"></script>
+            </div>
+
+            <p>Two effective methods for paying down debt are:</p>
+            <ul>
+                <li><strong>Debt Snowball Method</strong>: Focus on paying off your smallest debt first while making minimum payments on others. Once the smallest debt is cleared, roll that payment into the next smallest debt. This method provides quick wins, boosting motivation.</li>
+                <li><strong>Debt Avalanche Method</strong>: Prioritize debts with the highest interest rates, regardless of balance, to minimize total interest paid. This approach is more cost-effective but requires patience, as larger debts may take longer to pay off.</li>
+            </ul>
+
+            <!-- Ad 29 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'cfa098c5182a464c094a0bc80da016ed',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/cfa098c5182a464c094a0bc80da016ed/invoke.js"></script>
+            </div>
+
+            <!-- Ad 30 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '5cab57bfc9d147b9a97cae60b84e9454',
+                        'format' : 'iframe',
+                        'height' : 300,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/5cab57bfc9d147b9a97cae60b84e9454/invoke.js"></script>
+            </div>
+
+            <p>Both methods are effective, but the snowball method offers psychological rewards, while the avalanche method saves more money over time. Choose the one that best suits your personality and financial situation.</p>
+
+            <div class="highlight-box">
+                <strong>Pro Tip</strong>
+                <p>Consider consolidating high-interest debts with a lower-interest personal loan or balance transfer credit card to reduce your overall interest payments.</p>
+            </div>
+
+            <!-- Ad 31 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '479576db2af273889a99b868e84c0ea0',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/479576db2af273889a99b868e84c0ea0/invoke.js"></script>
+            </div>
+
+            <!-- Ad 32 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27595517.effectivegatecpm.com/3455e3acf51a2681e3b7a266c42c9509/invoke.js"></script>
+                <div id="container-3455e3acf51a2681e3b7a266c42c9509"></div>
+            </div>
+
+            <!-- Ad 33 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '078c9afeb468e2c44be3f4d700dfa8d0',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/078c9afeb468e2c44be3f4d700dfa8d0/invoke.js"></script>
+            </div>
+
+            <!-- Ad 34 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '2f16c43d6d09b79b38fee7596119d915',
+                        'format' : 'iframe',
+                        'height' : 300,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/2f16c43d6d09b79b38fee7596119d915/invoke.js"></script>
+            </div>
+
+            <!-- Ad 35 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '2e00e15df6dc9b42e4a24aea2bd835ed',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/2e00e15df6dc9b42e4a24aea2bd835ed/invoke.js"></script>
+            </div>
+
+            <!-- Ad 36 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : '307aa93892b95df65d46a14782fb91e0',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/307aa93892b95df65d46a14782fb91e0/invoke.js"></script>
+            </div>
+
+            <!-- Ad 37 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27936266.effectivegatecpm.com/9bdd34d9a96a7b5e7a40a6a5b31bfaa5/invoke.js"></script>
+                <div id="container-9bdd34d9a96a7b5e7a40a6a5b31bfaa5"></div>
+            </div>
+
+            <!-- Ad 38 -->
+            <div class="ad-container">
+                <script type='text/javascript' src='//pl27490254.effectivegatecpm.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js'></script>
+            </div>
+
+            <!-- Ad 39 -->
+            <div class="ad-container">
+                <script async="async" data-cfasync="false" src="//pl27490395.effectivegatecpm.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js"></script>
+                <div id="container-3872d0ade3fb1fd6bf5b02095d576f6f"></div>
+            </div>
+
+            <!-- Ad 40 -->
+            <div class="ad-container">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'b5b042f924f523bc1fe015ec4c163c83',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/b5b042f924f523bc1fe015ec4c163c83/invoke.js"></script>
+            </div>
+
+            <!-- Bottom Countdown Button -->
+            <a href="https://www.effectivegatecpm.com/k97h7hpbv?key=ed62f66236171be9a0d71fafa2758768" class="countdown-btn" id="countdownBtn">
+                Continue in <span class="countdown-display" id="countdownDisplay">5</span> seconds
+            </a>
+
+            <a href="https://www.effectivegatecpm.com/na8s8r337?key=aee1f09db3463ae60ce12530b056dc7e" class="continue-btn">
+                Continue button<i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <footer>
+            <div class="social-share">
+                <a href="#" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2023 Financial Planning Guide. All rights reserved.</p>
+            <p>Disclaimer: This content is for informational purposes only and should not be considered financial advice.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Progress bar functionality
+        window.onscroll = function() {
+            updateProgressBar();
+            toggleBackToTop();
+            checkBottomButton();
+        };
+
+        function updateProgressBar() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
         }
-      }, 300);
-    });
 
-    // Copy link functionality
-    document.getElementById('copy-link-button').addEventListener('click', function() {
-      const url = window.location.href;
+        function toggleBackToTop() {
+            const backToTop = document.getElementById("backToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.classList.add("visible");
+            } else {
+                backToTop.classList.remove("visible");
+            }
+        }
 
-      navigator.clipboard.writeText(url).then(() => {
-        // Show toast notification
-        const toast = document.getElementById('copy-toast');
-        toast.classList.add('show');
+        // Back to top functionality
+        document.getElementById("backToTop").addEventListener("click", function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
 
-        // Update button state
-        const btn = this;
-        const originalHtml = btn.innerHTML;
-        btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-        btn.classList.add('copied');
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
 
-        // Reset after 2 seconds
-        setTimeout(() => {
-          toast.classList.remove('show');
-          btn.innerHTML = originalHtml;
-          btn.classList.remove('copied');
-        }, 2000);
-      }).catch(err => {
-        console.error('Failed to copy URL:', err);
-        alert('Failed to copy link. Please try again.');
-      });
-    });
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
 
-    // Add fade-in animation on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelector('.container').style.opacity = '0';
-      document.querySelector('.container').style.transform = 'translateY(20px)';
-      document.querySelector('.container').style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        // Observe elements for animation
+        document.querySelectorAll("h2, h3, h4, .highlight-box").forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "opacity 0.5s, transform 0.5s";
+            observer.observe(el);
+        });
 
-      setTimeout(() => {
-        document.querySelector('.container').style.opacity = '1';
-        document.querySelector('.container').style.transform = 'translateY(0)';
-      }, 100);
-    });
-  </script>
+        // Popup functionality
+        function showPopup(id) {
+            document.getElementById(id).classList.add('active');
+        }
+
+        function closePopup(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+
+        // Show first popup on page load
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                showPopup('popup1');
+            }, 1000);
+
+            // Show second popup after 4 seconds of first one
+            setTimeout(function() {
+                showPopup('popup2');
+            }, 5000);
+        });
+
+        // Bottom countdown button functionality
+        let countdownActive = false;
+        let countdownValue = 5;
+        let countdownInterval;
+
+        function checkBottomButton() {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const pageHeight = document.documentElement.scrollHeight;
+            const countdownBtn = document.getElementById('countdownBtn');
+
+            // If user has scrolled to bottom and countdown isn't active
+            if (scrollPosition >= pageHeight - 100 && !countdownActive) {
+                countdownActive = true;
+                startCountdown();
+            }
+        }
+
+        function startCountdown() {
+            const countdownBtn = document.getElementById('countdownBtn');
+            const countdownDisplay = document.getElementById('countdownDisplay');
+
+            countdownInterval = setInterval(function() {
+                countdownValue--;
+                countdownDisplay.textContent = countdownValue;
+
+                if (countdownValue <= 0) {
+                    clearInterval(countdownInterval);
+                    countdownBtn.classList.add('active');
+                    countdownDisplay.textContent = 'Now';
+                }
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
