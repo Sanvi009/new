@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Evolution of Renewable Energy: From Ancient Windmills to Modern Solar Grids</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -33,12 +34,27 @@
             text-align: center;
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M20,20 Q40,5 60,20 T100,20" stroke="white" fill="none" stroke-width="2"/><path d="M0,50 Q20,35 40,50 T80,50" stroke="white" fill="none" stroke-width="2"/><path d="M30,80 Q50,65 70,80 T100,80" stroke="white" fill="none" stroke-width="2"/></svg>');
+            background-repeat: repeat;
+            opacity: 0.3;
         }
 
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
+            position: relative;
         }
 
         header p {
@@ -46,6 +62,7 @@
             max-width: 800px;
             margin: 0 auto;
             opacity: 0.9;
+            position: relative;
         }
 
         .article-meta {
@@ -55,6 +72,7 @@
             margin-top: 1.5rem;
             font-size: 0.9rem;
             opacity: 0.8;
+            position: relative;
         }
 
         .content-wrapper {
@@ -102,6 +120,13 @@
             color: #555;
             text-decoration: none;
             transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar a i {
+            margin-right: 8px;
+            color: #2c7744;
         }
 
         .sidebar a:hover {
@@ -133,16 +158,25 @@
             border-radius: 0 4px 4px 0;
         }
 
-        .image-placeholder {
-            background: #e0e0e0;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 1.5rem 0;
+        .article-image {
+            width: 100%;
             border-radius: 6px;
-            color: #777;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .article-image:hover {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            text-align: center;
             font-style: italic;
+            color: #666;
+            margin-top: -1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
         }
 
         .cta-section {
@@ -182,23 +216,59 @@
             margin-top: 2rem;
         }
 
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: #2c7744;
+            z-index: 1000;
+            transition: width 0.2s ease;
+        }
+
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .social-share a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            color: #555;
+            transition: all 0.3s ease;
+        }
+
+        .social-share a:hover {
+            background: #2c7744;
+            color: white;
+            transform: translateY(-3px);
+        }
+
         /* Responsive design */
         @media (max-width: 992px) {
             .content-wrapper {
                 flex-direction: column;
             }
-
+            
             aside {
                 order: -1;
             }
-
+            
             .sidebar-container {
                 display: flex;
                 gap: 1.5rem;
                 overflow-x: auto;
                 padding-bottom: 1rem;
             }
-
+            
             .sidebar {
                 min-width: 250px;
                 margin-bottom: 0;
@@ -209,15 +279,15 @@
             header {
                 padding: 3rem 0;
             }
-
+            
             header h1 {
                 font-size: 2rem;
             }
-
+            
             article {
                 padding: 1.5rem;
             }
-
+            
             .sidebar-container {
                 flex-direction: column;
             }
@@ -227,15 +297,15 @@
             .container {
                 padding: 0 15px;
             }
-
+            
             header h1 {
                 font-size: 1.7rem;
             }
-
+            
             header p {
                 font-size: 1rem;
             }
-
+            
             .article-meta {
                 flex-direction: column;
                 gap: 0.5rem;
@@ -244,13 +314,16 @@
     </style>
 </head>
 <body>
+    <div class="progress-bar" id="progressBar"></div>
+
     <header>
         <div class="container">
             <h1>The Evolution of Renewable Energy</h1>
             <p>From Ancient Windmills to Modern Solar Grids</p>
             <div class="article-meta">
-                <span>Article</span>
-                <span>Estimated reading time: 12 minutes</span>
+                <span><i class="fas fa-user"></i> Energy Research Team</span>
+                <span><i class="far fa-clock"></i> Estimated reading time: 12 minutes</span>
+                <span><i class="far fa-calendar"></i> Published: June 2023</span>
             </div>
         </div>
     </header>
@@ -260,31 +333,30 @@
             <article>
                 <section id="introduction">
                     <p>In an era defined by climate change, resource depletion, and technological innovation, renewable energy stands as a beacon of hope for a sustainable future. Unlike fossil fuels, which are finite and contribute significantly to greenhouse gas emissions, renewable sources harness natural processes that are continually replenished. This article explores the evolution of renewable energy, tracing its roots from ancient civilizations to cutting-edge developments in the 21st century.</p>
-
+                    
                     <p>We will delve into key technologies such as wind, solar, hydro, geothermal, and biomass, examining their historical development, current applications, challenges, and potential to reshape global energy systems. As the world grapples with the urgent need to transition away from carbon-intensive energy, understanding this evolution is crucial for policymakers, businesses, and individuals alike.</p>
                 </section>
 
                 <section id="historical-foundations">
                     <h2>The Historical Foundations of Renewable Energy</h2>
-
+                    
                     <p>The concept of renewable energy is not a modern invention; it dates back thousands of years. Ancient civilizations recognized the power of nature and ingeniously harnessed it for practical purposes. One of the earliest examples is the use of wind energy. Around 2000 BCE, in ancient Persia (modern-day Iran), vertical-axis windmills were developed to grind grain and pump water. These early devices, known as panemones, featured sails made from woven reeds attached to a vertical shaft. By the 7th century CE, windmills had spread to China and the Islamic world, where they were refined for irrigation in arid regions.</p>
-
-                    <div class="image-placeholder">
-                        [Image: Ancient Persian windmill]
-                    </div>
-
+                    
+                    <img src="..images/100.jpeg" alt="Ancient Persian windmill" class="article-image">
+                    <p class="image-caption">Ancient Persian vertical-axis windmill used for grinding grain</p>
+                    
                     <p>In Europe, horizontal-axis windmills emerged in the 12th century, particularly in the Netherlands and England. These iconic structures, with their large blades turning in the wind, became symbols of ingenuity during the Middle Ages. They powered mills for grinding flour, sawing wood, and even draining marshlands to create arable farmland. The Dutch, in particular, mastered wind technology, using it to reclaim land from the sea through polder systems. This early adoption of wind power demonstrated humanity's ability to adapt renewable resources to meet societal needs, laying the groundwork for future innovations.</p>
-
+                    
                     <h3>Solar Energy in Ancient Times</h3>
-
+                    
                     <p>Solar energy also has ancient origins. The Greeks and Romans designed buildings with south-facing windows to capture passive solar heat, a practice known as solar architecture. In the 3rd century BCE, Archimedes allegedly used polished bronze shields to focus sunlight and set fire to invading Roman ships during the Siege of Syracuse—a legendary, if debated, application of solar concentration. By the 18th century, Swiss scientist Horace de Saussure invented the "hot box," a precursor to modern solar cookers, which trapped sunlight to heat food.</p>
-
+                    
                     <h3>Early Hydropower and Geothermal</h3>
-
+                    
                     <p>Hydropower, another cornerstone of renewables, was utilized by the ancient Greeks around 100 BCE with water wheels for milling grain. The Romans expanded this technology, building aqueducts and watermills across their empire. In China, during the Han Dynasty (206 BCE–220 CE), hydraulic trip hammers powered by water wheels were used for forging iron. These early hydroelectric systems were mechanical, but they foreshadowed the electrical generation that would come centuries later.</p>
-
+                    
                     <p>Geothermal energy, derived from the Earth's internal heat, was harnessed by indigenous peoples for bathing and cooking. The Romans built elaborate bathhouses around hot springs, such as those in Bath, England. In New Zealand, the Maori people have used geothermal steam for cooking for over a thousand years. Biomass, in the form of wood and animal dung, has been the primary energy source for heating and cooking since prehistoric times, though its renewable status depends on sustainable harvesting.</p>
-
+                    
                     <div class="highlight-box">
                         <p>The Industrial Revolution marked a shift away from renewables toward coal and steam power, but it also sparked innovations that would revive interest in sustainable sources. In 1839, French physicist Edmond Becquerel discovered the photovoltaic effect, the foundation of solar cells. However, it would take over a century for this to become practical.</p>
                     </div>
@@ -292,51 +364,49 @@
 
                 <section id="modern-technologies">
                     <h2>The Dawn of Modern Renewable Technologies</h2>
-
+                    
                     <p>The 20th century brought electrification and a renewed focus on renewables, driven by resource scarcity and environmental concerns. Hydropower led the charge. In 1882, the world's first hydroelectric power plant opened on the Fox River in Appleton, Wisconsin, generating electricity for a paper mill. This paved the way for large-scale dams, such as the Hoover Dam in the 1930s, which provided power to millions and symbolized human mastery over nature.</p>
-
+                    
                     <h3>Wind and Solar Evolution</h3>
-
+                    
                     <p>Wind energy evolved with the invention of the wind turbine. In 1887, Scottish engineer James Blyth built the first electricity-generating wind turbine to power his holiday home. In the United States, Charles Brush developed a similar device in 1888. However, it was Danish inventor Poul la Cour who, in the early 1900s, refined wind turbines for rural electrification, establishing Denmark as a wind power pioneer.</p>
-
+                    
                     <p>Solar power saw breakthroughs in the mid-20th century. In 1954, Bell Laboratories unveiled the first practical silicon solar cell with 6% efficiency. Initially used in space applications, like powering satellites during the Space Race, solar photovoltaic (PV) technology gradually became more affordable. The 1973 oil crisis accelerated interest, leading to government subsidies and research programs in the U.S. and Europe.</p>
-
-                    <div class="image-placeholder">
-                        [Image: Early solar panels]
-                    </div>
-
+                    
+                    <img src="..images/101.jpeg" alt="Early solar panels" class="article-image">
+                    <p class="image-caption">Early solar panels used in space applications during the 1960s</p>
+                    
                     <h3>Geothermal and Biomass Advancements</h3>
-
+                    
                     <p>Geothermal power plants emerged in the early 1900s. The first geothermal electricity was generated in Larderello, Italy, in 1904, using steam from volcanic fields. By the 1960s, New Zealand and Iceland were leading in geothermal utilization, with Iceland now deriving nearly 100% of its electricity from renewables, including geothermal.</p>
-
+                    
                     <p>Biomass energy modernized with the development of biofuels. In the 1920s, Henry Ford envisioned ethanol from crops as a fuel for his Model T, but petroleum's dominance delayed progress. Post-World War II, biomass research focused on waste-to-energy systems, converting agricultural residues into heat and power.</p>
-
+                    
                     <p>The late 20th century saw a surge in renewable adoption due to environmental movements. The 1970s energy crises highlighted fossil fuel vulnerabilities, prompting the creation of organizations like the International Energy Agency (IEA) in 1974. The Chernobyl disaster in 1986 and growing awareness of acid rain and global warming further boosted renewables.</p>
                 </section>
 
                 <section id="current-state">
                     <h2>Current State of Renewable Energy</h2>
-
+                    
                     <p>Today, renewables account for about 30% of global electricity generation, according to the IEA, with hydropower leading at around 16%, followed by wind (7%), solar (4%), and others. This shift is driven by plummeting costs—solar PV prices have dropped 89% since 2010—and policy incentives like tax credits and renewable portfolio standards.</p>
-
+                    
                     <h3>Wind and Solar Expansion</h3>
-
+                    
                     <p>Wind energy has scaled dramatically. Offshore wind farms, like the Hornsea Project in the UK, generate gigawatts of power. Turbines now reach heights of over 200 meters with blades longer than football fields, achieving capacities up to 15 MW per unit. Onshore wind is cost-competitive with fossil fuels in many regions, powering homes from Texas to Inner Mongolia.</p>
-
+                    
                     <p>Solar energy is experiencing explosive growth. Utility-scale solar farms, such as the Bhadla Solar Park in India (2.2 GW), cover vast areas with PV panels. Residential solar installations, aided by batteries like Tesla's Powerwall, enable energy independence. Innovations in perovskite solar cells promise efficiencies over 30%, surpassing traditional silicon.</p>
-
-                    <div class="image-placeholder">
-                        [Image: Modern solar farm]
-                    </div>
-
+                    
+                    <img src="..images/102.jpeg" alt="Modern solar farm" class="article-image">
+                    <p class="image-caption">Modern utility-scale solar farm with advanced photovoltaic technology</p>
+                    
                     <h3>Other Renewable Technologies</h3>
-
+                    
                     <p>Hydropower remains dominant in countries like Norway and Brazil, but new pumped-storage systems act as giant batteries, storing excess renewable energy. Run-of-the-river projects minimize environmental impact compared to large dams.</p>
-
+                    
                     <p>Geothermal is expanding beyond volcanic areas with enhanced geothermal systems (EGS), which fracture hot rocks to create reservoirs. The U.S. Department of Energy funds projects aiming for widespread deployment.</p>
-
+                    
                     <p>Biomass now includes advanced biofuels like cellulosic ethanol from non-food crops and biogas from landfills. Waste-to-energy plants in Sweden and Denmark convert municipal waste into district heating.</p>
-
+                    
                     <div class="highlight-box">
                         <p>Integration challenges include grid modernization. Smart grids use AI to balance intermittent renewables, while energy storage solutions like lithium-ion batteries and hydrogen fuel cells address variability.</p>
                     </div>
@@ -344,81 +414,84 @@
 
                 <section id="challenges">
                     <h2>Challenges Facing Renewable Energy Adoption</h2>
-
+                    
                     <p>Despite progress, renewables face significant hurdles. Intermittency is a primary issue—wind and solar depend on weather, leading to "duck curve" problems where supply mismatches demand. Solutions like diversified portfolios and global interconnections help, but require massive infrastructure investments.</p>
-
+                    
                     <h3>Environmental and Economic Barriers</h3>
-
+                    
                     <p>Environmental impacts cannot be ignored. Large hydro dams displace communities and alter ecosystems, as seen in China's Three Gorges Dam. Wind turbines pose risks to birds and bats, while solar farms require vast land, potentially conflicting with agriculture or biodiversity. Rare earth minerals for turbines and batteries raise mining concerns, including child labor in cobalt extraction.</p>
-
+                    
                     <p>Economic barriers persist in developing countries, where upfront costs deter adoption despite long-term savings. Subsidies for fossils distort markets, though renewables are increasingly cheaper. The IEA estimates trillions in investments needed by 2050 for net-zero emissions.</p>
-
+                    
                     <h3>Policy and Technical Challenges</h3>
-
+                    
                     <p>Policy and geopolitical issues complicate matters. Trade wars affect supply chains—China dominates solar panel production, leading to dependencies. Public opposition, or NIMBYism, delays projects, as with offshore wind in the U.S.</p>
-
+                    
                     <p>Technological limitations include efficiency caps and material durability. Solar panels degrade over time, and wind turbines face extreme weather challenges.</p>
                 </section>
 
                 <section id="future">
                     <h2>The Future of Renewable Energy</h2>
-
+                    
                     <p>Looking ahead, renewables are poised to dominate. The IEA projects they could provide 80% of electricity by 2050 under sustainable scenarios. Emerging technologies like floating solar on reservoirs and airborne wind energy (kites harnessing high-altitude winds) expand possibilities.</p>
-
+                    
                     <h3>Emerging Technologies</h3>
-
+                    
                     <p>Hydrogen, produced via electrolysis from renewables, could decarbonize hard-to-electrify sectors like steel and shipping. Green hydrogen hubs in Australia and the EU are scaling up.</p>
-
+                    
                     <p>Nuclear fusion, while not strictly renewable, complements the mix with unlimited clean energy. Projects like ITER aim for commercial viability by the 2030s.</p>
-
-                    <div class="image-placeholder">
-                        [Image: Future renewable energy concept]
-                    </div>
-
-                    <h3>Digitalization and Global Cooperation</h3>
-
-                    <p>Artificial intelligence optimizes renewable systems, predicting weather for better forecasting and managing grids in real-time. Blockchain enables peer-to-peer energy trading, empowering prosumers.</p>
-
-                    <p>Global cooperation is key. Initiatives like the Paris Agreement and COP conferences drive commitments, with countries like Germany (Energiewende) and California leading transitions.</p>
-
+                    
                     <div class="highlight-box">
                         <p>In space, solar sails and orbital power stations could beam energy to Earth, though still conceptual.</p>
                     </div>
+                    
+                    <h3>Digitalization and Global Cooperation</h3>
+                    
+                    <p>Artificial intelligence optimizes renewable systems, predicting weather for better forecasting and managing grids in real-time. Blockchain enables peer-to-peer energy trading, empowering prosumers.</p>
+                    
+                    <p>Global cooperation is key. Initiatives like the Paris Agreement and COP conferences drive commitments, with countries like Germany (Energiewende) and California leading transitions.</p>
                 </section>
 
                 <section id="conclusion">
                     <h2>Conclusion</h2>
-
+                    
                     <p>The evolution of renewable energy from ancient windmills to sprawling solar grids illustrates humanity's enduring quest for harmony with nature. What began as simple mechanical aids has blossomed into a sophisticated array of technologies capable of powering a planet. While challenges remain, the momentum is undeniable—renewables offer not just energy, but a pathway to environmental stewardship and economic resilience.</p>
-
+                    
                     <p>As we stand on the cusp of a clean energy revolution, the choices we make today will determine the legacy we leave for future generations. Embracing this evolution is not optional; it is imperative for a thriving, sustainable world.</p>
                 </section>
+
+                <div class="social-share">
+                    <a href="#" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" title="Share via Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </article>
 
             <aside>
                 <div class="sidebar-container">
                     <div class="sidebar">
-                        <h3>Article Sections</h3>
+                        <h3><i class="fas fa-bookmark"></i> Article Sections</h3>
                         <ul>
-                            <li><a href="#introduction">Introduction</a></li>
-                            <li><a href="#historical-foundations">Historical Foundations</a></li>
-                            <li><a href="#modern-technologies">Modern Technologies</a></li>
-                            <li><a href="#current-state">Current State</a></li>
-                            <li><a href="#challenges">Challenges</a></li>
-                            <li><a href="#future">Future Outlook</a></li>
-                            <li><a href="#conclusion">Conclusion</a></li>
+                            <li><a href="#introduction"><i class="fas fa-arrow-right"></i> Introduction</a></li>
+                            <li><a href="#historical-foundations"><i class="fas fa-arrow-right"></i> Historical Foundations</a></li>
+                            <li><a href="#modern-technologies"><i class="fas fa-arrow-right"></i> Modern Technologies</a></li>
+                            <li><a href="#current-state"><i class="fas fa-arrow-right"></i> Current State</a></li>
+                            <li><a href="#challenges"><i class="fas fa-arrow-right"></i> Challenges</a></li>
+                            <li><a href="#future"><i class="fas fa-arrow-right"></i> Future Outlook</a></li>
+                            <li><a href="#conclusion"><i class="fas fa-arrow-right"></i> Conclusion</a></li>
                         </ul>
                     </div>
 
                     <div class="sidebar">
-                        <h3>Key Renewable Sources</h3>
+                        <h3><i class="fas fa-bolt"></i> Key Renewable Sources</h3>
                         <ul>
-                            <li>Wind Energy</li>
-                            <li>Solar Power</li>
-                            <li>Hydropower</li>
-                            <li>Geothermal</li>
-                            <li>Biomass</li>
-                            <li>Emerging Technologies</li>
+                            <li><i class="fas fa-wind"></i> Wind Energy</li>
+                            <li><i class="fas fa-sun"></i> Solar Power</li>
+                            <li><i class="fas fa-water"></i> Hydropower</li>
+                            <li><i class="fas fa-fire"></i> Geothermal</li>
+                            <li><i class="fas fa-leaf"></i> Biomass</li>
+                            <li><i class="fas fa-atom"></i> Emerging Technologies</li>
                         </ul>
                     </div>
                 </div>
@@ -430,7 +503,7 @@
         <div class="container">
             <h2>Learn More About Sustainable Energy Solutions</h2>
             <p>Explore how renewable energy can power our future</p>
-            <a href="https://www.brainloom.online" class="cta-button">Click</a>
+            <a href="https://www.effectivegatecpm.com/tpc37vca?key=8914d20fd30b57b6f02cc09518647156" class="cta-button">Click</a>
         </div>
     </section>
 
@@ -446,10 +519,10 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
+                
                 const targetId = this.getAttribute('href');
                 if(targetId === '#') return;
-
+                
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
                     window.scrollTo({
@@ -464,9 +537,9 @@
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.sidebar a[href^="#"]');
-
+            
             let currentSection = '';
-
+            
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
@@ -474,7 +547,7 @@
                     currentSection = section.getAttribute('id');
                 }
             });
-
+            
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if(link.getAttribute('href').substring(1) === currentSection) {
@@ -483,12 +556,24 @@
             });
         });
 
+        // Progress bar functionality
+        window.addEventListener('scroll', function() {
+            const winHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.pageYOffset;
+            const scrollPercent = (scrollTop / (docHeight - winHeight)) * 100;
+            document.getElementById('progressBar').style.width = scrollPercent + '%';
+        });
+
         // Add active class styling
         const style = document.createElement('style');
         style.textContent = `
             .sidebar a.active {
                 color: #2c7744;
                 font-weight: bold;
+            }
+            .sidebar a.active i {
+                color: #2c7744;
             }
         `;
         document.head.appendChild(style);
