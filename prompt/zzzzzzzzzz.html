@@ -286,6 +286,97 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Popup Ad Styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup-ad {
+            background: white;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .popup-overlay.active .popup-ad {
+            transform: scale(1);
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            background: #f8f9fa;
+        }
+
+        .popup-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c7744;
+        }
+
+        .popup-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #777;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .popup-close:hover {
+            color: #2c7744;
+        }
+
+        .popup-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .popup-ad-container {
+            width: 100%;
+            min-height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .popup-footer {
+            padding: 15px 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
         /* Responsive design */
         @media (max-width: 992px) {
             .content-wrapper {
@@ -329,6 +420,10 @@
             .ad-container {
                 margin: 1.5rem 0;
             }
+
+            .popup-ad {
+                width: 95%;
+            }
         }
 
         @media (max-width: 576px) {
@@ -356,6 +451,33 @@
     </style>
 </head>
 <body>
+    <!-- Popup Ad -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-ad">
+            <div class="popup-header">
+                <div class="popup-title">Sponsored Content</div>
+                <button class="popup-close" id="popupClose">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-ad-container">
+                    <script type="text/javascript">
+                        atOptions = {
+                            'key' : '078c9afeb468e2c44be3f4d700dfa8d0',
+                            'format' : 'iframe',
+                            'height' : 250,
+                            'width' : 300,
+                            'params' : {}
+                        };
+                    </script>
+                    <script type="text/javascript" src="//www.highperformanceformat.com/078c9afeb468e2c44be3f4d700dfa8d0/invoke.js"></script>
+                </div>
+            </div>
+            <div class="popup-footer">
+                Advertisement
+            </div>
+        </div>
+    </div>
+
     <div class="progress-bar" id="progressBar"></div>
 
     <header>
@@ -927,6 +1049,27 @@
     </footer>
 
     <script>
+        // Popup Ad Functionality
+        const popupOverlay = document.getElementById('popupOverlay');
+        const popupClose = document.getElementById('popupClose');
+
+        // Show popup after a small delay to ensure page has started loading
+        setTimeout(() => {
+            popupOverlay.classList.add('active');
+        }, 500);
+
+        // Close popup when close button is clicked
+        popupClose.addEventListener('click', () => {
+            popupOverlay.classList.remove('active');
+        });
+
+        // Close popup when clicking outside the ad
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove('active');
+            }
+        });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
