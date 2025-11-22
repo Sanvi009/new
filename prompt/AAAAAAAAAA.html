@@ -140,27 +140,31 @@
             color: #555;
         }
 
-        .image-button {
+        .cta-button {
             display: inline-block;
-            transition: all 0.4s ease;
-            border-radius: 12px;
-            overflow: hidden;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
         }
 
-        .image-button:hover {
+        .cta-button:hover {
             transform: translateY(-5px) scale(1.03);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #b21f1f, #1a2a6c);
         }
 
-        .image-button:active {
+        .cta-button:active {
             transform: translateY(2px) scale(0.98);
-        }
-
-        .image-button img {
-            display: block;
-            max-width: 100%;
-            height: auto;
         }
 
         footer {
@@ -224,6 +228,11 @@
             .cta-text {
                 font-size: 1.1rem;
             }
+
+            .cta-button {
+                padding: 16px 35px;
+                font-size: 1.2rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -250,6 +259,11 @@
 
             .button-container {
                 padding: 20px;
+            }
+
+            .cta-button {
+                padding: 14px 30px;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -596,9 +610,7 @@
             <div class="button-container">
                 <h3 class="cta-heading">Ready to Explore More?</h3>
                 <p class="cta-text">Click the button below to discover additional insights and resources about the digital revolution and its impact on our world.</p>
-                <a href="https://www.effectivegatecpm.com/tpc37vca?key=8914d20fd30b57b6f02cc09518647156" class="image-button">
-                    <img src="https:brainloom.online/click.png" alt="Click Here to Learn More">
-                </a>
+                <a href="https://www.effectivegatecpm.com/tpc37vca?key=8914d20fd30b57b6f02cc09518647156" class="cta-button">Click Here to Learn More</a>
             </div>
         </main>
 
@@ -628,12 +640,12 @@
     </script>
 
     <script>
-        // Simple animation for the image button
+        // Simple animation for the button
         document.addEventListener('DOMContentLoaded', function() {
-            const imageButton = document.querySelector('.image-button');
+            const ctaButton = document.querySelector('.cta-button');
 
             // Add click animation
-            imageButton.addEventListener('click', function(e) {
+            ctaButton.addEventListener('click', function(e) {
                 // Create ripple effect
                 const ripple = document.createElement('span');
                 const rect = this.getBoundingClientRect();
