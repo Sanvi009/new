@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Brainloom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #fafafa;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 60px;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 500;
+            color: #111;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: #007AFF;
+            font-size: 20px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover {
+            color: #007AFF;
+            background: rgba(0, 122, 255, 0.05);
+        }
+
+        .nav-item.active {
+            color: #007AFF;
+            background: rgba(0, 122, 255, 0.05);
+        }
+
+        .nav-item i {
+            font-size: 17px;
+        }
+
+        .main-content {
+            max-width: 1200px;
+            margin: 80px auto 40px;
+            padding: 0 32px;
+            min-height: calc(100vh - 120px);
+        }
+
+        .content-placeholder {
+            background: white;
+            border-radius: 12px;
+            padding: 60px 40px;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .placeholder-icon {
+            font-size: 48px;
+            color: #007AFF;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
+        .placeholder-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        .placeholder-text {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 20px;
+            }
+
+            .nav {
+                gap: 16px;
+            }
+
+            .nav-item span {
+                display: none;
+            }
+
+            .nav-item {
+                padding: 10px;
+            }
+
+            .main-content {
+                padding: 0 20px;
+                margin: 70px auto 30px;
+            }
+
+            .content-placeholder {
+                padding: 40px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                padding: 0 16px;
+            }
+
+            .nav {
+                gap: 12px;
+            }
+
+            .main-content {
+                padding: 0 16px;
+                margin: 65px auto 25px;
+            }
+
+            .content-placeholder {
+                padding: 32px 20px;
+            }
+
+            .placeholder-icon {
+                font-size: 40px;
+            }
+
+            .placeholder-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+    <!-- Same CSS as above, just change the active class -->
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <i class="fas fa-brain"></i>
+                <span>Brainloom</span>
+            </a>
+
+            <nav class="nav">
+                <a href="../policy/index.html" class="nav-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Policy</span>
+                </a>
+                <a href="../about/index.html" class="nav-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="../contact/index.html" class="nav-item active">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-placeholder">
+            <div class="placeholder-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h1 class="placeholder-title">Contact Us</h1>
+            <p class="placeholder-text">
+                Get in touch with us. We'll have a contact form and other ways to reach our team here.
+            </p>
+        </div>
+    </main>
+</body>
+</html>
