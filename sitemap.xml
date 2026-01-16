@@ -1,19 +1,34 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Main Pages - Updated -->
 <url>
-<loc>https://brainloom.online/</loc>
-<lastmod>2025-10-08T05:08:49+00:00</lastmod>
-<priority>1.00</priority>
+    <loc>https://brainloom.online/</loc>
+    <lastmod>2026-01-16T15:50:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
 </url>
 <url>
-<loc>https://brainloom.online/privacy.html</loc>
-<lastmod>2025-10-08T05:08:49+00:00</lastmod>
-<priority>0.80</priority>
+    <loc>https://brainloom.online/policy/index.html</loc>
+    <lastmod>2026-01-16T15:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
 </url>
 <url>
-<loc>https://brainloom.online/terms.html</loc>
-<lastmod>2025-10-08T05:08:49+00:00</lastmod>
-<priority>0.80</priority>
+    <loc>https://brainloom.online/about/index.html</loc>
+    <lastmod>2026-01-16T15:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
 </url>
+<url>
+    <loc>https://brainloom.online/contact/index.html</loc>
+    <lastmod>2026-01-16T15:50:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+</url>
+
 <url>
 <loc>https://brainloom.online/prompt/Serene_Cyan_Ink_Wash_Art_with_Subtle_Abstraction.html</loc>
 <lastmod>2025-10-08T05:08:49+00:00</lastmod>
@@ -770,3 +785,4 @@
 <priority>0.64</priority>
 </url>
 </urlset>
+
