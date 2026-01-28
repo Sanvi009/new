@@ -1048,5 +1048,12 @@
     "keywords": "AI prompts, ChatGPT prompts, AI art, prompt engineering, Polaroid-Style Cute Photo of Two People — AI Prompt, {{category}}",
     "image": "129.jpeg",
     "file_path": "/prompt/viral_trending_ai_prompt.html"
+  },
+  {
+  "id": 152,
+  "description": "AI prompt for generating hyper-realistic cinematic images of a perfume bottle. Creates dark luxury mood with smoke, reflections, and professional lighting for ad campaigns.",
+  "keywords": "perfume bottle ai prompt, realistic product photo, fragrance ad, commercial photography prompt, cinematic lighting, midjourney product image",
+  "image": "152.webp",
+  "file_path": "/prompt/cinematic-perfume-bottle-image-prompt.html"
   }
 ]
