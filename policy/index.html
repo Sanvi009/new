@@ -124,6 +124,29 @@
             margin: 0 auto;
         }
 
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .footer-dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #007AFF;
+            border-radius: 50%;
+            margin: 0 4px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-dot:hover {
+            transform: scale(1.3);
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 padding: 0 20px;
@@ -215,5 +238,9 @@
             </p>
         </div>
     </main>
+
+    <footer class="footer">
+        <a href="../links.html" class="footer-dot" title="Go to links page"></a>
+    </footer>
 </body>
 </html>
