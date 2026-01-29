@@ -1083,5 +1083,12 @@
 "keywords": "ai billiards prompt, pool player portrait ai, realistic sports photo ai, character portrait prompt, midjourney portrait, ai photo generation, hyperrealistic ai image, person playing pool",
 "image": "156.webp",
 "file_path": "/prompt/realistic-billiards-player-portrait-prompt.html"
+  },
+  {
+"id": 157,
+"description": "An AI prompt to generate a realistic fashion portrait. Creates a cinematic photo of a person in dark oversized streetwear, sitting on a white bean bag against a simple grey background. Perfect for creating stylish personal branding images.",
+"keywords": "fashion photoshoot prompt, realistic AI portrait, streetwear AI image, cinematic fashion photo, personal AI model shot, oversized coat, bean bag photo, grey background",
+"image": "157.jpg",
+"file_path": "/prompt/hyperrealistic-fashion-photoshoot-prompt-streetwear.html"
   }
 ]
