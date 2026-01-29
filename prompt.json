@@ -1076,5 +1076,12 @@
 "keywords": "hyperrealistic ai prompt, automotive photography ai, cinematic portrait, triptych ai art, man with car, urban lifestyle ai, dslr style ai image, midjourney car prompt",
 "image": "155.webp",
 "file_path": "/prompt/hyperrealistic-cinematic-automotive-portrait-prompt.html"
-}
+  },
+  {
+"id": 156,
+"description": "AI prompt to create a hyper-realistic portrait of a billiards player. A man in a brown polo jersey leans over a blue pool table, focusing on a shot. Uses detailed clothing and pose description.",
+"keywords": "ai billiards prompt, pool player portrait ai, realistic sports photo ai, character portrait prompt, midjourney portrait, ai photo generation, hyperrealistic ai image, person playing pool",
+"image": "156.webp",
+"file_path": "/prompt/realistic-billiards-player-portrait-prompt.html"
+  }
 ]
