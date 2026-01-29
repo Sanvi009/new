@@ -1062,5 +1062,12 @@
     "keywords": "ai portrait prompt, smoke demon, photorealistic, dark fantasy, streetwear portrait, cinematic lighting, character art, ai image generator",
     "image": "153.webp",
     "file_path": "/prompt/black-smoke-demon-portrait-photorealistic-ai-prompt.html"
+  },
+  {
+  "id": 154,
+  "description": "AI prompt for creating a 90s disposable camera portrait of a young person with pale complexion, modern hairstyle, and subtle smirk. Features a gradient green shirt, cluttered background with polaroids, and harsh flash lighting for realistic late-night vibe.",
+  "keywords": "90s disposable camera portrait, AI prompt, realistic young adult, pale complexion, modern hairstyle, subtle smirk, cluttered background, harsh flash, Midjourney, DALL-E, Stable Diffusion",
+  "image": "154.webp",
+  "file_path": "/prompt/90s-disposable-camera-portrait-ai-prompt.html"
   }
 ]
