@@ -1097,5 +1097,12 @@
 "keywords": "cinematic black and white portrait, realistic AI photo, man with car and dog, IMAX style, 85mm lens, photorealistic portrait, AI photography prompt",
 "image": "158.jpg",
 "file_path": "/prompt/cinematic-black-white-portrait-prompt-car-dog.html"
+  },
+  {
+"id": 159,
+"description": "A fine art photography prompt for a cinematic golden hour portrait. Creates a western-inspired scene of a person with a Porsche 959 in a prairie, using telephoto lens and warm, soft lighting.",
+"keywords": "golden hour portrait, fine art photography AI, Porsche 959, western inspired, telephoto lens, cinematic, Midjourney style raw, editorial photo",
+"image": "159.webp",
+"file_path": "/prompt/golden-hour-portrait-car-fine-art-photography-prompt.html"
   }
 ]
