@@ -1111,5 +1111,12 @@
 "keywords": "cola ad, beverage photography, product ad prompt, splash photo, ice cubes, AI commercial photo, drink bottle, studio lighting, 9:16 vertical",
 "image": "160.webp",
 "file_path": "/prompt/photorealistic-ice-cola-splash-spiral-ad-photo-prompt.html"
+  },
+  {
+"id": 161,
+"description": "AI prompt to create a cinematic studio photograph of a product on red velvet. Uses professional lighting terms for a dramatic, high-end ad look, based on an uploaded reference image.",
+"keywords": "product studio photo, luxury ad, velvet background, cinematic lighting, commercial photography, reference image, AI product shot, dramatic lighting, red and black",
+"image": "161.webp",
+"file_path": "/prompt/cinematic-luxury-product-studio-photo-red-velvet-prompt.html"
   }
 ]
