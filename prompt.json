@@ -1118,5 +1118,12 @@
 "keywords": "product studio photo, luxury ad, velvet background, cinematic lighting, commercial photography, reference image, AI product shot, dramatic lighting, red and black",
 "image": "161.webp",
 "file_path": "/prompt/cinematic-luxury-product-studio-photo-red-velvet-prompt.html"
+  },
+  {
+"id": 162,
+"description": "AI prompt to generate a dark, cinematic mirror selfie portrait. Creates an image of a person in a Ferrari racing jacket in an elevator, using a reference photo for the face. Fashion editorial style.",
+"keywords": "AI selfie, portrait prompt, fashion photo, mirror photo, elevator selfie, character portrait, face reference, jacket, moody lighting, cinematic",
+"image": "162.webp",
+"file_path": "/prompt/moody-mirror-selfie-ferrari-jacket-ai-photo-prompt.html"
   }
 ]
