@@ -1125,5 +1125,12 @@
 "keywords": "AI selfie, portrait prompt, fashion photo, mirror photo, elevator selfie, character portrait, face reference, jacket, moody lighting, cinematic",
 "image": "162.webp",
 "file_path": "/prompt/moody-mirror-selfie-ferrari-jacket-ai-photo-prompt.html"
+  },
+  {
+"id": 163,
+"description": "AI prompt for a hyper-realistic cinematic portrait. Creates an image of a person in red streetwear with a large red smoke demon behind them, using a face reference photo. Dramatic low-key lighting.",
+"keywords": "AI portrait, smoke demon, fantasy portrait, face reference, red hoodie, cinematic lighting, 9:16 vertical, character art, volumetric smoke, dominant pose",
+"image": "163.webp",
+"file_path": "/prompt/cinematic-portrait-red-smoke-demon-ai-prompt.html"
   }
 ]
