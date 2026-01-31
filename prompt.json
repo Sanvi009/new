@@ -1104,5 +1104,12 @@
 "keywords": "golden hour portrait, fine art photography AI, Porsche 959, western inspired, telephoto lens, cinematic, Midjourney style raw, editorial photo",
 "image": "159.webp",
 "file_path": "/prompt/golden-hour-portrait-car-fine-art-photography-prompt.html"
+  },
+  {
+"id": 160,
+"description": "AI prompt for a hyper-realistic advertisement photo of a cola drink. Creates a dramatic spiral of ice cubes and liquid splash with a central bottle, studio lighting, and condensation.",
+"keywords": "cola ad, beverage photography, product ad prompt, splash photo, ice cubes, AI commercial photo, drink bottle, studio lighting, 9:16 vertical",
+"image": "160.webp",
+"file_path": "/prompt/photorealistic-ice-cola-splash-spiral-ad-photo-prompt.html"
   }
 ]
