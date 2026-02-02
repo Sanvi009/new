@@ -1216,5 +1216,12 @@
 "keywords": "mixed media prompt, realistic with cartoon, cartoon monkey portrait, Abu Aladdin style, cel shaded blend, surreal portrait AI, photo animation mix, creative portrait generator, teal cap hoodie, sad expression portrait",
 "image": "175.webp",
 "file_path": "/prompt/mixed-media-ai-prompt-photorealistic-portrait-cartoon-monkey-on-head.html"
+  },
+  {
+"id": 176,
+"description": "AI prompt to generate a cinematic editorial portrait with strong motion blur and slow shutter streaks. Uses your uploaded face to create a high-contrast, dynamic fashion image with an abstract, viral photography style.",
+"keywords": "motion blur portrait, slow shutter AI, dynamic fashion photo, editorial motion blur, artistic blur effect, high contrast portrait, viral image style, AI fashion generator, cinematic blur, experimental portrait prompt",
+"image": "176.webp",
+"file_path": "/prompt/cinematic-motion-blur-ai-prompt-dynamic-fashion-portrait-slow-shutter.html"
   }
 ]
