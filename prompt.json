@@ -1230,5 +1230,12 @@
 "keywords": "voxel art prompt, 3D blocky portrait, clay texture character, low poly from photo, geometric stylization, painterly background, character design AI, non photorealistic 3D, artistic 3D model, identity preservation AI",
 "image": "177.webp",
 "file_path": "/prompt/voxel-style-3d-character-ai-prompt-blocky-clay-portrait-painterly-background.html"
+  },
+  {
+"id": 178,
+"description": "AI prompt for an ultra-realistic cinematic portrait shot from behind, showing your reflection in a modern LED-lit mirror. You wear a black outfit, pose introspectively, with high contrast lighting and shallow depth of field.",
+"keywords": "mirror portrait prompt, cinematic reflection, back view photo AI, LED mirror photography, realistic portrait generator, black outfit portrait, editorial selfie, high contrast lighting, shallow DOF, luxury fashion portrait",
+"image": "178.webp",
+"file_path": "/prompt/cinematic-mirror-self-portrait-ai-prompt-back-view-led-reflection.html"
   }
 ]
