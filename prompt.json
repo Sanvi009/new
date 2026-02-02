@@ -1223,5 +1223,12 @@
 "keywords": "motion blur portrait, slow shutter AI, dynamic fashion photo, editorial motion blur, artistic blur effect, high contrast portrait, viral image style, AI fashion generator, cinematic blur, experimental portrait prompt",
 "image": "176.webp",
 "file_path": "/prompt/cinematic-motion-blur-ai-prompt-dynamic-fashion-portrait-slow-shutter.html"
+  },
+  {
+"id": 177,
+"description": "AI prompt to transform a photo into a stylized 3D voxel character with a blocky, clay-like texture and recognizable face, rendered against a vibrant, swirling post-impressionist painterly background.",
+"keywords": "voxel art prompt, 3D blocky portrait, clay texture character, low poly from photo, geometric stylization, painterly background, character design AI, non photorealistic 3D, artistic 3D model, identity preservation AI",
+"image": "177.webp",
+"file_path": "/prompt/voxel-style-3d-character-ai-prompt-blocky-clay-portrait-painterly-background.html"
   }
 ]
