@@ -1265,5 +1265,12 @@
 "keywords": "cinematic portrait prompt, street fashion AI, realistic photo generator, full body portrait, DSLR style AI, dramatic lighting, Midjourney, Stable Diffusion",
 "image": "182.jpg",
 "file_path": "/prompt/cinematic-street-fashion-portrait-ai-prompt.html"
+  },
+  {
+"id": 183,
+"description": "AI prompt for a dark, cinematic bathtub portrait. Creates an image with teal and orange lighting, heavy steam, shallow depth of field, and a person resting with a shower head. Includes a detailed negative prompt to avoid common errors.",
+"keywords": "moody portrait AI, cinematic bathtub photo, teal and orange lighting, atmospheric steam, negative prompt, editorial portrait, Midjourney, Stable Diffusion",
+"image": "183.jpg",
+"file_path": "/prompt/moody-cinematic-bathtub-portrait-ai-prompt.html"
   }
 ]
