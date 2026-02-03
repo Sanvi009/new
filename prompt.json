@@ -1272,5 +1272,12 @@
 "keywords": "moody portrait AI, cinematic bathtub photo, teal and orange lighting, atmospheric steam, negative prompt, editorial portrait, Midjourney, Stable Diffusion",
 "image": "183.jpg",
 "file_path": "/prompt/moody-cinematic-bathtub-portrait-ai-prompt.html"
+  },
+  {
+"id": 184,
+"description": "AI prompt to generate a black and white editorial fashion photo. Creates an image of a person in a dynamic crouched pose against a white backdrop, wearing all-black clothing and sunglasses, with a wide-angle camera perspective.",
+"keywords": "black and white fashion, editorial photo prompt, wide angle portrait, studio photography AI, dynamic model pose, monochrome AI image, Midjourney, facial features",
+"image": "184.jpg",
+"file_path": "/prompt/black-white-fashion-editorial-ai-prompt.html"
   }
 ]
