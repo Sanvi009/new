@@ -1300,5 +1300,26 @@
   "keywords": "90s portrait prompt, disposable camera effect, grunge photography, vintage snapshot, harsh flash, flannel shirt, analog photo, film grain, retro style",
   "image": "187.jpg",
   "file_path": "/prompt/90s-grunge-disposable-camera-portrait-ai-prompt.html"
+  },
+  {
+  "id": 188,
+  "description": "AI prompt for creating extreme close-up wet portraits with water droplets, sweat effects, and wet hair. Profile view with soft lighting and bokeh background for professional portrait style.",
+  "keywords": "wet portrait prompt, water droplets, close-up photography, sweat on face, profile portrait, wet hair, bokeh background, skin texture, soft lighting",
+  "image": "188.jpg",
+  "file_path": "/prompt/wet-close-up-portrait-ai-prompt-water-droplets.html"
+  },
+  {
+  "id": 189,
+  "description": "AI prompt for creating vertical three-frame portrait collages with rooftop night photography. Features candid smartphone style, leather jacket textures, and city light backgrounds in stacked composition.",
+  "keywords": "portrait collage prompt, rooftop photography, night portrait, three frame collage, candid style, leather jacket, urban night, smartphone photo, vertical collage",
+  "image": "189.webp",
+  "file_path": "/prompt/rooftop-night-portrait-collage-ai-prompt.html"
+  },
+  {
+  "id": 190,
+  "description": "AI prompt for creating hyperrealistic cinematic portraits on underground subway platforms. Features angled posing, direct gaze, and dim lighting for moody urban photography style.",
+  "keywords": "subway portrait prompt, underground platform, cinematic photography, dim lighting, angled pose, direct gaze, urban portrait, station photo, hyperrealistic portrait",
+  "image": "190.webp",
+  "file_path": "/prompt/underground-subway-platform-portrait-ai-prompt.html"
   }
 ]
