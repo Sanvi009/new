@@ -1279,5 +1279,12 @@
 "keywords": "black and white fashion, editorial photo prompt, wide angle portrait, studio photography AI, dynamic model pose, monochrome AI image, Midjourney, facial features",
 "image": "184.jpg",
 "file_path": "/prompt/black-white-fashion-editorial-ai-prompt.html"
+  },
+  {
+  "id": 185,
+  "description": "AI prompt for creating dramatic cinematic portraits with chiaroscuro lighting, ash particles, and underground garage settings. Produces high-contrast vertical images with realistic skin texture.",
+  "keywords": "cinematic portrait prompt, chiaroscuro AI, dramatic lighting, underground garage photo, high contrast portrait, AI photography, surreal portrait",
+  "image": "185.webp",
+  "file_path": "/prompt/cinematic-chiaroscuro-portrait-ai-prompt.html"
   }
 ]
