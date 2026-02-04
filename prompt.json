@@ -1286,5 +1286,12 @@
   "keywords": "cinematic portrait prompt, chiaroscuro AI, dramatic lighting, underground garage photo, high contrast portrait, AI photography, surreal portrait",
   "image": "185.webp",
   "file_path": "/prompt/cinematic-chiaroscuro-portrait-ai-prompt.html"
+  },
+  {
+  "id": 186,
+  "description": "AI prompt for creating ultra-realistic fashion portraits with faux fur coats and bear cubs. Uses identity lock to preserve facial features from reference photos. Professional studio photography style.",
+  "keywords": "fashion portrait AI, bear cub photo, faux fur coat, identity lock prompt, Hasselblad photography, editorial fashion, studio portrait, animal fashion",
+  "image": "186.jpg",
+  "file_path": "/prompt/faux-fur-fashion-portrait-bear-cub-ai-prompt.html"
   }
 ]
