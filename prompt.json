@@ -1321,5 +1321,26 @@
   "keywords": "subway portrait prompt, underground platform, cinematic photography, dim lighting, angled pose, direct gaze, urban portrait, station photo, hyperrealistic portrait",
   "image": "190.webp",
   "file_path": "/prompt/underground-subway-platform-portrait-ai-prompt.html"
+  },
+  {
+"id": 191,
+"description": "A detailed prompt to generate a realistic street portrait using your uploaded photo. Creates a sharp, still subject against a motion-blurred, crowded city background with professional DSLR photo quality.",
+"keywords": "cinematic portrait, street photography, motion blur, ai portrait prompt, realistic avatar, character image, from my photo, midjourney, stable diffusion",
+"image": "191.webp",
+"file_path": "/prompt/cinematic-street-portrait-prompt.html"
+  },
+  {
+"id": 192,
+"description": "Generate a dramatic South Indian cinema-style movie poster using your photo. Creates an epic composition with a close-up portrait and a vintage motorcycle action scene, rendered in hyper-realistic 16K detail.",
+"keywords": "south indian movie poster, cinematic poster ai, from my photo, hyper-realistic, tamil style poster, character poster, motorcycle action, 16K render, avatar poster",
+"image": "192.jpg",
+"file_path": "/prompt/south-indian-cinematic-movie-poster-prompt.html"
+  },
+  {
+"id": 193,
+"description": "Generate a powerful, cinematic portrait from your photo. This prompt creates a low-angle shot with a single beam of light cutting across the face, resulting in a dramatic, heroic silhouette against a dark background.",
+"keywords": "dramatic portrait, low angle shot, cinematic lighting, single light beam, heroic silhouette, from my photo, avatar, character design, moody headshot",
+"image": "193.jpg",
+"file_path": "/prompt/dramatic-low-angle-cinematic-portrait-prompt.html"
   }
 ]
