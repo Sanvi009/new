@@ -5,387 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Brainloom</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            height: 70px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 32px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #111;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo i {
-            color: #4f46e5;
-            font-size: 22px;
-        }
-
-        .nav {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .nav-item {
-            color: #555;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            padding: 10px 16px;
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .nav-item:hover {
-            color: #4f46e5;
-            background: rgba(79, 70, 229, 0.05);
-        }
-
-        .nav-item.active {
-            color: #4f46e5;
-            background: rgba(79, 70, 229, 0.1);
-        }
-
-        .main-content {
-            max-width: 1200px;
-            margin: 100px auto 50px;
-            padding: 0 32px;
-        }
-
-        .page-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .page-title {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #1f2937;
-            margin-bottom: 16px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .page-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #4f46e5, #7c3aed);
-            border-radius: 2px;
-        }
-
-        .page-subtitle {
-            font-size: 1.125rem;
-            color: #6b7280;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .contact-info {
-            padding: 50px;
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            color: white;
-        }
-
-        .contact-form {
-            padding: 50px;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            color: inherit;
-        }
-
-        .contact-method {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            transition: transform 0.2s ease;
-        }
-
-        .contact-method:hover {
-            transform: translateX(10px);
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-
-        .contact-details h4 {
-            font-size: 1.125rem;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .contact-details p {
-            font-size: 0.95rem;
-            opacity: 0.9;
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-
-        .contact-link {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 8px;
-            transition: all 0.2s ease;
-        }
-
-        .contact-link:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            color: #4b5563;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .form-input, .form-textarea {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #e5e7eb;
-            border-radius: 10px;
-            font-size: 15px;
-            font-family: inherit;
-            transition: all 0.2s ease;
-            background: #f9fafb;
-        }
-
-        .form-input:focus, .form-textarea:focus {
-            outline: none;
-            border-color: #4f46e5;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
-        }
-
-        .form-textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            color: white;
-            border: none;
-            padding: 16px 32px;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .social-link {
-            width: 45px;
-            height: 45px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-
-        .social-link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-
-        .response-message {
-            text-align: center;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
-            display: none;
-            animation: slideDown 0.3s ease;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .success {
-            background: #d1fae5;
-            color: #065f46;
-            border: 1px solid #a7f3d0;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 60px;
-            color: #6b7280;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 992px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-info, .contact-form {
-                padding: 40px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                padding: 0 20px;
-            }
-
-            .nav-item span {
-                display: none;
-            }
-
-            .nav-item {
-                padding: 12px;
-            }
-
-            .main-content {
-                padding: 0 20px;
-                margin: 80px auto 30px;
-            }
-
-            .page-title {
-                font-size: 2.25rem;
-            }
-
-            .contact-info, .contact-form {
-                padding: 30px 25px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-content {
-                padding: 0 16px;
-            }
-
-            .main-content {
-                padding: 0 16px;
-                margin: 70px auto 20px;
-            }
-
-            .page-title {
-                font-size: 1.875rem;
-            }
-
-            .contact-method {
-                padding: 15px;
-            }
-
-            .contact-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -410,22 +29,439 @@
                 </a>
             </nav>
         </div>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                background: #fafafa;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            .header {
+                background: #ffffff;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                height: 60px;
+            }
+
+            .header-content {
+                max-width: 1200px;
+                margin: 0 auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 32px;
+            }
+
+            .logo {
+                font-size: 21px;
+                font-weight: 500;
+                color: #111;
+                letter-spacing: -0.5px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .logo i {
+                color: #007AFF;
+                font-size: 20px;
+            }
+
+            .nav {
+                display: flex;
+                gap: 24px;
+                align-items: center;
+            }
+
+            .nav-item {
+                color: #666;
+                text-decoration: none;
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 8px 12px;
+                border-radius: 6px;
+                transition: all 0.2s ease;
+            }
+
+            .nav-item:hover {
+                color: #007AFF;
+                background: rgba(0, 122, 255, 0.05);
+            }
+
+            .nav-item.active {
+                color: #007AFF;
+                background: rgba(0, 122, 255, 0.05);
+            }
+
+            .nav-item i {
+                font-size: 17px;
+            }
+
+            .main-content {
+                max-width: 1200px;
+                margin: 80px auto 40px;
+                padding: 0 32px;
+                min-height: calc(100vh - 120px);
+            }
+
+            .page-header {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .page-title {
+                font-size: 28px;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 12px;
+            }
+
+            .page-subtitle {
+                color: #666;
+                font-size: 16px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .contact-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+
+            .contact-info {
+                background: white;
+                border-radius: 12px;
+                padding: 40px;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            }
+
+            .contact-form {
+                background: white;
+                border-radius: 12px;
+                padding: 40px;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            }
+
+            .section-title {
+                font-size: 20px;
+                font-weight: 600;
+                color: #007AFF;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .section-title i {
+                font-size: 18px;
+            }
+
+            .contact-method {
+                display: flex;
+                align-items: flex-start;
+                gap: 16px;
+                margin-bottom: 25px;
+                padding: 20px;
+                background: rgba(0, 122, 255, 0.02);
+                border-radius: 10px;
+                border-left: 3px solid #007AFF;
+            }
+
+            .contact-icon {
+                width: 44px;
+                height: 44px;
+                background: rgba(0, 122, 255, 0.1);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                color: #007AFF;
+                flex-shrink: 0;
+            }
+
+            .contact-details h4 {
+                font-size: 17px;
+                font-weight: 600;
+                color: #333;
+                margin-bottom: 6px;
+            }
+
+            .contact-details p {
+                color: #666;
+                font-size: 14px;
+                margin-bottom: 12px;
+                line-height: 1.5;
+            }
+
+            .contact-link {
+                color: #007AFF;
+                text-decoration: none;
+                font-weight: 500;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 16px;
+                background: rgba(0, 122, 255, 0.08);
+                border-radius: 6px;
+                transition: all 0.2s ease;
+                font-size: 14px;
+            }
+
+            .contact-link:hover {
+                background: rgba(0, 122, 255, 0.12);
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+            .form-label {
+                display: block;
+                margin-bottom: 8px;
+                color: #555;
+                font-weight: 500;
+                font-size: 14px;
+            }
+
+            .form-input, .form-textarea {
+                width: 100%;
+                padding: 12px 14px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                font-size: 15px;
+                font-family: inherit;
+                transition: all 0.2s ease;
+                background: #f8f9fa;
+            }
+
+            .form-input:focus, .form-textarea:focus {
+                outline: none;
+                border-color: #007AFF;
+                background: white;
+                box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.1);
+            }
+
+            .form-textarea {
+                min-height: 140px;
+                resize: vertical;
+            }
+
+            .submit-btn {
+                background: #007AFF;
+                color: white;
+                border: none;
+                padding: 14px 28px;
+                border-radius: 8px;
+                font-size: 15px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .submit-btn:hover {
+                background: #0056cc;
+            }
+
+            .social-links {
+                display: flex;
+                gap: 12px;
+                margin-top: 30px;
+                padding-top: 20px;
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+                background: rgba(0, 122, 255, 0.08);
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #007AFF;
+                text-decoration: none;
+                transition: all 0.2s ease;
+                font-size: 16px;
+            }
+
+            .social-link:hover {
+                background: rgba(0, 122, 255, 0.12);
+                transform: translateY(-2px);
+            }
+
+            .response-message {
+                text-align: center;
+                padding: 12px;
+                border-radius: 8px;
+                margin-top: 20px;
+                display: none;
+                font-size: 14px;
+            }
+
+            .success {
+                background: #e6f4ea;
+                color: #0d652d;
+                border: 1px solid #b7e1c1;
+            }
+
+            .response-time {
+                margin-top: 30px;
+                padding: 15px;
+                background: rgba(0, 122, 255, 0.03);
+                border-radius: 8px;
+                border-left: 3px solid #007AFF;
+            }
+
+            .response-time h4 {
+                color: #007AFF;
+                margin-bottom: 8px;
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .response-time p {
+                color: #666;
+                font-size: 13px;
+                line-height: 1.5;
+            }
+
+            .footer {
+                text-align: center;
+                margin-top: 40px;
+                color: #999;
+                font-size: 14px;
+            }
+
+            .social-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 10px;
+            }
+
+            @media (max-width: 992px) {
+                .contact-container {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .header-content {
+                    padding: 0 20px;
+                }
+
+                .nav {
+                    gap: 16px;
+                }
+
+                .nav-item span {
+                    display: none;
+                }
+
+                .nav-item {
+                    padding: 10px;
+                }
+
+                .main-content {
+                    padding: 0 20px;
+                    margin: 70px auto 30px;
+                }
+
+                .contact-info, .contact-form {
+                    padding: 30px 25px;
+                }
+
+                .page-title {
+                    font-size: 24px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .header-content {
+                    padding: 0 16px;
+                }
+
+                .nav {
+                    gap: 12px;
+                }
+
+                .main-content {
+                    padding: 0 16px;
+                    margin: 65px auto 25px;
+                }
+
+                .contact-info, .contact-form {
+                    padding: 25px 20px;
+                }
+
+                .page-title {
+                    font-size: 22px;
+                }
+
+                .contact-method {
+                    padding: 15px;
+                }
+
+                .contact-icon {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 16px;
+                }
+
+                .social-buttons {
+                    flex-direction: column;
+                }
+
+                .social-buttons .contact-link {
+                    width: 100%;
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+        </style>
     </header>
 
     <main class="main-content">
         <div class="page-header">
             <h1 class="page-title">Get in Touch</h1>
             <p class="page-subtitle">
-                Have questions or ideas? We'd love to hear from you. 
-                Choose your preferred way to connect.
+                Have questions or ideas? We'd love to hear from you. Choose your preferred way to connect.
             </p>
         </div>
 
         <div class="contact-container">
             <!-- Contact Information Side -->
             <div class="contact-info">
-                <h2 class="section-title">Contact Information</h2>
-                
+                <h2 class="section-title"><i class="fas fa-info-circle"></i> Contact Information</h2>
+
                 <div class="contact-method">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
@@ -436,7 +472,7 @@
                         <a href="mailto:sanvialevan2121@gmail.com" class="contact-link">
                             <i class="fas fa-paper-plane"></i> Send Email
                         </a>
-                        <p style="margin-top: 10px; font-size: 0.9rem;">
+                        <p style="margin-top: 8px; font-size: 13px; color: #777;">
                             sanvialevan2121@gmail.com
                         </p>
                     </div>
@@ -447,30 +483,36 @@
                         <i class="fab fa-whatsapp"></i>
                     </div>
                     <div class="contact-details">
-                        <h4>WhatsApp</h4>
-                        <p>Quick chat and immediate responses</p>
-                        <a href="https://wa.me/8801823602382" target="_blank" class="contact-link">
-                            <i class="fab fa-whatsapp"></i> Start Chat
+                        <h4>WhatsApp Community</h4>
+                        <p>Join our community for updates and discussions</p>
+                        <a href="https://chat.whatsapp.com/LOgkCEvXwGW6mJVourbOB6" target="_blank" class="contact-link">
+                            <i class="fab fa-whatsapp"></i> Join Group
                         </a>
-                        <p style="margin-top: 10px; font-size: 0.9rem;">
-                            +880 1823-602382
+                        <p style="margin-top: 8px; font-size: 13px; color: #777;">
+                            Connect with our community members
                         </p>
                     </div>
                 </div>
 
                 <div class="contact-method">
                     <div class="contact-icon">
-                        <i class="fab fa-facebook"></i>
+                        <i class="fas fa-users"></i>
                     </div>
                     <div class="contact-details">
                         <h4>Social Media</h4>
-                        <p>Connect and follow for updates</p>
-                        <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <p>Follow us across different platforms</p>
+                        <div class="social-buttons">
                             <a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank" class="contact-link">
-                                <i class="fas fa-flag"></i> Page
+                                <i class="fab fa-facebook"></i> Page
                             </a>
                             <a href="https://www.facebook.com/sanvi.al.evan" target="_blank" class="contact-link">
                                 <i class="fas fa-user"></i> Profile
+                            </a>
+                            <a href="https://github.com/sanvi009" target="_blank" class="contact-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://www.tiktok.com/@brainloom.online" target="_blank" class="contact-link">
+                                <i class="fab fa-tiktok"></i> TikTok
                             </a>
                         </div>
                     </div>
@@ -480,18 +522,24 @@
                     <a href="mailto:sanvialevan2121@gmail.com" class="social-link" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://wa.me/8801823602382" target="_blank" class="social-link" title="WhatsApp">
+                    <a href="https://chat.whatsapp.com/LOgkCEvXwGW6mJVourbOB6" target="_blank" class="social-link" title="WhatsApp Group">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank" class="social-link" title="Facebook Page">
                         <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://github.com/sanvi009" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@brainloom.online" target="_blank" class="social-link" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Contact Form Side -->
             <div class="contact-form">
-                <h2 class="section-title">Send a Message</h2>
+                <h2 class="section-title"><i class="fas fa-paper-plane"></i> Send a Message</h2>
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="name" class="form-label">Your Name</label>
@@ -517,24 +565,19 @@
                         <i class="fas fa-paper-plane"></i> Send Message
                     </button>
                 </form>
-                
+
                 <div id="responseMessage" class="response-message"></div>
 
-                <div style="margin-top: 30px; padding: 20px; background: #f9fafb; border-radius: 10px;">
-                    <h4 style="color: #4f46e5; margin-bottom: 10px; font-size: 1rem;">
-                        <i class="fas fa-clock"></i> Response Time
-                    </h4>
-                    <p style="color: #6b7280; font-size: 0.9rem; line-height: 1.5;">
-                        We typically respond within 24 hours. For urgent matters, 
-                        use WhatsApp for quicker assistance.
-                    </p>
+                <div class="response-time">
+                    <h4><i class="fas fa-clock"></i> Response Time</h4>
+                    <p>We typically respond within 24-48 hours. For urgent matters, please mention "URGENT" in your subject line.</p>
                 </div>
             </div>
         </div>
 
         <div class="footer">
             <p>© 2024 Brainloom. All rights reserved.</p>
-            <p style="margin-top: 5px; font-size: 0.85rem; color: #9ca3af;">
+            <p style="margin-top: 5px; font-size: 12px; color: #aaa;">
                 Crafting digital experiences with care
             </p>
         </div>
@@ -543,46 +586,46 @@
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
+
             // Create email content
             const emailBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
             const mailtoLink = `mailto:sanvialevan2121@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-            
+
             // Animate button
             const submitBtn = document.querySelector('.submit-btn');
             const originalHTML = submitBtn.innerHTML;
-            
+
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
-            
+
             // Show success message
             const responseDiv = document.getElementById('responseMessage');
             responseDiv.className = 'response-message success';
             responseDiv.innerHTML = '<i class="fas fa-check-circle"></i> Opening email client... Please send the pre-filled email to contact us.';
             responseDiv.style.display = 'block';
-            
+
             // Open email client after a short delay
             setTimeout(() => {
                 window.location.href = mailtoLink;
-                
+
                 // Reset button after 3 seconds
                 setTimeout(() => {
                     submitBtn.innerHTML = originalHTML;
                     submitBtn.disabled = false;
-                    
+
                     // Hide message after 5 seconds
                     setTimeout(() => {
                         responseDiv.style.display = 'none';
                     }, 5000);
                 }, 3000);
             }, 1000);
-            
+
             // Clear form
             document.getElementById('contactForm').reset();
         });
