@@ -1342,5 +1342,33 @@
 "keywords": "dramatic portrait, low angle shot, cinematic lighting, single light beam, heroic silhouette, from my photo, avatar, character design, moody headshot",
 "image": "193.jpg",
 "file_path": "/prompt/dramatic-low-angle-cinematic-portrait-prompt.html"
+  },
+  {
+  "id": 194,
+  "description": "AI prompt creates photorealistic characters breaking out of manga panels. Dynamic running pose with dramatic lighting. Black-and-white comic background with 9:16 vertical format. Perfect for character art and portraits.",
+  "keywords": "manga to realistic, character breaking out of comic, photorealistic anime, dynamic pose, AI portrait prompt, 9:16 vertical, comic book art, Midjourney character, Stable Diffusion portrait",
+  "image": "194.jpg",
+  "file_path": "/prompt/manga-to-realistic-character-breaking-out-of-comic-prompt.html"
+  },
+  {
+  "id": 195,
+  "description": "AI prompt creates realistic cafe portraits from your reference photo. Includes detailed clothing textures, cinematic lighting, and urban atmosphere. Perfect for fashion portraits and personal photos in 9:16 vertical format.",
+  "keywords": "cafe portrait, AI from reference photo, realistic portrait, clothing texture, minimalist cafe, cinematic lighting, 9:16 vertical, fashion photography, urban atmosphere, photo recreation",
+  "image": "195.jpg",
+  "file_path": "/prompt/minimalist-cafe-portrait-ai-prompt-stylish-urban-photography.html"
+  },
+  {
+  "id": 196,
+  "description": "AI prompt creates dramatic professional portraits with crimson backgrounds using your reference photo. Features cinematic lighting, intense contrast, and sleek black suit. Perfect for business headshots in 1080x1920 vertical format.",
+  "keywords": "crimson background portrait, dramatic lighting, professional headshot, exact facial match, cinematic portrait, black suit, vertical 1080x1920, low angle, intense contrast, business portrait AI",
+  "image": "196.jpg",
+  "file_path": "/prompt/crimson-background-portrait-ai-prompt-dramatic-lighting.html"
+  },
+  {
+  "id": 197,
+  "description": "AI prompt creates psychological horror scenes with mirror reflections showing dual personalities. Uses your reference photo for accurate facial matching. Features teal dark tones, foggy atmosphere, and dramatic 9:16 vertical composition.",
+  "keywords": "psychological horror, mirror reflection, dual personality, dark cinematic, teal tones, black hoodie, foggy atmosphere, 9:16 vertical, horror portrait, AI from photo",
+  "image": "197.jpg",
+  "file_path": "/prompt/psychological-horror-mirror-scene-ai-prompt-dual-personality.html"
   }
 ]
