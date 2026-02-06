@@ -1370,5 +1370,26 @@
   "keywords": "psychological horror, mirror reflection, dual personality, dark cinematic, teal tones, black hoodie, foggy atmosphere, 9:16 vertical, horror portrait, AI from photo",
   "image": "197.jpg",
   "file_path": "/prompt/psychological-horror-mirror-scene-ai-prompt-dual-personality.html"
+  },
+  {
+  "id": 198,
+  "description": "AI prompt creates augmented reality scenes with floating Spotify and Apple Music UI cards orbiting around your portrait. Features 3D spatial composition, frosted glass aesthetics, and street setting. Perfect for music visualization in 9:16 format.",
+  "keywords": "augmented reality, floating Spotify cards, Apple Music UI, AR visualization, 3D composition, frosted glass, street scene, exact facial accuracy, purple blazer, 9:16 vertical",
+  "image": "198.jpg",
+  "file_path": "/prompt/augmented-reality-music-ui-ai-prompt-spotify-cards-floating.html"
+  },
+  {
+  "id": 199,
+  "description": "AI prompt creates ultra-realistic DSLR-quality mirror selfies using your reference photo. Features natural skin textures, fedora hat shadow effects, bathroom lighting, and professional 85mm lens look in 9:16 vertical format.",
+  "keywords": "DSLR mirror selfie, ultra-realistic portrait, bathroom photography, fedora hat, natural skin texture, 85mm lens, dim lighting, exact facial match, knitted sweater, 9:16 vertical",
+  "image": "199.webp",
+  "file_path": "/prompt/mirror-selfie-dslr-portrait-ai-prompt-realistic-bathroom-photography.html"
+  },
+  {
+  "id": 200,
+  "description": "AI prompt creates professional speaker portraits at a podium using your reference photo. Features stage lighting, multiple microphones, blue event background, and 4K broadcast look in 9:16 vertical format.",
+  "keywords": "speaker portrait, podium presentation, stage lighting, microphones, event photography, blue background, exact facial match, professional speaker, telephoto lens, 9:16 vertical",
+  "image": "200.jpg",
+  "file_path": "/prompt/professional-speaker-ai-prompt-stage-presentation-portrait.html"
   }
 ]
