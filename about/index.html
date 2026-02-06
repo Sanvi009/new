@@ -228,12 +228,15 @@
                 color: #666;
                 max-width: 600px;
                 margin-bottom: 25px;
+                text-align: left;
             }
 
             .social-links {
                 display: flex;
-                gap: 20px;
+                gap: 15px;
                 margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .social-link {
@@ -245,7 +248,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 20px;
+                font-size: 18px;
                 text-decoration: none;
                 transition: all 0.3s ease;
             }
@@ -256,11 +259,21 @@
                 transform: scale(1.1);
             }
 
-            .coming-soon {
-                font-size: 14px;
-                color: #999;
-                margin-top: 5px;
-                font-style: italic;
+            .cta-button {
+                display: inline-block;
+                background: #007AFF;
+                color: white;
+                padding: 12px 24px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 500;
+                margin-top: 15px;
+                transition: all 0.3s ease;
+            }
+
+            .cta-button:hover {
+                background: #0056cc;
+                transform: translateY(-2px);
             }
 
             .stats-container {
@@ -287,6 +300,31 @@
             .stat-label {
                 color: #666;
                 font-size: 16px;
+            }
+
+            .info-box {
+                background: rgba(0, 122, 255, 0.03);
+                border-left: 4px solid #007AFF;
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px 0;
+            }
+
+            .info-box p {
+                margin-bottom: 10px;
+                color: #555;
+            }
+
+            .location-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: rgba(0, 122, 255, 0.08);
+                padding: 8px 16px;
+                border-radius: 20px;
+                margin-bottom: 15px;
+                color: #007AFF;
+                font-size: 14px;
             }
 
             @media (max-width: 768px) {
@@ -353,13 +391,13 @@
                 }
 
                 .social-links {
-                    gap: 15px;
+                    gap: 12px;
                 }
 
                 .social-link {
                     width: 40px;
                     height: 40px;
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
         </style>
@@ -371,10 +409,10 @@
             <section class="about-section">
                 <h2 class="section-title"><i class="fas fa-bullseye"></i> Our Mission</h2>
                 <p class="mission-text">
-                    At Brainloom, we're building the world's most comprehensive library of AI prompts to empower creators, developers, and thinkers to unlock the full potential of artificial intelligence.
+                    At Brainloom, we're building the world's most comprehensive library of AI image transformation prompts to empower creators, designers, and developers to unlock the full potential of AI image generation.
                 </p>
                 <p class="mission-text">
-                    Our curated collection spans diverse domains—from creative writing and code generation to business strategy and academic research—providing users with the building blocks to accelerate their AI-powered projects.
+                    Our curated collection provides users with ready-to-use prompt templates that can be copied and used instantly with various AI image generation tools. Each prompt is carefully crafted to produce specific visual styles and effects.
                 </p>
 
                 <div class="stats-container">
@@ -384,11 +422,11 @@
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">50+</div>
-                        <div class="stat-label">AI Categories</div>
+                        <div class="stat-label">Visual Categories</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">24/7</div>
-                        <div class="stat-label">Library Access</div>
+                        <div class="stat-label">Free Access</div>
                     </div>
                 </div>
             </section>
@@ -399,20 +437,35 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-filter"></i></div>
-                        <h3 class="feature-title">Curated Collection</h3>
-                        <p class="feature-desc">Every prompt is reviewed and tested to ensure quality, relevance, and effectiveness across different AI models.</p>
+                        <h3 class="feature-title">Tested & Verified</h3>
+                        <p class="feature-desc">Every prompt is personally tested and modified until it produces the perfect result across different AI image generation platforms.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-tags"></i></div>
-                        <h3 class="feature-title">Organized by Category</h3>
-                        <p class="feature-desc">Browse prompts by domain, difficulty, and use case to quickly find exactly what you need for your project.</p>
+                        <h3 class="feature-title">Daily Updates</h3>
+                        <p class="feature-desc">New prompts added daily across various categories including digital art, photography styles, illustration techniques, and more.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon"><i class="fas fa-rocket"></i></div>
-                        <h3 class="feature-title">Rapid Iteration</h3>
-                        <p class="feature-desc">Use our prompt templates to accelerate your workflow and achieve better results with less trial and error.</p>
+                        <h3 class="feature-title">Instant Copy-Paste</h3>
+                        <p class="feature-desc">No signup required. Visit, choose your prompt, copy it, and use it instantly with your favorite AI image generator.</p>
                     </div>
                 </div>
+            </section>
+
+            <!-- Content Process Section -->
+            <section class="about-section">
+                <h2 class="section-title"><i class="fas fa-cogs"></i> Our Process</h2>
+                <div class="info-box">
+                    <p><strong>1. Idea Generation:</strong> We brainstorm creative prompt ideas for different visual styles and effects.</p>
+                    <p><strong>2. Testing & Refinement:</strong> Each prompt is tested with multiple AI models and refined until it produces optimal results.</p>
+                    <p><strong>3. Categorization:</strong> Prompts are organized by style, theme, and difficulty for easy navigation.</p>
+                    <p><strong>4. Quality Assurance:</strong> If a prompt doesn't give expected results, users can contact us for assistance and prompt adjustment.</p>
+                </div>
+                
+                <p class="mission-text" style="margin-top: 20px;">
+                    <strong>Note:</strong> AI image generation results can vary between platforms and models. We continually test and update our prompts to ensure compatibility with popular AI image generators.
+                </p>
             </section>
 
             <!-- Founder Section -->
@@ -422,23 +475,85 @@
                 <img src="../images/owner.png" alt="Sanvi Al Evan" class="owner-image" onerror="this.src='https://ui-avatars.com/api/?name=Sanvi+Al+Evan&background=007AFF&color=fff&size=160'">
 
                 <h3 class="owner-name">Sanvi Al Evan</h3>
-                <p class="owner-title">Founder & Lead Curator</p>
+                <p class="owner-title">Founder, Developer & Lead Curator</p>
+                
+                <div class="location-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Dhaka, Bangladesh
+                </div>
 
-                <p class="owner-bio">
-                    As an AI enthusiast and developer, Sanvi founded Brainloom to solve a common problem: the time-consuming process of crafting effective AI prompts. With a background in machine learning and content creation, she recognized the need for a centralized, quality-vetted prompt library that could serve both beginners and experts in the AI space.
-                </p>
+                <div class="owner-bio">
+                    <p>I'm a Computer Science student currently in my 2nd year of bachelor's studies, with a passion for web development and artificial intelligence. Brainloom was launched in July 2025 as a personal project to solve a common problem I encountered: the time-consuming process of crafting effective AI image prompts.</p>
+                    
+                    <p>As a web developer, I built Brainloom from scratch to create a centralized, quality-vetted prompt library that serves both beginners and experts in AI image generation. My background in CSE provides me with the technical understanding of how AI models interpret and process prompt instructions.</p>
+                    
+                    <p>"Brainloom was born from the belief that the right prompt can transform how we create visual content with AI. Our goal is to democratize access to powerful AI image generation tools by providing the precise linguistic instructions that unlock their full creative potential."</p>
+                </div>
 
-                <p class="owner-bio">
-                    "Brainloom was born from the belief that the right prompt can transform how we interact with AI. Our goal is to democratize access to powerful AI tools by providing the linguistic keys that unlock their full potential."
-                </p>
+                <div class="info-box" style="text-align: center; max-width: 600px;">
+                    <p><strong>Website Status:</strong> Free service launched in July 2025</p>
+                    <p><strong>Funding Model:</strong> Currently free with no subscriptions</p>
+                    <p><strong>Team:</strong> Solo project with community feedback integration</p>
+                    <p><strong>Future Plans:</strong> May introduce affiliate partnerships for AI tools</p>
+                </div>
 
                 <div class="social-links">
-                    <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:sanvialevan2121@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://chat.whatsapp.com/LOgkCEvXwGW6mJVourbOB6" target="_blank" class="social-link" title="WhatsApp Group">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank" class="social-link" title="Facebook Page">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://github.com/sanvi009" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@brainloom.online" target="_blank" class="social-link" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
-                <p class="coming-soon">Social links coming soon</p>
+
+                <a href="../contact/index.html" class="cta-button">
+                    <i class="fas fa-comment"></i> Share Your Feedback
+                </a>
+                
+                <p style="margin-top: 15px; color: #666; font-size: 14px;">
+                    Join our community to see prompt results and achievements
+                </p>
+            </section>
+
+            <!-- Legal & Transparency Section -->
+            <section class="about-section">
+                <h2 class="section-title"><i class="fas fa-shield-alt"></i> Transparency & Policies</h2>
+                <p class="mission-text">
+                    We believe in complete transparency with our users. Brainloom operates as a free service with clear policies regarding privacy and data usage.
+                </p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                        <h3 class="feature-title">Privacy First</h3>
+                        <p class="feature-desc">We respect your privacy. No mandatory signups, minimal data collection, and clear privacy policies.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3 class="feature-title">AdSense Compliant</h3>
+                        <p class="feature-desc">Our advertising follows Google AdSense policies with proper disclosures and user-friendly ad placements.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
+                        <h3 class="feature-title">Clear Policies</h3>
+                        <p class="feature-desc">Detailed privacy policy, terms of service, and cookie policies are available for user review.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 25px;">
+                    <a href="../policy/index.html" class="cta-button" style="background: #34c759;">
+                        <i class="fas fa-file-alt"></i> View Our Privacy Policy
+                    </a>
+                </div>
             </section>
         </div>
     </main>
