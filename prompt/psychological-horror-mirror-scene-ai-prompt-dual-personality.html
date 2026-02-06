@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horror Mirror Scene AI Prompt - Dual Personality Portrait</title>
     <meta name="description" content="An AI image prompt that creates dark psychological horror scenes with mirror reflections showing dual personalities, using your reference photo for accurate facial matching.">
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/logo1.png">
@@ -70,7 +75,7 @@
 }
     </script>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) - Load async -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -79,8 +84,8 @@
     gtag('config', 'G-GH0DLY6H1F');
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* ===== CRITICAL CSS ===== */
         * {
             margin: 0;
             padding: 0;
@@ -150,9 +155,12 @@
             transition: all 0.2s ease;
         }
 
-        .nav-item:hover {
+        .nav-item:hover,
+        .nav-item:focus {
             color: #007AFF;
             background: rgba(0, 122, 255, 0.05);
+            outline: 2px solid #007AFF;
+            outline-offset: 2px;
         }
 
         .nav-item i {
@@ -230,7 +238,7 @@
             line-height: 1.7;
         }
 
-        /* Content Sections */
+        /* ===== NON-CRITICAL CSS (Loads after paint) ===== */
         .content-section {
             background: white;
             border-radius: 12px;
@@ -298,9 +306,16 @@
             border-radius: 6px;
             cursor: pointer;
             font-size: 14px;
+            transition: all 0.2s ease;
         }
 
         .copy-btn:hover {
+            background: #0056cc;
+        }
+
+        .copy-btn:focus {
+            outline: 2px solid #007AFF;
+            outline-offset: 2px;
             background: #0056cc;
         }
 
@@ -374,7 +389,7 @@
             color: #666;
         }
 
-        /* Responsive */
+        /* ===== MOBILE OPTIMIZATIONS ===== */
         @media (max-width: 768px) {
             .header-content {
                 padding: 0 20px;
@@ -390,6 +405,8 @@
 
             .nav-item {
                 padding: 10px;
+                min-height: 44px;
+                min-width: 44px;
             }
 
             .main-content {
@@ -407,6 +424,17 @@
 
             .images-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .prompt-image {
+                height: 300px;
+            }
+            
+            .copy-btn {
+                position: static;
+                margin-top: 12px;
+                width: 100%;
+                min-height: 44px;
             }
         }
 
@@ -432,183 +460,227 @@
                 gap: 12px;
             }
 
-            .copy-btn {
-                position: static;
-                margin-top: 12px;
-                width: 100%;
-            }
-
             .relevant-prompts {
                 grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 18px;
+            }
+        }
+        
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .header, .copy-btn, .site-footer {
+                display: none;
+            }
+            
+            .main-content {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .content-section {
+                border: 1px solid #ccc;
+                break-inside: avoid;
+            }
+            
+            .prompt-box {
+                border-left: 2px solid #000;
             }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" role="banner">
         <div class="header-content">
-            <a href="/" class="logo">
-                <i class="fas fa-lightbulb"></i>
+            <a href="/" class="logo" aria-label="Brainloom Home">
+                <i class="fas fa-lightbulb" aria-hidden="true"></i>
                 <span>Prompts</span>
             </a>
 
-            <nav class="nav">
+            <nav class="nav" aria-label="Main Navigation">
                 <a href="../policy/index.html" class="nav-item">
-                    <i class="fas fa-shield-alt"></i>
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
                     <span>Policy</span>
                 </a>
                 <a href="../about/index.html" class="nav-item">
-                    <i class="fas fa-info-circle"></i>
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
                     <span>About</span>
                 </a>
                 <a href="../contact/index.html" class="nav-item">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                     <span>Contact</span>
                 </a>
             </nav>
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content" role="main">
         <!-- Breadcrumb -->
-        <div class="breadcrumb">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
             <a href="/">Home</a>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <a href="../prompt.html">Prompts</a>
-            <span>/</span>
+            <span aria-hidden="true">/</span>
             <span>Psychological Horror Mirror Scene AI Prompt: Dual Personality Portrait...</span>
-        </div>
+        </nav>
 
         <!-- Prompt Header -->
-        <div class="prompt-header">
-            <h1 class="prompt-title">Psychological Horror Mirror Scene AI Prompt: Dual Personality Portrait  | Brainloom</h1>
+        <article class="prompt-header">
+            <h1 class="prompt-title">Psychological Horror Mirror Scene AI Prompt: Dual Personality Portrait | Brainloom</h1>
 
             <div class="prompt-meta">
                 <div class="meta-item category">Horror & Dark</div>
-                <div class="meta-item">Published: 2026-02-06</div>
+                <div class="meta-item">Published: <time datetime="2026-02-06">2026-02-06</time></div>
                 <div class="meta-item">Author: Brainloom</div>
             </div>
 
             <p class="prompt-description">
                 An AI image prompt that creates dark psychological horror scenes with mirror reflections showing dual personalities, using your reference photo for accurate facial matching.
             </p>
-        </div>
+        </article>
 
         <!-- Images -->
-        <div class="content-section">
-            <h2 class="section-title">
-                <i class="fas fa-images"></i>
+        <section class="content-section" aria-labelledby="images-title">
+            <h2 class="section-title" id="images-title">
+                <i class="fas fa-images" aria-hidden="true"></i>
                 Generated Images
             </h2>
             <div class="images-grid">
-                <img src="../images/197.jpg" alt="Psychological Horror Mirror Scene AI Prompt: Dual Personality Portrait - Generated image 1" class="prompt-image" 
-                     onerror="this.src='https://via.placeholder.com/600x400/007AFF/ffffff?text=Image+1'">
-                <img src="../images/197.197.webp" alt="Psychological Horror Mirror Scene AI Prompt: Dual Personality Portrait - Generated image 2" class="prompt-image" 
-                     onerror="this.src='https://via.placeholder.com/600x400/34C759/ffffff?text=Image+2'">
-
+                <img src="../images/197.jpg" 
+                     alt="Psychological horror scene showing a person in black hoodie with their reflection screaming in mirror" 
+                     class="prompt-image"
+                     width="600" height="400"
+                     loading="eager"
+                     onerror="this.src='https://via.placeholder.com/600x400/007AFF/ffffff?text=Horror+Mirror+Scene+1'">
+                <img src="../images/197.197.webp" 
+                     alt="Dark cinematic horror scene with teal tones showing dual personality in mirror reflection" 
+                     class="prompt-image"
+                     width="600" height="400"
+                     loading="lazy"
+                     onerror="this.src='https://via.placeholder.com/600x400/34C759/ffffff?text=Horror+Mirror+Scene+2'">
             </div>
-        </div>
+        </section>
 
         <!-- The Prompt -->
-        <div class="content-section">
-            <h2 class="section-title">
-                <i class="fas fa-magic"></i>
+        <section class="content-section" aria-labelledby="prompt-title">
+            <h2 class="section-title" id="prompt-title">
+                <i class="fas fa-magic" aria-hidden="true"></i>
                 The Prompt
             </h2>
             <div class="prompt-box">
-                <pre class="prompt-text">A dark psychological horror scene, ame with exact same facial and physical appearance from the uploaded image in a black hoodie standing sadly in a dim room, head down. Behind me, a mirror shows his terrifying reflection screaming and pressing hands on the glass. Foggy atmosphere, cinematic moody lighting, teal dark tones, ultra-realistic, dramatic shadows, 8K cinematic look. aspect ratio 9:16</pre>
-                <button class="copy-btn" onclick="copyPrompt()">
-                    <i class="fas fa-copy"></i> Copy Prompt
+                <pre class="prompt-text" role="textbox" aria-label="AI Prompt Text">A dark psychological horror scene, same with exact same facial and physical appearance from the uploaded image in a black hoodie standing sadly in a dim room, head down. Behind me, a mirror shows his terrifying reflection screaming and pressing hands on the glass. Foggy atmosphere, cinematic moody lighting, teal dark tones, ultra-realistic, dramatic shadows, 8K cinematic look. aspect ratio 9:16</pre>
+                <button class="copy-btn" onclick="copyPrompt()" aria-label="Copy prompt to clipboard">
+                    <i class="fas fa-copy" aria-hidden="true"></i> Copy Prompt
                 </button>
             </div>
-        </div>
+        </section>
 
         <!-- How to Use -->
-        <div class="content-section">
-            <h2 class="section-title">
-                <i class="fas fa-book"></i>
+        <section class="content-section" aria-labelledby="howto-title">
+            <h2 class="section-title" id="howto-title">
+                <i class="fas fa-book" aria-hidden="true"></i>
                 How to Use This Prompt
             </h2>
             <p>1. Upload your reference photo to your AI image generator. 2. Copy and paste the prompt text. 3. The AI will create a horror scene with your likeness. 4. Works in Midjourney, Stable Diffusion, and DALL-E 3. Adjust 'teal dark tones' if you prefer different color schemes.</p>
-        </div>
+        </section>
 
         <!-- Why This Prompt Works -->
-        <div class="content-section">
-            <h2 class="section-title">
-                <i class="fas fa-star"></i>
+        <section class="content-section" aria-labelledby="whyworks-title">
+            <h2 class="section-title" id="whyworks-title">
+                <i class="fas fa-star" aria-hidden="true"></i>
                 Why This Prompt Works
             </h2>
             <p>The prompt combines clear visual storytelling ('mirror shows terrifying reflection screaming') with specific cinematic terms ('teal dark tones', '8K cinematic look', 'dramatic shadows'). The 9:16 aspect ratio creates vertical framing ideal for horror tension, and 'exact same facial appearance' ensures character consistency.</p>
-        </div>
+        </section>
 
         <!-- Prompt Variations -->
-        <div class="content-section">
-            <h2 class="section-title">
-                <i class="fas fa-random"></i>
+        <section class="content-section" aria-labelledby="variations-title">
+            <h2 class="section-title" id="variations-title">
+                <i class="fas fa-random" aria-hidden="true"></i>
                 Prompt Variations
             </h2>
-            <ul class="simple-list">
-<li>Change to bathroom mirror with cracked glass and blood streaks</li>
-<li>Try supernatural version with ghostly transparent reflection</li>
-<li>Create supernatural version with demonic features in mirror</li>
-<li>Make it modern horror with digital screen showing alternate version</li>
-<li>Change color scheme to red and black for more intense horror</li>
-
+            <ul class="simple-list" role="list">
+                <li role="listitem">Change to bathroom mirror with cracked glass and blood streaks</li>
+                <li role="listitem">Try supernatural version with ghostly transparent reflection</li>
+                <li role="listitem">Create supernatural version with demonic features in mirror</li>
+                <li role="listitem">Make it modern horror with digital screen showing alternate version</li>
+                <li role="listitem">Change color scheme to red and black for more intense horror</li>
             </ul>
-        </div>
+        </section>
 
         <!-- Relevant Prompts -->
-        <div class="content-section">
-            <h2 class="section-title">
-                <i class="fas fa-link"></i>
+        <section class="content-section" aria-labelledby="related-title">
+            <h2 class="section-title" id="related-title">
+                <i class="fas fa-link" aria-hidden="true"></i>
                 Related Prompts
             </h2>
             <div class="relevant-prompts">
-                <a href="../prompt/cinematic-perfume-bottle-image-prompt.html" class="relevant-item">
-                    <img src="../images/152.webp" alt="Cinematic-perfume-bottle-image-prompt" class="relevant-img" 
+                <a href="../prompt/cinematic-perfume-bottle-image-prompt.html" class="relevant-item" aria-label="Cinematic perfume bottle image prompt">
+                    <img src="../images/152.webp" 
+                         alt="Cinematic perfume bottle" 
+                         class="relevant-img"
+                         width="60" height="60"
+                         loading="lazy"
                          onerror="this.src='https://via.placeholder.com/60x60/007AFF/ffffff?text=P'">
                     <span>Cinematic-perfume-bottle-image-prompt</span>
                 </a>
-                <a href="../prompt/Cake_Disguised_as_an_Object_with_a_Bite_Mark.html" class="relevant-item">
-                    <img src="../images/53.jpeg" alt="Cake Disguised As An Object With A Bite Mark" class="relevant-img" 
+                <a href="../prompt/Cake_Disguised_as_an_Object_with_a_Bite_Mark.html" class="relevant-item" aria-label="Cake disguised as an object with a bite mark">
+                    <img src="../images/53.jpeg" 
+                         alt="Cake disguised as object with bite mark" 
+                         class="relevant-img"
+                         width="60" height="60"
+                         loading="lazy"
                          onerror="this.src='https://via.placeholder.com/60x60/007AFF/ffffff?text=P'">
                     <span>Cake Disguised As An Object With A Bite Mark</span>
                 </a>
-                <a href="../prompt/minimalist-cafe-portrait-ai-prompt-stylish-urban-photography.html" class="relevant-item">
-                    <img src="../images/195.jpg" alt="Minimalist-cafe-portrait-ai-prompt-stylish-urban-photography" class="relevant-img" 
+                <a href="../prompt/minimalist-cafe-portrait-ai-prompt-stylish-urban-photography.html" class="relevant-item" aria-label="Minimalist cafe portrait AI prompt">
+                    <img src="../images/195.jpg" 
+                         alt="Minimalist cafe portrait" 
+                         class="relevant-img"
+                         width="60" height="60"
+                         loading="lazy"
                          onerror="this.src='https://via.placeholder.com/60x60/007AFF/ffffff?text=P'">
                     <span>Minimalist-cafe-portrait-ai-prompt-stylish-urban-photography</span>
                 </a>
-
             </div>
-        </div>
+        </section>
 
         <!-- FAQ -->
-        <div class="content-section">
-            <h2 class="section-title">
-                <i class="fas fa-question-circle"></i>
+        <section class="content-section" aria-labelledby="faq-title">
+            <h2 class="section-title" id="faq-title">
+                <i class="fas fa-question-circle" aria-hidden="true"></i>
                 Frequently Asked Questions
             </h2>
-            <ul class="simple-list">
-                <li>
+            <ul class="simple-list" role="list">
+                <li role="listitem">
                     <div class="faq-question">Can I use this without a reference photo?</div>
                     <div class="faq-answer">Yes, replace 'exact same facial appearance from uploaded image' with a description like 'young man' or 'woman with long hair'.</div>
                 </li>
-                <li>
+                <li role="listitem">
                     <div class="faq-question">What AI tool works best for horror scenes?</div>
                     <div class="faq-answer">Midjourney excels at cinematic horror aesthetics, while Stable Diffusion offers more control over dark tones and details.</div>
                 </li>
-                <li>
+                <li role="listitem">
                     <div class="faq-question">How do I make the reflection more terrifying?</div>
                     <div class="faq-answer">Add descriptors like 'demonic eyes', 'distorted facial features', or 'supernatural glow' to the mirror reflection part.</div>
                 </li>
-
             </ul>
-        </div>
+        </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
         <div class="footer-content">
             <p>© 2025 Brainloom. All rights reserved.</p>
             <p>Curated collection of AI-generated prompts and creative inspiration.</p>
@@ -616,20 +688,113 @@
     </footer>
 
     <script>
+        // Copy prompt function
         function copyPrompt() {
             const promptText = document.querySelector('.prompt-text').textContent;
-            navigator.clipboard.writeText(promptText).then(() => {
-                const btn = document.querySelector('.copy-btn');
-                const originalText = btn.innerHTML;
-                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                btn.style.background = '#34C759';
-
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.background = '#007AFF';
-                }, 2000);
-            });
+            
+            // Modern clipboard API with fallback
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(promptText).then(() => {
+                    showCopyFeedback();
+                }).catch(err => {
+                    console.error('Clipboard API failed:', err);
+                    useFallbackCopy(promptText);
+                });
+            } else {
+                useFallbackCopy(promptText);
+            }
         }
+
+        function useFallbackCopy(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                showCopyFeedback();
+            } catch (err) {
+                console.error('Fallback copy failed:', err);
+                alert('Failed to copy prompt. Please select and copy manually.');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        function showCopyFeedback() {
+            const btn = document.querySelector('.copy-btn');
+            const originalHTML = btn.innerHTML;
+            const originalText = btn.textContent;
+            const originalAriaLabel = btn.getAttribute('aria-label');
+            
+            btn.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i> Copied!';
+            btn.style.background = '#34C759';
+            btn.setAttribute('aria-label', 'Prompt copied to clipboard');
+            
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.style.background = '#007AFF';
+                btn.setAttribute('aria-label', originalAriaLabel || 'Copy prompt to clipboard');
+            }, 2000);
+        }
+
+        // Lazy load images when they enter viewport
+        document.addEventListener('DOMContentLoaded', function() {
+            if ('IntersectionObserver' in window) {
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            // Ensure image loads if intersection observer triggers
+                            if (img.complete === false || img.naturalHeight === 0) {
+                                img.src = img.src; // Trigger load
+                            }
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                }, {
+                    rootMargin: '50px 0px', // Start loading 50px before image enters viewport
+                    threshold: 0.01
+                });
+
+                lazyImages.forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+            
+            // Load Font Awesome CSS if preload didn't work
+            setTimeout(function() {
+                const testIcon = document.createElement('i');
+                testIcon.className = 'fa-solid fa-font-awesome';
+                testIcon.style.fontSize = '0';
+                document.body.appendChild(testIcon);
+                const computedStyle = window.getComputedStyle(testIcon);
+                const fontLoaded = computedStyle.fontFamily.includes('Font Awesome');
+                document.body.removeChild(testIcon);
+                
+                if (!fontLoaded) {
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+                    document.head.appendChild(link);
+                }
+            }, 1000);
+        });
+        
+        // Make sure Font Awesome loads even with slow connections
+        window.addEventListener('load', function() {
+            const faLink = document.querySelector('link[href*="font-awesome"]');
+            if (faLink && faLink.media === 'print') {
+                faLink.media = 'all';
+            }
+        });
     </script>
 </body>
 </html>
