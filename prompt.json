@@ -1391,5 +1391,40 @@
   "keywords": "speaker portrait, podium presentation, stage lighting, microphones, event photography, blue background, exact facial match, professional speaker, telephoto lens, 9:16 vertical",
   "image": "200.jpg",
   "file_path": "/prompt/professional-speaker-ai-prompt-stage-presentation-portrait.html"
+  },
+  {
+  "id": 201,
+  "description": "AI prompt creates realistic cinematic prison mugshots using your reference photo. Features arrest placard with text, moody blue lighting, and disheveled appearance. Perfect for character portraits in 9:16 vertical format.",
+  "keywords": "prison mugshot, cinematic arrest photo, mugshot from photo, disheveled prisoner, arrest placard, blue lighting, character portrait, 9:16 vertical, AI face reference",
+  "image": "201.jpg",
+  "file_path": "/prompt/prison-mugshot-ai-prompt-cinematic-arrest-photos.html"
+  },
+  {
+  "id": 202,
+  "description": "AI prompt transforms your mirror selfie into grunge scrapbook art. Adds chalk doodles, film grain, and vignette effects while keeping your face unchanged. Creates dreamy aesthetic artwork in 9:16 format.",
+  "keywords": "grunge mirror selfie, scrapbook style, chalk doodles, film grain, vignette effect, artistic selfie, photo edit, dreamy aesthetic, 9:16 vertical",
+  "image": "202.webp",
+  "file_path": "/prompt/grunge-mirror-selfie-ai-prompt-scrapbook-style-chalk-doodles.html"
+  },
+  {
+  "id": 203,
+  "description": "AI prompt creates professional editorial fashion portraits with top-down perspective using your reference photo. Features seamless gradient background, circular spotlight lighting, and wide-angle lens effect in 9:16 vertical format.",
+  "keywords": "editorial portrait, top-down fashion, studio lighting, gradient background, wide-angle lens, circular spotlight, fashion photography, exact facial match, 9:16 vertical",
+  "image": "203.jpg",
+  "file_path": "/prompt/editorial-portrait-ai-prompt-top-down-fashion-photography.html"
+  },
+  {
+  "id": 204,
+  "description": "AI prompt creates three vertical split-screen photos with identical faces using 1990s digital camera style, harsh flash, red eye effect, and Y2K aesthetic.",
+  "keywords": "90s camera prompt, split screen AI photos, consistent face generation, digital camera aesthetic, vintage photo AI",
+  "image": "204.jpg",
+  "file_path": "/prompt/90s-digital-camera-split-screen-prompt-consistent-faces.html"
+  },
+  {
+  "id": 205,
+  "description": "AI prompt generates augmented reality music visualization with Spotify cards orbiting around you while sleeping, using your exact face reference with accurate skin tones.",
+  "keywords": "Spotify AR prompt, music visualization AI, face reference AI, augmented reality bedroom, floating UI cards",
+  "image": "205.jpg",
+  "file_path": "/prompt/spotify-ar-music-visualization-ai-prompt-face-reference.html"
   }
 ]
