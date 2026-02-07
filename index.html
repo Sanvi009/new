@@ -66,6 +66,13 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: #fafafa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-wrapper {
+            flex: 1;
         }
 
         .header {
@@ -377,6 +384,116 @@
             margin: 20px 0;
         }
 
+        /* Footer Styles */
+        .footer {
+            background: #f8f9fa;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 32px 0 24px;
+            margin-top: 40px;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+
+        .footer-section {
+            margin-bottom: 16px;
+        }
+
+        .footer-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #555;
+            margin-bottom: 12px;
+            opacity: 0.7;
+        }
+
+        .footer-link-list {
+            list-style: none;
+        }
+
+        .footer-link-item {
+            margin-bottom: 8px;
+        }
+
+        .footer-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-link:hover {
+            color: #007AFF;
+            opacity: 1;
+        }
+
+        .footer-link i {
+            font-size: 10px;
+            opacity: 0.6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copyright {
+            font-size: 11px;
+            color: #888;
+            opacity: 0.6;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social-link {
+            color: #777;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.6;
+            transition: all 0.2s ease;
+        }
+
+        .footer-social-link:hover {
+            color: #007AFF;
+            opacity: 1;
+        }
+
+        .footer-disclaimer {
+            font-size: 10px;
+            color: #999;
+            opacity: 0.5;
+            margin-top: 8px;
+            line-height: 1.4;
+            max-width: 800px;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .header-content {
@@ -400,6 +517,15 @@
             .prompts-grid {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 16px;
+            }
+
+            .footer-content {
+                padding: 0 20px;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
             }
         }
 
@@ -430,6 +556,29 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 14px;
             }
+
+            .footer {
+                padding: 24px 0 20px;
+            }
+
+            .footer-content {
+                padding: 0 20px;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -458,6 +607,14 @@
                 left: 16px;
                 right: 16px;
             }
+
+            .footer {
+                padding: 20px 0 16px;
+            }
+
+            .footer-content {
+                padding: 0 16px;
+            }
         }
 
         @media (max-width: 360px) {
@@ -465,85 +622,169 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
             }
+
+            .footer-link {
+                font-size: 11px;
+            }
+
+            .footer-copyright {
+                font-size: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <a href="/" class="logo">
-                <i class="fas fa-brain"></i>
-                <span>Brainloom</span>
-            </a>
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>Brainloom</span>
+                </a>
 
-            <!-- Search Bar -->
-            <div class="search-container">
-                <input type="text" 
-                       class="search-box" 
-                       placeholder="Search prompts by description, title, or keywords..."
-                       id="searchInput">
-                <div class="search-icon" id="searchButton">
-                    <i class="fas fa-search"></i>
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" 
+                           class="search-box" 
+                           placeholder="Search prompts by description, title, or keywords..."
+                           id="searchInput">
+                    <div class="search-icon" id="searchButton">
+                        <i class="fas fa-search"></i>
+                    </div>
+
+                    <!-- Search Suggestions Dropdown -->
+                    <div class="search-suggestions" id="searchSuggestions">
+                        <!-- Suggestions will be added here dynamically -->
+                    </div>
                 </div>
 
-                <!-- Search Suggestions Dropdown -->
-                <div class="search-suggestions" id="searchSuggestions">
-                    <!-- Suggestions will be added here dynamically -->
+                <nav class="nav">
+                    <a href="policy/index.html" class="nav-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Policy</span>
+                    </a>
+                    <a href="about/index.html" class="nav-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="contact/index.html" class="nav-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Search Results Info -->
+            <div id="searchInfo" class="search-info">
+                <div class="search-results-text">
+                    Search results for: <span class="search-query" id="searchQuery"></span>
+                </div>
+                <div class="clear-search" id="clearSearch">
+                    <i class="fas fa-times"></i> Clear search and show all prompts
                 </div>
             </div>
 
-            <nav class="nav">
-                <a href="policy/index.html" class="nav-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Policy</span>
-                </a>
-                <a href="about/index.html" class="nav-item">
-                    <i class="fas fa-info-circle"></i>
-                    <span>About</span>
-                </a>
-                <a href="contact/index.html" class="nav-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="main-content">
-        <!-- Search Results Info -->
-        <div id="searchInfo" class="search-info">
-            <div class="search-results-text">
-                Search results for: <span class="search-query" id="searchQuery"></span>
+            <!-- Skeleton Loading -->
+            <div id="skeletonLoading" class="skeleton-grid">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
             </div>
-            <div class="clear-search" id="clearSearch">
-                <i class="fas fa-times"></i> Clear search and show all prompts
+
+            <!-- Error Message -->
+            <div id="error" class="error" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i> Error loading prompts. Please try again later.
+            </div>
+
+            <!-- Prompts Grid -->
+            <div id="promptsContainer" class="prompts-grid" style="display: none;">
+                <!-- Cards will be inserted here by JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links-grid">
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Quick Links</h3>
+                    <ul class="footer-link-list">
+                        <li class="footer-link-item">
+                            <a href="/" class="footer-link">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer-link-item">
+                            <a href="links.html" class="footer-link">
+                                <i class="fas fa-link"></i>
+                                Directory
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Legal</h3>
+                    <ul class="footer-link-list">
+                        <li class="footer-link-item">
+                            <a href="policy/index.html" class="footer-link">
+                                <i class="fas fa-shield-alt"></i>
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">About</h3>
+                    <ul class="footer-link-list">
+                        <li class="footer-link-item">
+                            <a href="about/index.html" class="footer-link">
+                                <i class="fas fa-info-circle"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li class="footer-link-item">
+                            <a href="contact/index.html" class="footer-link">
+                                <i class="fas fa-envelope"></i>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2026 Brainloom. All rights reserved.
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61556686528782" class="footer-social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_brainloom.online/" class="footer-social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                Brainloom is an AI prompt gallery showcasing creative prompts for AI tools.
             </div>
         </div>
-
-        <!-- Skeleton Loading -->
-        <div id="skeletonLoading" class="skeleton-grid">
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-            <div class="skeleton-card"></div>
-        </div>
-
-        <!-- Error Message -->
-        <div id="error" class="error" style="display: none;">
-            <i class="fas fa-exclamation-triangle"></i> Error loading prompts. Please try again later.
-        </div>
-
-        <!-- Prompts Grid -->
-        <div id="promptsContainer" class="prompts-grid" style="display: none;">
-            <!-- Cards will be inserted here by JavaScript -->
-        </div>
-    </main>
+    </footer>
 
     <script>
         // Global variables
