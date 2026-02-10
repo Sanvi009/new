@@ -1426,5 +1426,26 @@
   "keywords": "Spotify AR prompt, music visualization AI, face reference AI, augmented reality bedroom, floating UI cards",
   "image": "205.jpg",
   "file_path": "/prompt/spotify-ar-music-visualization-ai-prompt-face-reference.html"
+  },
+  {
+"id": 206,
+"description": "An AI prompt for creating ultra-realistic, moody cinematic portraits from a reference photo. Generates a fashion-editorial style headshot with dramatic lighting, shallow depth of field, and preserved skin details.",
+"keywords": "cinematic portrait, hyperrealistic, AI photo, fashion editorial, headshot, dramatic lighting, AI prompt, Stable Diffusion, Midjourney, from reference image",
+"image": "206.jpg",
+"file_path": "/prompt/moody-cinematic-portrait-ai-prompt.html"
+  },
+  {
+"id": 207,
+"description": "An AI prompt to generate a photorealistic, low-angle editorial portrait against a vibrant orange background. Creates a confident, authoritative look with dramatic studio rim lighting and sharp detail, using your photo as reference.",
+"keywords": "low angle portrait, orange background, AI portrait, editorial headshot, studio lighting, rim light, photorealistic, from my photo, AI prompt, professional portrait",
+"image": "207.jpg",
+"file_path": "/prompt/low-angle-portrait-ai-prompt-orange-background.html"
+  },
+  {
+"id": 208,
+"description": "An AI prompt for creating a dreamy, artistic portrait with intentional motion blur and a teal color grade. Uses your photo to generate a melancholic, hoodie-clad portrait with film grain, light leaks, and an analog film look.",
+"keywords": "motion blur portrait, dreamy AI portrait, teal color grade, hoodie photo, melancholic, film grain, light leak, artistic blur, analog style, cinematic portrait",
+"image": "208.jpg",
+"file_path": "/prompt/dreamy-blurred-portrait-ai-prompt-motion-effect.html"
   }
 ]
