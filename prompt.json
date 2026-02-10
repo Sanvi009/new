@@ -1447,5 +1447,40 @@
 "keywords": "motion blur portrait, dreamy AI portrait, teal color grade, hoodie photo, melancholic, film grain, light leak, artistic blur, analog style, cinematic portrait",
 "image": "208.jpg",
 "file_path": "/prompt/dreamy-blurred-portrait-ai-prompt-motion-effect.html"
+  },
+  {
+"id": 209,
+"description": "An AI prompt for a hyperrealistic, full-body studio portrait featuring atmospheric smoke and warm amber lighting. Transforms your photo into a cinematic, fashion-editorial scene with a seated pose and dramatic light rays.",
+"keywords": "smoke portrait, amber lighting, cinematic studio, full body portrait, hyperrealistic, volumetric light, fashion editorial, AI photo, atmospheric, seated pose, beanie",
+"image": "209.webp",
+"file_path": "/prompt/amber-smoke-studio-portrait-ai-prompt.html"
+  },
+  {
+"id": 210,
+"description": "An AI prompt for a dramatic black and white portrait, shot from behind in profile with chiaroscuro lighting. Creates a mysterious, powerful image of you in a tailored suit, using your photo for facial accuracy.",
+"keywords": "black and white portrait, profile from behind, chiaroscuro lighting, suit portrait, dramatic shadows, mysterious, AI photo, tailored suit, cinematic, professional headshot",
+"image": "210.webp",
+"file_path": "/prompt/black-white-profile-portrait-ai-prompt.html"
+  },
+  {
+"id": 211,
+"description": "An AI prompt for an ultra-realistic, high top-down angle portrait under a studio spotlight. Generates a fashion-editorial image with a teal shirt, calm expression, and a dramatic gradient fade to a black background.",
+"keywords": "high angle portrait, top down, spotlight, minimalist studio, teal shirt, fashion editorial, ultra realistic, AI portrait, gradient background, professional photo",
+"image": "211.webp",
+"file_path": "/prompt/high-angle-spotlight-portrait-ai-prompt.html"
+  },
+  {
+"id": 212,
+"description": "An AI prompt for a conceptual side-profile portrait with a dramatic orange solar halo light behind the head. Creates a hyperrealistic, fine-art image with rim lighting, minimalist black clothing, and extreme detail.",
+"keywords": "side profile portrait, halo light, solar halo, backlight, rim light, minimalist, black clothing, conceptual photography, hyperrealistic, fine art, AI portrait",
+"image": "212.jpg",
+"file_path": "/prompt/side-profile-halo-portrait-ai-prompt.html"
+  },
+  {
+"id": 213,
+"description": "An AI prompt for a professional, medium-shot portrait holding a silver MacBook and checking a wristwatch. Features a black turtleneck, glasses, and dramatic side lighting against a dark background.",
+"keywords": "tech portrait, MacBook, black turtleneck, glasses, wristwatch, professional headshot, dramatic side lighting, business portrait, AI photo, LinkedIn profile picture",
+"image": "213.jpg",
+"file_path": "/prompt/dramatic-tech-portrait-ai-prompt-laptop.html"
   }
 ]
