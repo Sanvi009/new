@@ -1482,5 +1482,26 @@
 "keywords": "tech portrait, MacBook, black turtleneck, glasses, wristwatch, professional headshot, dramatic side lighting, business portrait, AI photo, LinkedIn profile picture",
 "image": "213.jpg",
 "file_path": "/prompt/dramatic-tech-portrait-ai-prompt-laptop.html"
+  },
+  {
+  "id": 214,
+  "description": "AI prompt to create exaggerated 3D caricature portraits from photos. Preserves facial likeness while transforming into stylized character art with fashion accessories, clean 3D rendering, and studio lighting.",
+  "keywords": "3D caricature AI, photo to 3D character, stylized portrait prompt, exaggerated character design, AI portrait tutorial, caricature generator",
+  "image": "214.jpg",
+  "file_path": "/prompt/3d-caricature-portrait-ai-prompt-turn-photos-into-stylized-characters.html"
+  },
+  {
+  "id": 215,
+  "description": "AI prompt to convert portrait photos into hyper-detailed origami art. Creates geometric paper folds with realistic texture, matching colors from original photos, clean studio presentation.",
+  "keywords": "origami AI prompt, photo to paper art, hyper-realistic origami, paper portrait generator, geometric fold AI, digital origami tutorial",
+  "image": "215.webp",
+  "file_path": "/prompt/origami-portrait-ai-prompt-turn-photos-into-paper-art-characters.html"
+  },
+  {
+  "id": 215,
+  "description": "AI prompt for creating professional full-body studio portraits that match reference faces exactly. Includes business attire, relaxed poses, studio lighting, and polygonal vector art elements for branding.",
+  "keywords": "studio portrait AI, professional headshot generator, face match portrait, business photo prompt, vector art portrait, corporate branding AI",
+  "image": "216.jpg",
+  "file_path": "/prompt/professional-studio-portrait-ai-prompt-with-vector-art-elements.html"
   }
 ]
