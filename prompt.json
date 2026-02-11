@@ -1503,5 +1503,33 @@
   "keywords": "studio portrait AI, professional headshot generator, face match portrait, business photo prompt, vector art portrait, corporate branding AI",
   "image": "216.jpg",
   "file_path": "/prompt/professional-studio-portrait-ai-prompt-with-vector-art-elements.html"
+  },
+  {
+  "id": 216,
+  "description": "AI prompt for cinematic film noir portraits with dramatic lighting, razor-sharp contrast, and heavy negative space. Creates moody black and white studio photography with exact face matching from reference photos.",
+  "keywords": "film noir AI prompt, cinematic black and white portrait, dramatic lighting AI, noir mood generator, studio photography prompt, moody headshot AI",
+  "image": "216.webp",
+  "file_path": "/prompt/film-noir-portrait-ai-prompt-cinematic-black-and-white-studio-photos.html"
+  },
+  {
+"id": 217,
+"description": "Stylized black-and-white poster portrait that keeps your exact face, hair, and sunglasses. Features bold red outlines, teal vector hair, a thinking pose, and a red rectangle with 'BRAINLOOM' text. Urban editorial digital art, 9:16 aspect ratio.",
+"keywords": "modern graphic design portrait prompt, stylized AI poster, keep face and hair AI, red outline portrait, teal vector hair, editorial digital art, thinking gesture portrait, BRAINLOOM poster, personal branding AI image, Instagram poster prompt, 9:16 AI portrait, black and white with color accent",
+"image": "217.jpg",
+"file_path": "/prompt/modern-graphic-design-portrait-poster-red-teal-outlines.html"
+  },
+  {
+"id": 218,
+"description": "Ultra-realistic 8K high-fashion studio portrait preserving your exact face, olive skin, and athletic build. Waist-up, charcoal pinstripe suit, burgundy tie, gold tie bar, neck and finger tattoos, toothpick in hand. Cinematic lighting, deep burgundy background, modern mafia aesthetic, 9:16.",
+"keywords": "ultra-realistic high-fashion portrait, exact face AI, mafia aesthetic, charcoal pinstripe suit, burgundy tie gold tie bar, neck tattoo AI, 85mm portrait lens, cinematic lighting studio, luxury fashion editorial, olive skin male, 8K photorealistic, 9:16 vertical portrait, premium studio portrait prompt",
+"image": "218.webp",
+"file_path": "/prompt/ultra-realistic-high-fashion-studio-portrait-mafia-aesthetic.html"
+  },
+  {
+"id": 219,
+"description": "Luxury fashion editorial triptych preserving your exact face with zero alteration. Three vertical frames: hand near mouth, head tilt with hand on forehead, ring near lips. Black swept-back hair, white shirt, black vest, hand tattoo, statement ring. Soft studio lighting, muted grey background, cinematic realism, 9:16.",
+"keywords": "high-fashion editorial triptych, identity lock AI, same face three poses, facial preservation prompt, no face swap, black vest white shirt, hand tattoo statement ring, vertical stacked portrait, luxury fashion magazine, cinematic realism, 9:16 editorial portrait, professional headshot AI",
+"image": "219.jpg",
+"file_path": "/prompt/high-fashion-editorial-portrait-triptych-identity-lock.html"
   }
 ]
