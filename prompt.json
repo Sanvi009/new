@@ -1531,5 +1531,34 @@
 "keywords": "high-fashion editorial triptych, identity lock AI, same face three poses, facial preservation prompt, no face swap, black vest white shirt, hand tattoo statement ring, vertical stacked portrait, luxury fashion magazine, cinematic realism, 9:16 editorial portrait, professional headshot AI",
 "image": "219.jpg",
 "file_path": "/prompt/high-fashion-editorial-portrait-triptych-identity-lock.html"
+  },
+  {
+"id": 221,
+"description": "Cinematic portrait prompt that preserves face identity while adding shattered glass foreground. Each glass shard refracts the subject's own face. Top-down angle, black clothing, red background, 9:16. Hyperrealistic editorial fashion style.",
+"keywords": "shattered glass portrait, preserve identity AI, cinematic portrait prompt, editorial fashion AI, top down camera angle, glass refraction portrait, psychological drama portrait, 9:16 portrait prompt, red background black clothing, hyperrealistic skin texture",
+"image": "221.jpg",
+"file_path": "/prompt/shattered-glass-cinematic-portrait-prompt.html"
+  },
+  {
+"id": 222,
+"description": "Collage portrait prompt that keeps your face identical. Stand against black-and-gray collage with police car, flying Pegasus, perfume bottle, newspaper text, record label. Hand on face, black shirt, beige pants, soft white glow. 9:16 dark grunge.",
+"keywords": "dark grunge collage, police car pegasus perfume collage, hand on face portrait prompt, black and gray collage background, soft white outline glow, 9:16 collage AI, identity preservation prompt, record label newspaper art, mixed media portrait",
+"image": "222.jpg",
+"file_path": "/prompt/dark-grunge-collage-portrait-prompt.html"
+  },
+  {
+"id": 224,
+"description": "Cinematic portrait prompt with exact identity preservation. You stand sharp and still while a motion-blurred crowd moves around you. Warm pastel colors, modern lifestyle photography, optimistic editorial advertising look. 9:16.",
+"keywords": "motion blur crowd, sharp subject blurred background, pastel brand palette, editorial advertising portrait, warm clean lighting, optimistic mood AI, lifestyle photography prompt, 9:16 cinematic, identity preservation crowd",
+"image": "224.jpg",
+"file_path": "/prompt/motion-blur-crowd-portrait-prompt.html"
+  },
+  {
+"id": 225,
+"description": "Black and white ink illustration portrait in gritty action movie poster style. Extreme close-up, only right half of face visible. Cross-hatching, stippling, vintage engraving. Off-white paper with ink splatter. Bold 'YUSUF' typography left side. 9:16.",
+"keywords": "ink illustration portrait, cross hatching stippling, half face composition, action movie poster style, YUSUF typography, pen and ink engraving, vintage engraving AI, textured paper background, 9:16 black and white, identity preservation illustration",
+"image": "225.jpg",
+"file_path": "/prompt/action-movie-ink-portrait-half-face-prompt.html"
   }
+
 ]
