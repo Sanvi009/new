@@ -1566,6 +1566,34 @@
 "keywords": "ink illustration portrait, cross hatching stippling, half face composition, action movie poster style, YUSUF typography, pen and ink engraving, vintage engraving AI, textured paper background, 9:16 black and white, identity preservation illustration",
 "image": "225.jpg",
 "file_path": "/prompt/action-movie-ink-portrait-half-face-prompt.html"
-  }
+  },
+  {
+"id": 226,
+"description": "Ultra-realistic studio portrait against bold red background. Head turned left, eyes looking upward. Dramatic hard light with sharp horizontal shadow band across middle of face. Soft curly hair silhouette, dark shirt in shadow. 9:16 moody cinematic contrast.",
+"keywords": "hard light portrait, red background studio, shadow band across face, eyes looking upward, head turned left, dramatic hard light, soft curly hair silhouette, cinematic contrast, 9:16 portrait, identity preservation studio",
+"image": "226.jpg",
+"file_path": "/prompt/hard-light-portrait-red-background-shadow-band-prompt.html"
+},
+{
+"id": 227,
+"description": "Ultra-realistic cinematic portrait with dramatic blue and magenta split lighting. Subject in black turtleneck and dark jacket against deep blue gradient background. Colors reflect clearly on face. High-end editorial, 9:16.",
+"keywords": "blue magenta split lighting, colored gel portrait, black turtleneck dark jacket, deep blue gradient background, dramatic color contrast face, high-end editorial lighting, cinematic portrait 9:16, identity preservation colored light",
+"image": "227.jpg",
+"file_path": "/prompt/blue-magenta-split-lighting-portrait-prompt.html"
+},
+{
+"id": 228,
+"description": "Gritty street-art mixed media portrait from your photo. Black-and-white ink sketch with cross-hatching, rough pencil lines. Translucent black sunglasses color accent. Vintage newspaper collage background, vibrant orange and blue paint splashes, ink drips, paper texture. 9:16.",
+"keywords": "street art portrait, mixed media editorial, ink sketch cross hatching, translucent black sunglasses, vintage newspaper collage, orange blue paint splashes, ink splatters drips, gritty urban aesthetic, no realism illustration, 9:16 poster",
+"image": "228.jpg",
+"file_path": "/prompt/street-art-mixed-media-portrait-sunglasses-prompt.html"
+},
+{
+"id": 229,
+"description": "Cinematic full-body urban portrait in empty ruined city street. Dense fog, desaturated teal/green-gray. Long dark overcoat, scarf, hands in pockets. Serious distant expression, messy wavy hair. Tall buildings corridor. 9:16.",
+"keywords": "ruined city portrait, empty street fog, long dark overcoat hands in pockets, desaturated teal green gray, dense fog haze, tall buildings corridor, cinematic full body, cold moody atmosphere, identity preservation urban",
+"image": "229.jpg",
+"file_path": "/prompt/ruined-city-fog-portrait-long-overcoat-prompt.html"
+}
 
 ]
