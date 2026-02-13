@@ -1629,6 +1629,34 @@
 "keywords": "fashion portrait AI, ghost duplicate effect, time-slice motion, luxury black suit, round sunglasses, thin black chain, hands in pockets, muted teal background, blurred duplicates, symmetric composition, hyper-realistic, cinematic studio lighting, shallow DOF, 85mm look, ultra-sharp eyes, Midjourney fashion effect, Stable Diffusion portrait",
 "image": "234.webp",
 "file_path": "/prompt/luxury-fashion-portrait-ghost-duplicate-effect-9-16.html"
+},
+{
+"id": 235,
+"description": "Generate a gritty black-and-white cinematic portrait where the subject turns away and looks back over their shoulder. This prompt preserves your exact facial identity from an uploaded image, using strong rim lighting and a dark background for a noir mood. Perfect for dramatic, moody AI portraits.",
+"keywords": "noir portrait, over the shoulder look, black and white portrait, cinematic AI prompt, preserve face from reference, dramatic rim lighting, gritty portrait, turned away pose, 9:16 aspect ratio, AI portrait generation, dark moody portrait, intense look back",
+"image": "235.jpg",
+"file_path": "/prompt/gritty-noir-portrait-turned-away-look-over-shoulder.html"
+},
+{
+"id": 236,
+"description": "Create a dramatic editorial portrait where you stand completely still wearing headphones while blurred figures move around you. This AI prompt preserves your exact facial identity from an uploaded image and captures urban rhythm, modern realism, and the concept of transformation through stillness in 9:16 vertical format.",
+"keywords": "stillness in motion, urban crowd portrait, blurred motion photography, headphones portrait, editorial realism AI, standing still in crowd, motion blur background, preserve face identity, street photography prompt, 9:16 portrait, hoodie portrait, urban rhythm, modern editorial, transformation concept, Midjourney raw",
+"image": "236.webp",
+"file_path": "/prompt/stillness-in-motion-urban-crowd-portrait-headphones.html"
+},
+{
+"id": 237,
+"description": "Generate a cinematic low-angle portrait sitting on a vintage white sedan race car. Preserve your exact facial identity from an uploaded image, featuring wind-blown hair, sharp side profile, and black Converse Chuck 70 High sneakers. Racing decals, teal-grey overcast sky, streetwear aesthetic, automotive lifestyle photography with soft natural lighting and film grain. 9:16 vertical format.",
+"keywords": "vintage race car portrait, automotive lifestyle photography, low angle car shot, side profile portrait, Converse Chuck 70 High, black Converse sneakers, white sedan race car, racing decals stickers, teal grey sky, streetwear car photo, cinematic car portrait, preserve face identity, film grain, soft natural lighting, master realism, 9:16 vertical, vintage car roof, wind blown hair, automotive AI prompt",
+"image": "237.jpg",
+"file_path": "/prompt/vintage-race-car-portrait-low-angle-side-profile-converse.html"
+},
+{
+"id": 238,
+"description": "Generate a cinematic blue hour close-up side profile portrait with eyes closed. Preserve exact facial identity from an uploaded image. Features cool deep blue lighting with subtle warm accents on the face, visible freckles and natural skin texture, soft specular highlights, minimal blue background, shallow depth of field, and realistic photography style in 9:16 vertical format.",
+"keywords": "blue hour portrait, side profile close up, eyes closed portrait, cinematic blue lighting, cool deep blue, warm key light, visible freckles, natural skin texture, shallow depth of field, minimal blue background, calm introspective, realistic photography, preserve face identity, soft specular highlights, gentle falloff, 9:16 vertical, AI portrait prompt, cinematic photography, freckles visible, introspective mood",
+"image": "238.jpg",
+"file_path": "/prompt/blue-hour-side-profile-close-up-portrait-eyes-closed.html"
 }
 
 ]
