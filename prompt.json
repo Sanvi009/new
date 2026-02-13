@@ -1594,6 +1594,41 @@
 "keywords": "ruined city portrait, empty street fog, long dark overcoat hands in pockets, desaturated teal green gray, dense fog haze, tall buildings corridor, cinematic full body, cold moody atmosphere, identity preservation urban",
 "image": "229.jpg",
 "file_path": "/prompt/ruined-city-fog-portrait-long-overcoat-prompt.html"
+},
+{
+"id": 230,
+"description": "Turn your photo into an 8K digital portrait with black-framed glasses and vibrant red, orange, yellow, green, blue, and purple light splashes on a grayscale face. 9:16 vertical format for mobile wallpapers or social avatars.",
+"keywords": "AI portrait prompt, digital illustration of me, photo to illustration, grayscale color splash, graphic novel portrait, cinematic lighting AI, 9:16 portrait, custom avatar prompt, multi-color light effect, black framed glasses AI art, Midjourney headshot, Stable Diffusion self portrait, DALL-E reference photo",
+"image": "230.webp",
+"file_path": "/prompt/digital-portrait-me-color-light-splashes-9-16.html"
+},
+{
+"id": 231,
+"description": "Transform your photo into a heroic comic book portrait. Reflective aviator sunglasses show a golden cityscape. Low-angle perspective, cross-hatching, inked outlines, and a gritty teal/orange/red painterly background. 4K resolution, 9:16 vertical format.",
+"keywords": "comic book portrait AI, aviator sunglasses reflection, heroic low angle prompt, graphic novel self portrait, cross hatching AI, inked linework, cinematic comic art, 4K comic illustration, teal orange red background, Midjourney comic style, Stable Diffusion graphic novel, DALL-E realistic comic, cityscape reflection sunglasses, modern comic art, 9:16 vertical portrait",
+"image": "231.webp",
+"file_path": "/prompt/heroic-comic-portrait-aviator-sunglasses-9-16.html"
+},
+{
+"id": 232,
+"description": "Create an editorial street fashion portrait of yourself. Vintage dark sunglasses, relaxed sitting pose against a teal wooden storefront. Background of old newspapers with blurred text. Strong late afternoon sunlight with diagonal shadows. 9:16 vertical, cinematic high contrast, warm skin tones.",
+"keywords": "street fashion portrait AI, editorial style prompt, vintage sunglasses, teal door background, newspaper covered wall, late afternoon sunlight, hard diagonal shadows, high contrast cinematic, warm skin tones, 9:16 vertical portrait, relaxed sitting pose, storefront backdrop, blurred text background, Midjourney fashion, Stable Diffusion editorial, DALL-E street style",
+"image": "232.jpg",
+"file_path": "/prompt/editorial-street-fashion-portrait-vintage-sunglasses-9-16.html"
+},
+{
+"id": 233,
+"description": "Ultra-realistic cinematic side profile portrait. Transparent frame glasses, black t-shirt and overcoat, looking left. Deep red studio background with dramatic red rim light and soft warm key light. 85mm lens, shallow depth, sharp skin texture, 8K photorealistic. 9:16 vertical.",
+"keywords": "cinematic portrait AI, side profile portrait, red background headshot, transparent glasses, black overcoat, 85mm lens, shallow depth of field, red rim light, high contrast shadows, 8k photorealistic, sharp skin texture, serious expression, studio portrait, Midjourney headshot, Stable Diffusion photorealism, DALL-E ultra-realistic",
+"image": "233.jpg",
+"file_path": "/prompt/cinematic-portrait-side-profile-red-background-9-16.html"
+},
+{
+"id": 234,
+"description": "Hyper-realistic cinematic fashion portrait in luxury all-black suit, round dark sunglasses, hands in pockets, intense gaze. Muted teal studio background. Razor-sharp central subject with four symmetric blurred ghost duplicates (2 left, 2 right) for time-slice motion effect. 9:16 vertical.",
+"keywords": "fashion portrait AI, ghost duplicate effect, time-slice motion, luxury black suit, round sunglasses, thin black chain, hands in pockets, muted teal background, blurred duplicates, symmetric composition, hyper-realistic, cinematic studio lighting, shallow DOF, 85mm look, ultra-sharp eyes, Midjourney fashion effect, Stable Diffusion portrait",
+"image": "234.webp",
+"file_path": "/prompt/luxury-fashion-portrait-ghost-duplicate-effect-9-16.html"
 }
 
 ]
