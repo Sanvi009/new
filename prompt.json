@@ -1657,6 +1657,34 @@
 "keywords": "blue hour portrait, side profile close up, eyes closed portrait, cinematic blue lighting, cool deep blue, warm key light, visible freckles, natural skin texture, shallow depth of field, minimal blue background, calm introspective, realistic photography, preserve face identity, soft specular highlights, gentle falloff, 9:16 vertical, AI portrait prompt, cinematic photography, freckles visible, introspective mood",
 "image": "238.jpg",
 "file_path": "/prompt/blue-hour-side-profile-close-up-portrait-eyes-closed.html"
+},
+{
+"id": 239,
+"description": "A cinematic studio portrait prompt that creates a dramatic teal and orange split lighting effect. It uses a reference image to maintain facial identity, with a serious mood, hard vertical light beam, and deep shadows.",
+"keywords": "teal and orange portrait, cinematic portrait prompt, split lighting AI, studio portrait with reference, dramatic lighting prompt, orange and teal color grading, male serious expression AI",
+"image": "239.webp",
+"file_path": "/prompt/teal-and-orange-cinematic-portrait-split-lighting.html"
+},
+{
+  "id": 240,
+  "description": "Generate a top-down aerial street photo of yourself holding a bicycle. This prompt creates an editorial fashion shot with a minimalist vibe, teal bike lanes, and ultra-realistic 4K details.",
+  "keywords": "street photography AI prompt, top down aerial view, custom face AI image, urban fashion prompt, bicycle AI art, realistic 4K photo, editorial fashion style, Midjourney portrait, Stable Diffusion urban",
+  "image": "240.jpg",
+  "file_path": "/prompt/urban-street-photography-ai-prompt-bicycle.html"
+},
+{
+  "id": 241,
+  "description": "Generate a hyper-realistic cinematic fashion photo of yourself in an oversized puffer coat on a mirror-like lake. Features extreme skin detail, prismatic light refraction, and 8K Kodak Portra 400 film quality.",
+  "keywords": "cinematic fashion AI prompt, hyper realistic skin texture, puffer coat photography, infinity lake AI, Kodak Portra 400, prismatic light refraction, custom face AI fashion, 8K resolution AI photo, editorial fashion prompt, Phase One XF camera",
+  "image": "241.jpg",
+  "file_path": "/prompt/cinematic-fashion-photography-ai-prompt-puffer-coat.html"
+},
+{
+  "id": 242,
+  "description": "Generate a cinematic high-angle portrait of yourself in olive corduroy and herringbone overcoat. Features Rembrandt lighting, earthy desaturated tones, and hyper-realistic 8K skin detail with Hasselblad camera quality.",
+  "keywords": "moody portrait AI prompt, Rembrandt lighting, corduroy shirt AI, herringbone overcoat, Hasselblad X2D 100C, editorial Vogue style, black rimmed glasses, cinematic color grading, hyper realistic skin, 8K resolution portrait, custom face AI",
+  "image": "242.webp",
+  "file_path": "/prompt/moody-portrait-ai-prompt-corduroy-overcoat.html"
 }
 
 ]
