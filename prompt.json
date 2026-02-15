@@ -1706,6 +1706,48 @@
   "keywords": "surreal AI art, face formed by people, thousands of tiny figures, dissolving face, stone moss roots, conceptual portrait, top down lighting, high contrast, minimal background, custom face AI art, earthy textures",
   "image": "245.webp",
   "file_path": "/prompt/surreal-face-formed-by-people-ai-art-prompt.html"
+},
+{
+  "id": 246,
+  "description": "Generate a full-body studio fashion portrait of yourself in a sculptural cobalt blue armchair with 'Brainloom' 3D letters. Features matching blue jumpsuit, white socks, chunky sneakers, and high-key lighting against a seamless cyan background.",
+  "keywords": "branded furniture AI, cobalt blue armchair, Brainloom text, blue utility jumpsuit, high key lighting, 85mm lens portrait, infinity cove background, color block fashion, photorealistic 8K, custom face AI, commercial photography",
+  "image": "246.webp",
+  "file_path": "/prompt/branded-blue-armchair-fashion-portrait-ai-prompt.html"
+},
+{
+  "id": 247,
+  "description": "Generate a raw chaotic ink poster portrait using dense curved black scribble strokes and rough cross-hatching. Features flat orange background, minimal beige tones, and intentionally irregular tangled aura with no realism or gradients.",
+  "keywords": "chaotic ink portrait, scribble art, cross hatching illustration, black ink strokes, poster style, raw artistic AI, flat orange background, tangled aura, high contrast, no realism, abstract portrait, uneven line art",
+  "image": "247.jpg",
+  "file_path": "/prompt/chaotic-ink-scribble-portrait-ai-prompt.html"
+},
+{
+  "id": 248,
+  "description": "Generate a dramatic stylized silhouette portrait in profile against vibrant yellow. Features dark figure with energetic tousled hair, dynamic black brushstrokes and abstract splatter emanating from head and shoulders.",
+  "keywords": "silhouette portrait AI, dramatic profile, yellow background, black brushstrokes, abstract splatter, stylized figure, energetic hair, high contrast, expressive portrait, dark silhouette, vibrant yellow, painterly effect",
+  "image": "248.jpg",
+  "file_path": "/prompt/dramatic-silhouette-profile-portrait-ai-prompt-yellow-background.html"
+},
+{
+  "id": 249,
+  "description": "Generate an ultra-realistic retro studio portrait of yourself holding a silver boombox on your shoulder in a colorful windbreaker. Preserves exact facial features, skull geometry, jawline, stubble, and body proportions with no age shift or distortion.",
+  "keywords": "retro portrait AI, ultra realistic, boombox prop, colorful windbreaker, preserve facial features, photorealistic, studio background, accurate proportions, custom face, no age shift, 1980s style",
+  "image": "249.jpg",
+  "file_path": "/prompt/ultra-realistic-retro-portrait-ai-prompt-boombox.html"
+},
+{
+  "id": 250,
+  "description": "Generate a moody cinematic portrait against dark blue with vertical red light beam casting dramatic shadow. Features contemplative expression, minimalist composition, and graphic lighting contrast with specific negative prompts.",
+  "keywords": "moody portrait AI, red light beam, dramatic shadow, dark blue background, graphic lighting, contemplative expression, minimalist composition, cinematic photo, custom face, raw stylize 800, high contrast",
+  "image": "250.jpg",
+  "file_path": "/prompt/moody-red-light-portrait-ai-prompt-dramatic-shadow.html"
+},
+{
+  "id": 251,
+  "description": "Generate a cinematic editorial chiaroscuro portrait with harsh window light casting geometric shadow bands. Features wet messy hair, glossy sweaty skin with realistic pores, intense expression, and open white shirt against textured wall.",
+  "keywords": "chiaroscuro portrait AI, window light shadows, geometric shadow bands, wet hair, sweaty skin texture, realistic pores, intense expression, open white shirt, textured wall, cinematic editorial, dramatic lighting, custom face",
+  "image": "251.jpg",
+  "file_path": "/prompt/chiaroscuro-window-light-portrait-ai-prompt-wet-hair.html"
 }
 
 ]
