@@ -1748,6 +1748,57 @@
   "keywords": "chiaroscuro portrait AI, window light shadows, geometric shadow bands, wet hair, sweaty skin texture, realistic pores, intense expression, open white shirt, textured wall, cinematic editorial, dramatic lighting, custom face",
   "image": "251.jpg",
   "file_path": "/prompt/chiaroscuro-window-light-portrait-ai-prompt-wet-hair.html"
+},
+  {
+"id": 252,
+"description": "Generate a bold retro neon editorial portrait. A subject in a satin fluid-wave suit stands in a glossy pink hallway with wavy orange-yellow walls and a psychedelic floor. A yellow scooter is behind them. Uses 85mm, shallow depth, and vibrant cinematic lighting. Perfect for AI image generators.",
+"keywords": "retro neon portrait, editorial AI prompt, 85mm portrait, cinematic lighting prompt, psychedelic hallway, yellow scooter, fluid wave suit, neon sunglasses, AI art prompt, Midjourney portrait, Stable Diffusion prompt, 9:16 aspect ratio",
+"image": "252.jpg",
+"file_path": "/prompt/retro-neon-portrait-with-scooter-ai-prompt.html"
+},
+{
+"id": 253,
+"description": "Generate a realistic POV CCTV image inside an Indonesian Indomaret at night. A skater in oversized hoodie and loose pants gives the middle finger to the camera with a cold expression. Features grainy security camera quality, fisheye perspective, greenish-blue tint, and authentic timestamp overlay. Snack shelves and promo posters in background. 9:16 aspect ratio.",
+"keywords": "CCTV style prompt, Indomaret interior, Indonesian minimarket, skater rebellion, POV surveillance camera, middle finger gesture, night CCTV, grainy security camera, fisheye effect, skater outfit, timestamp overlay, viral CCTV style, realistic AI image, 9:16 vertical, cold expression, snack shelf, Adidas sandals, oversized hoodie",
+"image": "253.jpg",
+"file_path": "/prompt/cctv-rebellion-indomaret-ai-prompt.html"
+},
+{
+"id": 254,
+"description": "Generate a mixed media trash polka style portrait. Side profile view wearing round sunglasses, realistic black and white photography blended with vivid orange and red geometric shapes, architectural blueprint lines, and grunge texture in the background. High contrast, cinematic lighting, sharp focus, collage aesthetic. Use uploaded image as face reference. 9:16 aspect ratio.",
+"keywords": "trash polka style, mixed media portrait, side profile sunglasses, black and white photography, abstract geometric shapes, orange red graphics, architectural blueprint lines, grunge texture, cinematic lighting, collage aesthetic, realistic face, high contrast, sharp focus, 9:16 art, round sunglasses, schematic drawings, photo manipulation",
+"image": "254.jpg",
+"file_path": "/prompt/trash-polka-portrait-with-sunglasses-ai-prompt.html"
+},
+{
+"id": 255,
+"description": "Generate a vibrant pop-art style portrait from your uploaded photo. Preserves facial features while applying bold, flowing abstract color shapes. Rich saturated palette of deep blues, warm oranges, bright yellows, reds, and purples with smooth gradients. Full-bleed artwork with clean edges, painterly digital illustration look. Includes 'Brainloom' cursive signature. 9:16 aspect ratio.",
+"keywords": "pop art portrait, vibrant colors, abstract color shapes, painterly illustration, modern pop art, saturated palette, deep blue orange yellow, smooth gradients, full bleed artwork, organic color blocks, Brainloom signature, 9:16 art, photo reference, stylized portrait, clean edges, high resolution",
+"image": "255.webp",
+"file_path": "/prompt/vibrant-pop-art-portrait-ai-prompt.html"
+},
+{
+"id": 256,
+"description": "Generate a hyper-realistic 8k dramatic portrait using your face reference. Subject in a satin bronze/copper bomber jacket and black mock-neck shirt, wearing glasses, looking slightly upward. High-contrast golden spotlight on a pitch black background with a single vertical strip of teal light behind. 85mm medium close-up. 9:16 aspect ratio.",
+"keywords": "hyper realistic portrait, bronze bomber jacket, dramatic lighting, teal backlight, 85mm lens, satin jacket, studio lighting, black background, glasses portrait, 8k resolution, golden spotlight, vertical teal light, medium close up, complementary colors, high contrast, upward gaze",
+"image": "256.jpg",
+"file_path": "/prompt/dramatic-bronze-bomber-portrait-ai-prompt.html"
+},
+{
+"id": 257,
+"description": "Generate a cinematic editorial portrait on a foggy rooftop edge. Preserves exact facial identity from uploaded photo. Subject in three-quarter profile looking away with calm melancholic expression, wearing textured wool overcoat and dark turtleneck, hands in pockets. Heavy atmospheric haze over city skyline, muted teal-gray palette with thin warm golden sunrise band. Soft rim light, shallow depth of field. 9:16 aspect ratio.",
+"keywords": "cinematic editorial portrait, foggy rooftop, exact identity preservation, three-quarter profile, melancholic expression, wool overcoat, dark turtleneck, hands in pockets, atmospheric haze, muted teal-gray palette, golden sunrise band, city skyline, soft rim light, shallow depth of field, 9:16",
+"image": "257.jpg",
+"file_path": "/prompt/rooftop-fog-city-portrait-ai-prompt.html"
+},
+{
+"id": 258,
+"description": "Generate a dynamic illustration with exact facial identity from uploaded photo. Subject wears black BRAINLOOM varsity t-shirt, smiles with mouth open, holds electric guitar with AI stickers. Salt-and-pepper hair and goatee flare upward like flame. Surreal abstract background with comic patterns, bold line art, cel-shading, halftone, chromatic distortion. Low angle exaggerated proportions. 9:16.",
+"keywords": "explosive emotional burst, dynamic illustration, exact identity, BRAINLOOM varsity shirt, electric guitar, flame hair, surreal abstract background, comic patterns, bold line art, cel-shading, halftone, chromatic distortion, low angle, exaggerated proportions, 9:16",
+"image": "258.jpg",
+"file_path": "/prompt/explosive-emotional-burst-illustration-ai-prompt.html"
 }
+
+
 
 ]
