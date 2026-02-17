@@ -1797,6 +1797,48 @@
 "keywords": "explosive emotional burst, dynamic illustration, exact identity, BRAINLOOM varsity shirt, electric guitar, flame hair, surreal abstract background, comic patterns, bold line art, cel-shading, halftone, chromatic distortion, low angle, exaggerated proportions, 9:16",
 "image": "258.jpg",
 "file_path": "/prompt/explosive-emotional-burst-illustration-ai-prompt.html"
+},
+{
+  "id": 259,
+  "description": "Generate a high-end cinematic fashion portrait of a specific person standing against a wall of black-and-white manga panels. The prompt ensures perfect facial likeness and includes details for clothing, studio lighting, and camera settings for a luxury editorial look.",
+  "keywords": "fashion portrait prompt, manga background AI, cinematic portrait, exact face AI prompt, beige suit portrait, editorial photography prompt, Midjourney portrait, Stable Diffusion fashion, 85mm portrait, studio lighting prompt",
+  "image": "259.jpg",
+  "file_path": "/prompt/manga-wall-cinematic-fashion-portrait.html"
+},
+{
+  "id": 260,
+  "description": "Generate a cinematic low-angle cyberpunk portrait of a specific person wearing a turtleneck and retro sunglasses. Features vibrant magenta underlighting, cyan rim light, and abstract neon reflections in the lenses against a black background for a futuristic look.",
+  "keywords": "cyberpunk portrait prompt, neon lighting AI, turtleneck sweater prompt, retro sunglasses AI, low angle portrait, cinematic close up, AI portrait from photo, Midjourney cyberpunk, magenta cyan lighting, digital illustration style",
+  "image": "260.jpg",
+  "file_path": "/prompt/neon-cyberpunk-turtleneck-portrait.html"
+},
+{
+  "id": 261,
+  "description": "Generate a luxury black-and-white Vogue fashion editorial cover featuring your exact likeness. Features an oversized linen shirt, tailored trousers, dramatic studio lighting, and authentic magazine typography including the VOGUE masthead and cover lines for a high-end result.",
+  "keywords": "Vogue cover prompt, fashion magazine AI, black and white editorial, luxury fashion prompt, magazine cover generator, AI Vogue cover, oversized linen shirt, minimalist studio portrait, high contrast photography, 8K magazine quality",
+  "image": "261.jpg",
+  "file_path": "/prompt/vogue-cover-fashion-editorial-portrait.html"
+},
+{
+  "id": 262,
+  "description": "Generate a powerful ultra-realistic portrait of a specific person in a black blazer and turtleneck, drenched in intense red lighting. Features a low-angle shot, bold sunglasses, and dramatic architectural shadows for a cinematic, dominant mood.",
+  "keywords": "red lighting portrait, power portrait AI, black blazer turtleneck, dramatic low angle, cinematic red, sunglasses portrait, AI portrait from photo, editorial fashion, monochromatic red, architectural backdrop",
+  "image": "262.jpg",
+  "file_path": "/prompt/red-monochrome-power-portrait.html"
+},
+{
+  "id": 263,
+  "description": "Generate a dramatic cyberpunk poster with a split composition. Features a side-profile portrait with red-orange neon sunglasses reflections, split vertically against a teal halftone dot pattern and concentric circle background. Includes typography space for 'HOMBRE' title.",
+  "keywords": "cyberpunk poster, split portrait AI, halftone pattern, side profile neon, red teal lighting, reflective sunglasses, AI poster generator, geometric background, HOMBRE typography, concentric circles",
+  "image": "263.jpg",
+  "file_path": "/prompt/split-portrait-cyberpunk-poster.html"
+},
+{
+  "id": 264,
+  "description": "Create a minimalist cinematic poster with a split focus effect. Features a portrait with 100 facial likeness, split vertically: sharp red/orange focus on one side, soft blue halftone blur on the other. Includes a camera focus frame and 'Focus' text at the bottom.",
+  "keywords": "split focus portrait, cinematic poster AI, halftone blur, red blue lighting, oversized hoodie prompt, street style poster, AI poster generator, minimalist editorial, Focus typography, camera frame overlay",
+  "image": "264.jpg",
+  "file_path": "/prompt/split-focus-cinematic-portrait-poster.html"
 }
 
 
