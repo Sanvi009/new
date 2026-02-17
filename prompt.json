@@ -1839,6 +1839,20 @@
   "keywords": "split focus portrait, cinematic poster AI, halftone blur, red blue lighting, oversized hoodie prompt, street style poster, AI poster generator, minimalist editorial, Focus typography, camera frame overlay",
   "image": "264.jpg",
   "file_path": "/prompt/split-focus-cinematic-portrait-poster.html"
+},
+{
+  "id": 265,
+  "description": "Generate a hyper-realistic paparazzi-style portrait using Leica Q2 settings with harsh on-camera flash. Features your exact likeness in a beige snakeskin bomber jacket, silver chain, adjusting sunglasses. Raw, uncropped editorial Vogue aesthetic with microscopic skin detail.",
+  "keywords": "paparazzi lighting, Leica Q2 portrait, on camera flash, snakeskin bomber jacket, street style flash, harsh flash night, AI portrait from photo, editorial Vogue, 35mm f8, raw photo style",
+  "image": "265.webp",
+  "file_path": "/prompt/paparazzi-flash-street-style-portrait.html"
+},
+{
+  "id": 266,
+  "description": "Generate an ultra-realistic fashion editorial with forced perspective. Features your exact likeness in a bright blue suit, sitting in an all-blue studio with a vintage blue hatchback and oversized sneakers dominating the foreground. Low-angle 24mm shot.",
+  "keywords": "blue monochrome fashion, forced perspective portrait, low angle 24mm, blue suit AI, vintage car studio, oversized sneakers, editorial fashion, luxury street style, all blue studio, geometric lines",
+  "image": "266.jpg",
+  "file_path": "/prompt/blue-monochrome-forced-perspective-fashion.html"
 }
 
 
