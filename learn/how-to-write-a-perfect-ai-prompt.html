@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5114578174657429"
+     crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-5114578174657429">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Write the Perfect Prompt - Brainloom | AI Prompt Masterclass</title>
+    <meta name="description" content="Master the art of AI image generation with our comprehensive guide to writing perfect prompts for Midjourney, DALL-E, and Stable Diffusion.">
+    <meta name="keywords" content="ai prompts, prompt engineering, midjourney guide, dall-e tips, stable diffusion prompts, ai art tutorial">
+    <meta property="og:title" content="How to Write the Perfect Prompt: A Masterclass in AI Image Generation">
+    <meta property="og:description" content="Learn the architecture of perfect prompts, from lighting to composition. Your ultimate guide to mastering AI image generation.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://brainloom.online/learn/articles/how-to-write-perfect-prompt">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo1.png">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .main-wrapper {
+            flex: 1;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 60px;
+            width: 100%;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 500;
+            color: #111;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: #007AFF;
+            font-size: 20px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover {
+            color: #007AFF;
+            background: rgba(0, 122, 255, 0.05);
+        }
+
+        .nav-item i {
+            font-size: 17px;
+        }
+
+        /* Article Styles - Full Width */
+        .main-content {
+            width: 100%;
+            margin: 80px auto 40px;
+            min-height: 60vh;
+        }
+
+        .article-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .article-header {
+            margin-bottom: 40px;
+            max-width: 900px;  /* Keep header text readable */
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #007AFF;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        .article-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #111;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .article-date {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-date i {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .article-read-time {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-read-time i {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .article-content {
+            font-size: 18px;
+            color: #333;
+            max-width: 900px;  /* Keep content readable - like medium.com */
+            margin: 0 auto 0 0;  /* Align left */
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #111;
+            margin: 48px 0 24px;
+            letter-spacing: -0.01em;
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #222;
+            margin: 32px 0 16px;
+        }
+
+        .article-content p {
+            margin-bottom: 24px;
+        }
+
+        .article-content strong {
+            color: #007AFF;
+            font-weight: 600;
+        }
+
+        .article-content .example-box {
+            background: #f5f9ff;
+            border-left: 4px solid #007AFF;
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+            max-width: 1000px;  /* Slightly wider for examples */
+        }
+
+        .article-content .example-box p {
+            margin-bottom: 8px;
+        }
+
+        .article-content .example-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-content .bad-example {
+            background: #fff5f5;
+            border-left-color: #ff3b30;
+        }
+
+        .article-content .good-example {
+            background: #f0fff4;
+            border-left-color: #34c759;
+        }
+
+        .article-content .checklist {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 28px 36px;
+            margin: 40px 0;
+            max-width: 1000px;
+        }
+
+        .article-content .checklist h4 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .article-content .checklist ul {
+            list-style: none;
+        }
+
+        .article-content .checklist li {
+            margin-bottom: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 17px;
+        }
+
+        .article-content .checklist li i {
+            color: #34c759;
+            font-size: 18px;
+            margin-top: 2px;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 24px 0 24px 28px;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        .article-content hr {
+            margin: 48px 0;
+            border: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .article-footer {
+            margin-top: 60px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            max-width: 900px;
+        }
+
+        .back-to-learn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .back-to-learn:hover {
+            color: #007AFF;
+            gap: 12px;
+        }
+
+        .back-to-learn i {
+            font-size: 14px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #f8f9fa;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 32px 0 24px;
+            margin-top: 40px;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+
+        .footer-section {
+            margin-bottom: 16px;
+        }
+
+        .footer-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #555;
+            margin-bottom: 12px;
+            opacity: 0.7;
+        }
+
+        .footer-link-list {
+            list-style: none;
+        }
+
+        .footer-link-item {
+            margin-bottom: 8px;
+        }
+
+        .footer-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-link:hover {
+            color: #007AFF;
+            opacity: 1;
+        }
+
+        .footer-link i {
+            font-size: 10px;
+            opacity: 0.6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copyright {
+            font-size: 11px;
+            color: #888;
+            opacity: 0.6;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social-link {
+            color: #777;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.6;
+            transition: all 0.2s ease;
+        }
+
+        .footer-social-link:hover {
+            color: #007AFF;
+            opacity: 1;
+        }
+
+        .footer-disclaimer {
+            font-size: 10px;
+            color: #999;
+            opacity: 0.5;
+            margin-top: 8px;
+            line-height: 1.4;
+            max-width: 800px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .header-content {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 12px 20px;
+            }
+
+            .main-content {
+                margin-top: 120px;
+            }
+
+            .footer-content {
+                padding: 0 20px;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 20px;
+            }
+
+            .nav {
+                gap: 16px;
+            }
+
+            .nav-item span {
+                display: none;
+            }
+
+            .nav-item {
+                padding: 10px;
+            }
+
+            .main-content {
+                margin: 100px auto 40px;
+            }
+
+            .article-container {
+                padding: 0 20px;
+            }
+
+            .article-title {
+                font-size: 32px;
+            }
+
+            .article-content {
+                font-size: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+                margin: 32px 0 16px;
+            }
+
+            .article-content h3 {
+                font-size: 20px;
+            }
+
+            .article-meta {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            .article-content .checklist {
+                padding: 20px;
+            }
+
+            .article-content .checklist li {
+                font-size: 15px;
+            }
+
+            .footer {
+                padding: 24px 0 20px;
+            }
+
+            .footer-content {
+                padding: 0 20px;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                padding: 0 16px;
+            }
+
+            .nav {
+                gap: 12px;
+            }
+
+            .article-container {
+                padding: 0 16px;
+            }
+
+            .article-title {
+                font-size: 28px;
+            }
+
+            .article-content .checklist {
+                padding: 16px;
+            }
+
+            .footer {
+                padding: 20px 0 16px;
+            }
+
+            .footer-content {
+                padding: 0 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>Brainloom</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="/learn/" class="nav-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Learn</span>
+                    </a>
+                    <a href="/policy/" class="nav-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Policy</span>
+                    </a>
+                    <a href="/about/" class="nav-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="/contact/" class="nav-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="article-container">
+                <article>
+                    <div class="article-header">
+                        <span class="article-category">Prompt Engineering</span>
+                        <h1 class="article-title">How to Write the Perfect Prompt: A Masterclass in AI Image Generation</h1>
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar-alt"></i>
+                                February 17, 2026
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i>
+                                7 min read (1,247 words)
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="article-content">
+                        <p>The age of digital art has been revolutionized. With tools like Midjourney, DALL-E 3, and Stable Diffusion, the power to visualize any concept rests at your fingertips. However, these tools are not mind-readers. They are incredibly sophisticated prediction engines that require precise language to unlock their full potential.</p>
+
+                        <p>Writing the perfect image generation prompt is a blend of art, science, and vocabulary. It's the difference between getting a blurry, misshapen blob and a photorealistic masterpiece. Whether you are a designer, a marketer, or a hobbyist, mastering the prompt is your most valuable skill.</p>
+
+                        <p>Here is your ultimate guide to deconstructing and constructing the perfect prompt, covering everything from lighting to color grading.</p>
+
+                        <h2>1. The Architecture of a Prompt</h2>
+                        <p>A perfect prompt is structured like a sentence in a recipe. If you miss an ingredient, the dish tastes bland. Generally, a high-quality prompt follows this structure:</p>
+
+                        <div class="example-box">
+                            <p><strong>[Subject] + [Action] + [Environment/Setting] + [Lighting] + [Color/Mood] + [Composition/Angle] + [Technical Specifications]</strong></p>
+                        </div>
+
+                        <p>For example, instead of typing "a dog," you should aim for: "A majestic husky running through a snowy forest, volumetric lighting, cinematic color grading, low angle shot, 8k."</p>
+
+                        <h2>2. Getting Specific: Subject, Objects, and Numbers</h2>
+                        <p>One of the biggest mistakes beginners make is vagueness.</p>
+
+                        <p><strong>Subject:</strong> Don't just say "person." Say "a 45-year-old weathered fisherman" or "a cyberpunk samurai with a neon katana."</p>
+
+                        <p><strong>Numbers:</strong> If you want three apples on a table, say "three apples." If you don't specify, the AI might give you five or blend them into one.</p>
+
+                        <p><strong>Objects:</strong> List everything that must be in the frame. If you want a "cup of coffee next to a book," the AI might place the book inside the coffee if you don't specify the spatial relationship (e.g., "a book lying open to the left of a steaming mug").</p>
+
+                        <h2>3. The Power of Adjectives: Describing the Environment</h2>
+                        <p>The environment sets the stage. It tells the AI where the action is happening.</p>
+
+                        <p><strong>To get a fantasy result:</strong> Use words like "ethereal," "mythical," "floating islands," "glowing mushrooms," "ancient ruins."</p>
+
+                        <p><strong>To get a gritty result:</strong> Use words like "decaying," "industrial," "slums," "rain-soaked streets," "rusty."</p>
+
+                        <h2>4. Mastering the Light: The Secret to Mood</h2>
+                        <p>Lighting is arguably 50% of a great image. It dictates the atmosphere and highlights your subject. If you want a specific result, you must specify the light source.</p>
+
+                        <p><strong>To get a soft, romantic look:</strong> Use "soft diffused lighting," "golden hour," "ambient light."</p>
+
+                        <p><strong>To get a dramatic, tense look:</strong> Use "chiaroscuro," "volumetric lighting," "rim lighting," "low-key lighting," "hard shadows."</p>
+
+                        <p><strong>To get a futuristic look:</strong> Use "neon lighting," "cinematic lighting," "bioluminescent glow."</p>
+
+                        <h2>5. Color Grading: The Emotion Palette</h2>
+                        <p>Colors evoke emotion. You can control the "feel" of the image entirely through color prompts.</p>
+
+                        <p><strong>Warm and nostalgic:</strong> "Warm tones," "amber and gold," "vintage fade."</p>
+
+                        <p><strong>Cold and isolated:</strong> "Cold color palette," "icy blues," "monochromatic blue."</p>
+
+                        <p><strong>High energy:</strong> "Vibrant colors," "high contrast," "neon cyberpunk palette."</p>
+
+                        <p><strong>Cinematic:</strong> "Teal and orange," "blockbuster color grading," "film stock Kodak Portra 400."</p>
+
+                        <h2>6. Action and Dynamism</h2>
+                        <p>A static subject can be boring. Tell the AI what is happening.</p>
+
+                        <p>Instead of "a bird," try "a bird mid-flight, wings spread wide."</p>
+
+                        <p>Instead of "a car," try "a sports car drifting around a corner, tire smoke."</p>
+
+                        <h2>7. Composition and Camera Angles (The "L" and "B" Results)</h2>
+                        <p>This is where you control the viewer's perspective. Changing the angle changes the power dynamic of the image.</p>
+
+                        <p><strong>To get a powerful, heroic result:</strong> Use "low angle shot," "heroic stance," "looking up at the sky."</p>
+
+                        <p><strong>To get an intimate, vulnerable result:</strong> Use "close-up," "extreme close-up on eyes," "shallow depth of field."</p>
+
+                        <p><strong>To get a vast, epic result:</strong> Use "wide angle," "panoramic," "bird's eye view," "extreme long shot."</p>
+
+                        <p><strong>To get a candid, documentary result:</strong> Use "street photography perspective," "Dutch angle," "shot on 35mm."</p>
+
+                        <h2>8. Technical Specifications (The Cherry on Top)</h2>
+                        <p>To push the quality to "perfect," you must include technical jargon that tells the AI this image should look professional.</p>
+
+                        <p><strong>Quality Boosters:</strong> "8k," "4k," "ultra high detail," "photorealistic," "hyperrealistic," "ray tracing."</p>
+
+                        <p><strong>Art Styles:</strong> "Oil painting by Rembrandt," "anime style by Makoto Shinkai," "3D render in the style of Pixar," "sketch by Da Vinci."</p>
+
+                        <p><strong>Camera Terms:</strong> "Shot on a Canon EOS R5," "f/1.8 aperture," "bokeh effect," "ISO 100."</p>
+
+                        <h2>9. The "Negative Prompt" (What you DON'T want)</h2>
+                        <p>Most advanced AI tools (like Stable Diffusion or Midjourney's --no parameter) allow you to tell the AI what to leave out. This is crucial for avoiding common AI artifacts.</p>
+
+                        <p><strong>If you want a realistic result:</strong> Add negative prompts like "cartoon, painting, illustration, blurry, distorted."</p>
+
+                        <p><strong>If you want a clean result:</strong> Add "ugly, extra limbs, bad anatomy, extra fingers, mutated hands, watermark, text."</p>
+
+                        <h2>10. Practical Examples: From Bad to Perfect</h2>
+                        <p>Let's apply everything we've learned.</p>
+
+                        <div class="example-box bad-example">
+                            <p><strong>Bad Prompt:</strong> "A knight fighting a dragon."</p>
+                            <p><em>Result:</em> Generic, muddy, likely looks like a child's drawing.</p>
+                        </div>
+
+                        <div class="example-box good-example">
+                            <p><strong>The Perfect Prompt:</strong></p>
+                            <p>"A weary knight in battered silver armor, holding a glowing blue sword, bravely fighting a massive black dragon, the dragon is breathing fire, rocky volcanic landscape, erupting volcano in background, dramatic chiaroscuro lighting, warm orange fire light contrasting with cool blue sword light, cinematic color grading, low angle shot making the knight look heroic, intense action, flying sparks, highly detailed, photorealistic, 8k."</p>
+                        </div>
+
+                        <p><strong>Analysis:</strong></p>
+                        <ul>
+                            <li><strong>Subject:</strong> Specific (weary knight, battered armor, black dragon).</li>
+                            <li><strong>Action:</strong> Fighting, breathing fire.</li>
+                            <li><strong>Environment:</strong> Volcanic landscape, erupting volcano.</li>
+                            <li><strong>Objects:</strong> Glowing blue sword.</li>
+                            <li><strong>Lighting:</strong> Chiaroscuro, contrasting warm/cool.</li>
+                            <li><strong>Color:</strong> Cinematic grading.</li>
+                            <li><strong>Angle:</strong> Low angle.</li>
+                            <li><strong>Technical:</strong> Highly detailed, photorealistic, 8k.</li>
+                        </ul>
+
+                        <div class="checklist">
+                            <h4>📋 Summary Checklist for Your Next Prompt</h4>
+                            <p>Before you hit enter, run through this mental checklist:</p>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <strong>Subject:</strong> Who or what is the star?</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Details:</strong> What are they wearing? What color is it?</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Number:</strong> How many are there?</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Environment:</strong> Where are they?</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Lighting:</strong> What is the light source?</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Color:</strong> Is it vibrant, muted, warm, or cold?</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Composition:</strong> Am I looking up, down, or close up?</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Quality:</strong> Is it photorealistic or a painting? Is it 4k?</li>
+                            </ul>
+                        </div>
+
+                        <p>Writing the perfect prompt is a practice of iteration. Don't be afraid to tweak a single word and see how the output changes. Treat the AI as a brilliant but literal-minded artist. The more clearly you paint the picture with your words, the more breathtaking the result will be.</p>
+                    </div>
+
+                    <div class="article-footer">
+                        <a href="/learn/" class="back-to-learn">
+                            <i class="fas fa-arrow-left"></i> Back to all articles
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links-grid">
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Quick Links</h3>
+                    <ul class="footer-link-list">
+                        <li class="footer-link-item">
+                            <a href="/" class="footer-link">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer-link-item">
+                            <a href="/links.html" class="footer-link">
+                                <i class="fas fa-link"></i>
+                                Directory
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Legal</h3>
+                    <ul class="footer-link-list">
+                        <li class="footer-link-item">
+                            <a href="/policy/" class="footer-link">
+                                <i class="fas fa-shield-alt"></i>
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">About</h3>
+                    <ul class="footer-link-list">
+                        <li class="footer-link-item">
+                            <a href="/about/" class="footer-link">
+                                <i class="fas fa-info-circle"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li class="footer-link-item">
+                            <a href="/contact/" class="footer-link">
+                                <i class="fas fa-envelope"></i>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2026 Brainloom. All rights reserved.
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61556686528782" class="footer-social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_brainloom.online/" class="footer-social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                Brainloom is an AI prompt gallery showcasing creative prompts for AI tools.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

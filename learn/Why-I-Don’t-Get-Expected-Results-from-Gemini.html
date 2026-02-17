@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5114578174657429"
+     crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-5114578174657429">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why I Don't Get Expected Results from Gemini - Brainloom | Prompt Engineering Deep Dive</title>
+    <meta name="description" content="Understand why your Gemini image generations don't match your expectations. Learn the common prompt mistakes and how to fix them for perfect results.">
+    <meta name="keywords" content="gemini prompts, ai image generation, prompt engineering, gemini tips, ai troubleshooting, image conversion">
+    <meta property="og:title" content="Why I Don't Get Expected Results from Gemini: A Deep Dive into Prompts, Pixels, and Perception">
+    <meta property="og:description" content="The gap between the image in your head and the screen is almost always a gap in prompt engineering. Learn how to bridge it.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://brainloom.online/learn/articles/gemini-results-deep-dive">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo1.png">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #fafafa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .main-wrapper {
+            flex: 1;
+        }
+
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 60px;
+            width: 100%;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 500;
+            color: #111;
+            letter-spacing: -0.5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: #007AFF;
+            font-size: 20px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover {
+            color: #007AFF;
+            background: rgba(0, 122, 255, 0.05);
+        }
+
+        .nav-item i {
+            font-size: 17px;
+        }
+
+        /* Article Styles - Full Width */
+        .main-content {
+            width: 100%;
+            margin: 80px auto 40px;
+            min-height: 60vh;
+        }
+
+        .article-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .article-header {
+            margin-bottom: 40px;
+            max-width: 900px;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #007AFF;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+
+        .article-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #111;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .article-date {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-date i {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .article-read-time {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-read-time i {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .article-content {
+            font-size: 18px;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto 0 0;
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111;
+            margin: 48px 0 24px;
+            letter-spacing: -0.01em;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #222;
+            margin: 32px 0 16px;
+        }
+
+        .article-content h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #007AFF;
+            margin: 24px 0 12px;
+        }
+
+        .article-content p {
+            margin-bottom: 24px;
+        }
+
+        .article-content strong {
+            color: #007AFF;
+            font-weight: 600;
+        }
+
+        .article-content blockquote {
+            background: #f8f9fa;
+            border-left: 4px solid #007AFF;
+            padding: 20px 24px;
+            margin: 32px 0;
+            font-size: 20px;
+            font-style: italic;
+            color: #444;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .article-content .mistake-box {
+            background: #fff8e7;
+            border-left: 4px solid #ff9f0a;
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .article-content .fix-box {
+            background: #e8f5e9;
+            border-left: 4px solid #34c759;
+            padding: 24px 28px;
+            margin: 32px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .article-content .example-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .article-content .bad-example {
+            background: #ffebee;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #ffcdd2;
+        }
+
+        .article-content .bad-example h5 {
+            color: #c62828;
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .article-content .good-example {
+            background: #e8f5e8;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #a5d6a5;
+        }
+
+        .article-content .good-example h5 {
+            color: #2e7d32;
+            font-size: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .article-content .checklist {
+            background: #f0f4ff;
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border: 1px solid rgba(0, 122, 255, 0.2);
+        }
+
+        .article-content .checklist h4 {
+            color: #111;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .article-content .checklist ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .article-content .checklist li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 17px;
+        }
+
+        .article-content .checklist li i {
+            color: #007AFF;
+            font-size: 18px;
+            margin-top: 2px;
+        }
+
+        .article-content .taboo-box {
+            background: #fee;
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border: 1px solid #ffcdd2;
+        }
+
+        .article-content .taboo-box h4 {
+            color: #c62828;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .article-content .taboo-box h4 i {
+            color: #c62828;
+        }
+
+        .article-content .taboo-box ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .article-content .taboo-box li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 17px;
+        }
+
+        .article-content .taboo-box li i {
+            color: #c62828;
+            font-size: 16px;
+            margin-top: 4px;
+        }
+
+        .article-content .reality-box {
+            background: linear-gradient(135deg, #f3e5f5 0%, #e1f5fe 100%);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border: 1px solid #ce93d8;
+        }
+
+        .article-content .reality-box h4 {
+            color: #6a1b9a;
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+
+        .article-content .conclusion {
+            background: #111;
+            color: white;
+            border-radius: 16px;
+            padding: 32px 36px;
+            margin: 48px 0 32px;
+        }
+
+        .article-content .conclusion p {
+            color: #f0f0f0;
+            font-size: 19px;
+            margin-bottom: 20px;
+        }
+
+        .article-content .conclusion p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-content .conclusion strong {
+            color: #007AFF;
+        }
+
+        .article-content ul, .article-content ol {
+            margin: 24px 0 24px 28px;
+        }
+
+        .article-content li {
+            margin-bottom: 10px;
+        }
+
+        .article-footer {
+            margin-top: 60px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            max-width: 900px;
+        }
+
+        .back-to-learn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .back-to-learn:hover {
+            color: #007AFF;
+            gap: 12px;
+        }
+
+        .back-to-learn i {
+            font-size: 14px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #f8f9fa;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 32px 0 24px;
+            margin-top: 40px;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+
+        .footer-section {
+            margin-bottom: 16px;
+        }
+
+        .footer-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #555;
+            margin-bottom: 12px;
+            opacity: 0.7;
+        }
+
+        .footer-link-list {
+            list-style: none;
+        }
+
+        .footer-link-item {
+            margin-bottom: 8px;
+        }
+
+        .footer-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-link:hover {
+            color: #007AFF;
+            opacity: 1;
+        }
+
+        .footer-link i {
+            font-size: 10px;
+            opacity: 0.6;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-copyright {
+            font-size: 11px;
+            color: #888;
+            opacity: 0.6;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social-link {
+            color: #777;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.6;
+            transition: all 0.2s ease;
+        }
+
+        .footer-social-link:hover {
+            color: #007AFF;
+            opacity: 1;
+        }
+
+        .footer-disclaimer {
+            font-size: 10px;
+            color: #999;
+            opacity: 0.5;
+            margin-top: 8px;
+            line-height: 1.4;
+            max-width: 800px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .header-content {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 12px 20px;
+            }
+
+            .main-content {
+                margin-top: 120px;
+            }
+
+            .footer-content {
+                padding: 0 20px;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 20px;
+            }
+
+            .nav {
+                gap: 16px;
+            }
+
+            .nav-item span {
+                display: none;
+            }
+
+            .nav-item {
+                padding: 10px;
+            }
+
+            .main-content {
+                margin: 100px auto 40px;
+            }
+
+            .article-container {
+                padding: 0 20px;
+            }
+
+            .article-title {
+                font-size: 32px;
+            }
+
+            .article-content {
+                font-size: 16px;
+            }
+
+            .article-content h2 {
+                font-size: 26px;
+            }
+
+            .article-content h3 {
+                font-size: 22px;
+            }
+
+            .article-content .example-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .article-meta {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            .article-content .checklist,
+            .article-content .taboo-box,
+            .article-content .reality-box,
+            .article-content .conclusion {
+                padding: 20px;
+            }
+
+            .footer {
+                padding: 24px 0 20px;
+            }
+
+            .footer-content {
+                padding: 0 20px;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                padding: 0 16px;
+            }
+
+            .nav {
+                gap: 12px;
+            }
+
+            .article-container {
+                padding: 0 16px;
+            }
+
+            .article-title {
+                font-size: 28px;
+            }
+
+            .footer {
+                padding: 20px 0 16px;
+            }
+
+            .footer-content {
+                padding: 0 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>Brainloom</span>
+                </a>
+
+                <nav class="nav">
+                    <a href="/learn/" class="nav-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Learn</span>
+                    </a>
+                    <a href="/policy/" class="nav-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Policy</span>
+                    </a>
+                    <a href="/about/" class="nav-item">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="/contact/" class="nav-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="article-container">
+                <article>
+                    <div class="article-header">
+                        <span class="article-category">Troubleshooting</span>
+                        <h1 class="article-title">Why I Don't Get Expected Results from Gemini: A Deep Dive into Prompts, Pixels, and Perception</h1>
+                        <div class="article-meta">
+                            <span class="article-date">
+                                <i class="far fa-calendar-alt"></i>
+                                February 17, 2026
+                            </span>
+                            <span class="article-read-time">
+                                <i class="far fa-clock"></i>
+                                6 min read (1,002 words)
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="article-content">
+                        <p>If you've ever typed a prompt into Gemini—or any generative AI—and stared at the output in bewilderment, you are not alone. The title, "Why I Don't Get Expected Results from Gemini," is a frustration I hear echoed across forums and social media. It implies a broken promise: you asked for something specific, and the machine gave you something vaguely related, utterly wrong, or artistically dead.</p>
+
+                        <p>But here is the hard truth: <strong>In the vast majority of cases, the AI isn't failing you; the communication is failing.</strong> When it comes to image generation or conversion, the gap between the image in your head and the image on the screen is almost always a gap in prompt engineering. Let's analyze why this happens, specifically regarding visual tasks, and how to bridge that gap.</p>
+
+                        <h2>The "Mind Reading" Myth</h2>
+                        <p>The first mistake we make is treating AI like a human illustrator. If you asked a human artist for "a picture of a dog," they would likely ask you clarifying questions: "What breed? Doing what? In what style?" Gemini, and most text-to-image models, cannot read your mind. They can only read your text.</p>
+
+                        <p>When you don't get the expected result, it is rarely because the AI is "dumb." It is usually because your prompt was ambiguous. The AI fills in the gaps with the most statistically likely data from its training, which is rarely the specific vision you had.</p>
+
+                        <h2>Prompt Writing Mistakes That Kill Image Generation</h2>
+                        <p>To get the result you want, you must understand that the AI is a literal interpreter. Here are the most common pitfalls when trying to generate or convert images:</p>
+
+                        <h3>1. The "More Data, Less Poetry" Mistake</h3>
+                        <div class="mistake-box">
+                            <p><strong>The Mistake:</strong> Writing vague, human-centric descriptions. For example: "Make a beautiful sunset."</p>
+                            <p><strong>Why it fails:</strong> What does "beautiful" mean to you? Soft pastels? Fiery reds? Over a mountain or a beach? The AI doesn't know. It will generate a generic, average sunset.</p>
+                        </div>
+
+                        <div class="fix-box">
+                            <p><strong>The Fix:</strong> Be data-dense. Instead of "beautiful," describe the components.</p>
+                        </div>
+
+                        <div class="example-grid">
+                            <div class="bad-example">
+                                <h5><i class="fas fa-times-circle"></i> Bad:</h5>
+                                <p>"A beautiful sunset."</p>
+                            </div>
+                            <div class="good-example">
+                                <h5><i class="fas fa-check-circle"></i> Good:</h5>
+                                <p>"A photorealistic sunset over the Pacific Ocean, waves crashing on rocky shores, vibrant orange and pink hues reflecting on the water, 8k, high detail."</p>
+                            </div>
+                        </div>
+
+                        <h3>2. The Subject-Verb-Object Confusion</h3>
+                        <div class="mistake-box">
+                            <p><strong>The Mistake:</strong> Poor sentence structure regarding who is doing what.</p>
+                        </div>
+
+                        <div class="fix-box">
+                            <p><strong>The Fix:</strong> Place the main subject at the beginning of the prompt. If you want a cat wearing a hat, say "A cat wearing a top hat." If you say "A top hat on a cat," the AI might prioritize the hat and forget the cat has a face.</p>
+                        </div>
+
+                        <h3>3. Ignoring the "Negative Prompt" Mentality</h3>
+                        <p>While not all interfaces have a dedicated negative prompt box, you must learn to state what you don't want within your prompt or by exclusion.</p>
+
+                        <div class="mistake-box">
+                            <p><strong>The Mistake:</strong> Not specifying that you want a photograph, not a painting.</p>
+                            <p><strong>The Result:</strong> You get a watercolor image when you needed a stock photo for a website.</p>
+                        </div>
+
+                        <div class="fix-box">
+                            <p><strong>The Fix:</strong> Use descriptors like <em>photorealistic, 3D render, oil painting, sketch, vector graphic</em> to set the medium immediately.</p>
+                        </div>
+
+                        <h2>Image Conversion: The Hidden Complexity</h2>
+                        <p>Many users try to use Gemini or similar tools for "conversion"—turning a sketch into a final product, or changing the style of an existing image.</p>
+
+                        <div class="mistake-box">
+                            <p><strong>The Mistake:</strong> Assuming "conversion" means the AI understands the underlying object's physics.</p>
+                            <p>If you upload a stick figure drawing and say, "Convert this into a realistic human," the AI doesn't know where the muscles go. It will paint over your stick figure with "realistic skin texture," but the anatomy will be broken.</p>
+                        </div>
+
+                        <div class="fix-box">
+                            <p><strong>What to do instead:</strong></p>
+                            <p>If you are "converting" an image, you aren't just asking for a filter; you are asking for a re-imagination. You must provide context. Upload the sketch, but also tell the AI:</p>
+                            <ul>
+                                <li>"The subject is a muscular man standing sideways."</li>
+                                <li>"The lighting is coming from the left."</li>
+                                <li>"The art style is comic book realism."</li>
+                            </ul>
+                            <p>Without this data, the AI is just guessing.</p>
+                        </div>
+
+                        <h2>What to Do: The Checklist for Success</h2>
+                        <p>To get from "Why didn't this work?" to "Wow, that's it!", follow this checklist:</p>
+
+                        <div class="checklist">
+                            <h4><i class="fas fa-clipboard-list"></i> Prompt Success Checklist</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> <strong>Start with the Medium:</strong> Begin your prompt with the type of image. (Photo, Painting, 3D Model, Schematic).</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Describe the Subject:</strong> Be specific. Not "a car," but "a red 1969 Ford Mustang."</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Set the Scene:</strong> Where is the subject? (In a garage, on a race track, in the snow).</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Define the Lighting and Mood:</strong> (Cinematic lighting, dark and moody, bright and cheerful, golden hour).</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Add the Technical Details:</strong> For high-quality outputs, add descriptors like "8k resolution, high detail, sharp focus."</li>
+                                <li><i class="fas fa-check-circle"></i> <strong>Use Comparison:</strong> If you want a specific style, name it. "In the style of Studio Ghibli," or "in the style of a Renaissance painting."</li>
+                            </ul>
+                        </div>
+
+                        <h2>What Not to Do: The Taboos</h2>
+
+                        <div class="taboo-box">
+                            <h4><i class="fas fa-ban"></i> The Taboos</h4>
+                            <ul>
+                                <li><i class="fas fa-times-circle"></i> <strong>Don't use double negatives.</strong> Saying "NOT blurry" might confuse the system. Instead, say "sharp focus."</li>
+                                <li><i class="fas fa-times-circle"></i> <strong>Don't assume the AI remembers the first part of your sentence</strong> by the time it reads the last part. If your prompt is long and complex, the AI might "forget" the beginning. Keep the core subject repeated or at the very start.</li>
+                                <li><i class="fas fa-times-circle"></i> <strong>Don't use the word "with" excessively.</strong> It dilutes the relationship between objects. "A man WITH a dog WITH a ball" is messy. "A man holding a dog that is holding a ball" is clearer.</li>
+                            </ul>
+                        </div>
+
+                        <h2>The Reality Check: Native vs. Multimodal</h2>
+
+                        <div class="reality-box">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Important Distinction</h4>
+                            <p>It is also crucial to analyze which version of Gemini you are using. Some iterations of large language models (LLMs) are text-only; they can read an image you upload (multimodal) but cannot generate a new one natively. If you are trying to generate images in a pure text model, you are essentially asking the AI to describe an image to you in text, not create the pixels.</p>
+                            <p>If your tool relies on a third-party diffusion model (like Imagen or similar), the results are only as good as the text prompt you feed into that model. If your original instruction to Gemini was vague, the prompt it passes to the image generator will also be vague.</p>
+                        </div>
+
+                        <div class="conclusion">
+                            <p><strong>Conclusion</strong></p>
+                            <p>The title "Why I don't get expected results from Gemini" is a question of translation. You are translating thoughts into text, and the AI is translating text into pixels. The loss of fidelity happens at the first translation.</p>
+                            <p>The next time you are disappointed with an image result, don't blame the machine. Analyze your prompt. Did you describe the light? Did you specify the style? Did you tell it what you don't want? By treating the prompt as a precise technical specification rather than a wish, you will find that the gap between expectation and result closes significantly. <strong>Master the prompt, and you master the machine.</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="article-footer">
+                        <a href="/learn/" class="back-to-learn">
+                            <i class="fas fa-arrow-left"></i> Back to all articles
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links-grid">
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Quick Links</h3>
+                    <ul class="footer-link-list">
+                        <li class="footer-link-item">
+                            <a href="/" class="footer-link">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="footer-link-item">
+                            <a href="/links.html" class="footer-link">
+                                <i class="fas fa-link"></i>
+                                Directory
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Legal</h3>
+                    <ul class="footer-link-list">
+                        <li class="footer-link-item">
+                            <a href="/policy/" class="footer-link">
+                                <i class="fas fa-shield-alt"></i>
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">About</h3>
+                    <ul class="footer-link-list">
+                        <li class="footer-link-item">
+                            <a href="/about/" class="footer-link">
+                                <i class="fas fa-info-circle"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li class="footer-link-item">
+                            <a href="/contact/" class="footer-link">
+                                <i class="fas fa-envelope"></i>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2026 Brainloom. All rights reserved.
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61556686528782" class="footer-social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_brainloom.online/" class="footer-social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                Brainloom is an AI prompt gallery showcasing creative prompts for AI tools.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
