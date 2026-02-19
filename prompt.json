@@ -1853,6 +1853,34 @@
   "keywords": "blue monochrome fashion, forced perspective portrait, low angle 24mm, blue suit AI, vintage car studio, oversized sneakers, editorial fashion, luxury street style, all blue studio, geometric lines",
   "image": "266.jpg",
   "file_path": "/prompt/blue-monochrome-forced-perspective-fashion.html"
+},
+{
+  "id": 267,
+  "description": "This prompt generates a typographic portrait from a face image. It recreates facial features using only repeated text like 'NK.ai', following anatomical contours with script typography, high contrast, and a clean screen-print aesthetic on a navy background.",
+  "keywords": "typographic portrait, face to text, AI word art, NK.ai prompt, script typography, screen print style, text based portrait, high contrast, negative space, portrait generator",
+  "image": "267.jpg",
+  "file_path": "/prompt/typographic-portrait-ai-prompt-for-face-to-text-art.html"
+},
+{
+  "id": 268,
+  "description": "This prompt generates an editorial fashion portrait in Vogue style. It places your face in a scene wearing a black suit, white shirt, sunglasses, and THE STUDIO CLUB cap, leaning against a stool. Features harsh flash, cool desaturated colors, and 8k hyper-realistic detail.",
+  "keywords": "editorial fashion portrait, Vogue style AI, Canon EOS R5 prompt, harsh flash photography, hyper realistic, black suit, cool desaturated, 50mm portrait, THE STUDIO CLUB, concrete background",
+  "image": "268.webp",
+  "file_path": "/prompt/editorial-fashion-portrait-ai-prompt-canon-eos-r5.html"
+},
+{
+  "id": 269,
+  "description": "This prompt generates a dramatic backlit silhouette portrait with over-ear headphones. Shot from behind with a 50mm f/1.8 lens, it creates a crisp outline with strong backlighting, subtle texture, deep contrast, film grain, and a clean minimalist grade in 9:16 aspect ratio.",
+  "keywords": "backlit silhouette, headphones portrait, cinematic AI, dramatic backlight, 50mm portrait, high-key lighting, editorial style, minimalist grade, film grain, Midjourney parameters",
+  "image": "269.webp",
+  "file_path": "/prompt/backlit-silhouette-portrait-ai-prompt-headphones.html"
+},
+{
+  "id": 270,
+  "description": "This prompt creates a Renaissance painting style high-speed motion blur photo of a soccer player mid-kick. Features dramatic dark background, moody spotlighting, glowing teal (#02B2CA) and violet (#AC03FC) motion trails, realistic athletic pose, and cinematic sports photography aesthetic.",
+  "keywords": "Renaissance painting, soccer motion blur, sports photography AI, teal violet streaks, cinematic realism, athletic pose, dramatic lighting, futuristic sports art, Midjourney stylize 900",
+  "image": "270.webp",
+  "file_path": "/prompt/renaissance-painting-soccer-motion-blur-ai-prompt.html"
 }
 
 
