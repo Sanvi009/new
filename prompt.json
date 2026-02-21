@@ -1881,6 +1881,41 @@
 "keywords": "editorial portrait, cinematic lighting, AI portrait prompt, chiaroscuro, facial identity",
 "image": "271.jpg",
 "file_path": "/prompt/how-to-create-a-cinematic-editorial-portrait-prompt"
+},
+{
+  "id": 272,
+  "description": "Generate a dramatic ultra-wide 10mm fisheye portrait with extreme high-angle perspective. Perfect for achieving editorial fashion shots with bold colors and dominant attitude.",
+  "keywords": "fisheye portrait prompt, street style AI art, editorial fashion prompt, Midjourney fashion, high-angle portrait",
+  "image": "272.webp",
+  "file_path": "/prompt/how-to-create-a-fisheye-street-luxury-portrait"
+},
+{
+  "id": 273,
+  "description": "Generate a warm, photorealistic scene placing yourself in a cozy living room environment. Perfect for capturing authentic, peaceful moments with professional cinematic quality.",
+  "keywords": "documentary photography prompt, candid portrait AI, living room scene, Canon EOS R5 prompt, cinematic AI image",
+  "image": "273.jpg",
+  "file_path": "/prompt/how-to-create-a-candid-documentary-style-living-room-portrait"
+},
+{
+  "id": 274,
+  "description": "Generate a sophisticated editorial fashion shot featuring a tailored power suit and a commanding pose. Includes a unique abstract self-portrait backdrop for artistic depth.",
+  "keywords": "high-fashion portrait prompt, editorial fashion AI, power suit portrait, studio photography prompt, abstract art backdrop",
+  "image": "274.jpg",
+  "file_path": "/prompt/how-to-create-a-high-fashion-power-portrait-with-abstract-art"
+},
+{
+  "id": 275,
+  "description": "Generate a dynamic vertical poster design featuring stacked black-and-white cinematic panels and a bold full-color foreground cutout with a thick white outline. Perfect for modern portrait collages.",
+  "keywords": "poster collage prompt, vertical collage design, AI photo collage, cinematic portrait panels, sticker-style outline",
+  "image": "275.webp",
+  "file_path": "/prompt/how-to-create-a-vertical-poster-collage-with-stacked-photo-panels"
+},
+{
+  "id": 276,
+  "description": "Generate a striking editorial poster with a hyper-realistic black-and-white portrait on the right and bold stacked typography on the left, featuring a fragment face mask inside the letters.",
+  "keywords": "minimalist poster prompt, split composition design, editorial typography, hyper-realistic portrait, AI poster design",
+  "image": "276.webp",
+  "file_path": "/prompt/how-to-create-a-minimalist-split-face-poster-with-typography"
 }
 
 
