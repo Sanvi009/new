@@ -1944,6 +1944,20 @@
   "keywords": "film noir prompt, black and white portrait, mirror reflection photography, cinematic AI image, moody portrait aesthetic",
   "image": "280.jpg",
   "file_path": "/prompt/how-to-create-a-film-noir-mirror-reflection-portrait-prompt"
+},
+{
+  "id": 281,
+  "description": "Generate a bold, high-contrast pop art portrait with comic-book realism, vintage poster backgrounds, and stylized halftone shading.",
+  "keywords": "pop art prompt, comic book illustration, vintage poster style, halftone shading, graphic portrait",
+  "image": "281.jpg",
+  "file_path": "/prompt/how-to-create-a-pop-art-comic-book-illustration-prompt"
+},
+{
+  "id": 282,
+  "description": "Generate a cute, playful 3D character version of yourself with exact facial likeness, soft cinematic lighting, and vibrant solid background.",
+  "keywords": "3D character prompt, stylized 3D render, cute character design, Octane render style, 3D portrait",
+  "image": "282.webp",
+  "file_path": "/prompt/how-to-create-a-stylized-3d-character-render-prompt"
 }
 
 
