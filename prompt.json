@@ -1916,6 +1916,34 @@
   "keywords": "minimalist poster prompt, split composition design, editorial typography, hyper-realistic portrait, AI poster design",
   "image": "276.webp",
   "file_path": "/prompt/how-to-create-a-minimalist-split-face-poster-with-typography"
+},
+{
+  "id": 277,
+  "description": "Generate a high-contrast, magazine-style portrait where the subject appears to step through bold typography using depth-masking effects.",
+  "keywords": "magazine cover prompt, cinematic portrait, AI image generation, Midjourney style, typography effect",
+  "image": "277.jpg",
+  "file_path": "/prompt/how-to-create-a-cinematic-magazine-cover-prompt"
+},
+{
+  "id": 278,
+  "description": "Generate a stunning top-down group shot that blends a real human subject with anime-style characters, matching a specific road background and composition.",
+  "keywords": "hybrid anime prompt, real life anime mix, cinematic group scene, top-down camera angle, AI character composition",
+  "image": "278.webp",
+  "file_path": "/prompt/how-to-create-a-cinematic-hybrid-real-life-anime-scene-prompt"
+},
+{
+  "id": 279,
+  "description": "Generate a high-end fashion portrait with golden hour lighting, luxury streetwear styling, and hyper-realistic skin details in a modern city setting.",
+  "keywords": "cinematic portrait prompt, streetwear fashion, golden hour lighting, ultra-realistic AI image, luxury portrait photography",
+  "image": "279.jpg",
+  "file_path": "/prompt/how-to-create-a-ultra-realistic-cinematic-streetwear-portrait-prompt"
+},
+{
+  "id": 280,
+  "description": "Generate a moody black and white portrait where your reflection takes center stage, with a dark silhouette foreground and high-contrast film noir lighting.",
+  "keywords": "film noir prompt, black and white portrait, mirror reflection photography, cinematic AI image, moody portrait aesthetic",
+  "image": "280.jpg",
+  "file_path": "/prompt/how-to-create-a-film-noir-mirror-reflection-portrait-prompt"
 }
 
 
