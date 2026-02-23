@@ -1958,6 +1958,41 @@
   "keywords": "3D character prompt, stylized 3D render, cute character design, Octane render style, 3D portrait",
   "image": "282.webp",
   "file_path": "/prompt/how-to-create-a-stylized-3d-character-render-prompt"
+},
+{
+  "id": 283,
+  "description": "Generate a striking 9:16 cinematic movie poster with bold typography, a dominant central figure, and an intense, brooding atmosphere. Perfect for character concept art or personal portraits.",
+  "keywords": "Cinematic Poster Prompt, Movie Poster AI, Vertical Image Prompt, Character Portrait Ideas, Dramatic Portrait",
+  "image": "283.jpg",
+  "file_path": "/prompt/vertical-cinematic-movie-poster-prompt"
+},
+{
+  "id": 284,
+  "description": "Generate a dramatic 9:16 studio portrait featuring a life-sized 3D letter sculpture. Perfect for conceptual fashion photography, album art, or bold personal branding with a contemporary edge.",
+  "keywords": "Studio Portrait Prompt, 3D Text Art, Cinematic Portrait, Conceptual Photography, Fashion Editorial",
+  "image": "284.jpg",
+  "file_path": "/prompt/studio-portrait-with-3d-text-sculpture-prompt"
+},
+{
+  "id": 285,
+  "description": "Generate a striking close-up portrait with dramatic split lighting—warm amber cutting across the eyes against deep teal shadows. Perfect for moody headshots, character studies, or futuristic editorial work.",
+  "keywords": "Cinematic Portrait, Teal and Orange Lighting, Eye Close-up, Moody Headshot, Futuristic Portrait",
+  "image": "285.jpg",
+  "file_path": "/prompt/cinematic-eye-portrait-teal-orange-prompt"
+},
+{
+  "id": 286,
+  "description": "Generate an ultra-realistic medium shot of a person sitting on a brown leather sofa atop a mountain, surrounded by foggy hills. Perfect for surreal art, conceptual photography, or dreamlike personal portraits.",
+  "keywords": "Surreal Portrait, Mountain Landscape, Conceptual Photography, Foggy Hills, Dreamlike Imagery",
+  "image": "286.jpg",
+  "file_path": "/prompt/mountain-sofa-portrait-foggy-landscape-prompt"
+},
+{
+  "id": 287,
+  "description": "Generate a haunting conceptual portrait of a single illuminated figure surrounded by a faceless crowd in fabric hoods. Perfect for dystopian art, social commentary, or powerful personal storytelling.",
+  "keywords": "Dystopian Portrait, Conceptual Art, Faceless Crowd, Chiaroscuro Lighting, Social Commentary",
+  "image": "287.jpg",
+  "file_path": "/prompt/dystopian-crowd-portrait-fabric-hoods-prompt"
 }
 
 
