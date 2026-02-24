@@ -1993,6 +1993,76 @@
   "keywords": "Dystopian Portrait, Conceptual Art, Faceless Crowd, Chiaroscuro Lighting, Social Commentary",
   "image": "287.jpg",
   "file_path": "/prompt/dystopian-crowd-portrait-fabric-hoods-prompt"
+},
+{
+  "id": 288,
+  "description": "Generate a dreamlike cinematic portrait of yourself seated on fluffy clouds in a vintage tailored suit. Perfect for luxury fashion editorials, surreal personal branding, or fine art photography with a timeless feel.",
+  "keywords": "Surreal Portrait, Cloud Photography, Vintage Fashion, Cinematic Editorial, Dreamlike Imagery",
+  "image": "288.jpg",
+  "file_path": "/prompt/cloud-seated-portrait-vintage-suit-prompt"
+},
+{
+  "id": 289,
+  "description": "Generate an ultra-realistic image of yourself breaking out of an Instagram post frame with dramatic fisheye distortion. Perfect for social media content, personal branding, or eye-catching profile visuals.",
+  "keywords": "Instagram Art, Breakout Photo, Fisheye Effect, Social Media Content, Urban Portrait",
+  "image": "289.jpg",
+  "file_path": "/prompt/instagram-frame-breakout-fisheye-prompt"
+},
+{
+  "id": 290,
+  "description": "Generate an ultra-realistic streetwear portrait with professional fashion magazine styling, including zoomed detail boxes and typography. Perfect for lookbooks, brand campaigns, or editorial portfolio pieces.",
+  "keywords": "Streetwear Photography, Fashion Editorial, Magazine Layout, Urban Portrait, Lookbook Design",
+  "image": "290.jpg",
+  "file_path": "/prompt/streetwear-editorial-magazine-layout-prompt"
+},
+{
+  "id": 291,
+  "description": "Generate an ultra-realistic cinematic portrait of yourself sitting on stacks of cash like a throne, with white streetwear and gold chains. Perfect for music artists, luxury branding, or bold personal statements.",
+  "keywords": "Hip-Hop Portrait, Luxury Aesthetic, Cash Throne, Streetwear Fashion, Music Artist Photography",
+  "image": "291.jpg",
+  "file_path": "/prompt/luxury-hip-hop-cash-throne-portrait-prompt"
+},
+{
+  "id": 292,
+  "description": "Generate a moody cinematic portrait of yourself sitting on a sofa in a cozy Brooklyn living room, looking thoughtfully out a window. Perfect for indie film aesthetics, actor headshots, or atmospheric personal photography.",
+  "keywords": "Indie Film Aesthetic, Brooklyn Interior, Moody Portrait, Cinematic Photography, Actor Headshot",
+  "image": "292.jpg",
+  "file_path": "/prompt/brooklyn-indie-film-sofa-portrait-prompt"
+},
+{
+  "id": 293,
+  "description": "Generate an ultra-realistic luxury editorial portrait of yourself in a vintage bookstore, captured through dusty glass with dramatic golden hour backlighting. Perfect for nostalgic fashion editorials, actor portfolios, or fine art photography.",
+  "keywords": "1990s Aesthetic, Cinematic Portrait, Bookstore Photography, Luxury Editorial, Film Still",
+  "image": "293.jpg",
+  "file_path": "/prompt/vintage-bookstore-cinematic-portrait-1990s-aesthetic-prompt"
+},
+{
+  "id": 294,
+  "description": "Generate a dynamic street portrait where you stand perfectly still while the crowd blurs around you. Perfect for artistic photography, urban storytelling, or creating powerful visual metaphors about focus and presence.",
+  "keywords": "Street Photography, Motion Blur, Cinematic Portrait, Urban Photography, Stillness Concept",
+  "image": "294.webp",
+  "file_path": "/prompt/stillness-in-motion-street-photography-prompt"
+},
+{
+  "id": 295,
+  "description": "Generate a cinematic environmental portrait of yourself sitting by the ocean, hugging your knees with wind moving through your hair. Perfect for high-end fashion editorials, introspective storytelling, or fine art photography.",
+  "keywords": "Coastal Photography, Fashion Editorial, Environmental Portrait, Golden Hour, Cinematic Landscape",
+  "image": "295.jpg",
+  "file_path": "/prompt/coastal-solitude-fashion-editorial-prompt"
+},
+{
+  "id": 296,
+  "description": "Generate an ultra-realistic Tokyo street scene featuring you as a stylish pedestrian crossing with Tokyo Tower in the background. Perfect for street style content, travel photography, or vintage-inspired urban portraits.",
+  "keywords": "Tokyo Street Style, Urban Photography, Vintage Film Aesthetic, Street Fashion, Japan Travel Photography",
+  "image": "296.jpg",
+  "file_path": "/prompt/tokyo-street-style-vintage-film-aesthetic-prompt"
+},
+{
+  "id": 297,
+  "description": "Generate a cinematic fashion portrait of yourself sitting on a velvet sofa with warm teal and orange grading. Perfect for editorial spreads, personal branding, or vintage-inspired fashion photography.",
+  "keywords": "Fashion Editorial, Vintage Aesthetic, Velvet Sofa Portrait, Teal and Orange Grading, Editorial Photography",
+  "image": "297.webp",
+  "file_path": "/prompt/vintage-fashion-editorial-sofa-portrait-prompt"
 }
 
 
