@@ -726,6 +726,39 @@
             max-width: 800px;
         }
 
+        /* Video Tutorial Styles */
+        .video-wrapper {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 177.78%; /* 9:16 aspect ratio (616/347 = 1.7778) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-description {
+            color: #666;
+            line-height: 1.7;
+            font-size: 16px;
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -939,6 +972,31 @@ The luxury hip-hop aesthetic this prompt captures is about more than just showin
             </div>
         </div>
 
+        <!-- Video Tutorial -->
+        <div class="content-section">
+            <h2 class="section-title">
+                <i class="fas fa-video"></i>
+                Video Tutorial
+            </h2>
+            
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/MFZnlMgsci4" 
+                        title="How to Create a Luxury Hip-Hop Portrait on a Cash Throne | Brainloom"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="video-description">
+                Watch this step-by-step tutorial to master the "Luxury Hip-Hop Cash Throne" technique. Learn how to achieve the perfect cinematic lighting, green fog atmosphere, and luxury streetwear styling.
+            </div>
+        </div>
+
         <!-- The Prompt -->
         <div class="content-section">
             <h2 class="section-title">
@@ -1085,6 +1143,21 @@ The color palette is carefully chosen for maximum impact. White streetwear pops 
                     </div>
                 </div>
                 <div class="prompt-card">
+                    <div class="card-image-container" onclick="openLightbox('/images/293.jpg', 'Generate an ultra-realistic luxury editorial portrait of yourself in a vintage bookstore, captured through dusty glass with dramatic golden hour backlighting.')">
+                        <div class="image-skeleton skeleton skeleton-image"></div>
+                        <img src="/images/293.jpg" alt="Vintage Bookstore Cinematic Portrait 1990s Aesthetic" class="card-image" 
+                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
+                             onerror="this.src='https://via.placeholder.com/400x300/007AFF/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Vintage Bookstore Cinematic Portrait 1990s Aesthetic</h3>
+                        <p class="card-description">Generate an ultra-realistic luxury editorial portrait of yourself in a vintage bookstore, captured through dusty glass with dramatic golden hour backlighting. Perfect for nostalgic fashion editorials, actor portfolios, or fine art photography.</p>
+                        <a href="/prompt/vintage-bookstore-cinematic-portrait-1990s-aesthetic-prompt" class="card-btn">
+                            View Prompt <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/294.webp', 'Generate a dynamic street portrait where you stand perfectly still while the crowd blurs around you.')">
                         <div class="image-skeleton skeleton skeleton-image"></div>
                         <img src="/images/294.webp" alt="Stillness in Motion Street Photography" class="card-image" 
@@ -1095,21 +1168,6 @@ The color palette is carefully chosen for maximum impact. White streetwear pops 
                         <h3 class="card-title">Stillness in Motion Street Photography</h3>
                         <p class="card-description">Generate a dynamic street portrait where you stand perfectly still while the crowd blurs around you. Perfect for artistic photography, urban storytelling, or creating powerful visual metaphors about focus and presence.</p>
                         <a href="/prompt/stillness-in-motion-street-photography-prompt" class="card-btn">
-                            View Prompt <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="prompt-card">
-                    <div class="card-image-container" onclick="openLightbox('/images/295.jpg', 'Generate a cinematic environmental portrait of yourself sitting by the ocean, hugging your knees with wind moving through your hair.')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
-                        <img src="/images/295.jpg" alt="Coastal Solitude Fashion Editorial" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x300/007AFF/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Coastal Solitude Fashion Editorial</h3>
-                        <p class="card-description">Generate a cinematic environmental portrait of yourself sitting by the ocean, hugging your knees with wind moving through your hair. Perfect for high-end fashion editorials, introspective storytelling, or fine art photography.</p>
-                        <a href="/prompt/coastal-solitude-fashion-editorial-prompt" class="card-btn">
                             View Prompt <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
