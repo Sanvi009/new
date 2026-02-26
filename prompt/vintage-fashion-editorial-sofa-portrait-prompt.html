@@ -726,6 +726,39 @@
             max-width: 800px;
         }
 
+        /* Video Tutorial Styles */
+        .video-wrapper {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 177.78%; /* 9:16 aspect ratio (616/347 = 1.7778) */
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-description {
+            color: #666;
+            line-height: 1.7;
+            font-size: 16px;
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -940,6 +973,31 @@ Ultimately, this prompt creates an image that could appear on the pages of Vogue
             <div class="scroll-hint">
                 <i class="fas fa-arrow-down"></i>
                 <span>Scroll to read full explanation</span>
+            </div>
+        </div>
+
+        <!-- Video Tutorial -->
+        <div class="content-section">
+            <h2 class="section-title">
+                <i class="fas fa-video"></i>
+                Video Tutorial
+            </h2>
+            
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/68wLUrvRGpU" 
+                        title="How to Create a Vintage Fashion Editorial Portrait on a Velvet Sofa | Brainloom"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="video-description">
+                Watch this step-by-step tutorial to master the "Vintage Fashion Editorial" technique. Learn how to achieve the perfect teal and orange color grading, velvet texture, and cinematic lighting.
             </div>
         </div>
 
