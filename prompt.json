@@ -2063,6 +2063,55 @@
   "keywords": "Fashion Editorial, Vintage Aesthetic, Velvet Sofa Portrait, Teal and Orange Grading, Editorial Photography",
   "image": "297.webp",
   "file_path": "/prompt/vintage-fashion-editorial-sofa-portrait-prompt"
+},
+{
+  "id": 298,
+  "description": "Generate a high-end Vogue-worthy fashion portrait that places you in an opulent interior wearing a modernized hanbok and kimono fusion robe, using cinematic lighting and ultra-detailed textures.",
+  "keywords": "fashion portrait prompt, AI fashion photography, cinematic portrait guide, hanbok kimono fusion, Vogue editorial style",
+  "image": "298.jpg",
+  "file_path": "/prompt/cinematic-fashion-editorial-portrait-with-hanbok-kimono-fusion-in-opulent-interior"
+},
+{
+  "id": 299,
+  "description": "Generate a high-fashion Vogue-style portrait using an extreme wide-angle fisheye lens in a vintage bathroom setting, with precise lighting, retro styling, and your exact facial features.",
+  "keywords": "fisheye portrait prompt, editorial fashion photography, AI portrait guide, vintage bathroom photoshoot, Vogue style prompt",
+  "image": "299.jpg",
+  "file_path": "/prompt/ultra-realistic-editorial-fashion-portrait-with-fisheye-lens-in-vintage-bathroom"
+},
+{
+  "id": 300,
+  "description": "Generate a dramatic low-angle studio portrait using a 14mm ultra-wide lens, featuring a racing-style varsity jacket, hands reaching toward the camera, and professional cinematic lighting.",
+  "keywords": "ultra-wide portrait prompt, studio fashion photography, AI portrait guide, racing jacket photoshoot, cinematic studio lighting",
+  "image": "300.jpg",
+  "file_path": "/prompt/ultra-realistic-studio-portrait-with-14mm-ultra-wide-lens-and-racing-jacket"
+},
+{
+  "id": 301,
+  "description": "Generate an ultra-realistic side profile portrait where your hair is replaced with realistic blue fire that illuminates your face, using cinematic lighting and shallow depth of field.",
+  "keywords": "blue fire hair prompt, AI portrait replacement, cinematic side profile, fire hair effect, ultra-realistic portrait",
+  "image": "301.jpg",
+  "file_path": "/prompt/side-profile-portrait-with-blue-fire-hair-replacement"
+},
+{
+  "id": 302,
+  "description": "Transform your photo into a dramatic top-down fisheye portrait with strong perspective distortion, oversized sunglasses, and bold editorial styling against a clean white background.",
+  "keywords": "fisheye portrait prompt, top-down photography, AI fashion portrait, puffer jacket photoshoot, editorial distortion effect",
+  "image": "302.jpg",
+  "file_path": "/prompt/ultra-wide-10mm-fisheye-top-down-portrait-with-puffer-jacket"
+},
+{
+  "id": 303,
+  "description": "Generate a dramatic side profile portrait with intense warm red-orange lighting, powerful rim lighting, and deep shadow contrast for an emotionally powerful conceptual image.",
+  "keywords": "cinematic portrait prompt, conceptual photography, AI dramatic portrait, rim lighting effect, emotional side profile",
+  "image": "303.jpg",
+  "file_path": "/prompt/cinematic-conceptual-portrait-side-profile-warm-background"
+},
+{
+  "id": 304,
+  "description": "Generate a cinematic high-angle street portrait featuring you with a skateboard in an urban setting, surrounded by motion-blurred figures for a sense of isolation within the crowd.",
+  "keywords": "streetwear portrait prompt, high-angle photography, AI urban portrait, motion blur effect, skateboard photoshoot",
+  "image": "304.webp",
+  "file_path": "/prompt/high-angle-streetwear-skateboard-portrait-urban-busy-background"
 }
 
 
