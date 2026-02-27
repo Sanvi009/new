@@ -1,0 +1,92 @@
+[
+  {
+    "id": 77,
+    "description": "",
+    "image": "11.jpeg",
+    "file_path": "/prompt/Lifestyle_Photo_of_Swahili_Donuts_and_Spiced_Chai.html"
+  },
+  {
+    "id": 142,
+    "description": "AI prompt for a candid, full-body mirror selfie of a stylish man indoors. The subject crouches, looking into a smartphone camera reflected in the phone, holding a dark smartphone with a white MagSafe ring. Wearing a charcoal grey oversized t-shirt with golden mirrored script, baggy light blue distressed jeans, and tan suede work boots. Minimalist indoor setting with concrete floor, grey walls, and structural elements. Soft, even overhead lighting highlights natural skin textures. High-resolution, realistic, 8K, contemporary urban fashion mood.",
+    "image": "149.jpeg",
+    "file_path": "/prompt/mirror_selfie_contemporary_fashion.html"
+  },
+  {
+    "id": 145,
+    "description": "Create a realistic AI-generated mirror selfie of a couple inside a modern elevator. The man wears an oversized black hoodie, wide-leg trousers, silver rings, and a pendant necklace, holding his phone to take the shot. The woman stands close, resting her head gently on his shoulder, dressed in a long-sleeved black top, jeans, hijab, and silver jewelry. The cool-toned elevator lighting, stainless steel walls, and casual but confident mood make this look like a natural, stylish photo.",
+    "image": "132.jpeg",
+    "file_path": "/prompt/realistic_couple_elevator_mirror_selfie__ai_prompt.html"
+  },
+  {
+    "id": 150,
+    "description": "viral trending image creation using gemini . Create a realistic Polaroid-style photo of two people, keeping their faces exactly as in the reference photo. The background should be replaced with soft white curtains, while the lighting mimics a flash in a dim room with a slight blur. The two subjects should be posing in cute, playful ways. This AI prompt is perfect for making cozy, personal, and natural-looking photos with a nostalgic Polaroid vibe.",
+    "image": "129.jpeg",
+    "file_path": "/prompt/viral_trending_ai_prompt.html"
+  },
+  {
+    "id": 164,
+    "description": "AI prompt to generate a portrait that looks like a raw, grainy 90s disposable camera flash photo. Creates an image of a person in a denim jacket against a cluttered wall, using a face reference.",
+    "image": "164.jpg",
+    "file_path": "/prompt/90s-disposable-camera-snapshot-ai-photo-prompt.html"
+  },
+  {
+    "id": 174,
+    "description": "AI prompt to generate a candid, high-angle night photo of you standing outside a lit minimarket. Wears a denim jacket and jeans, holds a coffee cup, with a film camera aesthetic, desaturated colors, and fine grain. Shot in 9:16 vertical format.",
+    "image": "174.webp",
+    "file_path": "/prompt/candid-night-street-fashion-ai-prompt-minimarket-portrait-from-above.html"
+  },
+  {
+    "id": 189,
+    "description": "AI prompt for creating vertical three-frame portrait collages with rooftop night photography. Features candid smartphone style, leather jacket textures, and city light backgrounds in stacked composition.",
+    "image": "189.webp",
+    "file_path": "/prompt/rooftop-night-portrait-collage-ai-prompt.html"
+  },
+  {
+    "id": 199,
+    "description": "AI prompt creates ultra-realistic DSLR-quality mirror selfies using your reference photo. Features natural skin textures, fedora hat shadow effects, bathroom lighting, and professional 85mm lens look in 9:16 vertical format.",
+    "image": "199.webp",
+    "file_path": "/prompt/mirror-selfie-dslr-portrait-ai-prompt-realistic-bathroom-photography.html"
+  },
+  {
+    "id": 202,
+    "description": "AI prompt transforms your mirror selfie into grunge scrapbook art. Adds chalk doodles, film grain, and vignette effects while keeping your face unchanged. Creates dreamy aesthetic artwork in 9:16 format.",
+    "image": "202.webp",
+    "file_path": "/prompt/grunge-mirror-selfie-ai-prompt-scrapbook-style-chalk-doodles.html"
+  },
+  {
+    "id": 205,
+    "description": "AI prompt generates augmented reality music visualization with Spotify cards orbiting around you while sleeping, using your exact face reference with accurate skin tones.",
+    "image": "205.jpg",
+    "file_path": "/prompt/spotify-ar-music-visualization-ai-prompt-face-reference.html"
+  },
+  {
+    "id": 208,
+    "description": "An AI prompt for creating a dreamy, artistic portrait with intentional motion blur and a teal color grade. Uses your photo to generate a melancholic, hoodie-clad portrait with film grain, light leaks, and an analog film look.",
+    "image": "208.jpg",
+    "file_path": "/prompt/dreamy-blurred-portrait-ai-prompt-motion-effect.html"
+  },
+  {
+    "id": 236,
+    "description": "Create a dramatic editorial portrait where you stand completely still wearing headphones while blurred figures move around you. This AI prompt preserves your exact facial identity from an uploaded image and captures urban rhythm, modern realism, and the concept of transformation through stillness in 9:16 vertical format.",
+    "image": "236.webp",
+    "file_path": "/prompt/stillness-in-motion-urban-crowd-portrait-headphones.html"
+  },
+  {
+    "id": 253,
+    "description": "Generate a realistic POV CCTV image inside an Indonesian Indomaret at night. A skater in oversized hoodie and loose pants gives the middle finger to the camera with a cold expression. Features grainy security camera quality, fisheye perspective, greenish-blue tint, and authentic timestamp overlay. Snack shelves and promo posters in background. 9:16 aspect ratio.",
+    "image": "253.jpg",
+    "file_path": "/prompt/cctv-rebellion-indomaret-ai-prompt.html"
+  },
+  {
+    "id": 273,
+    "description": "Generate a warm, photorealistic scene placing yourself in a cozy living room environment. Perfect for capturing authentic, peaceful moments with professional cinematic quality.",
+    "image": "273.jpg",
+    "file_path": "/prompt/how-to-create-a-candid-documentary-style-living-room-portrait"
+  },
+  {
+    "id": 292,
+    "description": "Generate a moody cinematic portrait of yourself sitting on a sofa in a cozy Brooklyn living room, looking thoughtfully out a window. Perfect for indie film aesthetics, actor headshots, or atmospheric personal photography.",
+    "image": "292.jpg",
+    "file_path": "/prompt/brooklyn-indie-film-sofa-portrait-prompt"
+  }
+]

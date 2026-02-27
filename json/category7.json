@@ -1,0 +1,74 @@
+[
+  {
+    "id": 2,
+    "description": "Generate realistic AI selfies with this prompt, recreating a 2010s iPhone-style candid photo. The image features Kirsten Stewart and yourself (matching your facial structure from a reference image) perched on Billie Eilish’s shoulder, with a blank expression and no specific composition. Designed to mimic imperfect moments, it includes slight blur, grainy texture, flash photography, soft focus, and optional accessories like eyeliner, jewelry, or face stickers. Perfect for creating nostalgic, lo-fi, and artistic candid portraits in 9:16 aspect ratio.",
+    "image": "114.jpeg",
+    "file_path": "/prompt/2010s_iPhone_Selfie_Candid_Style_AI_Prompt_for_LoFi_Portraits.html"
+  },
+  {
+    "id": 123,
+    "description": "",
+    "image": "83.jpeg",
+    "file_path": "/prompt/Vintage_Photo_of_an_Arrest_by_a_Sheriff.html"
+  },
+  {
+    "id": 124,
+    "description": "",
+    "image": "89.jpeg",
+    "file_path": "/prompt/Vintage_Portrait_of_a_Character_with_a_Creepy_Puppet.html"
+  },
+  {
+    "id": 141,
+    "description": "AI art prompt to edit a face image into a portrait of a person sitting casually on a wooden chair in a room covered with retro-style newspaper and magazine clippings. The subject wears a Korean-style outfit, with a calm and slightly serious expression. Warm yellow-toned lighting creates a vintage, Y2K-inspired Korean street style atmosphere.",
+    "image": "142.jpeg",
+    "file_path": "/prompt/korean_street_style_retro_room.html"
+  },
+  {
+    "id": 148,
+    "description": "Create a retro, vintage-inspired portrait with a bright yet grainy film aesthetic. This prompt ensures the subject’s face stays true to the reference photo while styling them in a Pinterest-inspired brown retro saree. With 90s movie vibes, red curls, a flower tucked into the hair, and golden-hour lighting against a plain wall, the result feels cinematic, artistic, and romantic with deep dramatic shadows.",
+    "image": "116.jpeg",
+    "file_path": "/prompt/trending_Retro_90s_Cinematic_Portrait_AI_Prompt.html"
+  },
+  {
+    "id": 154,
+    "description": "AI prompt for creating a 90s disposable camera portrait of a young person with pale complexion, modern hairstyle, and subtle smirk. Features a gradient green shirt, cluttered background with polaroids, and harsh flash lighting for realistic late-night vibe.",
+    "image": "154.webp",
+    "file_path": "/prompt/90s-disposable-camera-portrait-ai-prompt.html"
+  },
+  {
+    "id": 164,
+    "description": "AI prompt to generate a portrait that looks like a raw, grainy 90s disposable camera flash photo. Creates an image of a person in a denim jacket against a cluttered wall, using a face reference.",
+    "image": "164.jpg",
+    "file_path": "/prompt/90s-disposable-camera-snapshot-ai-photo-prompt.html"
+  },
+  {
+    "id": 180,
+    "description": "AI prompt to create a nostalgic 1990s-style portrait of you drinking from a mug. Features a fisheye lens effect, muted vintage colors, an aged interior with glossy tiles, and realistic textures for a retro film look.",
+    "image": "180.webp",
+    "file_path": "/prompt/retro-1990s-ai-prompt-casual-portrait-mug-fisheye-lens.html"
+  },
+  {
+    "id": 187,
+    "description": "AI prompt for creating authentic 90s grunge portraits with disposable camera effects. Features flannel shirts, ripped posters, harsh flash, and heavy grain for vintage snapshot style.",
+    "image": "187.jpg",
+    "file_path": "/prompt/90s-grunge-disposable-camera-portrait-ai-prompt.html"
+  },
+  {
+    "id": 189,
+    "description": "AI prompt for creating vertical three-frame portrait collages with rooftop night photography. Features candid smartphone style, leather jacket textures, and city light backgrounds in stacked composition.",
+    "image": "189.webp",
+    "file_path": "/prompt/rooftop-night-portrait-collage-ai-prompt.html"
+  },
+  {
+    "id": 204,
+    "description": "AI prompt creates three vertical split-screen photos with identical faces using 1990s digital camera style, harsh flash, red eye effect, and Y2K aesthetic.",
+    "image": "204.jpg",
+    "file_path": "/prompt/90s-digital-camera-split-screen-prompt-consistent-faces.html"
+  },
+  {
+    "id": 293,
+    "description": "Generate an ultra-realistic luxury editorial portrait of yourself in a vintage bookstore, captured through dusty glass with dramatic golden hour backlighting. Perfect for nostalgic fashion editorials, actor portfolios, or fine art photography.",
+    "image": "293.jpg",
+    "file_path": "/prompt/vintage-bookstore-cinematic-portrait-1990s-aesthetic-prompt"
+  }
+]

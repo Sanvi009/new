@@ -1,0 +1,128 @@
+[
+  {
+    "id": 13,
+    "description": "Render your template design as a cold metallic can with realistic condensation, placed upright in the center of the frame. Surround the can with a glowing liquid splash that matches the flavor, creating a dynamic and eye-catching effect. The scene uses cinematic studio lighting with ultra-sharp focus and contrast, perfect for product mockups, advertising visuals, and photorealistic AI-generated marketing assets.",
+    "image": "117.jpeg",
+    "file_path": "/prompt/AI_Prompt_for_Realistic_Metallic_Can_Product_Render.html"
+  },
+  {
+    "id": 27,
+    "description": "",
+    "image": "3.jpeg",
+    "file_path": "/prompt/Cinematic_Flavor_Explosion_of_Indonesian_Beef_Rendang.html"
+  },
+  {
+    "id": 29,
+    "description": "",
+    "image": "15.jpeg",
+    "file_path": "/prompt/Cinematic_Photo_of_Food_Falling_into_a_Bowl.html"
+  },
+  {
+    "id": 31,
+    "description": "",
+    "image": "99.jpeg",
+    "file_path": "/prompt/Cinematic_Photo_of_a_Drink_Falling_into_a_Cup.html"
+  },
+  {
+    "id": 33,
+    "description": "",
+    "image": "64.jpeg",
+    "file_path": "/prompt/Cinematic_Spicy_Fried_Chicken_with_Flames.html"
+  },
+  {
+    "id": 54,
+    "description": "",
+    "image": "37.jpeg",
+    "file_path": "/prompt/Summer_Gin_Cocktail_with_Oranges_on_Pink_Stone.html"
+  },
+  {
+    "id": 63,
+    "description": "",
+    "image": "73.jpeg",
+    "file_path": "/prompt/Google_Chrome_Logo_Made_from_Autumn_Leaves.html"
+  },
+  {
+    "id": 64,
+    "description": "",
+    "image": "105.jpeg",
+    "file_path": "/prompt/Hand_Carved_Wooden_Logo_with_Gold_Leaf.html"
+  },
+  {
+    "id": 68,
+    "description": "",
+    "image": "54.jpeg",
+    "file_path": "/prompt/Hyper-Realistic_Product_Shot_in_a_Mossy_Stream.html"
+  },
+  {
+    "id": 69,
+    "description": "",
+    "image": "63.jpeg",
+    "file_path": "/prompt/Hyper-Realistic_Splash_Ad_for_a_Sour_Apple_Drink.html"
+  },
+  {
+    "id": 70,
+    "description": "",
+    "image": "36.jpeg",
+    "file_path": "/prompt/Hyper-Realistic_Splash_Ad_for_an_Ice_Cold_Drink.html"
+  },
+  {
+    "id": 71,
+    "description": "",
+    "image": "46.jpeg",
+    "file_path": "/prompt/Hyper-Realistic_Splash_Ad_for_an_Ice_Cold_Soda.html"
+  },
+  {
+    "id": 80,
+    "description": "",
+    "image": "23.jpeg",
+    "file_path": "/prompt/Luxury_Restaurant_Photo_Shoot_of_a_Beverage_Can.html"
+  },
+  {
+    "id": 81,
+    "description": "",
+    "image": "52.jpeg",
+    "file_path": "/prompt/Luxury_Shower_Gel_Bottle_on_a_Mossy_Stone.html"
+  },
+  {
+    "id": 94,
+    "description": "",
+    "image": "33.jpeg",
+    "file_path": "/prompt/Office_Elevator_Flooded_with_Branded_Energy_Drinks.html"
+  },
+  {
+    "id": 95,
+    "description": "",
+    "image": "48.jpeg",
+    "file_path": "/prompt/Office_Elevator_Flooded_with_Branded_Objects.html"
+  },
+  {
+    "id": 98,
+    "description": "",
+    "image": "71.jpeg",
+    "file_path": "/prompt/Photorealistic_Image_of_a_Hand_Holding_an_Object.html"
+  },
+  {
+    "id": 110,
+    "description": "",
+    "image": "35.jpeg",
+    "file_path": "/prompt/Scottish_Whisky_Ad_with_Moss_and_Water_Splashes.html"
+  },
+  {
+    "id": 152,
+    "description": "AI prompt for generating hyper-realistic cinematic images of a perfume bottle. Creates dark luxury mood with smoke, reflections, and professional lighting for ad campaigns.",
+    "image": "152.webp",
+    "file_path": "/prompt/cinematic-perfume-bottle-image-prompt.html"
+  },
+  {
+    "id": 160,
+    "description": "AI prompt for a hyper-realistic advertisement photo of a cola drink. Creates a dramatic spiral of ice cubes and liquid splash with a central bottle, studio lighting, and condensation.",
+    "image": "160.webp",
+    "file_path": "/prompt/photorealistic-ice-cola-splash-spiral-ad-photo-prompt.html"
+  },
+  {
+    "id": 161,
+    "description": "AI prompt to create a cinematic studio photograph of a product on red velvet. Uses professional lighting terms for a dramatic, high-end ad look, based on an uploaded reference image.",
+    "image": "161.webp",
+    "file_path": "/prompt/cinematic-luxury-product-studio-photo-red-velvet-prompt.html"
+  }
+]

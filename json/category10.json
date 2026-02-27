@@ -1,0 +1,182 @@
+[
+  {
+    "id": 25,
+    "description": "",
+    "image": "109.jpeg",
+    "file_path": "/prompt/Caricature_Portrait_with_Exaggerated_Features.html"
+  },
+  {
+    "id": 26,
+    "description": "",
+    "image": "56.jpeg",
+    "file_path": "/prompt/Caricature_of_a_Modern_Character_in_Streetwear.html"
+  },
+  {
+    "id": 38,
+    "description": "",
+    "image": "25.jpeg",
+    "file_path": "/prompt/Cute_Pixar_Style_Mascot_Front_and_Back_Views.html"
+  },
+  {
+    "id": 46,
+    "description": "",
+    "image": "85.jpeg",
+    "file_path": "/prompt/Embroidered_Art_of_a_Subject_on_Linen.html"
+  },
+  {
+    "id": 90,
+    "description": "",
+    "image": "88.jpeg",
+    "file_path": "/prompt/Mona_Lisa_Redesigned_in_a_Different_Art_Style.html"
+  },
+  {
+    "id": 99,
+    "description": "",
+    "image": "19.jpeg",
+    "file_path": "/prompt/Pop_Art_Makeup_Ad_with_Four_Stylish_Girls.html"
+  },
+  {
+    "id": 100,
+    "description": "",
+    "image": "17.jpeg",
+    "file_path": "/prompt/Pop_Art_Portrait_with_Halftone_Dots_and_Bold_Colors.html"
+  },
+  {
+    "id": 121,
+    "description": "",
+    "image": "6.jpeg",
+    "file_path": "/prompt/Textured_Acrylic_Painting_of_a_Character_Riding_a_Vehicle.html"
+  },
+  {
+    "id": 144,
+    "description": "AI art prompt to create a striking composition where the main subject is rendered in full photorealistic color while set against a black-and-white multi-panel comic strip. The figure appears to interact with the comic world, stepping out of panels or frozen inside them, creating a dynamic contrast between realism and bold illustrated storytelling.",
+    "image": "138.jpeg",
+    "file_path": "/prompt/photorealistic_character_with_comic_backdrop.html"
+  },
+  {
+    "id": 166,
+    "description": "AI prompt to convert any portrait photo into a stylish pop-art vector illustration. Creates bold outlines, vibrant colors, comic effects like bursts and motion lines, and adds a cute background with pink hearts.",
+    "image": "166.jpg",
+    "file_path": "/prompt/pop-art-vector-portrait-photo-prompt.html"
+  },
+  {
+    "id": 194,
+    "description": "AI prompt creates photorealistic characters breaking out of manga panels. Dynamic running pose with dramatic lighting. Black-and-white comic background with 9:16 vertical format. Perfect for character art and portraits.",
+    "image": "194.jpg",
+    "file_path": "/prompt/manga-to-realistic-character-breaking-out-of-comic-prompt.html"
+  },
+  {
+    "id": 214,
+    "description": "AI prompt to create exaggerated 3D caricature portraits from photos. Preserves facial likeness while transforming into stylized character art with fashion accessories, clean 3D rendering, and studio lighting.",
+    "image": "214.jpg",
+    "file_path": "/prompt/3d-caricature-portrait-ai-prompt-turn-photos-into-stylized-characters.html"
+  },
+  {
+    "id": 215,
+    "description": "AI prompt to convert portrait photos into hyper-detailed origami art. Creates geometric paper folds with realistic texture, matching colors from original photos, clean studio presentation.",
+    "image": "215.webp",
+    "file_path": "/prompt/origami-portrait-ai-prompt-turn-photos-into-paper-art-characters.html"
+  },
+  {
+    "id": 217,
+    "description": "Stylized black-and-white poster portrait that keeps your exact face, hair, and sunglasses. Features bold red outlines, teal vector hair, a thinking pose, and a red rectangle with 'BRAINLOOM' text. Urban editorial digital art, 9:16 aspect ratio.",
+    "image": "217.jpg",
+    "file_path": "/prompt/modern-graphic-design-portrait-poster-red-teal-outlines.html"
+  },
+  {
+    "id": 225,
+    "description": "Black and white ink illustration portrait in gritty action movie poster style. Extreme close-up, only right half of face visible. Cross-hatching, stippling, vintage engraving. Off-white paper with ink splatter. Bold 'YUSUF' typography left side. 9:16.",
+    "image": "225.jpg",
+    "file_path": "/prompt/action-movie-ink-portrait-half-face-prompt.html"
+  },
+  {
+    "id": 228,
+    "description": "Gritty street-art mixed media portrait from your photo. Black-and-white ink sketch with cross-hatching, rough pencil lines. Translucent black sunglasses color accent. Vintage newspaper collage background, vibrant orange and blue paint splashes, ink drips, paper texture. 9:16.",
+    "image": "228.jpg",
+    "file_path": "/prompt/street-art-mixed-media-portrait-sunglasses-prompt.html"
+  },
+  {
+    "id": 230,
+    "description": "Turn your photo into an 8K digital portrait with black-framed glasses and vibrant red, orange, yellow, green, blue, and purple light splashes on a grayscale face. 9:16 vertical format for mobile wallpapers or social avatars.",
+    "image": "230.webp",
+    "file_path": "/prompt/digital-portrait-me-color-light-splashes-9-16.html"
+  },
+  {
+    "id": 231,
+    "description": "Transform your photo into a heroic comic book portrait. Reflective aviator sunglasses show a golden cityscape. Low-angle perspective, cross-hatching, inked outlines, and a gritty teal/orange/red painterly background. 4K resolution, 9:16 vertical format.",
+    "image": "231.webp",
+    "file_path": "/prompt/heroic-comic-portrait-aviator-sunglasses-9-16.html"
+  },
+  {
+    "id": 247,
+    "description": "Generate a raw chaotic ink poster portrait using dense curved black scribble strokes and rough cross-hatching. Features flat orange background, minimal beige tones, and intentionally irregular tangled aura with no realism or gradients.",
+    "image": "247.jpg",
+    "file_path": "/prompt/chaotic-ink-scribble-portrait-ai-prompt.html"
+  },
+  {
+    "id": 248,
+    "description": "Generate a dramatic stylized silhouette portrait in profile against vibrant yellow. Features dark figure with energetic tousled hair, dynamic black brushstrokes and abstract splatter emanating from head and shoulders.",
+    "image": "248.jpg",
+    "file_path": "/prompt/dramatic-silhouette-profile-portrait-ai-prompt-yellow-background.html"
+  },
+  {
+    "id": 254,
+    "description": "Generate a mixed media trash polka style portrait. Side profile view wearing round sunglasses, realistic black and white photography blended with vivid orange and red geometric shapes, architectural blueprint lines, and grunge texture in the background. High contrast, cinematic lighting, sharp focus, collage aesthetic. Use uploaded image as face reference. 9:16 aspect ratio.",
+    "image": "254.jpg",
+    "file_path": "/prompt/trash-polka-portrait-with-sunglasses-ai-prompt.html"
+  },
+  {
+    "id": 255,
+    "description": "Generate a vibrant pop-art style portrait from your uploaded photo. Preserves facial features while applying bold, flowing abstract color shapes. Rich saturated palette of deep blues, warm oranges, bright yellows, reds, and purples with smooth gradients. Full-bleed artwork with clean edges, painterly digital illustration look. Includes 'Brainloom' cursive signature. 9:16 aspect ratio.",
+    "image": "255.webp",
+    "file_path": "/prompt/vibrant-pop-art-portrait-ai-prompt.html"
+  },
+  {
+    "id": 258,
+    "description": "Generate a dynamic illustration with exact facial identity from uploaded photo. Subject wears black BRAINLOOM varsity t-shirt, smiles with mouth open, holds electric guitar with AI stickers. Salt-and-pepper hair and goatee flare upward like flame. Surreal abstract background with comic patterns, bold line art, cel-shading, halftone, chromatic distortion. Low angle exaggerated proportions. 9:16.",
+    "image": "258.jpg",
+    "file_path": "/prompt/explosive-emotional-burst-illustration-ai-prompt.html"
+  },
+  {
+    "id": 263,
+    "description": "Generate a dramatic cyberpunk poster with a split composition. Features a side-profile portrait with red-orange neon sunglasses reflections, split vertically against a teal halftone dot pattern and concentric circle background. Includes typography space for 'HOMBRE' title.",
+    "image": "263.jpg",
+    "file_path": "/prompt/split-portrait-cyberpunk-poster.html"
+  },
+  {
+    "id": 264,
+    "description": "Create a minimalist cinematic poster with a split focus effect. Features a portrait with 100 facial likeness, split vertically: sharp red/orange focus on one side, soft blue halftone blur on the other. Includes a camera focus frame and 'Focus' text at the bottom.",
+    "image": "264.jpg",
+    "file_path": "/prompt/split-focus-cinematic-portrait-poster.html"
+  },
+  {
+    "id": 275,
+    "description": "Generate a dynamic vertical poster design featuring stacked black-and-white cinematic panels and a bold full-color foreground cutout with a thick white outline. Perfect for modern portrait collages.",
+    "image": "275.webp",
+    "file_path": "/prompt/how-to-create-a-vertical-poster-collage-with-stacked-photo-panels"
+  },
+  {
+    "id": 276,
+    "description": "Generate a striking editorial poster with a hyper-realistic black-and-white portrait on the right and bold stacked typography on the left, featuring a fragment face mask inside the letters.",
+    "image": "276.webp",
+    "file_path": "/prompt/how-to-create-a-minimalist-split-face-poster-with-typography"
+  },
+  {
+    "id": 278,
+    "description": "Generate a stunning top-down group shot that blends a real human subject with anime-style characters, matching a specific road background and composition.",
+    "image": "278.webp",
+    "file_path": "/prompt/how-to-create-a-cinematic-hybrid-real-life-anime-scene-prompt"
+  },
+  {
+    "id": 281,
+    "description": "Generate a bold, high-contrast pop art portrait with comic-book realism, vintage poster backgrounds, and stylized halftone shading.",
+    "image": "281.jpg",
+    "file_path": "/prompt/how-to-create-a-pop-art-comic-book-illustration-prompt"
+  },
+  {
+    "id": 282,
+    "description": "Generate a cute, playful 3D character version of yourself with exact facial likeness, soft cinematic lighting, and vibrant solid background.",
+    "image": "282.webp",
+    "file_path": "/prompt/how-to-create-a-stylized-3d-character-render-prompt"
+  }
+]

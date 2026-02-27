@@ -1,0 +1,80 @@
+[
+  {
+    "id": 5,
+    "description": "Create a hyperrealistic AI image of a person packaged like supermarket fruit. The human is placed in a red styrofoam tray, wrapped tightly in plastic with water droplets on the surface. A price tag with a barcode is stuck on their forehead, showing a serious expression. With a dark background and dramatic lighting, this prompt creates a surreal, unsettling photo that looks ultra-realistic and cinematic.",
+    "image": "123.jpeg",
+    "file_path": "/prompt/AI_Prompt_Human_Wrapped_in_Plastic_Like_Supermarket_Fruit.html"
+  },
+  {
+    "id": 6,
+    "description": "Turn a simple photo into a funny and surreal AI image: a man sleeping on top of a giant pile of bananas. Some are peeled, some unpeeled, with a few spilling over onto a wooden table. The warm light makes the yellow fruit glow, creating a playful and dream-like scene. This AI prompt is easy to use and perfect for making quirky, creative images that stand out.",
+    "image": "122.jpeg",
+    "file_path": "/prompt/AI_Prompt_Man_Sleeping_on_Bananas.html"
+  },
+  {
+    "id": 24,
+    "description": "",
+    "image": "53.jpeg",
+    "file_path": "/prompt/Cake_Disguised_as_an_Object_with_a_Bite_Mark.html"
+  },
+  {
+    "id": 27,
+    "description": "",
+    "image": "3.jpeg",
+    "file_path": "/prompt/Cinematic_Flavor_Explosion_of_Indonesian_Beef_Rendang.html"
+  },
+  {
+    "id": 29,
+    "description": "",
+    "image": "15.jpeg",
+    "file_path": "/prompt/Cinematic_Photo_of_Food_Falling_into_a_Bowl.html"
+  },
+  {
+    "id": 30,
+    "description": "",
+    "image": "7.jpeg",
+    "file_path": "/prompt/Cinematic_Photo_of_Suspended_French_Macarons_on_Black.html"
+  },
+  {
+    "id": 33,
+    "description": "",
+    "image": "64.jpeg",
+    "file_path": "/prompt/Cinematic_Spicy_Fried_Chicken_with_Flames.html"
+  },
+  {
+    "id": 36,
+    "description": "",
+    "image": "9.jpeg",
+    "file_path": "/prompt/Cozy_Giant_Food_Item_Bed_in_a_Dreamy_Room.html"
+  },
+  {
+    "id": 54,
+    "description": "",
+    "image": "37.jpeg",
+    "file_path": "/prompt/Summer_Gin_Cocktail_with_Oranges_on_Pink_Stone.html"
+  },
+  {
+    "id": 57,
+    "description": "",
+    "image": "57.jpeg",
+    "file_path": "/prompt/Funny_Fight_Between_a_Lady_Finger_and_a_Potato.html"
+  },
+  {
+    "id": 77,
+    "description": "",
+    "image": "11.jpeg",
+    "file_path": "/prompt/Lifestyle_Photo_of_Swahili_Donuts_and_Spiced_Chai.html"
+  },
+  {
+    "id": 96,
+    "description": "",
+    "image": "14.jpeg",
+    "file_path": "/prompt/Overhead_View_of_Bell_Peppers_Spelling_M_on_a_Plate.html"
+  },
+  {
+    "id": 110,
+    "description": "",
+    "image": "35.jpeg",
+    "file_path": "/prompt/Scottish_Whisky_Ad_with_Moss_and_Water_Splashes.html"
+  }
+]

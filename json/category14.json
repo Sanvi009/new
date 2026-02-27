@@ -1,0 +1,38 @@
+[
+  {
+    "id": 47,
+    "description": "",
+    "image": "10.jpeg",
+    "file_path": "/prompt/Extreme_Close-Up_of_a_Spider's_Head_Under_a_Microscope.html"
+  },
+  {
+    "id": 82,
+    "description": "",
+    "image": "61.jpeg",
+    "file_path": "/prompt/Macro_Cinematic_Study_of_a_Frosted_Textured_Subject.html"
+  },
+  {
+    "id": 83,
+    "description": "",
+    "image": "39.jpeg",
+    "file_path": "/prompt/Macro_Photo_of_a_Glass_Cybernetic_Emoji_with_LEDs.html"
+  },
+  {
+    "id": 87,
+    "description": "",
+    "image": "95.jpeg",
+    "file_path": "/prompt/Miniature_Baby_Animal_Perched_on_a_Painted_Nail.html"
+  },
+  {
+    "id": 138,
+    "description": "AI prompt to generate an ultra-realistic extreme close-up portrait of the reference face, highlighting exact features, detailed skin texture, natural dewy shine, and wet hair strands. Focus is on raw photorealism with directional lighting and sharp clarity around the eye for dramatic intensity.",
+    "image": "143.jpeg",
+    "file_path": "/prompt/extreme_closeup_portrait_realistic_skin.html"
+  },
+  {
+    "id": 188,
+    "description": "AI prompt for creating extreme close-up wet portraits with water droplets, sweat effects, and wet hair. Profile view with soft lighting and bokeh background for professional portrait style.",
+    "image": "188.jpg",
+    "file_path": "/prompt/wet-close-up-portrait-ai-prompt-water-droplets.html"
+  }
+]

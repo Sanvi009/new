@@ -1,0 +1,38 @@
+[
+  {
+    "id": 7,
+    "description": "Generate a photorealistic AI selfie where a man holds a smartphone and poses next to Predator from the movie, smiling like friends. A facehugger perches on his shoulder, adding a playful sci-fi twist. The image has bright daylight, natural colors, and cinematic quality, capturing a cheerful and detailed moment. Perfect for making quirky, high-quality AI selfies with movie characters.",
+    "image": "127.jpeg",
+    "file_path": "/prompt/AI_Prompt_Selfie_with_Predator_Facehugger.html"
+  },
+  {
+    "id": 43,
+    "description": "",
+    "image": "62.jpeg",
+    "file_path": "/prompt/Double_Exposure_of_Sonic_and_Green_Hill_Zone.html"
+  },
+  {
+    "id": 91,
+    "description": "Create epic Monster Jam World Finals posters with this ready-to-use AI art prompt. This page includes the full prompt, 2 example images, and 4 different variations to generate unique Monster Jam designs featuring Grave Digger, Max-D, and El Toro Loco. Learn how to use the prompt step by step, get answers to common questions about AI poster prompts, and start making hyper-realistic, cinematic Monster Jam artwork instantly. Perfect for fans, digital artists, or anyone using AI to create Monster Jam posters.",
+    "image": "126.jpeg",
+    "file_path": "/prompt/Monster_Jam_World_Finals_Poster_AI_Prompt_Grave_Digger_MaxD_El_Toro_Loco.html"
+  },
+  {
+    "id": 104,
+    "description": "",
+    "image": "31.jpeg",
+    "file_path": "/prompt/Realistic_Portrait_of_a_Battle-Worn_Anime_Character.html"
+  },
+  {
+    "id": 132,
+    "description": "Photorealistic prompt to create a cinematic medium-shot portrait of a boy seated on a weathered, red-brown fire escape wearing a detailed Spider-Man suit. Uses DSLR telephoto compression, shallow depth of field, golden-hour warm lighting, and high-detail textures for realistic skin, suit, and environment. Best results when the reference image is supplied for accurate likeness and hair styling.",
+    "image": "135.jpeg",
+    "file_path": "/prompt/boy_in_spiderman_suit_on_fire_escape.html"
+  },
+  {
+    "id": 192,
+    "description": "Generate a dramatic South Indian cinema-style movie poster using your photo. Creates an epic composition with a close-up portrait and a vintage motorcycle action scene, rendered in hyper-realistic 16K detail.",
+    "image": "192.jpg",
+    "file_path": "/prompt/south-indian-cinematic-movie-poster-prompt.html"
+  }
+]

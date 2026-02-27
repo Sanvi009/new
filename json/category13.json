@@ -1,0 +1,56 @@
+[
+  {
+    "id": 48,
+    "description": "",
+    "image": "41.jpeg",
+    "file_path": "/prompt/Extreme_Slow_Motion_of_a_Face_Being_Squeezed.html"
+  },
+  {
+    "id": 49,
+    "description": "",
+    "image": "106.jpeg",
+    "file_path": "/prompt/Extreme_Slow_Motion_of_a_Head_Through_a_Window.html"
+  },
+  {
+    "id": 50,
+    "description": "",
+    "image": "68.jpeg",
+    "file_path": "/prompt/Extreme_Slow_Motion_of_a_Heavy_Barbell_Arm_Curl.html"
+  },
+  {
+    "id": 51,
+    "description": "",
+    "image": "92.jpeg",
+    "file_path": "/prompt/Extreme_Slow_Motion_of_a_Heavy_Shoulder_Press.html"
+  },
+  {
+    "id": 52,
+    "description": "",
+    "image": "67.jpeg",
+    "file_path": "/prompt/Extreme_Slow_Motion_of_a_Punch_Through_Glass.html"
+  },
+  {
+    "id": 67,
+    "description": "",
+    "image": "24.jpeg",
+    "file_path": "/prompt/Hyper-Realistic_Embroidered_Patch_on_a_Dark_Fabric.html"
+  },
+  {
+    "id": 137,
+    "description": "AI art prompt to design a bold, modern sports poster of a Pakistan cricket player celebrating a century in the Asia Cup. Features a large dramatic profile portrait in the background with dynamic green and white abstract strokes, and a full-body foreground figure raising his bat high in triumph. Perfect for generating high-energy, patriotic sports visuals.",
+    "image": "137.jpeg",
+    "file_path": "/prompt/cricket_century_celebration_poster.html"
+  },
+  {
+    "id": 156,
+    "description": "AI prompt to create a hyper-realistic portrait of a billiards player. A man in a brown polo jersey leans over a blue pool table, focusing on a shot. Uses detailed clothing and pose description.",
+    "image": "156.webp",
+    "file_path": "/prompt/realistic-billiards-player-portrait-prompt.html"
+  },
+  {
+    "id": 270,
+    "description": "This prompt creates a Renaissance painting style high-speed motion blur photo of a soccer player mid-kick. Features dramatic dark background, moody spotlighting, glowing teal (#02B2CA) and violet (#AC03FC) motion trails, realistic athletic pose, and cinematic sports photography aesthetic.",
+    "image": "270.webp",
+    "file_path": "/prompt/renaissance-painting-soccer-motion-blur-ai-prompt.html"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 20,
+    "description": "",
+    "image": "29.jpeg",
+    "file_path": "/prompt/Golden_Hour_Portrait_on_a_City_Street.html"
+  },
+  {
+    "id": 21,
+    "description": "",
+    "image": "32.jpeg",
+    "file_path": "/prompt/Black_and_White_Street_Photo_of_a_Chase_Scene.html"
+  },
+  {
+    "id": 30,
+    "description": "",
+    "image": "30.jpeg",
+    "file_path": "/prompt/Cinematic_Portrait_Walking_with_Purpose_in_the_City.html"
+  },
+  {
+    "id": 114,
+    "description": "",
+    "image": "58.jpeg",
+    "file_path": "/prompt/Street_Photo_of_an_Animal_in_an_Urban_Setting.html"
+  },
+  {
+    "id": 165,
+    "description": "A hyper-realistic AI image prompt for a man in streetwear holding a large alligator on a chain leash. Set in a gritty underground parking lot with graffiti walls and dramatic cinematic lighting from a single overhead lamp.",
+    "image": "165.webp",
+    "file_path": "/prompt/guy-alligator-leash-graffiti-parking-lot-prompt.html"
+  },
+  {
+    "id": 168,
+    "description": "An AI prompt to create a cinematic, full-body portrait of you as a biker in edgy streetwear. You're riding a black cruiser motorcycle with an urban cafe in the background, featuring moody teal-gray color grading and a 35mm film aesthetic.",
+    "image": "168.jpg",
+    "file_path": "/prompt/biker-street-style-portrait-ai-prompt.html"
+  },
+  {
+    "id": 174,
+    "description": "AI prompt to generate a candid, high-angle night photo of you standing outside a lit minimarket. Wears a denim jacket and jeans, holds a coffee cup, with a film camera aesthetic, desaturated colors, and fine grain. Shot in 9:16 vertical format.",
+    "image": "174.webp",
+    "file_path": "/prompt/candid-night-street-fashion-ai-prompt-minimarket-portrait-from-above.html"
+  },
+  {
+    "id": 190,
+    "description": "AI prompt for creating hyperrealistic cinematic portraits on underground subway platforms. Features angled posing, direct gaze, and dim lighting for moody urban photography style.",
+    "image": "190.webp",
+    "file_path": "/prompt/underground-subway-platform-portrait-ai-prompt.html"
+  },
+  {
+    "id": 223,
+    "description": "Low-angle city street portrait prompt with exact identity preservation. Stand amid towering skyscrapers curving inward. Gray t-shirt with BRAINLOOM text, camouflage cargo shorts, backpack, black headphones, water bottle. Clear blue sky, 9:16.",
+    "image": "223.jpg",
+    "file_path": "/prompt/low-angle-city-street-portrait-prompt.html"
+  },
+  {
+    "id": 228,
+    "description": "Gritty street-art mixed media portrait from your photo. Black-and-white ink sketch with cross-hatching, rough pencil lines. Translucent black sunglasses color accent. Vintage newspaper collage background, vibrant orange and blue paint splashes, ink drips, paper texture. 9:16.",
+    "image": "228.jpg",
+    "file_path": "/prompt/street-art-mixed-media-portrait-sunglasses-prompt.html"
+  },
+  {
+    "id": 229,
+    "description": "Cinematic full-body urban portrait in empty ruined city street. Dense fog, desaturated teal/green-gray. Long dark overcoat, scarf, hands in pockets. Serious distant expression, messy wavy hair. Tall buildings corridor. 9:16.",
+    "image": "229.jpg",
+    "file_path": "/prompt/ruined-city-fog-portrait-long-overcoat-prompt.html"
+  },
+  {
+    "id": 240,
+    "description": "Generate a top-down aerial street photo of yourself holding a bicycle. This prompt creates an editorial fashion shot with a minimalist vibe, teal bike lanes, and ultra-realistic 4K details.",
+    "image": "240.jpg",
+    "file_path": "/prompt/urban-street-photography-ai-prompt-bicycle.html"
+  },
+  {
+    "id": 253,
+    "description": "Generate a realistic POV CCTV image inside an Indonesian Indomaret at night. A skater in oversized hoodie and loose pants gives the middle finger to the camera with a cold expression. Features grainy security camera quality, fisheye perspective, greenish-blue tint, and authentic timestamp overlay. Snack shelves and promo posters in background. 9:16 aspect ratio.",
+    "image": "253.jpg",
+    "file_path": "/prompt/cctv-rebellion-indomaret-ai-prompt.html"
+  },
+  {
+    "id": 294,
+    "description": "Generate a dynamic street portrait where you stand perfectly still while the crowd blurs around you. Perfect for artistic photography, urban storytelling, or creating powerful visual metaphors about focus and presence.",
+    "image": "294.webp",
+    "file_path": "/prompt/stillness-in-motion-street-photography-prompt"
+  },
+  {
+    "id": 296,
+    "description": "Generate an ultra-realistic Tokyo street scene featuring you as a stylish pedestrian crossing with Tokyo Tower in the background. Perfect for street style content, travel photography, or vintage-inspired urban portraits.",
+    "image": "296.jpg",
+    "file_path": "/prompt/tokyo-street-style-vintage-film-aesthetic-prompt"
+  }
+]

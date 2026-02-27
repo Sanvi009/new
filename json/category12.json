@@ -1,0 +1,110 @@
+[
+  {
+    "id": 5,
+    "description": "Create a hyperrealistic AI image of a person packaged like supermarket fruit. The human is placed in a red styrofoam tray, wrapped tightly in plastic with water droplets on the surface. A price tag with a barcode is stuck on their forehead, showing a serious expression. With a dark background and dramatic lighting, this prompt creates a surreal, unsettling photo that looks ultra-realistic and cinematic.",
+    "image": "123.jpeg",
+    "file_path": "/prompt/AI_Prompt_Human_Wrapped_in_Plastic_Like_Supermarket_Fruit.html"
+  },
+  {
+    "id": 35,
+    "description": "",
+    "image": "93.jpeg",
+    "file_path": "/prompt/Comical_Photo_of_a_Person_Trapped_in_a_Bottle.html"
+  },
+  {
+    "id": 59,
+    "description": "",
+    "image": "5.jpeg",
+    "file_path": "/prompt/Glowing_Kebab_Billboard_in_a_Middle_Eastern_Night_Market.html"
+  },
+  {
+    "id": 88,
+    "description": "",
+    "image": "60.jpeg",
+    "file_path": "/prompt/Miniature_Scene_Inside_a_Glass_Bottle_with_a_Light.html"
+  },
+  {
+    "id": 106,
+    "description": "",
+    "image": "94.jpeg",
+    "file_path": "/prompt/Render_of_a_Glass_Bottle_with_Objects_Inside.html"
+  },
+  {
+    "id": 107,
+    "description": "",
+    "image": "47.jpeg",
+    "file_path": "/prompt/Render_of_an_Object_Covered_in_Glowing_Neon_Fur.html"
+  },
+  {
+    "id": 108,
+    "description": "",
+    "image": "75.jpeg",
+    "file_path": "/prompt/Retro_Surreal_Art_with_a_Car_and_Floating_Animals.html"
+  },
+  {
+    "id": 119,
+    "description": "",
+    "image": "43.jpeg",
+    "file_path": "/prompt/Surreal_Photo_of_Lava_Flowing_from_a_Polaroid.html"
+  },
+  {
+    "id": 125,
+    "description": "",
+    "image": "59.jpeg",
+    "file_path": "/prompt/Water_Sculpture_Bust_with_a_Name_Text.html"
+  },
+  {
+    "id": 126,
+    "description": "",
+    "image": "22.jpeg",
+    "file_path": "/prompt/Water_Sculpture_of_a_Cola_Can_with_Lemons.html"
+  },
+  {
+    "id": 140,
+    "description": "AI prompt for creating a high-resolution, hyperrealistic image of an object sealed inside a crinkled metallic or transparent vacuum pouch. The packaging tightly conforms to the shape, exaggerating curves, edges, and textures for maximum realism. Small creases, condensation, and harsh lighting emphasize surface tension, while the object inside stays bold and clean with an iconic silhouette. Minimal white or soft gray background, SKU codes, and dystopian branding overlays add a collectible, archival product-display aesthetic.",
+    "image": "148.jpeg",
+    "file_path": "/prompt/hyperrealistic_vacuum_sealed_object.html"
+  },
+  {
+    "id": 147,
+    "description": "AI prompt to design a surreal artistic portrait layered with nostalgic Korean corner store elements for a streetwear-style t-shirt back print. The face is blended with vintage stationery shops, retro snack packaging, wooden shelves, and hand-painted Korean signs. Collage-like textures and warm nostalgic tones create an expressive, urban aesthetic suitable for fabric screen printing.",
+    "image": "144.jpeg",
+    "file_path": "/prompt/surreal_korean_bodega_collage_portrait_tshirt.html"
+  },
+  {
+    "id": 171,
+    "description": "AI prompt to create a surreal fashion portrait in a public restroom. You stand in all-black streetwear while flat, graphic turquoise cartoon creatures interact with the stalls and environment, creating a mixed-media editorial look in 9:16 format.",
+    "image": "171.webp",
+    "file_path": "/prompt/surreal-urban-fashion-ai-prompt-cartoon-creatures-restroom-photo.html"
+  },
+  {
+    "id": 197,
+    "description": "AI prompt creates psychological horror scenes with mirror reflections showing dual personalities. Uses your reference photo for accurate facial matching. Features teal dark tones, foggy atmosphere, and dramatic 9:16 vertical composition.",
+    "image": "197.jpg",
+    "file_path": "/prompt/psychological-horror-mirror-scene-ai-prompt-dual-personality.html"
+  },
+  {
+    "id": 245,
+    "description": "Generate a surreal conceptual artwork where thousands of tiny people form a giant side-profile face that dissolves into stone, moss, and roots. Features dramatic top-down lighting and minimal white background.",
+    "image": "245.webp",
+    "file_path": "/prompt/surreal-face-formed-by-people-ai-art-prompt.html"
+  },
+  {
+    "id": 286,
+    "description": "Generate an ultra-realistic medium shot of a person sitting on a brown leather sofa atop a mountain, surrounded by foggy hills. Perfect for surreal art, conceptual photography, or dreamlike personal portraits.",
+    "image": "286.jpg",
+    "file_path": "/prompt/mountain-sofa-portrait-foggy-landscape-prompt"
+  },
+  {
+    "id": 287,
+    "description": "Generate a haunting conceptual portrait of a single illuminated figure surrounded by a faceless crowd in fabric hoods. Perfect for dystopian art, social commentary, or powerful personal storytelling.",
+    "image": "287.jpg",
+    "file_path": "/prompt/dystopian-crowd-portrait-fabric-hoods-prompt"
+  },
+  {
+    "id": 289,
+    "description": "Generate an ultra-realistic image of yourself breaking out of an Instagram post frame with dramatic fisheye distortion. Perfect for social media content, personal branding, or eye-catching profile visuals.",
+    "image": "289.jpg",
+    "file_path": "/prompt/instagram-frame-breakout-fisheye-prompt"
+  }
+]
