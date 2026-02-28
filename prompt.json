@@ -2126,6 +2126,34 @@
 "keywords": "AI portrait prompt, yellow and black aesthetic, grunge body art, Midjourney portrait, cyberpunk fashion",
 "image": "306.webp",
 "file_path": "/prompt/how-to-generate-a-high-contrast-yellow-and-black-cyberpunk-portrait"
+},
+{
+  "id": 307,
+  "description": "Create a stunning 360° action-cam view of a person freefalling high above Earth with curved horizon, city below, and detailed streetwear fashion. Perfect for AI image generators.",
+  "keywords": "cinematic freefall,action cam view,above earth portrait,streetwear skydive,Jordan sneakers AI",
+  "image": "307.jpg",
+  "file_path": "/prompt/ultra-cinematic-freefall-view-above-earth"
+},
+{
+  "id": 308,
+  "description": "Create a stunning high-fashion editorial image featuring a cherry red suit, deep crimson reflective studio, and a majestic giant black panther. Perfect for avant-garde fashion campaigns and magazine covers.",
+  "keywords": "surreal fashion photography,luxury editorial portrait,crimson studio background,giant black panther,avant-garde fashion AI",
+  "image": "308.jpg",
+  "file_path": "/prompt/luxury-surreal-high-fashion-crimson-studio-panther"
+},
+{
+  "id": 309,
+  "description": "Create a striking vertical environmental portrait featuring a low crouching position, direct Xenon flash lighting, 35mm film aesthetic, and a Chevrolet Camaro SS 1969. Perfect for documentary-style automotive fashion photography.",
+  "keywords": "flash photography portrait,35mm film aesthetic,Chevrolet Camaro SS 1969,crouching pose reference,documentary fashion photography",
+  "image": "309.jpg",
+  "file_path": "/prompt/vertical-crouching-camaro-flash-photography"
+},
+{
+  "id": 310,
+  "description": "Create a cinematic fashion editorial portrait featuring a relaxed subject in an oversized beige pinstripe suit at a chaotically cluttered desk. Perfect for creative burnout concepts and magazine-style photography.",
+  "keywords": "conceptual fashion portrait,creative burnout aesthetic,cluttered desk photography,oversized suit style,editorial studio portrait",
+  "image": "310.webp",
+  "file_path": "/prompt/conceptual-studio-portrait-cluttered-de"
 }
 
 
