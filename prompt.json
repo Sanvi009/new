@@ -2154,6 +2154,34 @@
   "keywords": "conceptual fashion portrait,creative burnout aesthetic,cluttered desk photography,oversized suit style,editorial studio portrait",
   "image": "310.webp",
   "file_path": "/prompt/conceptual-studio-portrait-cluttered-de"
+},
+{
+  "id": 311,
+  "description": "Generate a high-end editorial photo of yourself leaning against a classic 90s Mercedes-Benz coupe. This prompt blends quiet luxury with streetwear aesthetics using specific wardrobe and lighting details.",
+  "keywords": "editorial fashion prompt, Mercedes-Benz AI image, streetwear portrait, film photography style, men's fashion prompt",
+  "image": "311.jpg",
+  "file_path": "/prompt/how-to-create-90s-mercedes-benz-editorial-fashion-shot"
+},
+{
+  "id": 312,
+  "description": "Generate a hyperrealistic, blockbuster-style close-up of a Viking warrior. This prompt focuses on intense facial details, cold weather effects, and historical textures for a cinema-quality result.",
+  "keywords": "IMAX Viking prompt, cinematic portrait, hyperrealistic AI image, Viking warrior art, historical character design",
+  "image": "312.jpg",
+  "file_path": "/prompt/how-to-create-imax-viking-cinematic-portrait"
+},
+{
+  "id": 313,
+  "description": "Generate an intimate, ultra-realistic selfie of yourself half-buried in a white pillow. This prompt captures a sleepy, candid morning moment with a luxurious, high-end aesthetic.",
+  "keywords": "luxury selfie prompt, candid morning photo, ultra realistic AI portrait, smartphone style image, pillow shot",
+  "image": "313.webp",
+  "file_path": "/prompt/how-to-create-luxury-morning-selfie-pillow-shot"
+},
+{
+  "id": 314,
+  "description": "Generate a dramatic, cinematic side profile of yourself featuring bold red faux fur, a leather biker jacket, and diamond jewelry. This prompt creates a high-fashion portrait with intense studio lighting.",
+  "keywords": "high fashion portrait, ushanka hat prompt, cinematic side profile, diamond jewelry AI, luxury streetwear photo",
+  "image": "314.webp",
+  "file_path": "/prompt/how-to-create-high-fashion-side-profile-with-ushanka-hat"
 }
 
 
