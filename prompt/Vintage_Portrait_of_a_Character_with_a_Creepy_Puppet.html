@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains (Step 8) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Preload first image (Step 2) -->
+    <link rel="preload" as="image" href="/images/89.jpeg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Portrait with Puppet</title>
+    <meta name="description" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="AI prompts, ChatGPT prompts, AI art, prompt engineering, Vintage Portrait with Puppet | creepy aesthetic | horror art, AI Prompts">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://brainloom.online/prompt/Vintage_Portrait_of_a_Character_with_a_Creepy_Puppet">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Vintage Portrait with Puppet">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://brainloom.online/images/89.jpeg">
+    <meta property="og:url" content="https://brainloom.online/prompt/Vintage_Portrait_of_a_Character_with_a_Creepy_Puppet">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Brainloom">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vintage Portrait with Puppet">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://brainloom.online/images/89.jpeg">
+
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Vintage Portrait with Puppet",
+  "description": "",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://brainloom.online/images/89.jpeg",
+    "width": "800",
+    "height": "600"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Brainloom",
+    "url": "https://brainloom.online"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Brainloom",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://brainloom.online/images/logo1.png"
+    }
+  },
+  "datePublished": "2025-09-20",
+  "dateModified": "2025-09-20",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://brainloom.online/prompt/Vintage_Portrait_of_a_Character_with_a_Creepy_Puppet"
+  },
+  "articleSection": "AI Image Prompts",
+  "keywords": "AI prompts, ChatGPT prompts, AI art, prompt engineering, Vintage Portrait with Puppet | creepy aesthetic | horror art, AI Prompts"
+}
+    </script>
+
+    <!-- Font Awesome (deferred) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ----- PROFESSIONAL NAVBAR ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7e0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            background: #f0f4fa;
+            border-radius: 8px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-link {
+            padding: 8px 18px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+        }
+
+        .legal-dropdown {
+            position: relative;
+        }
+
+        .legal-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #1e3a5f;
+            cursor: default;
+            border-radius: 40px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .legal-trigger i {
+            font-size: 12px;
+            color: #2d4b6e;
+            transition: transform 0.2s;
+        }
+
+        .legal-dropdown:hover .legal-trigger i {
+            transform: rotate(180deg);
+        }
+
+        .legal-dropdown:hover .legal-trigger {
+            background: #e9ecf0;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid #d0d7e0;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+
+        .legal-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            border-left-color: #1a5cff;
+        }
+
+        .mobile-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #eef2f6;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d0d7e0;
+        }
+
+        .mobile-btn span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 16px;
+            padding: 20px 16px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e2b3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+        }
+
+        .mobile-menu a:hover {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+        }
+
+        .mobile-legal {
+            margin-top: 8px;
+        }
+
+        .mobile-legal p {
+            padding: 8px 16px 4px;
+            color: #2d4b6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto 40px;
+            padding: 0 32px;
+            flex: 1;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            margin-bottom: 24px;
+            font-size: 15px;
+            color: #2d4b6e;
+        }
+
+        .breadcrumb a {
+            color: #1a5cff;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+        }
+
+        .breadcrumb a:hover {
+            border-bottom-color: #1a5cff;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+            color: #4a5f7a;
+        }
+
+        /* Prompt Header */
+        .prompt-header {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 32px;
+            border: 1px solid #d0d7e0;
+        }
+
+        .prompt-title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #0b1a2c;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .prompt-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d0d7e0;
+        }
+
+        .meta-item {
+            color: #2d4b6e;
+            font-size: 15px;
+        }
+
+        .category {
+            background: rgba(26, 92, 255, 0.15);
+            color: #1a4bcc;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .prompt-description {
+            color: #1e2b3c;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid #d0d7e0;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #0b1a2c;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #1a5cff;
+        }
+
+        /* Removed all skeleton CSS */
+
+        /* Images - 4:5 aspect ratio */
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #eef2f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #d0d7e0;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .image-container:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-container:hover .prompt-image {
+            transform: scale(1.02);
+        }
+
+        .prompt-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+            background: #eef2f6;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            position: relative;
+            animation: lightboxFadeIn 0.3s ease;
+        }
+
+        @keyframes lightboxFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .lightbox-close:hover {
+            color: #5c8dff;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            color: #f0f4fa;
+            font-size: 14px;
+        }
+
+        /* The Prompt */
+        .prompt-box {
+            background: #f0f4fa;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            border-left: 4px solid #1a5cff;
+            margin-bottom: 16px;
+        }
+
+        .prompt-text {
+            font-family: 'Courier New', monospace;
+            font-size: 15px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: #1e2b3c;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #1a5cff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 10;
+            font-weight: 500;
+            border: 1px solid #0d47b0;
+        }
+
+        .copy-btn:hover {
+            background: #0d47b0;
+        }
+
+        .copy-btn:focus {
+            outline: 2px solid #0b1a2c;
+            outline-offset: 2px;
+        }
+
+        /* Variation title and description */
+        .variation-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0b1a2c;
+            margin: 24px 0 8px 0;
+        }
+
+        .variation-description {
+            color: #2d4b6e;
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        /* Lists */
+        .simple-list {
+            list-style: none;
+        }
+
+        .simple-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #d0d7e0;
+        }
+
+        .simple-list li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #0b1a2c;
+            font-size: 16px;
+        }
+
+        .faq-answer {
+            color: #2d4b6e;
+            line-height: 1.6;
+        }
+
+        /* Prompt Cards Grid - 4:5 ratio */
+        .prompts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .prompt-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #d0d7e0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .prompt-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-image-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            cursor: pointer;
+            background: #eef2f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #d0d7e0;
+        }
+
+        .card-image-container:hover .card-image {
+            transform: scale(1.02);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            background: #eef2f6;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0b1a2c;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .card-description {
+            color: #2d4b6e;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .card-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1a5cff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background 0.2s ease;
+            width: 100%;
+            justify-content: center;
+            margin-top: auto;
+            border: 1px solid #0d47b0;
+        }
+
+        .card-btn:hover {
+            background: #0d47b0;
+        }
+
+        .card-btn i {
+            font-size: 12px;
+        }
+
+        /* ----- PROFESSIONAL FOOTER ----- */
+        .footer {
+            background: #0f1a26;
+            color: #e1eaf2;
+            padding: 40px 0 24px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.8fr;
+            gap: 40px 50px;
+            align-items: start;
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            padding: 0 24px;
+        }
+
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+
+        .footer-links a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+
+        .footer-social h4 {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .social-item a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+
+        .social-item a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+
+        .social-item i {
+            width: 20px;
+            font-size: 1.1rem;
+            color: #8fadcf;
+        }
+
+        .social-item a:hover i {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #8ba0b9;
+            font-size: 0.85rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 0 20px;
+                margin: 30px auto;
+            }
+
+            .prompt-title {
+                font-size: 28px;
+            }
+
+            .images-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 16px;
+            }
+
+            .prompts-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 16px;
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+                font-size: 40px;
+            }
+
+            .lightbox-caption {
+                bottom: 10px;
+                left: 10px;
+            }
+
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-btn {
+                display: flex;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-brand h3 {
+                font-size: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 0 16px;
+            }
+
+            .prompt-title {
+                font-size: 24px;
+            }
+
+            .prompt-meta {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .copy-btn {
+                position: static;
+                margin-top: 12px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .images-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .prompts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+                font-size: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PROFESSIONAL NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo-link">
+                <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <span class="logo-text">Brainloom</span>
+            </a>
+
+            <div class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/prompts" class="nav-link">Prompts</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="legal-dropdown">
+                    <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/">Home</a>
+                <a href="/prompts">Prompts</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content">
+            <img src="" alt="Lightbox Image" class="lightbox-image" id="lightbox-image">
+            <div class="lightbox-close" onclick="closeLightbox(event)">&times;</div>
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="/prompts">Home</a>
+            <span>/</span>
+            <span>Vintage Portrait with Puppet</span>
+        </div>
+
+        <!-- Prompt Header -->
+        <div class="prompt-header">
+            <h1 class="prompt-title">Vintage Portrait with Puppet</h1>
+
+            <div class="prompt-meta">
+                <div class="meta-item category">AI Image Prompts</div>
+                <div class="meta-item">Published: 2025-09-20</div>
+                <div class="meta-item">Author: Brainloom</div>
+            </div>
+
+            <p class="prompt-description">
+                
+            </p>
+        </div>
+
+        <!-- Images Section -->
+        <div class="content-section">
+            <h2 class="section-title">
+                <i class="fas fa-images"></i>
+                Generated Images
+            </h2>
+            <div class="images-grid">
+                <div class="image-container" onclick="openLightbox('/images/89.jpeg', 'Vintage Portrait with Puppet')">
+                    <!-- Removed skeleton -->
+                    <img src="/images/89.jpeg" 
+                         alt="Vintage Portrait with Puppet" 
+                         class="prompt-image"
+                         loading="eager"
+                         fetchpriority="high"
+                         decoding="async"
+                         width="400"
+                         height="500"
+                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+1';">
+                </div>
+                <div class="image-container" onclick="openLightbox('/images/89.89.jpeg', 'Vintage Portrait with Puppet')">
+                    <!-- Removed skeleton -->
+                    <img src="/images/89.89.jpeg" 
+                         alt="Vintage Portrait with Puppet" 
+                         class="prompt-image"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+2';">
+                </div>
+            </div>
+        </div>
+
+        <!-- The Prompt -->
+        <div class="content-section">
+            <h2 class="section-title">
+                <i class="fas fa-magic"></i>
+                The Prompt
+            </h2>
+            <div class="prompt-box">
+                <pre class="prompt-text">Vintage muted color portrait of a [CHARACTER TYPE] with [DISTINCTIVE FEATURES / CLOTHING], holding a [CREEPY PUPPET TYPE]. The softly blurred background shows [SETTING / SCENERY]. Dramatic dim lighting highlights rugged details, with sepia tones, muted vintage colors, soft focus, grainy film texture, high contrast, evoking an early 20th-century aesthetic. Digital painting.</pre>
+                <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="content-section">
+            <h2 class="section-title">
+                <i class="fas fa-book"></i>
+                How to Use This Prompt
+            </h2>
+            <p>To use this prompt professionally, deploy it for creepy portraits, horror illustrations, or vintage-themed ads in literature and film. Preserve "vintage muted color portrait," "[CHARACTER TYPE]," "[DISTINCTIVE FEATURES / CLOTHING]," and "digital painting" for early 20th-century aesthetic. Do not modify the dim lighting or film texture. Changing puppet to "doll" could produce eerie visuals, leading to blurred backgrounds, while original yields rugged, sepia outcomes.</p>
+        </div>
+
+        <!-- Prompt Variations Section (7 variations) -->
+        <div class="content-section">
+            <h2 class="section-title">
+                <i class="fas fa-random"></i>
+                Prompt Variations
+            </h2>
+
+            <!-- Variation 1 -->
+            <div class="variation-title">1. The Raggedy Doll in the Attic</div>
+            <div class="variation-description">Best for horror storytelling. Changes the setting to a dusty, cobweb-filled attic, increasing the sense of isolation and hidden dread.</div>
+            <div class="prompt-box">
+                <pre class="prompt-text">Vintage muted color portrait of a Victorian child with a tattered lace dress and hollow eyes, holding a porcelain doll with a cracked face. The softly blurred background shows a dusty, cobweb-filled attic. Dramatic dim lighting highlights rugged details, with sepia tones, muted vintage colors, soft focus, grainy film texture, high contrast, evoking an early 20th-century aesthetic. Digital painting.</pre>
+                <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+
+            <!-- Variation 2 -->
+            <div class="variation-title">2. The Clown in the Carnival Mirror</div>
+            <div class="variation-description">Best for a circus-themed macabre concept. Changes the background to a dimly lit funhouse with distorted mirror reflections, adding psychological unease.</div>
+            <div class="prompt-box">
+                <pre class="prompt-text">Vintage muted color portrait of a sad clown with exaggerated makeup and a oversized suit, holding a ventriloquist dummy with a sinister grin. The softly blurred background shows a dimly lit carnival funhouse with distorted mirrors. Dramatic dim lighting highlights rugged details, with sepia tones, muted vintage colors, soft focus, grainy film texture, high contrast, evoking an early 20th-century aesthetic. Digital painting.</pre>
+                <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+
+            <!-- Variation 3 -->
+            <div class="variation-title">3. The Soldier and the Marionette</div>
+            <div class="variation-description">Best for a melancholic, wartime narrative. Changes the character type to a weary soldier and the puppet to a handmade marionette, suggesting lost innocence.</div>
+            <div class="prompt-box">
+                <pre class="prompt-text">Vintage muted color portrait of a weary World War I soldier with a mud-splattered uniform, holding a crude handmade marionette with button eyes. The softly blurred background shows a barren, misty battlefield. Dramatic dim lighting highlights rugged details, with sepia tones, muted vintage colors, soft focus, grainy film texture, high contrast, evoking an early 20th-century aesthetic. Digital painting.</pre>
+                <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+
+            <!-- Variation 4 -->
+            <div class="variation-title">4. Close-Up on the Puppet</div>
+            <div class="variation-description">Best for emphasizing the creepy artifact. Changes the framing to an extreme close-up where the puppet is slightly more in focus than the character, shifting the focal point.</div>
+            <div class="prompt-box">
+                <pre class="prompt-text">Vintage muted color extreme close-up portrait of an old man with weathered skin and a tweed cap, holding a creepy rabbit puppet with sharp teeth. The softly blurred background shows a cluttered antique shop. Dramatic dim lighting highlights rugged details, with sepia tones, muted vintage colors, soft focus, grainy film texture, high contrast, evoking an early 20th-century aesthetic. Digital painting.</pre>
+                <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+
+            <!-- Variation 5 -->
+            <div class="variation-title">5. Moonlit Field of Scarecrows</div>
+            <div class="variation-description">Best for a folk horror aesthetic. Changes the setting to an open field at night with other scarecrow figures faintly visible in the misty background.</div>
+            <div class="prompt-box">
+                <pre class="prompt-text">Vintage muted color portrait of a farmer in patched overalls and a straw hat, holding a creepy scarecrow puppet made of burlap. The softly blurred background shows a misty field with silhouettes of other scarecrows under a full moon. Dramatic dim lighting highlights rugged details, with sepia tones, muted vintage colors, soft focus, grainy film texture, high contrast, evoking an early 20th-century aesthetic. Digital painting.</pre>
+                <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+
+            <!-- Variation 6 -->
+            <div class="variation-title">6. The Vaudeville Stage</div>
+            <div class="variation-description">Best for a theatrical, dramatic look. Changes the background to the edge of a dark vaudeville stage, with heavy velvet curtains adding a sense of performance.</div>
+            <div class="prompt-box">
+                <pre class="prompt-text">Vintage muted color portrait of a magician in a worn tuxedo and top hat, holding a creepy articulated skeleton puppet. The softly blurred background shows heavy velvet curtains and the edge of a dark vaudeville stage. Dramatic dim lighting highlights rugged details, with sepia tones, muted vintage colors, soft focus, grainy film texture, high contrast, evoking an early 20th-century aesthetic. Digital painting.</pre>
+                <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+
+            <!-- Variation 7 -->
+            <div class="variation-title">7. Rembrandt Lighting Intensified</div>
+            <div class="variation-description">Best for a painterly, fine art feel. Changes the lighting to a strong Rembrandt pattern, casting most of the face in shadow except for a small, dramatic triangle of light.</div>
+            <div class="prompt-box">
+                <pre class="prompt-text">Vintage muted color portrait of a librarian with round spectacles and a high-collared dress, holding a creepy monkey with cymbals puppet. The softly blurred background shows a dimly lit library with towering shelves. Dramatic Rembrandt lighting highlights rugged details, with sepia tones, muted vintage colors, soft focus, grainy film texture, high contrast, evoking an early 20th-century aesthetic. Digital painting.</pre>
+                <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="content-section">
+            <h2 class="section-title">
+                <i class="fas fa-question-circle"></i>
+                Frequently Asked Questions
+            </h2>
+            <ul class="simple-list">
+                <li>
+                    <div class="faq-question">What vintage photographic qualities are required?</div>
+                    <div class="faq-answer">The image should have sepia tones, muted vintage colors, soft focus, and grainy film texture.</div>
+                </li>
+                <li>
+                    <div class="faq-question">What is the subject holding?</div>
+                    <div class="faq-answer">The subject is holding a [CREEPY PUPPET TYPE].</div>
+                </li>
+                <li>
+                    <div class="faq-question"></div>
+                    <div class="faq-answer"></div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Related Prompts -->
+        <div class="content-section">
+            <h2 class="section-title">
+                <i class="fas fa-link"></i>
+                Related Prompts
+            </h2>
+            <div class="prompts-grid">
+                <!-- Related 1 -->
+                <div class="prompt-card">
+                    <div class="card-image-container" onclick="openLightbox('/images/197.jpg', 'psychological-horror-mirror-scene-ai-prompt-dual-personality')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/197.jpg" alt="psychological-horror-mirror-scene-ai-prompt-dual-personality" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">psychological-horror-mirror-scene-ai-prompt-dual-personality</h3>
+                        <p class="card-description">AI prompt creates psychological horror scenes with mirror reflections showing dual personalities. Uses your reference photo for accurate facial matching. Features teal dark tones, foggy atmosphere, and dramatic 9:16 vertical composition.</p>
+                        <a href="/prompt/psychological-horror-mirror-scene-ai-prompt-dual-personality.html" class="card-btn">
+                            View Prompt <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related 2 -->
+                <div class="prompt-card">
+                    <div class="card-image-container" onclick="openLightbox('/images/246.webp', 'branded-blue-armchair-fashion-portrait-ai-prompt')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/246.webp" alt="branded-blue-armchair-fashion-portrait-ai-prompt" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">branded-blue-armchair-fashion-portrait-ai-prompt</h3>
+                        <p class="card-description">Generate a full-body studio fashion portrait of yourself in a sculptural cobalt blue armchair with 'Brainloom' 3D letters. Features matching blue jumpsuit, white socks, chunky sneakers, and high-key lighting against a seamless cyan background.</p>
+                        <a href="/prompt/branded-blue-armchair-fashion-portrait-ai-prompt.html" class="card-btn">
+                            View Prompt <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related 3 -->
+                <div class="prompt-card">
+                    <div class="card-image-container" onclick="openLightbox('/images/147.jpeg', 'cinematic underground male portrait')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/147.jpeg" alt="cinematic underground male portrait" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">cinematic underground male portrait</h3>
+                        <p class="card-description">AI prompt for an ultra-realistic 8K cinematic portrait of a stylish young man crouched confidently next to a rugged black pickup truck in a dark underground parking garage. The subject wears a black leather jacket, black outfit, and sunglasses, holding a spiked metal bat. Moody dramatic lighting, soft shadows, detailed textures, and cyberpunk gangster vibe create a hyper-detailed cinematic shot with DSLR depth of field. The face perfectly matches the uploaded reference.</p>
+                        <a href="/prompt/cinematic_underground_male_portrait.html" class="card-btn">
+                            View Prompt <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related 4 -->
+                <div class="prompt-card">
+                    <div class="card-image-container" onclick="openLightbox('/images/59.jpeg', 'Water Sculpture Bust with a Name Text')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/59.jpeg" alt="Water Sculpture Bust with a Name Text" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Water Sculpture Bust with a Name Text</h3>
+                        <p class="card-description"></p>
+                        <a href="/prompt/Water_Sculpture_Bust_with_a_Name_Text.html" class="card-btn">
+                            View Prompt <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related 5 -->
+                <div class="prompt-card">
+                    <div class="card-image-container" onclick="openLightbox('/images/157.jpg', 'hyperrealistic-fashion-photoshoot-prompt-streetwear')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/157.jpg" alt="hyperrealistic-fashion-photoshoot-prompt-streetwear" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">hyperrealistic-fashion-photoshoot-prompt-streetwear</h3>
+                        <p class="card-description">An AI prompt to generate a realistic fashion portrait. Creates a cinematic photo of a person in dark oversized streetwear, sitting on a white bean bag against a simple grey background. Perfect for creating stylish personal branding images.</p>
+                        <a href="/prompt/hyperrealistic-fashion-photoshoot-prompt-streetwear.html" class="card-btn">
+                            View Prompt <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Related 6 -->
+                <div class="prompt-card">
+                    <div class="card-image-container" onclick="openLightbox('/images/134.jpeg', 'ai prompt for realistic romantic couple portrait')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/134.jpeg" alt="ai prompt for realistic romantic couple portrait" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">ai prompt for realistic romantic couple portrait</h3>
+                        <p class="card-description">Create a hyper-realistic AI image of a man holding a woman in his arms while kissing her. The woman wears denim shorts, a soft pink top, and white sneakers. Shot in a professional studio with a plain white background, the lighting is cinematic with soft shadows and subtle backlight. Perfect for creating realistic couple portraits, romantic photos, or high-quality editorial-style images.</p>
+                        <a href="/prompt/ai_prompt_for_realistic_romantic_couple_portrait.html" class="card-btn">
+                            View Prompt <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PROFESSIONAL FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+            </div>
+
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/prompts">Prompts</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="/links.html">Directory</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Google Analytics moved to bottom (Step 7) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            }
+        })();
+    </script>
+
+    <script>
+        function copyPrompt(button) {
+            const promptBox = button.closest('.prompt-box');
+            const promptText = promptBox.querySelector('.prompt-text').textContent;
+
+            navigator.clipboard.writeText(promptText).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                button.style.background = '#0d47b0';
+
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-copy"></i> Copy';
+                    button.style.background = '#1a5cff';
+                }, 2000);
+            });
+        }
+
+        function openLightbox(imageSrc, caption) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImage.src = imageSrc;
+            lightboxCaption.textContent = caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Removed DOMContentLoaded image loading handler
+    </script>
+</body>
+</html>
