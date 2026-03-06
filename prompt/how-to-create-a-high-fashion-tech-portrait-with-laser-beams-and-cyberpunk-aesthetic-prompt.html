@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Preconnect to external domains (Step 8) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GH0DLY6H1F');
-    </script>
+    <!-- Preload first image (Step 2) -->
+    <link rel="preload" as="image" href="/images/324.jpg">
 
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Create a High-Fashion Tech Portrait with Laser Beams and Cyberpunk Aesthetic</title>
@@ -79,8 +75,6 @@
   "keywords": "cyberpunk portrait, laser beam photography, high-fashion tech, futuristic editorial, glitch aesthetic portrait"
 }
     </script>
-
-    
 
     <!-- Font Awesome (deferred) -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -399,24 +393,7 @@
             color: #1a5cff;
         }
 
-        /* Skeleton Loading */
-        .skeleton {
-            background: linear-gradient(90deg, #e0e5ec 25%, #d0d7e0 50%, #e0e5ec 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-            border-radius: 8px;
-        }
-
-        @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        .skeleton-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-        }
+        /* Removed all skeleton CSS */
 
         /* Images - 4:5 aspect ratio */
         .images-grid {
@@ -455,23 +432,7 @@
             object-fit: cover;
             object-position: center;
             border-radius: 12px;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
             background: #eef2f6;
-        }
-
-        .prompt-image.loaded {
-            opacity: 1;
-        }
-
-        .image-skeleton {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            border-radius: 12px;
         }
 
         /* Lightbox */
@@ -668,13 +629,7 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
             background: #eef2f6;
-        }
-
-        .card-image.loaded {
-            opacity: 1;
         }
 
         .card-content {
@@ -1026,16 +981,24 @@
             </h2>
             <div class="images-grid">
                 <div class="image-container" onclick="openLightbox('/images/324.jpg', 'How to Create a High-Fashion Tech Portrait with Laser Beams and Cyberpunk Aesthetic')">
-                    <div class="image-skeleton skeleton skeleton-image"></div>
-                    <img src="/images/324.jpg" alt="How to Create a High-Fashion Tech Portrait with Laser Beams and Cyberpunk Aesthetic" class="prompt-image" 
-                         onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+1'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                    <!-- Removed skeleton -->
+                    <img src="/images/324.jpg" 
+                         alt="How to Create a High-Fashion Tech Portrait with Laser Beams and Cyberpunk Aesthetic" 
+                         class="prompt-image"
+                         loading="eager"
+                         fetchpriority="high"
+                         decoding="async"
+                         width="400"
+                         height="500"
+                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+1';">
                 </div>
                 <div class="image-container" onclick="openLightbox('/images/324.324.jpg', 'How to Create a High-Fashion Tech Portrait with Laser Beams and Cyberpunk Aesthetic')">
-                    <div class="image-skeleton skeleton skeleton-image"></div>
-                    <img src="/images/324.324.jpg" alt="How to Create a High-Fashion Tech Portrait with Laser Beams and Cyberpunk Aesthetic" class="prompt-image" 
-                         onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+2'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                    <!-- Removed skeleton -->
+                    <img src="/images/324.324.jpg" 
+                         alt="How to Create a High-Fashion Tech Portrait with Laser Beams and Cyberpunk Aesthetic" 
+                         class="prompt-image"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+2';">
                 </div>
             </div>
         </div>
@@ -1157,10 +1120,10 @@
                 <!-- Related 1 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/206.jpg', 'Moody Cinematic Portrait Ai Prompt')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
+                        <!-- Removed skeleton -->
                         <img src="/images/206.jpg" alt="Moody Cinematic Portrait Ai Prompt" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Moody Cinematic Portrait Ai Prompt</h3>
@@ -1174,10 +1137,10 @@
                 <!-- Related 2 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/282.webp', 'How To Create A Stylized 3d Character Render Prompt')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
+                        <!-- Removed skeleton -->
                         <img src="/images/282.webp" alt="How To Create A Stylized 3d Character Render Prompt" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">How To Create A Stylized 3d Character Render Prompt</h3>
@@ -1191,10 +1154,10 @@
                 <!-- Related 3 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/166.jpg', 'Pop Art Vector Portrait Photo Prompt')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
+                        <!-- Removed skeleton -->
                         <img src="/images/166.jpg" alt="Pop Art Vector Portrait Photo Prompt" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Pop Art Vector Portrait Photo Prompt</h3>
@@ -1208,10 +1171,10 @@
                 <!-- Related 4 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/302.jpg', 'Ultra Wide 10mm Fisheye Top Down Portrait With Puffer Jacket')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
+                        <!-- Removed skeleton -->
                         <img src="/images/302.jpg" alt="Ultra Wide 10mm Fisheye Top Down Portrait With Puffer Jacket" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Ultra Wide 10mm Fisheye Top Down Portrait With Puffer Jacket</h3>
@@ -1225,10 +1188,10 @@
                 <!-- Related 5 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/199.webp', 'Mirror Selfie Dslr Portrait Ai Prompt Realistic Bathroom Photography')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
+                        <!-- Removed skeleton -->
                         <img src="/images/199.webp" alt="Mirror Selfie Dslr Portrait Ai Prompt Realistic Bathroom Photography" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Mirror Selfie Dslr Portrait Ai Prompt Realistic Bathroom Photography</h3>
@@ -1242,10 +1205,10 @@
                 <!-- Related 6 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/137.jpeg', 'Cricket Century Celebration Poster')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
+                        <!-- Removed skeleton -->
                         <img src="/images/137.jpeg" alt="Cricket Century Celebration Poster" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Cricket Century Celebration Poster</h3>
@@ -1296,6 +1259,15 @@
         </div>
     </footer>
 
+    <!-- Google Analytics moved to bottom (Step 7) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+
     <!-- Mobile menu toggle script -->
     <script>
         (function() {
@@ -1332,19 +1304,6 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                if (img.complete) {
-                    img.classList.add('loaded');
-                    const skeleton = img.previousElementSibling;
-                    if (skeleton && skeleton.classList.contains('image-skeleton')) {
-                        skeleton.style.display = 'none';
-                    }
-                }
-            });
-        });
-
         function openLightbox(imageSrc, caption) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImage = document.getElementById('lightbox-image');
@@ -1370,6 +1329,8 @@
                 closeLightbox();
             }
         });
+
+        // Removed DOMContentLoaded image loading handler
     </script>
 </body>
 </html>
