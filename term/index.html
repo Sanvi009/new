@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainloom · refined footer</title>
+  <!-- Font Awesome 6 (for social icons & arrow) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1e2b3c;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* ----- NAVBAR (unchanged, perfect) ----- */
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid #eaeef2;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      width: 36px;
+      height: 36px;
+      background: #f0f4fa;
+      border-radius: 8px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1e2b3c;
+      letter-spacing: -0.02em;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link {
+      padding: 8px 18px;
+      color: #2d4059;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      border-radius: 40px;
+      transition: background 0.2s;
+    }
+
+    .nav-link:hover {
+      background: #f5f7fa;
+    }
+
+    .legal-dropdown {
+      position: relative;
+    }
+
+    .legal-trigger {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      font-weight: 500;
+      color: #2d4059;
+      cursor: default;
+      border-radius: 40px;
+    }
+
+    .legal-trigger i {
+      font-size: 12px;
+      color: #6b7f9a;
+      transition: transform 0.2s;
+    }
+
+    .legal-dropdown:hover .legal-trigger i {
+      transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      min-width: 200px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border: 1px solid #edf2f7;
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-5px);
+      transition: all 0.2s;
+      z-index: 1000;
+    }
+
+    .legal-dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: #2d4059;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .dropdown-menu a:hover {
+      background: #f8fafd;
+    }
+
+    .mobile-btn {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      background: #f8fafd;
+      border-radius: 40px;
+      cursor: pointer;
+      border: 1px solid #eef2f6;
+    }
+
+    .mobile-btn span {
+      width: 20px;
+      height: 2px;
+      background: #2d4059;
+      margin: 3px 0;
+      border-radius: 2px;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: #ffffff;
+      border-radius: 20px;
+      margin-top: 16px;
+      padding: 20px 16px;
+      border: 1px solid #e9ecf0;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.04);
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 10px 16px;
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: 450;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+      border-radius: 12px;
+      transition: background 0.15s;
+    }
+
+    .mobile-menu a:hover {
+      background: #f5f7fa;
+    }
+
+    .mobile-legal {
+      margin-top: 8px;
+    }
+
+    .mobile-legal p {
+      padding: 12px 16px 4px;
+      color: #7f8fa4;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    /* main content spacer */
+    .main-content {
+      flex: 1;
+    }
+
+    /* ----- FOOTER (fixed: less space, no extra text, no duplicate bottom links) ----- */
+    .footer {
+      background: #0f1a26;
+      color: #e1eaf2;
+      padding: 40px 0 24px;        /* reduced vertical padding */
+      margin-top: auto;
+      border-top: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1.8fr;
+      gap: 40px 50px;              /* slightly tighter gap */
+      align-items: start;
+      margin-bottom: 24px;          /* less space before bottom line */
+    }
+
+    /* left column: bold BRAINLOOM only (no subtitle) */
+    .footer-brand h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: white;
+      margin-bottom: 0;             /* no extra text, so minimal */
+      line-height: 1.2;
+    }
+
+    /* middle column: page links (two columns) */
+    .footer-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 30px;                /* reduced row gap */
+    }
+
+    .footer-links a {
+      color: #c7d9ec;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s;
+      display: inline-block;
+      padding: 4px 0;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* right column: social with icons */
+    .footer-social h4 {
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 14px;          /* slightly reduced */
+      letter-spacing: 0.3px;
+    }
+
+    .social-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;                     /* tighter social rows */
+    }
+
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .social-item a {
+      color: #c7d9ec;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-item a:hover {
+      color: white;
+    }
+
+    .social-item i {
+      width: 20px;
+      font-size: 1.1rem;
+      color: #8fadcf;
+      transition: color 0.15s;
+    }
+
+    .social-item a:hover i {
+      color: white;
+    }
+
+    /* bottom line: only copyright, no duplicate links */
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 18px;            /* less padding */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #8ba0b9;
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom span {
+      color: #8ba0b9;
+    }
+
+    /* no bottom links — removed as requested */
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 750px) {
+      .desktop-nav {
+        display: none;
+      }
+      .mobile-btn {
+        display: flex;
+      }
+      .mobile-menu.active {
+        display: block;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .footer-brand h3 {
+        font-size: 1.8rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .logo-text {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR (exactly as before) -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo-link">
+        <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36">
+        <span class="logo-text">Brainloom</span>
+      </a>
+
+      <div class="desktop-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/prompts" class="nav-link">Prompts</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+
+        <div class="legal-dropdown">
+          <span class="nav-link legal-trigger">
+            Legal <i class="fas fa-chevron-down"></i>
+          </span>
+          <div class="dropdown-menu">
+            <a href="/policy">Privacy policy</a>
+            <a href="/term">Terms of use</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-btn" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
+        <a href="/prompts">Prompts</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <div class="mobile-legal">
+          <p>Legal</p>
+          <a href="/policy">Privacy policy</a>
+          <a href="/term">Terms of use</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- empty main (spacer) -->
+  <main class="main-content"></main>
+
+  <!-- FOOTER (fixed: less space, no extra text, no duplicate sitemap/directory at bottom) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Left: bold BRAINLOOM (no subtitle) -->
+        <div class="footer-brand">
+          <h3>BRAINLOOM</h3>
+        </div>
+
+        <!-- Middle: all page links (including sitemap & directory) -->
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/prompts">Prompts</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/policy">Privacy policy</a>
+          <a href="/term">Terms of use</a>
+          <a href="/sitemap.xml">Sitemap</a>
+          <a href="/links.html">Directory</a>
+        </div>
+
+        <!-- Right: social links with icons (all 7) -->
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-list">
+            <div class="social-item">
+              <a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a>
+            </div>
+            <div class="social-item">
+              <a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a>
+            </div>
+            <div class="social-item">
+              <a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <div class="social-item">
+              <a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+            </div>
+            <div class="social-item">
+              <a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+            <div class="social-item">
+              <a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
+            </div>
+            <div class="social-item">
+              <a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom line: only copyright (no duplicate links) -->
+      <div class="footer-bottom">
+        <span>© 2026 Brainloom. All rights reserved.</span>
+        <!-- intentionally empty: sitemap/directory removed from bottom -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- mobile toggle script -->
+  <script>
+    (function() {
+      const toggle = document.getElementById('menuToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          menu.classList.toggle('active');
+        });
+        document.addEventListener('click', (e) => {
+          if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.remove('active');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
