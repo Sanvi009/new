@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GH0DLY6H1F');
-    </script>
-
+    <!-- Preconnect to external domains (Step 8) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
+    <!-- Preload first image (Step 2) -->
+    <link rel="preload" as="image" href="/images/113.webp">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup</title>
@@ -79,11 +75,6 @@
   "keywords": "AI prompts, ChatGPT prompts, AI art, prompt engineering, 1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup, AI Prompts"
 }
     </script>
-    <!-- Preload LCP image -->
-    <link rel="preload" as="image" href="/images/113.jpeg" fetchpriority="high">
-    <link rel="preload" as="image" href="/images/113.113.jpeg" fetchpriority="high">
-
-    
 
     <!-- Font Awesome (deferred) -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -402,24 +393,7 @@
             color: #1a5cff;
         }
 
-        /* Skeleton Loading */
-        .skeleton {
-            background: linear-gradient(90deg, #e0e5ec 25%, #d0d7e0 50%, #e0e5ec 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-            border-radius: 8px;
-        }
-
-        @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        .skeleton-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-        }
+        /* Removed all skeleton CSS */
 
         /* Images - 4:5 aspect ratio */
         .images-grid {
@@ -458,23 +432,7 @@
             object-fit: cover;
             object-position: center;
             border-radius: 12px;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
             background: #eef2f6;
-        }
-
-        .prompt-image.loaded {
-            opacity: 1;
-        }
-
-        .image-skeleton {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            border-radius: 12px;
         }
 
         /* Lightbox */
@@ -671,13 +629,7 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
             background: #eef2f6;
-        }
-
-        .card-image.loaded {
-            opacity: 1;
         }
 
         .card-content {
@@ -1028,17 +980,25 @@
                 Generated Images
             </h2>
             <div class="images-grid">
-                <div class="image-container" onclick="openLightbox('/images/113.jpeg', '1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup')">
-                    <div class="image-skeleton skeleton skeleton-image"></div>
-                    <img src="/images/113.jpeg" alt="1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" class="prompt-image" 
-                         onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+1'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                <div class="image-container" onclick="openLightbox('/images/113.webp', '1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup')">
+                    <!-- Removed skeleton -->
+                    <img src="/images/113.webp" 
+                         alt="1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" 
+                         class="prompt-image"
+                         loading="eager"
+                         fetchpriority="high"
+                         decoding="async"
+                         width="400"
+                         height="500"
+                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+1';">
                 </div>
-                <div class="image-container" onclick="openLightbox('/images/113.113.jpeg', '1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup')">
-                    <div class="image-skeleton skeleton skeleton-image"></div>
-                    <img src="/images/113.113.jpeg" alt="1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" class="prompt-image" 
-                         onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+2'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                <div class="image-container" onclick="openLightbox('/images/113.113.webp', '1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup')">
+                    <!-- Removed skeleton -->
+                    <img src="/images/113.113.webp" 
+                         alt="1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" 
+                         class="prompt-image"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+2';">
                 </div>
             </div>
         </div>
@@ -1159,11 +1119,11 @@
             <div class="prompts-grid">
                 <!-- Related 1 -->
                 <div class="prompt-card">
-                    <div class="card-image-container" onclick="openLightbox('/images/146.jpeg', 'full body fashion graffiti portrait')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
-                        <img src="/images/146.jpeg" alt="full body fashion graffiti portrait" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                    <div class="card-image-container" onclick="openLightbox('/images/146.webp', 'full body fashion graffiti portrait')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/146.webp" alt="full body fashion graffiti portrait" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">full body fashion graffiti portrait</h3>
@@ -1176,11 +1136,11 @@
 
                 <!-- Related 2 -->
                 <div class="prompt-card">
-                    <div class="card-image-container" onclick="openLightbox('/images/101.jpeg', 'Cute Unboxing Scene with a Cardboard Box')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
-                        <img src="/images/101.jpeg" alt="Cute Unboxing Scene with a Cardboard Box" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                    <div class="card-image-container" onclick="openLightbox('/images/101.webp', 'Cute Unboxing Scene with a Cardboard Box')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/101.webp" alt="Cute Unboxing Scene with a Cardboard Box" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Cute Unboxing Scene with a Cardboard Box</h3>
@@ -1193,11 +1153,11 @@
 
                 <!-- Related 3 -->
                 <div class="prompt-card">
-                    <div class="card-image-container" onclick="openLightbox('/images/250.jpg', 'moody-red-light-portrait-ai-prompt-dramatic-shadow')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
-                        <img src="/images/250.jpg" alt="moody-red-light-portrait-ai-prompt-dramatic-shadow" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                    <div class="card-image-container" onclick="openLightbox('/images/250.webp', 'moody-red-light-portrait-ai-prompt-dramatic-shadow')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/250.webp" alt="moody-red-light-portrait-ai-prompt-dramatic-shadow" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">moody-red-light-portrait-ai-prompt-dramatic-shadow</h3>
@@ -1210,11 +1170,11 @@
 
                 <!-- Related 4 -->
                 <div class="prompt-card">
-                    <div class="card-image-container" onclick="openLightbox('/images/216.jpg', 'professional-studio-portrait-ai-prompt-with-vector-art-elements')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
-                        <img src="/images/216.jpg" alt="professional-studio-portrait-ai-prompt-with-vector-art-elements" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                    <div class="card-image-container" onclick="openLightbox('/images/216.webp', 'professional-studio-portrait-ai-prompt-with-vector-art-elements')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/216.webp" alt="professional-studio-portrait-ai-prompt-with-vector-art-elements" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">professional-studio-portrait-ai-prompt-with-vector-art-elements</h3>
@@ -1227,11 +1187,11 @@
 
                 <!-- Related 5 -->
                 <div class="prompt-card">
-                    <div class="card-image-container" onclick="openLightbox('/images/87.jpeg', 'Medieval Leather Journal with an Embossed Logo')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
-                        <img src="/images/87.jpeg" alt="Medieval Leather Journal with an Embossed Logo" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                    <div class="card-image-container" onclick="openLightbox('/images/87.webp', 'Medieval Leather Journal with an Embossed Logo')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/87.webp" alt="Medieval Leather Journal with an Embossed Logo" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Medieval Leather Journal with an Embossed Logo</h3>
@@ -1244,11 +1204,11 @@
 
                 <!-- Related 6 -->
                 <div class="prompt-card">
-                    <div class="card-image-container" onclick="openLightbox('/images/57.jpeg', 'Funny Fight Between a Lady Finger and a Potato')">
-                        <div class="image-skeleton skeleton skeleton-image"></div>
-                        <img src="/images/57.jpeg" alt="Funny Fight Between a Lady Finger and a Potato" class="card-image" 
-                             onload="this.classList.add('loaded'); this.previousElementSibling.style.display='none';"
-                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image'; this.classList.add('loaded'); this.previousElementSibling.style.display='none';">
+                    <div class="card-image-container" onclick="openLightbox('/images/57.webp', 'Funny Fight Between a Lady Finger and a Potato')">
+                        <!-- Removed skeleton -->
+                        <img src="/images/57.webp" alt="Funny Fight Between a Lady Finger and a Potato" class="card-image" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
                     </div>
                     <div class="card-content">
                         <h3 class="card-title">Funny Fight Between a Lady Finger and a Potato</h3>
@@ -1299,6 +1259,15 @@
         </div>
     </footer>
 
+    <!-- Google Analytics moved to bottom (Step 7) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+
     <!-- Mobile menu toggle script -->
     <script>
         (function() {
@@ -1335,19 +1304,6 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                if (img.complete) {
-                    img.classList.add('loaded');
-                    const skeleton = img.previousElementSibling;
-                    if (skeleton && skeleton.classList.contains('image-skeleton')) {
-                        skeleton.style.display = 'none';
-                    }
-                }
-            });
-        });
-
         function openLightbox(imageSrc, caption) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImage = document.getElementById('lightbox-image');
@@ -1373,6 +1329,8 @@
                 closeLightbox();
             }
         });
+
+        // Removed DOMContentLoaded image loading handler
     </script>
 </body>
 </html>
