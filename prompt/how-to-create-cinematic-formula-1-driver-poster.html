@@ -1293,20 +1293,28 @@ Step 5: Adjust the atmosphere by changing 'drifting with smoke' to 'speeding thr
 
     <script>
         function copyPrompt(button) {
-            const promptBox = button.closest('.prompt-box');
-            const promptText = promptBox.querySelector('.prompt-text').textContent;
-
-            navigator.clipboard.writeText(promptText).then(() => {
-                const originalText = button.innerHTML;
-                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
-                button.style.background = '#0d47b0';
-
-                setTimeout(() => {
-                    button.innerHTML = '<i class="fas fa-copy"></i> Copy';
-                    button.style.background = '#1a5cff';
-                }, 2000);
-            });
-        }
+    const promptBox = button.closest('.prompt-box');
+    const promptText = promptBox.querySelector('.prompt-text').textContent;
+    
+    // Copy text to clipboard
+    navigator.clipboard.writeText(promptText).then(() => {
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        button.style.background = '#0d47b0';
+        
+        // Open your monetization link in a new tab
+        window.open('https://www.effectivegatecpm.com/k8ss6qs8?key=9767be64a42ff16ff8e6469c6efd9007', '_blank');
+        
+        // Revert button after 2 seconds
+        setTimeout(() => {
+            button.innerHTML = '<i class="fas fa-copy"></i> Copy';
+            button.style.background = '#1a5cff';
+        }, 2000);
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+        alert('Failed to copy text');
+    });
+}
 
         function openLightbox(imageSrc, caption) {
             const lightbox = document.getElementById('lightbox');
