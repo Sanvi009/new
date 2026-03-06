@@ -542,6 +542,73 @@
       grid-column: 1 / -1;
     }
 
+    /* ----- QUERY SOLVED SECTION ----- */
+    .query-section {
+      padding: 80px 24px;
+      background: #f8fafd;
+      border-top: 1px solid #eef2f6;
+      border-bottom: 1px solid #eef2f6;
+    }
+
+    .query-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .query-category {
+      background: white;
+      border-radius: 24px;
+      padding: 30px 25px;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+      border: 1px solid #eef2f6;
+      transition: transform 0.2s;
+    }
+
+    .query-category:hover {
+      transform: translateY(-5px);
+    }
+
+    .query-category h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #0b1a2c;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #1a5cff20;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .query-category h3 i {
+      color: #1a5cff;
+      font-size: 1.3rem;
+    }
+
+    .query-list {
+      list-style: none;
+    }
+
+    .query-list li {
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+      color: #2d4059;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .query-list li::before {
+      content: "•";
+      color: #1a5cff;
+      font-weight: bold;
+      position: absolute;
+      left: 6px;
+      font-size: 1.2rem;
+    }
+
     /* ----- ZIGZAG SECTIONS (with square 1:1 images - now using .webp) ----- */
     .zigzag-section {
       padding: 80px 0;
@@ -722,6 +789,9 @@
         grid-template-columns: 1fr 1fr;
         gap: 30px;
       }
+      .query-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 850px) {
@@ -785,6 +855,10 @@
       .zigzag-section {
         padding: 60px 0;
       }
+      
+      .query-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 650px) {
@@ -822,6 +896,9 @@
       }
       .cards-grid {
         gap: 12px;
+      }
+      .query-section {
+        padding: 60px 20px;
       }
     }
 
@@ -911,9 +988,9 @@
       height="600"
     >
     <div class="hero-content">
-      <h1>Discover AI prompts</h1>
-      <p class="hero-description">Curated, high-quality prompts for creators, developers, and innovators.</p>
-      <a href="/prompts" class="hero-btn">SEE ALL PROMPTS</a>
+      <h1>Master Gemini & Nano Banana Prompts</h1>
+      <p class="hero-description">Discover trending prompts for Gemini AI, image generation, face swap, and creative conversions. Copy-paste ready prompts with examples.</p>
+      <a href="/prompts" class="hero-btn">EXPLORE PROMPTS</a>
     </div>
   </section>
 
@@ -921,13 +998,70 @@
   <section class="recent-section">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Recently added prompts</h2>
-        <p class="section-description">The latest prompts from our community</p>
+        <h2 class="section-title">Trending Gemini Prompts</h2>
+        <p class="section-description">Latest ghostface, scream, retro style and nano banana prompts</p>
       </div>
 
       <!-- cards container (populated by JavaScript) -->
       <div class="cards-grid" id="promptCards">
         <div class="loading-text">Loading latest prompts...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUERY SOLVED SECTION - NEW -->
+  <section class="query-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Common Questions Solved</h2>
+        <p class="section-description">Everything you need to know about Gemini AI and Nano Banana prompts</p>
+      </div>
+
+      <div class="query-grid">
+        <!-- Gemini AI Questions -->
+        <div class="query-category">
+          <h3><i class="fas fa-robot"></i> Gemini AI</h3>
+          <ul class="query-list">
+            <li>How to prompt Gemini 2.5 pro effectively</li>
+            <li>How to delete a prompt in Gemini</li>
+            <li>How many images does Gemini generate per prompt</li>
+            <li>How to upload multiple images to Gemini AI</li>
+            <li>How to copy and paste Gemini AI prompt</li>
+            <li>How to write prompt in Gemini for best results</li>
+            <li>What is Google Gemini prompt engineering</li>
+            <li>How to add two photos in Gemini prompt</li>
+          </ul>
+        </div>
+
+        <!-- Nano Banana Questions -->
+        <div class="query-category">
+          <h3><i class="fas fa-apple-alt"></i> Nano Banana</h3>
+          <ul class="query-list">
+            <li>What is Nano Banana AI model and how to use it</li>
+            <li>Is Nano Banana free or how much does it cost</li>
+            <li>How to use Nano Banana in Gemini app</li>
+            <li>How to access Nano Banana for image editing</li>
+            <li>Why is it called Nano Banana and what is Google Nano Banana</li>
+            <li>How to use Nano Banana Pro for face swap</li>
+            <li>Gemini 2.5 flash image Nano Banana tutorial</li>
+            <li>How do I use Nano Banana for AI image generation</li>
+          </ul>
+        </div>
+
+        <!-- Face Swap & Trending Prompts -->
+        <div class="query-category">
+          <h3><i class="fas fa-image"></i> Face Swap & Trends</h3>
+          <ul class="query-list">
+            <li>How to face swap two photos online free</li>
+            <li>How to make AI face swap video with prompts</li>
+            <li>How to Charlie Kirk face swap tutorial</li>
+            <li>What is the trending prompt in ChatGPT right now</li>
+            <li>How to create trending AI image prompts</li>
+            <li>How to make Gemini AI photo prompt for girls</li>
+            <li>Ghostface Gemini prompt copy and paste</li>
+            <li>Scream and retro style prompt ideas</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -940,8 +1074,8 @@
           <img data-src="/assets/1.webp" alt="Feature 1" class="lazy-image" width="400" height="400">
         </div>
         <div class="zigzag-content">
-          <h2>What is <b>BRAINLOOM ONLINE</b></h2>
-          <p>Brainloom online is a prompts based website for artist , common people, advertiser and students , it contain thousands of ai image convertion or genaration prompts that can be use for various purpose . Brainloom offer free prompt including their variations and example outcome . <b>BRAINLOOM</b> also help user to guide how they can use these prompts and when to use them. each prompt is tested  and modified accurately untill getting expected result . feel free to scroll and check the letest prompts</p>
+          <h2>What is <b>BRAINLOOM ONLINE</b> - Your Gemini Prompt Hub</h2>
+          <p>Brainloom online is a specialized platform for <b>Gemini prompt examples, nano banana prompts, and AI image generation prompts</b>. We provide tested and verified prompts for artists, advertisers, students, and creators. Our collection includes <b>gemini prompt for image generation, ghostface gemini prompts, retro style prompts, and 3d model prompts</b>. Each prompt comes with example outcomes and variations. Whether you need <b>girls gemini prompt latest</b> or <b>google gemini prompt engineering best practices</b>, we've got you covered. All prompts are modified until they deliver expected results - feel free to explore our latest additions.</p>
         </div>
       </div>
     </div>
@@ -955,8 +1089,8 @@
           <img data-src="/assets/2.webp" alt="Feature 2" class="lazy-image" width="400" height="400">
         </div>
         <div class="zigzag-content">
-          <h2>Who is Brainloom for?</h2>
-          <p>Brainloom only is a guidence or a collection of gemini nano banana or any ai prompt . you can use our prompts to genarate different types of images or you can convert your image or face swap with any image. If you are artist or strugling to photograph you product photo you can use our prompt . our prompt also can transform your product normal photo into proffesional advertisement type photo. and you also can use these prompt to make your boring image proffesioanl</p>
+          <h2>Who is Brainloom for? - AI Prompt Engineers & Creators</h2>
+          <p>Brainloom is your complete guide to <b>Gemini AI prompts and nano banana prompt engineering</b>. Use our prompts to generate professional images, transform product photos into advertisements, or perform face swaps. If you're struggling with photography, our <b>gemini prompt for professional photo</b> collection will help. We cover everything from <b>google gemini prompt 3d model</b> creation to <b>trending gemini prompt</b> ideas. Our <b>gemini prompt caching</b> techniques and <b>prompt engineering best practices</b> help you get consistent results. Perfect for artists needing <b>gemini linked photo prompt</b> solutions or creators looking for <b>ai gemini prompt</b> inspiration.</p>
         </div>
       </div>
     </div>
@@ -970,8 +1104,8 @@
           <img data-src="/assets/3.webp" alt="Feature 3" class="lazy-image" width="400" height="400">
         </div>
         <div class="zigzag-content">
-          <h2>how You can use <b>Brainloom</b> prompts</h2>
-          <p>Well using brainloom prompts is quite easy . if you land on home page so see all prompt simply you can click <b>SEE ALL PROMPTS</b> batton , it will take you to our prompts displayed page. where all prompts thumbnail are displayed , you can choose what outcome u want from thumbnail . just click on any thumbnail it will take you to that prompt page , where you can see some outcome and the prompt with copy batton . simply just copy the prompt and use any ai for example gemini , grok , deepseek , sora. if u dont get expected result or want some changes you can check the variation prompts and use them , you will get different result on same category</p>
+          <h2>How to Use <b>Brainloom</b> Prompts Effectively</h2>
+          <p>Using Brainloom prompts is straightforward. Browse our <b>gemini prompt generator</b> collection and click any thumbnail to access the full prompt page with copy button. For <b>nano banana image editing</b>, simply paste our tested prompts into Gemini, Grok, or DeepSeek. If you need <b>how to use nano banana in gemini prompt</b>, we have dedicated guides. Each prompt includes variations for different outcomes. For <b>gemini 3 nano banana pro</b> users, we provide specialized prompts. Want <b>trending prompt ideas</b>? Check our regularly updated sections. Our <b>gemini ai trending prompt</b> collection features the latest styles including <b>snow trending prompt latest</b> and <b>ai photos trending prompt</b> categories.</p>
         </div>
       </div>
     </div>
@@ -985,8 +1119,8 @@
           <img data-src="/assets/4.webp" alt="Feature 4" class="lazy-image" width="400" height="400">
         </div>
         <div class="zigzag-content">
-          <h2>Tips From Brainloom author </h2>
-          <p>All of our prompts are tested multiple times so hope you will get accurate outcome . Some time you might face issue like missmatch the face with reference , for that simply just add this test on prompt " use the same facial and physical identity from the uplaoded image" then you might get the expected result , if you want different ratio for isntagram , facebook or youtube simple add " ar-9:16 " ar mean aspect ratio change the number according to your need . if you want any changes on the prompt well good news is we alreayd added multiple variations of that prompt , if you still dont want some change simple use chatgpt , paste you prompt and explain him what changes you need <br><b>SANVI</b></p>
+          <h2>Pro Tips From <b>Brainloom</b> Author Sanvi</h2>
+          <p>All our prompts are rigorously tested. For face mismatch issues, add "use the same facial identity from uploaded image" to your prompt. Need different aspect ratios? Add "ar-9:16" for Instagram or "ar-16:9" for YouTube. For <b>how to make gemini ai photo prompt for girls</b>, check our specialized section. If you need <b>gemini prompt for retro style</b> or <b>google gemini prompt 3d model</b> guides, we have variations ready. Want to learn <b>how to prompt gemini</b> like a pro? Our <b>gemini prompt engineering best practices</b> section covers everything from <b>gemini prompt caching</b> to advanced techniques. For <b>how to delete gemini prompt</b> or manage your history, follow our simple guides.<br><b>SANVI AL EVAN</b></p>
         </div>
       </div>
     </div>
