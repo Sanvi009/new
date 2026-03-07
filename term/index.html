@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brainloom · refined footer</title>
+  <title>Brainloom · refined footer + terms</title>
   <!-- Font Awesome 6 (for social icons & arrow) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -30,7 +30,7 @@
       width: 100%;
     }
 
-    /* ----- NAVBAR (unchanged, perfect) ----- */
+    /* ----- NAVBAR (unchanged) ----- */
     .navbar {
       background: #ffffff;
       border-bottom: 1px solid #eaeef2;
@@ -210,16 +210,75 @@
       letter-spacing: 0.4px;
     }
 
-    /* main content spacer */
+    /* main content — now includes terms block */
     .main-content {
       flex: 1;
+      padding: 40px 0;
+      background: #fafcff;
     }
 
-    /* ----- FOOTER (fixed: less space, no extra text, no duplicate bottom links) ----- */
+    /* terms of use card */
+    .terms-card {
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.02);
+      padding: 36px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+      border: 1px solid #eef2f8;
+    }
+
+    .terms-card h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #0f1a26;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .terms-card .last-updated {
+      font-size: 0.9rem;
+      color: #6b7f9a;
+      margin-bottom: 28px;
+      border-bottom: 1px solid #e6ecf3;
+      padding-bottom: 20px;
+    }
+
+    .terms-card h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 32px 0 12px;
+      color: #1e2b3c;
+    }
+
+    .terms-card p {
+      margin-bottom: 16px;
+      color: #2d4059;
+    }
+
+    .terms-card ul {
+      margin: 10px 0 20px 25px;
+    }
+
+    .terms-card li {
+      margin-bottom: 6px;
+      color: #2d4059;
+    }
+
+    .terms-card a {
+      color: #1e5f9e;
+      text-decoration: none;
+    }
+
+    .terms-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* ----- FOOTER (identical to given design) ----- */
     .footer {
       background: #0f1a26;
       color: #e1eaf2;
-      padding: 40px 0 24px;        /* reduced vertical padding */
+      padding: 40px 0 24px;
       margin-top: auto;
       border-top: 1px solid rgba(255,255,255,0.03);
     }
@@ -227,26 +286,24 @@
     .footer-grid {
       display: grid;
       grid-template-columns: 1fr 1.5fr 1.8fr;
-      gap: 40px 50px;              /* slightly tighter gap */
+      gap: 40px 50px;
       align-items: start;
-      margin-bottom: 24px;          /* less space before bottom line */
+      margin-bottom: 24px;
     }
 
-    /* left column: bold BRAINLOOM only (no subtitle) */
     .footer-brand h3 {
       font-size: 2rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       color: white;
-      margin-bottom: 0;             /* no extra text, so minimal */
+      margin-bottom: 0;
       line-height: 1.2;
     }
 
-    /* middle column: page links (two columns) */
     .footer-links {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px 30px;                /* reduced row gap */
+      gap: 8px 30px;
     }
 
     .footer-links a {
@@ -262,19 +319,18 @@
       color: white;
     }
 
-    /* right column: social with icons */
     .footer-social h4 {
       color: white;
       font-weight: 600;
       font-size: 1rem;
-      margin-bottom: 14px;          /* slightly reduced */
+      margin-bottom: 14px;
       letter-spacing: 0.3px;
     }
 
     .social-list {
       display: flex;
       flex-direction: column;
-      gap: 8px;                     /* tighter social rows */
+      gap: 8px;
     }
 
     .social-item {
@@ -308,10 +364,9 @@
       color: white;
     }
 
-    /* bottom line: only copyright, no duplicate links */
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.05);
-      padding-top: 18px;            /* less padding */
+      padding-top: 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -325,13 +380,17 @@
       color: #8ba0b9;
     }
 
-    /* no bottom links — removed as requested */
-
     /* responsive */
     @media (max-width: 900px) {
       .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
+      }
+      .terms-card {
+        padding: 30px 28px;
+      }
+      .terms-card h1 {
+        font-size: 2rem;
       }
     }
 
@@ -359,6 +418,9 @@
         flex-direction: column;
         text-align: center;
       }
+      .terms-card {
+        padding: 24px 20px;
+      }
     }
 
     @media (max-width: 450px) {
@@ -369,7 +431,7 @@
   </style>
 </head>
 <body>
-  <!-- NAVBAR (exactly as before) -->
+  <!-- NAVBAR (unchanged) -->
   <nav class="navbar">
     <div class="container nav-container">
       <a href="/" class="logo-link">
@@ -416,14 +478,54 @@
     </div>
   </nav>
 
-  <!-- empty main (spacer) -->
-  <main class="main-content"></main>
+  <!-- MAIN CONTENT with the Terms of Use text added -->
+  <main class="main-content">
+    <div class="container">
+      <div class="terms-card">
+        <h1>Terms of Use</h1>
+        <div class="last-updated">Last Updated: March 7, 2026</div>
 
-  <!-- FOOTER (fixed: less space, no extra text, no duplicate sitemap/directory at bottom) -->
+        <p>Welcome to PromptGallery (the “Website”). By accessing or using this website, you agree to follow and be bound by the following Terms of Use. If you do not agree with these terms, please do not use the website.</p>
+
+        <h2>1. Use of the Website</h2>
+        <p>The content on this website is provided for general informational and educational purposes only. You may browse, view, and use the prompts available on this website for personal or commercial projects, unless otherwise stated.</p>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use the website for any illegal or harmful activity</li>
+          <li>Attempt to disrupt or damage the website or its services</li>
+          <li>Copy or scrape large portions of the website content without permission</li>
+        </ul>
+
+        <h2>2. Intellectual Property</h2>
+        <p>All content on this website, including text, prompts, design, graphics, and layout, is the property of PromptGallery unless otherwise stated.</p>
+        <p>You may use prompts from the website for generating content with AI tools, but you may not republish the prompts in bulk, resell them as a collection, or reproduce the entire website content without permission.</p>
+
+        <h2>3. External Links</h2>
+        <p>This website may contain links to third-party websites or services. We are not responsible for the content, policies, or practices of any third-party sites.</p>
+
+        <h2>4. Advertising</h2>
+        <p>This website may display advertisements from third-party advertising networks. These ads help support the operation of the website. We do not control the content of advertisements displayed by these networks.</p>
+
+        <h2>5. Disclaimer</h2>
+        <p>All content on this website is provided “as is” without warranties of any kind. We do not guarantee that the prompts or information provided will produce specific results when used with AI tools.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>Under no circumstances shall PromptGallery be liable for any direct, indirect, or incidental damages resulting from the use of this website or its content.</p>
+
+        <h2>7. Changes to These Terms</h2>
+        <p>We reserve the right to update or change these Terms of Use at any time without prior notice. Continued use of the website after changes means you accept the updated terms.</p>
+
+        <h2>8. Contact</h2>
+        <p>If you have any questions about these Terms of Use, you can contact us through the website.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (exactly as given: less space, no extra text, no duplicate bottom links) -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- Left: bold BRAINLOOM (no subtitle) -->
+        <!-- Left: bold BRAINLOOM -->
         <div class="footer-brand">
           <h3>BRAINLOOM</h3>
         </div>
@@ -469,15 +571,15 @@
         </div>
       </div>
 
-      <!-- bottom line: only copyright (no duplicate links) -->
+      <!-- bottom line: only copyright -->
       <div class="footer-bottom">
         <span>© 2026 Brainloom. All rights reserved.</span>
-        <!-- intentionally empty: sitemap/directory removed from bottom -->
+        <!-- no extra links -->
       </div>
     </div>
   </footer>
 
-  <!-- mobile toggle script -->
+  <!-- mobile toggle script (unchanged) -->
   <script>
     (function() {
       const toggle = document.getElementById('menuToggle');
