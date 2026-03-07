@@ -4,6 +4,7 @@
     <!-- Preconnect to external domains (Step 8) -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.highperformanceformat.com">
 
     <!-- Preload first image (Step 2) -->
     <link rel="preload" as="image" href="/images/333.jpg">
@@ -370,6 +371,32 @@
             font-size: 16px;
         }
 
+        /* Ad Container Styles */
+        .ad-container {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            border: 1px solid #d0d7e0;
+            text-align: center;
+        }
+
+        .desktop-ad {
+            display: inline-block;
+        }
+
+        .mobile-ad {
+            display: none;
+        }
+
+        .ad-label {
+            font-size: 11px;
+            color: #8ba0b9;
+            margin-top: 12px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
         /* Content Sections */
         .content-section {
             background: white;
@@ -392,8 +419,6 @@
         .section-title i {
             color: #1a5cff;
         }
-
-        /* Removed all skeleton CSS */
 
         /* Images - 4:5 aspect ratio */
         .images-grid {
@@ -796,6 +821,15 @@
         }
 
         /* Responsive */
+        @media (max-width: 768px) {
+            .desktop-ad {
+                display: none;
+            }
+            .mobile-ad {
+                display: inline-block;
+            }
+        }
+
         @media (max-width: 900px) {
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
@@ -973,6 +1007,40 @@
             </p>
         </div>
 
+        <!-- ADS: BETWEEN PROMPT HEADER AND IMAGES SECTION -->
+        <div class="ad-container">
+            <!-- Desktop Ad - 728x90 (visible on desktop only) -->
+            <div class="desktop-ad">
+                <script>
+                    atOptions = {
+                        'key' : '62ba6b2106fe2abcd6159c5b83039bcc',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/62ba6b2106fe2abcd6159c5b83039bcc/invoke.js"></script>
+            </div>
+
+            <!-- Mobile Ad - 320x50 (visible on mobile only) -->
+            <div class="mobile-ad">
+                <script>
+                    atOptions = {
+                        'key' : 'cf1d3a2308affc58f4f678f4a3c3241e',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/cf1d3a2308affc58f4f678f4a3c3241e/invoke.js"></script>
+            </div>
+            
+            <!-- Small ad label (optional but good practice) -->
+            <div class="ad-label">Advertisement</div>
+        </div>
+
         <!-- Images Section -->
         <div class="content-section">
             <h2 class="section-title">
@@ -981,7 +1049,6 @@
             </h2>
             <div class="images-grid">
                 <div class="image-container" onclick="openLightbox('/images/333.jpg', 'How to Create a Streetwear Editorial with Vintage Porsche 911')">
-                    <!-- Removed skeleton -->
                     <img src="/images/333.jpg" 
                          alt="How to Create a Streetwear Editorial with Vintage Porsche 911" 
                          class="prompt-image"
@@ -993,7 +1060,6 @@
                          onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image+1';">
                 </div>
                 <div class="image-container" onclick="openLightbox('/images/333.333.jpg', 'How to Create a Streetwear Editorial with Vintage Porsche 911')">
-                    <!-- Removed skeleton -->
                     <img src="/images/333.333.jpg" 
                          alt="How to Create a Streetwear Editorial with Vintage Porsche 911" 
                          class="prompt-image"
@@ -1120,7 +1186,6 @@
                 <!-- Related 1 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/166.jpg', 'Pop Art Vector Portrait Photo Prompt')">
-                        <!-- Removed skeleton -->
                         <img src="/images/166.jpg" alt="Pop Art Vector Portrait Photo Prompt" class="card-image" 
                              loading="lazy"
                              onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
@@ -1137,7 +1202,6 @@
                 <!-- Related 2 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/173.webp', 'Cinematic Portrait Ai Prompt Man Vintage Tv Couch Imax Style')">
-                        <!-- Removed skeleton -->
                         <img src="/images/173.webp" alt="Cinematic Portrait Ai Prompt Man Vintage Tv Couch Imax Style" class="card-image" 
                              loading="lazy"
                              onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
@@ -1154,7 +1218,6 @@
                 <!-- Related 3 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/231.webp', 'Heroic Comic Portrait Aviator Sunglasses 9 16')">
-                        <!-- Removed skeleton -->
                         <img src="/images/231.webp" alt="Heroic Comic Portrait Aviator Sunglasses 9 16" class="card-image" 
                              loading="lazy"
                              onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
@@ -1171,7 +1234,6 @@
                 <!-- Related 4 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/163.webp', 'Cinematic Portrait Red Smoke Demon Ai Prompt')">
-                        <!-- Removed skeleton -->
                         <img src="/images/163.webp" alt="Cinematic Portrait Red Smoke Demon Ai Prompt" class="card-image" 
                              loading="lazy"
                              onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
@@ -1188,7 +1250,6 @@
                 <!-- Related 5 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/320.jpg', 'How To Create A Raw 90S Candid Snapshot With Exact Face Match Prompt')">
-                        <!-- Removed skeleton -->
                         <img src="/images/320.jpg" alt="How To Create A Raw 90S Candid Snapshot With Exact Face Match Prompt" class="card-image" 
                              loading="lazy"
                              onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
@@ -1205,7 +1266,6 @@
                 <!-- Related 6 -->
                 <div class="prompt-card">
                     <div class="card-image-container" onclick="openLightbox('/images/270.webp', 'Renaissance Painting Soccer Motion Blur Ai Prompt')">
-                        <!-- Removed skeleton -->
                         <img src="/images/270.webp" alt="Renaissance Painting Soccer Motion Blur Ai Prompt" class="card-image" 
                              loading="lazy"
                              onerror="this.src='https://via.placeholder.com/400x500/1a5cff/ffffff?text=Image';">
@@ -1337,8 +1397,6 @@
                 closeLightbox();
             }
         });
-
-        // Removed DOMContentLoaded image loading handler
     </script>
 </body>
 </html>
