@@ -1,453 +1,756 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Brainloom</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <header class="header">
-        <div class="header-content">
-            <a href="/" class="logo">
-                <i class="fas fa-brain"></i>
-                <span>Brainloom</span>
-            </a>
 
-            <nav class="nav">
-                <a href="../policy/index.html" class="nav-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Policy</span>
-                </a>
-                <a href="../about/index.html" class="nav-item">
-                    <i class="fas fa-info-circle"></i>
-                    <span>About</span>
-                </a>
-                <a href="../contact/index.html" class="nav-item active">
-                    <i class="fas fa-envelope"></i>
-                    <span>Contact</span>
-                </a>
-            </nav>
-        </div>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
 
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Brainloom. Have questions about AI prompts, need assistance, or want to collaborate? Reach out through email, WhatsApp community, or social media.">
+    <meta name="keywords" content="contact Brainloom, AI prompts support, AI image generation help, Sanvi Al Evan contact, prompt assistance">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow">
+
+    <!-- Font Awesome (deferred) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ----- PROFESSIONAL NAVBAR (from your existing pages) ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7e0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            background: #f0f4fa;
+            border-radius: 8px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-link {
+            padding: 8px 18px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+        }
+
+        .nav-link.active {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+
+        .legal-dropdown {
+            position: relative;
+        }
+
+        .legal-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #1e3a5f;
+            cursor: default;
+            border-radius: 40px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .legal-trigger i {
+            font-size: 12px;
+            color: #2d4b6e;
+            transition: transform 0.2s;
+        }
+
+        .legal-dropdown:hover .legal-trigger i {
+            transform: rotate(180deg);
+        }
+
+        .legal-dropdown:hover .legal-trigger {
+            background: #e9ecf0;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid #d0d7e0;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+
+        .legal-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            border-left-color: #1a5cff;
+        }
+
+        .mobile-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #eef2f6;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d0d7e0;
+        }
+
+        .mobile-btn span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 16px;
+            padding: 20px 16px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e2b3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+        }
+
+        .mobile-menu a:hover {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+        }
+
+        .mobile-menu a.active {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+
+        .mobile-legal {
+            margin-top: 8px;
+        }
+
+        .mobile-legal p {
+            padding: 8px 16px 4px;
+            color: #2d4b6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto 40px;
+            padding: 0 32px;
+            flex: 1;
+        }
+
+        /* Contact Page Specific Styles */
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #0b1a2c;
+            margin-bottom: 12px;
+        }
+
+        .page-subtitle {
+            color: #2d4b6e;
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a5cff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 18px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(26, 92, 255, 0.02);
+            border-radius: 10px;
+            border-left: 3px solid #1a5cff;
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(26, 92, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #1a5cff;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #0b1a2c;
+            margin-bottom: 6px;
+        }
+
+        .contact-details p {
+            color: #2d4b6e;
+            font-size: 14px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .contact-link {
+            color: #1a5cff;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(26, 92, 255, 0.08);
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-size: 14px;
+        }
+
+        .contact-link:hover {
+            background: rgba(26, 92, 255, 0.12);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2d4b6e;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d0d7e0;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            background: #f8f9fa;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #1a5cff;
+            background: white;
+            box-shadow: 0 0 0 2px rgba(26, 92, 255, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #1a5cff;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid #0d47b0;
+        }
+
+        .submit-btn:hover {
+            background: #0d47b0;
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #d0d7e0;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(26, 92, 255, 0.08);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a5cff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 16px;
+        }
+
+        .social-link:hover {
+            background: rgba(26, 92, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .response-message {
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+            font-size: 14px;
+        }
+
+        .success {
+            background: #e6f4ea;
+            color: #0d652d;
+            border: 1px solid #b7e1c1;
+        }
+
+        .response-time {
+            margin-top: 30px;
+            padding: 15px;
+            background: rgba(26, 92, 255, 0.03);
+            border-radius: 8px;
+            border-left: 3px solid #1a5cff;
+        }
+
+        .response-time h4 {
+            color: #1a5cff;
+            margin-bottom: 8px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .response-time p {
+            color: #2d4b6e;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        /* ----- PROFESSIONAL FOOTER (from your existing pages) ----- */
+        .footer {
+            background: #0f1a26;
+            color: #e1eaf2;
+            padding: 40px 0 24px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.8fr;
+            gap: 40px 50px;
+            align-items: start;
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            padding: 0 24px;
+        }
+
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+
+        .footer-links a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+
+        .footer-social h4 {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .social-item a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+
+        .social-item a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+
+        .social-item i {
+            width: 20px;
+            font-size: 1.1rem;
+            color: #8fadcf;
+        }
+
+        .social-item a:hover i {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #8ba0b9;
+            font-size: 0.85rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
+        }
 
-            body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-                background: #fafafa;
-                color: #333;
-                line-height: 1.6;
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
             }
+        }
 
-            .header {
-                background: #ffffff;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 1000;
-                height: 60px;
-            }
-
-            .header-content {
-                max-width: 1200px;
-                margin: 0 auto;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 32px;
-            }
-
-            .logo {
-                font-size: 21px;
-                font-weight: 500;
-                color: #111;
-                letter-spacing: -0.5px;
-                text-decoration: none;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .logo i {
-                color: #007AFF;
-                font-size: 20px;
-            }
-
-            .nav {
-                display: flex;
-                gap: 24px;
-                align-items: center;
-            }
-
-            .nav-item {
-                color: #666;
-                text-decoration: none;
-                font-size: 16px;
-                display: flex;
-                align-items: center;
-                gap: 6px;
-                padding: 8px 12px;
-                border-radius: 6px;
-                transition: all 0.2s ease;
-            }
-
-            .nav-item:hover {
-                color: #007AFF;
-                background: rgba(0, 122, 255, 0.05);
-            }
-
-            .nav-item.active {
-                color: #007AFF;
-                background: rgba(0, 122, 255, 0.05);
-            }
-
-            .nav-item i {
-                font-size: 17px;
-            }
-
+        @media (max-width: 768px) {
             .main-content {
-                max-width: 1200px;
-                margin: 80px auto 40px;
-                padding: 0 32px;
-                min-height: calc(100vh - 120px);
-            }
-
-            .page-header {
-                text-align: center;
-                margin-bottom: 40px;
+                padding: 0 20px;
+                margin: 30px auto;
             }
 
             .page-title {
-                font-size: 28px;
-                font-weight: 600;
-                color: #333;
-                margin-bottom: 12px;
+                font-size: 24px;
             }
 
-            .page-subtitle {
-                color: #666;
-                font-size: 16px;
-                max-width: 600px;
-                margin: 0 auto;
+            .contact-info, .contact-form {
+                padding: 30px 25px;
             }
 
-            .contact-container {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
+            .desktop-nav {
+                display: none;
             }
-
-            .contact-info {
-                background: white;
-                border-radius: 12px;
-                padding: 40px;
-                border: 1px solid rgba(0, 0, 0, 0.08);
-                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-            }
-
-            .contact-form {
-                background: white;
-                border-radius: 12px;
-                padding: 40px;
-                border: 1px solid rgba(0, 0, 0, 0.08);
-                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-            }
-
-            .section-title {
-                font-size: 20px;
-                font-weight: 600;
-                color: #007AFF;
-                margin-bottom: 20px;
+            .mobile-btn {
                 display: flex;
-                align-items: center;
-                gap: 10px;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-brand h3 {
+                font-size: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 0 16px;
+                margin: 25px auto;
             }
 
-            .section-title i {
-                font-size: 18px;
+            .page-title {
+                font-size: 22px;
+            }
+
+            .contact-info, .contact-form {
+                padding: 25px 20px;
             }
 
             .contact-method {
-                display: flex;
-                align-items: flex-start;
-                gap: 16px;
-                margin-bottom: 25px;
-                padding: 20px;
-                background: rgba(0, 122, 255, 0.02);
-                border-radius: 10px;
-                border-left: 3px solid #007AFF;
+                padding: 15px;
             }
 
             .contact-icon {
-                width: 44px;
-                height: 44px;
-                background: rgba(0, 122, 255, 0.1);
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 18px;
-                color: #007AFF;
-                flex-shrink: 0;
-            }
-
-            .contact-details h4 {
-                font-size: 17px;
-                font-weight: 600;
-                color: #333;
-                margin-bottom: 6px;
-            }
-
-            .contact-details p {
-                color: #666;
-                font-size: 14px;
-                margin-bottom: 12px;
-                line-height: 1.5;
-            }
-
-            .contact-link {
-                color: #007AFF;
-                text-decoration: none;
-                font-weight: 500;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                padding: 8px 16px;
-                background: rgba(0, 122, 255, 0.08);
-                border-radius: 6px;
-                transition: all 0.2s ease;
-                font-size: 14px;
-            }
-
-            .contact-link:hover {
-                background: rgba(0, 122, 255, 0.12);
-            }
-
-            .form-group {
-                margin-bottom: 20px;
-            }
-
-            .form-label {
-                display: block;
-                margin-bottom: 8px;
-                color: #555;
-                font-weight: 500;
-                font-size: 14px;
-            }
-
-            .form-input, .form-textarea {
-                width: 100%;
-                padding: 12px 14px;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                font-size: 15px;
-                font-family: inherit;
-                transition: all 0.2s ease;
-                background: #f8f9fa;
-            }
-
-            .form-input:focus, .form-textarea:focus {
-                outline: none;
-                border-color: #007AFF;
-                background: white;
-                box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.1);
-            }
-
-            .form-textarea {
-                min-height: 140px;
-                resize: vertical;
-            }
-
-            .submit-btn {
-                background: #007AFF;
-                color: white;
-                border: none;
-                padding: 14px 28px;
-                border-radius: 8px;
-                font-size: 15px;
-                font-weight: 500;
-                cursor: pointer;
-                transition: all 0.2s ease;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-            }
-
-            .submit-btn:hover {
-                background: #0056cc;
-            }
-
-            .social-links {
-                display: flex;
-                gap: 12px;
-                margin-top: 30px;
-                padding-top: 20px;
-                border-top: 1px solid rgba(0, 0, 0, 0.08);
-            }
-
-            .social-link {
                 width: 40px;
                 height: 40px;
-                background: rgba(0, 122, 255, 0.08);
-                border-radius: 8px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #007AFF;
-                text-decoration: none;
-                transition: all 0.2s ease;
                 font-size: 16px;
             }
 
-            .social-link:hover {
-                background: rgba(0, 122, 255, 0.12);
-                transform: translateY(-2px);
-            }
-
-            .response-message {
-                text-align: center;
-                padding: 12px;
-                border-radius: 8px;
-                margin-top: 20px;
-                display: none;
-                font-size: 14px;
-            }
-
-            .success {
-                background: #e6f4ea;
-                color: #0d652d;
-                border: 1px solid #b7e1c1;
-            }
-
-            .response-time {
-                margin-top: 30px;
-                padding: 15px;
-                background: rgba(0, 122, 255, 0.03);
-                border-radius: 8px;
-                border-left: 3px solid #007AFF;
-            }
-
-            .response-time h4 {
-                color: #007AFF;
-                margin-bottom: 8px;
-                font-size: 15px;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-            }
-
-            .response-time p {
-                color: #666;
-                font-size: 13px;
-                line-height: 1.5;
-            }
-
-            .footer {
-                text-align: center;
-                margin-top: 40px;
-                color: #999;
-                font-size: 14px;
-            }
-
             .social-buttons {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 8px;
-                margin-top: 10px;
+                flex-direction: column;
             }
 
-            @media (max-width: 992px) {
-                .contact-container {
-                    grid-template-columns: 1fr;
-                    gap: 30px;
-                }
+            .social-buttons .contact-link {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
             }
 
-            @media (max-width: 768px) {
-                .header-content {
-                    padding: 0 20px;
-                }
-
-                .nav {
-                    gap: 16px;
-                }
-
-                .nav-item span {
-                    display: none;
-                }
-
-                .nav-item {
-                    padding: 10px;
-                }
-
-                .main-content {
-                    padding: 0 20px;
-                    margin: 70px auto 30px;
-                }
-
-                .contact-info, .contact-form {
-                    padding: 30px 25px;
-                }
-
-                .page-title {
-                    font-size: 24px;
-                }
+            .social-links {
+                justify-content: center;
             }
+        }
+    </style>
+</head>
+<body>
+    <!-- PROFESSIONAL NAVBAR (from your existing pages) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo-link">
+                <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <span class="logo-text">Brainloom</span>
+            </a>
 
-            @media (max-width: 480px) {
-                .header-content {
-                    padding: 0 16px;
-                }
+            <div class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/prompts" class="nav-link">Prompts</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link active">Contact</a>
+                <div class="legal-dropdown">
+                    <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
 
-                .nav {
-                    gap: 12px;
-                }
+            <div class="mobile-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
 
-                .main-content {
-                    padding: 0 16px;
-                    margin: 65px auto 25px;
-                }
-
-                .contact-info, .contact-form {
-                    padding: 25px 20px;
-                }
-
-                .page-title {
-                    font-size: 22px;
-                }
-
-                .contact-method {
-                    padding: 15px;
-                }
-
-                .contact-icon {
-                    width: 40px;
-                    height: 40px;
-                    font-size: 16px;
-                }
-
-                .social-buttons {
-                    flex-direction: column;
-                }
-
-                .social-buttons .contact-link {
-                    width: 100%;
-                    text-align: center;
-                    justify-content: center;
-                }
-            }
-        </style>
-    </header>
+        <div class="container">
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/">Home</a>
+                <a href="/prompts">Prompts</a>
+                <a href="/about">About</a>
+                <a href="/contact" class="active">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <main class="main-content">
         <div class="page-header">
@@ -472,7 +775,7 @@
                         <a href="mailto:sanvialevan2121@gmail.com" class="contact-link">
                             <i class="fas fa-paper-plane"></i> Send Email
                         </a>
-                        <p style="margin-top: 8px; font-size: 13px; color: #777;">
+                        <p style="margin-top: 8px; font-size: 13px; color: #2d4b6e;">
                             sanvialevan2121@gmail.com
                         </p>
                     </div>
@@ -488,7 +791,7 @@
                         <a href="https://chat.whatsapp.com/LOgkCEvXwGW6mJVourbOB6" target="_blank" class="contact-link">
                             <i class="fab fa-whatsapp"></i> Join Group
                         </a>
-                        <p style="margin-top: 8px; font-size: 13px; color: #777;">
+                        <p style="margin-top: 8px; font-size: 13px; color: #2d4b6e;">
                             Connect with our community members
                         </p>
                     </div>
@@ -514,6 +817,12 @@
                             <a href="https://www.tiktok.com/@brainloom.online" target="_blank" class="contact-link">
                                 <i class="fab fa-tiktok"></i> TikTok
                             </a>
+                            <a href="https://www.instagram.com/_brainloom.online/" target="_blank" class="contact-link">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://t.me/brainloomonline" target="_blank" class="contact-link">
+                                <i class="fab fa-telegram"></i> Telegram
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -533,6 +842,9 @@
                     </a>
                     <a href="https://www.tiktok.com/@brainloom.online" target="_blank" class="social-link" title="TikTok">
                         <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_brainloom.online/" target="_blank" class="social-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
                     </a>
                 </div>
             </div>
@@ -574,15 +886,74 @@
                 </div>
             </div>
         </div>
-
-        <div class="footer">
-            <p>© 2024 Brainloom. All rights reserved.</p>
-            <p style="margin-top: 5px; font-size: 12px; color: #aaa;">
-                Crafting digital experiences with care
-            </p>
-        </div>
     </main>
 
+    <!-- PROFESSIONAL FOOTER (from your existing pages) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+            </div>
+
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/prompts">Prompts</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="/links.html">Directory</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            }
+        })();
+    </script>
+
+    <!-- Contact Form Script -->
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
