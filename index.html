@@ -996,7 +996,7 @@
     </div>
   </section>
 
-  <!-- RECENTLY ADDED PROMPTS SECTION (dynamic cards) -->
+  <!-- RECENTLY ADDED PROMPTS SECTION (dynamic cards) - MODIFIED TO USE PROMPTGALARY.COM -->
   <section class="recent-section">
     <div class="container">
       <div class="section-header">
@@ -1203,13 +1203,14 @@
     })();
   </script>
 
-  <!-- script to fetch and display latest 4 prompts (deferred) -->
+  <!-- script to fetch and display latest 4 prompts (deferred) - MODIFIED TO USE PROMPTGALARY.COM -->
   <script defer>
     document.addEventListener('DOMContentLoaded', async function() {
       const cardsContainer = document.getElementById('promptCards');
+      const PROMPT_BASE_URL = 'https://promptgalary.com';
 
       try {
-        const response = await fetch('/prompt.json');
+        const response = await fetch('https://promptgalary.com/prompt.json');
 
         if (!response.ok) {
           throw new Error(`HTTP error ${response.status}`);
@@ -1222,11 +1223,13 @@
 
         latestPrompts.forEach(prompt => {
           const cardLink = document.createElement('a');
-          cardLink.href = prompt.file_path;
+          cardLink.href = PROMPT_BASE_URL + prompt.file_path;
           cardLink.className = 'prompt-card';
+          cardLink.target = '_blank'; // Optional: opens in new tab
+          cardLink.rel = 'noopener noreferrer'; // Security best practice
 
           const img = document.createElement('img');
-          img.dataset.src = `/images/${prompt.image}`;
+          img.dataset.src = `${PROMPT_BASE_URL}/images/${prompt.image}`;
           img.alt = `Prompt ${prompt.id}`;
           img.className = 'card-image lazy-image';
           img.width = 400;
