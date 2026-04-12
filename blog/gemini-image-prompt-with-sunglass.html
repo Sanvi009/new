@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompts with Sunglasses | AI Prompts Gallery</title>
+    <meta name="description" content="14 AI prompts featuring sunglasses - high-fashion editorial, fisheye portraits, street style, cyberpunk aesthetics, and dramatic studio lighting.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="/asset/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #fafbfd;
+            color: #1e2532;
+            line-height: 1.4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px -6px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+            padding: 0.6rem 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eef0f5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo a {
+            font-weight: 630;
+            font-size: 1.55rem;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #1f2937 0%, #1e293b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo span {
+            background: linear-gradient(145deg, #2563eb, #4f7df3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.9rem;
+            line-height: 1;
+            margin-right: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .nav-links a, .dropbtn {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.96rem;
+            font-weight: 500;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 60px;
+            transition: all 0.18s ease;
+            white-space: nowrap;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover, .dropdown:hover .dropbtn {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 6px 14px -8px rgba(37,99,235,0.2);
+            color: #0f172a;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+            font-size: 0.96rem;
+            font-weight: 500;
+            color: #334155;
+            padding: 0.6rem 1.2rem;
+            border: 1px solid transparent;
+        }
+
+        .dropbtn i {
+            font-size: 0.7rem;
+            color: #5f6c80;
+            transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .dropdown:hover .dropbtn i {
+            transform: rotate(180deg);
+            color: #2563eb;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            left: auto;
+            background: #ffffff;
+            min-width: 220px;
+            border-radius: 24px;
+            padding: 0.6rem 0;
+            box-shadow: 0 25px 45px -14px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.02), 0 8px 20px -12px rgba(37,99,235,0.15);
+            border: 1px solid #edeff2;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+            background: rgba(255,255,255,0.98);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.7rem 1.7rem;
+            color: #2d3a4f;
+            background: transparent;
+            white-space: nowrap;
+            font-weight: 460;
+            border-left: 3px solid transparent;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .dropdown-content a:hover {
+            background: #f6f8fc;
+            border-left-color: #2563eb;
+            color: #0f1c33;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeSlide 0.18s ease;
+        }
+
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateY(-6px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .menu-toggle {
+            display: none;
+            background: white;
+            border: 1px solid #dee3ea;
+            border-radius: 60px;
+            padding: 0.45rem 1.4rem;
+            font-size: 0.95rem;
+            font-weight: 480;
+            cursor: pointer;
+            color: #2b3b52;
+            transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .menu-toggle i {
+            margin-right: 6px;
+            color: #4a5b73;
+        }
+
+        .menu-toggle:hover {
+            background: #f9fcff;
+            border-color: #b7c3d4;
+            box-shadow: 0 6px 12px -10px #2563eb;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 650;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #1e293b 0%, #2d3a5e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #5a687c;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .prompt-count {
+            display: inline-block;
+            background: #eef3fc;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #2563eb;
+            margin-top: 0.75rem;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            color: #3c4a62;
+            line-height: 1.7;
+            margin: 0 auto 3rem auto;
+            max-width: 900px;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid #edf0f5;
+            box-shadow: 0 4px 16px -8px rgba(0,0,0,0.03);
+        }
+
+        .intro-text h2 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1a2638;
+        }
+
+        .prompt-card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 16px -8px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+            border: 1px solid #edf0f5;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .prompt-card:hover {
+            box-shadow: 0 12px 28px -14px rgba(0,0,0,0.08);
+        }
+
+        .prompt-title {
+            font-size: 1.6rem;
+            font-weight: 620;
+            letter-spacing: -0.01em;
+            color: #1a2638;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eef2f8;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .image-wrapper {
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #f3f6fc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #eef2f8;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.25s ease;
+        }
+
+        .image-wrapper img:hover {
+            transform: scale(1.02);
+        }
+
+        .prompt-description {
+            font-size: 1.05rem;
+            color: #3c4a62;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            padding: 0.75rem 0;
+            border-top: 1px solid #f0f3f9;
+        }
+
+        .pro-tip {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #047857;
+            background: #ecfdf5;
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            border-left: 4px solid #10b981;
+            font-weight: 500;
+            display: block;
+        }
+
+        .prompt-box {
+            background: #f8fafd;
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid #e9edf3;
+            position: relative;
+        }
+
+        .prompt-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .prompt-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #5f6e86;
+            background: #eef3fc;
+            padding: 0.25rem 0.9rem;
+            border-radius: 40px;
+            display: inline-block;
+        }
+
+        .copy-btn {
+            background: #ffffff;
+            border: 1px solid #dee4ed;
+            padding: 0.45rem 1.1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #3a4b6e;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .copy-btn i {
+            font-size: 0.9rem;
+            color: #5b6e8f;
+        }
+
+        .copy-btn:hover {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: white;
+        }
+
+        .copy-btn:hover i {
+            color: white;
+        }
+
+        .copy-btn.copied {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+
+        .copy-btn.copied i {
+            color: white;
+        }
+
+        .prompt-text {
+            font-family: 'SF Mono', 'Menlo', 'Monaco', 'Cascadia Code', monospace;
+            font-size: 0.85rem;
+            line-height: 1.55;
+            color: #1e2a3e;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: #ffffff;
+            padding: 1.25rem;
+            border-radius: 16px;
+            border: 1px solid #eef2f8;
+            margin-top: 0.5rem;
+            max-height: none;
+            overflow: visible;
+        }
+
+        .toast-msg {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1e293b;
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            z-index: 2000;
+            opacity: 0;
+            transition: all 0.25s ease;
+            pointer-events: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            white-space: nowrap;
+        }
+
+        .toast-msg.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .footer {
+            background: #ffffff;
+            border-top: 1px solid #edf0f5;
+            padding: 0.5rem 2rem;
+            font-size: 0.8rem;
+            color: #5a687c;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.01);
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1300px;
+            margin: 0 auto;
+            gap: 0.3rem 1rem;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem 1.8rem;
+        }
+
+        .footer-site-name {
+            font-weight: 620;
+            font-size: 1.0rem;
+            letter-spacing: -0.01em;
+            color: #1f2a41;
+            background: linear-gradient(135deg, #202937, #19212e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+            margin-right: 0.5rem;
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem 1.6rem;
+        }
+
+        .footer-nav-links a {
+            color: #657386;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 480;
+            transition: color 0.15s;
+            white-space: nowrap;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        .footer-nav-links a:hover {
+            color: #1b263b;
+            border-bottom-color: #a7b5cc;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem 1.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #5f6e86;
+            font-size: 1.0rem;
+            transition: color 0.2s, transform 0.1s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 60px;
+            background: #f3f6fb;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #1f2a44;
+            background: #e6ecf5;
+            transform: scale(1.03);
+        }
+
+        .footer-extra-compact {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            border-left: 1px solid #dde2ea;
+            padding-left: 1rem;
+        }
+
+        .footer-extra-compact a {
+            color: #5f6e86;
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 470;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            white-space: nowrap;
+            background: #f3f6fb;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            transition: background 0.15s;
+        }
+
+        .footer-extra-compact a i {
+            font-size: 0.65rem;
+            opacity: 0.7;
+        }
+
+        .footer-extra-compact a:hover {
+            background: #e0e7f2;
+            color: #1a253b;
+        }
+
+        @media screen and (max-width: 800px) {
+            .navbar {
+                padding: 0.5rem 1.2rem;
+            }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                background: #ffffff;
+                padding: 1.2rem 0.6rem 0.9rem 0.6rem;
+                gap: 0.4rem;
+                border-top: 1px solid #eceff4;
+                margin-top: 0.5rem;
+                border-radius: 28px;
+                box-shadow: inset 0 6px 12px -12px rgba(0,0,0,0.1);
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: inline-flex;
+                align-items: center;
+            }
+            .dropdown {
+                width: 100%;
+            }
+            .dropbtn {
+                width: 100%;
+                justify-content: space-between;
+                background: #f6f9fe;
+                border-radius: 40px;
+                padding: 0.7rem 1.3rem;
+                border: 1px solid #e5eaf0;
+            }
+            .dropdown-content {
+                position: static;
+                right: auto;
+                left: auto;
+                box-shadow: none;
+                border: none;
+                background: #f1f5fc;
+                border-radius: 24px;
+                margin: 0.4rem 0 0.2rem 1rem;
+                padding: 0.5rem 0;
+                width: calc(100% - 1.8rem);
+                min-width: auto;
+                backdrop-filter: none;
+            }
+            .dropdown-content a {
+                padding: 0.7rem 1.5rem;
+                white-space: normal;
+                border-left: 2px solid transparent;
+            }
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+            .dropdown.active .dropdown-content {
+                display: block !important;
+                animation: fadeSlide 0.18s ease;
+            }
+            main {
+                padding: 1.5rem 1rem;
+            }
+            .page-header h1 {
+                font-size: 1.6rem;
+            }
+            .page-header p {
+                font-size: 0.95rem;
+            }
+            .prompt-card {
+                padding: 1.25rem;
+            }
+            .prompt-title {
+                font-size: 1.3rem;
+            }
+            .images-grid {
+                gap: 0.75rem;
+            }
+            .prompt-box {
+                padding: 1rem;
+            }
+            .prompt-text {
+                font-size: 0.75rem;
+                padding: 0.9rem;
+            }
+            .intro-text {
+                padding: 1.25rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .images-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .image-wrapper {
+                aspect-ratio: 4 / 5;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .footer {
+                padding: 0.15rem 0.6rem;
+            }
+            .footer-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.1rem;
+            }
+            .footer-left {
+                width: 100%;
+                display: block;
+            }
+            .footer-site-name {
+                font-size: 1.1rem;
+                display: block;
+                line-height: 1.1;
+                margin: 0.1rem 0 0 0;
+            }
+            .footer-left .footer-nav-links {
+                display: none;
+            }
+            .footer-right {
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.1rem;
+                margin-top: 0;
+            }
+            .mobile-nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 0.15rem 0.4rem;
+                width: 100%;
+                line-height: 1;
+            }
+            .mobile-nav-links a {
+                color: #5a6b82;
+                text-decoration: none;
+                font-size: 0.6rem;
+                font-weight: 470;
+                white-space: nowrap;
+                padding: 0 0.1rem;
+                border-bottom: 1px solid transparent;
+                transition: color 0.15s;
+            }
+            .social-links {
+                gap: 0.1rem;
+            }
+            .social-links a {
+                width: 1.25rem;
+                height: 1.25rem;
+                font-size: 0.65rem;
+                background: #f0f4fc;
+            }
+            .footer-extra-compact {
+                border-left: none;
+                padding-left: 0;
+                gap: 0.2rem;
+            }
+            .footer-extra-compact a {
+                font-size: 0.58rem;
+                padding: 0.05rem 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><span>◈</span> promptgalary</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="menu"><i class="fas fa-bars"></i> Menu</button>
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/prompts">Prompts</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <div class="dropdown" id="legalDropdown">
+                <button class="dropbtn">Legal <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="/policy/">Privacy policy</a>
+                    <a href="/term/">Terms of service</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <h1>Mastering AI Portraits with Sunglasses</h1>
+            <p>High-fashion editorial, fisheye portraits, street style, cyberpunk aesthetics, and dramatic studio lighting featuring sunglasses.</p>
+            <span class="prompt-count">14 Premium Prompts</span>
+        </div>
+
+        <div class="intro-text">
+            <h2>The Art of Prompting Eyewear in AI</h2>
+            <p>Welcome to Promptgalary's definitive guide to generating striking AI portraits featuring sunglasses. When crafting the perfect AI image, sunglasses present a unique challenge and a massive creative opportunity. They dictate the mood of the piece—shifting a portrait from a clean, high-fashion editorial to a gritty, underground cyberpunk aesthetic with just a few choice words.</p>
+            <br>
+            <p>However, AI models often struggle with complex elements like lens reflections, facial framing, and lighting interactions. In this curated gallery, we don't just provide the prompts; we break down exactly <em>why</em> they work. You will learn how adjusting specific focal lengths (such as using an ultra-wide 10mm or 14mm lens instruction) creates dynamic, distorted fisheye effects that dominate modern streetwear photography. We also dive into precise lighting cues—from dual-color neon gradients to direct, harsh camera flashes—and explain how they interact with tinted lenses and skin textures to produce hyper-realistic results. Explore these 14 meticulously tested prompts to elevate your AI artistry and learn the underlying mechanics of professional prompt engineering.</p>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">1. High-Fashion Editorial Portrait with Eyeglasses</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/374.jpg" alt="Editorial portrait with glasses reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/374.374.jpg" alt="Editorial portrait with glasses reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                This prompt captures the essence of luxury fashion campaigns by focusing on a clean, avant-garde aesthetic. The magic here lies in the "clean pure white background" combined with "dramatic yet soft studio lighting," which ensures the eyeglasses become a striking focal point without casting harsh shadows that overwhelm the subject's face. The instruction to use an "85mm lens" is crucial for AI portraiture; it provides flattering facial compression that mimics authentic high-end editorial photography.
+                <span class="pro-tip"><i class="fas fa-lightbulb"></i> <strong>Pro Tip:</strong> If the reflections in the eyeglasses are too distracting in your generations, add "anti-reflective coating on lenses" to your prompt to clear up the subject's eyes.</span>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="upper body portrait of a high-fashion model with exact same identity from the uploaded image  wearing eyeglasses, avant-garde styling, sleek hair tucked behind ears, statement makeup with glossy skin and defined lips, sharp jawline, confident and slightly cold expression, editorial pose, centered composition, full head visible with space above, clean pure white background, dramatic yet soft studio lighting, luxury fashion campaign style, ultra detailed, shot on 85mm lens, shallow depth of field, 4k ar 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">upper body portrait of a high-fashion model with exact same identity from the uploaded image  wearing eyeglasses, avant-garde styling, sleek hair tucked behind ears, statement makeup with glossy skin and defined lips, sharp jawline, confident and slightly cold expression, editorial pose, centered composition, full head visible with space above, clean pure white background, dramatic yet soft studio lighting, luxury fashion campaign style, ultra detailed, shot on 85mm lens, shallow depth of field, 4k ar 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">2. Paparazzi-Style Street Influencer Editorial</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/366.jpg" alt="Street style influencer reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/366.366.jpg" alt="Street style influencer reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                Capturing the raw, kinetic energy of Paris Fashion Week requires a highly specific set of photographic cues. This prompt specifically utilizes "direct flash photography" and "high contrast" to create that signature, slightly blown-out paparazzi aesthetic. The layered Y2K streetwear—a distressed graphic tee under an oversized faux-fur coat—contrasts brilliantly against the sharp "diamond-encrusted sunglasses," giving the image a sought-after urban luxury vibe.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="A candid yet highly stylized \"street style\" editorial shot of a (female/male) influencer during Paris Fashion Week. (She/he) is wearing a vintage-wash t-shirt with \"I ❤️ AI SLOP\" printed in a distressed Y2K font. He's layered with a faux-fur oversized coat slung off the shoulders and diamond-encrusted sunglasses. Direct flash photography, high contrast, vibrant colors, urban luxury background, effortless cool pose, extremely detailed fabric textures.use the uploaded image as the subject , ar 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">A candid yet highly stylized "street style" editorial shot of a (female/male) influencer during Paris Fashion Week. (She/he) is wearing a vintage-wash t-shirt with "I ❤️ AI SLOP" printed in a distressed Y2K font. He's layered with a faux-fur oversized coat slung off the shoulders and diamond-encrusted sunglasses. Direct flash photography, high contrast, vibrant colors, urban luxury background, effortless cool pose, extremely detailed fabric textures.use the uploaded image as the subject , ar 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">3. Gritty Top-Down Warehouse Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/362.webp" alt="Warehouse money portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/362.362.webp" alt="Warehouse money portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                This prompt is a masterclass in AI texture mapping and atmospheric lighting. By specifying "cold white industrial fluorescent lamps," the AI is forced to generate harsh highlights that realistically reflect off the dark tactical sunglasses and gold chains, enhancing the gritty underground feel. The "high top-down angle" paired with a 24mm lens creates a sense of spatial tension, allowing the scattered US dollar bills to densely fill the frame while keeping the subject sharply isolated against the blurred background shelves.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="Glooomyboy hyper-realistic medium shot captured from a high top-down angle, showing a me with exact same facial and physical identity from the uploaded image in a dimly lit, dark warehouse filled with money. . i, wearing dark tactical rectangular glasses and a thick gold Cuban link chain. i dressed in an olive-green plush fleece sweater (teddy bear texture) featuring a cream knitted graphic of abstract skulls and the word \"OREMONY.\" i wears loose-fit black cargo pants with metallic hardware and olive-green quilted puffer boots. i sitting on the edge of stacked industrial metal crates. Scene & Composition: The floor is completely covered with hundreds of scattered US $100 bills. In the background, there are industrial metal shelves stretching from floor to ceiling, tightly packed with neatly stacked bundles of cash wrapped in bank bands. Between the man and the shelves stands a metal table, also covered in money. The entire scene is shot from a high angle, looking straight down. The background elements are slightly blurred due to shallow depth of field, keeping only the subject in perfect sharp focus. Lighting & Atmosphere: Cinematic, cold, and \"gritty\" aesthetic. The main light source is dim overhead lighting from cold white industrial fluorescent lamps, creating harsh highlights on the sweater and face, along with deep, defined shadows. Dust particles are visible in the light beams, adding authenticity. The environment feels cold, secure, and slightly tense. Hyper-realistic Details: Extreme emphasis on textures. The fleece fabric should appear highly detailed, with visible fibers and knit structure. Realistic skin shine, fine wrinkles around the eyes, reflections in the glasses lenses, metallic shine on the chains and shelves. The crisp texture of aged dollar bills scattered across a concrete floor. Natural folds and weight in the cargo fabric. Camera Settings: Shot on Canon EOS-1D X Mark III, 24mm lens, f/2.8. High resolution. Aperture: f/5.6. Shutter speed: 1/250. ISO 3200 (to create cinematic grain and a realistic low-light effect). Color palette slightly muted and desaturated with a cool tone bias. Exceptional sharpness on foreground subjects. ar 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Glooomyboy hyper-realistic medium shot captured from a high top-down angle, showing a me with exact same facial and physical identity from the uploaded image in a dimly lit, dark warehouse filled with money. . i, wearing dark tactical rectangular glasses and a thick gold Cuban link chain. i dressed in an olive-green plush fleece sweater (teddy bear texture) featuring a cream knitted graphic of abstract skulls and the word "OREMONY." i wears loose-fit black cargo pants with metallic hardware and olive-green quilted puffer boots. i sitting on the edge of stacked industrial metal crates. Scene & Composition: The floor is completely covered with hundreds of scattered US $100 bills. In the background, there are industrial metal shelves stretching from floor to ceiling, tightly packed with neatly stacked bundles of cash wrapped in bank bands. Between the man and the shelves stands a metal table, also covered in money. The entire scene is shot from a high angle, looking straight down. The background elements are slightly blurred due to shallow depth of field, keeping only the subject in perfect sharp focus. Lighting & Atmosphere: Cinematic, cold, and "gritty" aesthetic. The main light source is dim overhead lighting from cold white industrial fluorescent lamps, creating harsh highlights on the sweater and face, along with deep, defined shadows. Dust particles are visible in the light beams, adding authenticity. The environment feels cold, secure, and slightly tense. Hyper-realistic Details: Extreme emphasis on textures. The fleece fabric should appear highly detailed, with visible fibers and knit structure. Realistic skin shine, fine wrinkles around the eyes, reflections in the glasses lenses, metallic shine on the chains and shelves. The crisp texture of aged dollar bills scattered across a concrete floor. Natural folds and weight in the cargo fabric. Camera Settings: Shot on Canon EOS-1D X Mark III, 24mm lens, f/2.8. High resolution. Aperture: f/5.6. Shutter speed: 1/250. ISO 3200 (to create cinematic grain and a realistic low-light effect). Color palette slightly muted and desaturated with a cool tone bias. Exceptional sharpness on foreground subjects. ar 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">4. Ultra-Wide Fisheye Distortion Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/364.jpg" alt="Fisheye distortion portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/364.364.webp" alt="Fisheye distortion portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                Fisheye lenses bring an immediate, highly stylized edge to portrait photography. Here, the explicit "10mm fisheye" instruction fired from a "dramatic high top-down angle" intentionally distorts the visual perspective. This technique naturally enlarges the oversized Ray-Ban transparent frames while compressing the body into the background. The "bold terracotta studio background" provides a smooth, warm contrast to the cool, street-level apparel styling.
+                <span class="pro-tip"><i class="fas fa-lightbulb"></i> <strong>Pro Tip:</strong> If the 10mm fisheye distortion feels too extreme or warps the face unrecognizably, change the prompt to a "24mm wide-angle lens" for a slightly more natural but still dramatic top-down look.</span>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="Convert uploaded photo into ultra-wide 10mm fisheye portrait from dramatic high top-down angle with strong perspective distortion (larger head, compressed body). Add black oversized RAY-BAN transparent frame sunglasses and Nike logo with white cap, right hand adjusting cap, confident upward gaze. Color-block puffer jacket (burnt orange/cream/brown), white tee, white Nike sneakers. Bold terracotta studio background, smooth gradient, high contrast, sharp editorial lighting, 8k. ar 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Convert uploaded photo into ultra-wide 10mm fisheye portrait from dramatic high top-down angle with strong perspective distortion (larger head, compressed body). Add black oversized RAY-BAN transparent frame sunglasses and Nike logo with white cap, right hand adjusting cap, confident upward gaze. Color-block puffer jacket (burnt orange/cream/brown), white tee, white Nike sneakers. Bold terracotta studio background, smooth gradient, high contrast, sharp editorial lighting, 8k. ar 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">5. Dramatic Dual-Color Lighting Fashion Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/349.jpg" alt="Dual-color lighting portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/349.349.jpg" alt="Dual-color lighting portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                Dual-color lighting is a powerful technique for creating cinematic depth in studio portraits. This prompt dictates "warm red/orange light from one side and cool teal/blue rim lighting from the opposite" to sculpt the face dynamically. This specific lighting setup is designed to reflect off the thin metal frames of the sunglasses and cast colorful shadows across the "futuristic white oversized puffer jacket," which acts as a perfect blank canvas for the light play.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="Create an ultra-photorealistic cinematic portrait of me with exact same facial and physical identity from the uploaded image viewed from a slightly low angle looking upward with a confident, powerful expression. Generate my face using the uploaded portrait photo. The composition is a tight upper-body portrait with the head tilted slightly upward, emphasizing the jawline . The background is a smooth vibrant studio gradient transitioning between deep orange and warm red tones, creating a dramatic modern aesthetic. Use strong cinematic dual-color lighting: warm red/orange light from one side and cool teal/blue rim lighting from the opposite side to create striking contrast across the face . i wearing a futuristic white oversized puffer jacket with large quilted sections and a high protective collar. The jacket should look premium and modern with realistic fabric folds, padded insulation volume, and subtle material sheen similar to high-end technical winter fashion. Add extremely detailed textures: visible skin pores,, subtle facial imperfections, realistic lip texture, micro skin reflections, and detailed hair follicles. The sunglasses should have thin metal frames with realistic reflections and slightly tinted lenses reflecting the colored lighting. The white puffer jacket must show detailed stitching, fabric grain, padded segments, and realistic light interaction across the material. Lighting should create soft shadows, strong color contrast, and dramatic highlights across the face, , glasses, and jacket. Maintain sharp focus on the subject with studio-quality depth and clarity. Ultra photorealistic portrait photography, cinematic studio lighting, hyper- detailed textures, 8K detail, premium editorial fashion portrait, extremely realistic skin and fabric materials. ar 4:5"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Create an ultra-photorealistic cinematic portrait of me with exact same facial and physical identity from the uploaded image viewed from a slightly low angle looking upward with a confident, powerful expression. Generate my face using the uploaded portrait photo. The composition is a tight upper-body portrait with the head tilted slightly upward, emphasizing the jawline . The background is a smooth vibrant studio gradient transitioning between deep orange and warm red tones, creating a dramatic modern aesthetic. Use strong cinematic dual-color lighting: warm red/orange light from one side and cool teal/blue rim lighting from the opposite side to create striking contrast across the face . i wearing a futuristic white oversized puffer jacket with large quilted sections and a high protective collar. The jacket should look premium and modern with realistic fabric folds, padded insulation volume, and subtle material sheen similar to high-end technical winter fashion. Add extremely detailed textures: visible skin pores,, subtle facial imperfections, realistic lip texture, micro skin reflections, and detailed hair follicles. The sunglasses should have thin metal frames with realistic reflections and slightly tinted lenses reflecting the colored lighting. The white puffer jacket must show detailed stitching, fabric grain, padded segments, and realistic light interaction across the material. Lighting should create soft shadows, strong color contrast, and dramatic highlights across the face, , glasses, and jacket. Maintain sharp focus on the subject with studio-quality depth and clarity. Ultra photorealistic portrait photography, cinematic studio lighting, hyper- detailed textures, 8K detail, premium editorial fashion portrait, extremely realistic skin and fabric materials. ar 4:5</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">6. Distorted Wide-Angle Retro Cell Phone Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/347.jpg" alt="Retro cell phone portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/347.347.webp" alt="Retro cell phone portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                Nostalgia meets mathematical precision in this retro-styled setup. The true power of this AI prompt is its use of a strict color palette controlled by exact HEX values. Providing exact hex codes prevents the AI from drifting into modern, vibrant hues, anchoring the image in a muted, vintage 90s feel. The "red-tinted sunglasses" and "wide-angle lens" distortion add a playful, slightly surreal quality reminiscent of early MTV music videos.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="A close-up high-angle shot of me with exact same facial and physical identity from the uploaded image. i holds a retro cell phone to my ear with his left hand, displaying a perplexed expression. i wears oversized square red-tinted sunglasses with black frames, and my facial features include fair skin with scattered facial hair and a slightly open mouth. my outfit features a vintage-style brown, white, and blue horizontally striped polo shirt with a collar over a cream t-shirt. The setting is a plain studio background with cool grey tones and diffuse lighting, emphasizing his appearance. The color palette consists of warm browns and oranges, along with muted tones set against a pale blue backdrop. The image appears to be captured with a wide-angle lens, causing distortion, and the focus is sharply on the man's face, creating a playful and retro mood. HEX VALUES: [\"#4eOdOb\", \"#606a8b\", \"#0f0509\", \"#7689af\", \"#85170d\", \"#9ab&cf\" \"#1a2036\", \"#243455\", \"#445071\", \"#f8ded?\", \"#e7b6ab\", \"#713834\", \"#c58b83\" \"#d44926\". \"#98615d\"] ar 4:5"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">A close-up high-angle shot of me with exact same facial and physical identity from the uploaded image. i holds a retro cell phone to my ear with his left hand, displaying a perplexed expression. i wears oversized square red-tinted sunglasses with black frames, and my facial features include fair skin with scattered facial hair and a slightly open mouth. my outfit features a vintage-style brown, white, and blue horizontally striped polo shirt with a collar over a cream t-shirt. The setting is a plain studio background with cool grey tones and diffuse lighting, emphasizing his appearance. The color palette consists of warm browns and oranges, along with muted tones set against a pale blue backdrop. The image appears to be captured with a wide-angle lens, causing distortion, and the focus is sharply on the man's face, creating a playful and retro mood. HEX VALUES: ["#4eOdOb", "#606a8b", "#0f0509", "#7689af", "#85170d", "#9ab&cf" "#1a2036", "#243455", "#445071", "#f8ded?", "#e7b6ab", "#713834", "#c58b83" "#d44926". "#98615d"] ar 4:5</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">7. Extreme Fisheye Top-Down with Puffer Jacket</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/302.jpg" alt="Fisheye puffer jacket reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/302.302.jpg" alt="Fisheye puffer jacket reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                Similar in structure to Prompt 4, this setup utilizes extreme perspective distortion but shifts the environment to a stark, "bold white studio background." This minimalist, high-key approach isolates the subject entirely, forcing the "black oversized sunglasses" and textured grey/black puffer jacket to pop with high-fashion magazine clarity. The stark contrast between the bright background and the dark eyewear is a staple of modern editorial lookbooks.
+                <span class="pro-tip"><i class="fas fa-lightbulb"></i> <strong>Pro Tip:</strong> By changing the "grey / black" color block instructions, you can easily adapt this prompt to feature your own brand colors or current seasonal streetwear trends.</span>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="Convert uploaded photo into ultra-wide 10mm fisheye portrait from dramatic high top-down angle with strong perspective distortion (larger head, compressed body). Add black oversized sunglasses, left hand adjusting sunglasses, confident upward gaze. Color-block puffer jacket (grey / black), black tee, silver chain, white sneakers. Bold white studio background, smooth gradient, high contrast, sharp editorial lighting, 8k. ar-9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Convert uploaded photo into ultra-wide 10mm fisheye portrait from dramatic high top-down angle with strong perspective distortion (larger head, compressed body). Add black oversized sunglasses, left hand adjusting sunglasses, confident upward gaze. Color-block puffer jacket (grey / black), black tee, silver chain, white sneakers. Bold white studio background, smooth gradient, high contrast, sharp editorial lighting, 8k. ar-9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">8. Low-Angle 14mm Racing Jacket Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/300.jpg" alt="Racing jacket portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/300.300.jpg" alt="Racing jacket portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                Immersive depth distortion is the primary goal here. By requesting a "14mm ultra-wide lens" from a low-angle, and explicitly instructing the subject's "hands reaching toward the camera," the AI creates a striking 3D-like parallax effect. The "mint-green studio backdrop" paired with "teal-green dominant editorial color grading" provides a cohesive, professional color story that beautifully complements the glossy dark sunglasses and racing aesthetics.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="Ultra-realistic studio portrait of me with exact same facial and physical identity from the uploaded image shot with a dramatic 14mm ultra-wide lens look, low-angle dynamic close-up with my hands reaching toward the camera to create immersive depth distortion. I'm wearing a green and black racing-style varsity jacket detailed patches over a crisp white shirt and patterned green tie, dark rectangular sunglasses, slightly wet textured hair . I'm looking slightly upward and sideways with a confident, focused expression arms raised and fingers partially framing the lens. Clean seamless mint-green studio backdrop with a smooth gradient, professional directional key light from above the side creating subtle jawline shadows, cinematic contrast, sharp natural skin texture, slight glossy highlights on the jacket, teal-green dominant editorial color grading, cool tone, high clarity, 8K full-frame, f/2.8, ISO 100, ultra-detailed RAW fashion photography, no illustration or cartoon."><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Ultra-realistic studio portrait of me with exact same facial and physical identity from the uploaded image shot with a dramatic 14mm ultra-wide lens look, low-angle dynamic close-up with my hands reaching toward the camera to create immersive depth distortion. I'm wearing a green and black racing-style varsity jacket detailed patches over a crisp white shirt and patterned green tie, dark rectangular sunglasses, slightly wet textured hair . I'm looking slightly upward and sideways with a confident, focused expression arms raised and fingers partially framing the lens. Clean seamless mint-green studio backdrop with a smooth gradient, professional directional key light from above the side creating subtle jawline shadows, cinematic contrast, sharp natural skin texture, slight glossy highlights on the jacket, teal-green dominant editorial color grading, cool tone, high clarity, 8K full-frame, f/2.8, ISO 100, ultra-detailed RAW fashion photography, no illustration or cartoon.</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">9. 70s Retro-Luxury Fisheye Editorial</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/299.jpg" alt="Fisheye editorial portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/299.299.jpg" alt="Fisheye editorial portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                This prompt effortlessly merges 1970s retro aesthetics with high-end luxury street style. The "oversized amber/yellow tinted aviator sunglasses" are the undeniable focal point, interacting beautifully with the "soft diffused window light from the top right." Rather than a blank studio, the vintage bathroom setting with teal ceramic tiles provides a textured, narrative-rich environment that elevates the output into a complex editorial scene.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="Ultra-realistic editorial fashion portrait shot with an extreme wide-angle 14mm fisheye lens, dramatic close-up perspective with strong lens distortion subject leaning toward the camera mid-sip while holding a matte turquoise ceramic coffee cup near my lips, me as subject with exact same facial and physical identity from the uplaoded image , with , minimal hand tattoos and a gold ring, wearing oversized amber/yellow tinted aviator sunglasses with a thin gold frame, styled in a textured brown tailored blazer over a deep burgundy shirt for a modern 70s retro-meets-luxury street aesthetic; set inside a vintage bathroom with teal ceramic tiled walls and cream upper walls, frosted window panels above casting soft natural daylight and subtle geometric shadows, cinematic teal-and-warm color grading, soft diffused window light from the top right, realistic skin texture, sharp focus on face and cup with shallow depth of field while maintaining wide-angle distortion, intimate confident high-fashion Vogue-style composition, ultra high resolution 8K RAW photography, HDR, subtle film grain, highly detailed textures, no watermark, no text, aspect ratio 9:16."><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Ultra-realistic editorial fashion portrait shot with an extreme wide-angle 14mm fisheye lens, dramatic close-up perspective with strong lens distortion subject leaning toward the camera mid-sip while holding a matte turquoise ceramic coffee cup near my lips, me as subject with exact same facial and physical identity from the uplaoded image , with , minimal hand tattoos and a gold ring, wearing oversized amber/yellow tinted aviator sunglasses with a thin gold frame, styled in a textured brown tailored blazer over a deep burgundy shirt for a modern 70s retro-meets-luxury street aesthetic; set inside a vintage bathroom with teal ceramic tiled walls and cream upper walls, frosted window panels above casting soft natural daylight and subtle geometric shadows, cinematic teal-and-warm color grading, soft diffused window light from the top right, realistic skin texture, sharp focus on face and cup with shallow depth of field while maintaining wide-angle distortion, intimate confident high-fashion Vogue-style composition, ultra high resolution 8K RAW photography, HDR, subtle film grain, highly detailed textures, no watermark, no text, aspect ratio 9:16.</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">10. High-Contrast Direct Flash Editorial</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/268.webp" alt="Editorial fashion portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/268.268.webp" alt="Editorial fashion portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                Sometimes, raw and harsh lighting is exactly what you need for an edgy, high-fashion editorial. By explicitly specifying a "Canon EOS R5" and "direct camera flash," you are forcing the AI to abandon soft studio lighting in favor of high contrast and deep, hard-edged shadows. The cool, desaturated color grade further enhances the sleekness of the black suit and dark sunglasses, resulting in a moody, ultra-modern final image.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="Shot on a Canon EOS R5 with a 50mm f/2.8 lens, the photo captures me with exactly same facial and physical identity from the uploaded image  in a black suit, wide-leg trousers, a white shirt, sunglasses, and a black \"THE STUDIO CLUB\" cap leaning against a wooden stool. The direct camera flash creates harsh shadows and high contrast. , hands in pockets, looking towards the camera. The background is a dark, weathered wooden door and a concrete wall. The color grade is cool and desaturated. Hyper-realistic, 8k resolution, uncropped, raw photo, global illumination, ray tracing, microscopic skin detail, editorial vogue style. aspect ratio 9:16 . do according to my gender ."><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Shot on a Canon EOS R5 with a 50mm f/2.8 lens, the photo captures me with exactly same facial and physical identity from the uploaded image  in a black suit, wide-leg trousers, a white shirt, sunglasses, and a black "THE STUDIO CLUB" cap leaning against a wooden stool. The direct camera flash creates harsh shadows and high contrast. , hands in pockets, looking towards the camera. The background is a dark, weathered wooden door and a concrete wall. The color grade is cool and desaturated. Hyper-realistic, 8k resolution, uncropped, raw photo, global illumination, ray tracing, microscopic skin detail, editorial vogue style. aspect ratio 9:16 . do according to my gender .</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">11. Seamless Cyclorama Street-Luxury Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/272.webp" alt="Fisheye street luxury portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/272.272.webp" alt="Fisheye street luxury portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                This prompt is engineered for dominant, street-icon energy. While it uses the familiar 10mm fisheye technique, what makes this generation stand out is the "bold deep red studio backdrop with smooth gradient falloff." This creates a seamless cyclorama effect—a staple in professional photo studios—that pushes the subject and their matte black sunglasses entirely to the forefront, completely free of background distractions.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="Convert uploaded photo into an ultra-wide 10mm fisheye portrait shot from an extreme high top-down angle, creating strong perspective distortion (slightly enlarged head, naturally compressed body proportions, realistic lens curvature). Subject wearing oversized matte black sunglasses and a plain black cap. Left hand subtly adjusting the sunglasses, confident upward gaze toward camera, calm but dominant expression. Outfit: bold color-block puffer jacket (electric blue, vibrant yellow, burnt orange panels), fitted black tee underneath, thick gold chain necklace, clean white sneakers. Street-luxury styling. Background: bold deep red studio backdrop with smooth gradient falloff, subtle vignette, seamless cyclorama feel. Lighting: sharp high-contrast editorial lighting, strong key light from upper front, subtle rim light separating subject from background, glossy highlights on sunglasses, cinematic shadow depth. Ultra-detailed skin texture, realistic fabric folds, natural light reflections, crisp focus, fashion magazine editorial look, hyper-real clarity, 8K resolution, dramatic, powerful, modern street icon energy. ar-9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Convert uploaded photo into an ultra-wide 10mm fisheye portrait shot from an extreme high top-down angle, creating strong perspective distortion (slightly enlarged head, naturally compressed body proportions, realistic lens curvature). Subject wearing oversized matte black sunglasses and a plain black cap. Left hand subtly adjusting the sunglasses, confident upward gaze toward camera, calm but dominant expression. Outfit: bold color-block puffer jacket (electric blue, vibrant yellow, burnt orange panels), fitted black tee underneath, thick gold chain necklace, clean white sneakers. Street-luxury styling. Background: bold deep red studio backdrop with smooth gradient falloff, subtle vignette, seamless cyclorama feel. Lighting: sharp high-contrast editorial lighting, strong key light from upper front, subtle rim light separating subject from background, glossy highlights on sunglasses, cinematic shadow depth. Ultra-detailed skin texture, realistic fabric folds, natural light reflections, crisp focus, fashion magazine editorial look, hyper-real clarity, 8K resolution, dramatic, powerful, modern street icon energy. ar-9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">12. Monochromatic Red Power Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/262.jpg" alt="Red monochrome portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/262.262.jpg" alt="Red monochrome portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                A masterclass in monochromatic power scaling. By drenching the entire scene in "intense, high-contrast red lighting," the AI renders a deeply cinematic and slightly intimidating atmosphere. The "bold, thick-framed sunglasses" serve to hide the eyes, adding a layer of psychological mystery, while the crucial addition of "dramatic rim lighting" outlines the subject's jaw and shoulders, preventing them from getting lost in the dark architectural background.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="A striking, ultra-realistic portrait of me with exact same facial and physical identity from the uploaded image , dressed in a sleek black turtleneck layered under a tailored black blazer. A subtle gold chain rests against the fabric, adding a refined luxury touch. i wears bold, thick-framed sunglasses that enhance his mysterious aura. The scene is drenched in intense, high-contrast red lighting, casting dramatic shadows across his strong jawline and sharp facial features. my head is slightly tilted upward, eyes hidden behind the lenses, conveying deep contemplation and quiet dominance. Shot from a powerful low-angle perspective, the camera emphasizes his presence and authority. Behind me tall vertical red architectural structures rise into darkness, forming a strong monochromatic backdrop that amplifies the bold, cinematic atmosphere. Hyper-detailed skin texture, sharp contrast, deep blacks, dramatic rim lighting, editorial fashion photography style, 8K resolution, shallow depth of field, ultra-sharp focus, intense mood, modern luxury aesthetic. do according to my gender ar 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">A striking, ultra-realistic portrait of me with exact same facial and physical identity from the uploaded image , dressed in a sleek black turtleneck layered under a tailored black blazer. A subtle gold chain rests against the fabric, adding a refined luxury touch. i wears bold, thick-framed sunglasses that enhance his mysterious aura. The scene is drenched in intense, high-contrast red lighting, casting dramatic shadows across his strong jawline and sharp facial features. my head is slightly tilted upward, eyes hidden behind the lenses, conveying deep contemplation and quiet dominance. Shot from a powerful low-angle perspective, the camera emphasizes his presence and authority. Behind me tall vertical red architectural structures rise into darkness, forming a strong monochromatic backdrop that amplifies the bold, cinematic atmosphere. Hyper-detailed skin texture, sharp contrast, deep blacks, dramatic rim lighting, editorial fashion photography style, 8K resolution, shallow depth of field, ultra-sharp focus, intense mood, modern luxury aesthetic. do according to my gender ar 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">13. Neon Cyberpunk Turtleneck Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/260.jpg" alt="Neon cyberpunk portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/260.260.jpg" alt="Neon cyberpunk portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                Cyberpunk aesthetics rely heavily on vibrant, unnatural lighting setups. This prompt specifies "magenta and pink underlighting" mixed with a "cyan and blue rim light" against a deep black void. The most crucial detail here is asking the AI to render "abstract neon geometric patterns" physically reflecting in the sleek retro-futuristic sunglasses. This grounds the portrait in a sci-fi world without requiring a cluttered, complex city background.
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="A cinematic close-up low-angle portrait of me with exact same facial and physical identity from the uploaded image wearing a fitted ribbed turtleneck sweater and sleek retro-futuristic dark sunglasses, gazing slightly upward with a calm yet confident expression. The face should match the uploaded reference image accurately, preserving natural facial structure, skin tone, and identity without distortion. The lighting features vibrant neon tones with soft magenta and pink underlighting casting subtle shadows across the face and highlighting the texture of the ribbed sweater. A gentle cyan and blue rim light outlines the jawline and hair, separating the subject from a deep black background. The sunglasses reflect abstract neon geometric patterns in cyan and pink, adding a subtle cyberpunk touch without overpowering the portrait. Rendered in a clean, modern digital illustration style with realistic skin texture, detailed fabric definition, cinematic lighting, and smooth high-resolution finish. Sharp focus, balanced contrast, professional studio composition. do according to my gender . ar 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">A cinematic close-up low-angle portrait of me with exact same facial and physical identity from the uploaded image wearing a fitted ribbed turtleneck sweater and sleek retro-futuristic dark sunglasses, gazing slightly upward with a calm yet confident expression. The face should match the uploaded reference image accurately, preserving natural facial structure, skin tone, and identity without distortion. The lighting features vibrant neon tones with soft magenta and pink underlighting casting subtle shadows across the face and highlighting the texture of the ribbed sweater. A gentle cyan and blue rim light outlines the jawline and hair, separating the subject from a deep black background. The sunglasses reflect abstract neon geometric patterns in cyan and pink, adding a subtle cyberpunk touch without overpowering the portrait. Rendered in a clean, modern digital illustration style with realistic skin texture, detailed fabric definition, cinematic lighting, and smooth high-resolution finish. Sharp focus, balanced contrast, professional studio composition. do according to my gender . ar 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">14. Cinematic Walking Motion Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/30.jpeg" alt="Walking motion portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/30.30.jpeg" alt="Walking motion portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">
+                Action and movement add unparalleled life to AI portraiture. This cinematic prompt focuses on capturing a subject mid-stride, using the instruction "wind catching my coat" to force the AI to generate dynamic, realistic fabric motion. The sunglasses add an air of cool focus to the "power in every step," while the "urban city street" background provides necessary environmental context without distracting from the primary subject.
+                <span class="pro-tip"><i class="fas fa-lightbulb"></i> <strong>Pro Tip:</strong> To drastically increase the sense of speed and momentum, add phrases like "heavy motion blur on the background" or "panning shot" to the end of this prompt.</span>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-sunglasses"></i> Prompt</span>
+                    <button class="copy-btn" data-prompt="Portrait of me walking forward with purpose, wind catching my coat, urban city street in the background, cinematic lighting, focused eyes, power in every step same face"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Portrait of me walking forward with purpose, wind catching my coat, urban city street in the background, cinematic lighting, focused eyes, power in every step same face</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-site-name">Promptgalary.com</span>
+                <div class="footer-nav-links">
+                    <a href="/">Home</a>
+                    <a href="/prompts">Prompts</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/policy/">Privacy</a>
+                    <a href="/term/">Terms</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/sanvi.al.evan" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/sanvi009" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://www.tiktok.com/@brainloom.online" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/_brainloom.online/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/brainloomonline" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.youtube.com/@brainloom.online" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="footer-extra-compact">
+                    <a href="/faqs.html"><i class="far fa-folder"></i> Faq</a>
+                    <a href="/sitemap.xml"><i class="fas fa-sitemap"></i> Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toastMsg" class="toast-msg">Copied to clipboard!</div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCG2EZ77R6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KCG2EZ77R6');
+    </script>
+
+    <script>
+        (function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const dropdown = document.getElementById('legalDropdown');
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('show');
+                });
+            }
+
+            const dropBtn = document.querySelector('#legalDropdown .dropbtn');
+            if (dropBtn) {
+                dropBtn.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 800) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 800) {
+                    if (menuToggle && !menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                        navLinks.classList.remove('show');
+                        dropdown.classList.remove('active');
+                    }
+                }
+            });
+
+            if (navLinks) {
+                navLinks.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 800) {
+                    navLinks.classList.remove('show');
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            if (navLinks) {
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        if (window.innerWidth <= 800) {
+                            navLinks.classList.remove('show');
+                        }
+                    });
+                });
+            }
+
+            function adjustMobileFooter() {
+                const footerRight = document.querySelector('.footer-right');
+                if (!footerRight) return;
+                const isMobile = window.innerWidth <= 900;
+                const existingNavBlock = document.querySelector('.mobile-nav-links');
+                if (existingNavBlock) existingNavBlock.remove();
+
+                if (isMobile) {
+                    const navLinksContainer = document.querySelector('.footer-left .footer-nav-links');
+                    if (navLinksContainer) {
+                        const links = navLinksContainer.querySelectorAll('a');
+                        if (links.length) {
+                            const mobileNavBlock = document.createElement('div');
+                            mobileNavBlock.className = 'mobile-nav-links';
+                            links.forEach(link => {
+                                const clone = link.cloneNode(true);
+                                clone.removeAttribute('style');
+                                mobileNavBlock.appendChild(clone);
+                            });
+                            footerRight.insertBefore(mobileNavBlock, footerRight.firstChild);
+                        }
+                    }
+                }
+            }
+
+            window.addEventListener('resize', adjustMobileFooter);
+            window.addEventListener('load', adjustMobileFooter);
+            adjustMobileFooter();
+
+            const toast = document.getElementById('toastMsg');
+            const copyButtons = document.querySelectorAll('.copy-btn');
+
+            function showToast() {
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 1500);
+            }
+
+            copyButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const promptText = this.getAttribute('data-prompt');
+                    if (promptText) {
+                        navigator.clipboard.writeText(promptText).then(() => {
+                            const originalText = this.innerHTML;
+                            const originalClass = this.className;
+                            this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                            this.classList.add('copied');
+                            showToast();
+                            setTimeout(() => {
+                                this.innerHTML = originalText;
+                                this.className = originalClass;
+                            }, 1500);
+                        }).catch(err => {
+                            console.error('Copy failed:', err);
+                        });
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

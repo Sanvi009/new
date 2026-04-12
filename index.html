@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Gallery - High-Quality AI Image Prompts</title>
+    <meta name="description" content="Browse our curated gallery of professional AI prompts for Midjourney, DALL-E, and Stable Diffusion. Elevate your creative image generation.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="/asset/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #fafbfd;
+            color: #1e2532;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px -6px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+            padding: 0.6rem 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eef0f5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo a {
+            font-weight: 700;
+            font-size: 1.55rem;
+            letter-spacing: -0.025em;
+            color: #1e293b;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .logo span {
+            background: linear-gradient(145deg, #2563eb, #4f7df3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.9rem;
+            line-height: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links a, .dropbtn {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #475569;
+            text-decoration: none;
+            border-radius: 60px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover, .dropdown:hover .dropbtn {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { background: transparent; border: none; cursor: pointer; display: flex; align-items: center; gap: 6px; font-family: inherit; }
+        .dropbtn i { font-size: 0.7rem; color: #64748b; transition: transform 0.2s; }
+        .dropdown:hover .dropbtn i { transform: rotate(180deg); color: #2563eb; }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #ffffff;
+            min-width: 200px;
+            border-radius: 16px;
+            padding: 0.5rem 0;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            z-index: 1000;
+        }
+
+        .dropdown-content a { display: block; padding: 0.7rem 1.5rem; color: #334155; font-weight: 500; transition: background 0.15s; }
+        .dropdown-content a:hover { background: #f8fafc; color: #2563eb; }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        .menu-toggle {
+            display: none;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 60px;
+            padding: 0.5rem 1.2rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            color: #334155;
+        }
+
+        /* ===== HERO SECTION (Added for SEO Value) ===== */
+        .hero-section {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 32px 32px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-section p {
+            font-size: 1.15rem;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .hero-guide {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            display: inline-block;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            max-width: 800px;
+        }
+
+        .hero-guide h3 { font-size: 1.1rem; color: #1e293b; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px;}
+        .hero-guide h3 i { color: #f59e0b; }
+        .hero-guide p { font-size: 0.95rem; color: #475569; margin: 0; line-height: 1.6; }
+        .hero-guide code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; color: #2563eb; font-weight: 600; font-size: 0.9em; }
+
+        /* ===== MASONRY GRID & CARDS ===== */
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 1.5rem 3rem;
+        }
+
+        .masonry-grid {
+            column-count: 4;
+            column-gap: 1.5rem;
+        }
+
+        .card {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -12px rgba(37, 99, 235, 0.15);
+            border-color: #e2e8f0;
+        }
+
+        .card-img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            display: block;
+            background: #f8fafc;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        /* Value-Added Metadata */
+        .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.7rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .badge.model { background: #eff6ff; color: #1d4ed8; }
+        .badge.ratio { background: #fdf4ff; color: #a21caf; }
+
+        .pro-tip {
+            background: #f0fdf4;
+            border-left: 3px solid #16a34a;
+            padding: 0.6rem 0.8rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.85rem;
+            color: #166534;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .card-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #334155;
+            margin-bottom: 1.5rem;
+            word-wrap: break-word;
+            white-space: normal;
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .copy-btn {
+            background: #f1f5f9;
+            border: 1px solid transparent;
+            padding: 0.7rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #0f172a;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .copy-btn:hover {
+            background: #2563eb;
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .copy-btn.copied {
+            background: #10b981;
+            color: white;
+        }
+
+        /* ===== PAGINATION ===== */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .pagination a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 44px;
+            height: 44px;
+            padding: 0 1rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .pagination a:hover { background: #f8fafc; border-color: #cbd5e1; color: #0f172a; }
+        .pagination .active { background: #2563eb; border-color: #2563eb; color: white; }
+        .pagination .disabled { opacity: 0.4; pointer-events: none; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        .footer-content { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; max-width: 1300px; margin: 0 auto; gap: 1rem; }
+        .footer-site-name { font-weight: 700; font-size: 1.1rem; color: #0f172a; }
+        .footer-nav-links { display: flex; gap: 1.5rem; }
+        .footer-nav-links a { color: #64748b; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+        .footer-nav-links a:hover { color: #2563eb; }
+        .social-links { display: flex; gap: 0.8rem; }
+        .social-links a { color: #64748b; font-size: 1.1rem; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; background: #f1f5f9; border-radius: 50%; transition: all 0.2s; text-decoration: none; }
+        .social-links a:hover { color: white; background: #2563eb; transform: translateY(-2px); }
+
+        /* Responsive */
+        @media screen and (max-width: 1200px) { .masonry-grid { column-count: 3; } }
+        @media screen and (max-width: 900px) { 
+            .masonry-grid { column-count: 2; }
+            .hero-section { padding: 3rem 1.5rem; }
+            .hero-section h1 { font-size: 2.2rem; }
+        }
+        @media screen and (max-width: 600px) { 
+            .masonry-grid { column-count: 1; } 
+            .nav-links { display: none; width: 100%; flex-direction: column; background: #fff; padding: 1rem; position: absolute; top: 100%; left: 0; border-top: 1px solid #e2e8f0; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+            .nav-links.show { display: flex; }
+            .menu-toggle { display: block; }
+            .hero-section h1 { font-size: 1.8rem; }
+            .footer-content { flex-direction: column; text-align: center; }
+            .footer-nav-links { flex-direction: column; gap: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="/"><span>◈</span> promptgalary</a></div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i> Menu</button>
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/prompts">Prompts</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <div class="dropdown" id="legalDropdown">
+                <button class="dropbtn">Legal <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="/policy/">Privacy Policy</a>
+                    <a href="/term/">Terms of Service</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <h1>Professional AI Image Prompts</h1>
+        <p>Browse our curated collection of advanced prompts tailored for cinematic realism, editorial fashion, and surreal digital art. Elevate your generations instantly.</p>
+        <div class="hero-guide">
+            <h3><i class="fas fa-lightbulb"></i> How to use this directory:</h3>
+            <p>1. Browse the gallery and find an aesthetic you love.<br>
+               2. Click <strong>Copy Prompt</strong> below the image.<br>
+               3. Paste into Midjourney, DALL-E, or Stable Diffusion.<br>
+               4. Replace placeholder text like <code>[Subject]</code> with your own descriptors or use image weights for personalized results.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="masonry-grid">
+            
+            <div class="card">
+                <img class="card-img" src="/images/113.jpeg" alt="AI prompt generated image - figurine on computer desk" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 16:9</span>
+                    </div>
+                    <div class="pro-tip"><strong>Tip:</strong> The phrase "1/7 scale" forces a highly realistic tilt-shift/macro photography look.</div>
+                    <p class="card-text">Create a 1/7 scale commercialized figurine of [insert character], realistic style, in a real environment. Figurine placed on a computer desk, featuring a round transparent acrylic base. Next to the desk is the real person in the picture, in real-life size with the same attire as the figurine, cleaning the figurine carefully with a fine brush. Set in a modern styled studio room, brightly lit, alongside a collection of toys and action figures.</p>
+                    <button class="copy-btn" data-prompt="Create a 1/7 scale commercialized figurine of [insert character], realistic style, in a real environment. Figurine placed on a computer desk, featuring a round transparent acrylic base. Next to the desk is the real person in the picture, in real-life size with the same attire as the figurine, cleaning the figurine carefully with a fine brush. Set in a modern styled studio room, brightly lit, alongside a collection of toys and action figures."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/114.jpeg" alt="AI prompt generated image - iPhone selfie Kirsten Stewart" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <div class="pro-tip"><strong>Tip:</strong> Mentioning specific camera tech (e.g., "2010s iPhone selfie") dictates the visual quality and texture.</div>
+                    <p class="card-text">A 2010s iPhone selfie of [Celebrity 1] with a lo-fi background, with [Subject/Reference] on [Celebrity 2]'s shoulder. Expression is blank, with no clear subject or particular composition—just an unintentional candid shot. Slightly blurry, flash photography, grainy texture, unedited, and soft focus. Capturing an imperfect moment. Incorporates elements like eyeliner, jewelry, and face stickers.</p>
+                    <button class="copy-btn" data-prompt="A 2010s iPhone selfie of [Celebrity 1] with a lo-fi background, with [Subject/Reference] on [Celebrity 2]'s shoulder. Expression is blank, with no clear subject or particular composition—just an unintentional candid shot. Slightly blurry, flash photography, grainy texture, unedited, and soft focus. Capturing an imperfect moment. Incorporates elements like eyeliner, jewelry, and face stickers."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/214.jpg" alt="AI prompt generated image - 3D caricature portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">Create an exaggerated stylized 3D caricature character portrait with strong intentional deformation and a clean, controlled surface finish. Use the person from the attached reference photo. Preserve the subject's identity, facial likeness, skin tone, and defining features, but reinterpret them into a bold caricatured 3D form with an elongated neck, oversized head-to-neck ratio, droopy eyelids, heavy lips, and slightly asymmetrical facial structure. Render as a human-like 3D character with smooth, studio-clean skin and intentionally designed detail, avoiding random texture or noise. Style with bold accessories such as round or oval glasses, hoop earrings, gold chains, headscarves or bandanas, and street-luxury clothing. Use neutral studio lighting with soft shadows and even illumination, no dramatic contrast, against a plain neutral grey or off-white background. The overall aesthetic should feel weird, fashion-forward, collectible, and character-driven rather than cute or realistic. Ultra high definition, premium cinematic 3D render quality, hyper-realistic, clean materials, no freckles, no dirt, no grain, no noise, no speckling, no text, no logos, no watermarks. Aspect ratio 9:16</p>
+                    <button class="copy-btn" data-prompt="Create an exaggerated stylized 3D caricature character portrait with strong intentional deformation and a clean, controlled surface finish. Use the person from the attached reference photo. Preserve the subject's identity, facial likeness, skin tone, and defining features, but reinterpret them into a bold caricatured 3D form with an elongated neck, oversized head-to-neck ratio, droopy eyelids, heavy lips, and slightly asymmetrical facial structure. Render as a human-like 3D character with smooth, studio-clean skin and intentionally designed detail, avoiding random texture or noise. Style with bold accessories such as round or oval glasses, hoop earrings, gold chains, headscarves or bandanas, and street-luxury clothing. Use neutral studio lighting with soft shadows and even illumination, no dramatic contrast, against a plain neutral grey or off-white background. The overall aesthetic should feel weird, fashion-forward, collectible, and character-driven rather than cute or realistic. Ultra high definition, premium cinematic 3D render quality, hyper-realistic, clean materials, no freckles, no dirt, no grain, no noise, no speckling, no text, no logos, no watermarks. Aspect ratio 9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/204.jpg" alt="AI prompt generated image - vertical split screen Y2K style" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <div class="pro-tip"><strong>Tip:</strong> Multi-panel generation creates unique narrative layouts in a single image prompt.</div>
+                    <p class="card-text">Vertical split-screen composition. Three images stacked vertically from top to bottom. Seamless edge-to-edge layout. No borders. No padding. Aspect ratio 9:16. Top panel: Wide shot. Female subject and male subject posing like runway models. The female subject crosses her arms with a stoic expression. The male subject is smoking, with visible smoke coming out. Cool fit vibe. Hard direct on-camera flash. Red-eye effect visible. Middle panel: Extreme close-up macro mode selfie. The male subject wears black sunglasses with a slight smile. The female subject laughs excitedly. Noses appear distorted. Goofy expressions. Heads pressed together. Forehead appears overexposed due to flash. Bottom panel: Full body shot. The male subject stands casually with both hands on his hips. The female subject stands beside him, holding his arm affectionately. Posters of well-known bands are attached to the wall and appear worn. Chaotic and playful atmosphere. Visual specifications: Sony Cyber-shot and Canon PowerShot A400 aesthetic. CCD sensor look. Early 1990s digital camera style. Direct on-camera flash. Harsh shadows. Low resolution. Visible digital noise. High contrast JPEG. Oversharpened look. Slightly red skin tones. Blooming highlights. Messy bedroom background. Trashy Y2K vibe.</p>
+                    <button class="copy-btn" data-prompt="Vertical split-screen composition. Three images stacked vertically from top to bottom. Seamless edge-to-edge layout. No borders. No padding. Aspect ratio 9:16. Top panel: Wide shot. Female subject and male subject posing like runway models. The female subject crosses her arms with a stoic expression. The male subject is smoking, with visible smoke coming out. Cool fit vibe. Hard direct on-camera flash. Red-eye effect visible. Middle panel: Extreme close-up macro mode selfie. The male subject wears black sunglasses with a slight smile. The female subject laughs excitedly. Noses appear distorted. Goofy expressions. Heads pressed together. Forehead appears overexposed due to flash. Bottom panel: Full body shot. The male subject stands casually with both hands on his hips. The female subject stands beside him, holding his arm affectionately. Posters of well-known bands are attached to the wall and appear worn. Chaotic and playful atmosphere. Visual specifications: Sony Cyber-shot and Canon PowerShot A400 aesthetic. CCD sensor look. Early 1990s digital camera style. Direct on-camera flash. Harsh shadows. Low resolution. Visible digital noise. High contrast JPEG. Oversharpened look. Slightly red skin tones. Blooming highlights. Messy bedroom background. Trashy Y2K vibe."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/154.webp" alt="AI prompt generated image - 90s disposable camera snapshot" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Stable Diffusion</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Portrait</span>
+                    </div>
+                    <p class="card-text">Realistic [young man/woman] with the exact face from reference, pale soft complexion, caught in a classic 90s disposable-camera snapshot. Modern hairstyle. Subject gives a subtle smirk, relaxed and unbothered, wearing a popcorn-style gradient light green and dark green shirt with trouser pants. The background is a dim beige wall cluttered with polaroids, doodles, and taped-up concert tickets, barely visible. The harsh on-camera flash creates flat shadows and quiet, late-night realism.</p>
+                    <button class="copy-btn" data-prompt="Realistic [young man/woman] with the exact face from reference, pale soft complexion, caught in a classic 90s disposable-camera snapshot. Modern hairstyle. Subject gives a subtle smirk, relaxed and unbothered, wearing a popcorn-style gradient light green and dark green shirt with trouser pants. The background is a dim beige wall cluttered with polaroids, doodles, and taped-up concert tickets, barely visible. The harsh on-camera flash creates flat shadows and quiet, late-night realism."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/164.jpg" alt="AI prompt generated image - 90s flash snapshot" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Any Engine</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A raw 90s flash snapshot of a [subject] standing still, maintaining exact reference features, relaxed and unbothered. Loose hair, skin reflecting harsh light. Subject is wearing a charcoal denim jacket. Background: dim beige wall layered with old photos, scribbles, and concert tickets, barely visible. Disposable camera grain, awkward framing, quiet midnight atmosphere. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A raw 90s flash snapshot of a [subject] standing still, maintaining exact reference features, relaxed and unbothered. Loose hair, skin reflecting harsh light. Subject is wearing a charcoal denim jacket. Background: dim beige wall layered with old photos, scribbles, and concert tickets, barely visible. Disposable camera grain, awkward framing, quiet midnight atmosphere. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/187.jpg" alt="AI prompt generated image - gritty 90s disposable camera" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A [subject] with the exact facial and physical appearance from the uploaded image, pale soft complexion, captured in a gritty 90s disposable-camera snapshot. Hairstyle and facial structure remain consistent. Wearing an oversized faded black flannel over a white graphic tee, slightly wrinkled. Expression is detached, almost bored. The background is a rough beige wall with ripped posters, band stickers, and random marker tags. Harsh flash creates strong shadows, heavy grain, and raw underground grunge realism. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A [subject] with the exact facial and physical appearance from the uploaded image, pale soft complexion, captured in a gritty 90s disposable-camera snapshot. Hairstyle and facial structure remain consistent. Wearing an oversized faded black flannel over a white graphic tee, slightly wrinkled. Expression is detached, almost bored. The background is a rough beige wall with ripped posters, band stickers, and random marker tags. Harsh flash creates strong shadows, heavy grain, and raw underground grunge realism. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/125.jpeg" alt="AI prompt generated image - double exposure superhero poster" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Any Engine</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Portrait</span>
+                    </div>
+                    <div class="pro-tip"><strong>Tip:</strong> "Double-exposure" merges two concepts smoothly into a single striking visual.</div>
+                    <p class="card-text">A double-exposure style digital poster of a superhero [use reference photo] with a determined expression, blending the realistic portrait with an urban cityscape. The right side of the face is shown in lifelike detail, while the left side dissolves into abstract blue tones filled with shattered glass textures and city elements. A glowing red silhouette of skyscrapers merges into the lower half of the profile, symbolizing the connection between the hero and the city. High-contrast red and blue color scheme, cinematic lighting, sharp details, modern graphic design aesthetics, futuristic and dramatic poster art.</p>
+                    <button class="copy-btn" data-prompt="A double-exposure style digital poster of a superhero [use reference photo] with a determined expression, blending the realistic portrait with an urban cityscape. The right side of the face is shown in lifelike detail, while the left side dissolves into abstract blue tones filled with shattered glass textures and city elements. A glowing red silhouette of skyscrapers merges into the lower half of the profile, symbolizing the connection between the hero and the city. High-contrast red and blue color scheme, cinematic lighting, sharp details, modern graphic design aesthetics, futuristic and dramatic poster art."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/124.jpeg" alt="AI prompt generated image - urban man with holographic rifle" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Portrait</span>
+                    </div>
+                    <p class="card-text">Hyper-realistic portrait of an urban man [use reference photo] wearing a green beanie, open army-green jacket, white t-shirt, brown cargo pants, and green slip-on shoes. He stands confidently holding a futuristic transparent holographic rifle glowing with neon blue and purple light. The background is filled with colorful comic-style pop-art murals featuring bold graffiti text, cosmic energy light effects, and radiant circular neon beams surrounding his body. The floor features comic patterns in vibrant colors, creating a modern, fantasy, high-energy atmosphere. Ultra-detailed, 8K resolution, epic futuristic style.</p>
+                    <button class="copy-btn" data-prompt="Hyper-realistic portrait of an urban man [use reference photo] wearing a green beanie, open army-green jacket, white t-shirt, brown cargo pants, and green slip-on shoes. He stands confidently holding a futuristic transparent holographic rifle glowing with neon blue and purple light. The background is filled with colorful comic-style pop-art murals featuring bold graffiti text, cosmic energy light effects, and radiant circular neon beams surrounding his body. The floor features comic patterns in vibrant colors, creating a modern, fantasy, high-energy atmosphere. Ultra-detailed, 8K resolution, epic futuristic style."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/123.jpeg" alt="AI prompt generated image - human packaged like fruit" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Concept Art</span>
+                    </div>
+                    <p class="card-text">A hyperrealistic surreal image of a human [use reference photo] packaged like supermarket fruit. The human is placed inside a red styrofoam container and tightly sealed with transparent plastic, with water droplets and condensation visible on the surface. A supermarket price sticker reading 'FACE CUT – PHP 355.99/K' with a barcode is attached to the forehead. Serious expression. Dramatic dark background, cinematic lighting, tense and unsettling atmosphere, ultra-detailed, 8K photorealistic style.</p>
+                    <button class="copy-btn" data-prompt="A hyperrealistic surreal image of a human [use reference photo] packaged like supermarket fruit. The human is placed inside a red styrofoam container and tightly sealed with transparent plastic, with water droplets and condensation visible on the surface. A supermarket price sticker reading 'FACE CUT – PHP 355.99/K' with a barcode is attached to the forehead. Serious expression. Dramatic dark background, cinematic lighting, tense and unsettling atmosphere, ultra-detailed, 8K photorealistic style."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/122.jpeg" alt="AI prompt generated image - man sleeping on bananas" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Any Engine</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Landscape</span>
+                    </div>
+                    <p class="card-text">A man [attached photo] is fast asleep on top of a giant pile of bananas. His body rests comfortably across the curved yellow fruit, surrounded by bunches both peeled and unpeeled. A few bananas spill gently over the edge onto a wooden table, while the soft sheen of ripe skins glows warmly under the light. The oversized heap creates a playful yet surreal resting place, turning the bananas into a cozy bed.</p>
+                    <button class="copy-btn" data-prompt="A man [attached photo] is fast asleep on top of a giant pile of bananas. His body rests comfortably across the curved yellow fruit, surrounded by bunches both peeled and unpeeled. A few bananas spill gently over the edge onto a wooden table, while the soft sheen of ripe skins glows warmly under the light. The oversized heap creates a playful yet surreal resting place, turning the bananas into a cozy bed."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/127.jpeg" alt="AI prompt generated image - selfie with Predator" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 16:9</span>
+                    </div>
+                    <p class="card-text">Create a photorealistic selfie featuring a man [pictured reference] holding up a smartphone to take the photo. Beside him is the PREDATOR from the movie 'Predator', smiling and posing casually like friends. A facehugger is resting on his shoulder. The selfie has a cheerful vibe, with both close together in frame. Bright daylight, cinematic quality, natural colors, high detail.</p>
+                    <button class="copy-btn" data-prompt="Create a photorealistic selfie featuring a man [pictured reference] holding up a smartphone to take the photo. Beside him is the PREDATOR from the movie 'Predator', smiling and posing casually like friends. A facehugger is resting on his shoulder. The selfie has a cheerful vibe, with both close together in frame. Bright daylight, cinematic quality, natural colors, high detail."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/119.jpeg" alt="AI prompt generated image - rebellious bathroom mirror selfie" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A subject with the exact facial and physical identity from the uploaded image wearing a black leather biker jacket and dark sunglasses stands in a gritty, graffiti-covered bathroom. The subject faces the mirror, giving a rebellious middle-finger gesture, expression calm yet defiant. The mirror is streaked with scratches and reflects the chaotic wall filled with black graffiti tags and scribbles. The sink below is dirty and metallic, adding to the raw, underground, urban vibe. The atmosphere is edgy, cinematic, and reminiscent of punk-rock culture, with dim lighting highlighting the tough, rebellious attitude of the scene. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A subject with the exact facial and physical identity from the uploaded image wearing a black leather biker jacket and dark sunglasses stands in a gritty, graffiti-covered bathroom. The subject faces the mirror, giving a rebellious middle-finger gesture, expression calm yet defiant. The mirror is streaked with scratches and reflects the chaotic wall filled with black graffiti tags and scribbles. The sink below is dirty and metallic, adding to the raw, underground, urban vibe. The atmosphere is edgy, cinematic, and reminiscent of punk-rock culture, with dim lighting highlighting the tough, rebellious attitude of the scene. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/118.jpeg" alt="AI prompt generated image - 3x3 grid avatar portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Square</span>
+                    </div>
+                    <div class="pro-tip"><strong>Tip:</strong> "3x3 grid" is excellent for character design explorations and generating multiple styles at once.</div>
+                    <p class="card-text">Create a hyper-realistic 8K portrait of the man in the uploaded photo. Generate a 3x3 grid of avatars, each with a different hairstyle. Keep the outfit consistent as a plain black crew sweater. Ensure natural skin textures, detailed lighting, and true-to-life rendering, avoiding any cartoon or stylized look.</p>
+                    <button class="copy-btn" data-prompt="Create a hyper-realistic 8K portrait of the man in the uploaded photo. Generate a 3x3 grid of avatars, each with a different hairstyle. Keep the outfit consistent as a plain black crew sweater. Ensure natural skin textures, detailed lighting, and true-to-life rendering, avoiding any cartoon or stylized look."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/120.jpeg" alt="AI prompt generated image - black and white pigeons photograph" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Any Engine</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A close-up, low-angle, black and white photograph of a [subject based on uploaded reference] in a long trench coat, standing amidst a flurry of pigeons flying overhead. The subject is looking directly at the viewer with a serious expression. The pigeons are blurred and in various stages of flight, creating a dynamic and slightly ominous atmosphere. The background features a stark, overcast sky and the hint of trees at the bottom. The overall mood is mysterious and dramatic. Photographed with a long exposure effect.</p>
+                    <button class="copy-btn" data-prompt="A close-up, low-angle, black and white photograph of a [subject based on uploaded reference] in a long trench coat, standing amidst a flurry of pigeons flying overhead. The subject is looking directly at the viewer with a serious expression. The pigeons are blurred and in various stages of flight, creating a dynamic and slightly ominous atmosphere. The background features a stark, overcast sky and the hint of trees at the bottom. The overall mood is mysterious and dramatic. Photographed with a long exposure effect."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/121.jpeg" alt="AI prompt generated image - figurine in souvenir bottle" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Portrait</span>
+                    </div>
+                    <p class="card-text">A 1/7 scale commercialized collectible figure of the character from the photo, crafted in a highly realistic style. The figure is placed in a detailed beach environment with sand, seashells, and gentle ocean waves. The entire toy display is enclosed inside a clear souvenir glass bottle, giving it a premium miniature diorama look, with realistic lighting and shadows.</p>
+                    <button class="copy-btn" data-prompt="A 1/7 scale commercialized collectible figure of the character from the photo, crafted in a highly realistic style. The figure is placed in a detailed beach environment with sand, seashells, and gentle ocean waves. The entire toy display is enclosed inside a clear souvenir glass bottle, giving it a premium miniature diorama look, with realistic lighting and shadows."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/128.jpeg" alt="AI prompt generated image - RONY text interaction" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> DALL-E 3</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <div class="pro-tip"><strong>Tip:</strong> DALL-E 3 handles embedded typography ("RONY") much better than older generation models.</div>
+                    <p class="card-text">Create ultra-realistic digital art of a person [use reference photo] in a dynamic full-body pose. The subject wears casual relaxed outfits in bold colors (shirt, pants, shoes, and accessories), appearing stylish and modern. Add the single text 'RONY' displayed either horizontally or vertically, rendered as large 3D block glossy letters in a bold contrasting color. The text should appear only once, without repetition, and be big enough to look like a real physical object. Make the model interact with the text, for example sitting on top of the letters or leaning against them naturally, so the text and model blend harmoniously. Use an artistic decorative background with bold yet elegant colors, dynamic but not distracting from the subject. Professional studio lighting, ultra-high resolution, 9:16 ratio.</p>
+                    <button class="copy-btn" data-prompt="Create ultra-realistic digital art of a person [use reference photo] in a dynamic full-body pose. The subject wears casual relaxed outfits in bold colors (shirt, pants, shoes, and accessories), appearing stylish and modern. Add the single text 'RONY' displayed either horizontally or vertically, rendered as large 3D block glossy letters in a bold contrasting color. The text should appear only once, without repetition, and be big enough to look like a real physical object. Make the model interact with the text, for example sitting on top of the letters or leaning against them naturally, so the text and model blend harmoniously. Use an artistic decorative background with bold yet elegant colors, dynamic but not distracting from the subject. Professional studio lighting, ultra-high resolution, 9:16 ratio."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/117.jpeg" alt="AI prompt generated image - metallic can with liquid splash" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Any Engine</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Product Render</span>
+                    </div>
+                    <p class="card-text">Render [insert product template] as a cold metallic beverage can covered with condensation, standing vertically in the center of the frame. Around it—a dynamic splash of glowing liquid in a color matching the flavor. Lighting—cinematic, with ultra-sharp focus and high contrast in a professional product studio style.</p>
+                    <button class="copy-btn" data-prompt="Render [insert product template] as a cold metallic beverage can covered with condensation, standing vertically in the center of the frame. Around it—a dynamic splash of glowing liquid in a color matching the flavor. Lighting—cinematic, with ultra-sharp focus and high contrast in a professional product studio style."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/74.jpeg" alt="AI prompt generated image - Adidas logo autumn leaves" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Macro</span>
+                    </div>
+                    <p class="card-text">A hyper-realistic artistic rendering of the [Brand] logo, made entirely out of autumn leaves. The top section is a vibrant red leaf, the right section a golden yellow leaf, and the left section a lush green leaf. The logo is wet, glistening with water droplets, and surrounded by falling rain. The background is softly blurred with warm autumn tones. High detail, cinematic lighting, macro photography style.</p>
+                    <button class="copy-btn" data-prompt="A hyper-realistic artistic rendering of the [Brand] logo, made entirely out of autumn leaves. The top section is a vibrant red leaf, the right section a golden yellow leaf, and the left section a lush green leaf. The logo is wet, glistening with water droplets, and surrounded by falling rain. The background is softly blurred with warm autumn tones. High detail, cinematic lighting, macro photography style."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/70.jpeg" alt="AI prompt generated image - ancient stone castle wall logo" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Textures</span>
+                    </div>
+                    <p class="card-text">A dramatic close-up of an ancient stone castle wall, weathered by centuries of wind and rain. The surface is rough and uneven, covered with cracks, chipped edges, and patches of moss creeping along the stone. At the center, [Your Logo/Text] is carved deeply into the stone as if engraved by medieval stonemasons. The carving is sharp yet worn, with shadows filling its grooves and highlights catching on the raised edges. Around the logo, faint traces of lichen and ivy vines frame the design, enhancing the sense of age and authenticity. Sunlight cuts through at an angle, casting golden beams across the wall, while the rest falls into cool shadow. The atmosphere is historical, bold, and enduring.</p>
+                    <button class="copy-btn" data-prompt="A dramatic close-up of an ancient stone castle wall, weathered by centuries of wind and rain. The surface is rough and uneven, covered with cracks, chipped edges, and patches of moss creeping along the stone. At the center, [Your Logo/Text] is carved deeply into the stone as if engraved by medieval stonemasons. The carving is sharp yet worn, with shadows filling its grooves and highlights catching on the raised edges. Around the logo, faint traces of lichen and ivy vines frame the design, enhancing the sense of age and authenticity. Sunlight cuts through at an angle, casting golden beams across the wall, while the rest falls into cool shadow. The atmosphere is historical, bold, and enduring."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/172.jpg" alt="dark fantasy anime anti-hero portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A hyper-realistic 8k cinematic portrait of a [subject], retaining exact facial and physical features from the uploaded image, transformed into a dark fantasy anime anti-hero. The subject has a menacing, sinister smirk conveying insanity. The face features glowing red patterns resembling cracked magma veins running across the cheek and neck. The right eye is glowing bright blood red with a distinct lens flare, while the left eye is blank white. Wearing a dark coat with a high fur collar. The image is largely monochromatic black and white, with selective color saturation only for the red eyes and glowing markings. High contrast, edgy atmosphere, detailed textures. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A hyper-realistic 8k cinematic portrait of a [subject], retaining exact facial and physical features from the uploaded image, transformed into a dark fantasy anime anti-hero. The subject has a menacing, sinister smirk conveying insanity. The face features glowing red patterns resembling cracked magma veins running across the cheek and neck. The right eye is glowing bright blood red with a distinct lens flare, while the left eye is blank white. Wearing a dark coat with a high fur collar. The image is largely monochromatic black and white, with selective color saturation only for the red eyes and glowing markings. High contrast, edgy atmosphere, detailed textures. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/222.jpg" alt="artistic black and gray collage portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">Use the uploaded photo as an exact reference. The subject is posing with one hand on their face, wearing a loose black shirt and light beige pants, standing against an artistic black-and-gray collage background. The collage includes surreal elements like a police car, a flying Pegasus, a perfume bottle, newspaper text, a record label, and abstract paint textures. Aesthetic dark grunge mood with a soft white outline glow around the person. Realistic lighting. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="Use the uploaded photo as an exact reference. The subject is posing with one hand on their face, wearing a loose black shirt and light beige pants, standing against an artistic black-and-gray collage background. The collage includes surreal elements like a police car, a flying Pegasus, a perfume bottle, newspaper text, a record label, and abstract paint textures. Aesthetic dark grunge mood with a soft white outline glow around the person. Realistic lighting. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/230.webp" alt="dynamic multi-colored light portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A highly detailed 8K digital illustration of a [subject] maintaining exact facial and physical identity from the reference. Presented as a close-up, eye-level headshot facing directly forward against a clean white background. The composition is centered, capturing the upper torso. The subject wears distinct black-framed glasses. The overall aesthetic combines a grayscale base for the skin and a dark ribbed t-shirt, elevated with dynamic, vibrant splashes of multi-colored light (reds, oranges, yellows, greens, blues, purples) projected onto the face, neck, and shoulders. Stylized cinematic lighting creates sharp contrast and a graphic novel aesthetic. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A highly detailed 8K digital illustration of a [subject] maintaining exact facial and physical identity from the reference. Presented as a close-up, eye-level headshot facing directly forward against a clean white background. The composition is centered, capturing the upper torso. The subject wears distinct black-framed glasses. The overall aesthetic combines a grayscale base for the skin and a dark ribbed t-shirt, elevated with dynamic, vibrant splashes of multi-colored light (reds, oranges, yellows, greens, blues, purples) projected onto the face, neck, and shoulders. Stylized cinematic lighting creates sharp contrast and a graphic novel aesthetic. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/256.jpg" alt="cinematic bronze satin jacket portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A hyper-realistic, 8k, medium close-up shot captured with an 85mm lens. The subject, matching the uploaded face reference exactly, looks slightly upward towards the light. Wearing a striking satin bomber jacket in a rich bronze/copper color that reflects studio lights, paired with a black mock-neck shirt and glasses. The lighting is high-contrast and dramatic, with a warm golden spotlight focused solely on the subject, letting the rest fall into shadow. The background is pitch black, featuring a single vertical strip of teal light centered behind the subject, creating powerful complementary color contrast. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A hyper-realistic, 8k, medium close-up shot captured with an 85mm lens. The subject, matching the uploaded face reference exactly, looks slightly upward towards the light. Wearing a striking satin bomber jacket in a rich bronze/copper color that reflects studio lights, paired with a black mock-neck shirt and glasses. The lighting is high-contrast and dramatic, with a warm golden spotlight focused solely on the subject, letting the rest fall into shadow. The background is pitch black, featuring a single vertical strip of teal light centered behind the subject, creating powerful complementary color contrast. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/193.jpg" alt="dramatic low-angle cinematic portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A dramatic cinematic low-angle portrait of a [subject], strictly preserving facial and physical structure from the uploaded image. The subject stands in a dark, minimalist space, illuminated by a single sharp beam of light cutting across the face and shoulders. Wearing the exact outfit from the reference photo. The gaze is directed straight at the camera, forming a strong, almost heroic silhouette against the deep shadows. The background features an abandoned architectural space. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A dramatic cinematic low-angle portrait of a [subject], strictly preserving facial and physical structure from the uploaded image. The subject stands in a dark, minimalist space, illuminated by a single sharp beam of light cutting across the face and shoulders. Wearing the exact outfit from the reference photo. The gaze is directed straight at the camera, forming a strong, almost heroic silhouette against the deep shadows. The background features an abandoned architectural space. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/248.jpg" alt="stylized yellow silhouette portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Any Engine</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A dramatic, stylized portrait featuring a dark, almost silhouetted figure in profile looking to the left [use reference]. The figure has an intense, rugged look with voluminous wavy and slightly tousled hair. The background is a vibrant, solid yellow. Dynamic, expressive black and yellow brushstrokes or abstract splatter emanate from around the figure's head and shoulders, blending effortlessly into the bright background. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A dramatic, stylized portrait featuring a dark, almost silhouetted figure in profile looking to the left [use reference]. The figure has an intense, rugged look with voluminous wavy and slightly tousled hair. The background is a vibrant, solid yellow. Dynamic, expressive black and yellow brushstrokes or abstract splatter emanate from around the figure's head and shoulders, blending effortlessly into the bright background. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/213.jpg" alt="professional laptop wristwatch portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A medium shot photograph of a [subject] maintaining exact physical structure from the uploaded image, styled in a black turtleneck and glasses. The subject is holding a silver Apple MacBook and looking down at a premium silver wristwatch on the left wrist. The right hand supports the laptop from underneath. Lighting is dramatic side light from the left against a completely dark background, casting strong highlights and deep shadows on the face and hardware. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A medium shot photograph of a [subject] maintaining exact physical structure from the uploaded image, styled in a black turtleneck and glasses. The subject is holding a silver Apple MacBook and looking down at a premium silver wristwatch on the left wrist. The right hand supports the laptop from underneath. Lighting is dramatic side light from the left against a completely dark background, casting strong highlights and deep shadows on the face and hardware. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/208.jpg" alt="cinematic blurred motion portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <div class="pro-tip"><strong>Tip:</strong> Keywords like "lateral motion blur" and "double exposure" create artistic movement.</div>
+                    <p class="card-text">Cinematic blurred portrait of a [subject] retaining reference facial features, wearing a light hoodie with the hood up. Neutral background, teal-green color grading, warm light leak on the left side. The face is partially smeared with lateral motion blur and a double exposure blur effect. Soft haze, low contrast, shallow depth of field, analog film grain, moody atmosphere, melancholic expression, minimal composition, dreamy realism. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="Cinematic blurred portrait of a [subject] retaining reference facial features, wearing a light hoodie with the hood up. Neutral background, teal-green color grading, warm light leak on the left side. The face is partially smeared with lateral motion blur and a double exposure blur effect. Soft haze, low contrast, shallow depth of field, analog film grain, moody atmosphere, melancholic expression, minimal composition, dreamy realism. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/287.jpg" alt="surreal dystopian crowd portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A surreal and moody conceptual portrait shot from a slightly elevated medium angle, featuring the uploaded reference face positioned centrally amidst a dense, claustrophobic crowd of anonymous figures. The mob is uniformly dressed in deep black formal wear, blending into the shadows, with their heads entirely shrouded in tight white fabric sacks obscuring all features. Intricate heavy-duty stitching covers where mouths should be. Harsh dramatic chiaroscuro lighting features a single overhead spotlight hitting the central subject's face, making skin tones pop. Cinematic haze emphasizes isolation. Shot on 35mm film, 8K resolution. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A surreal and moody conceptual portrait shot from a slightly elevated medium angle, featuring the uploaded reference face positioned centrally amidst a dense, claustrophobic crowd of anonymous figures. The mob is uniformly dressed in deep black formal wear, blending into the shadows, with their heads entirely shrouded in tight white fabric sacks obscuring all features. Intricate heavy-duty stitching covers where mouths should be. Harsh dramatic chiaroscuro lighting features a single overhead spotlight hitting the central subject's face, making skin tones pop. Cinematic haze emphasizes isolation. Shot on 35mm film, 8K resolution. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/179.jpg" alt="high-end editorial fashion photograph" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">Use the uploaded photos strictly as a reference for face identity, features, and skin tone. High-end editorial fashion photograph featuring the [subject] as a model. Full-body shot, facing the camera, wearing an oversized beige linen suit, black graphic t-shirt, and patterned sneakers. Intense warm golden-orange side/back lighting casting long shadows on a minimalist concrete studio floor. Shot on Canon EOS R5, 85mm f/1.2, cinematic film style. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="Use the uploaded photos strictly as a reference for face identity, features, and skin tone. High-end editorial fashion photograph featuring the [subject] as a model. Full-body shot, facing the camera, wearing an oversized beige linen suit, black graphic t-shirt, and patterned sneakers. Intense warm golden-orange side/back lighting casting long shadows on a minimalist concrete studio floor. Shot on Canon EOS R5, 85mm f/1.2, cinematic film style. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/268.webp" alt="editorial flash portrait black suit" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Stable Diffusion</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">Shot on a Canon EOS R5 with a 50mm f/2.8 lens. The photo captures a [subject] with the exact physical identity from the uploaded image in a black suit, wide-leg trousers, white shirt, sunglasses, and a black cap, leaning against a wooden stool. The direct camera flash creates harsh shadows and high contrast. Hands in pockets, looking towards the camera. The background is a dark, weathered wooden door and a concrete wall. Cool, desaturated color grading. Hyper-realistic, 8k resolution, raw photo, editorial Vogue style. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="Shot on a Canon EOS R5 with a 50mm f/2.8 lens. The photo captures a [subject] with the exact physical identity from the uploaded image in a black suit, wide-leg trousers, white shirt, sunglasses, and a black cap, leaning against a wooden stool. The direct camera flash creates harsh shadows and high contrast. Hands in pockets, looking towards the camera. The background is a dark, weathered wooden door and a concrete wall. Cool, desaturated color grading. Hyper-realistic, 8k resolution, raw photo, editorial Vogue style. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/203.jpg" alt="top-down editorial portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">A highly stylized, dramatic top-down editorial portrait of a [subject] retaining exact features from the reference, standing alone at the center of the frame. The subject gazes upward directly into the camera with a calm, curious, and thoughtful expression. The background is a clean, seamless gradient. Soft studio lighting creates a focused circular spotlight around the subject, with gentle falloff. Wearing a brown overshirt layered over a light knit sweater, dark trousers, and minimalist shoes. Shot with a wide-angle lens emphasizing isolation and depth. Professional studio quality. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A highly stylized, dramatic top-down editorial portrait of a [subject] retaining exact features from the reference, standing alone at the center of the frame. The subject gazes upward directly into the camera with a calm, curious, and thoughtful expression. The background is a clean, seamless gradient. Soft studio lighting creates a focused circular spotlight around the subject, with gentle falloff. Wearing a brown overshirt layered over a light knit sweater, dark trousers, and minimalist shoes. Shot with a wide-angle lens emphasizing isolation and depth. Professional studio quality. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/232.jpg" alt="editorial street fashion portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">Editorial street fashion portrait of a [subject] using exact facial identity from the uploaded image, wearing vintage dark sunglasses, sitting relaxed against a teal painted wooden storefront door. The background is covered with old newspapers and posters (text blurred and unreadable). Strong late afternoon sunlight casts hard shadows and a distinct diagonal shadow shape across the wall. High contrast cinematic lighting with warm skin tones. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="Editorial street fashion portrait of a [subject] using exact facial identity from the uploaded image, wearing vintage dark sunglasses, sitting relaxed against a teal painted wooden storefront door. The background is covered with old newspapers and posters (text blurred and unreadable). Strong late afternoon sunlight casts hard shadows and a distinct diagonal shadow shape across the wall. High contrast cinematic lighting with warm skin tones. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/258.jpg" alt="explosive illustration electric guitar" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Niji 6 / Midjourney</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <div class="pro-tip"><strong>Tip:</strong> Use comic-book keywords like "cel-shading" and "halftone" for stylized illustration results.</div>
+                    <p class="card-text">A dynamic illustration of a [subject] maintaining exact facial identity from reference, wearing a black t-shirt with varsity lettering. The subject is smiling with mouth open, caught in an explosive emotional burst while holding an electric guitar covered in stickers. Hair flares upward like a flame, swept by a violent surge of colors and motion. The background is a surreal blast of abstract forms, broken shapes, comic patterns, and wild symbols radiating outward. Bold line art with gritty textures, cel-shading, halftone details, and chromatic distortions. Low angle shot with exaggerated proportions. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="A dynamic illustration of a [subject] maintaining exact facial identity from reference, wearing a black t-shirt with varsity lettering. The subject is smiling with mouth open, caught in an explosive emotional burst while holding an electric guitar covered in stickers. Hair flares upward like a flame, swept by a violent surge of colors and motion. The background is a surreal blast of abstract forms, broken shapes, comic patterns, and wild symbols radiating outward. Bold line art with gritty textures, cel-shading, halftone details, and chromatic distortions. Low angle shot with exaggerated proportions. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/143.jpeg" alt="extreme close-up dewy skin portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Portrait</span>
+                    </div>
+                    <p class="card-text">Extreme close-up portrait of [reference face from uploaded photo], keeping exact facial features and natural structure. Highly detailed skin texture with visible pores and subtle moisture creating a dewy shine. Wet strands of hair fall partially across the eye area. The eye is in sharp focus with high clarity, showing slight redness for a raw, lifelike effect. Strong, directional studio light from the side emphasizes micro-shadows, highlights, and natural contours of the skin. Ultra photorealistic, 8K resolution, cinematic quality, subtle film grain, balanced exposure, raw realism.</p>
+                    <button class="copy-btn" data-prompt="Extreme close-up portrait of [reference face from uploaded photo], keeping exact facial features and natural structure. Highly detailed skin texture with visible pores and subtle moisture creating a dewy shine. Wet strands of hair fall partially across the eye area. The eye is in sharp focus with high clarity, showing slight redness for a raw, lifelike effect. Strong, directional studio light from the side emphasizes micro-shadows, highlights, and natural contours of the skin. Ultra photorealistic, 8K resolution, cinematic quality, subtle film grain, balanced exposure, raw realism."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/186.jpg" alt="top-down fur coat with bear cub" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> Portrait</span>
+                    </div>
+                    <p class="card-text">Ultra-detailed close-up photograph, ultra-photorealistic, 8K resolution, shot on a Hasselblad H6D-400c medium format digital camera with a 100mm f/2.8 studio portrait lens. Flawless sharpness, extreme detail, and cinematic depth of field. Absolute identity lock of the [subject] from the uploaded image—strictly preserve 100% of the original features without distortion. Shot from a high angle looking down. Subject dressed in a voluminous burgundy faux fur coat, holding a live white bear cub sitting on their neck. Camera is at the eye level of the bear cub. Clean light gray studio background. High fashion editorial style.</p>
+                    <button class="copy-btn" data-prompt="Ultra-detailed close-up photograph, ultra-photorealistic, 8K resolution, shot on a Hasselblad H6D-400c medium format digital camera with a 100mm f/2.8 studio portrait lens. Flawless sharpness, extreme detail, and cinematic depth of field. Absolute identity lock of the [subject] from the uploaded image—strictly preserve 100% of the original features without distortion. Shot from a high angle looking down. Subject dressed in a voluminous burgundy faux fur coat, holding a live white bear cub sitting on their neck. Camera is at the eye level of the bear cub. Clean light gray studio background. High fashion editorial style."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/216.webp" alt="gritty black and white noir portrait" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">Gritty black-and-white cinematic portrait of a [subject] matching the exact facial appearance from the uploaded image, standing under a narrow beam of light with arms relaxed behind their back. Body facing forward, head slightly turned, eyes cutting sideways. Heavy negative space, razor-sharp contrast. Minimal studio film noir mood. Preserve face 100% from reference image. No text.</p>
+                    <button class="copy-btn" data-prompt="Gritty black-and-white cinematic portrait of a [subject] matching the exact facial appearance from the uploaded image, standing under a narrow beam of light with arms relaxed behind their back. Body facing forward, head slightly turned, eyes cutting sideways. Heavy negative space, razor-sharp contrast. Minimal studio film noir mood. Preserve face 100% from reference image. No text."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/244.webp" alt="forced perspective cowboy boot lounge" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <div class="pro-tip"><strong>Tip:</strong> "Forced perspective" pushes the AI to create dramatic sizing differences between foreground and background elements.</div>
+                    <p class="card-text">Shot on Sony A7RV, 24mm wide-angle lens, f/4 aperture, extreme forced perspective. Dim warm ambient lighting, moody high contrast, glossy wood table reflections. Relaxed [subject] with exact facial identity from the uploaded image lounging on a beige sofa, wearing an unbuttoned white shirt, dark pinstripe blazer, dark trousers, looking away thoughtfully. Extreme foreground features the highly detailed sole and heel of a black leather cowboy boot. Hyper-realistic, 8k resolution, editorial Vogue style. Aspect ratio 9:16.</p>
+                    <button class="copy-btn" data-prompt="Shot on Sony A7RV, 24mm wide-angle lens, f/4 aperture, extreme forced perspective. Dim warm ambient lighting, moody high contrast, glossy wood table reflections. Relaxed [subject] with exact facial identity from the uploaded image lounging on a beige sofa, wearing an unbuttoned white shirt, dark pinstripe blazer, dark trousers, looking away thoughtfully. Extreme foreground features the highly detailed sole and heel of a black leather cowboy boot. Hyper-realistic, 8k resolution, editorial Vogue style. Aspect ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/146.jpeg" alt="full body fashion graffiti doodle" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 2:3</span>
+                    </div>
+                    <p class="card-text">Full body fashion portrait of a model, using the exact face and hairstyle from the uploaded reference photo. The model wears a chunky oversized textured sweater, loose cargo pants, and bold sneakers. Captured from a low-angle perspective emphasizing height and dominance. Background: seamless vibrant gradient of orange to deep red, cinematic studio lighting, bold saturated colors. Overlayed with doodle art: graffiti bubble text in bold rounded bubble font reading '[YOUR TEXT HERE]'. Cartoon flames in orange with black outlines emerge from behind hands and feet. Simple orange crown doodle above head completes hypebeast magazine cover aesthetic. Aspect ratio 2:3.</p>
+                    <button class="copy-btn" data-prompt="Full body fashion portrait of a model, using the exact face and hairstyle from the uploaded reference photo. The model wears a chunky oversized textured sweater, loose cargo pants, and bold sneakers. Captured from a low-angle perspective emphasizing height and dominance. Background: seamless vibrant gradient of orange to deep red, cinematic studio lighting, bold saturated colors. Overlayed with doodle art: graffiti bubble text in bold rounded bubble font reading '[YOUR TEXT HERE]'. Cartoon flames in orange with black outlines emerge from behind hands and feet. Simple orange crown doodle above head completes hypebeast magazine cover aesthetic. Aspect ratio 2:3."><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img class="card-img" src="/images/159.webp" alt="cinematic western Porsche golden hour" loading="lazy">
+                <div class="card-content">
+                    <div class="card-meta">
+                        <span class="badge model"><i class="fas fa-robot"></i> Midjourney v6</span>
+                        <span class="badge ratio"><i class="fas fa-expand"></i> AR 9:16</span>
+                    </div>
+                    <p class="card-text">Cinematic western-inspired fine-art photograph at softened golden hour, quiet romantic stillness. 100% face identity lock to reference photo; [subject] standing slightly forward between camera and a brown Porsche 959, half-profile facing horizon. Calm grounded posture, one hand gently resting fingertips on the car hood. Expression reflective and confident. Wearing a modern western denim shirt, medium-dark wash, open collar. Open prairie field with tall dry grass swaying, distant hazy horizon. Soft warm-neutral golden hour light, minimal organic lens flare. Vertical 9:16 editorial composition, telephoto look 85-135mm, shallow depth of field, creamy background blur. Film-like color grading, restrained elegance. --q 2 --style raw --v 6</p>
+                    <button class="copy-btn" data-prompt="Cinematic western-inspired fine-art photograph at softened golden hour, quiet romantic stillness. 100% face identity lock to reference photo; [subject] standing slightly forward between camera and a brown Porsche 959, half-profile facing horizon. Calm grounded posture, one hand gently resting fingertips on the car hood. Expression reflective and confident. Wearing a modern western denim shirt, medium-dark wash, open collar. Open prairie field with tall dry grass swaying, distant hazy horizon. Soft warm-neutral golden hour light, minimal organic lens flare. Vertical 9:16 editorial composition, telephoto look 85-135mm, shallow depth of field, creamy background blur. Film-like color grading, restrained elegance. --q 2 --style raw --v 6"><i class="fas fa-copy"></i> Copy Prompt</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="disabled"><i class="fas fa-chevron-left"></i> Prev</a>
+            <a href="#" class="active">1</a>
+            <a href="content/page2.html">2</a>
+            <a href="content/page3.html">3</a>
+            <a href="content/page4.html">4</a>
+            <a href="content/page5.html">5</a>
+            <a href="content/page6.html">6</a>
+            <a href="content/page7.html">7</a>
+            <a href="content/page8.html">8</a>
+            <a href="content/page9.html">9</a>
+            <a href="content/page2.html">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-site-name">Promptgalary.com</span>
+                <div class="footer-nav-links">
+                    <a href="/">Home</a>
+                    <a href="/prompts">Prompts</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/policy/">Privacy</a>
+                    <a href="/term/">Terms</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/sanvi009" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://www.tiktok.com/@brainloom.online" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/_brainloom.online/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/brainloomonline" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.youtube.com/@brainloom.online" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCG2EZ77R6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KCG2EZ77R6');
+
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', async function() {
+                const promptText = this.getAttribute('data-prompt');
+                try {
+                    await navigator.clipboard.writeText(promptText);
+                    const originalHTML = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    this.classList.add('copied');
+                    setTimeout(() => {
+                        this.innerHTML = originalHTML;
+                        this.classList.remove('copied');
+                    }, 2000);
+                } catch (err) { console.error('Failed to copy:', err); }
+            });
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function(e) { 
+                e.stopPropagation(); 
+                navLinks.classList.toggle('show'); 
+            });
+        }
+    </script>
+</body>
+</html>

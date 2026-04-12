@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Gallery - Page 2 | AI Prompts for Image Generation</title>
+    <meta name="description" content="Browse AI prompts for creative image generation. Page 2 of 9. Find inspiration for your next AI artwork.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/asset/favicon.png">
+
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #fafbfd;
+            color: #1e2532;
+            line-height: 1.4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px -6px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+            padding: 0.6rem 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eef0f5;
+        }
+
+        .logo a {
+            font-weight: 630;
+            font-size: 1.55rem;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #1f2937 0%, #1e293b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo span {
+            background: linear-gradient(145deg, #2563eb, #4f7df3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.9rem;
+            line-height: 1;
+            margin-right: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .nav-links a, .dropbtn {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.96rem;
+            font-weight: 500;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 60px;
+            transition: all 0.18s ease;
+            white-space: nowrap;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover, .dropdown:hover .dropbtn {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 6px 14px -8px rgba(37,99,235,0.2);
+            color: #0f172a;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+            font-size: 0.96rem;
+            font-weight: 500;
+            color: #334155;
+            padding: 0.6rem 1.2rem;
+            border: 1px solid transparent;
+        }
+
+        .dropbtn i {
+            font-size: 0.7rem;
+            color: #5f6c80;
+            transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .dropdown:hover .dropbtn i {
+            transform: rotate(180deg);
+            color: #2563eb;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            left: auto;
+            background: #ffffff;
+            min-width: 220px;
+            border-radius: 24px;
+            padding: 0.6rem 0;
+            box-shadow: 0 25px 45px -14px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.02), 0 8px 20px -12px rgba(37,99,235,0.15);
+            border: 1px solid #edeff2;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+            background: rgba(255,255,255,0.98);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.7rem 1.7rem;
+            color: #2d3a4f;
+            background: transparent;
+            white-space: nowrap;
+            font-weight: 460;
+            border-left: 3px solid transparent;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .dropdown-content a:hover {
+            background: #f6f8fc;
+            border-left-color: #2563eb;
+            color: #0f1c33;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeSlide 0.18s ease;
+        }
+
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateY(-6px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .menu-toggle {
+            display: none;
+            background: white;
+            border: 1px solid #dee3ea;
+            border-radius: 60px;
+            padding: 0.45rem 1.4rem;
+            font-size: 0.95rem;
+            font-weight: 480;
+            cursor: pointer;
+            color: #2b3b52;
+            transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .menu-toggle i {
+            margin-right: 6px;
+            color: #4a5b73;
+        }
+
+        .menu-toggle:hover {
+            background: #f9fcff;
+            border-color: #b7c3d4;
+            box-shadow: 0 6px 12px -10px #2563eb;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .masonry-grid {
+            column-count: 4;
+            column-gap: 1.5rem;
+        }
+
+        .card {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            display: block;
+            background: #f0f2f5;
+        }
+
+        .card-content {
+            padding: 1rem 1.2rem 1.2rem;
+        }
+
+        .card-text {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #2c3e4e;
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+
+        .copy-btn {
+            background: #f0f4fa;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #2563eb;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s ease;
+            font-family: inherit;
+        }
+
+        .copy-btn i {
+            font-size: 0.75rem;
+        }
+
+        .copy-btn:hover {
+            background: #e6edf8;
+            color: #1d4ed8;
+        }
+
+        .copy-btn.copied {
+            background: #2563eb;
+            color: white;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            padding: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .pagination a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            height: 40px;
+            padding: 0 0.75rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            color: #334155;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.15s ease;
+        }
+
+        .pagination a:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            color: #1e293b;
+        }
+
+        .pagination .active {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: white;
+        }
+
+        .pagination .disabled {
+            opacity: 0.4;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+
+        .footer {
+            background: #ffffff;
+            border-top: 1px solid #edf0f5;
+            padding: 0.5rem 2rem;
+            font-size: 0.8rem;
+            color: #5a687c;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.01);
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1300px;
+            margin: 0 auto;
+            gap: 0.3rem 1rem;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem 1.8rem;
+        }
+
+        .footer-site-name {
+            font-weight: 620;
+            font-size: 1.0rem;
+            letter-spacing: -0.01em;
+            color: #1f2a41;
+            background: linear-gradient(135deg, #202937, #19212e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            white-space: nowrap;
+            margin-right: 0.5rem;
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem 1.6rem;
+        }
+
+        .footer-nav-links a {
+            color: #657386;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 480;
+            transition: color 0.15s;
+            white-space: nowrap;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        .footer-nav-links a:hover {
+            color: #1b263b;
+            border-bottom-color: #a7b5cc;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem 1.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: #5f6e86;
+            font-size: 1.0rem;
+            transition: color 0.2s, transform 0.1s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.8rem;
+            height: 1.8rem;
+            border-radius: 60px;
+            background: #f3f6fb;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #1f2a44;
+            background: #e6ecf5;
+            transform: scale(1.03);
+        }
+
+        .footer-extra-compact {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            border-left: 1px solid #dde2ea;
+            padding-left: 1rem;
+        }
+
+        .footer-extra-compact a {
+            color: #5f6e86;
+            text-decoration: none;
+            font-size: 0.78rem;
+            font-weight: 470;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            white-space: nowrap;
+            background: #f3f6fb;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            transition: background 0.15s;
+        }
+
+        .footer-extra-compact a i {
+            font-size: 0.65rem;
+            opacity: 0.7;
+        }
+
+        .footer-extra-compact a:hover {
+            background: #e0e7f2;
+            color: #1a253b;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .masonry-grid { column-count: 3; }
+        }
+        @media screen and (max-width: 800px) {
+            .masonry-grid { column-count: 2; }
+            main { padding: 1.5rem 1rem; }
+            .navbar { padding: 0.5rem 1.2rem; }
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                background: #ffffff;
+                padding: 1.2rem 0.6rem 0.9rem 0.6rem;
+                gap: 0.4rem;
+                border-top: 1px solid #eceff4;
+                margin-top: 0.5rem;
+                border-radius: 28px;
+            }
+            .nav-links.show { display: flex; }
+            .menu-toggle { display: inline-flex; align-items: center; }
+            .dropdown { width: 100%; }
+            .dropbtn { width: 100%; justify-content: space-between; background: #f6f9fe; border-radius: 40px; padding: 0.7rem 1.3rem; border: 1px solid #e5eaf0; }
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                border: none;
+                background: #f1f5fc;
+                border-radius: 24px;
+                margin: 0.4rem 0 0.2rem 1rem;
+                padding: 0.5rem 0;
+                width: calc(100% - 1.8rem);
+            }
+            .dropdown:hover .dropdown-content { display: none; }
+            .dropdown.active .dropdown-content { display: block !important; animation: fadeSlide 0.18s ease; }
+        }
+        @media screen and (max-width: 550px) {
+            .masonry-grid { column-count: 1; }
+            .card-content { padding: 0.8rem 1rem 1rem; }
+            .card-text { font-size: 0.85rem; }
+        }
+        @media screen and (max-width: 900px) {
+            .footer { padding: 0.15rem 0.6rem; }
+            .footer-content { flex-direction: column; align-items: stretch; gap: 0.1rem; }
+            .footer-left { width: 100%; display: block; }
+            .footer-site-name { font-size: 1.1rem; display: block; margin: 0.1rem 0 0 0; }
+            .footer-left .footer-nav-links { display: none; }
+            .footer-right { width: 100%; flex-direction: column; align-items: flex-start; gap: 0.1rem; margin-top: 0; }
+            .mobile-nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.15rem 0.4rem; width: 100%; }
+            .mobile-nav-links a { color: #5a6b82; text-decoration: none; font-size: 0.6rem; font-weight: 470; white-space: nowrap; padding: 0 0.1rem; border-bottom: 1px solid transparent; }
+            .mobile-nav-links a:hover { color: #1d2a40; border-bottom-color: #9aabbf; }
+            .social-links { gap: 0.1rem; }
+            .social-links a { width: 1.25rem; height: 1.25rem; font-size: 0.65rem; background: #f0f4fc; }
+            .footer-extra-compact { border-left: none; padding-left: 0; gap: 0.2rem; }
+            .footer-extra-compact a { font-size: 0.58rem; padding: 0.05rem 0.4rem; background: #f0f4fc; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="/"><span>◈</span> promptgalary</a></div>
+        <button class="menu-toggle" id="menuToggle" aria-label="menu"><i class="fas fa-bars"></i> Menu</button>
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/prompts">Prompts</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <div class="dropdown" id="legalDropdown">
+                <button class="dropbtn">Legal <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="/policy/">Privacy policy</a>
+                    <a href="/term/">Terms of service</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="masonry-grid">
+            <!-- NEW PROMPTS PAGE 2 - IDs 201 to 220 from page_11.json (ALL HARDCODED FOR SEO) -->
+            <!-- ===== ORIGINAL 20 PROMPTS (Page 2 - IDs 21-40 from your existing page2.html) ===== -->
+
+<!-- Card 21 -->
+<div class="card">
+    <img class="card-img" src="/images/69.jpeg" alt="Animal made of flowers and leaves" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A { animal name } made only of large white and brown flowers and leaves, ears of one large leave, nose of flowers, navy blue background, studio photography, advertising style, advertising poster, high-resolution photography, detailed, intricate details, ultra-realistic, hyper-detailed, Octane render, bright colors, soft light, low contrast, sharp focus, depth of field, no blur effect.</p>
+        <button class="copy-btn" data-prompt="A { animal name } made only of large white and brown flowers and leaves, ears of one large leave, nose of flowers, navy blue background, studio photography, advertising style, advertising poster, high-resolution photography, detailed, intricate details, ultra-realistic, hyper-detailed, Octane render, bright colors, soft light, low contrast, sharp focus, depth of field, no blur effect."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 22 -->
+<div class="card">
+    <img class="card-img" src="/images/84.jpeg" alt="Collectible doll action figure" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Create a version of a collectible doll. The doll is wearing clothes as per the photo. The doll must follow the style of (Spanish)action figures, such as (buffalo warrior) . The doll must have joints in the elbows, wrists, knees, and feet. It must be on an articulated base and in a dynamic pose. It for ChatGPT image generation.</p>
+        <button class="copy-btn" data-prompt="Create a version of a collectible doll. The doll is wearing clothes as per the photo. The doll must follow the style of (Spanish)action figures, such as (buffalo warrior) . The doll must have joints in the elbows, wrists, knees, and feet. It must be on an articulated base and in a dynamic pose. It for ChatGPT image generation."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 23 -->
+<div class="card">
+    <img class="card-img" src="/images/65.jpeg" alt="Baby animal on peach bean bag with laptop" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Create a hyper-realistic digital artwork of a baby [Animal name] sitting comfortably on a vibrant peach fluffy bean bag, floating peacefully above a sea of clouds. The [Animal name] wears modern white over-ear headphones and uses a sleek silver Apple MacBook placed naturally on its lap. Next to the [Animal name] is a detailed, photo-realistic Starbucks coffee cup. The background is a dreamy sky filled with soft clouds, radiant sun rays breaking through during golden hour, and delicate white feathers gently drifting down from above. Emphasize natural animal anatomy, realistic fur texture, lifelike lighting and shadows, and ultra-high-resolution details. Style should combine cinematic lighting, magical realism, and surreal yet believable visual storytelling.</p>
+        <button class="copy-btn" data-prompt="Create a hyper-realistic digital artwork of a baby [Animal name] sitting comfortably on a vibrant peach fluffy bean bag, floating peacefully above a sea of clouds. The [Animal name] wears modern white over-ear headphones and uses a sleek silver Apple MacBook placed naturally on its lap. Next to the [Animal name] is a detailed, photo-realistic Starbucks coffee cup. The background is a dreamy sky filled with soft clouds, radiant sun rays breaking through during golden hour, and delicate white feathers gently drifting down from above. Emphasize natural animal anatomy, realistic fur texture, lifelike lighting and shadows, and ultra-high-resolution details. Style should combine cinematic lighting, magical realism, and surreal yet believable visual storytelling."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 24 -->
+<div class="card">
+    <img class="card-img" src="/images/81.jpeg" alt="Bear and Giraffe in cardboard box" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Bear & Giraffe] are looking directly up from inside a cardboard box. They are positioned in the center of the image, with their heads and necks poking out of the top of the box. They are facing the viewer, their curious expressions directed upwards toward a partly cloudy blue sky visible through the opening. They both have a medium build and are looking directly at the camera. The box is light brownish-tan cardboard. The lighting is bright and natural, casting no significant shadows. The perspective is directly from below, looking up into the box.\n\nThe overall composition is humorous, drawing attention to the [Bear & Giraffe] curious gazes and the unexpected scene. A sense of surprise and curiosity is conveyed. 4:5</p>
+        <button class="copy-btn" data-prompt="Bear & Giraffe] are looking directly up from inside a cardboard box. They are positioned in the center of the image, with their heads and necks poking out of the top of the box. They are facing the viewer, their curious expressions directed upwards toward a partly cloudy blue sky visible through the opening. They both have a medium build and are looking directly at the camera. The box is light brownish-tan cardboard. The lighting is bright and natural, casting no significant shadows. The perspective is directly from below, looking up into the box. The overall composition is humorous, drawing attention to the [Bear & Giraffe] curious gazes and the unexpected scene. A sense of surprise and curiosity is conveyed. 4:5"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 25 -->
+<div class="card">
+    <img class="card-img" src="/images/111.jpeg" alt="Black and white portrait with motion blur background" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A high-contrast black and white portrait photograph of me as same as from the uploaded image , wearing collared shurt, and a dark overcoat. He/she stands centrally in the frame, facing forward with a somber,intense expression. The background features heavily motion-blurred figures, creating a swirling, abstract effect around him. The image has a strong film grain texture, vignetting, and a low-key lighting scheme, evoking a sense of isolation and introspection amidst a chaotic urban environment, reminiscent of a gritty.</p>
+        <button class="copy-btn" data-prompt="A high-contrast black and white portrait photograph of me as same as from the uploaded image , wearing collared shurt, and a dark overcoat. He/she stands centrally in the frame, facing forward with a somber,intense expression. The background features heavily motion-blurred figures, creating a swirling, abstract effect around him. The image has a strong film grain texture, vignetting, and a low-key lighting scheme, evoking a sense of isolation and introspection amidst a chaotic urban environment, reminiscent of a gritty."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 26 -->
+<div class="card">
+    <img class="card-img" src="/images/32.jpeg" alt="Black and white street photography chase scene" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Black-and-white street photography, candid moment of [CHARACTER1] being chased by [CHARACTER2], with expressive faces full of [EMOTION]. [CHARACTER1] is in the foreground running toward the camera with visible motion blur, mouth open in raw expression, while [CHARACTER2] is mid-stride behind, holding [PROP]. Composition with dynamic depth, natural sunlight, sharp contrasts, detailed facial features, strong storytelling energy. Scene set in [SCENERY], gritty documentary aesthetic, 35mm film grain</p>
+        <button class="copy-btn" data-prompt="Black-and-white street photography, candid moment of [CHARACTER1] being chased by [CHARACTER2], with expressive faces full of [EMOTION]. [CHARACTER1] is in the foreground running toward the camera with visible motion blur, mouth open in raw expression, while [CHARACTER2] is mid-stride behind, holding [PROP]. Composition with dynamic depth, natural sunlight, sharp contrasts, detailed facial features, strong storytelling energy. Scene set in [SCENERY], gritty documentary aesthetic, 35mm film grain"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 27 -->
+<div class="card">
+    <img class="card-img" src="/images/38.jpeg" alt="Luxury flat lay with blue gift box and perfume" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">"A luxurious, romantic flat lay composition set on soft, glossy light blue satin fabric, with elegant folds and a luminous sheen. At the center, a light blue gift box tied with a perfect satin ribbon bow sits gracefully. Beside the box is a crystal-clear perfume bottle with a golden spray cap, filled with vibrant blue liquid. The bottle has the word "SOWAD" written directly on the glass in a clean, elegant font,without any paper label. Below "SOWAD," in smaller letters, the word "Perfume" appears. On the left, a fresh bouquet of delicate light blue forget-me-not flowers with yellow centers and green stems adds a natural, gentle touch. The entire scene is styled in harmonious shades of blue and gold, evoking sophistication, romance, and celebration. Ratio 9:16."</p>
+        <button class="copy-btn" data-prompt="A luxurious, romantic flat lay composition set on soft, glossy light blue satin fabric, with elegant folds and a luminous sheen. At the center, a light blue gift box tied with a perfect satin ribbon bow sits gracefully. Beside the box is a crystal-clear perfume bottle with a golden spray cap, filled with vibrant blue liquid. The bottle has the word "SOWAD" written directly on the glass in a clean, elegant font,without any paper label. Below "SOWAD," in smaller letters, the word "Perfume" appears. On the left, a fresh bouquet of delicate light blue forget-me-not flowers with yellow centers and green stems adds a natural, gentle touch. The entire scene is styled in harmonious shades of blue and gold, evoking sophistication, romance, and celebration. Ratio 9:16."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 28 -->
+<div class="card">
+    <img class="card-img" src="/images/78.jpeg" alt="Brand logo reimagined in historical art style" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Here's the prompt I used to create these images: Create a highly detailed reimagining of the [BRAND NAME] logo in the style of [ERA / ART STYLE]. It should look as if the logo was originally designed in that time, with authentic textures, materials, and colors. Make it visually striking, realistic, and era-accurat, for example: carved stone, oil painting, neon lights, holograms, etc. Keep the logo recognizable but transformed by the style.</p>
+        <button class="copy-btn" data-prompt="Here's the prompt I used to create these images: Create a highly detailed reimagining of the [BRAND NAME] logo in the style of [ERA / ART STYLE]. It should look as if the logo was originally designed in that time, with authentic textures, materials, and colors. Make it visually striking, realistic, and era-accurat, for example: carved stone, oil painting, neon lights, holograms, etc. Keep the logo recognizable but transformed by the style."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 29 -->
+<div class="card">
+    <img class="card-img" src="/images/53.jpeg" alt="Cake stylized as object with bite taken" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Generate a hyper-realistic digital illustration of a cake meticulously stylized to resemble a [object], resting on a pristine white table. Show it partially bitten to reveal multiple delicious layers (sponge, frosting, crumbs) and shatter the illusion. Capture the moment of surprise with intricate details in the bite mark. Use a slightly overhead angle to emphasize the contrast between the realistic outer shell and the cake interior.\nIlluminate the scene with soft, diffused lighting to enhance textures and cast subtle shadows for depth. Keep the background minimal and bright to focus on the deceptive dessert. Employ a vibrant, playful palette for the cake layers against the object-mimicking exterior. Render in a photorealistic style with whimsical undertones, making the reveal both visually convincing and appetizing.</p>
+        <button class="copy-btn" data-prompt="Generate a hyper-realistic digital illustration of a cake meticulously stylized to resemble a [object], resting on a pristine white table. Show it partially bitten to reveal multiple delicious layers (sponge, frosting, crumbs) and shatter the illusion. Capture the moment of surprise with intricate details in the bite mark. Use a slightly overhead angle to emphasize the contrast between the realistic outer shell and the cake interior. Illuminate the scene with soft, diffused lighting to enhance textures and cast subtle shadows for depth. Keep the background minimal and bright to focus on the deceptive dessert. Employ a vibrant, playful palette for the cake layers against the object-mimicking exterior. Render in a photorealistic style with whimsical undertones, making the reveal both visually convincing and appetizing."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 30 -->
+<div class="card">
+    <img class="card-img" src="/images/109.jpeg" alt="Caricatured portrait looking upward" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A caricatured portrait of  the person exactly same from the image , looking upwards with a slightly forlorn expression, featuring exaggerated facial features  , set against a vibrant blue background. Digital caricature, cartoon style,Inspired by the exaggerated portraits of Jason Seiler and the digital painting techniques of Pixar artists [Dramatic rim lighting with a cool blue glow, vibrant and saturated colors,smooth gradients with subtle textures</p>
+        <button class="copy-btn" data-prompt="A caricatured portrait of  the person exactly same from the image , looking upwards with a slightly forlorn expression, featuring exaggerated facial features  , set against a vibrant blue background. Digital caricature, cartoon style,Inspired by the exaggerated portraits of Jason Seiler and the digital painting techniques of Pixar artists [Dramatic rim lighting with a cool blue glow, vibrant and saturated colors,smooth gradients with subtle textures"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 31 -->
+<div class="card">
+    <img class="card-img" src="/images/56.jpeg" alt="Hyper-stylized 3D caricature urban streetwear" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Create "Hyper-stylized 3D caricature of a modern character with exaggerated facial features, confident and playful expression. Wearing urban streetwear: hooded jacket, joggers, oversized sneakers.</p>
+        <button class="copy-btn" data-prompt="Create "Hyper-stylized 3D caricature of a modern character with exaggerated facial features, confident and playful expression. Wearing urban streetwear: hooded jacket, joggers, oversized sneakers."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 32 -->
+<div class="card">
+    <img class="card-img" src="/images/3.jpeg" alt="Rendang Padang flavor explosion cinematic" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Hyper dramatic ultra-cinematic vertical composition of Rendang Padang in a deconstructed "flavor explosion" - tender chunks of slow-cooked beef infused with coconut milk and aromatic Minangkabau spices, suspended mid-air alongside splashes of thick, glossy rendang sauce, fresh kaffir lime leaves, shredded lemongrass, fiery red chili slices, cinnamon sticks, star anise, and toasted coconut shavings - each element frozen in perfect alignment. Below the floating ingredients, a traditional Minangkabau serving plate (piring motif klasik berwarna merah dengan pinggiran emas) holds the assembled rendang, rich sauce glistening under dramatic light, with dynamic sauce splashes hitting the plate's surface for added motion and energy.Hyper-detailed food styling showing deep brown caramelization on the beef, shimmering oil separation in the sauce, and rising steam trails that convey heat and freshness. Background: authentic traditional Minangkabau kitchen - wooden walls, clay stoves with glowing embers, woven bamboo baskets, earthen spice jars, and hanging ladles - rendered in soft depth of field for cinematic focus. Dramatic high-contrast lighting, studio photography aesthetic, and motion-inspired composition. Shot with a virtual Nikon D850, 50mm lens, aperture f/3.2, crisp editorial clarity, evoking premium traditional Indonesian food advertising style.</p>
+        <button class="copy-btn" data-prompt="Hyper dramatic ultra-cinematic vertical composition of Rendang Padang in a deconstructed "flavor explosion" - tender chunks of slow-cooked beef infused with coconut milk and aromatic Minangkabau spices, suspended mid-air alongside splashes of thick, glossy rendang sauce, fresh kaffir lime leaves, shredded lemongrass, fiery red chili slices, cinnamon sticks, star anise, and toasted coconut shavings - each element frozen in perfect alignment. Below the floating ingredients, a traditional Minangkabau serving plate (piring motif klasik berwarna merah dengan pinggiran emas) holds the assembled rendang, rich sauce glistening under dramatic light, with dynamic sauce splashes hitting the plate's surface for added motion and energy.Hyper-detailed food styling showing deep brown caramelization on the beef, shimmering oil separation in the sauce, and rising steam trails that convey heat and freshness. Background: authentic traditional Minangkabau kitchen - wooden walls, clay stoves with glowing embers, woven bamboo baskets, earthen spice jars, and hanging ladles - rendered in soft depth of field for cinematic focus. Dramatic high-contrast lighting, studio photography aesthetic, and motion-inspired composition. Shot with a virtual Nikon D850, 50mm lens, aperture f/3.2, crisp editorial clarity, evoking premium traditional Indonesian food advertising style."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 33 -->
+<div class="card">
+    <img class="card-img" src="/images/27.jpeg" alt="Cinematic portrait with neon ring backlight" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A cinematic portrait of a [young man/woman] with a side profile, wearing a [dark jacket/high neck/coat] illuminated by a glowing neon ring behind their heads. The background is a dark, soft gradient background with warm golden orange and yellow... Lighting creates a strong edge light around the head and shoulders, while some faces remain in the shadow. The image has a dramatic and somber atmosphere — clean, minimalist, powerful.</p>
+        <button class="copy-btn" data-prompt="A cinematic portrait of a [young man/woman] with a side profile, wearing a [dark jacket/high neck/coat] illuminated by a glowing neon ring behind their heads. The background is a dark, soft gradient background with warm golden orange and yellow... Lighting creates a strong edge light around the head and shoulders, while some faces remain in the shadow. The image has a dramatic and somber atmosphere — clean, minimalist, powerful."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 34 -->
+<div class="card">
+    <img class="card-img" src="/images/15.jpeg" alt="Food falling into bowl dynamic splash" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Analyze my food photo and transform to delicious [uploaded image] dynamically falling into a [bowl/plate], with splashing [water], cinematic food photography, professional studio lighting, [contrasting backdrop], advertising-style composition, ultra-detailed textures, hyper-realistic, 8K UHD, sharp focus, garnishes gracefully scattering, vibrant colors, mouth-watering presentation, motion frozen in time.</p>
+        <button class="copy-btn" data-prompt="Analyze my food photo and transform to delicious [uploaded image] dynamically falling into a [bowl/plate], with splashing [water], cinematic food photography, professional studio lighting, [contrasting backdrop], advertising-style composition, ultra-detailed textures, hyper-realistic, 8K UHD, sharp focus, garnishes gracefully scattering, vibrant colors, mouth-watering presentation, motion frozen in time."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 35 -->
+<div class="card">
+    <img class="card-img" src="/images/7.jpeg" alt="French macarons suspended mid-air" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Ultra-cinematic vertical composition of assorted French macarons suspended in mid-air, each with unique pastel colors — rose pink, pistachio green, lavender purple, lemon yellow, chocolate brown — with delicate cracks revealing soft cream filling, fine dusting of powdered sugar, and glossy shells catching soft highlights. Hyper-detailed textures showing almond flour grain and creamy ganache swirls, captured with dramatic high-contrastlighting against a deep, velvety black background. Studio photography aesthetic with cinematic depth of field, soft bokeh, and precise focus transitions between macaron layers. Shot with a virtual Nikon D850, 85mm prime lens, aperture f/2.8, editorial-grade clarity, evoking luxury patisserie advertising style. --ar 9:16 --v7 --q 2 --style raw</p>
+        <button class="copy-btn" data-prompt="Ultra-cinematic vertical composition of assorted French macarons suspended in mid-air, each with unique pastel colors — rose pink, pistachio green, lavender purple, lemon yellow, chocolate brown — with delicate cracks revealing soft cream filling, fine dusting of powdered sugar, and glossy shells catching soft highlights. Hyper-detailed textures showing almond flour grain and creamy ganache swirls, captured with dramatic high-contrastlighting against a deep, velvety black background. Studio photography aesthetic with cinematic depth of field, soft bokeh, and precise focus transitions between macaron layers. Shot with a virtual Nikon D850, 85mm prime lens, aperture f/2.8, editorial-grade clarity, evoking luxury patisserie advertising style. --ar 9:16 --v7 --q 2 --style raw"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 36 -->
+<div class="card">
+    <img class="card-img" src="/images/99.jpeg" alt="Drink falling into cup dynamic splash" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Analyze my drink photo and transform it into a refreshing visual (uploaded drink photo)\n\ndynamically falling into a plastic cup, with splashes of liquid from the drink, cinematic food photography, professional studio lighting, contrasting backdrop, advertising-style composition, ultra-detailed textures, hyper-realistic, 8K UHD resolution, sharp focus, toppings gracefully scattering, vibrant colors, mouth-watering presentation, motion frozen in time.</p>
+        <button class="copy-btn" data-prompt="Analyze my drink photo and transform it into a refreshing visual (uploaded drink photo) dynamically falling into a plastic cup, with splashes of liquid from the drink, cinematic food photography, professional studio lighting, contrasting backdrop, advertising-style composition, ultra-detailed textures, hyper-realistic, 8K UHD resolution, sharp focus, toppings gracefully scattering, vibrant colors, mouth-watering presentation, motion frozen in time."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 37 -->
+<div class="card">
+    <img class="card-img" src="/images/30.jpeg" alt="Urban portrait walking with purpose" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Portrait of me walking forward with purpose, wind catching my coat, urban city street in the background, cinematic lighting, focused eyes, power in every step same face</p>
+        <button class="copy-btn" data-prompt="Portrait of me walking forward with purpose, wind catching my coat, urban city street in the background, cinematic lighting, focused eyes, power in every step same face"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 38 -->
+<div class="card">
+    <img class="card-img" src="/images/64.jpeg" alt="Fried chicken mid-air with flames and comic headline" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A high-speed cinematic food photograph capturing crispy fried chicken drumsticks mid-air, surrounded by scattered golden flakes, red chili peppers, and bursts of crushed chili. No human subject present. The scene features no sauce or broth, instead replaced by roaring flames and fiery embers, with fine smoke rising behind the chicken, enhancing the sense of intense heat. A bold comic-style headline reads "RONIXE OFFICIAL" in bold yellow with red outline, floating dramatically in the top third of the frame. The background is set in a dark, smoky kitchen environment with cracked stone texture and glowing sparks on the ground, evoking the feeling of a spicy, explosive cooking battle. Shot on a Sony a7 IV with a Sony FE 70mm f/2 GM lens cinematic, ultra-realistic, HDR, dramatic warm lighting, macro detail, shallow depth of field, high-speed frozen motion, and extreme texture clarity.</p>
+        <button class="copy-btn" data-prompt="A high-speed cinematic food photograph capturing crispy fried chicken drumsticks mid-air, surrounded by scattered golden flakes, red chili peppers, and bursts of crushed chili. No human subject present. The scene features no sauce or broth, instead replaced by roaring flames and fiery embers, with fine smoke rising behind the chicken, enhancing the sense of intense heat. A bold comic-style headline reads "RONIXE OFFICIAL" in bold yellow with red outline, floating dramatically in the top third of the frame. The background is set in a dark, smoky kitchen environment with cracked stone texture and glowing sparks on the ground, evoking the feeling of a spicy, explosive cooking battle. Shot on a Sony a7 IV with a Sony FE 70mm f/2 GM lens cinematic, ultra-realistic, HDR, dramatic warm lighting, macro detail, shallow depth of field, high-speed frozen motion, and extreme texture clarity."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 39 -->
+<div class="card">
+    <img class="card-img" src="/images/98.jpeg" alt="3D collectible mug designed as famous person" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A hyper-detailed 3D collectible mug designed as [FAMOUS PERSON], exaggerated cartoon features sculpted into the ceramic, glossy porcelain textures with vibrant colors, Pixar-meets-Clash-Royale style, oversized expressive eyes, surreal whimsical energy, lighting like a product ad with glowing rim light, placed on a dramatic pedestal with mist swirling around, whimsical yet premium collectible design</p>
+        <button class="copy-btn" data-prompt="A hyper-detailed 3D collectible mug designed as [FAMOUS PERSON], exaggerated cartoon features sculpted into the ceramic, glossy porcelain textures with vibrant colors, Pixar-meets-Clash-Royale style, oversized expressive eyes, surreal whimsical energy, lighting like a product ad with glowing rim light, placed on a dramatic pedestal with mist swirling around, whimsical yet premium collectible design"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 40 -->
+<div class="card">
+    <img class="card-img" src="/images/93.jpeg" alt="Face and body comically trapped inside bottle" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Create an image of my face and body comically trapped inside a large bottle, with my features humorously compressed against the inside of the bottle. Hyperdetailed and photorealistic.</p>
+        <button class="copy-btn" data-prompt="Create an image of my face and body comically trapped inside a large bottle, with my features humorously compressed against the inside of the bottle. Hyperdetailed and photorealistic."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- ===== NEW 20 PROMPTS (IDs 201-220 from page_11.json) ===== -->
+
+<!-- Card 41 - ID 201 -->
+<div class="card">
+    <img class="card-img" src="/images/235.jpg" alt="gritty black and white noir portrait over shoulder" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Gritty black-and-white cinematic portrait of me with exact same facial and physical identity from the uploaded image standing with my back partially toward the camera, head turned over my shoulder to look back intensely. Wearing a dark textured shirt. One hand slightly clenched, veins visible. Strong rim light outlining my jaw and shoulders, background fading into darkness. Noir mood. Preserve face 100% from reference image. No text. aspect ratio 9:16</p>
+        <button class="copy-btn" data-prompt="Gritty black-and-white cinematic portrait of me with exact same facial and physical identity from the uploaded image standing with my back partially toward the camera, head turned over my shoulder to look back intensely. Wearing a dark textured shirt. One hand slightly clenched, veins visible. Strong rim light outlining my jaw and shoulders, background fading into darkness. Noir mood. Preserve face 100% from reference image. No text. aspect ratio 9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 42 - ID 202 -->
+<div class="card">
+    <img class="card-img" src="/images/202.webp" alt="aesthetic mirror selfie scrapbook vibe" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Transform this image into a detailed aesthetic mirror selfie artwork with oft grunge+dreamy scrapbook vibe.\nKeep the subject exactly the same: same face, skin tone, expression, hair, outfit, pose, and phone.\nDarken and slightly desaturate the background to reduce brightness while keeping store details visible.\nAdd depth by applying subtle vignette and film grain to the background only.\nSurround the subject with multiple layered hand-drawn chalk doodles and scrapbook elements:</p>
+        <button class="copy-btn" data-prompt="Transform this image into a detailed aesthetic mirror selfie artwork with oft grunge+dreamy scrapbook vibe. Keep the subject exactly the same: same face, skin tone, expression, hair, outfit, pose, and phone. Darken and slightly desaturate the background to reduce brightness while keeping store details visible. Add depth by applying subtle vignette and film grain to the background only. Surround the subject with multiple layered hand-drawn chalk doodles and scrapbook elements:"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 43 - ID 203 -->
+<div class="card">
+    <img class="card-img" src="/images/165.webp" alt="holding alligator on chain in parking lot" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A realistic 8k hd photo of me from the uploaded image for face reference wearing a brown hoodie and ripped jeans holding a large alligator on a heavy metal chain leash in an underground parking lot covered with colorful graffiti walls, cinematic lighting from a single ceiling lamp above, the alligator wearing a black bandana with a skull logo, dramatic street style urban atmosphere, realistic textures, high detail, 8K, low angle shot, gritty tone. Hd clear</p>
+        <button class="copy-btn" data-prompt="A realistic 8k hd photo of me from the uploaded image for face reference wearing a brown hoodie and ripped jeans holding a large alligator on a heavy metal chain leash in an underground parking lot covered with colorful graffiti walls, cinematic lighting from a single ceiling lamp above, the alligator wearing a black bandana with a skull logo, dramatic street style urban atmosphere, realistic textures, high detail, 8K, low angle shot, gritty tone. Hd clear"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 44 - ID 204 -->
+<div class="card">
+    <img class="card-img" src="/images/226.jpg" alt="studio portrait bold red background hard light" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Ultra-realistic studio portrait of me with exact same facial and physical identity from the uploaded image against a bold solid red background, upper-torso framing. Subject facing slightly sideways with head turned left, eyes looking upward thoughtfully. Dramatic hard light casting a sharp horizontal shadow band across the middle of the face, partially illuminating the eyes while lower face remains in shadow. Soft curly medium-length hair silhouette visible against background. Dark shirt blending into shadow, moody cinematic contrast. aspect ratio 9:16</p>
+        <button class="copy-btn" data-prompt="Ultra-realistic studio portrait of me with exact same facial and physical identity from the uploaded image against a bold solid red background, upper-torso framing. Subject facing slightly sideways with head turned left, eyes looking upward thoughtfully. Dramatic hard light casting a sharp horizontal shadow band across the middle of the face, partially illuminating the eyes while lower face remains in shadow. Soft curly medium-length hair silhouette visible against background. Dark shirt blending into shadow, moody cinematic contrast. aspect ratio 9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 45 - ID 205 -->
+<div class="card">
+    <img class="card-img" src="/images/231.webp" alt="graphic novel comic book realism portrait" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Ultra-detailed digital illustration of me with exact same identity from the uploaded image wearing reflective aviator sunglasses, i dressed in a dark zip-up jacket with green shoulder accents over a deep red shirt. The perspective is slightly low-angle, giving me a heroic, cinematic presence. my expression is calm and self-assured, looking slightly upward. Art style is graphic novel / comic book realism with strong cross-hatching, inked linework, and textured brushstrokes. High contrast lighting with warm highlights on the skin and dramatic shadows. Sunglasses reflect a warm golden cityscape. Background features abstract textured color blocking with teal, orange, and red tones blended in a gritty, painterly style. Sharp details, bold outlines, dynamic shading, rich textures, dramatic lighting, 4K resolution, highly detailed illustration, modern comic art style, cinematic color grading. aspect ratio 9:16</p>
+        <button class="copy-btn" data-prompt="Ultra-detailed digital illustration of me with exact same identity from the uploaded image wearing reflective aviator sunglasses, i dressed in a dark zip-up jacket with green shoulder accents over a deep red shirt. The perspective is slightly low-angle, giving me a heroic, cinematic presence. my expression is calm and self-assured, looking slightly upward. Art style is graphic novel / comic book realism with strong cross-hatching, inked linework, and textured brushstrokes. High contrast lighting with warm highlights on the skin and dramatic shadows. Sunglasses reflect a warm golden cityscape. Background features abstract textured color blocking with teal, orange, and red tones blended in a gritty, painterly style. Sharp details, bold outlines, dynamic shading, rich textures, dramatic lighting, 4K resolution, highly detailed illustration, modern comic art style, cinematic color grading. aspect ratio 9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 46 - ID 206 -->
+<div class="card">
+    <img class="card-img" src="/images/211.webp" alt="top down cinematic portrait teal satin shirt" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Ultra-realistic cinematic portrait of me with exact same facial and physical features from the uploaded image standing under a spotlight in a minimalist studio, captured from a high top-down angle. i tilts his head slightly with a calm and curious expression. i wears a teal-blue satin shirt over a white undershirt, black trousers, and white-blue sneakers. Soft diffused lighting highlights my face while the background fades into deep black shadows, creating a dramatic gradient floor-to-dark contrast The style is clean, modern, and fashion editorial — smooth tones, high contrast, and professional studio lighting. aspect ratio 9:16</p>
+        <button class="copy-btn" data-prompt="Ultra-realistic cinematic portrait of me with exact same facial and physical features from the uploaded image standing under a spotlight in a minimalist studio, captured from a high top-down angle. i tilts his head slightly with a calm and curious expression. i wears a teal-blue satin shirt over a white undershirt, black trousers, and white-blue sneakers. Soft diffused lighting highlights my face while the background fades into deep black shadows, creating a dramatic gradient floor-to-dark contrast The style is clean, modern, and fashion editorial — smooth tones, high contrast, and professional studio lighting. aspect ratio 9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 47 - ID 207 -->
+<div class="card">
+    <img class="card-img" src="/images/304.webp" alt="high angle streetwear skateboard urban setting" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A high-angle shot depicts me with exact same facial and physical identity from the uploaded image in an outdoor urban setting, standing on a brick pavement. i wearing a cool streetwear outfit holding a skateboard in one hand resting on road, exuding a polished appearance. my expression is focused, as i gazes directly at the camera. Around me, there is a blur of motion created by several young people passing by, wearing casual athletic clothing. The ground is comprised of patterned stone tiles with a metal manhole cover visible to the lower right. The lighting is natural, coming from overhead, casting soft shadows and creating an even illumination across the scene. The color palette consists of earth tones and muted grays, with splashes of color from the moving figures. The use of a high shutter speed captures both static and dynamic elements, highlighting the sense of busyness and isolation within activity. The medium is high-resolution digital, producing a moment of introspection amidst the bustle. ar - 9:16\nHEX VALUES: [\"#0d1110\", \"#52594e\", \"#464e43\", \"#384239\", \"#2d342b\", \"#616558\", \"#1e251d\", \"#727365\", \"#838172\"]</p>
+        <button class="copy-btn" data-prompt="A high-angle shot depicts me with exact same facial and physical identity from the uploaded image in an outdoor urban setting, standing on a brick pavement. i wearing a cool streetwear outfit holding a skateboard in one hand resting on road, exuding a polished appearance. my expression is focused, as i gazes directly at the camera. Around me, there is a blur of motion created by several young people passing by, wearing casual athletic clothing. The ground is comprised of patterned stone tiles with a metal manhole cover visible to the lower right. The lighting is natural, coming from overhead, casting soft shadows and creating an even illumination across the scene. The color palette consists of earth tones and muted grays, with splashes of color from the moving figures. The use of a high shutter speed captures both static and dynamic elements, highlighting the sense of busyness and isolation within activity. The medium is high-resolution digital, producing a moment of introspection amidst the bustle. ar - 9:16 HEX VALUES: [\"#0d1110\", \"#52594e\", \"#464e43\", \"#384239\", \"#2d342b\", \"#616558\", \"#1e251d\", \"#727365\", \"#838172\"]"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 48 - ID 208 -->
+<div class="card">
+    <img class="card-img" src="/images/219.jpg" alt="high fashion editorial portrait triptych" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A high-fashion editorial portrait triptych, composed of three horizontal frames stacked vertically, featuring the same person from the provided reference image (my face) with identical facial structure, jawline, nose shape, eye spacing, lips, skin texture, and overall identity fully preserved.\nNo facial alteration, no face swapping, no beautification beyond natural realism.\nThe subject has my exact facial features, natural skin tone, authentic expressions, and realistic pores and details maintaining my true identity.\nHair is styled black hair, neatly swept back (can be slightly textured), matching my natural hairline and volume.\nOutfit: white dress shirt layered with a tailored black vest, clean and sharp, fitted silhouette.\nAccessories: statement ring on the finger, subtle line-art tattoo on the hand, no additional jewelry.\nTop frame: close-up portrait with my hand near my mouth, direct eye contact, composed and confident expression.\nMiddle frame: head tilted sideways hand resting across the forehead, elegant and editorial pose.\nBottom frame: intimate close-up with the ring near my lips, eyes cast downward, introspective mood.\nLighting: soft directional studio lighting, neutral-to-cool tones, smooth gradients, controlled shadows sculpting my face without distortion.\nBackground: plain muted grey studio backdrop, clean and minimal.\nStyle: luxury fashion magazine editorial, cinematic realism, shallow depth of field, ultra-detailed, professional photography Identity Lock / Face Accuracy Keywords\nuse my reference image, same person, same face, facial identity preserved, no face change, no new person, no gender change, realistic likeness, accurate facial proportions\nNegative Prompt\ndifferent face, altered identity, beautified face, face swap, CGI look, anime, soft doll skin, smiling, exaggerated jaw, sharp cheekbones, text, watermark, logo, extra accessories. aspect ratio 9:16</p>
+        <button class="copy-btn" data-prompt="A high-fashion editorial portrait triptych, composed of three horizontal frames stacked vertically, featuring the same person from the provided reference image (my face) with identical facial structure, jawline, nose shape, eye spacing, lips, skin texture, and overall identity fully preserved. No facial alteration, no face swapping, no beautification beyond natural realism. The subject has my exact facial features, natural skin tone, authentic expressions, and realistic pores and details maintaining my true identity. Hair is styled black hair, neatly swept back (can be slightly textured), matching my natural hairline and volume. Outfit: white dress shirt layered with a tailored black vest, clean and sharp, fitted silhouette. Accessories: statement ring on the finger, subtle line-art tattoo on the hand, no additional jewelry. Top frame: close-up portrait with my hand near my mouth, direct eye contact, composed and confident expression. Middle frame: head tilted sideways hand resting across the forehead, elegant and editorial pose. Bottom frame: intimate close-up with the ring near my lips, eyes cast downward, introspective mood. Lighting: soft directional studio lighting, neutral-to-cool tones, smooth gradients, controlled shadows sculpting my face without distortion. Background: plain muted grey studio backdrop, clean and minimal. Style: luxury fashion magazine editorial, cinematic realism, shallow depth of field, ultra-detailed, professional photography Identity Lock / Face Accuracy Keywords use my reference image, same person, same face, facial identity preserved, no face change, no new person, no gender change, realistic likeness, accurate facial proportions Negative Prompt different face, altered identity, beautified face, face swap, CGI look, anime, soft doll skin, smiling, exaggerated jaw, sharp cheekbones, text, watermark, logo, extra accessories. aspect ratio 9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 49 - ID 209 -->
+<div class="card">
+    <img class="card-img" src="/images/311.jpg" alt="90s mercedes benz silver coupe editorial" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">90s Mercedes-Benz coupe silver metallic, me with exact same facial and physical identity from the uploaded image leaning casually against car, serious expression, , linen cream button-up shirt, chocolate brown relaxed trousers, gold chains, black boots, brutalist concrete background, quiet luxury meets streetwear, editorial menswear fashion shot, soft diffused light, film photography, ar-9:16</p>
+        <button class="copy-btn" data-prompt="90s Mercedes-Benz coupe silver metallic, me with exact same facial and physical identity from the uploaded image leaning casually against car, serious expression, , linen cream button-up shirt, chocolate brown relaxed trousers, gold chains, black boots, brutalist concrete background, quiet luxury meets streetwear, editorial menswear fashion shot, soft diffused light, film photography, ar-9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 50 - ID 210 -->
+<div class="card">
+    <img class="card-img" src="/images/273.jpg" alt="photorealistic living room evening warm portrait" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">photorealistic portrait scene, living room, evening warm ambient light, cream-colored walls, large white couch with loose linen covers, three young people (20s) sitting on sofa in background talking quietly and watching large TV with bright food/gaming thumbnails, shallow depth of field, sharp focus on foreground person: me with exact same facial and physical identity from the uploaded image , sitting cross-legged on floor, barefoot, relaxed peaceful expression with eyes gently closed, wearing big black over-ear headphones, reading an old paperback novel, black graphic t-shirt, blue jeans, colorful Lego toys and CDs scattered on carpet around me, very natural pose, documentary photography style, soft bokeh, realistic skin texture, detailed fabric, cinematic color grading, shot on Canon EOS R5, 50mm lens, f/1.8, ar-9:16</p>
+        <button class="copy-btn" data-prompt="photorealistic portrait scene, living room, evening warm ambient light, cream-colored walls, large white couch with loose linen covers, three young people (20s) sitting on sofa in background talking quietly and watching large TV with bright food/gaming thumbnails, shallow depth of field, sharp focus on foreground person: me with exact same facial and physical identity from the uploaded image , sitting cross-legged on floor, barefoot, relaxed peaceful expression with eyes gently closed, wearing big black over-ear headphones, reading an old paperback novel, black graphic t-shirt, blue jeans, colorful Lego toys and CDs scattered on carpet around me, very natural pose, documentary photography style, soft bokeh, realistic skin texture, detailed fabric, cinematic color grading, shot on Canon EOS R5, 50mm lens, f/1.8, ar-9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 51 - ID 211 -->
+<div class="card">
+    <img class="card-img" src="/images/315.jpg" alt="city cafe thoughtful window portrait" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A raw, highly detailed medium portrait shot of me with exact same facial and physical identity from the uploaded image in a busy city cafe. POSE: Sitting by a large window, looking outside thoughtfully, hand on chin. Reflections of the city street and people walking by are visible on the glass. CLOTHING: Smart casual. BACKGROUND: Blurred cafe interior and busy urban street outside. VIBE: Thinking big, transition point. Cinematic street photography. ar 9:16</p>
+        <button class="copy-btn" data-prompt="A raw, highly detailed medium portrait shot of me with exact same facial and physical identity from the uploaded image in a busy city cafe. POSE: Sitting by a large window, looking outside thoughtfully, hand on chin. Reflections of the city street and people walking by are visible on the glass. CLOTHING: Smart casual. BACKGROUND: Blurred cafe interior and busy urban street outside. VIBE: Thinking big, transition point. Cinematic street photography. ar 9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 52 - ID 212 -->
+<div class="card">
+    <img class="card-img" src="/images/318.jpg" alt="cinematic double exposure apartment building" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A cinematic double exposure portrait the soft, contemplative face of me with exact same facial and physical identity from the uploaded image layered seamlessly over a high-rise apartment building at night. my eye aligns with one lit window, creating a surreal point of convergence. Shot with a 50mm lens, perspective remains neutral and human, while composition merges intimacy with structural grid. The frame balances facial softness against rigid architecture, allowing emotional depth to unfold through symmetry and glow. Light spills from each window with a sodium-vapor warmth an amber haze filling the frame with urban melancholy. Diffuse glow wraps around building edges, softening hard lines into memory. Environmental light echoes off glass panes, while shadows pool subtly along facial contours. The atmosphere hums with cinematic quiet, a moment held between two realities. Surface realism builds through analog imperfections: microfilm grain dances across shadow, soft dust haze veils sharpness, and faint lens bloom blurs the brightest points. The image feels tactile, lived-in, haunted by its own light. The urban structure breathes gently through her expression, forming an emotional map of solitude. Skin realism is present but softened by light: subsurface scattering adds glow beneath the cheek and eyelid, while lip contour dissolves into skin with natural tenderness. No harsh lines only gradients of feeling. Final image feels suspended not a photo, not a memory, but a layered architectural emotion. Genesis Prompt + Styling Overlay → Use Genesis Prompt above → Add overlay: \"Light spills from the edge orange bloom bleeds into frame with overexposed softness. It glows with analog memory. --ar 9:16 --raw\"</p>
+        <button class="copy-btn" data-prompt="A cinematic double exposure portrait the soft, contemplative face of me with exact same facial and physical identity from the uploaded image layered seamlessly over a high-rise apartment building at night. my eye aligns with one lit window, creating a surreal point of convergence. Shot with a 50mm lens, perspective remains neutral and human, while composition merges intimacy with structural grid. The frame balances facial softness against rigid architecture, allowing emotional depth to unfold through symmetry and glow. Light spills from each window with a sodium-vapor warmth an amber haze filling the frame with urban melancholy. Diffuse glow wraps around building edges, softening hard lines into memory. Environmental light echoes off glass panes, while shadows pool subtly along facial contours. The atmosphere hums with cinematic quiet, a moment held between two realities. Surface realism builds through analog imperfections: microfilm grain dances across shadow, soft dust haze veils sharpness, and faint lens bloom blurs the brightest points. The image feels tactile, lived-in, haunted by its own light. The urban structure breathes gently through her expression, forming an emotional map of solitude. Skin realism is present but softened by light: subsurface scattering adds glow beneath the cheek and eyelid, while lip contour dissolves into skin with natural tenderness. No harsh lines only gradients of feeling. Final image feels suspended not a photo, not a memory, but a layered architectural emotion. Genesis Prompt + Styling Overlay → Use Genesis Prompt above → Add overlay: \"Light spills from the edge orange bloom bleeds into frame with overexposed softness. It glows with analog memory. --ar 9:16 --raw\""><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 53 - ID 213 -->
+<div class="card">
+    <img class="card-img" src="/images/271.jpg" alt="cinematic editorial chiaroscuro portrait" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">cinematic editorial portrait, of me with exact same facial and physical identity from the uplaoded image , black turtleneck, subtle gold hoop earrings, smooth luminous skin, natural glossy lips, intense calm gaze into camera, strong warm window light from the side, sharp light and deep shadow contrast, chiaroscuro lighting, minimalistic indoor background, clean wall, soft falloff into darkness, realistic skin texture, delicate highlights on cheekbones ar-9:16</p>
+        <button class="copy-btn" data-prompt="cinematic editorial portrait, of me with exact same facial and physical identity from the uplaoded image , black turtleneck, subtle gold hoop earrings, smooth luminous skin, natural glossy lips, intense calm gaze into camera, strong warm window light from the side, sharp light and deep shadow contrast, chiaroscuro lighting, minimalistic indoor background, clean wall, soft falloff into darkness, realistic skin texture, delicate highlights on cheekbones ar-9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 54 - ID 214 -->
+<div class="card">
+    <img class="card-img" src="/images/316.jpg" alt="cinematic portrait golden hour field mist" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A CINEMATIC PORTRAIT OF ME WITH EXACT SAME FACIAL AND PHYSICAL IDENTITY FROM THE UPLOADED IMAGE , STANDING IN A FIELD DURING GOLDEN HOUR WITH DRAMATIC COLORED LIGHTING. THE ATMOSPHERE IS MOODY WITH MIST OR LIGHT FOG, SOFT GRADIENTS OF DEEP BLUE AND WARM ORANGE-RED LIGHT FILLING THE SCENE. A TREE SILHOUETTE IN THE BACKGROUND, DREAMY TONES, SOFT SHADOWS, AND NATURAL FILM-LIKE GRAIN. SIDE PROFILE LIGHTING, EMPHASIZING CONTRAST AND DEPTH. AR-9:16</p>
+        <button class="copy-btn" data-prompt="A CINEMATIC PORTRAIT OF ME WITH EXACT SAME FACIAL AND PHYSICAL IDENTITY FROM THE UPLOADED IMAGE , STANDING IN A FIELD DURING GOLDEN HOUR WITH DRAMATIC COLORED LIGHTING. THE ATMOSPHERE IS MOODY WITH MIST OR LIGHT FOG, SOFT GRADIENTS OF DEEP BLUE AND WARM ORANGE-RED LIGHT FILLING THE SCENE. A TREE SILHOUETTE IN THE BACKGROUND, DREAMY TONES, SOFT SHADOWS, AND NATURAL FILM-LIKE GRAIN. SIDE PROFILE LIGHTING, EMPHASIZING CONTRAST AND DEPTH. AR-9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 55 - ID 215 -->
+<div class="card">
+    <img class="card-img" src="/images/278.webp" alt="cinematic hybrid real life anime group scene" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Create a cinematic hybrid real-life + anime group scene from a high top-down camera angle, matching the same road background, double yellow lines, framing, and composition as the reference image. The characters stand together in a tight formation, looking upward toward the camera with confident, serious expressions. Keep the same vertical perspective, spacing, and street texture. Main Human Subject (Center). Place me in the middle of the group as a real-world human boy using my face reference , ar-9:16</p>
+        <button class="copy-btn" data-prompt="Create a cinematic hybrid real-life + anime group scene from a high top-down camera angle, matching the same road background, double yellow lines, framing, and composition as the reference image. The characters stand together in a tight formation, looking upward toward the camera with confident, serious expressions. Keep the same vertical perspective, spacing, and street texture. Main Human Subject (Center). Place me in the middle of the group as a real-world human boy using my face reference , ar-9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 56 - ID 216 -->
+<div class="card">
+    <img class="card-img" src="/images/277.jpg" alt="magazine cover depth masking typography" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Subject: me with exact same facial and physical identity from the uploaded image . i has a serious, intense expression and is looking off to the side. i wearing a fitted black button-down shirt with the sleeves rolled up to the elbows and light cream or white trousers. i has a black wristband on one wrist.\n\n> Background & Typography: A solid, textured deep maroon or dark red background. Behind the subject are massive, oversized, bold sans-serif letters reading \"RD in bright yellow.\nVisual Style & Effects: Magazine cover aesthetic with a \"depth-masking\" typography effect. The subject stands between the background and the text layers. The yellow letters are solid when behind the subject, but where the letters overlap the subject's body (specifically the shirt), they turn into thin yellow outlines (stroke only), making it look like the man is stepping through the text.\nLighting & Tone: High-contrast cinematic lighting with warm tones. Sharp focus on the subject, slight film grain texture, poster art style. ar-9:16</p>
+        <button class="copy-btn" data-prompt="Subject: me with exact same facial and physical identity from the uploaded image . i has a serious, intense expression and is looking off to the side. i wearing a fitted black button-down shirt with the sleeves rolled up to the elbows and light cream or white trousers. i has a black wristband on one wrist. Background & Typography: A solid, textured deep maroon or dark red background. Behind the subject are massive, oversized, bold sans-serif letters reading RD in bright yellow. Visual Style & Effects: Magazine cover aesthetic with a depth-masking typography effect. The subject stands between the background and the text layers. The yellow letters are solid when behind the subject, but where the letters overlap the subject's body (specifically the shirt), they turn into thin yellow outlines (stroke only), making it look like the man is stepping through the text. Lighting & Tone: High-contrast cinematic lighting with warm tones. Sharp focus on the subject, slight film grain texture, poster art style. ar-9:16"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 57 - ID 217 -->
+<div class="card">
+    <img class="card-img" src="/images/348.jpg" alt="isolated sharp subject motion blur crowd" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">Ultra-realistic cinematic portrait of me with exact same facial and physical identity from the uploaded image standing still while people move quickly around me, creating strong motion blur on both sides. i looks directly at the camera with a calm, slightly melancholic expression. Pale natural skin, . Wearing a sleek black turtleneck outfit with a minimalist aesthetic. The subject is perfectly sharp while the surrounding figures are blurred in motion, creating a sense of isolation in a busy environment. Soft diffused studio lighting, muted grey background, shallow depth of field, dreamy atmosphere, editorial fashion photography, 85mm lens, f1.4, soft film grain, high detail, cinematic composition. ar 4:5</p>
+        <button class="copy-btn" data-prompt="Ultra-realistic cinematic portrait of me with exact same facial and physical identity from the uploaded image standing still while people move quickly around me, creating strong motion blur on both sides. i looks directly at the camera with a calm, slightly melancholic expression. Pale natural skin, . Wearing a sleek black turtleneck outfit with a minimalist aesthetic. The subject is perfectly sharp while the surrounding figures are blurred in motion, creating a sense of isolation in a busy environment. Soft diffused studio lighting, muted grey background, shallow depth of field, dreamy atmosphere, editorial fashion photography, 85mm lens, f1.4, soft film grain, high detail, cinematic composition. ar 4:5"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 58 - ID 218 -->
+<div class="card">
+    <img class="card-img" src="/images/319.jpg" alt="cinematic night portrait inside car windshield" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A cinematic night portrait of me with exact same facial and physical identity from the uploaded image inside a car, viewed through the front windshield. my gaze cuts sharply through the glass piercing, focused, unresolved. Foreground reflections blur across the surface like smears of neon and motion. The camera captures him dead-center, steering wheel framing the lower third, face illuminated by ambient orange city glow. Shot with a 100mm lens from low exterior angle compression isolates the subject, with tight depth framing. The windshield adds optical chaos: ghosted highlights, distortion, and flare stack across the lower frame. The blue tint from outside contrasts the orange interior bounce, forming a split-color palette that heightens emotional pressure. Lighting is entirely diegetic orange sodium reflections from street signage cast diagonals across the cabin. A faint cyan ambient tone seeps in from the exterior separating subject from environment. The driver's face is part-shadowed, part-sculpted by bouncing light, while the rest of the scene dissolves into color planes and blur. Skin realism is grounded but intentionally masked by optics. Light bloom softens forehead and nose bridge, while subtle pore texture remains visible beneath scattered reflections. Eye catchlight shimmers faintly. Glass layers, smudges, and reflection bleed filter clarity into cinematic abstraction. Atmosphere is saturated with silence and withheld action tension hovers just before movement. A moment held like breath, framed in glass, color, and intent. --ar 4:5 --raw</p>
+        <button class="copy-btn" data-prompt="A cinematic night portrait of me with exact same facial and physical identity from the uploaded image inside a car, viewed through the front windshield. my gaze cuts sharply through the glass piercing, focused, unresolved. Foreground reflections blur across the surface like smears of neon and motion. The camera captures him dead-center, steering wheel framing the lower third, face illuminated by ambient orange city glow. Shot with a 100mm lens from low exterior angle compression isolates the subject, with tight depth framing. The windshield adds optical chaos: ghosted highlights, distortion, and flare stack across the lower frame. The blue tint from outside contrasts the orange interior bounce, forming a split-color palette that heightens emotional pressure. Lighting is entirely diegetic orange sodium reflections from street signage cast diagonals across the cabin. A faint cyan ambient tone seeps in from the exterior separating subject from environment. The driver's face is part-shadowed, part-sculpted by bouncing light, while the rest of the scene dissolves into color planes and blur. Skin realism is grounded but intentionally masked by optics. Light bloom softens forehead and nose bridge, while subtle pore texture remains visible beneath scattered reflections. Eye catchlight shimmers faintly. Glass layers, smudges, and reflection bleed filter clarity into cinematic abstraction. Atmosphere is saturated with silence and withheld action tension hovers just before movement. A moment held like breath, framed in glass, color, and intent. --ar 4:5 --raw"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 59 - ID 219 -->
+<div class="card">
+    <img class="card-img" src="/images/355.webp" alt="movie poster joker reflection puddle" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A high-resolution, photorealistic 9:16 vertical movie poster with a distinct split-composition using a large central water puddle. The upper frame shows me with exact same facial and physical identity from the uploaded image  walking towards the viewer in a narrow, old European city cobblestone alleyway on a cloudy day. i wears a custom outfit of vintage layered casual style: a worn denim jacket, a layered textured sweater, dark trousers, and carries a simple canvas tote bag (colors are AI-selected to be muted and varied). The lower frame is a perfect, crystal-clear reflection in the large puddle on the ground. This reflection shows the identical alleyway, but the figure within it is transformed in pose and identity. The face in the reflection has the user's face with full, precise, iconic Joker makeup (white base, blue diamond eyes, red smile). His pose is dramatically different: he is striking a flamboyant, arrogant, dancing 'strut' pose with a wide, confident, mad grin. He is wearing the exact, iconic Joker suit (vibrant red jacket, yellow vest, green patterned shirt), frozen in a moment of theatrical madness. Text at the top center: 'ARIE IDUNK' above the large, weathered title 'JOKER' and the tagline 'PUT ON A HAPPY FACE'. The DC logo and an 'MARCH 16' release date are also rendered clearly. The lighting in the reflection is darker, more saturated, and dramatic compared to the reality above.</p>
+        <button class="copy-btn" data-prompt="A high-resolution, photorealistic 9:16 vertical movie poster with a distinct split-composition using a large central water puddle. The upper frame shows me with exact same facial and physical identity from the uploaded image  walking towards the viewer in a narrow, old European city cobblestone alleyway on a cloudy day. i wears a custom outfit of vintage layered casual style: a worn denim jacket, a layered textured sweater, dark trousers, and carries a simple canvas tote bag (colors are AI-selected to be muted and varied). The lower frame is a perfect, crystal-clear reflection in the large puddle on the ground. This reflection shows the identical alleyway, but the figure within it is transformed in pose and identity. The face in the reflection has the user's face with full, precise, iconic Joker makeup (white base, blue diamond eyes, red smile). His pose is dramatically different: he is striking a flamboyant, arrogant, dancing 'strut' pose with a wide, confident, mad grin. He is wearing the exact, iconic Joker suit (vibrant red jacket, yellow vest, green patterned shirt), frozen in a moment of theatrical madness. Text at the top center: 'ARIE IDUNK' above the large, weathered title 'JOKER' and the tagline 'PUT ON A HAPPY FACE'. The DC logo and an 'MARCH 16' release date are also rendered clearly. The lighting in the reflection is darker, more saturated, and dramatic compared to the reality above."><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+
+<!-- Card 60 - ID 220 -->
+<div class="card">
+    <img class="card-img" src="/images/347.jpg" alt="close up high angle retro cell phone" loading="lazy">
+    <div class="card-content">
+        <p class="card-text">A close-up high-angle shot of me with exact same facial and physical identity from the uploaded image. i holds a retro cell phone to my ear with his left hand, displaying a perplexed expression. i wears oversized square red-tinted sunglasses with black frames, and my facial features include fair skin with scattered facial hair and a slightly open mouth. my outfit features a vintage-style brown, white, and blue horizontally striped polo shirt with a collar over a cream t-shirt. The setting is a plain studio background with cool grey tones and diffuse lighting, emphasizing his appearance. The color palette consists of warm browns and oranges, along with muted tones set against a pale blue backdrop. The image appears to be captured with a wide-angle lens, causing distortion, and the focus is sharply on the man's face, creating a playful and retro mood. HEX VALUES: [\"#4eOdOb\", \"#606a8b\", \"#0f0509\", \"#7689af\", \"#85170d\", \"#9ab&cf\" \"#1a2036\", \"#243455\", \"#445071\", \"#f8ded?\", \"#e7b6ab\", \"#713834\", \"#c58b83\" \"#d44926\". \"#98615d\"] ar 4:5</p>
+        <button class="copy-btn" data-prompt="A close-up high-angle shot of me with exact same facial and physical identity from the uploaded image. i holds a retro cell phone to my ear with his left hand, displaying a perplexed expression. i wears oversized square red-tinted sunglasses with black frames, and my facial features include fair skin with scattered facial hair and a slightly open mouth. my outfit features a vintage-style brown, white, and blue horizontally striped polo shirt with a collar over a cream t-shirt. The setting is a plain studio background with cool grey tones and diffuse lighting, emphasizing his appearance. The color palette consists of warm browns and oranges, along with muted tones set against a pale blue backdrop. The image appears to be captured with a wide-angle lens, causing distortion, and the focus is sharply on the man's face, creating a playful and retro mood. HEX VALUES: [\"#4eOdOb\", \"#606a8b\", \"#0f0509\", \"#7689af\", \"#85170d\", \"#9ab&cf\" \"#1a2036\", \"#243455\", \"#445071\", \"#f8ded?\", \"#e7b6ab\", \"#713834\", \"#c58b83\" \"#d44926\". \"#98615d\"] ar 4:5"><i class="fas fa-copy"></i> Copy Prompt</button>
+    </div>
+</div>
+            
+        </div>
+
+        <!-- PAGINATION - PAGES 1 TO 9 ONLY (UPDATED FOR PAGE 2) -->
+        <div class="pagination">
+            <a href="../index.html"><i class="fas fa-chevron-left"></i> Prev</a>
+            <a href="../index.html">1</a>
+            <a href="#" class="active">2</a>
+            <a href="page3.html">3</a>
+            <a href="page4.html">4</a>
+            <a href="page5.html">5</a>
+            <a href="page6.html">6</a>
+            <a href="page7.html">7</a>
+            <a href="page8.html">8</a>
+            <a href="page9.html">9</a>
+            <a href="page3.html">Next <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-site-name">Promptgalary.com</span>
+                <div class="footer-nav-links">
+                    <a href="/">Home</a>
+                    <a href="/prompts">Prompts</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/policy/">Privacy</a>
+                    <a href="/term/">Terms</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/sanvi.al.evan" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/sanvi009" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://www.tiktok.com/@brainloom.online" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/_brainloom.online/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/brainloomonline" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.youtube.com/@brainloom.online" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="footer-extra-compact">
+                    <a href="/faqs.html"><i class="far fa-folder"></i> Faq</a>
+                    <a href="/sitemap.xml"><i class="fas fa-sitemap"></i> Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCG2EZ77R6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KCG2EZ77R6');
+
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', async function() {
+                const promptText = this.getAttribute('data-prompt');
+                try {
+                    await navigator.clipboard.writeText(promptText);
+                    const originalHTML = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                    this.classList.add('copied');
+                    setTimeout(() => {
+                        this.innerHTML = originalHTML;
+                        this.classList.remove('copied');
+                    }, 2000);
+                } catch (err) { console.error('Failed to copy:', err); }
+            });
+        });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const dropdown = document.getElementById('legalDropdown');
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function(e) { e.stopPropagation(); navLinks.classList.toggle('show'); });
+        }
+        const dropBtn = document.querySelector('#legalDropdown .dropbtn');
+        if (dropBtn) {
+            dropBtn.addEventListener('click', function(e) {
+                if (window.innerWidth <= 800) { e.preventDefault(); e.stopPropagation(); dropdown.classList.toggle('active'); }
+            });
+        }
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 800) {
+                if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) { navLinks.classList.remove('show'); dropdown.classList.remove('active'); }
+            }
+        });
+        if (navLinks) navLinks.addEventListener('click', function(e) { e.stopPropagation(); });
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 800) { navLinks.classList.remove('show'); dropdown.classList.remove('active'); }
+        });
+        if (navLinks) {
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() { if (window.innerWidth <= 800) navLinks.classList.remove('show'); });
+            });
+        }
+        function adjustMobileFooter() {
+            const footerRight = document.querySelector('.footer-right');
+            if (!footerRight) return;
+            const isMobile = window.innerWidth <= 900;
+            const existingNavBlock = document.querySelector('.mobile-nav-links');
+            if (existingNavBlock) existingNavBlock.remove();
+            if (isMobile) {
+                const navLinksContainer = document.querySelector('.footer-left .footer-nav-links');
+                if (navLinksContainer) {
+                    const links = navLinksContainer.querySelectorAll('a');
+                    if (links.length) {
+                        const mobileNavBlock = document.createElement('div');
+                        mobileNavBlock.className = 'mobile-nav-links';
+                        links.forEach(link => { const clone = link.cloneNode(true); clone.removeAttribute('style'); mobileNavBlock.appendChild(clone); });
+                        footerRight.insertBefore(mobileNavBlock, footerRight.firstChild);
+                    }
+                }
+            }
+        }
+        window.addEventListener('resize', adjustMobileFooter);
+        window.addEventListener('load', adjustMobileFooter);
+        adjustMobileFooter();
+    </script>
+</body>
+</html>

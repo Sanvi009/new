@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 Surreal, Abstract Art & Psychological Horror AI Prompts | Prompt Gallery</title>
+    <meta name="description" content="Master AI generation with these 11 prompts for surreal art, abstract photography, and psychological horror. Learn how to customize lighting, textures, and moods.">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/png" href="/asset/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #fafbfd;
+            color: #1e2532;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px -6px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+            padding: 0.6rem 2.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eef0f5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo a {
+            font-weight: 630;
+            font-size: 1.55rem;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #1f2937 0%, #1e293b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo span {
+            background: linear-gradient(145deg, #2563eb, #4f7df3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.9rem;
+            line-height: 1;
+            margin-right: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .nav-links a, .dropbtn {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.96rem;
+            font-weight: 500;
+            color: #334155;
+            text-decoration: none;
+            border-radius: 60px;
+            transition: all 0.18s ease;
+            white-space: nowrap;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover, .dropdown:hover .dropbtn {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 6px 14px -8px rgba(37,99,235,0.2);
+            color: #0f172a;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-family: inherit;
+            font-size: 0.96rem;
+            font-weight: 500;
+            color: #334155;
+            padding: 0.6rem 1.2rem;
+            border: 1px solid transparent;
+        }
+
+        .dropbtn i {
+            font-size: 0.7rem;
+            color: #5f6c80;
+            transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .dropdown:hover .dropbtn i {
+            transform: rotate(180deg);
+            color: #2563eb;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            left: auto;
+            background: #ffffff;
+            min-width: 220px;
+            border-radius: 24px;
+            padding: 0.6rem 0;
+            box-shadow: 0 25px 45px -14px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.02), 0 8px 20px -12px rgba(37,99,235,0.15);
+            border: 1px solid #edeff2;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+            background: rgba(255,255,255,0.98);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.7rem 1.7rem;
+            color: #2d3a4f;
+            background: transparent;
+            white-space: nowrap;
+            font-weight: 460;
+            border-left: 3px solid transparent;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .dropdown-content a:hover {
+            background: #f6f8fc;
+            border-left-color: #2563eb;
+            color: #0f1c33;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeSlide 0.18s ease;
+        }
+
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateY(-6px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .menu-toggle {
+            display: none;
+            background: white;
+            border: 1px solid #dee3ea;
+            border-radius: 60px;
+            padding: 0.45rem 1.4rem;
+            font-size: 0.95rem;
+            font-weight: 480;
+            cursor: pointer;
+            color: #2b3b52;
+            transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .menu-toggle i {
+            margin-right: 6px;
+            color: #4a5b73;
+        }
+
+        .menu-toggle:hover {
+            background: #f9fcff;
+            border-color: #b7c3d4;
+            box-shadow: 0 6px 12px -10px #2563eb;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 1000px; /* Reduced max-width for better readability of text */
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: #ffffff;
+            padding: 3rem 2rem;
+            border-radius: 28px;
+            box-shadow: 0 4px 16px -8px rgba(0,0,0,0.04);
+            border: 1px solid #edf0f5;
+        }
+
+        .page-header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1e293b;
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
+        }
+
+        .page-header p.intro-text {
+            font-size: 1.1rem;
+            color: #475569;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            text-align: left;
+        }
+
+        .prompt-count {
+            display: inline-block;
+            background: #eef3fc;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2563eb;
+            margin-top: 1rem;
+        }
+
+        .prompt-card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 16px -8px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+            border: 1px solid #edf0f5;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .prompt-card:hover {
+            box-shadow: 0 12px 28px -14px rgba(0,0,0,0.08);
+        }
+
+        .prompt-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .image-wrapper {
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #f8fafc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e2e8f0;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .image-wrapper img:hover {
+            transform: scale(1.03);
+        }
+
+        .prompt-description {
+            font-size: 1.05rem;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+
+        /* NEW VALUE-ADD SECTION STYLE */
+        .value-add {
+            background: #f0f7ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 16px 16px 0;
+            margin-bottom: 2rem;
+            color: #1e293b;
+        }
+
+        .value-add h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1d4ed8;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .value-add p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .prompt-box {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .prompt-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .prompt-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #475569;
+            background: #e2e8f0;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+        }
+
+        .copy-btn {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #334155;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .copy-btn i {
+            color: #64748b;
+        }
+
+        .copy-btn:hover {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
+        }
+
+        .copy-btn:hover i {
+            color: white;
+        }
+
+        .copy-btn.copied {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+
+        .prompt-text {
+            font-family: 'SF Mono', 'Menlo', 'Monaco', 'Cascadia Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #0f172a;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            margin-top: 0.5rem;
+        }
+
+        .page-conclusion {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 28px;
+            box-shadow: 0 4px 16px -8px rgba(0,0,0,0.04);
+            border: 1px solid #edf0f5;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .page-conclusion h3 {
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .page-conclusion p {
+            color: #475569;
+            font-size: 1.05rem;
+        }
+
+        /* Footer Styles remain identical */
+        .toast-msg {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1e293b;
+            color: white;
+            padding: 0.6rem 1.4rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            z-index: 2000;
+            opacity: 0;
+            transition: all 0.25s ease;
+            pointer-events: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            white-space: nowrap;
+        }
+
+        .toast-msg.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .footer {
+            background: #ffffff;
+            border-top: 1px solid #edf0f5;
+            padding: 1.5rem 2rem;
+            font-size: 0.9rem;
+            color: #475569;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+
+        .footer-left, .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-site-name {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .footer-nav-links a {
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 500;
+            margin-right: 1rem;
+        }
+
+        .footer-nav-links a:hover {
+            color: #3b82f6;
+        }
+
+        .social-links a {
+            color: #64748b;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #0f172a;
+        }
+
+        @media screen and (max-width: 800px) {
+            .nav-links { display: none; }
+            .menu-toggle { display: inline-flex; }
+            .images-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.8rem; }
+            .prompt-title { font-size: 1.4rem; }
+            .prompt-card { padding: 1.5rem; }
+            .value-add { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/"><span>◈</span> promptgalary</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="menu"><i class="fas fa-bars"></i> Menu</button>
+        <div class="nav-links" id="navLinks">
+            <a href="/">Home</a>
+            <a href="/prompts">Prompts</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <div class="dropdown" id="legalDropdown">
+                <button class="dropbtn">Legal <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="/policy/">Privacy policy</a>
+                    <a href="/term/">Terms of service</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <h1>Mastering Surreal Art & Psychological Horror in AI</h1>
+            <p class="intro-text">Creating compelling dark fantasy, surrealism, and psychological horror with AI image generators (like Midjourney v6, DALL-E 3, and Stable Diffusion) requires more than just a basic concept. To get high-fidelity, editorial-quality results, you need precise terminology related to lighting, camera angles, and texturing.</p>
+            <p class="intro-text">In this curated gallery, we break down 11 powerful AI prompts. From towering smoke demons to shattered glass typography and mixed-media illusions, these prompts serve as a masterclass in prompting. Below, you'll find the exact text strings used to generate these images, alongside expert tips on how to customize parameters like "volumetric lighting" or "aspect ratios" to perfectly suit your creative vision.</p>
+            <span class="prompt-count"><i class="fas fa-magic"></i> 11 Customizable Prompts</span>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">1. Black Smoke Demon Portrait | Photorealistic Dark Fantasy</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/153.webp" alt="Black smoke demon portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/153.153.webp" alt="Black smoke demon portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">This prompt is designed to generate a photorealistic portrait of a subject with a looming supernatural entity behind them. It leverages streetwear fashion and low-key cinematic lighting to bridge the gap between modern editorial photography and dark fantasy.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p>The phrase <strong>"low-key lighting"</strong> combined with <strong>"shot on 35mm lens"</strong> forces the AI to avoid cartoonish rendering and focus on realistic photography. <strong>To customize:</strong> Try changing "black oversized hoodie" to "distressed cyberpunk trench coat," or change the demon's eye color from "glowing white" to "piercing crimson" for a more aggressive aesthetic.</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="(Subject) Photorealistic portrait of a young man, [insert celebrity lookalike or specific description if needed to aid AI], exact facial identity preserved, beard, sharp jawline. (Outfit) Wearing all-black streetwear, black oversized hoodie with minimal text, loose black wide-leg pants, dark sneakers, luxury black sunglasses.(Pose) Head raised straight, dominant stance, shoulders squared, one hand relaxed near pocket, other hand slightly clenched, facing forward. (Supernatural Element) A massive black smoke demon standing directly behind him, glowing white eyes aligned above man's head, thick realistic smoke wrapping around shoulders and arms, smoke texture ultra-realistic, no cartoon style. (Environment) Minimal indoor background, dark wall, empty space, grey concrete floor. (Lighting) Dramatic low-key lighting,soft front light on face, deep shadows, cinematic high contrast. (Tech Specs) 8k resolution, aspect ratio 3:4, shot on 35mm lens, hyper-realistic, highly detailed texture. Negative Prompt: cartoon, anime, illustration, painting, 3d render, distorted face, changing face, reshaping face, beauty filter, smile, bright background, sunlight, car, city, messy, blur, noise, watermark, text, bad hands, extra fingers."><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">(Subject) Photorealistic portrait of a young man, [insert celebrity lookalike or specific description if needed to aid AI], exact facial identity preserved, beard, sharp jawline. (Outfit) Wearing all-black streetwear, black oversized hoodie with minimal text, loose black wide-leg pants, dark sneakers, luxury black sunglasses.(Pose) Head raised straight, dominant stance, shoulders squared, one hand relaxed near pocket, other hand slightly clenched, facing forward. (Supernatural Element) A massive black smoke demon standing directly behind him, glowing white eyes aligned above man's head, thick realistic smoke wrapping around shoulders and arms, smoke texture ultra-realistic, no cartoon style. (Environment) Minimal indoor background, dark wall, empty space, grey concrete floor. (Lighting) Dramatic low-key lighting,soft front light on face, deep shadows, cinematic high contrast. (Tech Specs) 8k resolution, aspect ratio 3:4, shot on 35mm lens, hyper-realistic, highly detailed texture. Negative Prompt: cartoon, anime, illustration, painting, 3d render, distorted face, changing face, reshaping face, beauty filter, smile, bright background, sunlight, car, city, messy, blur, noise, watermark, text, bad hands, extra fingers.</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">2. Red Smoke Demon | Cinematic Editorial Photography</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/163.webp" alt="Red smoke demon portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/163.163.webp" alt="Red smoke demon portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">A vibrant, high-contrast variation of the supernatural portrait. This prompt focuses heavily on the color red, creating a striking monochromatic tension between the subject's clothing and the volumetric smoke entity behind them.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p>The term <strong>"volumetric smoke"</strong> is a 3D rendering term that tells the AI to treat the smoke as a physical object interacting with light, rather than a flat overlay. The instruction for a <strong>"glossy gold handwritten signature"</strong> adds a premium magazine finish. <strong>To customize:</strong> Adjust the aspect ratio from "9:16" to "16:9" if you want a wide, cinematic movie-poster layout instead of a mobile-friendly portrait.</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="A photorealistic 8K cinematic portrait of me with exact facial identity preserved, with exact same facial and physical features from uploaded image. i stand facing forward in a dominant, confident pose, head raised, shoulders squared, one hand relaxed near the pocket and the other slightly clenched.\nHe is dressed in all-red luxury streetwear: an oversized red hoodie with minimal text, loose red wide-leg pants, dark sneakers, and luxury black sunglasses.\nBehind him stands a massive red smoke demon, formed from ultra-realistic volumetric smoke, with glowing white eyes aligned above his head. Thick, realistic smoke wraps around my shoulders and arms, maintaining a dark, cinematic, non-cartoon look.\nThe setting is a minimal indoor environment with a dark wall, empty space, and grey concrete floor.\nLighting is dramatic low-key, with soft frontal light on the face, deep shadows, and high-contrast cinematic mood.\nShot on a 35mm lens, aspect ratio 9:16 , hyper-realistic textures and details An elegant glossy gold handwritten signature 'NK' appears in the bottom corner, premium and luxury-styled"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">A photorealistic 8K cinematic portrait of me with exact facial identity preserved, with exact same facial and physical features from uploaded image. i stand facing forward in a dominant, confident pose, head raised, shoulders squared, one hand relaxed near the pocket and the other slightly clenched.
+He is dressed in all-red luxury streetwear: an oversized red hoodie with minimal text, loose red wide-leg pants, dark sneakers, and luxury black sunglasses.
+Behind him stands a massive red smoke demon, formed from ultra-realistic volumetric smoke, with glowing white eyes aligned above his head. Thick, realistic smoke wraps around my shoulders and arms, maintaining a dark, cinematic, non-cartoon look.
+The setting is a minimal indoor environment with a dark wall, empty space, and grey concrete floor.
+Lighting is dramatic low-key, with soft frontal light on the face, deep shadows, and high-contrast cinematic mood.
+Shot on a 35mm lens, aspect ratio 9:16 , hyper-realistic textures and details An elegant glossy gold handwritten signature "NK" appears in the bottom corner, premium and luxury-styled</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">3. Dual Personality Mirror | Psychological Horror Scene</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/197.jpg" alt="Mirror horror scene reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/197.197.webp" alt="Mirror horror scene reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">This prompt generates a classic trope of psychological horror: the untrustworthy reflection. It portrays a calm subject in the foreground while their mirror reflection acts out a terrified or aggressive alternate personality.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p><strong>"Teal dark tones"</strong> and <strong>"moody lighting"</strong> invoke the classic color grading used in modern horror films (like those by James Wan or A24). <strong>To customize:</strong> Change the reflection's action. Instead of "screaming and pressing hands on glass," try "smiling sinisterly with glowing eyes while the real subject weeps."</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="A dark psychological horror scene, same with exact same facial and physical appearance from the uploaded image in a black hoodie standing sadly in a dim room, head down. Behind me, a mirror shows his terrifying reflection screaming and pressing hands on the glass. Foggy atmosphere, cinematic moody lighting, teal dark tones, ultra-realistic, dramatic shadows, 8K cinematic look. aspect ratio 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">A dark psychological horror scene, same with exact same facial and physical appearance from the uploaded image in a black hoodie standing sadly in a dim room, head down. Behind me, a mirror shows his terrifying reflection screaming and pressing hands on the glass. Foggy atmosphere, cinematic moody lighting, teal dark tones, ultra-realistic, dramatic shadows, 8K cinematic look. aspect ratio 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">4. Shattered Glass Refraction | High-Fashion Editorial</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/221.jpg" alt="Shattered glass portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/221.221.jpg" alt="Shattered glass portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">A highly complex visual concept that asks the AI to understand physics and optics. The prompt places the subject behind an array of exploding glass shards, instructing the AI to refract the subject's facial features through the floating glass.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p>Phrases like <strong>"realistic refraction," "light bending,"</strong> and <strong>"depth variation"</strong> are vital here. Without them, the AI will just paint flat white polygons over the face. <strong>To customize:</strong> Alter the "clean deep solid red background" to "neon-lit rainy cyberpunk street" to change the environmental reflections captured inside the glass shards.</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="Transform the reference photo into a high-end cinematic portrait with a shattered glass foreground. Preserve exactly the original facial features and hairstyle. The subject must remain the same person as the reference image, preserving facial structure, skin tone, and identity. The composition should be a close-up camera shot from above (top-down angle), tightly framed around the subject's face and upper body. Background should be clean and minimal, preferably a deep solid red color that contrasts with black clothing and skin tones. Realistic shattered glass fragments should be suspended in mid-air around the border of the composition. Each glass shard must reflect and refract fragments of the original reference photo itself.. portions of the subject's face, eyes, skin, clothing, and lighting. The reflections must feel optically correct: realistic refraction, mirrored angles, light bending, depth variation, and sharp glass edges. Lighting is cinematic and dramatic. Ultra-realistic skin texture, visible pores. Style: cinematic movie poster, psychological drama, 4K resolution. Aspect Ratio 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Transform the reference photo into a high-end cinematic portrait with a shattered glass foreground. Preserve exactly the original facial features and hairstyle. The subject must remain the same person as the reference image, preserving facial structure, skin tone, and identity. The composition should be a close-up camera shot from above (top-down angle), tightly framed around the subject's face and upper body. Background should be clean and minimal, preferably a deep solid red color that contrasts with black clothing and skin tones. Realistic shattered glass fragments should be suspended in mid-air around the border of the composition. Each glass shard must reflect and refract fragments of the original reference photo itself.. portions of the subject's face, eyes, skin, clothing, and lighting. The reflections must feel optically correct: realistic refraction, mirrored angles, light bending, depth variation, and sharp glass edges. Lighting is cinematic and dramatic. Ultra-realistic skin texture, visible pores. Style: cinematic movie poster, psychological drama, 4K resolution. Aspect Ratio 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">5. The Micro-Society Face | Conceptual Surreal Art</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/245.webp" alt="Face formed by people reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/245.245.webp" alt="Face formed by people reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">Inspired by Salvador Dali and double-exposure techniques, this prompt builds a macro image (a giant human face) out of micro elements (thousands of tiny people, roots, and stone). It is a perfect prompt for album covers or philosophical editorial pieces.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p><strong>"Top-down lighting casting long shadows"</strong> gives depth to the tiny figures, making them look 3D rather than like a flat texture map. <strong>To customize:</strong> Swap out "tiny people walking" with "swarms of glowing fireflies" or "thousands of clockwork gears" to completely change the metaphorical meaning of the portrait.</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="A surreal high-detail conceptual artwork of a giant human face in side profile (same face as uploaded photo) formed entirely by thousands of tiny people walking and gathering, creating the shape of the head. The face is partially dissolving into abstract organic textures and earthy materials like stone, moss, roots, and paint fragments. Minimal white background with strong contrast. Dramatic top-down lighting casting long shadows from the miniature figures. aspect ratio 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">A surreal high-detail conceptual artwork of a giant human face in side profile (same face as uploaded photo) formed entirely by thousands of tiny people walking and gathering, creating the shape of the head. The face is partially dissolving into abstract organic textures and earthy materials like stone, moss, roots, and paint fragments. Minimal white background with strong contrast. Dramatic top-down lighting casting long shadows from the miniature figures. aspect ratio 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">6. Mixed Media Illusion | Cartoon Monsters in Reality</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/171.webp" alt="Cartoon creatures restroom reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/171.171.jpg" alt="Cartoon creatures restroom reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">This prompt creates an edgy "Who Framed Roger Rabbit" effect, blending hyper-realistic, gritty urban photography (a public restroom) with flat, 2D graffiti-style cartoon monsters interacting with the subject.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p>Specifying <strong>"fluorescent ceiling lights"</strong> and <strong>"white tiled walls"</strong> creates a sterile, harsh environment that allows the vibrant "turquoise-blue" 2D monsters to pop dramatically. <strong>To customize:</strong> Change the setting to a "dimly lit subway train" and the monsters to "glowing neon-pink 8-bit ghosts" for a retro-gaming streetwear vibe.</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="Transform this image [Upload Your Image] into a 64K DSLR shot resolution of A surreal urban fashion photograph set inside a gritty public restroom with white tiled walls, gray tiled floors, and bright fluorescent ceiling lights. The scene features me exact same facial and physical features from the uploaded image standing casually between blue bathroom stall dividers. Surrounding and interacting with me are large, illustrated cartoon creatures painted in a flat, graphic style. The creatures are bright turquoise-blue with exaggerated long arms and legs. The illustrated arms appear to grab the stall edges, floor, and walls, creating a mixed-reality illusion where cartoon art and real photography merge. Graffiti scribbles and scratches appear on the blue stall doors. The lighting is harsh and realistic. Mood Keywords: Surreal urban photography, mixed media art, cartoon graffiti characters, street fashion editorial, 64K quality. Octane render & Unreal Engine 5. aspect ratio 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Transform this image [Upload Your Image] into a 64K DSLR shot resolution of A surreal urban fashion photograph set inside a gritty public restroom with white tiled walls, gray tiled floors, and bright fluorescent ceiling lights. The scene features me exact same facial and physical features from the uploaded image standing casually between blue bathroom stall dividers. Surrounding and interacting with me are large, illustrated cartoon creatures painted in a flat, graphic style. The creatures are bright turquoise-blue with exaggerated long arms and legs. The illustrated arms appear to grab the stall edges, floor, and walls, creating a mixed-reality illusion where cartoon art and real photography merge. Graffiti scribbles and scratches appear on the blue stall doors. The lighting is harsh and realistic. Mood Keywords: Surreal urban photography, mixed media art, cartoon graffiti characters, street fashion editorial, 64K quality. Octane render & Unreal Engine 5. aspect ratio 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">7. Sitting on the Clouds | Vintage Sky Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/288.jpg" alt="Cloud portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/288.288.jpg" alt="Cloud portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">Move away from dark horror into dreamy surrealism. This prompt generates a beautiful, soft-focus editorial shot of the subject comfortably seated on a literal cloud in the sky, dressed in vintage tailoring.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p>Using <strong>"golden hour light," "subtle film grain,"</strong> and <strong>"teal-warm color grading"</strong> tells the AI to process the image like a vintage analog photograph rather than crisp digital art. <strong>To customize:</strong> Switch the outfit to a "flowing silver evening gown" and the sky to a "starry midnight galaxy with glowing purple auroras."</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="Transform my photo into a surreal cinematic portrait of me sitting on thick, fluffy white clouds high above the sky, keeping my exact facial features and identity. I'm wearing a vintage-inspired brown tailored suit with a cream dress shirt, wide-leg trousers, and polished black leather shoes, seated confidently yet relaxed with legs slightly extended. Background features an endless blue sky gradient with soft golden hour light, warm cinematic shadows, gentle rim light on hair and shoulders, realistic cloud diffusion, and subtle film glow. Low-angle 35mm shot, centered composition, ultra-realistic skin texture and fabric details, wind softly moving hair, volumetric lighting, sharp 8K focus, cinematic teal-warm color grading, soft contrast, subtle film grain, luxury fashion editorial style, photorealistic, no cartoon or digital art. ar-9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Transform my photo into a surreal cinematic portrait of me sitting on thick, fluffy white clouds high above the sky, keeping my exact facial features and identity. I'm wearing a vintage-inspired brown tailored suit with a cream dress shirt, wide-leg trousers, and polished black leather shoes, seated confidently yet relaxed with legs slightly extended. Background features an endless blue sky gradient with soft golden hour light, warm cinematic shadows, gentle rim light on hair and shoulders, realistic cloud diffusion, and subtle film glow. Low-angle 35mm shot, centered composition, ultra-realistic skin texture and fabric details, wind softly moving hair, volumetric lighting, sharp 8K focus, cinematic teal-warm color grading, soft contrast, subtle film grain, luxury fashion editorial style, photorealistic, no cartoon or digital art. ar-9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">8. Balloon Caricature Art Toy | 3D Surrealism</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/91.jpeg" alt="Balloon caricature head reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/91.91.jpeg" alt="Balloon caricature head reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">A whimsical yet eerie 3D render prompt that turns a human portrait into a hyper-realistic inflated balloon. It blends the uncanny valley of human skin textures with the playful, exaggerated proportions of a vinyl collectible art toy.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p>Keywords like <strong>"Pixar-level detailing," "glossy shine,"</strong> and <strong>"sculptural polish"</strong> force the AI to abandon photography and generate a pristine 3D render. <strong>To customize:</strong> Try changing the material from "skin texture" to "clear transparent vinyl filled with water" or "holographic foil."</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="A surreal 3D render me with exact same face from the uploaded image , caricature face inflated like a balloon, hyper-realistic sculpted skin texture with glossy shine, exaggerated chubby cheeks and pouty lips, balloon knot tied at the bottom with string hanging down, comically expressive features, smooth studio lighting on neutral beige background, stylized as a collectible art toy, Pixar-level detailing with sculptural polish, uncanny but playful surrealism, cinematic DOF, ultra-detailed poster realism . aspect ratio 9:16"><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">A surreal 3D render me with exact same face from the uploaded image , caricature face inflated like a balloon, hyper-realistic sculpted skin texture with glossy shine, exaggerated chubby cheeks and pouty lips, balloon knot tied at the bottom with string hanging down, comically expressive features, smooth studio lighting on neutral beige background, stylized as a collectible art toy, Pixar-level detailing with sculptural polish, uncanny but playful surrealism, cinematic DOF, ultra-detailed poster realism . aspect ratio 9:16</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">9. Shifting Identities | Blur & Motion Portrait</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/107.jpeg" alt="Surreal motion portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/107.107.jpeg" alt="Surreal motion portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">This dynamic prompt captures a sense of speed, anxiety, or shifting personalities. By keeping the center face sharp and surrounding it with semi-transparent, blurred copies, it creates an intense, psychological thriller aesthetic.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p>Contrasting <strong>"main face sharp in the center"</strong> with <strong>"blurred, semi-transparent copies"</strong> is a classic long-exposure photography technique. <strong>To customize:</strong> Instead of side-to-side blur, ask the AI for a "circular dizzying spin blur" or change the lighting from "moody" to "strobe-light flash photography."</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="Create a surreal vertical portrait of the person (use uploaded face). Keep the main face sharp in the center. Add blurred, semi-transparent copies of the face and upper body fading out on both sides to show motion or shifting identity.\nBackground should be soft light blue or grey. Dress the person in a dark, streetwear outfit and rounnd black glasses with comma hair style. Use dramatic lighting on the face.\nMood: cinematic, moody, and mysterious. 8k resolution."><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Create a surreal vertical portrait of the person (use uploaded face). Keep the main face sharp in the center. Add blurred, semi-transparent copies of the face and upper body fading out on both sides to show motion or shifting identity.
+Background should be soft light blue or grey. Dress the person in a dark, streetwear outfit and rounnd black glasses with comma hair style. Use dramatic lighting on the face.
+Mood: cinematic, moody, and mysterious. 8k resolution.</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">10. Floral Collage | Ethereal Multi-Subject Composition</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/97.jpeg" alt="Surreal collage portrait reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/97.97.jpeg" alt="Surreal collage portrait reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">A highly intricate, elegant prompt that blends multiple versions of the same subject into a seamless, smoky collage. Combined with floral motifs and butterflies, this prompt produces imagery reminiscent of high-end perfume campaigns or royal portraits.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p>Specifying <strong>"mirrorless DSLR 85mm style"</strong> dictates a professional portrait depth-of-field, ensuring the main face stays in focus while the collage elements frame it softly. <strong>To customize:</strong> Replace the "red/black floral motifs and butterflies" with "crumpled newspaper clippings, ink splatters, and ravens" for a darker grunge look.</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="Hyperrealistic 8K UHD vertical portrait of me (same facial features as uploaded) in elegant black shirt, white coat, and white pants, looking directly at viewer. Surrounding collage of smaller versions of him in varied elegant outfits (red, white, black), posed differently and blended with red/black floral motifs, butterflies, and swirling ethereal elements on a dark smoky background.\nDramatic red and magenta lighting, mirrorless DSLR 85mm style, sharp focus with visible pores, fine wrinkles, and subtle freckles, creating a powerful, regal atmosphere."><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">Hyperrealistic 8K UHD vertical portrait of me (same facial features as uploaded) in elegant black shirt, white coat, and white pants, looking directly at viewer. Surrounding collage of smaller versions of him in varied elegant outfits (red, white, black), posed differently and blended with red/black floral motifs, butterflies, and swirling ethereal elements on a dark smoky background.
+Dramatic red and magenta lighting, mirrorless DSLR 85mm style, sharp focus with visible pores, fine wrinkles, and subtle freckles, creating a powerful, regal atmosphere.</div>
+            </div>
+        </div>
+
+        <div class="prompt-card">
+            <h2 class="prompt-title">11. Molten Polaroid | 4D Mixed-Reality Illusion</h2>
+            <div class="images-grid">
+                <div class="image-wrapper"><img src="/images/43.jpeg" alt="Lava flow polaroid reference 1" loading="lazy"></div>
+                <div class="image-wrapper"><img src="/images/43.43.jpeg" alt="Lava flow polaroid reference 2" loading="lazy"></div>
+            </div>
+            <div class="prompt-description">A mind-bending prompt where the contents of a 2D photograph spill out into the 3D world. By generating a vintage Polaroid picture of a volcano, the AI is instructed to let the molten lava break the borders of the photo and burn onto the wooden table below.</div>
+            <div class="value-add">
+                <h4><i class="fas fa-lightbulb"></i> Why this works & How to customize:</h4>
+                <p>The key instruction here is <strong>"seamlessly blending with the real world."</strong> This forces the AI to match the lighting of the glowing lava with the shadows on the wooden table. <strong>To customize:</strong> Change the Polaroid subject. Instead of a volcano, try "a Polaroid of a raging ocean storm, with actual sea water and a miniature kraken tentacle spilling out onto the desk."</p>
+            </div>
+            <div class="prompt-box">
+                <div class="prompt-header">
+                    <span class="prompt-label"><i class="fas fa-copy"></i> Copy Text</span>
+                    <button class="copy-btn" data-prompt="A hyper-realistic surreal photo of a hand holding a vintage Polaroid picture of an erupting volcano, with glowing lava and thick smoke. The lava appears to flow out of the photograph and onto the wooden table below, seamlessly blending with the real world. Highly detailed textures of molten lava, bright orange and red glowing veins, realistic smoke, dramatic lighting, and sharp focus, ultra-realistic 8K photography style."><i class="far fa-copy"></i> Copy Prompt</button>
+                </div>
+                <div class="prompt-text">A hyper-realistic surreal photo of a hand holding a vintage Polaroid picture of an erupting volcano, with glowing lava and thick smoke. The lava appears to flow out of the photograph and onto the wooden table below, seamlessly blending with the real world. Highly detailed textures of molten lava, bright orange and red glowing veins, realistic smoke, dramatic lighting, and sharp focus, ultra-realistic 8K photography style.</div>
+            </div>
+        </div>
+
+        <div class="page-conclusion">
+            <h3>Start Creating Your Masterpieces</h3>
+            <p>The beauty of AI art lies in experimentation. Take these 11 prompts as your foundation, but don't be afraid to break them apart, combine elements from different examples, and inject your own creative vocabulary. Remember, the more specific you are with your lighting, camera gear, and stylistic keywords, the more control you have over the final output. Happy generating!</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-site-name">Promptgalary.com</span>
+                <div class="footer-nav-links">
+                    <a href="/">Home</a>
+                    <a href="/prompts">Prompts</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/policy/">Privacy</a>
+                    <a href="/term/">Terms</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/sanvi.al.evan" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/sanvi009" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://www.tiktok.com/@brainloom.online" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/_brainloom.online/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/brainloomonline" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.youtube.com/@brainloom.online" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toastMsg" class="toast-msg"><i class="fas fa-check"></i> Copied to clipboard!</div>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCG2EZ77R6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KCG2EZ77R6');
+    </script>
+
+    <script>
+        (function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const dropdown = document.getElementById('legalDropdown');
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('show');
+                });
+            }
+
+            const dropBtn = document.querySelector('#legalDropdown .dropbtn');
+            if (dropBtn) {
+                dropBtn.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 800) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            }
+
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 800) {
+                    if (menuToggle && !menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                        navLinks.classList.remove('show');
+                        dropdown.classList.remove('active');
+                    }
+                }
+            });
+
+            if (navLinks) {
+                navLinks.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 800) {
+                    navLinks.classList.remove('show');
+                    dropdown.classList.remove('active');
+                }
+            });
+
+            const toast = document.getElementById('toastMsg');
+            const copyButtons = document.querySelectorAll('.copy-btn');
+
+            function showToast() {
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2000);
+            }
+
+            copyButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const promptText = this.getAttribute('data-prompt');
+                    if (promptText) {
+                        navigator.clipboard.writeText(promptText).then(() => {
+                            const originalText = this.innerHTML;
+                            this.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                            this.classList.add('copied');
+                            showToast();
+                            setTimeout(() => {
+                                this.innerHTML = originalText;
+                                this.classList.remove('copied');
+                            }, 2000);
+                        }).catch(err => {
+                            console.error('Copy failed:', err);
+                        });
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
