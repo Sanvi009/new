@@ -270,6 +270,94 @@
       background: #f5f7fa;
     }
 
+    /* Tools Dropdown */
+    .tools-dropdown {
+      position: relative;
+    }
+
+    .tools-trigger {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      font-weight: 500;
+      color: #2d4059;
+      cursor: default;
+      border-radius: 40px;
+    }
+
+    .tools-trigger i {
+      font-size: 12px;
+      color: #6b7f9a;
+      transition: transform 0.2s;
+    }
+
+    .tools-dropdown:hover .tools-trigger i {
+      transform: rotate(180deg);
+    }
+
+    .tools-dropdown:hover .tools-trigger {
+      background: #f5f7fa;
+    }
+
+    .tools-dropdown .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 260px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border: 1px solid #edf2f7;
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-5px);
+      transition: all 0.2s;
+      z-index: 1000;
+    }
+
+    .tools-dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .tools-dropdown .dropdown-menu a {
+      display: block;
+      padding: 12px 20px;
+      color: #2d4059;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .tools-dropdown .dropdown-menu a:hover {
+      background: #f8fafd;
+    }
+
+    /* NEW BADGE */
+    .new-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 30px;
+      margin-left: 8px;
+      letter-spacing: 0.3px;
+      vertical-align: middle;
+      box-shadow: 0 2px 4px rgba(249,115,22,0.3);
+    }
+
+    .tools-trigger .new-badge {
+      margin-left: 8px;
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      font-size: 0.6rem;
+      padding: 2px 7px;
+    }
+
+    /* Legal Dropdown */
     .legal-dropdown {
       position: relative;
     }
@@ -295,7 +383,7 @@
       transform: rotate(180deg);
     }
 
-    .dropdown-menu {
+    .legal-dropdown .dropdown-menu {
       position: absolute;
       top: calc(100% + 8px);
       right: 0;
@@ -318,7 +406,7 @@
       transform: translateY(0);
     }
 
-    .dropdown-menu a {
+    .legal-dropdown .dropdown-menu a {
       display: block;
       padding: 10px 20px;
       color: #2d4059;
@@ -326,7 +414,7 @@
       font-size: 0.95rem;
     }
 
-    .dropdown-menu a:hover {
+    .legal-dropdown .dropdown-menu a:hover {
       background: #f8fafd;
     }
 
@@ -341,6 +429,7 @@
       border-radius: 40px;
       cursor: pointer;
       border: 1px solid #eef2f6;
+      position: relative;
     }
 
     .mobile-btn span {
@@ -349,6 +438,23 @@
       background: #2d4059;
       margin: 3px 0;
       border-radius: 2px;
+    }
+
+    /* Mobile notification dot on menu button */
+    .mobile-btn::after {
+      content: "NEW";
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      background: #f97316;
+      color: white;
+      font-size: 0.55rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      font-family: monospace;
     }
 
     .mobile-menu {
@@ -378,17 +484,28 @@
       background: #f5f7fa;
     }
 
-    .mobile-legal {
+    .mobile-tools, .mobile-legal {
       margin-top: 8px;
     }
 
-    .mobile-legal p {
+    .mobile-tools p, .mobile-legal p {
       padding: 12px 16px 4px;
       color: #7f8fa4;
       font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.4px;
+    }
+
+    .mobile-new-badge {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      color: white;
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 30px;
+      margin-left: 10px;
+      display: inline-block;
     }
 
     /* ----- HERO SECTION (with <img> for instant loading) ----- */
@@ -927,6 +1044,12 @@
       .zigzag-content h2 {
         font-size: 1.4rem;
       }
+      .mobile-btn::after {
+        font-size: 0.5rem;
+        padding: 1px 4px;
+        top: -4px;
+        right: -6px;
+      }
     }
   </style>
 </head>
@@ -941,6 +1064,21 @@
 
       <div class="desktop-nav">
         <a href="/" class="nav-link">Home</a>
+        
+        <!-- TOOLS DROPDOWN WITH NEW BADGE -->
+        <div class="tools-dropdown">
+          <span class="nav-link tools-trigger">
+            Tools <i class="fas fa-chevron-down"></i>
+            <span class="new-badge">NEW</span>
+          </span>
+          <div class="dropdown-menu">
+            <a href="/gemini-watermark-remover.html">
+              Gemini Watermark Remover
+              <span class="new-badge" style="margin-left: 8px; font-size: 0.6rem;">✨</span>
+            </a>
+          </div>
+        </div>
+        
         <a href="/prompts" class="nav-link">Prompts</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/contact" class="nav-link">Contact</a>
@@ -966,6 +1104,13 @@
     <div class="container">
       <div class="mobile-menu" id="mobileMenu">
         <a href="/">Home</a>
+        <div class="mobile-tools">
+          <p>Tools <span class="mobile-new-badge">NEW</span></p>
+          <a href="/gemini-watermark-remover.html">
+            Gemini Watermark Remover 
+            <span class="mobile-new-badge" style="margin-left: 8px;">✨</span>
+          </a>
+        </div>
         <a href="/prompts">Prompts</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
