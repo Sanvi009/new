@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  
-
-  
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5114578174657429" crossorigin="anonymous"></script>
   <meta name="google-adsense-account" content="ca-pub-5114578174657429">
 
@@ -34,19 +30,17 @@
   <!-- PRELOAD CRITICAL ASSETS -->
   <link rel="preload" as="image" href="/images/logo1.png" fetchpriority="high">
   
-
   <!-- Preconnect to important domains -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://pagead2.googlesyndication.com">
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://brainloom.online">
+  <link rel="preconnect" href="https://promptgalary.com">
   <link rel="dns-prefetch" href="https://brainloom.online">
 
   <!-- Font Awesome 6 (deferred) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
-
-  <link rel="stylesheet" href="style.css">
 
   <script type="application/ld+json">
   {
@@ -72,7 +66,6 @@
   </script>
 
   <style>
-    /* (styles unchanged – same as original) */
     * {
       margin: 0;
       padding: 0;
@@ -326,7 +319,6 @@
       border-radius: 2px;
     }
 
-    /* Mobile notification dot on menu button */
     .mobile-btn::after {
       content: "NEW";
       position: absolute;
@@ -543,13 +535,13 @@
       margin-top: 8px;
     }
 
-    /* Cards Grid - SINGLE CONTAINER for both skeleton and cards */
+    /* Cards Grid */
     .prompts-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
       margin-top: 20px;
-      min-height: 400px; /* Reserve space to prevent CLS */
+      min-height: 400px;
     }
 
     .prompt-card {
@@ -582,7 +574,7 @@
       aspect-ratio: 1;
     }
 
-    /* Skeleton cards - same container, same styling */
+    /* Skeleton cards */
     .skeleton-card {
       background: #f0f0f0;
       border-radius: 8px;
@@ -811,22 +803,17 @@
   </style>
 </head>
 <body>
-
-  
-
-  
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container nav-container">
       <a href="/" class="logo-link">
-        <!-- Logo with fetchpriority high -->
         <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
         <span class="logo-text">Brainloom</span>
       </a>
 
       <!-- Search Bar -->
       <div class="search-container">
-        <input type="text" class="search-box" placeholder="Search by prompt key (e.g., SAE113)..." id="searchInput">
+        <input type="text" class="search-box" placeholder="Search by key (e.g., SAE113)..." id="searchInput">
         <div class="search-icon" id="searchButton">
           <i class="fas fa-search"></i>
         </div>
@@ -897,17 +884,15 @@
       <!-- Search Results Info -->
       <div id="searchInfo" class="search-info">
         <div class="search-results-text">
-          Search results for: <span class="search-query" id="searchQuery"></span>
+          Search results for key: <span class="search-query" id="searchQuery"></span>
         </div>
         <div class="clear-search" id="clearSearch">
           <i class="fas fa-times"></i> Clear search
         </div>
       </div>
-      
 
       <!-- SINGLE GRID CONTAINER for both skeleton and cards -->
       <div id="promptsGrid" class="prompts-grid">
-        <!-- Skeleton cards (will be replaced) -->
         <div class="skeleton-card"></div>
         <div class="skeleton-card"></div>
         <div class="skeleton-card"></div>
@@ -964,7 +949,7 @@
     </div>
   </footer>
 
-  <!-- OPTIMIZED SCRIPTS -->
+  <!-- SCRIPTS -->
   <script>
     // Global variables
     let allPrompts = [];
@@ -987,7 +972,7 @@
         return;
       }
       
-      // Search ONLY by key field (case-insensitive partial match)
+      // Search ONLY by key field
       const searchTermLower = searchTerm.toLowerCase();
       const results = allPrompts.filter(prompt => {
         return prompt.key && prompt.key.toLowerCase().includes(searchTermLower);
@@ -1009,7 +994,7 @@
       suggestionsContainer.innerHTML = '';
       
       if (results.length === 0) {
-        suggestionsContainer.innerHTML = '<div class="no-results">No prompts found with key: ' + searchTerm + '</div>';
+        suggestionsContainer.innerHTML = '<div class="no-results">No prompts found with key containing: "' + searchTerm + '"</div>';
         suggestionsContainer.classList.add('show');
         return;
       }
@@ -1029,7 +1014,7 @@
                loading="lazy"
                onerror="this.src='https://via.placeholder.com/40/f5f5f5/999?text=Prompt'">
           <div class="suggestion-info">
-            <div class="suggestion-title">${prompt.key} - ${title}</div>
+            <div class="suggestion-title"><strong>${prompt.key}</strong> - ${title}</div>
             <div class="suggestion-desc">${prompt.description ? prompt.description.substring(0, 80) + '...' : 'Click to view prompt'}</div>
           </div>
         `;
@@ -1074,13 +1059,9 @@
         return;
       }
 
-      // Clear container
       gridContainer.innerHTML = '';
-
-      // Setup lazy loading if not already
       setupLazyLoading();
 
-      // Determine how many to load immediately (first 15)
       const immediateCount = Math.min(15, prompts.length);
 
       prompts.forEach((prompt, index) => {
@@ -1094,17 +1075,14 @@
         img.width = 400;
         img.height = 400;
 
-        // First 15 load immediately with high priority
         if (index < immediateCount) {
           img.src = `https://promptgalary.com/images/${prompt.image}`;
           img.fetchpriority = 'high';
           img.loading = 'eager';
         } else {
-          // Remaining images lazy load
           img.dataset.src = `https://promptgalary.com/images/${prompt.image}`;
           img.loading = 'lazy';
           img.fetchpriority = 'auto';
-          // Add to observer
           imageObserver.observe(img);
         }
 
