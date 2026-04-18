@@ -34,6 +34,7 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://pagead2.googlesyndication.com">
   <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.highperformanceformat.com">
   <link rel="dns-prefetch" href="https://brainloom.online">
 
   <!-- Font Awesome 6 (deferred) -->
@@ -76,6 +77,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      padding-bottom: 90px; /* Space for sticky banner on desktop */
     }
 
     .main-wrapper {
@@ -615,6 +617,65 @@
       grid-column: 1 / -1;
     }
 
+    /* Sticky Bottom Ad Banner */
+    .sticky-bottom-ad {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      z-index: 999;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .sticky-bottom-ad .ad-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: auto;
+    }
+
+    .sticky-bottom-ad .ad-desktop-bottom,
+    .sticky-bottom-ad .ad-mobile-bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sticky-bottom-ad .ad-desktop-bottom {
+      display: block;
+    }
+
+    .sticky-bottom-ad .ad-mobile-bottom {
+      display: none;
+    }
+
+    /* Close button for sticky ad */
+    .sticky-ad-close {
+      position: absolute;
+      top: -12px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+      z-index: 1000;
+      transition: background 0.2s;
+    }
+
+    .sticky-ad-close:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+
     /* ----- FOOTER ----- */
     .footer {
       background: #0f1a26;
@@ -747,6 +808,10 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        padding-bottom: 50px; /* Space for sticky banner on mobile */
+      }
+      
       .desktop-nav {
         display: none;
       }
@@ -775,6 +840,13 @@
         flex-direction: column;
         text-align: center;
         gap: 12px;
+      }
+      
+      .sticky-bottom-ad .ad-desktop-bottom {
+        display: none;
+      }
+      .sticky-bottom-ad .ad-mobile-bottom {
+        display: block;
       }
     }
 
@@ -908,6 +980,37 @@
         <i class="fas fa-exclamation-triangle"></i> Error loading prompts. Please try again later.
       </div>
     </main>
+  </div>
+
+  <!-- STICKY BOTTOM AD BANNER -->
+  <div class="sticky-bottom-ad" id="stickyAd">
+    <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
+    <div class="ad-container">
+      <div class="ad-desktop-bottom" id="desktopStickyAd">
+        <script>
+          atOptions = {
+            'key' : 'b75dc01633443b14f77dc29cc7f9bd23',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/b75dc01633443b14f77dc29cc7f9bd23/invoke.js"></script>
+      </div>
+      <div class="ad-mobile-bottom" id="mobileStickyAd">
+        <script>
+          atOptions = {
+            'key' : '479576db2af273889a99b868e84c0ea0',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highperformanceformat.com/479576db2af273889a99b868e84c0ea0/invoke.js"></script>
+      </div>
+    </div>
   </div>
 
   <!-- FOOTER -->
@@ -1168,6 +1271,82 @@
       });
 
       loadPrompts();
+    });
+
+    // Sticky Bottom Ad functionality
+    const stickyAd = document.getElementById('stickyAd');
+    const closeStickyAd = document.getElementById('closeStickyAd');
+    let adInterval;
+    let isAdClosed = false;
+
+    // Function to refresh the ad
+    function refreshStickyAd() {
+      if (isAdClosed) return;
+
+      const desktopAd = document.getElementById('desktopStickyAd');
+      const mobileAd = document.getElementById('mobileStickyAd');
+
+      // Clear existing content
+      if (desktopAd) desktopAd.innerHTML = '';
+      if (mobileAd) mobileAd.innerHTML = '';
+
+      // Reload desktop ad
+      if (desktopAd) {
+        const desktopScript1 = document.createElement('script');
+        desktopScript1.textContent = `
+          atOptions = {
+            'key' : 'b75dc01633443b14f77dc29cc7f9bd23',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        `;
+        const desktopScript2 = document.createElement('script');
+        desktopScript2.src = 'https://www.highperformanceformat.com/b75dc01633443b14f77dc29cc7f9bd23/invoke.js';
+        desktopAd.appendChild(desktopScript1);
+        desktopAd.appendChild(desktopScript2);
+      }
+
+      // Reload mobile ad
+      if (mobileAd) {
+        const mobileScript1 = document.createElement('script');
+        mobileScript1.textContent = `
+          atOptions = {
+            'key' : '479576db2af273889a99b868e84c0ea0',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+        `;
+        const mobileScript2 = document.createElement('script');
+        mobileScript2.src = 'https://www.highperformanceformat.com/479576db2af273889a99b868e84c0ea0/invoke.js';
+        mobileAd.appendChild(mobileScript1);
+        mobileAd.appendChild(mobileScript2);
+      }
+    }
+
+    // Close ad function
+    if (closeStickyAd) {
+      closeStickyAd.addEventListener('click', function() {
+        stickyAd.style.display = 'none';
+        isAdClosed = true;
+        document.body.style.paddingBottom = '0';
+        if (adInterval) {
+          clearInterval(adInterval);
+        }
+      });
+    }
+
+    // Start refresh interval (30 seconds)
+    adInterval = setInterval(refreshStickyAd, 30000);
+
+    // Clean up interval when page unloads
+    window.addEventListener('beforeunload', function() {
+      if (adInterval) {
+        clearInterval(adInterval);
+      }
     });
   </script>
 
