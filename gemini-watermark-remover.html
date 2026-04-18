@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.highperformanceformat.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Gemini Watermark Remover Online - Free Batch Tool | Brainloom</title>
+    <meta name="description" content="The easiest way to remove the Gemini watermark online. Batch delete watermarks from 10 images at once. Free, private, and better than the Reddit alternatives.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="gemini watermark remover, remove gemini watermark, gemini watermark cleaner, nano banana watermark, google gemini watermark">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://brainloom.online/gemini-watermark-remover.html">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Gemini Watermark Remover Online - Free Batch Tool">
+    <meta property="og:description" content="Remove Google Gemini watermarks instantly. Batch process up to 10 images. 100% free and private.">
+    <meta property="og:image" content="https://brainloom.online/images/gemini-watermark-remover-og.jpg">
+    <meta property="og:url" content="https://brainloom.online/gemini-watermark-remover.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Brainloom">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gemini Watermark Remover - Free Online Tool">
+    <meta name="twitter:description" content="Batch remove Gemini watermarks. Fast, free, and private.">
+    <meta name="twitter:image" content="https://brainloom.online/images/gemini-watermark-remover-og.jpg">
+
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Gemini Watermark Remover",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Web Browser",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "description": "Free online tool to remove Google Gemini watermarks from AI-generated images.",
+          "url": "https://brainloom.online/gemini-watermark-remover.html"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How to turn off Gemini watermark?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You cannot turn off the watermark inside the Google Gemini app settings. However, you can use this free online tool to erase the Gemini watermark from your downloaded images instantly."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you remove the Google Gemini watermark for free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. This Gemini Watermark Cleaner is 100% free and allows you to batch process up to 10 images at once without any hidden fees."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does this work on mobile?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The tool works perfectly on mobile browsers (Chrome, Safari) so you can erase Gemini watermarks directly on your phone."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+
+    <style>
+        /* ----- RESET & BASE (from Brainloom template) ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f7f9fc;
+            color: #1a2c3e;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-bottom: 90px;
+        }
+
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #e9ecef; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #9aaebf; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6c7e91; }
+
+        h1, h2, h3 { font-weight: 600; letter-spacing: -0.01em; }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        /* ----- NAVBAR (exactly as template) ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(145deg, #1e3a5f, #0f2b45);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f2b45;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-link {
+            padding: 8px 18px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-radius: 40px;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover {
+            background: #f0f4f8;
+            color: #1a5cff;
+        }
+
+        .dropdown { position: relative; }
+        .dropdown-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .dropdown-trigger i { font-size: 11px; transition: transform 0.2s; }
+        .dropdown:hover .dropdown-trigger { background: #f0f4f8; }
+        .dropdown:hover .dropdown-trigger i { transform: rotate(180deg); }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+            min-width: 240px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s;
+            z-index: 200;
+        }
+
+        .legal-dropdown .dropdown-menu { left: auto; right: 0; }
+        .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-left: 3px solid transparent;
+            transition: all 0.15s;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8fafc;
+            border-left-color: #1a5cff;
+            padding-left: 24px;
+        }
+
+        .new-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 30px;
+            margin-left: 10px;
+            letter-spacing: 0.3px;
+            box-shadow: 0 2px 4px rgba(249,115,22,0.3);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: #f0f4f8;
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            border-radius: 2px;
+        }
+
+        .mobile-nav {
+            display: none;
+            width: 100%;
+            padding: 20px 0 16px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 12px;
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 12px;
+            margin: 4px 0;
+        }
+
+        .mobile-nav a:hover { background: #f0f4f8; }
+
+        .mobile-legal, .mobile-tools {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .mobile-legal p, .mobile-tools p {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #7f8c8d;
+            padding: 0 16px 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .mobile-new-badge {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 30px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        /* ----- MAIN CONTENT ----- */
+        .main {
+            flex: 1;
+            max-width: 1280px;
+            margin: 40px auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        .breadcrumb {
+            margin-bottom: 28px;
+            font-size: 0.85rem;
+            color: #5a6e7c;
+        }
+
+        .breadcrumb a {
+            color: #1a5cff;
+            text-decoration: none;
+        }
+
+        .breadcrumb span { margin: 0 8px; color: #b9c3cf; }
+
+        .hero {
+            background: white;
+            border-radius: 28px;
+            padding: 36px 40px;
+            margin-bottom: 32px;
+            border: 1px solid #e9edf2;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+            color: #0f2b45;
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .card-section {
+            background: white;
+            border-radius: 28px;
+            padding: 32px 36px;
+            margin-bottom: 32px;
+            border: 1px solid #eef2f6;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #0f2b45;
+        }
+
+        .section-title i { color: #1a5cff; font-size: 1.5rem; }
+
+        /* ----- WATERMARK TOOL STYLES (adapted to Brainloom theme) ----- */
+        .upload-placeholder {
+            border: 2px dashed #d0dae8;
+            border-radius: 20px;
+            padding: 48px 40px;
+            background: #fafbfc;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+
+        .upload-placeholder:hover {
+            border-color: #1a5cff;
+            background: #f0f5ff;
+        }
+
+        .upload-placeholder.dragover {
+            border-color: #1a5cff;
+            background: #e8f0fe;
+        }
+
+        .upload-placeholder .icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 16px;
+            color: #1a5cff;
+        }
+
+        .upload-placeholder h3 {
+            color: #1a2c3e;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .upload-placeholder p {
+            color: #5a6e7c;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .upload-placeholder .uploadMeta {
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+
+        .upload-btn {
+            margin-top: 10px;
+            padding: 14px 36px;
+            background: linear-gradient(135deg, #1a5cff, #0f47cc);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(26, 92, 255, 0.2);
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(26, 92, 255, 0.25);
+        }
+
+        .status {
+            margin-top: 16px;
+            min-height: 24px;
+            color: #5a6e7c;
+            font-size: 0.95rem;
+            white-space: pre-line;
+        }
+
+        .status.error { color: #e53e3e; }
+
+        .batchBar {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            padding: 16px 20px;
+            background: #f8fafc;
+            border-radius: 16px;
+            border: 1px solid #e9edf2;
+        }
+
+        .batchLeft {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .progressText {
+            color: #2c3e50;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .fieldLabel {
+            font-size: 0.8rem;
+            color: #5a6e7c;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .select {
+            appearance: none;
+            background: white;
+            border: 1px solid #d0dae8;
+            color: #1a2c3e;
+            border-radius: 8px;
+            padding: 8px 32px 8px 12px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-family: inherit;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235a6e7c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+        }
+
+        .formatGroup {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .formatRadios {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .formatLabel {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2c3e50;
+            cursor: pointer;
+        }
+
+        .formatLabel input {
+            width: 16px;
+            height: 16px;
+            accent-color: #1a5cff;
+            cursor: pointer;
+        }
+
+        .batchActions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+        .btn {
+            appearance: none;
+            border: 1px solid #d0dae8;
+            background: white;
+            color: #1a2c3e;
+            border-radius: 40px;
+            padding: 10px 20px;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn:hover { background: #f0f4f8; }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        .btn.primary {
+            border: none;
+            background: linear-gradient(135deg, #1a5cff, #0f47cc);
+            color: white;
+            box-shadow: 0 2px 8px rgba(26, 92, 255, 0.2);
+        }
+
+        .btn.primary:hover:not(:disabled) {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(26, 92, 255, 0.25);
+        }
+
+        .footerActions {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .thumbGrid {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 760px) {
+            .thumbGrid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .thumbCard {
+            border: 1px solid #e9edf2;
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .thumbHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 14px 18px;
+            border-bottom: 1px solid #eef2f6;
+            background: #fafbfc;
+        }
+
+        .thumbName {
+            font-weight: 600;
+            font-size: 0.9rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #1a2c3e;
+        }
+
+        .thumbStatus {
+            color: #5a6e7c;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+            padding: 4px 10px;
+            border-radius: 40px;
+            background: #eef2f6;
+        }
+
+        .thumbStatus.error {
+            color: #e53e3e;
+            background: #fee2e2;
+        }
+
+        .thumbBody {
+            padding: 18px;
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 760px) {
+            .thumbBody { grid-template-columns: 1fr 1fr; align-items: start; }
+        }
+
+        .thumbRowLabel {
+            font-size: 0.75rem;
+            color: #5a6e7c;
+            margin: 0 0 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .thumbImg {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            background: #f1f5f9;
+            border: 1px solid #e9edf2;
+        }
+
+        .thumbFooter {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding: 14px 18px;
+            border-top: 1px solid #eef2f6;
+            background: #fafbfc;
+        }
+
+        .hidden { display: none !important; }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .feature-box {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid #e9edf2;
+        }
+
+        .feature-box h3 { color: #0f2b45; margin-bottom: 10px; font-size: 1.1rem; }
+        .feature-box p { color: #5a6e7c; font-size: 0.9rem; }
+
+        .faq-list { list-style: none; }
+        .faq-list li { padding: 20px 0; border-bottom: 1px solid #eef2f6; }
+        .faq-list li:last-child { border-bottom: 0; }
+        .faq-q { font-weight: 700; margin-bottom: 8px; color: #1e3a5f; }
+        .faq-a { color: #4a627a; line-height: 1.6; }
+
+        .ad-banner {
+            margin-bottom: 32px;
+            text-align: center;
+            min-height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ad-desktop { display: block; }
+        .ad-mobile { display: none; }
+
+        /* ----- FOOTER (exactly as template) ----- */
+        .footer {
+            background: #0f1f2f;
+            color: #ccdbe9;
+            margin-top: 40px;
+            padding: 48px 0 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.7rem;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .footer-links a, .footer-social a {
+            color: #ccdbe9;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover, .footer-social a:hover { color: white; }
+
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-item a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1e3448;
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #8fa0b0;
+        }
+
+        .sticky-bottom-ad {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            z-index: 999;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .sticky-bottom-ad .ad-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: auto;
+        }
+
+        .sticky-bottom-ad .ad-desktop-bottom { display: block; }
+        .sticky-bottom-ad .ad-mobile-bottom { display: none; }
+
+        .sticky-ad-close {
+            position: absolute;
+            top: -12px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2rem; }
+            .card-section { padding: 28px; }
+            .footer-grid { gap: 30px; }
+        }
+
+        @media (max-width: 768px) {
+            body { padding-bottom: 50px; }
+            .container, .main { padding: 0 20px; }
+            .nav-links { display: none; }
+            .menu-toggle { display: flex; }
+            .nav-inner { flex-wrap: wrap; }
+            .mobile-nav.open { display: block; }
+            .hero { padding: 28px 24px; }
+            .hero h1 { font-size: 1.7rem; }
+            .section-title { font-size: 1.4rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+            .footer-links { justify-items: center; }
+            .social-list { align-items: center; }
+            .ad-desktop { display: none; }
+            .ad-mobile { display: block; }
+            .ad-banner { min-height: 50px; }
+            .sticky-bottom-ad .ad-desktop-bottom { display: none; }
+            .sticky-bottom-ad .ad-mobile-bottom { display: block; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.5rem; }
+            .card-section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR (exactly as template) ===== -->
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-inner">
+            <a href="/" class="logo">
+                <div class="logo-icon">B</div>
+                <span class="logo-text">Brainloom</span>
+            </a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        Tools <i class="fas fa-chevron-down"></i>
+                        <span class="new-badge">NEW</span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="/gemini-watermark-remover.html">
+                            Gemini Watermark Remover
+                            <span class="new-badge" style="margin-left: 8px; font-size: 0.6rem;">✨</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="/prompts" class="nav-link">Prompts</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="dropdown legal-dropdown">
+                    <div class="dropdown-trigger">Legal <i class="fas fa-chevron-down"></i></div>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="mobile-nav" id="mobileNav">
+                <a href="/">Home</a>
+                <div class="mobile-tools">
+                    <p>Tools <span class="mobile-new-badge">NEW</span></p>
+                    <a href="/gemini-watermark-remover.html">
+                        Gemini Watermark Remover 
+                        <span class="mobile-new-badge" style="margin-left: 8px;">✨</span>
+                    </a>
+                </div>
+                <a href="/prompts">Prompts</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="main">
+    <div class="breadcrumb">
+        <a href="/">Home</a> <span>/</span> <span>Gemini Watermark Remover</span>
+    </div>
+
+    <div class="hero">
+        <h1>Gemini Watermark Remover Online</h1>
+        <p class="hero-description">
+            The <strong>easiest way to remove Gemini watermarks</strong>. 
+            Batch erase logos from <strong>Nano Banana</strong> images instantly. 
+            100% free and private — everything happens in your browser.
+        </p>
+    </div>
+
+    <!-- AD BANNER 1 -->
+    <div class="ad-banner">
+        <div class="ad-desktop">
+            <script>
+                atOptions = {
+                    'key' : '62ba6b2106fe2abcd6159c5b83039bcc',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/62ba6b2106fe2abcd6159c5b83039bcc/invoke.js"></script>
+        </div>
+        <div class="ad-mobile">
+            <script>
+                atOptions = {
+                    'key' : 'cf1d3a2308affc58f4f678f4a3c3241e',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/cf1d3a2308affc58f4f678f4a3c3241e/invoke.js"></script>
+        </div>
+    </div>
+
+    <!-- ===== WATERMARK TOOL SECTION ===== -->
+    <div class="card-section">
+        <div id="tool-container">
+            <!-- Upload Area -->
+            <div class="upload-placeholder" id="uploadArea" role="button" tabindex="0">
+                <input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" multiple hidden>
+                <span class="icon"><i class="fas fa-cloud-upload-alt"></i></span>
+                <div class="uploadInner">
+                    <h3>Drag & Drop Gemini Images</h3>
+                    <p>Batch process up to 10 files (PNG, WebP, JPG)</p>
+                    <div id="fileName" class="uploadMeta">No file selected</div>
+                </div>
+                <button type="button" class="upload-btn">Upload Images</button>
+            </div>
+
+            <div id="status" class="status" aria-live="polite"></div>
+
+            <!-- Batch Bar -->
+            <div id="batchBar" class="batchBar hidden">
+                <div class="batchLeft">
+                    <div id="progressText" class="progressText">Processing 0 of 0…</div>
+                    <label class="field">
+                        <span class="fieldLabel">Quality</span>
+                        <select id="qualitySelect" class="select">
+                            <option value="1" selected>Original (100%)</option>
+                            <option value="0.85">Medium (85%)</option>
+                            <option value="0.70">Compressed (70%)</option>
+                        </select>
+                    </label>
+                    <fieldset class="formatGroup" role="group">
+                        <span class="fieldLabel">Format</span>
+                        <div class="formatRadios">
+                            <label class="formatLabel">
+                                <input type="radio" name="formatSelect" value="png" checked>
+                                <span>PNG</span>
+                            </label>
+                            <label class="formatLabel">
+                                <input type="radio" name="formatSelect" value="jpeg">
+                                <span>JPEG</span>
+                            </label>
+                            <label class="formatLabel">
+                                <input type="radio" name="formatSelect" value="webp">
+                                <span>WebP</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="batchActions">
+                    <button id="downloadAllBtn" class="btn primary" type="button" disabled>Download All as ZIP</button>
+                </div>
+            </div>
+
+            <!-- Thumbnail Grid -->
+            <div id="thumbGrid" class="thumbGrid hidden" aria-live="polite"></div>
+
+            <div class="footerActions">
+                <button id="resetBtn" class="btn" type="button" disabled>Reset / Upload New Images</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AD BANNER 2 -->
+    <div class="ad-banner">
+        <div class="ad-desktop">
+            <script>
+                atOptions = {
+                    'key' : '62ba6b2106fe2abcd6159c5b83039bcc',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/62ba6b2106fe2abcd6159c5b83039bcc/invoke.js"></script>
+        </div>
+        <div class="ad-mobile">
+            <script>
+                atOptions = {
+                    'key' : 'cf1d3a2308affc58f4f678f4a3c3241e',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/cf1d3a2308affc58f4f678f4a3c3241e/invoke.js"></script>
+        </div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="features-grid">
+        <div class="feature-box">
+            <h3><i class="fas fa-bolt" style="color: #1a5cff; margin-right: 8px;"></i> Fast Batch Processing</h3>
+            <p>Process up to 10 images at once. Remove watermarks from multiple Gemini images in seconds.</p>
+        </div>
+        <div class="feature-box">
+            <h3><i class="fas fa-lock" style="color: #1a5cff; margin-right: 8px;"></i> 100% Private & Secure</h3>
+            <p>Everything happens in your browser. Your images are never uploaded to any server.</p>
+        </div>
+        <div class="feature-box">
+            <h3><i class="fas fa-image" style="color: #1a5cff; margin-right: 8px;"></i> Nano Banana Support</h3>
+            <p>Specifically tuned to delete Gemini watermarks from the Nano Banana model.</p>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="card-section">
+        <h2 class="section-title"><i class="fas fa-compass"></i> How to Remove Gemini Watermark</h2>
+        <ol style="padding-left: 24px; color: #4a627a; line-height: 2;">
+            <li><strong>Upload:</strong> Drag your images into the box above or click to select files.</li>
+            <li><strong>Clean:</strong> Our algorithm detects the watermark pixel-by-pixel using reverse alpha blending.</li>
+            <li><strong>Download:</strong> Get your clean images instantly — individually or as a ZIP file.</li>
+        </ol>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card-section">
+        <h2 class="section-title"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+        <ul class="faq-list">
+            <li>
+                <div class="faq-q">How to turn off Gemini watermark?</div>
+                <div class="faq-a">Currently, Google does not provide a setting to disable the watermark during generation. The only solution is to use a Gemini watermark remover tool like this one post-generation.</div>
+            </li>
+            <li>
+                <div class="faq-q">Can you remove the Google Gemini watermark for free?</div>
+                <div class="faq-a">Yes. This Gemini Watermark Cleaner is 100% free and allows you to batch process up to 10 images at once without any hidden fees.</div>
+            </li>
+            <li>
+                <div class="faq-q">Does this work on mobile?</div>
+                <div class="faq-a">Yes. This tool works perfectly on mobile browsers (Chrome, Safari) so you can erase Gemini watermarks directly on your phone.</div>
+            </li>
+            <li>
+                <div class="faq-q">Is this better than the Reddit methods?</div>
+                <div class="faq-a">Yes. Searching "gemini watermark remover reddit" often leads to complex Photoshop tutorials. This tool automates the math (Reverse Alpha Blending) for you in seconds.</div>
+            </li>
+            <li>
+                <div class="faq-q">What image formats are supported?</div>
+                <div class="faq-a">PNG, JPEG, and WebP. You can also choose your preferred output format regardless of the input format.</div>
+            </li>
+        </ul>
+    </div>
+</main>
+
+<!-- STICKY BOTTOM AD -->
+<div class="sticky-bottom-ad" id="stickyAd">
+    <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
+    <div class="ad-container">
+        <div class="ad-desktop-bottom" id="desktopStickyAd">
+            <script>
+                atOptions = {
+                    'key' : '656dbda48a53949d938bbe0fb5bd50f5',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/656dbda48a53949d938bbe0fb5bd50f5/invoke.js"></script>
+        </div>
+        <div class="ad-mobile-bottom" id="mobileStickyAd">
+            <script>
+                atOptions = {
+                    'key' : '5e36d6ec4c18137d44d7d612e18ea3a8',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script src="https://www.highperformanceformat.com/5e36d6ec4c18137d44d7d612e18ea3a8/invoke.js"></script>
+        </div>
+    </div>
+</div>
+
+<!-- ===== FOOTER (exactly as template) ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+                <p style="font-size:0.8rem; margin-top:6px;">AI Prompt Library</p>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/prompts">Prompts</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="/links.html">Directory</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<!-- External Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/upng-js/2.1.0/UPNG.min.js"></script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-GH0DLY6H1F');
+</script>
+
+<!-- ===== WATERMARK REMOVER SCRIPT ===== -->
+<script>
+(function() {
+    'use strict';
+
+    // DOM Elements
+    const uploadArea = document.getElementById("uploadArea");
+    const fileInput = document.getElementById("fileInput");
+    const fileNameEl = document.getElementById("fileName");
+    const statusEl = document.getElementById("status");
+    const batchBar = document.getElementById("batchBar");
+    const progressText = document.getElementById("progressText");
+    const thumbGrid = document.getElementById("thumbGrid");
+    const downloadAllBtn = document.getElementById("downloadAllBtn");
+    const qualitySelect = document.getElementById("qualitySelect");
+    const formatRadios = document.querySelectorAll('input[name="formatSelect"]');
+    const resetBtn = document.getElementById("resetBtn");
+
+    // Constants
+    const ALPHA_THRESHOLD = 0.002;
+    const MAX_ALPHA = 0.99;
+    const LOGO_VALUE = 255;
+
+    // Load watermark maps
+    const bg48 = new Image();
+    const bg96 = new Image();
+    bg48.src = "./assets/bg_48.png";
+    bg96.src = "./assets/bg_96.png";
+
+    let alpha48 = null;
+    let alpha96 = null;
+
+    async function ensureAlphaMapsReady() {
+        await Promise.all([
+            new Promise((resolve, reject) => {
+                if (bg48.complete && bg48.naturalWidth) return resolve();
+                bg48.onload = resolve;
+                bg48.onerror = reject;
+            }),
+            new Promise((resolve, reject) => {
+                if (bg96.complete && bg96.naturalWidth) return resolve();
+                bg96.onload = resolve;
+                bg96.onerror = reject;
+            })
+        ]);
+        if (!alpha48) alpha48 = buildAlphaMapFromImage(bg48, 48);
+        if (!alpha96) alpha96 = buildAlphaMapFromImage(bg96, 96);
+    }
+
+    function buildAlphaMapFromImage(img, size) {
+        const canvas = document.createElement("canvas");
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext("2d", { willReadFrequently: true });
+        ctx.drawImage(img, 0, 0);
+        const imageData = ctx.getImageData(0, 0, size, size);
+        return calculateAlphaMap(imageData);
+    }
+
+    function calculateAlphaMap(bgCaptureImageData) {
+        const { width, height, data } = bgCaptureImageData;
+        const alphaMap = new Float32Array(width * height);
+        for (let i = 0; i < alphaMap.length; i++) {
+            const idx = i * 4;
+            const r = data[idx];
+            const g = data[idx + 1];
+            const b = data[idx + 2];
+            alphaMap[i] = Math.max(r, g, b) / 255.0;
+        }
+        return alphaMap;
+    }
+
+    function detectWatermarkConfig(imageWidth, imageHeight) {
+        if (imageWidth > 1024 && imageHeight > 1024) {
+            return { logoSize: 96, marginRight: 64, marginBottom: 64 };
+        }
+        return { logoSize: 48, marginRight: 32, marginBottom: 32 };
+    }
+
+    function calculateWatermarkPosition(imageWidth, imageHeight, config) {
+        const { logoSize, marginRight, marginBottom } = config;
+        return {
+            x: imageWidth - marginRight - logoSize,
+            y: imageHeight - marginBottom - logoSize,
+            width: logoSize,
+            height: logoSize,
+        };
+    }
+
+    function removeWatermark(imageData, alphaMap, position) {
+        const { x, y, width, height } = position;
+        for (let row = 0; row < height; row++) {
+            for (let col = 0; col < width; col++) {
+                const imgIdx = ((y + row) * imageData.width + (x + col)) * 4;
+                const alphaIdx = row * width + col;
+                let alpha = alphaMap[alphaIdx];
+                if (alpha < ALPHA_THRESHOLD) continue;
+                alpha = Math.min(alpha, MAX_ALPHA);
+                const oneMinusAlpha = 1.0 - alpha;
+                for (let c = 0; c < 3; c++) {
+                    const watermarked = imageData.data[imgIdx + c];
+                    const original = (watermarked - alpha * LOGO_VALUE) / oneMinusAlpha;
+                    imageData.data[imgIdx + c] = Math.max(0, Math.min(255, Math.round(original)));
+                }
+            }
+        }
+    }
+
+    function setStatus(text, type = "info") {
+        statusEl.textContent = text;
+        statusEl.classList.toggle("error", type === "error");
+    }
+
+    function formatCountText(done, total, phase = "Processing") {
+        return `${phase} ${done} of ${total}…`;
+    }
+
+    function safeFileBaseName(name) {
+        return name.replace(/\.[^.]+$/, "").replace(/[^\w\-]+/g, "_").slice(0, 80) || "image";
+    }
+
+    function bytesToHuman(bytes) {
+        if (!Number.isFinite(bytes) || bytes < 0) return "";
+        const units = ["B", "KB", "MB", "GB"];
+        let i = 0, n = bytes;
+        while (n >= 1024 && i < units.length - 1) { n /= 1024; i++; }
+        return `${n.toFixed(i === 0 ? 0 : 1)}${units[i]}`;
+    }
+
+    function getSelectedQuality() {
+        const q = Number(qualitySelect?.value ?? 1);
+        return Number.isFinite(q) ? Math.max(0.0, Math.min(1.0, q)) : 1;
+    }
+
+    function getSelectedFormat() {
+        const radio = document.querySelector('input[name="formatSelect"]:checked');
+        const v = radio?.value;
+        return (v === "jpeg" || v === "webp") ? v : "png";
+    }
+
+    function setFormatToMatchFileType(fileType) {
+        let value = "png";
+        if (/image\/jpeg/i.test(fileType)) value = "jpeg";
+        else if (/image\/webp/i.test(fileType)) value = "webp";
+        const radio = document.querySelector(`input[name="formatSelect"][value="${value}"]`);
+        if (radio) radio.checked = true;
+    }
+
+    function getOutputSpec() {
+        const q = getSelectedQuality();
+        const format = getSelectedFormat();
+        if (format === "jpeg") return { mime: "image/jpeg", ext: "jpg", quality: q };
+        if (format === "webp") return { mime: "image/webp", ext: "webp", quality: q };
+        return { mime: "image/png", ext: "png", quality: q };
+    }
+
+    function getPngColorCountForQuality(q) {
+        if (q >= 0.999) return 0;
+        if (q >= 0.85) return 256;
+        return 192;
+    }
+
+    async function exportResultBlob({ canvas, imageData, mime, quality }) {
+        if (mime === "image/jpeg" || mime === "image/webp") {
+            const w = canvas.width, h = canvas.height;
+            const off = document.createElement("canvas");
+            off.width = w; off.height = h;
+            const ctx = off.getContext("2d");
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(0, 0, w, h);
+            ctx.drawImage(canvas, 0, 0);
+            return await new Promise((resolve) => off.toBlob(resolve, mime, quality));
+        }
+        if (mime === "image/png") {
+            const q = Math.max(0, Math.min(1, Number(quality ?? 1)));
+            const colors = getPngColorCountForQuality(q);
+            if (colors === 0) {
+                return await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+            }
+            const UPNG = window.UPNG;
+            if (!UPNG || typeof UPNG.encode !== "function") {
+                return await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+            }
+            const w = canvas.width, h = canvas.height;
+            const size = w * h * 4;
+            const rgba = new Uint8Array(size);
+            rgba.set(imageData.data);
+            try {
+                const pngArrayBuffer = UPNG.encode([rgba.buffer], w, h, colors);
+                return new Blob([pngArrayBuffer], { type: "image/png" });
+            } catch (e) {
+                return await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+            }
+        }
+        return await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+    }
+
+    let batchItems = [];
+    let processedCount = 0;
+    let failedCount = 0;
+
+    function resetUI() {
+        batchItems.forEach((item) => {
+            if (item.resultUrl && item.resultUrl.startsWith("blob:")) URL.revokeObjectURL(item.resultUrl);
+        });
+        fileInput.value = "";
+        fileNameEl.textContent = "No file selected";
+        batchBar.classList.add("hidden");
+        thumbGrid.classList.add("hidden");
+        thumbGrid.innerHTML = "";
+        downloadAllBtn.disabled = true;
+        resetBtn.disabled = true;
+        setStatus("");
+        batchItems = [];
+        processedCount = 0;
+        failedCount = 0;
+    }
+
+    function isSupportedImageFile(file) {
+        return !!file && /image\/(png|jpeg|webp)/.test(file.type);
+    }
+
+    function fileToDataUrl(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(String(reader.result));
+            reader.onerror = () => reject(new Error("Failed to read file"));
+            reader.readAsDataURL(file);
+        });
+    }
+
+    async function fileToImage(file) {
+        const dataUrl = await fileToDataUrl(file);
+        const img = new Image();
+        img.decoding = "async";
+        img.src = dataUrl;
+        await new Promise((resolve, reject) => { img.onload = resolve; img.onerror = reject; });
+        return img;
+    }
+
+    function explainError(err) {
+        const msg = (err && typeof err === "object" && "message" in err) ? String(err.message) : String(err);
+        if (/getImageData|SecurityError|tainted|origin-clean/i.test(msg)) {
+            return "Your browser blocked canvas pixel access. Try disabling privacy extensions.";
+        }
+        if (/bg_48\.png|bg_96\.png|load|image/i.test(msg) && /failed|error/i.test(msg)) {
+            return "Watermark map images failed to load. Ensure assets/ folder is present.";
+        }
+        return "Processing failed. Check console for details.";
+    }
+
+    function createThumbCard(item) {
+        const card = document.createElement("div");
+        card.className = "thumbCard";
+        card.id = `card-${item.id}`;
+        card.innerHTML = `
+            <div class="thumbHeader">
+                <div class="thumbName" title="${item.name}">${item.name}</div>
+                <div class="thumbStatus" id="status-${item.id}">Queued</div>
+            </div>
+            <div class="thumbBody">
+                <div><p class="thumbRowLabel">Original</p><img class="thumbImg" id="orig-${item.id}" alt="Original"></div>
+                <div><p class="thumbRowLabel">Result</p><img class="thumbImg" id="res-${item.id}" alt="Result"></div>
+                <div class="thumbRowLabel" id="size-${item.id}"></div>
+            </div>
+            <div class="thumbFooter">
+                <button class="btn primary" id="dl-${item.id}" type="button" disabled>Download</button>
+            </div>
+        `;
+        thumbGrid.appendChild(card);
+    }
+
+    function setItemStatus(item, text, type = "info") {
+        const el = document.getElementById(`status-${item.id}`);
+        if (!el) return;
+        el.textContent = text;
+        el.classList.toggle("error", type === "error");
+    }
+
+    function setProgress(phase = "Processing") {
+        const total = batchItems.length;
+        const done = processedCount + failedCount;
+        progressText.textContent = formatCountText(done, total, phase);
+    }
+
+    function updateDownloadAllEnabled() {
+        const anyCompleted = batchItems.some((i) => i.status === "completed" && i.resultBlob);
+        downloadAllBtn.disabled = !(anyCompleted && typeof window.JSZip !== "undefined");
+    }
+
+    function downloadBlob(blob, filename) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = filename;
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    async function processOneItem(item) {
+        try {
+            setItemStatus(item, "Loading…");
+            setProgress("Processing");
+            const img = item.originalImg || (await fileToImage(item.file));
+            item.originalImg = img;
+            const origEl = document.getElementById(`orig-${item.id}`);
+            if (origEl) origEl.src = img.src;
+            setItemStatus(item, "Removing watermark…");
+            const canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext("2d", { willReadFrequently: true });
+            ctx.drawImage(img, 0, 0);
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const config = detectWatermarkConfig(canvas.width, canvas.height);
+            const position = calculateWatermarkPosition(canvas.width, canvas.height, config);
+            const alphaMap = config.logoSize === 96 ? alpha96 : alpha48;
+            removeWatermark(imageData, alphaMap, position);
+            ctx.putImageData(imageData, 0, 0);
+            const { mime, ext, quality } = getOutputSpec();
+            const blob = await exportResultBlob({ canvas, imageData, mime, quality });
+            if (item.resultUrl?.startsWith("blob:")) URL.revokeObjectURL(item.resultUrl);
+            item.resultBlob = blob;
+            item.resultUrl = URL.createObjectURL(blob);
+            item.resultExt = ext;
+            const resEl = document.getElementById(`res-${item.id}`);
+            if (resEl) resEl.src = item.resultUrl;
+            const sizeEl = document.getElementById(`size-${item.id}`);
+            if (sizeEl) {
+                const qualityPct = Math.round((Number(quality ?? 1) || 1) * 100);
+                sizeEl.textContent = `Original: ${bytesToHuman(item.file.size)} → Result: ${bytesToHuman(blob.size)} (${qualityPct}%)`;
+            }
+            item.status = "completed";
+            processedCount++;
+            setItemStatus(item, "Done");
+            const dlBtn = document.getElementById(`dl-${item.id}`);
+            if (dlBtn) {
+                dlBtn.disabled = false;
+                dlBtn.onclick = () => downloadBlob(blob, `unwatermarked_${safeFileBaseName(item.name)}.${ext}`);
+            }
+        } catch (err) {
+            console.error(err);
+            item.status = "error";
+            failedCount++;
+            setItemStatus(item, "Failed", "error");
+            setStatus(`Some images failed.\n\n${explainError(err)}`, "error");
+        } finally {
+            setProgress("Processing");
+            updateDownloadAllEnabled();
+        }
+    }
+
+    async function handleFiles(files) {
+        const onlyImages = files.filter(isSupportedImageFile);
+        if (onlyImages.length === 0) { setStatus("Please upload PNG, JPG, or WebP images.", "error"); return; }
+        if (onlyImages.length > 10) { setStatus("Please upload 10 images or fewer.", "error"); return; }
+        resetUI();
+        batchItems = onlyImages.map((file, idx) => ({ id: `${Date.now()}_${idx}`, file, name: file.name, status: "queued", originalImg: null, resultBlob: null, resultUrl: null }));
+        fileNameEl.textContent = `Selected: ${batchItems.length} image(s)`;
+        thumbGrid.classList.remove("hidden");
+        batchBar.classList.remove("hidden");
+        resetBtn.disabled = false;
+        setStatus("");
+        processedCount = 0; failedCount = 0;
+        setProgress("Processing");
+        setFormatToMatchFileType(onlyImages[0].type);
+        batchItems.forEach(createThumbCard);
+        try { await ensureAlphaMapsReady(); }
+        catch (err) {
+            console.error(err);
+            setStatus(`Failed to load watermark maps.\n\n${explainError(err)}`, "error");
+            batchItems.forEach((item) => setItemStatus(item, "Failed", "error"));
+            return;
+        }
+        const concurrency = 2; let cursor = 0;
+        async function worker() { while (cursor < batchItems.length) { await processOneItem(batchItems[cursor++]); } }
+        await Promise.all(Array.from({ length: concurrency }, worker));
+        setProgress("Done");
+        updateDownloadAllEnabled();
+    }
+
+    async function reprocessCurrentBatch() {
+        if (batchItems.length === 0) return;
+        const outFormat = getSelectedFormat();
+        const q = getSelectedQuality();
+        if (outFormat === "png" && q < 1 && (!window.UPNG || typeof window.UPNG.encode !== "function")) {
+            setStatus("PNG compression needs UPNG.js. Refresh and try again.", "error");
+            return;
+        }
+        downloadAllBtn.disabled = true;
+        processedCount = 0; failedCount = 0;
+        setProgress("Re-processing");
+        batchItems.forEach((item) => {
+            item.status = "queued";
+            if (item.resultUrl?.startsWith("blob:")) URL.revokeObjectURL(item.resultUrl);
+            item.resultUrl = null; item.resultBlob = null;
+            document.getElementById(`res-${item.id}`)?.removeAttribute("src");
+            document.getElementById(`dl-${item.id}`).disabled = true;
+            setItemStatus(item, "Queued");
+        });
+        const concurrency = 2; let cursor = 0;
+        async function worker() { while (cursor < batchItems.length) { await processOneItem(batchItems[cursor++]); } }
+        await Promise.all(Array.from({ length: concurrency }, worker));
+        setProgress("Done");
+        updateDownloadAllEnabled();
+    }
+
+    async function downloadAllAsZip() {
+        if (typeof window.JSZip === "undefined") { setStatus("JSZip failed to load.", "error"); return; }
+        const completed = batchItems.filter((i) => i.status === "completed" && i.resultBlob);
+        if (completed.length === 0) return;
+        downloadAllBtn.disabled = true;
+        setProgress("Zipping");
+        try {
+            const zip = new window.JSZip();
+            completed.forEach((item) => zip.file(`unwatermarked_${safeFileBaseName(item.name)}.${item.resultExt || "png"}`, item.resultBlob));
+            const zipBlob = await zip.generateAsync({ type: "blob" });
+            downloadBlob(zipBlob, `unwatermarked_${Date.now()}.zip`);
+            setStatus("ZIP ready.");
+        } catch (err) { console.error(err); setStatus("Failed to create ZIP.", "error"); }
+        finally { updateDownloadAllEnabled(); setProgress("Done"); }
+    }
+
+    // Event Listeners
+    uploadArea.addEventListener("click", () => fileInput.click());
+    uploadArea.addEventListener("dragover", (e) => { e.preventDefault(); uploadArea.classList.add("dragover"); });
+    uploadArea.addEventListener("dragleave", () => uploadArea.classList.remove("dragover"));
+    uploadArea.addEventListener("drop", (e) => { e.preventDefault(); uploadArea.classList.remove("dragover"); const files = Array.from(e.dataTransfer?.files || []); if (files.length) handleFiles(files); });
+    uploadArea.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); fileInput.click(); } });
+    fileInput.addEventListener("change", () => { const files = Array.from(fileInput.files || []); if (files.length) handleFiles(files); });
+    resetBtn.addEventListener("click", resetUI);
+    downloadAllBtn.addEventListener("click", downloadAllAsZip);
+    qualitySelect?.addEventListener("change", reprocessCurrentBatch);
+    formatRadios?.forEach((radio) => radio.addEventListener("change", reprocessCurrentBatch));
+
+    resetUI();
+
+    // Mobile menu toggle
+    const toggleBtn = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if(toggleBtn && mobileNav) {
+        toggleBtn.addEventListener('click', () => mobileNav.classList.toggle('open'));
+        document.addEventListener('click', (e) => { if(!toggleBtn.contains(e.target) && !mobileNav.contains(e.target)) mobileNav.classList.remove('open'); });
+    }
+
+    // Sticky ad
+    const stickyAd = document.getElementById('stickyAd');
+    const closeStickyAd = document.getElementById('closeStickyAd');
+    let adInterval, isAdClosed = false;
+    function refreshStickyAd() {
+        if (isAdClosed) return;
+        const desktopAd = document.getElementById('desktopStickyAd');
+        const mobileAd = document.getElementById('mobileStickyAd');
+        if (desktopAd) desktopAd.innerHTML = '';
+        if (mobileAd) mobileAd.innerHTML = '';
+        if (desktopAd) {
+            const s1 = document.createElement('script');
+            s1.textContent = `atOptions = {'key':'656dbda48a53949d938bbe0fb5bd50f5','format':'iframe','height':90,'width':728,'params':{}};`;
+            const s2 = document.createElement('script');
+            s2.src = 'https://www.highperformanceformat.com/656dbda48a53949d938bbe0fb5bd50f5/invoke.js';
+            desktopAd.appendChild(s1); desktopAd.appendChild(s2);
+        }
+        if (mobileAd) {
+            const s1 = document.createElement('script');
+            s1.textContent = `atOptions = {'key':'5e36d6ec4c18137d44d7d612e18ea3a8','format':'iframe','height':50,'width':320,'params':{}};`;
+            const s2 = document.createElement('script');
+            s2.src = 'https://www.highperformanceformat.com/5e36d6ec4c18137d44d7d612e18ea3a8/invoke.js';
+            mobileAd.appendChild(s1); mobileAd.appendChild(s2);
+        }
+    }
+    if (closeStickyAd) {
+        closeStickyAd.addEventListener('click', () => { stickyAd.style.display = 'none'; isAdClosed = true; document.body.style.paddingBottom = '0'; if(adInterval) clearInterval(adInterval); });
+    }
+    adInterval = setInterval(refreshStickyAd, 30000);
+    window.addEventListener('beforeunload', () => { if(adInterval) clearInterval(adInterval); });
+})();
+</script>
+
+</body>
+</html>
