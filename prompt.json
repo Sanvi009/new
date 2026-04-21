@@ -2958,5 +2958,13 @@
     "image": "375.webp",
     "file_path": "/prompt/how-to-create-cinematic-3-panel-triptych-film-portrait",
     "key": "SAE375"
+  },
+  {
+  "id": 376,
+  "description": "Generate a photorealistic editorial-style diptych where two uploaded portraits of the same person interact through a central strawberry milkshake. The composition uses a clear plastic cup positioned precisely on the frame edge to create a seamless illusion. The lower subject reaches up, holding the condensation-covered cup, while a straw extends directly to the pursed lips of the upper subject. Both faces remain exact, unaltered replicas of the reference images, featuring natural skin texture and bright sunlight. One subject wears an oversized yellow cat-print tee and rimless glasses with a messy bun, while the other sports a green 'CATS' graphic tee, parted hair, and glossy black sunglasses. The blurred background features a tall black brick building, enhancing the clean 9:16 vertical lifestyle aesthetic.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, diptych prompt, photorealistic portrait prompt, face consistency prompt, strawberry milkshake aesthetic, editorial photography prompt, 9:16 aspect ratio, two frame illusion, reference image prompt, lifestyle photography prompt, summer aesthetic prompt",
+  "image": "376.webp",
+  "file_path": "/prompt/strawberry-milkshake-diptych-ai-photo-prompt-for-gemini",
+  "key": "SAE376"
   }
 ]
