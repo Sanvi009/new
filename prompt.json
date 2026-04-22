@@ -3158,5 +3158,69 @@
   "image": "400.jpg",
   "file_path": "/prompt/cinematic-couple-selfie-portrait-with-heart-hands-and-sunset-sky",
   "key": "SAE400"
+},
+{
+  "id": 401,
+  "description": "This prompt creates an ultra-realistic cinematic photograph of a person lying in a wild meadow, preserving exact facial identity and natural features. The scene captures a serene, melancholic moment with the subject reclining in tall grass, eyes closed, wearing a slightly disheveled formal suit with a loosened tie. A small wildflower rests delicately on the cheek, with subtle traces of nature like pollen and grass fragments adding authenticity. The lighting is soft and diffused, mimicking overcast or golden-hour conditions, while the color grading leans into muted, desaturated earthy tones with a fine film grain texture. The shallow depth of field keeps the subject sharp against a softly blurred background, creating a poetic, introspective still that feels like a frame from an indie film. The prompt explicitly restricts facial alteration, artificial beautification, and studio lighting to ensure the result looks like a genuine, unposed photograph of the specific individual.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cinematic portrait, realistic self photo, meadow photography, film grain aesthetic, identity preservation, shallow depth of field, soft natural light, melancholic mood, indie film still, analog photography style, 85mm lens effect, outdoor portrait prompt",
+  "image": "401.webp",
+  "file_path": "/prompt/cinematic-meadow-portrait-ai-prompt-for-realistic-self-image",
+  "key": "SAE401"
+},
+{
+  "id": 402,
+  "description": "This prompt generates a realistic CCTV-style security camera still or short clip featuring the exact facial identity of the user uploaded in a reference image. The scene places the subject in an indoor hallway or lobby, walking naturally past a high-angle surveillance camera. The subject looks up directly at the lens with a bright, friendly smile while casually waving, creating a candid and confident appearance. The visual aesthetic strictly mimics authentic security footage with specific technical artifacts: a slightly distorted wide-angle lens perspective, low resolution output, desaturated or monochrome color grading, and a visible timestamp overlay in the corner. The prompt also includes subtle scan lines, digital compression artifacts, motion blur on the waving hand, and grainy noise to ensure the result does not look like a polished photograph but rather an unpolished, documentary-style security still. The lighting is described as uneven with harsh overhead shadows, reinforcing the utilitarian and unglamorous nature of real surveillance systems while strictly preserving the user's natural facial geometry and body type.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cctv footage, security camera aesthetic, identity preservation, realistic self photo, wide angle distortion, low resolution photo, monochrome filter, timestamp overlay, scan lines effect, motion blur prompt, surveillance style, candid wave photo",
+  "image": "402.webp",
+  "file_path": "/prompt/cctv-style-security-footage-ai-prompt-with-identity-preservation",
+  "key": "SAE402"
+},
+{
+  "id": 403,
+  "description": "This prompt creates a candid, low-light portrait of the user lying sideways across two empty bus seats, preserving exact facial identity and features from an uploaded reference image. The scene is set on a public transit bus during a rainy night, with the subject wearing a dark maroon sweatshirt and faded blue jeans in a relaxed, tired posture. One arm rests behind the head while the flash from a camera catches the pale complexion of the face, creating stark highlights and deep shadows against the beige plastic seatbacks. The windows show a dim, wet exterior with rain streaks and blurred city lights, reinforcing the lonely late-night commute atmosphere. The visual style deliberately emulates a cheap disposable film camera with heavy flash glare reflecting off the seat surfaces, noticeable film grain, and slightly washed-out color saturation. The vertical 9:16 framing emphasizes the length of the body stretched across the seats, creating a nostalgic, slightly melancholic snapshot that feels like an accidental photo taken by a friend on a long ride home.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, disposable camera flash, late night bus, rainy window aesthetic, identity preservation, film grain effect, candid portrait, pale face flash, maroon sweatshirt, empty bus seats, nostalgic snapshot, 9to16 vertical photo, sleepy travel vibe",
+  "image": "403.webp",
+  "file_path": "/prompt/late-night-bus-seat-portrait-with-disposable-camera-flash-ai-prompt",
+  "key": "SAE403"
+},
+{
+  "id": 404,
+  "description": "This prompt generates a surreal high-fashion editorial photograph featuring the user's exact facial identity standing on a modern city sidewalk. The scene centers on a striking forced-perspective illusion where an enormous, photorealistic green Adidas Samba sneaker with white stripes and a brown gum sole floats or steps dramatically above and around the subject. A giant leg wearing a white ribbed Adidas sock with the black trefoil logo supports the massive shoe, creating the visual effect that the subject is about to be stepped over or is standing in the shadow of a colossal footwear icon. The subject wears a coordinated light mint-green crinkled textured button-up jacket over a white t-shirt, wide-leg black trousers, and matching green sneakers, with hands tucked casually in pockets and a neutral, confident expression directed at the camera. The backdrop features a contemporary building facade with large light-gray tiled walls, while cinematic lighting and ultra-detailed textures maintain a sharp, photorealistic atmosphere. The exaggerated scale contrast between the human figure and the giant sneaker transforms an ordinary street scene into a playful yet sophisticated fashion statement, emphasizing vibrant green accents against clean urban architecture.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, surreal fashion editorial, giant sneaker, forced perspective, Adidas Samba aesthetic, mint green outfit, street style photography, identity preservation, urban architecture backdrop, photorealistic scale illusion, cinematic lighting, wide leg trousers, 9to16 portrait",
+  "image": "404.jpg",
+  "file_path": "/prompt/surreal-giant-sneaker-street-style-fashion-editorial-ai-prompt",
+  "key": "SAE404"
+},
+{
+  "id": 405,
+  "description": "This prompt generates a high-contrast, lo-fi editorial fashion portrait featuring the user's exact facial and physical identity with one hundred percent accuracy from an uploaded reference image. The subject is reclined nonchalantly across a round wooden dining table covered with a rumpled white linen tablecloth, leaning back on one elbow with one leg bent and the other extended casually over the edge. The outfit consists of a vintage-style white short-sleeve graphic t-shirt with a dark landscape architectural print, paired with oversized baggy charcoal grey washed denim jeans secured by a thick black leather belt with a silver buckle. Accessories include rectangular thin-frame silver glasses, a medium-weight silver curb chain necklace, and black leather combat-style boots. The expression is stoic and brooding, with an intense direct gaze into the camera lens. The background features a dimly lit room with dark wood Victorian-style hutch furniture and ornate silver candelabras, creating a stark contrast against the white tablecloth. Hard direct flash photography creates sharp highlights and deep dramatic shadows, emphasizing the gritty, raw texture of alternative fashion editorial. The high-angle shot looks down at the subject, capturing the full body and antique surroundings in a moody, immersive composition.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, editorial fashion portrait, vintage graphic tee, baggy grey jeans, silver chain necklace, combat boots, Victorian antique decor, direct flash photography, lo-fi aesthetic, identity preservation, moody alternative style, high contrast lighting, 9to16 portrait",
+  "image": "405.webp",
+  "file_path": "/prompt/moody-victorian-dining-table-editorial-portrait-ai-prompt",
+  "key": "SAE405"
+},
+{
+  "id": 406,
+  "description": "This prompt creates an ultra-realistic cinematic street photograph where the user's exact facial identity stands in sharp focus at the center of a chaotic, fast-moving urban crowd. The subject maintains a calm, introspective expression with hands tucked casually into the pockets of loose blue jeans, wearing a slightly oversized black casual blazer over a white fitted tank top. A black belt with a visible metallic keychain detail, matte black over-ear headphones resting around the neck, and a crossbody bag complete the urban casual aesthetic, with a small rolling suitcase positioned nearby. The background is filled with pedestrians in motion, rendered with intentional slow-shutter motion blur streaks that contrast dramatically against the subject's crisp, static presence. Soft overcast or late afternoon light bathes the scene in muted, cinematic tones with cool teal shadows and natural warm skin highlights. The shallow depth of field at f/1.8 to f/2.2 ensures strong subject separation, while subtle film grain and natural skin texture maintain a raw, unpolished realism reminiscent of indie film stills and documentary street photography. The prompt strictly prohibits facial alteration, beautification filters, and artificial lighting to guarantee the result resembles a genuine candid photograph of the specific individual.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, street photography, motion blur background, identity preservation, cinematic portrait, urban casual outfit, black blazer jeans, over-ear headphones, shallow depth of field, slow shutter effect, candid city photo, film grain texture, 9to16 vertical",
+  "image": "406.jpeg",
+  "file_path": "/prompt/urban-street-motion-blur-portrait-with-identity-preservation-ai-prompt",
+  "key": "SAE406"
+},
+{
+  "id": 407,
+  "description": "This prompt is designed to generate a full-body editorial portrait that strictly preserves your exact facial identity, skin texture, and natural proportions. The scene is a minimalist studio setup with a muted olive-green backdrop and soft beige floor, creating a cinematic, high-fashion atmosphere. The subject wears an oversized brown blazer, loosely tucked beige shirt, thin brown tie, and wide-leg checkered trousers, holding a small bouquet of wilted pastel flowers. The expression is introspective and calm, with a gaze directed off-camera. The lighting is soft and diffused, mimicking large studio softboxes, while the color grading leans toward desaturated Kodak Portra film tones. The result is a raw, unretouched-looking photograph that emphasizes fabric weave, skin pores, and natural asymmetry without any beautification filters or smoothing algorithms.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, identity preservation prompt, editorial portrait prompt, cinematic photography prompt, minimalist studio prompt, androgynous fashion prompt, ultra-realistic portrait, full-body portrait prompt, olive green background prompt, kodak portra tones, soft studio lighting",
+  "image": "407.webp",
+  "file_path": "/prompt/editorial-portrait-prompt-with-exact-identity-preservation-for-ai",
+  "key": "SAE407"
+},
+{
+  "id": 408,
+  "description": "This prompt creates a surreal editorial portrait set inside a narrow room completely wallpapered with vintage Korean pop culture magazine pages and posters. The scene preserves your exact facial identity and physical appearance from a reference image while seating you on a simple stool at the center of the frame. Every surface including walls, ceiling, and floor is densely covered with layered portraits, Korean-inspired typography, retro advertisements, and faded print textures with visible tape marks and paper wrinkles. The composition uses a wide-angle perspective with a low camera height, creating an intimate enclosed feeling. Warm amber overhead lighting casts soft shadows across the room while muted vintage colors and subtle film grain establish a moody underground music video atmosphere. The wardrobe remains casual and relaxed with an oversized charcoal sweatshirt, distressed faded jeans, and clean white sneakers. The final output is a photorealistic 4:5 vertical image with cinematic color grading that reads like a production-grade editorial photograph.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, korean pop culture room prompt, vintage magazine collage prompt, cinematic portrait prompt, wide angle interior prompt, identity preservation prompt, nostalgic room prompt, editorial photography prompt, korean aesthetic prompt, amber lighting prompt, film grain portrait, surreal interior prompt",
+  "image": "408.jpeg",
+  "file_path": "/prompt/korean-pop-culture-magazine-room-cinematic-portrait-ai-prompt",
+  "key": "SAE408"
 }
 ]
