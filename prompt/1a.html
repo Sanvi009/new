@@ -1,25 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <script>
-(function(fmlr){
-var d = document,
-    s = d.createElement('script'),
-    l = d.scripts[d.scripts.length - 1];
-s.settings = fmlr || {};
-s.src = "\/\/selfassured-celebration.com\/b\/XAVFspd.GDlu0bYBWgcn\/IeImF9Mu-ZtUkl\/k_PbTpYe5_OYDiQqxWNtzXMbtONQjAkA4mNnDAE\/3TNvwx";
-s.async = true;
-s.referrerPolicy = 'no-referrer-when-downgrade';
-l.parentNode.insertBefore(s, l);
-})({})
-</script>
-
-    
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://pl27490254.profitablecpmratenetwork.com">
 
     <!-- Preload first image for LCP optimization -->
     <link rel="preload" as="image" href="/images/{{image1}}">
@@ -698,8 +682,6 @@ l.parentNode.insertBefore(s, l);
             color: #ccdbe9;
             margin-top: 40px;
             padding: 48px 0 24px;
-            position: relative;
-            z-index: 1;
         }
 
         .footer-grid {
@@ -721,42 +703,27 @@ l.parentNode.insertBefore(s, l);
             gap: 12px;
         }
 
-        .footer-links a {
+        .footer-links a, .footer-social a {
             color: #ccdbe9;
             text-decoration: none;
             font-size: 0.85rem;
             transition: color 0.2s;
         }
 
-        .footer-links a:hover {
+        .footer-links a:hover, .footer-social a:hover {
             color: white;
         }
 
-        /* Footer Social - completely separate from Adsterra */
-        .footer-social-section h4 {
-            font-size: 1rem;
-            margin-bottom: 16px;
-            color: white;
-        }
-
-        .footer-social-list {
+        .social-list {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
 
-        .footer-social-list a {
-            color: #ccdbe9;
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.2s;
+        .social-item a {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-        }
-
-        .footer-social-list a:hover {
-            color: white;
         }
 
         .footer-bottom {
@@ -823,45 +790,6 @@ l.parentNode.insertBefore(s, l);
             font-size: 14px;
         }
 
-        /* ----- ADSTERRA SOCIAL BAR - ISOLATED (no footer conflict) ----- */
-        /* This only targets Adsterra's injected elements */
-        [id*="SocialBar"]:not(.footer *),
-        [class*="social-bar"]:not(.footer *),
-        [class*="SocialBar"]:not(.footer *),
-        iframe[src*="adsterra"],
-        div[style*="position: fixed"][style*="z-index"] {
-            z-index: 99 !important;
-        }
-
-        /* Desktop positioning */
-        @media (min-width: 769px) {
-            [id*="SocialBar"]:not(.footer *),
-            [class*="social-bar"]:not(.footer *),
-            [class*="SocialBar"]:not(.footer *),
-            div[style*="position: fixed"][style*="z-index"] {
-                left: 10px !important;
-                top: 50% !important;
-                transform: translateY(-50%) !important;
-                right: auto !important;
-                bottom: auto !important;
-            }
-        }
-
-        /* Mobile positioning */
-        @media (max-width: 768px) {
-            [id*="SocialBar"]:not(.footer *),
-            [class*="social-bar"]:not(.footer *),
-            [class*="SocialBar"]:not(.footer *),
-            div[style*="position: fixed"][style*="z-index"] {
-                bottom: 70px !important;
-                right: 10px !important;
-                left: auto !important;
-                top: auto !important;
-                transform: scale(0.8) !important;
-                transform-origin: bottom right !important;
-            }
-        }
-
         /* Responsive */
         @media (max-width: 900px) {
             .hero h1 { font-size: 2rem; }
@@ -883,7 +811,7 @@ l.parentNode.insertBefore(s, l);
             .prompt-code { margin-right: 0; }
             .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
             .footer-links { justify-items: center; }
-            .footer-social-list { align-items: center; }
+            .social-list { align-items: center; }
         }
 
         @media (max-width: 480px) {
@@ -1049,35 +977,11 @@ l.parentNode.insertBefore(s, l);
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
-            <div class="footer-brand">
-                <h3>BRAINLOOM</h3>
-                <p style="font-size:0.8rem; margin-top:6px;">AI Prompt Library</p>
-            </div>
-            <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/prompts">Prompts</a>
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
-                <a href="/policy">Privacy policy</a>
-                <a href="/term">Terms of use</a>
-                <a href="/sitemap.xml">Sitemap</a>
-                <a href="/links.html">Directory</a>
-            </div>
-            <div class="footer-social-section">
-                <h4>Connect</h4>
-                <div class="footer-social-list">
-                    <a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a>
-                    <a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-                    <a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
-                    <a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-                </div>
-            </div>
+            <div class="footer-brand"><h3>BRAINLOOM</h3><p style="font-size:0.8rem; margin-top:6px;">AI Prompt Library</p></div>
+            <div class="footer-links"><a href="/">Home</a><a href="/prompts">Prompts</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/policy">Privacy policy</a><a href="/term">Terms of use</a><a href="/sitemap.xml">Sitemap</a><a href="/links.html">Directory</a></div>
+            <div class="footer-social"><h4>Connect</h4><div class="social-list"><div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div><div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div><div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div><div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div><div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div><div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div></div></div>
         </div>
-        <div class="footer-bottom">
-            <span>© 2026 Brainloom. All rights reserved.</span>
-        </div>
+        <div class="footer-bottom"><span>© 2026 Brainloom. All rights reserved.</span></div>
     </div>
 </footer>
 
@@ -1089,10 +993,10 @@ l.parentNode.insertBefore(s, l);
     gtag('js', new Date()); gtag('config', 'G-GH0DLY6H1F');
 </script>
 
-<!-- Adsterra Social Bar Code -->
-<script src="https://pl27490254.profitablecpmratenetwork.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js"></script>
-
 <script>
+    // Adsterra Popunder Smart Link
+    const ADSTERRA_POPUNDER_URL = 'https://www.profitablecpmratenetwork.com/k8ss6qs8?key=9767be64a42ff16ff8e6469c6efd9007';
+
     // Mobile menu toggle
     const toggleBtn = document.getElementById('menuToggle');
     const mobileNav = document.getElementById('mobileNav');
@@ -1103,20 +1007,52 @@ l.parentNode.insertBefore(s, l);
         });
     }
 
-    // Copy function
+    // Copy function with Popunder Ad
     function copyPrompt(btn) {
         const box = btn.closest('.prompt-box');
         const text = box.querySelector('.prompt-code').innerText;
 
+        // Step 1: Open popunder ad in new tab BEFORE copy completes
+        // This increases chance the new tab stays in background
+        let popunderWindow = null;
+        try {
+            popunderWindow = window.open(ADSTERRA_POPUNDER_URL, '_blank');
+        } catch(e) {
+            // Fail silently if popup blocked
+            console.log('Popunder blocked by browser');
+        }
+
+        // Step 2: Copy text to clipboard
         navigator.clipboard.writeText(text).then(() => {
+
+            // Step 3: Try to push the ad tab behind current page
+            if (popunderWindow) {
+                setTimeout(() => {
+                    window.focus();        // Bring current page to front
+                    popunderWindow.blur(); // Push ad tab to background
+                }, 100); // Small delay to let the tab open first
+            }
+
+            // Step 4: Show "Copied!" feedback
+            const origHTML = btn.innerHTML;
+            const origBG = btn.style.background;
             btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
             btn.style.background = '#0f47cc';
             setTimeout(() => { 
-                btn.innerHTML = '<i class="fas fa-copy"></i> Copy'; 
-                btn.style.background = '#1a5cff'; 
+                btn.innerHTML = origHTML; 
+                btn.style.background = origBG; 
             }, 2000);
+
         }).catch(() => {
-            alert('Copy failed');
+            // If copy fails, still show feedback
+            const origHTML = btn.innerHTML;
+            const origBG = btn.style.background;
+            btn.innerHTML = '<i class="fas fa-times"></i> Failed';
+            btn.style.background = '#cc3300';
+            setTimeout(() => { 
+                btn.innerHTML = origHTML; 
+                btn.style.background = origBG; 
+            }, 2000);
         });
     }
 
