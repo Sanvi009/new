@@ -3222,5 +3222,53 @@
   "image": "408.jpeg",
   "file_path": "/prompt/korean-pop-culture-magazine-room-cinematic-portrait-ai-prompt",
   "key": "SAE408"
+},
+{
+  "id": 409,
+  "description": "This prompt generates a highly authentic, ultra-realistic editorial portrait set inside a cozy, modern café. It places the subject on a red metal stool by a street-facing window, ensuring a relaxed, candid lifestyle aesthetic. The visual focus is on natural lighting and accurate physical features, making it perfect for fashion lookbooks or Instagram-ready lifestyle shots. You will achieve a beautifully detailed image highlighting textures like a vintage brown leather jacket, denim folds, and glossy cafe tiles, all rendered with a cinematic 35mm film quality that feels genuinely human rather than artificially polished.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, ultra realistic portrait, cafe lifestyle photography, vintage leather jacket aesthetic, cinematic fashion editorial, exact facial preservation, candid street fashion, 35mm film photography, instagram style portrait, casual streetwear look",
+  "image": "409.webp",
+  "file_path": "/prompt/ultra-realistic-cafe-lifestyle-portrait-with-vintage-leather-jacket",
+  "key": "SAE409"
+},
+{
+  "id": 410,
+  "description": "This prompt creates an ultra-realistic, moody cinematic portrait of a person wearing large over-ear headphones and a comfortable grey hoodie. The result is a highly detailed, close-up shot that emphasizes natural skin textures, subtle shadows, and a calm, serious expression. With a cool-toned background featuring a beautiful, soft bokeh effect, this prompt is perfect for generating professional profile pictures, atmospheric music-related artwork, or compelling character concepts that feel emotionally grounded and visually striking.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, moody cinematic portrait, over-ear headphones, grey hoodie aesthetic, cool toned lighting, realistic face portrait, shallow depth of field, 85mm lens look, natural skin texture, bokeh background effect, low-key lighting portrait",
+  "image": "410.jpeg",
+  "file_path": "/prompt/moody-cinematic-portrait-with-over-ear-headphones",
+  "key": "SAE410"
+},
+{
+  "id": 411,
+  "description": "This prompt produces a highly cinematic, open-air portrait featuring the subject casually resting on the edge of a modified white car's roof. You will get a striking composition emphasizing a vast, minimalist sky background and soft late-afternoon sunlight. The aesthetic heavily leans into retro streetwear, highlighting details like an oversized color-block windbreaker and textured suede running sneakers. It meticulously preserves natural facial features and realistic clothing textures, delivering a professional Kodak Portra film look rather than a heavily filtered digital creation.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cinematic car portrait, retro streetwear aesthetic, modified white car, kodak portra film look, realistic facial preservation, oversized windbreaker jacket, vintage sneaker fashion, golden hour lighting, open sky background",
+  "image": "411.jpeg",
+  "file_path": "/prompt/cinematic-car-roof-portrait-with-retro-sneakers-and-windbreaker",
+  "key": "SAE411"
+},
+{
+  "id": 412,
+  "description": "This prompt produces a striking, low-angle editorial portrait that emphasizes a confident and dominant perspective against a minimalist, clear blue sky. The subject is styled in a modern, zip-up black athletic track jacket with subtle white stripe details, giving off an effortless streetwear aesthetic. You will receive an ultra-realistic image featuring natural sunlight, cinematic color grading, and meticulous preservation of facial features and skin texture. The clean background ensures all focus remains squarely on the subject's calm, introspective expression and relaxed posture, free from urban distractions.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, low angle portrait, minimalist streetwear aesthetic, blue sky background, editorial fashion photography, black athletic track jacket, realistic face preservation, confident urban style, natural daylight portrait, cinematic color grading",
+  "image": "412.jpeg",
+  "file_path": "/prompt/low-angle-minimalist-streetwear-portrait-with-blue-sky-background",
+  "key": "SAE412"
+},
+{
+  "id": 413,
+  "description": "This prompt generates an intensely atmospheric, ultra-realistic cinematic portrait. The subject is posed casually against a concrete pillar in an empty underground parking garage at night. The defining characteristic is the heavy magenta and pink neon lighting that saturates the scene, contrasting with distant greenish-yellow fluorescent lights. You will get a result featuring a black oversized leather jacket, a loosened white shirt with a black tie, and highly detailed formal dress shoes. The composition uses a subtle Dutch angle and a low perspective to create an edgy, fashion-forward editorial look with a genuine film-like texture and depth.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cinematic portrait, underground parking garage, magenta neon lighting, leather jacket fashion, formal dress shoes, editorial photography, moody lighting, low angle shot, film grain aesthetic, realistic skin texture, urban nightlife photography",
+  "image": "413.jpeg",
+  "file_path": "/prompt/moody-magenta-neon-cinematic-portrait-in-underground-parking-garage",
+  "key": "SAE413"
+},
+{
+  "id": 414,
+  "description": "This prompt generates a highly realistic, cinematic night portrait set against an urban highway overpass. The scene emphasizes a moody, introspective atmosphere with a shallow depth of field, blurring the glowing headlights and streetlights in the background. Users will receive a striking, film-like image featuring natural skin textures, a classic teal and orange color grade, and realistic lighting that perfectly captures an indie movie aesthetic without looking artificially smoothed or plastic.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cinematic night portrait, urban highway photography, moody lighting prompt, realistic face generation, indie film aesthetic, teal and orange color grading, overpass night scene, low key lighting photography, unedited skin texture ai",
+  "image": "414.jpeg",
+  "file_path": "/prompt/cinematic-nighttime-highway-overpass-portrait-ai-prompt",
+  "key": "SAE414"
 }
 ]
