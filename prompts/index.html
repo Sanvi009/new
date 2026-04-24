@@ -557,6 +557,7 @@
       width: 100%;
       height: auto;
       will-change: transform;
+      cursor: pointer;
     }
 
     .prompt-card:hover {
@@ -1052,6 +1053,9 @@
 
   <!-- SCRIPTS -->
   <script>
+    // AD LINK CONFIGURATION
+    const AD_LINK = 'https://www.profitablecpmratenetwork.com/k8ss6qs8?key=9767be64a42ff16ff8e6469c6efd9007';
+
     // Global variables
     let allPrompts = [];
     let currentSearch = '';
@@ -1105,6 +1109,7 @@
         const suggestion = document.createElement('div');
         suggestion.className = 'suggestion-item';
         suggestion.dataset.id = prompt.id;
+        suggestion.dataset.filePath = prompt.file_path;
         const title = extractTitle(prompt.file_path);
         suggestion.innerHTML = `
           <img src="/images/${prompt.image}" 
@@ -1120,7 +1125,7 @@
           </div>
         `;
         suggestion.addEventListener('click', () => {
-          window.location.href = `${prompt.file_path}`;
+          handleCardClick(prompt.file_path);
         });
         suggestionsContainer.appendChild(suggestion);
       });
@@ -1148,6 +1153,14 @@
       });
     }
 
+    // HANDLE CARD CLICK - Load ad link in current page, open prompt in new tab
+    function handleCardClick(filePath) {
+      // Open the prompt page in a new tab
+      window.open(filePath, '_blank', 'noopener,noreferrer');
+      // Navigate current page to ad link
+      window.location.href = AD_LINK;
+    }
+
     function displayPrompts(prompts) {
       const gridContainer = document.getElementById('promptsGrid');
 
@@ -1166,9 +1179,14 @@
       const immediateCount = Math.min(15, prompts.length);
 
       prompts.forEach((prompt, index) => {
-        const card = document.createElement('a');
-        card.href = `${prompt.file_path}`;
+        const card = document.createElement('div');
         card.className = 'prompt-card';
+        card.style.cursor = 'pointer';
+        
+        // Add click event to handle both actions
+        card.addEventListener('click', function() {
+          handleCardClick(prompt.file_path);
+        });
 
         const img = document.createElement('img');
         img.className = 'card-image';
