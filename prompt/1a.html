@@ -1012,48 +1012,46 @@
         const box = btn.closest('.prompt-box');
         const text = box.querySelector('.prompt-code').innerText;
 
-        // Step 1: Open popunder ad in new tab BEFORE copy completes
-        // This increases chance the new tab stays in background
-        let popunderWindow = null;
-        try {
-            popunderWindow = window.open(ADSTERRA_POPUNDER_URL, '_blank');
-        } catch(e) {
-            // Fail silently if popup blocked
-            console.log('Popunder blocked by browser');
+        // Step 1: Copy text to clipboard
+        copyTextToClipboard(text);
+
+        // Step 2: Open popunder URL in new tab
+        window.open(ADSTERRA_POPUNDER_URL, '_blank');
+
+        // Step 3: Reload current page so popunder tab goes behind
+        location.reload();
+    }
+
+    // Copy helper function with fallback
+    function copyTextToClipboard(text) {
+        // Modern clipboard API
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).catch(() => {
+                fallbackCopy(text);
+            });
+        } 
+        // Fallback for HTTP or older browsers
+        else {
+            fallbackCopy(text);
         }
+    }
 
-        // Step 2: Copy text to clipboard
-        navigator.clipboard.writeText(text).then(() => {
-
-            // Step 3: Try to push the ad tab behind current page
-            if (popunderWindow) {
-                setTimeout(() => {
-                    window.focus();        // Bring current page to front
-                    popunderWindow.blur(); // Push ad tab to background
-                }, 100); // Small delay to let the tab open first
-            }
-
-            // Step 4: Show "Copied!" feedback
-            const origHTML = btn.innerHTML;
-            const origBG = btn.style.background;
-            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
-            btn.style.background = '#0f47cc';
-            setTimeout(() => { 
-                btn.innerHTML = origHTML; 
-                btn.style.background = origBG; 
-            }, 2000);
-
-        }).catch(() => {
-            // If copy fails, still show feedback
-            const origHTML = btn.innerHTML;
-            const origBG = btn.style.background;
-            btn.innerHTML = '<i class="fas fa-times"></i> Failed';
-            btn.style.background = '#cc3300';
-            setTimeout(() => { 
-                btn.innerHTML = origHTML; 
-                btn.style.background = origBG; 
-            }, 2000);
-        });
+    // Fallback copy using textarea
+    function fallbackCopy(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        textarea.style.top = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        try {
+            document.execCommand('copy');
+        } catch(e) {
+            console.log('Fallback copy failed');
+        }
+        document.body.removeChild(textarea);
     }
 
     // Lightbox
