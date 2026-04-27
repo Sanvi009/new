@@ -3270,5 +3270,53 @@
   "image": "414.jpeg",
   "file_path": "/prompt/cinematic-nighttime-highway-overpass-portrait-ai-prompt",
   "key": "SAE414"
+},
+{
+  "id": 415,
+  "description": "This premium AI image prompt generates a highly realistic, editorial-style full-body portrait of a person casually leaning against a classic vintage car in a quiet European neighborhood. The composition captures a relaxed, candid moment with the subject sipping coffee, dressed in a light blue linen shirt and tailored gray trousers. Perfect for creating lifestyle photography with natural daylight, authentic skin textures, and a soft, muted color grading that mimics high-end fashion magazines.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, realistic portrait photography, urban streetwear fashion, vintage car lifestyle, editorial fashion shoot, full body casual pose, natural daylight lighting, cinematic portrait scene, realistic skin texture, classic european street",
+  "image": "415.webp",
+  "file_path": "/prompt/casual-urban-fashion-portrait-with-vintage-car",
+  "key": "SAE415"
+},
+{
+  "id": 416,
+  "description": "This prompt generates a beautifully arranged, hyper-realistic photo collage featuring a cinematic portrait bathed in warm golden-hour lighting. The composition divides the canvas into multiple frames, showcasing a primary close-up, intricate details like lips and eyes, and varied angled shots to create a dynamic visual narrative. Artistic touches like decorative lilies and a moody music player UI overlay complete the aesthetic. The final result delivers an incredibly lifelike, magazine-quality look perfect for romantic or highly stylized personal portraits.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cinematic photo collage, golden hour portrait, music player overlay, realistic facial features, romantic vibe photography, aesthetic grid layout, warm amber lighting, ultra-detailed skin texture, stylized digital photography",
+  "image": "416.webp",
+  "file_path": "/prompt/cinematic-golden-hour-photo-collage-with-music-player-overlay",
+  "key": "SAE416"
+},
+{
+  "id": 417,
+  "description": "This prompt generates a striking, contemporary fashion portrait utilizing a forced perspective technique to dramatically emphasize a large sneaker in the foreground. The scene features a subject seated on a clean, bright white surface, dressed in layered, earth-toned streetwear including a cream short-sleeved shirt, brown tee, and wide-legged trousers. The bright, even lighting and low-angle composition create a clean, minimalist aesthetic that makes the subject and the oversized footwear pop, resulting in a highly stylized, 4K resolution image perfect for modern editorial looks.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, forced perspective photography, streetwear fashion portrait, oversized sneaker shot, contemporary editorial style, low angle portrait, minimalist white background, modern clothing aesthetic, high resolution fashion photography, trendy apparel styling",
+  "image": "417.jpeg",
+  "file_path": "/prompt/oversized-sneaker-forced-perspective-streetwear-fashion-photography-prompt",
+  "key": "SAE417"
+},
+{
+  "id": 418,
+  "description": "This prompt creates a striking monochrome editorial image featuring a young man in a sleek black turtleneck. The visual centerpiece is a white barcode sticker covering the eyes like a blindfold, symbolizing themes of commercialism and identity. Set against a minimalist light grey background, the composition uses sharp studio lighting to emphasize texture and high contrast. The result is a cold, conceptual piece of fine art photography suitable for high-end fashion magazines or social commentary projects.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, monochrome editorial photography, avant garde fashion portrait, barcode art concept, black turtleneck aesthetic, social commentary imagery, high contrast fine art, medium format camera style, minimalist studio portrait, conceptual fashion photography",
+  "image": "418.jpeg",
+  "file_path": "/prompt/avant-garde-black-and-white-editorial-portrait-with-barcode-eye-mask",
+  "key": "SAE418"
+},
+{
+  "id": 419,
+  "description": "A close-up cinematic portrait of a person sitting beside a window, wearing headphones with eyes closed, fully absorbed in music. Warm sunlight pours in from the side, wrapping the face in golden tones while deep shadows shape the features. The messy curly hair catches the backlight, giving a soft glowing edge. The background stays blurred with a shallow depth of field, making the moment feel intimate and isolated. The final output feels like a 35mm film still with Kodak Portra color tones, soft grain, and a nostalgic, emotional atmosphere that looks like a paused memory rather than a staged shot.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cinematic portrait, golden hour lighting, headphone portrait, window light photography, 35mm film look, kodak portra color grading, shallow depth of field, film grain aesthetic, nostalgic mood, warm tones, aesthetic wallpaper, moody lighting",
+  "image": "419.jpeg",
+  "file_path": "/prompt/cinematic-golden-hour-headphones-window-portrait-aesthetic",
+  "key": "SAE419"
+},
+{
+  "id": 420,
+  "description": "A realistic full-body portrait of a person standing on indoor stairs in a dark, stylish apartment setting. The subject leans casually against the wall with a confident, slightly side-facing pose captured from a low-angle wide shot. Soft cozy lighting glows behind, shaping subtle shadows across the black-themed interior. The outfit stands out clearly with a black oversized full-sleeve t-shirt featuring front design details, paired with white baggy jeans and black sports shoes. The skin tone looks natural and balanced under controlled lighting, while the background stays dim and cinematic, keeping focus entirely on the subject’s posture and presence.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cinematic portrait, black apartment aesthetic, stairs portrait pose, low angle photography, full body portrait, moody lighting, fashion streetwear look, realistic human portrait, dark interior lighting, urban aesthetic style, wide angle shot, stylish outfit photography",
+  "image": "420.jpeg",
+  "file_path": "/prompt/cinematic-black-apartment-stairs-portrait-aesthetic-pose",
+  "key": "SAE420"
 }
 ]
