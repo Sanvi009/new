@@ -3318,5 +3318,45 @@
   "image": "420.jpeg",
   "file_path": "/prompt/cinematic-black-apartment-stairs-portrait-aesthetic-pose",
   "key": "SAE420"
+},
+{
+  "id": 421,
+  "description": "This prompt generates a striking, high-angle black and white photograph featuring a central figure surrounded by a group of individuals on a cobblestone street. The aesthetic is heavily inspired by moody street fashion editorials, utilizing high contrast lighting and cohesive all-black wardrobe elements like blazers, hoodies, and custom-logo baseball caps. Users will receive a highly detailed, cinematic image shot from a drone or balcony perspective, capturing intense facial expressions and gritty urban textures perfect for fashion portfolios or striking social media content.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, midjourney v6 prompt, black and white photography, high angle shot, street fashion editorial, cinematic group photo, moody urban atmosphere, all black outfit, drone perspective portrait, striking facial features",
+  "image": "421.jpeg",
+  "file_path": "/prompt/high-angle-black-and-white-street-fashion-group-photography-prompt",
+  "key": "SAE421"
+},
+{
+  "id": 422,
+  "description": "This prompt creates a highly detailed 3D photo manipulation where the central subject appears to rip through a digital social media interface. You will see a realistic torn paper effect bursting from a smartphone or computer screen, creating a strong sense of depth. The background interface mimics a modern social network profile, complete with stats, bio, and a verified badge. The final image combines vibrant colors on the subject with clean, soft shadows on the digital UI, producing an eye-catching, surreal trompe l'œil effect perfect for profile pictures or engaging posts.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, 3d photo manipulation, social media interface, torn paper effect, screen breakout, 4k resolution, cinematic lighting, digital trompe l'oeil, profile picture ideas, surreal UI art, creative avatar design",
+  "image": "422.jpeg",
+  "file_path": "/prompt/3d-social-media-torn-screen-breakout-effect-prompt",
+  "key": "SAE422"
+},
+{
+  "id": 423,
+  "description": "This prompt produces an intense, ultra-realistic black-and-white portrait of the user styled as a professional Formula 1 driver inside a moody, dimly lit racing garage. The scene relies heavily on dramatic lighting and high contrast, drawing attention to a highly detailed racing suit adorned with realistic sponsor logos. A unique selective color effect highlights the vibrant branding on the helmet being held, creating a visually striking editorial aesthetic that looks exactly like a high-end sports magazine cover.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, formula 1 driver portrait, black and white cinematic photography, selective color helmet, moody garage lighting, racing suit editorial, 8k resolution, photorealistic character reference, sports professional portrait, dramatic monochrome portrait",
+  "image": "423.jpeg",
+  "file_path": "/prompt/cinematic-bw-formula-1-driver-portrait-prompt",
+  "key": "SAE423"
+},
+{
+  "id": 424,
+  "description": "This prompt generates a striking, ultra-realistic cinematic portrait of a male character in a perfect 90-degree left-facing side profile. The most captivating element is a brilliantly glowing vertical lightsaber held incredibly close to the subject's face, casting intense, dramatic lighting across their features. Shot from the chest up with natural proportions, this composition creates an epic, sci-fi movie poster aesthetic. Users will receive a highly detailed, character-focused image perfect for science fiction avatars, cinematic storytelling, or dramatic profile pictures.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cinematic side profile, glowing lightsaber portrait, sci-fi character design, perfect profile view, dramatic lighting photography, realistic movie poster style, ultra-detailed face lighting, sci-fi avatar generation, neon weapon glow",
+  "image": "424.jpg",
+  "file_path": "/prompt/cinematic-profile-portrait-with-glowing-lightsaber-prompt",
+  "key": "SAE424"
+},
+{
+  "id": 425,
+  "description": "This prompt produces a striking, ultra-realistic conceptual portrait blending modern streetwear aesthetics with deep surrealism. The user will see a casually dressed subject sitting directly on top of a massive, hyper-realistic replica of their own detached head. Set against a clean, minimal beige studio background, the image features bold, integrated typography that reads 'HEAVY ON MY OWN HEAD.' The final result is a high-resolution, fashion-editorial quality image perfect for conveying themes of introspection, mental weight, and modern identity through a highly creative visual metaphor.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, surreal conceptual portrait, giant head illusion, streetwear fashion campaign, integrated typography, minimal studio background, introspection concept art, hyper-realistic surrealism, heavy on my own head, contemporary editorial photography",
+  "image": "425.jpeg",
+  "file_path": "/prompt/surreal-streetwear-giant-head-conceptual-portrait-prompt",
+  "key": "SAE425"
 }
 ]
