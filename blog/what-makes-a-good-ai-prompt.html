@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Makes a Good AI Prompt? A Beginner-Friendly Guide | Brainloom</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A thoughtful guide to writing better AI prompts. Learn why specificity matters, what AI actually needs from you, and how to think like a prompt designer.">
+    <meta name="keywords" content="AI prompts, prompt engineering, writing prompts, AI guide, prompt tips, AI image prompts, prompt framework">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow">
+
+    <!-- Font Awesome (deferred) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ----- PROFESSIONAL NAVBAR (from uploaded ecosystem) ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7e0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            background: #f0f4fa;
+            border-radius: 8px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-link {
+            padding: 8px 18px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+        }
+
+        .nav-link.active {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+
+        .legal-dropdown {
+            position: relative;
+        }
+
+        .legal-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #1e3a5f;
+            cursor: default;
+            border-radius: 40px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .legal-trigger i {
+            font-size: 12px;
+            color: #2d4b6e;
+            transition: transform 0.2s;
+        }
+
+        .legal-dropdown:hover .legal-trigger i {
+            transform: rotate(180deg);
+        }
+
+        .legal-dropdown:hover .legal-trigger {
+            background: #e9ecf0;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid #d0d7e0;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+
+        .legal-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            border-left-color: #1a5cff;
+        }
+
+        .mobile-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #eef2f6;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d0d7e0;
+        }
+
+        .mobile-btn span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            display: none;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 16px;
+            padding: 20px 16px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e2b3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+        }
+
+        .mobile-menu a:hover {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+        }
+
+        .mobile-menu a.active {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+
+        .mobile-legal {
+            margin-top: 8px;
+        }
+
+        .mobile-legal p {
+            padding: 8px 16px 4px;
+            color: #2d4b6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        /* ----- EDITORIAL ARTICLE PAGE STYLES ----- */
+        .article-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 48px 0 60px;
+            width: 100%;
+        }
+
+        .article-header {
+            margin-bottom: 48px;
+            text-align: left;
+            border-bottom: 1px solid #e1e8f0;
+            padding-bottom: 32px;
+        }
+
+        .article-category {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #1a5cff;
+            background: #eef4ff;
+            padding: 4px 14px;
+            border-radius: 40px;
+            margin-bottom: 16px;
+        }
+
+        .article-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #0b1a2c;
+            margin-bottom: 12px;
+        }
+
+        .article-subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #2d4b6e;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.95rem;
+            color: #4a6a8a;
+            flex-wrap: wrap;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .article-meta i {
+            color: #6a8aaa;
+        }
+
+        .article-body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #1e2b3c;
+        }
+
+        .article-body p {
+            margin-bottom: 1.6em;
+        }
+
+        .article-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 2.4em;
+            margin-bottom: 0.6em;
+            color: #0b1a2c;
+            letter-spacing: -0.01em;
+        }
+
+        .article-body h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 1.8em;
+            margin-bottom: 0.4em;
+            color: #0b1a2c;
+        }
+
+        .article-body blockquote {
+            border-left: 4px solid #1a5cff;
+            padding: 16px 24px;
+            margin: 1.6em 0;
+            background: #f0f4fa;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #1e3a5f;
+        }
+
+        .article-body blockquote p {
+            margin-bottom: 0.4em;
+        }
+
+        .article-body blockquote p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-body ul, .article-body ol {
+            margin: 1em 0 1.6em 1.6em;
+            padding-left: 0.8em;
+        }
+
+        .article-body li {
+            margin-bottom: 0.4em;
+        }
+
+        .article-body .pull-quote {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #0b1a2c;
+            border-left: none;
+            text-align: center;
+            padding: 24px 16px;
+            background: transparent;
+            border-top: 2px solid #d0d7e0;
+            border-bottom: 2px solid #d0d7e0;
+            margin: 2em 0;
+            font-style: normal;
+            line-height: 1.4;
+        }
+
+        .article-body .pull-quote i {
+            color: #1a5cff;
+            margin-right: 8px;
+        }
+
+        .article-body .example-box {
+            background: #f0f4fa;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 1.6em 0;
+            border: 1px solid #dce4ee;
+        }
+
+        .article-body .example-box strong {
+            color: #0b1a2c;
+        }
+
+        .article-body .example-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-body .small-note {
+            font-size: 0.95rem;
+            color: #4a6a8a;
+            background: #f8fafc;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid #e1e8f0;
+            margin: 1.2em 0;
+        }
+
+        .article-footer {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #e1e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .article-footer .author-bio {
+            font-size: 0.95rem;
+            color: #2d4b6e;
+            max-width: 70%;
+        }
+
+        .article-footer .author-bio strong {
+            color: #0b1a2c;
+        }
+
+        .article-footer .share-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .article-footer .share-links a {
+            color: #4a6a8a;
+            font-size: 1.2rem;
+            transition: color 0.15s;
+            text-decoration: none;
+        }
+
+        .article-footer .share-links a:hover {
+            color: #1a5cff;
+        }
+
+        /* ----- PROFESSIONAL FOOTER (from uploaded ecosystem) ----- */
+        .footer {
+            background: #0f1a26;
+            color: #e1eaf2;
+            padding: 40px 0 24px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.8fr;
+            gap: 40px 50px;
+            align-items: start;
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            padding: 0 24px;
+        }
+
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+
+        .footer-links a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+
+        .footer-social h4 {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .social-item a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+
+        .social-item a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+
+        .social-item i {
+            width: 20px;
+            font-size: 1.1rem;
+            color: #8fadcf;
+        }
+
+        .social-item a:hover i {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #8ba0b9;
+            font-size: 0.85rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+            .article-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-wrapper {
+                padding: 32px 20px 40px;
+            }
+            .article-title {
+                font-size: 1.9rem;
+            }
+            .article-subtitle {
+                font-size: 1rem;
+            }
+            .article-body {
+                font-size: 1rem;
+            }
+            .article-body h2 {
+                font-size: 1.5rem;
+            }
+            .article-body h3 {
+                font-size: 1.1rem;
+            }
+            .article-body .pull-quote {
+                font-size: 1.2rem;
+            }
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-btn {
+                display: flex;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+            .article-footer .author-bio {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-brand h3 {
+                font-size: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .article-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-wrapper {
+                padding: 24px 16px 32px;
+            }
+            .article-title {
+                font-size: 1.4rem;
+            }
+            .article-header {
+                margin-bottom: 32px;
+                padding-bottom: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PROFESSIONAL NAVBAR (from uploaded ecosystem) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo-link">
+                <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <span class="logo-text">Brainloom</span>
+            </a>
+
+            <div class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/prompts" class="nav-link">Prompts</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="legal-dropdown">
+                    <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/">Home</a>
+                <a href="/prompts">Prompts</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT – EDITORIAL ARTICLE PAGE -->
+    <main class="main-content" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; flex: 1;">
+        <div class="article-wrapper">
+
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-category">AI &amp; Creativity</div>
+                <h1 class="article-title">What Makes a Good AI Prompt? A Beginner-Friendly Guide</h1>
+                <p class="article-subtitle">The real secret to working with AI isn't a formula. It's understanding what the model actually needs from you.</p>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> May 22, 2026</span>
+                    <span><i class="far fa-user"></i> Sanvi Al Evan</span>
+                    <span><i class="far fa-clock"></i> 10 min read</span>
+                </div>
+            </header>
+
+            <!-- Article Body -->
+            <div class="article-body">
+
+                <p>A few months ago, I watched a friend type something into ChatGPT, stare at the reply, and frown. He leaned back and said, almost annoyed, "I don't get it. Sometimes it's brilliant. Sometimes it's completely useless. And I'm asking basically the same kind of thing."</p>
+
+                <p>He wasn't wrong to be frustrated. He just didn't know what was actually happening. And honestly, most people don't. We've been told AI is this magical oracle, so when it gives us something bland, confusing, or weirdly off-topic, we blame ourselves for not knowing the secret handshake. Or we blame the AI for being dumb.</p>
+
+                <p>What I realized, after watching this happen over and over — to friends, to colleagues, to strangers in forums — is that most people are never actually taught what a prompt even is. Not really. They're given templates and tricks. But no one explains the thinking underneath.</p>
+
+                <p>So here's my attempt to fix that. Not with a list of "10 perfect prompt formulas," but by walking through what I've learned about what makes an AI prompt actually work. The real stuff. The messy, human stuff.</p>
+
+                <h2>A prompt is not a search query</h2>
+
+                <p>This is the first thing to unlearn, and it's harder than it sounds. We've spent twenty years training ourselves to talk to Google: short, keyword-heavy, no context. You type "best coffee shop Brooklyn" and Google figures out the rest.</p>
+
+                <p>People bring that exact same behavior to AI. And it fails in a very specific way.</p>
+
+                <p>A search engine is trying to match your words to existing pages. An AI is trying to generate a response from scratch, using your prompt as the only direction it has. If your direction is thin, the response will be thin. Not because the AI is bad, but because you gave it nothing to work with.</p>
+
+                <p>I saw someone post this prompt in a forum once: "Tell me about marketing."</p>
+
+                <p>That's it. That's the whole prompt.</p>
+
+                <p>What do you think happened? The AI gave them a dictionary definition. A bland, surface-level paragraph you could find on any Wikipedia page. They were frustrated, thinking the tool was overhyped. But honestly? What else could it have done? The AI doesn't know if you're a student writing a paper, a founder figuring out customer acquisition, or someone trying to understand what their marketing team actually does all day. So it plays it safe. And safe is boring.</p>
+
+                <div class="example-box">
+                    <p><strong>Compare that to:</strong> "I run a small online ceramics shop and I've never done any real marketing. I want to understand the basic ways I could start finding customers, but I don't have a big budget and I'm not a social media person. Explain my options like you're walking me through it over coffee."</p>
+                </div>
+
+                <p>The difference isn't just detail. It's context. The second prompt gives the AI a world to operate in: who this person is, what they need, what they're afraid of, and how they want to be talked to. That's not extra fluff. That's the actual fuel the model runs on.</p>
+
+                <h2>The three things every good prompt does</h2>
+
+                <p>Over time, I've started to think about prompts in terms of three jobs they need to perform. If one of these is missing, the output usually falls apart in a predictable way.</p>
+
+                <h3>1. It frames the world</h3>
+
+                <p>The AI needs to know what reality it's operating in. Not abstractly — concretely. Who are you? What are you doing? What does the situation look like?</p>
+
+                <p>This is what people miss when they say "just be clear." Clarity isn't about using simple words. It's about reducing the number of possible interpretations the AI has to guess between. Every unstated assumption is a place the model can go wrong.</p>
+
+                <p><strong>What this sounds like in practice:</strong> Instead of "give me a workout plan," try "I'm 34, I haven't exercised regularly in about two years, and I have a desk job. I can commit to 30 minutes, three times a week. I have a pair of dumbbells and a yoga mat. Give me a plan that won't wreck me in the first week."</p>
+
+                <h3>2. It defines what "good" looks like</h3>
+
+                <p>The AI doesn't know what success means to you unless you tell it. Most bad prompts assume the AI will magically infer the quality criteria. It won't.</p>
+
+                <p>This is where you describe the shape of the answer you want. Not just the format — though format helps — but the qualities that matter. Conversational or formal? Step-by-step or big-picture? Practical or theoretical?</p>
+
+                <p><strong>What this sounds like in practice:</strong> Instead of "explain how to negotiate salary," try "explain how to negotiate salary for someone who hates confrontation. I want exact phrasing I can use, not general principles. Give me three different approaches based on different personality types."</p>
+
+                <h3>3. It removes the escape hatches</h3>
+
+                <p>When the AI doesn't know what you want, it defaults to the safest, most generic version of the answer. The "on the one hand, on the other hand" fence-sitting. The surface-level summary that never commits.</p>
+
+                <p>Good prompts close off the easy paths. They force the AI to actually engage with the specific problem, not dance around it.</p>
+
+                <p><strong>What this sounds like in practice:</strong> Instead of "what's a good business idea?", try "I want to start a small side business with $500 or less. I'm good at writing and explaining complex topics simply, but I can't code and I don't want to do freelance client work. Give me 5 specific ideas and tell me which one you think has the best chance of making $500/month within 6 months, and why."</p>
+
+                <p>Notice what happened there. The last sentence — "tell me which one you think has the best chance" — forces a stance. No fence-sitting. The AI has to evaluate and commit, which leads to a much more useful, opinionated answer.</p>
+
+                <h2>Why specificity actually matters</h2>
+
+                <p>I used to think "be specific" was obvious advice. But I've realized most people don't actually know what specificity means in this context. They think it means adding more words. It doesn't. It means reducing ambiguity.</p>
+
+                <p>Here's a little mental model that helped me: Every vague word in your prompt is a decision you're forcing the AI to make for you. And the AI, not knowing you, will make the safest, most average choice possible. That's how you end up with output that feels generic.</p>
+
+                <p>Take the word "good." That's probably the most dangerous word in prompting. "Write a good headline." "Give me good advice." Good according to whom? By what standard? For what audience?</p>
+
+                <p>I was helping someone refine a prompt for a cover letter recently. Her original prompt was: "Write a good cover letter for a marketing manager position."</p>
+
+                <p>What does "good" mean here? Professional but not stiff? Enthusiastic but not desperate? Short or detailed? The AI doesn't know the company culture, her actual personality, or what the hiring manager cares about. It's going to produce something that sounds like every other cover letter ever written.</p>
+
+                <p>We rewrote it to something like: "I'm applying for a marketing manager role at a small outdoor gear company. Their brand voice is casual, adventure-focused, and slightly irreverent. I want the cover letter to feel like a real person wrote it — no corporate jargon, no 'I'm excited to apply for this opportunity' stuff. Mention that I noticed they sponsor local trail-building projects and that genuinely matters to me. Keep it under 200 words."</p>
+
+                <p>The output wasn't just better. It was hers. That's the actual goal. Not perfection — specificity to the person.</p>
+
+                <h2>What I wish more people understood about AI's limitations</h2>
+
+                <p>There's a moment I see happen a lot. Someone uses AI successfully a few times, gets excited, and then starts treating it like it knows everything. That's when things fall apart.</p>
+
+                <p>AI doesn't know what's true. It knows what sounds like things that are true. That's a massive difference. If you prompt it about a topic where you have zero domain knowledge, you have no way of catching when it confidently tells you something completely wrong.</p>
+
+                <p>This isn't a failure of prompting technique. It's a limitation of the technology. But there's a prompting lesson here anyway: the best prompts come from people who already know enough to guide the AI and evaluate the output.</p>
+
+                <p><strong>What this means practically:</strong> Use AI for things where you can judge the quality of the answer. If you can't tell good from bad in that domain, either learn enough first or use the AI as a starting point you then verify elsewhere. Don't ask it to explain a medical diagnosis if you have no medical knowledge. Don't ask it for legal advice if you can't spot a legal error.</p>
+
+                <p>I think of AI more like a very smart, very fast intern who has read everything but has no judgment. You still have to be the editor. You still have to be the one who knows what you're trying to achieve.</p>
+
+                <h2>The trick that changed how I prompt</h2>
+
+                <p>Here's something I stumbled into that I haven't seen talked about much. Sometimes the best prompt isn't a command at all. It's a scenario.</p>
+
+                <p>Instead of telling the AI what to do, you describe a situation and invite it into a role. This works especially well for tasks that require a certain tone or perspective.</p>
+
+                <p>For example, I wanted help thinking through a difficult conversation I needed to have. I could have prompted: "Give me advice on having a difficult conversation with a colleague." That probably would have gotten me decent, generic advice.</p>
+
+                <p>Instead, I wrote: "You're a thoughtful, experienced manager known for handling difficult situations with empathy and directness. I need to tell a colleague that their constant missed deadlines are affecting the team's morale, but I want to do it in a way that doesn't make them defensive. Walk me through how you'd approach this conversation, word for word."</p>
+
+                <p>The difference in output was striking. The role-playing prompt didn't just give advice — it gave me a voice, a persona to inhabit. It made the abstract feel concrete.</p>
+
+                <p>What I realized is that AI responds to narrative. It's been trained on human text, and humans communicate through stories and roles. So when you give it a role, you're essentially saying "operate from this specific point of view, not the generic omniscient assistant viewpoint." That constraint often produces much more focused, useful output.</p>
+
+                <h2>A few things that reliably fail</h2>
+
+                <p>I want to share some failure patterns I've observed, because avoiding bad prompts is just as important as writing good ones.</p>
+
+                <p><strong>The essay question prompt.</strong> "Write about the history of photography." The AI will write something. It might even be factually accurate. But it will be the most generic version of that topic possible, because you haven't given it any angle, any audience, any reason to choose one direction over another. It's a prompt that abdicates all decision-making to the AI, and the AI will make the blandest decisions available.</p>
+
+                <p><strong>The mind-reader prompt.</strong> "Do what you think is best." The AI doesn't think. It doesn't have preferences. It doesn't know what "best" means to you. This prompt is essentially asking a calculator to decide what math problem to solve.</p>
+
+                <p><strong>The overloaded prompt.</strong> "Write a blog post about productivity, but also mention AI tools, and make it inspiring, and include statistics, and keep it under 500 words, and add a call to action, and make it funny." The AI will try to do all of these things at once, and the result will be a mess. Each instruction competes for attention. Choose what actually matters and let the rest go.</p>
+
+                <p><strong>The zero-shot expert prompt.</strong> Asking the AI to produce expert-level output with no context about what expertise looks like in that situation. "Write a legal brief." Unless you specify jurisdiction, type of case, level of formality, and which side you're arguing for, the output will be a caricature.</p>
+
+                <h2>A practical framework I actually use</h2>
+
+                <p>I don't like rigid formulas, but I do have a rough mental checklist I run through before I send a prompt. It's not a template. It's more like three questions:</p>
+
+                <ul>
+                    <li><strong>If I were a human and someone asked me this, would I know what they actually wanted?</strong> This is the honesty test. If the answer is no, I haven't given enough context. I add more until a reasonable person could actually do the task.</li>
+                    <li><strong>What's the one thing I most want to avoid in the response?</strong> Naming the failure mode explicitly often helps prevent it. "Don't be generic." "Don't use corporate jargon." "Don't give me the safe, obvious answer." I find this sometimes works better than only describing what you want.</li>
+                    <li><strong>Am I asking for the thing I actually want, or just something adjacent to it?</strong> This is the one I mess up most often. I'll ask for "a list of tips" when what I really want is "an explanation of the underlying principle so I can figure out my own approach." I'll ask for "ideas" when what I really want is "a single, strong, opinionated recommendation." Being honest about what I actually need saves a lot of back-and-forth.</li>
+                </ul>
+
+                <h2>Where I've landed</h2>
+
+                <p>Here's what I actually think now, after all the time I've spent with this.</p>
+
+                <p>The quality of an AI prompt is mostly determined by how much thinking you do before you write it. The typing is the easy part. The hard part is getting clear on what you're actually trying to do, why it matters, and what "good" would look like.</p>
+
+                <p>That's inconvenient. It means there's no shortcut. It means the people who get the most out of AI aren't the ones with the cleverest prompt tricks — they're the ones who think clearly about their own goals and communicate them precisely.</p>
+
+                <p>But there's something kind of hopeful in that too. It means the skill of prompting well is actually just the skill of thinking well, made visible. And that's a skill that pays off everywhere, not just with AI.</p>
+
+                <p>So if you take one thing from this, let it be that. The next time you're about to type something into an AI, pause for ten seconds. Ask yourself: <em>What am I actually trying to do here? What would make the answer genuinely useful to me?</em> Then write that down instead.</p>
+
+                <p>The rest is just practice.</p>
+
+            </div>
+
+            <!-- Article Footer -->
+            <div class="article-footer">
+                <div class="author-bio">
+                    <strong>Sanvi Al Evan</strong> is the founder of Brainloom, a library of tested AI image prompts for creators. She writes about AI creativity, prompt design, and the human side of working with generative tools.
+                </div>
+                <div class="share-links">
+                    <a href="#" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- PROFESSIONAL FOOTER (from uploaded ecosystem) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+            </div>
+
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/prompts">Prompts</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="/links.html">Directory</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
