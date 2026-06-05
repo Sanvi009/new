@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of AI Creativity and Digital Design | Brainloom</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A thoughtful exploration of how AI is reshaping digital design — from the shift from maker to curator, to the real role of taste in an AI-augmented creative process.">
+    <meta name="keywords" content="AI creativity, digital design, AI prompts, Midjourney, DALL-E, creative process, designer, brainloom, Sanvi Al Evan">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow">
+    <!-- Font Awesome (deferred) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* ----- PROFESSIONAL NAVBAR (from reference) ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7e0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            background: #f0f4fa;
+            border-radius: 8px;
+            object-fit: contain;
+            display: block;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+        }
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-link {
+            padding: 8px 18px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+        }
+        .nav-link.active {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .legal-dropdown {
+            position: relative;
+        }
+        .legal-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #1e3a5f;
+            cursor: default;
+            border-radius: 40px;
+            border-bottom: 2px solid transparent;
+        }
+        .legal-trigger i {
+            font-size: 12px;
+            color: #2d4b6e;
+            transition: transform 0.2s;
+        }
+        .legal-dropdown:hover .legal-trigger i {
+            transform: rotate(180deg);
+        }
+        .legal-dropdown:hover .legal-trigger {
+            background: #e9ecf0;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid #d0d7e0;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+        .legal-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            border-left-color: #1a5cff;
+        }
+        .mobile-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #eef2f6;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d0d7e0;
+        }
+        .mobile-btn span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 16px;
+            padding: 20px 16px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e2b3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+        }
+        .mobile-menu a:hover {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+        }
+        .mobile-menu a.active {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .mobile-legal {
+            margin-top: 8px;
+        }
+        .mobile-legal p {
+            padding: 8px 16px 4px;
+            color: #2d4b6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        /* ----- ARTICLE LAYOUT (editorial reading experience) ----- */
+        .article-wrapper {
+            max-width: 760px;
+            margin: 40px auto 60px;
+            padding: 0 32px;
+            flex: 1;
+        }
+        /* ----- ARTICLE TYPOGRAPHY & SPACING ----- */
+        .article-header {
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #dce3ec;
+        }
+        .article-category {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            color: #1a5cff;
+            background: rgba(26, 92, 255, 0.08);
+            padding: 4px 14px;
+            border-radius: 30px;
+            margin-bottom: 16px;
+        }
+        .article-title {
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            color: #4f6f8f;
+            font-size: 0.95rem;
+        }
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .article-meta i {
+            font-size: 0.85rem;
+            color: #7b98b8;
+        }
+        .article-body {
+            font-size: 1.1rem;
+            color: #1e2b3c;
+        }
+        .article-body p {
+            margin-bottom: 1.6rem;
+        }
+        .article-body h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0b1a2c;
+            margin-top: 2.8rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #13293f;
+            margin-top: 2.2rem;
+            margin-bottom: 0.6rem;
+        }
+        .article-body blockquote {
+            border-left: 4px solid #1a5cff;
+            padding: 12px 20px 12px 24px;
+            margin: 1.8rem 0 1.8rem 0;
+            background: #f0f4fa;
+            border-radius: 0 12px 12px 0;
+            color: #1e3a5f;
+            font-style: italic;
+            font-size: 1.05rem;
+        }
+        .article-body blockquote p {
+            margin-bottom: 0;
+        }
+        .article-body .pull-quote {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #0b1a2c;
+            line-height: 1.4;
+            padding: 20px 0 20px 28px;
+            border-left: 3px solid #1a5cff;
+            margin: 2rem 0 2rem 0;
+            background: transparent;
+        }
+        .article-body .pull-quote i {
+            color: #1a5cff;
+            margin-right: 6px;
+        }
+        .article-body ul {
+            margin: 1.2rem 0 1.8rem 1.8rem;
+            padding-left: 8px;
+        }
+        .article-body ul li {
+            margin-bottom: 0.5rem;
+            list-style-type: disc;
+        }
+        .article-footer-note {
+            margin-top: 3.2rem;
+            padding-top: 24px;
+            border-top: 1px solid #dce3ec;
+            font-size: 0.95rem;
+            color: #4f6f8f;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .article-footer-note a {
+            color: #1a5cff;
+            text-decoration: none;
+        }
+        .article-footer-note a:hover {
+            text-decoration: underline;
+        }
+        /* ----- PROFESSIONAL FOOTER (from reference) ----- */
+        .footer {
+            background: #0f1a26;
+            color: #e1eaf2;
+            padding: 40px 0 24px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.8fr;
+            gap: 40px 50px;
+            align-items: start;
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            padding: 0 24px;
+        }
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+        .footer-links a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+        .footer-links a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .footer-social h4 {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .social-item a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+        .social-item a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .social-item i {
+            width: 20px;
+            font-size: 1.1rem;
+            color: #8fadcf;
+        }
+        .social-item a:hover i {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #8ba0b9;
+            font-size: 0.85rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+        }
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 768px) {
+            .article-wrapper {
+                padding: 0 20px;
+                margin: 30px auto 40px;
+            }
+            .article-title {
+                font-size: 2rem;
+            }
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-btn {
+                display: flex;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+        @media (max-width: 650px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-brand h3 {
+                font-size: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .article-title {
+                font-size: 1.8rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .article-wrapper {
+                padding: 0 16px;
+                margin: 25px auto 30px;
+            }
+            .article-title {
+                font-size: 1.6rem;
+            }
+            .article-body {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PROFESSIONAL NAVBAR (from reference) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo-link">
+                <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <span class="logo-text">Brainloom</span>
+            </a>
+            <div class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="legal-dropdown">
+                    <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ARTICLE CONTENT (full editorial long-form) -->
+    <main class="article-wrapper">
+        <article>
+            <header class="article-header">
+                <span class="article-category">Essays &amp; Perspectives</span>
+                <h1 class="article-title">The Future of AI Creativity and Digital Design</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> May 22, 2026</span>
+                    <span><i class="far fa-user"></i> Sanvi Al Evan</span>
+                    <span><i class="far fa-clock"></i> 9 min read</span>
+                </div>
+            </header>
+            <div class="article-body">
+                <p>I've been watching something shift in the design world over the last year. It's subtle, but once you see it, you can't unsee it.</p>
+                <p>A friend of mine runs a small branding studio. She's been designing for about twelve years. Last month, she told me she spent an entire morning generating a hundred logo variations in Midjourney, picked three she liked, then spent the rest of the week tweaking them manually. She said the weirdest part wasn't the speed. It was the feeling that the computer kept surprising her.</p>
+                <p>"I'd prompt something, and it would give me back an idea I would never have had on my own," she said. "It's like having a junior designer who has no ego, no fatigue, and occasionally shows you something genuinely unexpected."</p>
+                <p>That's the part nobody's talking about enough. Not the efficiency. Not the speed. The surprise.</p>
+                <p>For years, we talked about AI in creative work as if it were an automation tool. A faster way to do the same things. Resize images. Generate color palettes. Remove backgrounds. Useful, sure. But boring. The real shift isn't about doing old tasks faster. It's that the machine has started to feel, in some strange way, like a creative participant.</p>
+                <p>And that changes everything about what digital design is about to become.</p>
+                <h2>The old argument was the wrong argument</h2>
+                <p>You've probably heard some version of the debate. One side says AI will never be truly creative because it just remixes existing work. The other side says human creativity is also just remixing, so what's the difference?</p>
+                <p>I think both miss the point entirely.</p>
+                <p>The question isn't whether AI can be creative in the way humans are. It can't. Not because it lacks some mystical soul, but because it doesn't have context. It doesn't know what it feels like to be heartbroken and see a certain shade of blue and want to capture that exact feeling in a composition. It doesn't know why a particular layout feels calming or aggressive or nostalgic. It just knows the statistical relationship between those feelings and certain visual patterns.</p>
+                <p>But here's what I realized: that doesn't actually matter.</p>
+                <p>What matters is that the output behaves as if it understands. And increasingly, it does. An AI doesn't need to know why a certain color combination evokes 1970s album cover nostalgia. It just needs to replicate the pattern well enough that a human viewer feels the reference. And it's getting very good at that.</p>
+                <p>So the old argument — "is AI creative?" — is a philosophical dead end. The more useful question is: what happens to the design process when the tools start generating genuinely surprising, emotionally resonant visual ideas at scale?</p>
+                <div class="pull-quote">
+                    <i class="fas fa-quote-left"></i> The more useful question is: what happens to the design process when the tools start generating genuinely surprising, emotionally resonant visual ideas at scale?
+                </div>
+                <h2>Moving from creator to curator (and why that's uncomfortable)</h2>
+                <p>Here's where it gets personal for a lot of designers I know.</p>
+                <p>If you've spent years, maybe decades, building a skill — let's say illustration, or typography, or layout composition — there's something deeply destabilizing about typing a few words and seeing a machine produce something that would have taken you two days. Even if the AI version isn't perfect. Even if it's rough around the edges. The speed alone feels like a judgment.</p>
+                <p>I've talked to designers who describe a kind of identity crisis. If the tool does the generating, what exactly is my role?</p>
+                <p>I think the answer is uncomfortable but clear. The role shifts from maker to curator. From executor to director.</p>
+                <p>In film, nobody asks whether the director is "really" making the movie just because they're not operating the camera or acting in the scenes. The director's job is taste. Vision. Choosing. Saying no to ninety-nine things so the one right thing survives.</p>
+                <p>AI forces designers into that director role faster than many are ready for. You're no longer just crafting. You're guiding an output stream, evaluating dozens or hundreds of variations, and making judgment calls at a much higher level of abstraction.</p>
+                <p>And here's the thing: that's a harder skill.</p>
+                <p>Making something from scratch is difficult, but evaluating something — really seeing it clearly, understanding why it works or doesn't, and making decisive choices — that's rarer. It's also harder to teach. You develop it through years of looking, critiquing, and failing.</p>
+                <p>What's ironic is that AI might actually widen the gap between good designers and great ones. The technical execution barrier drops to near zero. Anyone can generate a decent-looking layout now. But the ability to recognize a great layout amid a sea of decent ones? That becomes more valuable, not less.</p>
+                <h2>The taste problem</h2>
+                <p>I want to pause here because this is the part that worries me.</p>
+                <p>When AI generates design options, it tends toward the statistically average. That's literally how the models work — they predict the most likely next pixel or token based on training data. The result is often something that looks good in a generic way. Competent. Safe. On-trend for last year.</p>
+                <p>But great design isn't average. It's specific. Sometimes it's deliberately wrong in ways that create tension or interest.</p>
+                <p>A designer friend of mine put it this way: "Midjourney makes things that look like what a design student thinks good design looks like." It's harsh but not entirely unfair. The AI has seen millions of examples of "good" design and learned the surface patterns. What it hasn't learned is the difficult, context-specific reasoning that makes a particular design choice brilliant for a particular brief.</p>
+                <p>So there's a real risk here. If we're not careful, AI-assisted design could lead to a kind of visual monoculture. Everything starts looking vaguely the same — that polished, slightly surreal, high-gloss aesthetic you see everywhere now. It's impressive the first few times. Then it becomes wallpaper.</p>
+                <p>The designers who will thrive are the ones who can push past the AI's default taste. Who can recognize when the machine is giving them something too safe and say, "No, that's boring. Try something stranger."</p>
+                <h2>What I'm actually seeing in practice</h2>
+                <p>I want to ground this with some real examples, because abstractions only get you so far.</p>
+                <p>A product designer I know has been using AI in an unexpected way. Instead of generating final assets, she uses it early in the process, before she even knows what she's making. She'll prompt with vague, almost poetic descriptions — "a user interface that feels like walking through a quiet museum," things like that — not to get usable designs, but to see what visual directions emerge. The AI serves as a kind of creative mirror, reflecting back patterns she hadn't consciously considered.</p>
+                <p>She says about 80% of what comes back is useless. But the 20% that surprises her often becomes the seed for a direction she then develops manually. The AI isn't doing the design. It's doing something closer to visual brainstorming, at a speed and variety that would be impossible with mood boards or sketching alone.</p>
+                <p>Another example: a small agency I follow has started using AI to generate design variations for client presentations. Not final work — comps. The kind of thing you'd normally spend a junior designer's afternoon creating. The creative director reviews maybe sixty AI variations, pulls out five that feel interesting, then the team refines those manually.</p>
+                <p>The result isn't that they've fired anyone. It's that the junior designer now spends more time on craft and detail and less time grinding out options that were never going to get picked anyway. The work is better, and the team is less burned out.</p>
+                <p>Those examples feel more honest to me than the extreme narratives. It's not "AI replaces designers" or "AI is just a tool like any other." It's something messier. The boundaries are blurring, and different teams are figuring it out as they go.</p>
+                <h2>The thing nobody prepared me for</h2>
+                <p>There's an emotional dimension here that I don't see discussed often enough.</p>
+                <p>When you work with AI long enough, you start to develop a strange relationship with it. Not anthropomorphizing exactly. More like… learning its personality. Every model has tendencies. Preferences. Things it's weirdly good at and things it consistently botches.</p>
+                <p>Midjourney has a certain aesthetic gravity. It wants things to look cinematic, atmospheric, a little dreamlike. DALL-E is different. Stable Diffusion behaves differently depending on how you tune it.</p>
+                <p>Experienced users develop an intuition for this. They know which model to reach for based on the kind of surprise they're looking for. It starts to feel less like using a tool and more like collaborating with someone who has a strong but slightly unpredictable creative voice.</p>
+                <p>I don't think this is mystical. It's pattern recognition, on both sides. The user learns the model's patterns, and the model reflects patterns from its training data. But the subjective experience is genuinely collaborative, in a way that a Photoshop layer or an Illustrator path has never been.</p>
+                <p>And that's the part I find myself thinking about late at night. When the tools felt like tools, the creative act was clearly mine. Now that the tools feel like participants, where exactly does the creativity live?</p>
+                <p>I don't have a clean answer. I'm not sure there is one. But I think it's the right question to be asking.</p>
+                <h2>What actually matters going forward</h2>
+                <p>If you're a designer, or someone who cares about digital creativity, here's what I think is worth paying attention to. Not as a prediction, but as a way of orienting yourself.</p>
+                <p><strong>First, taste becomes the differentiator.</strong> Not technical skill. Not speed. Taste. The ability to look at something and know if it's right or wrong, good or great, finished or not yet. AI raises the floor on execution quality for everyone. The ceiling will be set by judgment.</p>
+                <p><strong>Second, process flexibility matters more than tool expertise.</strong> The designers who will struggle are the ones whose identity is tied to a specific workflow or tool. The ones who will thrive are the ones who can shift between making and curating, between manual craft and AI-assisted exploration, depending on what the project needs at that moment.</p>
+                <p><strong>Third, specificity of vision becomes a superpower.</strong> If you know exactly what you're trying to achieve — not just "a nice logo" but the exact feeling, reference, and constraints — AI accelerates you enormously. If your vision is vague, AI will fill the gap with generic competence, and you'll end up with something that looks fine but says nothing.</p>
+                <p><strong>And finally,</strong> there's something I've noticed that gives me genuine optimism. The designers who care deeply about craft — the ones who obsess over kerning, who lose sleep over the exact curve of a line — they're not being replaced. They're being freed. The AI handles the grind, and they get to spend more time on the details that actually matter to them.</p>
+                <p>That's not a future I'm afraid of. It's one I've been waiting for.</p>
+                <div class="article-footer-note">
+                    <span><i class="far fa-comment"></i> Share your thoughts on <a href="#">X</a> or <a href="#">LinkedIn</a></span>
+                    <span><i class="far fa-bookmark"></i> <a href="#">Bookmark this article</a></span>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!-- PROFESSIONAL FOOTER (from reference) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="/links.html">Directory</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </footer>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

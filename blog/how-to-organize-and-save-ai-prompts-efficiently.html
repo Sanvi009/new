@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Organize and Save AI Prompts Efficiently | Brainloom</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn how to organize and save AI prompts efficiently. Practical advice from a creator who's tried every method — from folders to tags to daily drivers.">
+    <meta name="keywords" content="organize AI prompts, save prompts efficiently, prompt library, AI prompt management, prompt organization tips, Brainloom">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow">
+    <!-- Font Awesome (deferred) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* ----- PROFESSIONAL NAVBAR (ecosystem preserved) ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7e0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            background: #f0f4fa;
+            border-radius: 8px;
+            object-fit: contain;
+            display: block;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+        }
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-link {
+            padding: 8px 18px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+        }
+        .nav-link.active {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .legal-dropdown {
+            position: relative;
+        }
+        .legal-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #1e3a5f;
+            cursor: default;
+            border-radius: 40px;
+            border-bottom: 2px solid transparent;
+        }
+        .legal-trigger i {
+            font-size: 12px;
+            color: #2d4b6e;
+            transition: transform 0.2s;
+        }
+        .legal-dropdown:hover .legal-trigger i {
+            transform: rotate(180deg);
+        }
+        .legal-dropdown:hover .legal-trigger {
+            background: #e9ecf0;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid #d0d7e0;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+        .legal-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            border-left-color: #1a5cff;
+        }
+        .mobile-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #eef2f6;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d0d7e0;
+        }
+        .mobile-btn span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 16px;
+            padding: 20px 16px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e2b3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+        }
+        .mobile-menu a:hover {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+        }
+        .mobile-menu a.active {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .mobile-legal {
+            margin-top: 8px;
+        }
+        .mobile-legal p {
+            padding: 8px 16px 4px;
+            color: #2d4b6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        /* ----- EDITORIAL ARTICLE STYLES (new, ecosystem-aligned) ----- */
+        .article-wrapper {
+            max-width: 780px;
+            margin: 40px auto 60px;
+            padding: 0 24px;
+            flex: 1;
+        }
+        .article-header {
+            margin-bottom: 48px;
+        }
+        .article-category {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #1a5cff;
+            background: #e9ecf0;
+            padding: 4px 14px;
+            border-radius: 40px;
+            margin-bottom: 16px;
+        }
+        .article-title {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #0b1a2c;
+            margin-bottom: 20px;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            color: #4d6a86;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #d0d7e0;
+            padding-bottom: 20px;
+        }
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .article-meta i {
+            color: #7d95b0;
+        }
+        .article-body {
+            font-size: 1.12rem;
+            line-height: 1.8;
+            color: #1e2b3c;
+        }
+        .article-body p {
+            margin-bottom: 1.6rem;
+        }
+        .article-body h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0b1a2c;
+            margin: 2.4rem 0 0.8rem;
+            letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            margin: 1.8rem 0 0.6rem;
+        }
+        .article-body blockquote {
+            border-left: 4px solid #1a5cff;
+            background: #eef2f6;
+            padding: 20px 24px;
+            margin: 1.8rem 0;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: #1e3a5f;
+        }
+        .article-body blockquote p {
+            margin-bottom: 0;
+        }
+        .article-body ul, .article-body ol {
+            margin: 0 0 1.6rem 1.8rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+        .article-body .pull-quote {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            border-top: 2px solid #d0d7e0;
+            border-bottom: 2px solid #d0d7e0;
+            padding: 1.2rem 0;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        /* visual separator for tier examples */
+        .tier-block {
+            background: #ffffff;
+            border: 1px solid #d0d7e0;
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin: 2rem 0;
+        }
+        .tier-block h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a5cff;
+            margin-bottom: 0.4rem;
+        }
+        .tier-block p {
+            margin-bottom: 0.4rem;
+        }
+        .tier-block .tier-note {
+            font-size: 0.95rem;
+            color: #4d6a86;
+            border-top: 1px solid #e9ecf0;
+            padding-top: 12px;
+            margin-top: 12px;
+        }
+        /* ----- PROFESSIONAL FOOTER (ecosystem preserved) ----- */
+        .footer {
+            background: #0f1a26;
+            color: #e1eaf2;
+            padding: 40px 0 24px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.8fr;
+            gap: 40px 50px;
+            align-items: start;
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            padding: 0 24px;
+        }
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+        .footer-links a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+        .footer-links a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .footer-social h4 {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .social-item a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+        .social-item a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .social-item i {
+            width: 20px;
+            font-size: 1.1rem;
+            color: #8fadcf;
+        }
+        .social-item a:hover i {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #8ba0b9;
+            font-size: 0.85rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+            .article-title {
+                font-size: 2.2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .article-wrapper {
+                padding: 0 20px;
+                margin: 30px auto;
+            }
+            .article-title {
+                font-size: 1.9rem;
+            }
+            .article-body {
+                font-size: 1.05rem;
+            }
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-btn {
+                display: flex;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+        @media (max-width: 650px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-brand h3 {
+                font-size: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .article-title {
+                font-size: 1.7rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .article-wrapper {
+                padding: 0 16px;
+                margin: 25px auto;
+            }
+            .article-title {
+                font-size: 1.5rem;
+            }
+            .tier-block {
+                padding: 18px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- PROFESSIONAL NAVBAR (ecosystem preserved) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo-link">
+                <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <span class="logo-text">Brainloom</span>
+            </a>
+            <div class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="legal-dropdown">
+                    <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ARTICLE CONTENT (full editorial long-form) -->
+    <main class="article-wrapper">
+        <article>
+            <header class="article-header">
+                <div class="article-category">Productivity &amp; Workflow</div>
+                <h1 class="article-title">How to Organize and Save AI Prompts Efficiently</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> May 25, 2026</span>
+                    <span><i class="far fa-clock"></i> 12 min read</span>
+                    <span><i class="far fa-user"></i> Sanvi Al Evan</span>
+                </div>
+            </header>
+            <div class="article-body">
+                <p>Most people who use AI tools regularly end up in the same situation. You start out casually, asking a question here and there. A few weeks later, you realize you've written something genuinely useful — a prompt that gets exactly the result you wanted. You copy it. You paste it somewhere. A notes app, a Google Doc, a Notion page, maybe just a text file sitting on your desktop called "good prompts.txt." And then you forget about it.</p>
+                <p>A month goes by. You need that prompt again. You vaguely remember writing it. You check three different apps. You scroll through your chat history with the AI, which is now hundreds of messages deep. You find something close, but not quite it. You rewrite the prompt from scratch, worse this time, and feel a quiet frustration that you can't quite name.</p>
+                <p>The problem isn't that prompts are hard to write. The problem is that they're easy to lose. And most of us have no system for keeping them. Not a real one.</p>
+                <p>I've been thinking about this a lot lately, because I've tried just about every method there is. Some worked for a while. Most fell apart quietly. What I want to do here is walk through what actually matters when you're trying to save and organize prompts — not in theory, but in the way real people actually work, with all the messiness that involves.</p>
+                <h2>The real reason prompts get lost</h2>
+                <p>Let me start with something that took me too long to figure out. Prompts don't get lost because we're disorganized. They get lost because we treat them like notes when they're actually more like tools.</p>
+                <p>A note is something you write down once and maybe reference later. A tool is something you use repeatedly, refine over time, and reach for in specific situations. When you save a prompt the same way you save a random thought or a grocery list, you're putting a tool in a drawer full of scrap paper. Of course you can't find it later.</p>
+                <p>The shift that changed things for me was this: stop saving prompts like they're ideas, and start saving them like they're part of a toolkit. That means thinking about retrieval, not just storage. It means caring more about when and how you'll find something again than about where you put it.</p>
+                <p>A friend of mine, someone who uses AI daily for legal work, described his old system like this: "I had a folder called Prompts. Inside was a single document called Prompts. It was 40 pages long. I never opened it." That's the storage mindset. He had saved everything. He could retrieve nothing.</p>
+                <h2>What an actual prompt-saving system needs to do</h2>
+                <p>Before we talk about tools and methods, let's get clear on the few things that actually matter. Any system you use — whether it's an app, a folder structure, or something you build yourself — needs to handle three things well.</p>
+                <p>First, it needs to let you find prompts quickly when you're in the middle of something. Not later, when you have time to organize. Right then, when you're working and you remember that you have a prompt for this exact situation. If finding a prompt takes more than about ten seconds, you probably won't do it. You'll just write a new one, and the whole cycle continues.</p>
+                <p>Second, it needs to handle different kinds of prompts differently. A prompt you use every day for summarizing meeting notes is not the same as a prompt you used once for a creative writing exercise that turned out beautifully. One needs to be instantly accessible. The other just needs to exist somewhere you can find it if you ever need inspiration. Most systems treat all prompts the same way, which is why they get cluttered and unusable.</p>
+                <p>Third — and this is the one nobody talks about — it needs to let prompts evolve. Good prompts are rarely written once and frozen. You tweak them. You discover that adding a specific phrase changes the output dramatically. You find edge cases where the prompt breaks. If your saving system makes it annoying to update a prompt, you'll stop improving it. You'll just live with a mediocre version.</p>
+                <h2>The folder trap, and why tagging doesn't fix it</h2>
+                <p>The most natural first instinct is to create folders. Work prompts. Creative prompts. Coding prompts. Writing prompts. It feels organized. It feels satisfying to set up. And it works for about two weeks.</p>
+                <p>The problem with folders is that they force you to make a single decision about where something belongs, and that decision often feels wrong later. Is a prompt for writing clearer emails a work prompt or a writing prompt? Is a prompt for debugging code a coding prompt or a problem-solving prompt? The ambiguity creates friction. Friction means you'll put off saving things. It also means you'll check two or three folders when searching and still not be sure you found the right thing.</p>
+                <p>Tagging systems try to solve this by letting a prompt live in multiple categories at once. And this is better. But it introduces its own problem, which is that most people are inconsistent with tags. One day you tag something "writing." The next week you tag something similar "copy." A month later you can't remember which tag you used for what. The system degrades quietly, and you don't notice until you're already frustrated.</p>
+                <p>What I realized after years of this is that the categorization itself is less important than I thought. The thing that actually matters is how you'll think of the prompt when you need it. Will you search for "that prompt for summarizing articles" or "the one I use for article summaries" or just "summarize"? Your system needs to match your mental model, not some idealized taxonomy. And your mental model will change over time, so the system needs to be loose enough to accommodate that.</p>
+                <h2>A practical approach that actually holds up</h2>
+                <p>Here's what I've settled on after trying pretty much everything. It's not fancy. It doesn't require a specific app. But it addresses the three things I mentioned earlier — speed of retrieval, handling different types, and allowing evolution.</p>
+                <p>The core idea is separating your prompts into three tiers based on how you use them, not what they're about.</p>
+                <div class="tier-block">
+                    <h4>Tier one: daily drivers</h4>
+                    <p>These are the prompts you use constantly. For me, that's things like my default prompt for refining rough drafts, my prompt for summarizing long articles, and a few task-specific prompts I use for recurring work. These live in a place where I can reach them in under five seconds. For me, that's a pinned note in my notes app that stays at the top, with each prompt clearly separated. Some people use text expanders for this — type a short abbreviation and it expands into the full prompt. Either way works. The point is zero friction. No searching, no organizing. They're just there.</p>
+                    <div class="tier-note"><i class="fas fa-bolt" style="color:#1a5cff;"></i> Access in &lt;5 seconds. No searching.</div>
+                </div>
+                <div class="tier-block">
+                    <h4>Tier two: situational prompts</h4>
+                    <p>These are prompts you use regularly but not daily. Maybe weekly, maybe monthly. You know they exist and you know roughly when you need them. For these, searchability matters more than instant access. I keep these in a single document or database with a very simple format: a title that matches how I'll search for it later, the full prompt text, and a one-line note about when I use it. That's it. No folders. No tags. Just a searchable list where the titles are written in the language I'll actually think to use. Instead of "Advanced Chain-of-Thought Reasoning Prompt," I'll write "gets the AI to think step by step before answering." That second one is what I'll actually search for.</p>
+                    <div class="tier-note"><i class="fas fa-search" style="color:#1a5cff;"></i> Searchable by natural language titles.</div>
+                </div>
+                <div class="tier-block">
+                    <h4>Tier three: the archive</h4>
+                    <p>These are prompts you've used once, might use again someday, but don't want to lose. The ones that worked surprisingly well for something specific. I used to try to organize these. Now I just dump them into a single running document with a date and a brief note about what they did. It's not organized. It's barely searchable. But it doesn't need to be, because I almost never need to find something in here urgently. The archive exists for peace of mind. Knowing it's there is the value. Actually finding things in it is a bonus.</p>
+                    <div class="tier-note"><i class="fas fa-archive" style="color:#1a5cff;"></i> Low-pressure storage for peace of mind.</div>
+                </div>
+                <p>This three-tier approach solved more problems than any elaborate organizational system ever did. It respects the reality that different prompts have different relationships with your actual work. Most importantly, it's low maintenance. The daily drivers get updated when I improve them. The situational list gets new entries when I notice I've used something a few times and want to formalize it. The archive just grows quietly in the background.</p>
+                <h2>The versioning problem nobody warns you about</h2>
+                <p>There's something that happens when you start saving prompts seriously. You create a prompt that works well. You use it for a while. Then you think of an improvement. You change a sentence, add a constraint, rephrase the instructions. And suddenly you have two versions — the old one that you know works, and the new one that might be better but you're not sure yet.</p>
+                <p>If you overwrite the old one, you risk losing something reliable. If you keep both, you create confusion about which one is current.</p>
+                <p>I lost some genuinely good prompts this way early on. I'd tweak something, realize the tweak made it worse, and then couldn't remember the original wording. The lesson I learned is that prompts need versioning, but not the kind software developers do. You don't need a full history with timestamps. You just need to keep the last known-good version accessible until the new version has proven itself.</p>
+                <p>What I do now is simple. When I want to improve a prompt I use regularly, I duplicate it and add "v2" or a brief note about what I changed. I use the new version for a while. If it's clearly better, I replace the original and delete the old version. If it's not, I go back. The key is that I don't delete the original until I'm confident. It's a tiny habit that has saved me more times than I can count.</p>
+                <blockquote>
+                    <p>"I don't delete the original until I'm confident. It's a tiny habit that has saved me more times than I can count."</p>
+                </blockquote>
+                <h2>What about sharing and collaboration?</h2>
+                <p>Most of the advice I've given so far assumes you're saving prompts for yourself. But a lot of people work in teams where sharing prompts matters. And this introduces a whole new set of problems.</p>
+                <p>Shared prompt libraries tend to become graveyards. Someone enthusiastically creates a shared folder or a Notion page. Five people add prompts in the first week. Then everyone slowly stops. A year later, there are thirty prompts in there, half of them obsolete because the AI models have changed, and nobody knows which ones are still good.</p>
+                <p>The mistake, I think, is treating shared prompt collections like documentation. Documentation is something you write once and update when someone remembers. But prompts that are actively used need to be maintained, and maintenance doesn't happen without clear ownership.</p>
+                <p>The teams I've seen do this well assign ownership in a very lightweight way. It's not formal. It's just that each prompt in the shared library has a name next to it — the person who uses it most. If someone has a question about whether the prompt still works, they ask that person. If the prompt stops working well because a model update changed behavior, that person is likely to notice first and update it. It's not a responsibility assigned in a meeting. It's just a natural consequence of someone actually using the thing.</p>
+                <h2>A few things I wish I'd known earlier</h2>
+                <p>If I could go back and give my past self some guidance on this, I'd say a few things.</p>
+                <p>Don't try to save every prompt. Most prompts are one-off and should stay that way. The impulse to save everything comes from a fear of losing something valuable, but the clutter that creates makes it harder to find the things that actually are valuable. A good prompt is worth saving. An average prompt is just noise. Be willing to let things go.</p>
+                <p>Write titles and descriptions for your future self, not your current self. Right now, you know exactly what "Q3 analysis prompt v2" means. In six months, you won't. Write the description as if you're explaining it to someone who has no context, because that someone is future you.</p>
+                <p>The best system is the one you actually use. I've seen people spend hours setting up elaborate Notion databases with properties and relations and filtered views. And then they never open it again. A messy text file you actually reference is infinitely more valuable than a perfect system you ignore. Optimize for usage, not for structure.</p>
+                <p>Finally, accept that your system will change. What works for you now might not work in a year, and that's fine. The goal isn't to build a permanent archive. The goal is to make your current work easier. If your system stops serving you, change it. The prompts that matter will survive the transition.</p>
+                <div class="pull-quote">
+                    “A messy text file you actually reference is infinitely more valuable than a perfect system you ignore.”
+                </div>
+                <h2>The bottom of it</h2>
+                <p>Organizing prompts isn't really about organization. It's about respecting your own time and attention. Every time you rewrite a prompt from scratch that you've already written before, you're spending cognitive effort that could have gone somewhere more interesting. Every time you scroll through a messy chat history trying to find something you know is in there somewhere, you're pulled out of the work you were actually trying to do.</p>
+                <p>The whole point of saving prompts is to reduce friction. To make it easier to do good work. And if your saving system creates friction of its own, it's failed at its only job.</p>
+                <p>So keep it simple. Separate the daily prompts from the occasional ones from the archive. Write labels your future self will understand. Let prompts evolve. Don't save everything. And if you forget everything else from this article, just remember that a working system you actually use beats a perfect system you don't, every single time.</p>
+            </div>
+        </article>
+    </main>
+    <!-- PROFESSIONAL FOOTER (ecosystem preserved) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="/links.html">Directory</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </footer>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

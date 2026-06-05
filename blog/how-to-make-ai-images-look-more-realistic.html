@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Make Your AI Images Look More Realistic | Brainloom</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A practical guide to making AI images feel real. Learn about skin texture, lighting, camera logic, and why perfection is the enemy of realism.">
+    <meta name="keywords" content="AI image realism, realistic prompts, skin texture AI, lighting AI images, photography for AI, AI prompt engineering">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow">
+    <!-- Font Awesome (deferred) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* ----- NAVBAR (ecosystem matched) ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7e0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            background: #f0f4fa;
+            border-radius: 8px;
+            object-fit: contain;
+            display: block;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+        }
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-link {
+            padding: 8px 18px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+        }
+        .nav-link.active {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .legal-dropdown {
+            position: relative;
+        }
+        .legal-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #1e3a5f;
+            cursor: default;
+            border-radius: 40px;
+            border-bottom: 2px solid transparent;
+        }
+        .legal-trigger i {
+            font-size: 12px;
+            color: #2d4b6e;
+            transition: transform 0.2s;
+        }
+        .legal-dropdown:hover .legal-trigger i {
+            transform: rotate(180deg);
+        }
+        .legal-dropdown:hover .legal-trigger {
+            background: #e9ecf0;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid #d0d7e0;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+        .legal-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            border-left-color: #1a5cff;
+        }
+        .mobile-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #eef2f6;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d0d7e0;
+        }
+        .mobile-btn span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 16px;
+            padding: 20px 16px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e2b3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+        }
+        .mobile-menu a:hover {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+        }
+        .mobile-menu a.active {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .mobile-legal {
+            margin-top: 8px;
+        }
+        .mobile-legal p {
+            padding: 8px 16px 4px;
+            color: #2d4b6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        /* ----- ARTICLE LAYOUT (editorial focus) ----- */
+        .article-wrapper {
+            max-width: 780px;
+            margin: 50px auto 60px;
+            padding: 0 28px;
+            flex: 1;
+            width: 100%;
+        }
+        /* ----- ARTICLE HEADER ----- */
+        .article-header {
+            margin-bottom: 42px;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.9rem;
+            color: #4b6b8a;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+        .article-meta .author {
+            font-weight: 500;
+            color: #1e3a5f;
+        }
+        .article-meta .date {
+            color: #5d7c9e;
+        }
+        .article-meta .tag {
+            background: #e3e9f2;
+            padding: 2px 14px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1e3a5f;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        .article-title {
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #0b1a2c;
+            margin-bottom: 16px;
+        }
+        .article-subtitle {
+            font-size: 1.2rem;
+            color: #2d4b6e;
+            font-weight: 400;
+            line-height: 1.5;
+            border-left: 4px solid #1a5cff;
+            padding-left: 22px;
+            margin-top: 4px;
+        }
+        /* ----- ARTICLE BODY ----- */
+        .article-body {
+            font-size: 1.1rem;
+            color: #1e2b3c;
+        }
+        .article-body p {
+            margin-bottom: 1.6rem;
+            line-height: 1.8;
+        }
+        .article-body h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-top: 2.6rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+            color: #0b1a2c;
+        }
+        .article-body h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 0.6rem;
+            color: #0b1a2c;
+        }
+        .article-body blockquote {
+            border-left: 4px solid #1a5cff;
+            padding: 18px 24px;
+            margin: 2rem 0 2rem 0;
+            background: #f0f4fa;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: #1e3a5f;
+        }
+        .article-body blockquote p {
+            margin-bottom: 0.4rem;
+        }
+        .article-body blockquote .attribution {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #2d4b6e;
+            margin-top: 6px;
+        }
+        .article-body ul, .article-body ol {
+            margin: 0.8rem 0 1.6rem 1.6rem;
+            padding-left: 0.4rem;
+        }
+        .article-body li {
+            margin-bottom: 0.4rem;
+        }
+        /* subtle separator */
+        .article-body .divider {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d0d7e0, transparent);
+            margin: 2.8rem 0;
+        }
+        /* ----- FOOTER (ecosystem matched) ----- */
+        .footer {
+            background: #0f1a26;
+            color: #e1eaf2;
+            padding: 40px 0 24px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.8fr;
+            gap: 40px 50px;
+            align-items: start;
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            padding: 0 24px;
+        }
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+        .footer-links a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+        .footer-links a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .footer-social h4 {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .social-item a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+        .social-item a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .social-item i {
+            width: 20px;
+            font-size: 1.1rem;
+            color: #8fadcf;
+        }
+        .social-item a:hover i {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #8ba0b9;
+            font-size: 0.85rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+        }
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 768px) {
+            .article-wrapper {
+                padding: 0 20px;
+                margin: 35px auto 45px;
+            }
+            .article-title {
+                font-size: 2rem;
+            }
+            .article-subtitle {
+                font-size: 1rem;
+                padding-left: 16px;
+            }
+            .article-body {
+                font-size: 1rem;
+            }
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-btn {
+                display: flex;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+        @media (max-width: 650px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-brand h3 {
+                font-size: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .article-title {
+                font-size: 1.7rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .article-wrapper {
+                padding: 0 16px;
+                margin: 25px auto 35px;
+            }
+            .article-title {
+                font-size: 1.5rem;
+            }
+            .article-meta {
+                font-size: 0.8rem;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR (ecosystem matched) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo-link">
+                <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <span class="logo-text">Brainloom</span>
+            </a>
+            <div class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="legal-dropdown">
+                    <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ARTICLE PAGE (editorial long-form) -->
+    <main class="article-wrapper">
+        <article>
+            <!-- Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="author">Sanvi Al Evan</span>
+                    <span class="date">May 22, 2026</span>
+                    <span class="tag">AI Prompting</span>
+                </div>
+                <h1 class="article-title">How to Make Your AI Images Look More Realistic</h1>
+                <p class="article-subtitle">A practical guide to understanding why your AI images feel fake — and how to fix them without chasing perfection.</p>
+            </header>
+            <!-- Body -->
+            <div class="article-body">
+                <p>You know that feeling when you've been tweaking a prompt for twenty minutes, you finally hit generate, and the result is… almost there? The lighting is dramatic, the composition works, but something in your brain just rejects it. The skin looks like plastic. The eyes are slightly wrong in a way you can't articulate. The whole thing has that glossy, overdetermined sheen that screams "this came from a neural network."</p>
+                <p>I've stared at thousands of these images. Not exaggerating. And what I've come to understand is that making AI images look realistic isn't really about better prompts. It's about understanding why your brain flags things as fake in the first place. Once you see it, you can't unsee it, and your images will change permanently.</p>
+                <p>So let's talk about that.</p>
+                <hr class="divider">
+                <h2>The uncanny valley isn't one thing</h2>
+                <p>Most people think unrealistic AI images fail because of bad hands or weird faces. Those are symptoms, not the disease. The real problem is deeper, and it has to do with what I've started calling "perfection distribution."</p>
+                <p>Here's what I mean. Reality is uneven. Light doesn't fall perfectly. Skin has texture variations, tiny asymmetries, pores that are larger on one side of the nose. Fabrics pull slightly at the seams. Hair frizzes in ways that defy geometry. When an AI generates an image, it's pulling from a statistical representation of everything it was trained on, and that statistical average tends toward smoothness. The model's default setting is to give you the platonic ideal of whatever you asked for, not the actual messy version that exists in the world.</p>
+                <p>So your first job, before any technical trick, is to introduce controlled imperfection. Not random noise. Controlled imperfection. There's a difference, and it matters.</p>
+                <p>I learned this the hard way. For months I was adding "film grain" and "noise" to everything, thinking that's what realism meant. It helped, slightly, but the images still felt off. What I eventually realized is that real photographs don't look real because of grain. They look real because of specific types of optical degradation that happen in predictable patterns. Lens aberrations. Slight chromatic shifts at high-contrast edges. The way highlights bloom slightly before they blow out. The noise in a real photo is never uniform — it clusters in the shadows, it's more visible in certain color channels than others.</p>
+                <p>Once I started thinking about realism as the specific way things degrade, not the absence of degradation, everything changed.</p>
+                <hr class="divider">
+                <h2>The prompt trap</h2>
+                <p>Here's a mistake I see constantly, and I made it myself for way too long. People think the path to realism is loading up their prompt with quality signifiers. "Photorealistic, hyperrealistic, 8k, unreal engine, octane render, highly detailed, sharp focus." Stack enough of those and surely the image will look real, right?</p>
+                <p>The problem is that these terms mean something very different to the model than what you intend. When you say "photorealistic," the model doesn't think "make this look like a real photograph." It thinks "give me the aesthetic associated with the word photorealistic in the training data." And a lot of what was labeled photorealistic in the training data was actually 3D renders, digital art, and heavily retouched commercial photography. So you end up with this weird hybrid look — something that's trying to be a photo but has the lighting logic of a render and the skin treatment of a magazine retouch.</p>
+                <p>What actually works better is describing the photographic process, not the desired quality. Instead of "photorealistic portrait," try "candid snapshot, available light, slight underexposure, shot on 35mm film, Fuji Pro 400H." The model understands these as concrete visual attributes, not abstract quality markers. You're telling it what optical situation to simulate, not what adjective to aspire to.</p>
+                <p>I tested this systematically once. Same seed, same composition, same subject. One prompt was stacked with quality words. The other had no quality words at all, just a specific camera, lens, film stock, and lighting description. The difference was stark. The quality-word version looked like a video game cutscene from 2018. The process-description version looked like something I might have shot myself on a lazy Sunday afternoon. That was the moment I stopped using the word "photorealistic" entirely.</p>
+                <hr class="divider">
+                <h2>Skin is the thing that gives everything away</h2>
+                <p>If there's one element that separates convincing AI images from the uncanny ones, it's skin. Not faces. Skin, specifically. The surface of human skin is incredibly complex optically. It's slightly translucent. Light penetrates the surface, scatters around in the dermis, and bounces back out carrying color information from the blood beneath. That's why skin doesn't look like painted plastic — it has subsurface scattering, micro-texture, and color variation that changes with circulation, temperature, and emotion.</p>
+                <p>AI models struggle with this because they're essentially painting with light on surfaces. They know where highlights and shadows go, but they don't always understand that skin is volumetric, not a surface. The result is that dreaded "porcelain doll" look, where the face is technically proportioned correctly but feels dead.</p>
+                <p>There are a few ways to push against this. One is to prompt for specific skin characteristics rather than generic smoothness. Words like "visible pores," "skin texture," "freckles," "uneven skintone," "faint scars" can help. But the bigger lever is lighting angle. When light hits skin from the side or at a raking angle, it reveals texture that frontal light flattens. A portrait lit from slightly above and to the side will show way more skin detail than one with flat front lighting, simply because the shadows are casting from individual surface irregularities.</p>
+                <p>I've also found that slightly lowering the contrast or pulling back the sharpness in post-processing helps enormously. Real photographs of people are rarely tack-sharp at full magnification unless they were shot on medium format with professional lighting and a meticulous retoucher. Most of the reference images in our heads — the ones that define what "looks real" — are actually slightly soft. They were shot handheld, or the focus missed the eye by a millimeter, or the lens wasn't clinically perfect. Adding a tiny amount of gaussian blur to the skin layer, or reducing clarity slightly, can bridge that gap between "mathematically sharp" and "perceptually real."</p>
+                <hr class="divider">
+                <h2>Context collapse and the background problem</h2>
+                <p>Here's something subtle that took me an embarrassingly long time to notice. The subject of an AI image can look perfect — convincing skin, natural expression, realistic clothing — and the whole thing can still feel fake because of what's happening in the background. Or rather, what's not happening.</p>
+                <p>Real photographs exist in real environments, and real environments are busy in ways we don't consciously register. There's a power outlet on the wall. A slightly crooked picture frame. Dust on the baseboard. A coffee mug someone left on a side table. The AI, left to its own devices, tends to generate backgrounds that are too clean, too generic, too "background-like." It gives you a suggestion of an environment rather than a specific environment.</p>
+                <p>This is what I think of as context collapse. The model defaults to the most statistically likely version of "living room" or "street scene" or "office," and that statistical average is drained of specificity. Specificity is what makes places feel real.</p>
+                <p>The fix is to deliberately populate your backgrounds. Not by adding more tokens to the prompt necessarily, but by including background details in your description that you might otherwise skip. "A living room, afternoon" is weak. "A cluttered living room, books stacked on the coffee table, a half-empty mug, mail piled near the door, afternoon light through dusty windows" is alive. The model can latch onto those concrete objects and render them, and their presence creates the density of information that our brains interpret as reality.</p>
+                <p>I've started treating backgrounds as co-subjects rather than backdrops, and the improvement has been dramatic. Even if nobody consciously notices the mail pile or the dusty window, their brain registers that there's enough information density for the scene to be real.</p>
+                <hr class="divider">
+                <h2>What I wish I understood sooner about camera logic</h2>
+                <p>Early on, I was using camera-related prompt terms as decorative language. "Shot on Canon R5" just meant "make it look good" in my head. But these terms aren't decorative. They're structural instructions about optical behavior.</p>
+                <p>When you specify a focal length, you're not just choosing how zoomed-in the shot looks. You're dictating the spatial relationships between objects in the frame. A 24mm lens doesn't just capture a wider field of view — it exaggerates the distance between foreground and background. A 85mm lens compresses that distance. These spatial relationships are part of what our brains use to determine if an image is "photographic." An image with the depth compression of a telephoto lens but the background separation of a wide angle feels subtly wrong even if you can't name why.</p>
+                <p>Similarly, aperture isn't just about blur. The character of that blur — bokeh — varies enormously between lenses. Some render out-of-focus highlights as perfect circles. Others give you slightly cat-eye shapes toward the edges. Some have busy, nervous bokeh. Others are creamy. The AI can approximate these differences if you name specific lenses known for particular rendering characteristics.</p>
+                <p>The point is, you have to actually understand a bit about photography for the camera parameters in your prompt to work coherently. You can't just throw in "f/1.4" because it sounds professional. If your scene has multiple subjects at different distances and you specify f/1.4, the shallow depth of field might put most of your scene out of focus in a way that doesn't make visual sense for the composition you've described. The model will try to follow the instruction, and the result will have an optical signature that doesn't correspond to any real photograph.</p>
+                <hr class="divider">
+                <h2>The inpainting honesty principle</h2>
+                <p>No single generation comes out perfect. I think everyone knows this. But how you fix the imperfections matters more than most people acknowledge.</p>
+                <p>The common workflow is to spot an issue — weird fingers, an extra limb, a melting ear — and immediately inpaint it. Mask the area, regenerate, hope for a better result. This works. But there's a trap here that I fell into for months.</p>
+                <p>When you inpaint aggressively, fixing every tiny anomaly, you can sand away the very imperfections that made the image feel real in the first place. I would start with a generation that had a slightly odd hand position but beautiful, convincing skin texture, and I'd end up with perfect hands attached to arms that looked airbrushed into oblivion. The inpainting had generated the hands correctly but at the cost of the micro-texture that sold the whole image.</p>
+                <p>What I do now is what I think of as the honesty threshold. I fix things that would immediately flag the image as fake to a casual viewer — extra fingers, impossible anatomy, severe face distortions. But I leave the smaller weirdnesses alone. A slightly awkward finger position. A fold of fabric that doesn't quite make physical sense. A shadow that's slightly off. These minor imperfections, counterintuitively, make the image feel more real because real photographs contain awkwardness. Not every frame of a photo shoot is perfectly composed. Hands do weird things. Fabric bunches unexpectedly.</p>
+                <p>By leaving some of the smaller oddities intact, you're mimicking the natural variability of real photography. The goal isn't a perfect image. The goal is an image whose imperfections are the right kind of imperfections.</p>
+                <hr class="divider">
+                <h2>Light is everything and I mean everything</h2>
+                <p>I've been circling around this point, but it deserves its own emphasis. If you take only one thing from everything I've written here, let it be this: lighting decisions will do more for realism than any prompt engineering trick, any model choice, any post-processing technique.</p>
+                <p>AI models understand light fundamentally. They were trained on billions of images, each with its own illumination conditions, and the latent space they've mapped is extraordinarily sensitive to the physics of light. When you describe specific, motivated lighting, the model can draw on a deep well of training data to render it convincingly. When you leave lighting vague or over-brighten everything, the model defaults to a kind of ambient studio glow that exists nowhere in the real world.</p>
+                <p>The most useful shift in my own prompting was to start treating lighting as a narrative element rather than a technical parameter. Not "golden hour, rim light, soft fill" as a checklist, but "late afternoon sun through west-facing windows, the warm light catching dust motes in the air, long shadows stretching across the floor." The difference is that the second version tells the model what kind of light, what direction, what quality, and what environmental interaction to render. It's specific. And specificity is what makes light look real.</p>
+                <p>I also learned to embrace what photographers call "available light" scenarios. Indoor tungsten. Mixed color temperatures from a window and a lamp. The sickly green of fluorescent office lighting. These are light qualities we encounter constantly in real life but rarely think to prompt for because they're not "beautiful." But they're instantly recognizable to the viewer's subconscious as real-world illumination, and that recognition contributes to the overall impression of realism even if the subject matter is fantastic.</p>
+                <hr class="divider">
+                <h2>One last thing about expectations</h2>
+                <p>There's a psychological layer to all of this that's worth naming. When you generate an AI image, you know it's AI-generated. You're looking at it with hypercritical eyes, scanning for artifacts, zooming in to 400% to check the eyelashes. A real viewer doesn't do this. They glance at an image for a few seconds, form an impression, and move on.</p>
+                <p>I've shown AI-generated images to non-technical friends who didn't know the source, and they frequently can't tell. The same image that I've been staring at for an hour, convinced that the ear anatomy is slightly off and the fabric physics don't work, reads as a normal photograph to someone just scrolling past.</p>
+                <p>This doesn't mean we shouldn't pursue realism. But it does mean that the gap between "fooling yourself" and "fooling a casual viewer" is enormous, and crossing that second threshold is much easier than the first. Most of the advice in this piece is about crossing the first threshold — making images that satisfy your own critical eye. That's a higher bar, and honestly, it's more satisfying to chase.</p>
+                <p>The images that I'm proudest of now are the ones where I can look at them and forget, for a moment, that I made them. Where the illusion is complete enough that I slip into the same mode of perception I'd use for any other photograph. That doesn't happen on every generation. But when it does, it feels like a small kind of magic.</p>
+                <p>And that's the thing worth chasing. Not technical perfection for its own sake, but the moment where the image escapes its origins and just becomes an image — something you look at, rather than something you look through to see the algorithm underneath.</p>
+            </div>
+        </article>
+    </main>
+    <!-- FOOTER (ecosystem matched) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+                <a href="/links.html">Directory</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </footer>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
