@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Car Photography: 10 Prompt Mistakes That Ruin Your Images | Brainloom</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Stop generating plastic-looking AI car photos. Learn 10 common prompt mistakes and how to fix them with real automotive photography techniques for Midjourney, DALL·E, and Stable Diffusion.">
+    <meta name="keywords" content="AI car photography, automotive AI prompts, Midjourney car images, DALL·E automotive, Stable Diffusion car prompts, AI image generation tips, car photography lighting, prompt engineering">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Car Photography: 10 Prompt Mistakes That Ruin Your Images">
+    <meta property="og:description" content="Stop generating plastic-looking AI car photos. Learn 10 common prompt mistakes and how to fix them with real automotive photography techniques.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://brainloom.online/ai-car-photography-prompt-guide">
+    <meta property="og:image" content="/images/og-car-photography.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Schema Markup: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI Car Photography: 10 Prompt Mistakes That Ruin Your Images",
+        "description": "Stop generating plastic-looking AI car photos. Learn 10 common prompt mistakes and how to fix them with real automotive photography techniques for Midjourney, DALL·E, and Stable Diffusion.",
+        "author": {
+            "@type": "Person",
+            "name": "Brainloom Editorial"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Brainloom",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://brainloom.online/images/logo1.png"
+            }
+        },
+        "datePublished": "2026-06-05",
+        "dateModified": "2026-06-05",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://brainloom.online/ai-car-photography-prompt-guide"
+        }
+    }
+    </script>
+    <!-- Font Awesome (deferred) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* ----- NAVBAR (exactly matches uploaded ecosystem) ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7e0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            background: #f0f4fa;
+            border-radius: 8px;
+            object-fit: contain;
+            display: block;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+        }
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-link {
+            padding: 8px 18px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+        }
+        .nav-link.active {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .legal-dropdown {
+            position: relative;
+        }
+        .legal-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #1e3a5f;
+            cursor: default;
+            border-radius: 40px;
+            border-bottom: 2px solid transparent;
+        }
+        .legal-trigger i {
+            font-size: 12px;
+            color: #2d4b6e;
+            transition: transform 0.2s;
+        }
+        .legal-dropdown:hover .legal-trigger i {
+            transform: rotate(180deg);
+        }
+        .legal-dropdown:hover .legal-trigger {
+            background: #e9ecf0;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid #d0d7e0;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+        .legal-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            border-left-color: #1a5cff;
+        }
+        .mobile-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #eef2f6;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d0d7e0;
+        }
+        .mobile-btn span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 16px;
+            padding: 20px 16px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e2b3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+        }
+        .mobile-menu a:hover {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+        }
+        .mobile-menu a.active {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .mobile-legal {
+            margin-top: 8px;
+        }
+        .mobile-legal p {
+            padding: 8px 16px 4px;
+            color: #2d4b6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        /* ----- ARTICLE LAYOUT (full editorial styling) ----- */
+        .article-wrapper {
+            max-width: 780px;
+            margin: 40px auto 60px;
+            padding: 0 32px;
+            flex: 1;
+            width: 100%;
+        }
+        article {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 48px 44px 52px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        article header {
+            margin-bottom: 32px;
+            border-bottom: 1px solid #e4eaf2;
+            padding-bottom: 24px;
+        }
+        article h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #0b1a2c;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        .article-meta {
+            color: #4a668a;
+            font-size: 0.95rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 30px;
+            align-items: center;
+        }
+        .article-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .article-meta i {
+            color: #6a85a5;
+            font-size: 0.9rem;
+        }
+        .article-body {
+            font-size: 1.1rem;
+            color: #1e2b3c;
+        }
+        .article-body h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0b1a2c;
+            margin: 40px 0 16px;
+            letter-spacing: -0.01em;
+            border-left: 4px solid #1a5cff;
+            padding-left: 18px;
+        }
+        .article-body h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #16344d;
+            margin: 28px 0 12px;
+        }
+        .article-body p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .article-body strong {
+            color: #0b1a2c;
+            font-weight: 600;
+        }
+        .article-body ul, .article-body ol {
+            margin: 16px 0 24px 24px;
+            padding-left: 8px;
+        }
+        .article-body li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .article-body li strong {
+            color: #0b1a2c;
+        }
+        /* Pull quotes and blockquotes */
+        .pull-quote {
+            background: #f0f5fd;
+            border-left: 6px solid #1a5cff;
+            padding: 28px 32px 24px;
+            margin: 32px 0 32px;
+            border-radius: 0 16px 16px 0;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #0b1a2c;
+            line-height: 1.5;
+        }
+        .pull-quote i {
+            color: #1a5cff;
+            margin-right: 8px;
+        }
+        .pull-quote small {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #4a668a;
+            margin-top: 10px;
+        }
+        blockquote {
+            background: #f7f9fc;
+            border-left: 4px solid #6a85a5;
+            padding: 20px 28px 18px;
+            margin: 28px 0 28px;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: #1e3a5f;
+        }
+        blockquote footer {
+            font-style: normal;
+            font-size: 0.9rem;
+            color: #4a668a;
+            margin-top: 8px;
+        }
+        /* Example prompt containers */
+        .prompt-box {
+            background: #f3f6fb;
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 24px 0 28px;
+            border: 1px solid #d9e2ec;
+            font-family: 'SF Mono', 'Menlo', monospace;
+            font-size: 0.95rem;
+            color: #0b1a2c;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .prompt-box .label {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4a668a;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .prompt-box.bad {
+            border-left: 4px solid #d9534f;
+            background: #fef6f5;
+        }
+        .prompt-box.good {
+            border-left: 4px solid #2a9d8f;
+            background: #f1f9f8;
+        }
+        .example-comparison {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 24px 0 28px;
+        }
+        .example-col {
+            flex: 1 1 200px;
+            background: #f7f9fc;
+            border-radius: 16px;
+            padding: 18px 20px 20px;
+            border: 1px solid #d9e2ec;
+        }
+        .example-col h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #4a668a;
+            margin-bottom: 6px;
+        }
+        .example-col p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+        /* Internal link style */
+        .article-body a.internal-link {
+            color: #1a5cff;
+            text-decoration: none;
+            border-bottom: 1px solid #b3cdf5;
+            font-weight: 500;
+            transition: border-color 0.2s;
+        }
+        .article-body a.internal-link:hover {
+            border-bottom-color: #1a5cff;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-wrapper {
+                padding: 0 16px;
+                margin: 25px auto 40px;
+            }
+            article {
+                padding: 28px 20px 34px;
+                border-radius: 20px;
+            }
+            article h1 {
+                font-size: 1.9rem;
+            }
+            .article-body {
+                font-size: 1rem;
+            }
+            .article-body h2 {
+                font-size: 1.5rem;
+            }
+            .pull-quote {
+                font-size: 1.1rem;
+                padding: 20px 20px 18px;
+            }
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-btn {
+                display: flex;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+        @media (max-width: 480px) {
+            article {
+                padding: 22px 16px 28px;
+            }
+            article h1 {
+                font-size: 1.6rem;
+            }
+            .article-body h2 {
+                font-size: 1.3rem;
+                padding-left: 12px;
+            }
+            .pull-quote {
+                font-size: 1rem;
+                padding: 16px 16px 14px;
+            }
+        }
+        /* FOOTER (exact match to uploaded ecosystem) */
+        .footer {
+            background: #0f1a26;
+            color: #e1eaf2;
+            padding: 40px 0 24px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.8fr;
+            gap: 40px 50px;
+            align-items: start;
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            padding: 0 24px;
+        }
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+        .footer-links a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+        .footer-links a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .footer-social h4 {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .social-item a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+        .social-item a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .social-item i {
+            width: 20px;
+            font-size: 1.1rem;
+            color: #8fadcf;
+        }
+        .social-item a:hover i {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #8ba0b9;
+            font-size: 0.85rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+        }
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 650px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-brand h3 {
+                font-size: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR (exact match to uploaded ecosystem) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo-link">
+                <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <span class="logo-text">Brainloom</span>
+            </a>
+            <div class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="legal-dropdown">
+                    <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN ARTICLE -->
+    <main class="article-wrapper">
+        <article>
+            <header>
+                <h1>Prompting for High-Performance Automotive Photography</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> June 5, 2026</span>
+                    <span><i class="far fa-clock"></i> 9 min read</span>
+                    <span><i class="far fa-user"></i> Brainloom Editorial</span>
+                </div>
+            </header>
+
+            <div class="article-body">
+
+                <p>I'll be honest with you. When I first started trying to get AI to generate car photos, I kept getting the same thing over and over: a generic silver sedan parked in front of a generic sunset. Or a red sports car that looked like it was rendered in a video game from 2012. The reflections were wrong. The wheels were rotating while the car was stopped. And every single image had that weird "AI smoothness" that makes cars look like plastic toys.</p>
+
+                <p>What I realized is that most people treat AI image generation like Google search. They type "sports car, professional photo, cinematic lighting" and expect something incredible. But that's not how it works. The model doesn't know what "cinematic" means unless you tell it exactly what that looks like in real photography terms.</p>
+
+                <p>So I spent a few months learning the difference between a mediocre car image and something that actually looks like it belongs in a magazine. And I'm going to show you exactly how to bridge that gap.</p>
+
+                <div class="pull-quote">
+                    <i class="fas fa-quote-left"></i> You're not asking for an image. You're describing a moment that already exists in your mind. The AI is just a tool that helps you see it.
+                </div>
+
+                <h2>The problem with most car prompts</h2>
+
+                <p>Let me give you a concrete example. Here's what most people write:</p>
+
+                <div class="prompt-box bad">
+                    <span class="label">❌ Common mistake</span>
+                    "A black Porsche 911 on a mountain road at sunset, photorealistic, 8K, professional photography."
+                </div>
+
+                <p>And here's what they get: a car with melted headlights, reflections that make no sense, a road that disappears into nothing, and lighting that looks like someone put a flash on a phone.</p>
+
+                <p><strong>The issue isn't the AI. The issue is that you're describing a result, not a process.</strong> In real automotive photography, you don't just point a camera at a car and hope for the best. You choose the lens. You position the lights. You decide whether to use a polarizer. You think about the angle of the sun. You choose the depth of field.</p>
+
+                <p>When you prompt for AI, you're doing the same thing—but in text form.</p>
+
+                <h2>How real automotive photographers think</h2>
+
+                <p>I've worked with a few car photographers over the years, and the one thing they all share is a specific way of thinking about light. They don't just want "good lighting." They want <strong>controlled lighting</strong>. They want to know where the reflections hit the body lines. They want to see the curvature of the fender reflected in the paint.</p>
+
+                <p>Here's what that means for prompting.</p>
+
+                <p>Instead of saying "beautiful lighting," you need to tell the model what kind of light you're working with. Is it softbox diffusion? Is it hard sunlight at 4 PM? Is it reflected light from a white wall? Is it a three-light studio setup?</p>
+
+                <p>Let me show you the difference.</p>
+
+                <div class="example-comparison">
+                    <div class="example-col">
+                        <h4>Bad prompt</h4>
+                        <p>"A Ferrari in a garage with good lighting."</p>
+                    </div>
+                    <div class="example-col">
+                        <h4>Better prompt</h4>
+                        <p>"A red Ferrari 488 parked in a concrete garage, 85mm lens, soft overhead light from a fluorescent panel, slight reflection of the garage floor visible on the lower bumper, rim lighting on the front wheel arches from a distant light source, shallow depth of field with the background slightly blurred, the paint looks wet."</p>
+                    </div>
+                </div>
+
+                <p>See the difference? You're not just saying "good lighting." You're describing <strong>where the light comes from, what it touches, and what it does to the surfaces</strong>.</p>
+
+                <h2>The mirror test</h2>
+
+                <p>This is something I figured out after generating about two hundred bad car images. I call it the <strong>mirror test</strong>.</p>
+
+                <p>A real car has reflections that tell you something about the environment. When you look at a well-photographed car, you can see the ground reflected in the lower panels. You can see the sky reflected in the hood. You can see the photographer's silhouette in the chrome trim.</p>
+
+                <p>AI often struggles with this because it doesn't understand that reflections need to <strong>match</strong> the environment. If you have a car on a dirt road, the reflection should look like dirt road. If it's parked on wet asphalt, the reflection should look wet.</p>
+
+                <p>So here's a prompt that passes the mirror test:</p>
+
+                <div class="prompt-box good">
+                    <span class="label">✅ Passes the mirror test</span>
+                    "A white BMW M3 parked on wet black asphalt after rain, 50mm lens, f/2.8, the reflection of the wet road is visible on the lower door panels and front bumper, the sky is overcast and flat white so the hood reflects a gray gradient, the chrome window trim reflects the dark trees behind the car, the asphalt is slightly reflective showing the car's tire reflections, the image has a moody cold tone."
+                </div>
+
+                <p>That's not a generic description. That's a specific, testable set of instructions. If the AI gets it right, you'll see a car that looks like it actually exists in a real place.</p>
+
+                <h2>The mistake most people make with angles</h2>
+
+                <p>Here's something I learned the hard way. When people say "dynamic angle," the AI interprets that as "weird angle." You get the car from above, or from the ground looking up, or from a 45-degree tilt that makes no sense.</p>
+
+                <p>In real automotive photography, the standard angles are the ones that work. <strong>Front three-quarter. Rear three-quarter. Side profile. Low front angle. Hood angle.</strong> These exist for a reason—they show the car's best lines.</p>
+
+                <p>If you want something that looks professional, stick to real photographer angles and specify them clearly.</p>
+
+                <div class="prompt-box good">
+                    <span class="label">✅ Specific angle + detail</span>
+                    "Front three-quarter view of a green Aston Martin Vantage, shot from knee height, camera slightly below the car's beltline, the front wheel is slightly turned to the left to show the spoke design, the angle emphasizes the shoulder line of the fender."
+                </div>
+
+                <p>That's specific. That's real. And it works.</p>
+
+                <h2>The reflection language cheat sheet</h2>
+
+                <p>After a lot of trial and error, I started using a set of reflection-related keywords that consistently improve car images. Here's what I actually use:</p>
+
+                <ul>
+                    <li><strong>"Wet paint"</strong> — makes the paint look glossy and deep, not plastic</li>
+                    <li><strong>"Rim light"</strong> — adds a thin bright line along the edge of the car, separates it from the background</li>
+                    <li><strong>"Ground reflection"</strong> — tells the model that the lower panels should reflect something</li>
+                    <li><strong>"Sunset caustics"</strong> — creates those beautiful bending light patterns on the paint</li>
+                    <li><strong>"Polarized light"</strong> — reduces glare on glass and reveals what's inside the cabin</li>
+                    <li><strong>"Dirty"</strong> or <strong>"road grime"</strong> — I know this sounds counterintuitive, but a clean car often looks fake. A slightly dirty car looks real.</li>
+                </ul>
+
+                <p>Let me show you how these work together.</p>
+
+                <div class="prompt-box good">
+                    <span class="label">✅ Using reflection language</span>
+                    "A dark blue Porsche 911 GT3 RS, three-quarter rear view, wet paint with deep reflections of a nearby building, rim light from a setting sun behind the car, the rear window has polarized reflections showing a blurred city skyline, the tires are slightly dirty with brake dust, the asphalt has tire marks, shallow depth of field, 85mm lens at f/2.8."
+                </div>
+
+                <p>That prompt produces images that actually look like they came from a car photography portfolio. Not because it's complex, but because it's <strong>specific about the things that matter</strong>.</p>
+
+                <h2>The thing nobody tells you about composition</h2>
+
+                <p>Here's a realization I had that changed everything for me. In car photography, the background is not the background. It's the context that makes the car look real.</p>
+
+                <p>If you put a Ferrari in front of a generic blurry background, it looks like a render. If you put it in front of a specific building, a specific tree, a specific wall, it looks like a photograph.</p>
+
+                <p>So stop using vague backgrounds. Be specific.</p>
+
+                <div class="example-comparison">
+                    <div class="example-col">
+                        <h4>Vague background</h4>
+                        <p>"A car on a street with a city background"</p>
+                    </div>
+                    <div class="example-col">
+                        <h4>Specific background</h4>
+                        <p>"A black Audi R8 parked on a cobblestone street in Paris, the building behind is a 19th-century stone facade with a wrought iron balcony, the street is slightly wet, the car is in shadow but a narrow band of sunlight hits the front fender, the cobblestones are uneven and reflective."</p>
+                    </div>
+                </div>
+
+                <p>That's not just a description. That's a photograph that exists in someone's memory. And the AI can actually render it because it has enough detail to work with.</p>
+
+                <h2>Why most "professional" prompts fail</h2>
+
+                <p>I spent a week trying to figure out why my prompts kept producing images that looked like car dealership ads. You know the ones. White room. Flat lighting. The car looks like it's floating.</p>
+
+                <p>The problem is what I call <strong>"sterile professionalism."</strong> When you say "studio lighting" or "white background" or "clean composition," the AI gives you something that's technically correct but spiritually dead. It looks like it was made for a catalog, not for someone who actually loves cars.</p>
+
+                <p>What you want is <strong>"character."</strong> And character comes from imperfections.</p>
+
+                <ul>
+                    <li>A little dirt on the wheels</li>
+                    <li>A reflection that's slightly distorted</li>
+                    <li>A highlight that's just a little too bright</li>
+                    <li>A background that's interesting but not perfect</li>
+                </ul>
+
+                <p>One of my favorite prompts includes these words: <strong>"The car has been driven today."</strong> It's a small thing, but it changes everything. Suddenly the tires look used. The paint has micro scratches. The brake rotors have a little surface rust. It looks real.</p>
+
+                <h2>A real example with side-by-side comparison</h2>
+
+                <p>Let me show you what this looks like in practice. Here's a prompt I would have written a year ago:</p>
+
+                <div class="prompt-box bad">
+                    <span class="label">❌ Old approach</span>
+                    "A yellow Lamborghini Huracan in a tunnel, cinematic lighting, 8K, photorealistic."
+                </div>
+
+                <p>What I got: a yellow car that looked like plastic, floating in a generic tunnel with no depth, lights that didn't make sense, and reflections that were wrong.</p>
+
+                <p>Here's the prompt I write now:</p>
+
+                <div class="prompt-box good">
+                    <span class="label">✅ Current approach</span>
+                    "A yellow Lamborghini Huracan stopped inside an empty concrete tunnel, the tunnel has sodium vapor lights giving a warm orange glow, the car is wet from rain, the yellow paint is highly reflective and shows the orange tunnel lights as elongated streaks on the hood, the car's front angle, 35mm lens, the tunnel walls are textured with water stains and concrete seams, the ground has puddles that reflect the car and the lights, the image has a slight film grain, the car is slightly dirty on the lower panels."
+                </div>
+
+                <p>The difference is night and day. The second prompt produces images that look like they were shot by someone who actually knows how to light a car. The first prompt produces something you'd scroll past on Instagram.</p>
+
+                <div class="pull-quote">
+                    <i class="fas fa-quote-left"></i> Think in terms of what the camera sees, not what your eyes see. Your job is to describe the shapes, edges, reflections, and contrast. Not the category.
+                </div>
+
+                <h2>The one thing that consistently improves results</h2>
+
+                <p>If I had to give you one single piece of advice, it's this: <strong>think in terms of what the camera sees, not what your eyes see.</strong></p>
+
+                <p>When you look at a car, your brain fills in details. You see "a car." The AI sees shapes, edges, reflections, contrast, color values.</p>
+
+                <p>Your job is to describe the shapes, edges, reflections, and contrast. Not the category.</p>
+
+                <p>Instead of "a sports car," describe the specific lines of a specific model. Instead of "a street," describe the texture of the asphalt. Instead of "a sunset," describe the color of the light and where it hits the car.</p>
+
+                <p>This is the difference between a prompt that produces a generic image and a prompt that produces something you'd actually save to your phone.</p>
+
+                <h2>What I actually do now</h2>
+
+                <p>When I sit down to generate car images, I don't just type a prompt. I write a paragraph. I imagine the scene. I think about the photographer. I think about what lens they're using. I think about the time of day. I think about the weather an hour before the shoot.</p>
+
+                <p>Then I take that paragraph and strip out anything that's not directly about the image. I keep the physics. I keep the light. I keep the reflections. I keep the imperfections.</p>
+
+                <p>And then I generate.</p>
+
+                <p>It takes longer. It takes more thought. But the results are genuinely better. And after a while, you stop thinking of it as "prompting" and start thinking of it as <strong>"writing a photograph into existence."</strong></p>
+
+                <p>That's the real shift. You're not asking for an image. You're describing a moment that already exists in your mind. The AI is just a tool that helps you see it.</p>
+
+                <p><em>Ready to take your AI-generated images to the next level? If you're dealing with unwanted artifacts or watermarks in your AI images, check out our guide on <a href="/gemini-watermark-remover.html" class="internal-link">cleaning up AI-generated artifacts and watermarks</a> for practical post-generation techniques.</em></p>
+
+            </div>
+        </article>
+    </main>
+
+    <!-- FOOTER (exact match to uploaded ecosystem) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

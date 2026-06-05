@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Guide to Absolute Facial Consistency in AI Generation | Brainloom</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Master absolute facial consistency in AI image generation. Learn why faces change, proven workflows using IP-Adapter & ControlNet, Midjourney's --cref, and the difference between perfect replication and recognizable identity.">
+    <meta name="keywords" content="facial consistency AI, Stable Diffusion IP-Adapter, ControlNet face consistency, Midjourney character reference, AI character consistency, prompt engineering, AI art workflow, recognizable identity AI">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="The Ultimate Guide to Absolute Facial Consistency in AI Generation">
+    <meta property="og:description" content="Stop fighting AI face drift. Learn the real tools and workflows that deliver recognizable identity across poses, expressions, and scenes.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://brainloom.online/ultimate-guide-absolute-facial-consistency-ai-generation.html">
+    <meta property="og:site_name" content="Brainloom">
+    <!-- Font Awesome (deferred) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <!-- Article Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Ultimate Guide to Absolute Facial Consistency in AI Generation",
+      "description": "Learn why AI faces change, the difference between prompt engineering and reference-based methods, and proven workflows using IP-Adapter, ControlNet, and Midjourney's --cref for recognizable character identity.",
+      "author": {
+        "@type": "Person",
+        "name": "Brainloom"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Brainloom",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://brainloom.online/images/logo1.png"
+        }
+      },
+      "datePublished": "2026-06-05",
+      "dateModified": "2026-06-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://brainloom.online/ultimate-guide-absolute-facial-consistency-ai-generation.html"
+      }
+    }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* ----- NAVBAR (exactly matches uploaded ecosystem) ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7e0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            background: #f0f4fa;
+            border-radius: 8px;
+            object-fit: contain;
+            display: block;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+        }
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-link {
+            padding: 8px 18px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+        }
+        .nav-link.active {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .legal-dropdown {
+            position: relative;
+        }
+        .legal-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #1e3a5f;
+            cursor: default;
+            border-radius: 40px;
+            border-bottom: 2px solid transparent;
+        }
+        .legal-trigger i {
+            font-size: 12px;
+            color: #2d4b6e;
+            transition: transform 0.2s;
+        }
+        .legal-dropdown:hover .legal-trigger i {
+            transform: rotate(180deg);
+        }
+        .legal-dropdown:hover .legal-trigger {
+            background: #e9ecf0;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid #d0d7e0;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+        .legal-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            border-left-color: #1a5cff;
+        }
+        .mobile-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #eef2f6;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d0d7e0;
+        }
+        .mobile-btn span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 16px;
+            padding: 20px 16px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e2b3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+        }
+        .mobile-menu a:hover {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+        }
+        .mobile-menu a.active {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .mobile-legal {
+            margin-top: 8px;
+        }
+        .mobile-legal p {
+            padding: 8px 16px 4px;
+            color: #2d4b6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        /* ----- ARTICLE LAYOUT (full editorial) ----- */
+        .article-wrapper {
+            max-width: 780px;
+            margin: 40px auto 60px;
+            padding: 0 32px;
+            flex: 1;
+            width: 100%;
+        }
+        article {
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 48px 44px 56px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+        }
+        /* Article header */
+        .article-header {
+            margin-bottom: 32px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 28px;
+        }
+        .article-header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: #4a668a;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+        }
+        .article-meta i {
+            margin-right: 4px;
+        }
+        .article-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        /* Article body typography */
+        .article-body h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+            border-left: 4px solid #1a5cff;
+            padding-left: 18px;
+        }
+        .article-body h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+        .article-body p {
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+            color: #1e2b3c;
+        }
+        .article-body strong {
+            color: #0b1a2c;
+            font-weight: 600;
+        }
+        .article-body ul, .article-body ol {
+            margin: 18px 0 20px 24px;
+        }
+        .article-body li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+        /* Pull quote / blockquote */
+        .pull-quote {
+            margin: 28px 0 30px;
+            padding: 20px 28px 20px 32px;
+            background: #f0f6fe;
+            border-left: 6px solid #1a5cff;
+            border-radius: 0 12px 12px 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #0b1a2c;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .pull-quote i {
+            color: #1a5cff;
+            margin-right: 8px;
+        }
+        /* Internal link style */
+        .article-body a {
+            color: #1a5cff;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.15s;
+        }
+        .article-body a:hover {
+            color: #0d47b3;
+        }
+        /* Inline code / tool names */
+        .code-tag {
+            background: #eef2f6;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-family: 'SF Mono', monospace;
+            font-size: 0.9rem;
+            color: #1e3a5f;
+            font-weight: 500;
+        }
+        /* Responsive article */
+        @media (max-width: 768px) {
+            .article-wrapper {
+                padding: 0 16px;
+                margin: 24px auto 40px;
+            }
+            article {
+                padding: 28px 20px 36px;
+                border-radius: 20px;
+            }
+            .article-header h1 {
+                font-size: 1.8rem;
+            }
+            .article-body h2 {
+                font-size: 1.5rem;
+                padding-left: 14px;
+            }
+            .article-body p, .article-body li {
+                font-size: 1rem;
+            }
+            .pull-quote {
+                font-size: 1.05rem;
+                padding: 16px 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .article-header h1 {
+                font-size: 1.5rem;
+            }
+            .article-body h2 {
+                font-size: 1.3rem;
+            }
+            article {
+                padding: 20px 14px 28px;
+            }
+        }
+        /* ----- FOOTER (exactly matches uploaded ecosystem) ----- */
+        .footer {
+            background: #0f1a26;
+            color: #e1eaf2;
+            padding: 40px 0 24px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.8fr;
+            gap: 40px 50px;
+            align-items: start;
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            padding: 0 24px;
+        }
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+        .footer-links a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+        .footer-links a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .footer-social h4 {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .social-item a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+        .social-item a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .social-item i {
+            width: 20px;
+            font-size: 1.1rem;
+            color: #8fadcf;
+        }
+        .social-item a:hover i {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #8ba0b9;
+            font-size: 0.85rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+        }
+        /* Responsive footer */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-btn {
+                display: flex;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+        @media (max-width: 650px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-brand h3 {
+                font-size: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR (exact match to uploaded ecosystem) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo-link">
+                <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <span class="logo-text">Brainloom</span>
+            </a>
+            <div class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="legal-dropdown">
+                    <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN ARTICLE CONTENT -->
+    <main class="article-wrapper">
+        <article>
+            <header class="article-header">
+                <h1>The Ultimate Guide to Absolute Facial Consistency in AI Generation</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> June 5, 2026</span>
+                    <span><i class="far fa-clock"></i> 10 min read</span>
+                    <span><i class="fas fa-tag"></i> AI Prompt Engineering</span>
+                </div>
+            </header>
+
+            <div class="article-body">
+                <p>Here's the thing about AI image generation that nobody warns you about.</p>
+                <p>You can get a gorgeous face. Perfect lighting. Intricate details. But try to generate that same face again — same angle, same character, same everything — and you get a completely different person. Different nose. Different jawline. Different expression. It's like the AI forgot who you were asking for.</p>
+                <p>I've been through this. You generate a character you love. Maybe it's for a comic, a story, a game prototype. You think "great, I'll just generate a few more poses" and suddenly you're looking at a stranger. It's frustrating. And it makes AI feel unusable for real projects.</p>
+                <p>But here's what I learned after spending way too many hours trying to crack this: <strong>absolute facial consistency is possible.</strong> Not perfect — nothing in AI is perfect — but reliable enough that you can actually build something.</p>
+
+                <h2>Why faces are so hard to keep consistent</h2>
+                <p>Let's start with the obvious problem.</p>
+                <p>Most AI models — Midjourney, Stable Diffusion, DALL-E — aren't designed to remember characters. They're designed to generate an image based on a prompt. Every generation is essentially a fresh roll of the dice. The model doesn't have a memory of the last image you made. It doesn't know that you want this specific person, not just "a person who looks like this."</p>
+                <p>What happens under the hood is that the latent space (the mathematical representation of all possible images) is massive. Two different seeds that land near each other can still produce very different facial features. A slight change in your prompt — adding "smiling" instead of "neutral" — can shift the entire face structure.</p>
+                <p>The real kicker? <strong>Most people think they need a different tool or a more complex workflow.</strong> But the problem isn't the tool. It's the approach.</p>
+
+                <h2>The two camps of consistency</h2>
+                <p>I've seen people approach facial consistency two ways, and one of them almost never works.</p>
+                <h3>Camp A: The prompt engineering approach</h3>
+                <p>You write a super detailed description. Hair color, eye shape, nose bridge, jaw angle, scar placement, everything. You paste this same prompt every time. The result? Similar vibes, but the face changes. Why? Because the model interprets your words differently based on noise, sampling steps, and the random seed. <strong>You're asking the AI to translate English into pixels, and English is imprecise.</strong></p>
+                <h3>Camp B: The reference approach</h3>
+                <p>You feed the AI an actual image of the face you want to replicate. This works much better, but it comes with its own problems. Your reference image gets baked into the generation, and depending on how you do it, you might get a copy-paste or a distorted mess.</p>
+                <p>I've landed on <strong>Camp B as the only real path</strong>, but only if you do it right.</p>
+
+                <h2>What actually works (and what doesn't)</h2>
+                <p>Let me save you the trial and error I went through.</p>
+                <h3>The "seed trick" is a lie</h3>
+                <p>You'll hear people say "just fix the seed number" and then you'll get the same face. This is partially true. Same seed + same prompt + same model + same settings = same image. But change anything — even slightly — and the face shifts. Want a different expression? Different pose? Different lighting? The seed trick breaks instantly. It only works if you want the exact same image, which defeats the purpose of generative art.</p>
+
+                <h3>IP-Adapter and ControlNet are the real tools</h3>
+                <p>This is where things get technical, but stay with me.</p>
+                <p>If you're using Stable Diffusion (and you should be, for this specific task), you want two things:</p>
+                <ul>
+                    <li><strong>IP-Adapter</strong> is a tool that takes a reference image and injects that face into your generation. It's remarkably good at preserving identity while letting you change everything else — pose, expression, clothing, background. Think of it as <em>"this person, but in this scene."</em></li>
+                    <li><strong>ControlNet</strong> is different. It forces the AI to follow a specific structure — a pose, a composition, a line drawing. But it doesn't care about identity. Combine IP-Adapter (for the face) with ControlNet (for the pose) and you have a workflow that actually works.</li>
+                </ul>
+                <p>Here's what I do:</p>
+                <ol>
+                    <li>Generate a reference image of the face I like.</li>
+                    <li>Crop it to just the face. Clean crop, no background.</li>
+                    <li>Use IP-Adapter with that cropped face as the reference.</li>
+                    <li>Use ControlNet OpenPose (or Canny, depending on the scene) to control the body position.</li>
+                    <li>Generate.</li>
+                </ol>
+                <p>The first time I did this, I generated the same face in 12 different poses, expressions, and outfits. It worked. Not perfectly — there were small variations in eyebrows and mouth shape — but recognizable as the same person.</p>
+
+                <h3>Midjourney's "character reference" is decent but limited</h3>
+                <p>Midjourney added a character reference feature (the <span class="code-tag">--cref</span> parameter) recently. It works better than their old methods, but it has a ceiling. You get three or four good generations before the model starts hallucinating variations. The face drifts. The eyes get slightly wider. The jaw gets a little longer. For a single image, it's fine. For a series? I wouldn't trust it.</p>
+
+                <h3>The "train a LoRA" method is overkill for most people</h3>
+                <p>You can train a small model (a LoRA) on 10–20 images of a face. This is the professional approach. It works beautifully. You get near-perfect consistency. But it's also a pain. You need to curate images, run training, manage checkpoints. If you're a hobbyist or working on a small project, it's probably more trouble than it's worth. If you're building a game or a comic where the same face appears dozens of times, do it. But don't start here.</p>
+
+                <h2>The mistake everyone makes</h2>
+                <p>Here's the insight that changed how I think about this.</p>
+                <p>Most people try to preserve <strong>every detail</strong> of a face. The exact nostril shape. The precise curve of the cupid's bow. The specific angle of the cheekbone under lighting.</p>
+                <p>And that's impossible.</p>
+                <div class="pull-quote">
+                    <i class="fas fa-quote-left"></i> A face isn't a fixed object to an AI model — it's a statistical average of thousands of faces it was trained on.
+                </div>
+                <p>What I realized is that you don't need absolute facial consistency. You need <strong>recognizable identity.</strong></p>
+                <p>Think about it. If you see your friend across the street, do you check the exact width of their nose before deciding it's them? No. You recognize them by a combination of features, proportions, and the way their face moves. The brain is forgiving. The AI is not.</p>
+                <p>So stop fighting the AI. Instead, accept that small variations are fine, and focus on the features that <strong>actually</strong> carry identity: eye shape, jaw structure, hairline, and the spacing between eyes and nose. If those stay consistent, the face will read as the same person.</p>
+
+                <h2>The practical workflow I actually use</h2>
+                <p>Let me give you something you can use today. No theory, no marketing hype.</p>
+                <h3>For Stable Diffusion (Automatic1111 or ComfyUI):</h3>
+                <ol>
+                    <li><strong>Create your character.</strong> Generate a few images. Pick the one that looks exactly like what you want.</li>
+                    <li><strong>Crop the face.</strong> Make it square. Keep the resolution reasonable (512x512 is fine).</li>
+                    <li><strong>Use IP-Adapter.</strong> Set the weight between 0.6 and 0.8. Too high and you'll get a direct copy. Too low and the face drifts. 0.7 is my sweet spot.</li>
+                    <li><strong>Use ControlNet for your pose.</strong> OpenPose is best for human bodies. Canny for objects or scenes.</li>
+                    <li><strong>Generate.</strong> If the face drifts, increase the IP-Adapter weight. If it looks like a clone, lower it.</li>
+                    <li><strong>Regenerate with different seeds</strong> until you get a set of images that look like the same person.</li>
+                </ol>
+                <h3>For Midjourney users:</h3>
+                <p>Use <span class="code-tag">--cref</span> with the URL of your reference image. Keep the prompt simple. Don't add too many facial descriptors — let the reference do the work. If you need a specific expression, use <span class="code-tag">--cref</span> and then add the expression in the prompt, but expect some drift.</p>
+
+                <h2>The real limit you'll hit</h2>
+                <p>No matter what you do, you will eventually run into the same problem: <strong>lighting changes identity.</strong></p>
+                <p>Take a photo of a person under warm indoor lighting, then under cold daylight. They look different. Not unrecognizable, but different. The AI does this too. If you generate your character in a dark room and then in bright sunlight, the face will shift. Not because the model failed, but because the lighting changes how the model interprets the face.</p>
+                <p>The fix? Keep lighting consistent across your generations. Or accept that the face will look slightly different, and that's okay. I've stopped fighting this. I now treat lighting as part of the character's expression, not a consistency failure.</p>
+
+                <h2>What you should take from all this</h2>
+                <p>Here's the honest truth.</p>
+                <div class="pull-quote">
+                    <i class="fas fa-quote-left"></i> You will never get perfect facial consistency from any AI tool. Not today. Not next year.
+                </div>
+                <p>But you can get <strong>good enough</strong> consistency. Good enough that you can build a comic strip. Good enough that you can create game assets. Good enough that a human viewer will recognize the character across different scenes and poses.</p>
+                <p>The secret isn't a better tool or a more complex prompt. It's accepting the limits, focusing on the features that matter, and using the right reference method for your specific use case.</p>
+                <p>If you're using Stable Diffusion, learn IP-Adapter and ControlNet. If you're using Midjourney, use <span class="code-tag">--cref</span> and don't expect miracles. If you're building a real project with dozens of images, train a LoRA.</p>
+                <p>And stop blaming yourself when the face changes. It's not your fault. It's just how the math works.</p>
+                <p><strong>The goal isn't perfect replication. It's recognizable identity.</strong> Everything else is noise.</p>
+            </div>
+        </article>
+    </main>
+
+    <!-- FOOTER (exact match to uploaded ecosystem) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
