@@ -4,7 +4,6 @@
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://www.highperformanceformat.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <meta charset="UTF-8">
@@ -105,7 +104,6 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            padding-bottom: 90px;
         }
 
         ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -691,18 +689,6 @@
         .faq-q { font-weight: 700; margin-bottom: 8px; color: #1e3a5f; }
         .faq-a { color: #4a627a; line-height: 1.6; }
 
-        .ad-banner {
-            margin-bottom: 32px;
-            text-align: center;
-            min-height: 90px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .ad-desktop { display: block; }
-        .ad-mobile { display: none; }
-
         /* ----- FOOTER (exactly as template) ----- */
         .footer {
             background: #0f1f2f;
@@ -759,46 +745,6 @@
             color: #8fa0b0;
         }
 
-        .sticky-bottom-ad {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: transparent;
-            z-index: 999;
-            text-align: center;
-            pointer-events: none;
-        }
-
-        .sticky-bottom-ad .ad-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            pointer-events: auto;
-        }
-
-        .sticky-bottom-ad .ad-desktop-bottom { display: block; }
-        .sticky-bottom-ad .ad-mobile-bottom { display: none; }
-
-        .sticky-ad-close {
-            position: absolute;
-            top: -12px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            border: none;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: auto;
-            z-index: 1000;
-        }
-
         /* Responsive */
         @media (max-width: 900px) {
             .hero h1 { font-size: 2rem; }
@@ -807,7 +753,6 @@
         }
 
         @media (max-width: 768px) {
-            body { padding-bottom: 50px; }
             .container, .main { padding: 0 20px; }
             .nav-links { display: none; }
             .menu-toggle { display: flex; }
@@ -819,11 +764,6 @@
             .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
             .footer-links { justify-items: center; }
             .social-list { align-items: center; }
-            .ad-desktop { display: none; }
-            .ad-mobile { display: block; }
-            .ad-banner { min-height: 50px; }
-            .sticky-bottom-ad .ad-desktop-bottom { display: none; }
-            .sticky-bottom-ad .ad-mobile-bottom { display: block; }
         }
 
         @media (max-width: 480px) {
@@ -834,7 +774,7 @@
 </head>
 <body>
 
-<!-- ===== NAVBAR (exactly as template) ===== -->
+<!-- ===== NAVBAR ===== -->
 <nav class="navbar">
     <div class="container">
         <div class="nav-inner">
@@ -856,7 +796,6 @@
                         </a>
                     </div>
                 </div>
-                <a href="/prompts" class="nav-link">Prompts</a>
                 <a href="/about" class="nav-link">About</a>
                 <a href="/contact" class="nav-link">Contact</a>
                 <div class="dropdown legal-dropdown">
@@ -881,7 +820,6 @@
                         <span class="mobile-new-badge" style="margin-left: 8px;">✨</span>
                     </a>
                 </div>
-                <a href="/prompts">Prompts</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
                 <div class="mobile-legal">
@@ -906,34 +844,6 @@
             Batch erase logos from <strong>Nano Banana</strong> images instantly. 
             100% free and private — everything happens in your browser.
         </p>
-    </div>
-
-    <!-- AD BANNER 1 -->
-    <div class="ad-banner">
-        <div class="ad-desktop">
-            <script>
-                atOptions = {
-                    'key' : '62ba6b2106fe2abcd6159c5b83039bcc',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                };
-            </script>
-            <script src="https://www.highperformanceformat.com/62ba6b2106fe2abcd6159c5b83039bcc/invoke.js"></script>
-        </div>
-        <div class="ad-mobile">
-            <script>
-                atOptions = {
-                    'key' : 'cf1d3a2308affc58f4f678f4a3c3241e',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-            </script>
-            <script src="https://www.highperformanceformat.com/cf1d3a2308affc58f4f678f4a3c3241e/invoke.js"></script>
-        </div>
     </div>
 
     <!-- ===== WATERMARK TOOL SECTION ===== -->
@@ -997,34 +907,6 @@
         </div>
     </div>
 
-    <!-- AD BANNER 2 -->
-    <div class="ad-banner">
-        <div class="ad-desktop">
-            <script>
-                atOptions = {
-                    'key' : '62ba6b2106fe2abcd6159c5b83039bcc',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                };
-            </script>
-            <script src="https://www.highperformanceformat.com/62ba6b2106fe2abcd6159c5b83039bcc/invoke.js"></script>
-        </div>
-        <div class="ad-mobile">
-            <script>
-                atOptions = {
-                    'key' : 'cf1d3a2308affc58f4f678f4a3c3241e',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-            </script>
-            <script src="https://www.highperformanceformat.com/cf1d3a2308affc58f4f678f4a3c3241e/invoke.js"></script>
-        </div>
-    </div>
-
     <!-- Features Grid -->
     <div class="features-grid">
         <div class="feature-box">
@@ -1079,38 +961,7 @@
     </div>
 </main>
 
-<!-- STICKY BOTTOM AD -->
-<div class="sticky-bottom-ad" id="stickyAd">
-    <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
-    <div class="ad-container">
-        <div class="ad-desktop-bottom" id="desktopStickyAd">
-            <script>
-                atOptions = {
-                    'key' : '656dbda48a53949d938bbe0fb5bd50f5',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                };
-            </script>
-            <script src="https://www.highperformanceformat.com/656dbda48a53949d938bbe0fb5bd50f5/invoke.js"></script>
-        </div>
-        <div class="ad-mobile-bottom" id="mobileStickyAd">
-            <script>
-                atOptions = {
-                    'key' : '5e36d6ec4c18137d44d7d612e18ea3a8',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-            </script>
-            <script src="https://www.highperformanceformat.com/5e36d6ec4c18137d44d7d612e18ea3a8/invoke.js"></script>
-        </div>
-    </div>
-</div>
-
-<!-- ===== FOOTER (exactly as template) ===== -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container">
         <div class="footer-grid">
@@ -1120,7 +971,6 @@
             </div>
             <div class="footer-links">
                 <a href="/">Home</a>
-                <a href="/prompts">Prompts</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
                 <a href="/policy">Privacy policy</a>
@@ -1603,37 +1453,6 @@
         toggleBtn.addEventListener('click', () => mobileNav.classList.toggle('open'));
         document.addEventListener('click', (e) => { if(!toggleBtn.contains(e.target) && !mobileNav.contains(e.target)) mobileNav.classList.remove('open'); });
     }
-
-    // Sticky ad
-    const stickyAd = document.getElementById('stickyAd');
-    const closeStickyAd = document.getElementById('closeStickyAd');
-    let adInterval, isAdClosed = false;
-    function refreshStickyAd() {
-        if (isAdClosed) return;
-        const desktopAd = document.getElementById('desktopStickyAd');
-        const mobileAd = document.getElementById('mobileStickyAd');
-        if (desktopAd) desktopAd.innerHTML = '';
-        if (mobileAd) mobileAd.innerHTML = '';
-        if (desktopAd) {
-            const s1 = document.createElement('script');
-            s1.textContent = `atOptions = {'key':'656dbda48a53949d938bbe0fb5bd50f5','format':'iframe','height':90,'width':728,'params':{}};`;
-            const s2 = document.createElement('script');
-            s2.src = 'https://www.highperformanceformat.com/656dbda48a53949d938bbe0fb5bd50f5/invoke.js';
-            desktopAd.appendChild(s1); desktopAd.appendChild(s2);
-        }
-        if (mobileAd) {
-            const s1 = document.createElement('script');
-            s1.textContent = `atOptions = {'key':'5e36d6ec4c18137d44d7d612e18ea3a8','format':'iframe','height':50,'width':320,'params':{}};`;
-            const s2 = document.createElement('script');
-            s2.src = 'https://www.highperformanceformat.com/5e36d6ec4c18137d44d7d612e18ea3a8/invoke.js';
-            mobileAd.appendChild(s1); mobileAd.appendChild(s2);
-        }
-    }
-    if (closeStickyAd) {
-        closeStickyAd.addEventListener('click', () => { stickyAd.style.display = 'none'; isAdClosed = true; document.body.style.paddingBottom = '0'; if(adInterval) clearInterval(adInterval); });
-    }
-    adInterval = setInterval(refreshStickyAd, 30000);
-    window.addEventListener('beforeunload', () => { if(adInterval) clearInterval(adInterval); });
 })();
 </script>
 
