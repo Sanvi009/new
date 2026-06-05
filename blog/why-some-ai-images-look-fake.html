@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Some AI Images Look Fake — And How to Fix Them | Brainloom</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo1.png">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="A thoughtful deep dive into why AI-generated images look uncanny — and practical techniques to fix skin texture, lighting, anatomy, and depth of field issues.">
+    <meta name="keywords" content="AI images, fake AI images, realistic AI prompts, AI image generation, skin texture, lighting, AI anatomy, depth of field, AI prompt tips">
+    <meta name="author" content="Brainloom">
+    <meta name="robots" content="index, follow">
+    <!-- Font Awesome (deferred) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #1e2b3c;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* ----- NAVBAR (exactly from uploaded ecosystem) ----- */
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7e0;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-img {
+            width: 36px;
+            height: 36px;
+            background: #f0f4fa;
+            border-radius: 8px;
+            object-fit: contain;
+            display: block;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+        }
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-link {
+            padding: 8px 18px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 40px;
+            transition: background 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+        }
+        .nav-link.active {
+            background: #e9ecf0;
+            border-bottom-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .legal-dropdown {
+            position: relative;
+        }
+        .legal-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #1e3a5f;
+            cursor: default;
+            border-radius: 40px;
+            border-bottom: 2px solid transparent;
+        }
+        .legal-trigger i {
+            font-size: 12px;
+            color: #2d4b6e;
+            transition: transform 0.2s;
+        }
+        .legal-dropdown:hover .legal-trigger i {
+            transform: rotate(180deg);
+        }
+        .legal-dropdown:hover .legal-trigger {
+            background: #e9ecf0;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 200px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border: 1px solid #d0d7e0;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+        .legal-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            border-left-color: #1a5cff;
+        }
+        .mobile-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #eef2f6;
+            border-radius: 40px;
+            cursor: pointer;
+            border: 1px solid #d0d7e0;
+        }
+        .mobile-btn span {
+            width: 20px;
+            height: 2px;
+            background: #1e3a5f;
+            margin: 3px 0;
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none;
+            background: #ffffff;
+            border-radius: 20px;
+            margin-top: 16px;
+            padding: 20px 16px;
+            border: 1px solid #d0d7e0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: #1e2b3c;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+        }
+        .mobile-menu a:hover {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+        }
+        .mobile-menu a.active {
+            background: #eef2f6;
+            border-left-color: #1a5cff;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .mobile-legal {
+            margin-top: 8px;
+        }
+        .mobile-legal p {
+            padding: 8px 16px 4px;
+            color: #2d4b6e;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+        /* ----- EDITORIAL ARTICLE PAGE DESIGN (new) ----- */
+        .article-wrapper {
+            max-width: 750px;
+            margin: 40px auto 60px;
+            padding: 0 24px;
+            flex: 1;
+        }
+        .article-header {
+            margin-bottom: 48px;
+            text-align: left;
+        }
+        .article-category {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: #1a5cff;
+            background: #e9ecf0;
+            padding: 4px 14px;
+            border-radius: 30px;
+            margin-bottom: 16px;
+        }
+        .article-title {
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #0b1a2c;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: #2d4b6e;
+            flex-wrap: wrap;
+        }
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .article-meta i {
+            color: #8fadcf;
+            font-size: 0.85rem;
+        }
+        .article-body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #1e2b3c;
+        }
+        .article-body p {
+            margin-bottom: 1.6rem;
+        }
+        .article-body h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0b1a2c;
+            margin-top: 2.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0b1a2c;
+            margin-top: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+        .article-body blockquote {
+            border-left: 4px solid #1a5cff;
+            padding-left: 24px;
+            margin: 2rem 0 2rem 0;
+            font-style: italic;
+            color: #1e3a5f;
+            background: #f0f4fa;
+            padding: 16px 24px;
+            border-radius: 0 12px 12px 0;
+        }
+        .article-body blockquote p {
+            margin-bottom: 0;
+        }
+        .article-body ul {
+            margin: 1.2rem 0 1.8rem 1.4rem;
+            list-style: none;
+        }
+        .article-body ul li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 0.6rem;
+        }
+        .article-body ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #1a5cff;
+            font-weight: 600;
+        }
+        .article-body .pull-quote {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            font-weight: 500;
+            color: #0b1a2c;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin: 2.4rem 0;
+            border-top: 2px solid #d0d7e0;
+            border-bottom: 2px solid #d0d7e0;
+        }
+        .article-body .pull-quote i {
+            color: #1a5cff;
+            margin-right: 8px;
+        }
+        /* responsive article */
+        @media (max-width: 768px) {
+            .article-wrapper {
+                padding: 0 20px;
+                margin: 30px auto 50px;
+            }
+            .article-title {
+                font-size: 1.8rem;
+            }
+            .article-body {
+                font-size: 1rem;
+            }
+            .article-body h2 {
+                font-size: 1.3rem;
+            }
+            .article-body .pull-quote {
+                font-size: 1.2rem;
+                padding: 1.5rem 0.5rem;
+            }
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-btn {
+                display: flex;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+        @media (max-width: 480px) {
+            .article-wrapper {
+                padding: 0 16px;
+                margin: 20px auto 40px;
+            }
+            .article-title {
+                font-size: 1.5rem;
+            }
+            .article-meta {
+                font-size: 0.8rem;
+                gap: 12px;
+            }
+        }
+        /* ----- FOOTER (exactly from uploaded ecosystem) ----- */
+        .footer {
+            background: #0f1a26;
+            color: #e1eaf2;
+            padding: 40px 0 24px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.8fr;
+            gap: 40px 50px;
+            align-items: start;
+            max-width: 1300px;
+            margin: 0 auto 24px;
+            padding: 0 24px;
+        }
+        .footer-brand h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: white;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
+        }
+        .footer-links a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+        }
+        .footer-links a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .footer-social h4 {
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 14px;
+            letter-spacing: 0.3px;
+        }
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .social-item a {
+            color: #c7d9ec;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.15s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid transparent;
+        }
+        .social-item a:hover {
+            color: white;
+            border-bottom-color: #5c8dff;
+        }
+        .social-item i {
+            width: 20px;
+            font-size: 1.1rem;
+            color: #8fadcf;
+        }
+        .social-item a:hover i {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            color: #8ba0b9;
+            font-size: 0.85rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 18px 24px 0;
+        }
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+        @media (max-width: 650px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-brand h3 {
+                font-size: 1.8rem;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR (exactly from uploaded ecosystem) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo-link">
+                <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36" fetchpriority="high" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2236%22%20height%3D%2236%22%20viewBox%3D%220%200%2036%2036%22%3E%3Crect%20width%3D%2236%22%20height%3D%2236%22%20fill%3D%22%23233d62%22%20rx%3D%228%22%2F%3E%3Ctext%20x%3D%227%22%20y%3D%2225%22%20fill%3D%22white%22%20font-size%3D%2218%22%20font-weight%3D%22bold%22%3EBL%3C%2Ftext%3E%3C%2Fsvg%3E';">
+                <span class="logo-text">Brainloom</span>
+            </a>
+            <div class="desktop-nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="legal-dropdown">
+                    <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-btn" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ARTICLE PAGE (fully rendered editorial content) -->
+    <main class="article-wrapper">
+        <article>
+            <header class="article-header">
+                <span class="article-category">AI Prompting</span>
+                <h1 class="article-title">Why Some AI Images Look Fake — And How to Fix Them</h1>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> May 22, 2026</span>
+                    <span><i class="far fa-clock"></i> 8 min read</span>
+                    <span><i class="far fa-user"></i> Brainloom Editors</span>
+                </div>
+            </header>
+            <div class="article-body">
+                <p>We’ve all had that moment. You’re scrolling through social media, and an image stops you. Something’s off. The lighting is too perfect but somehow wrong. The skin looks like polished plastic. The hands have seven fingers, or maybe four, or they’re fused together in a way that makes you squint. You know it’s AI-generated, and you know exactly why you know. But articulating that “why” is harder than it seems.</p>
+                <p>I’ve been generating AI images almost daily for over a year now, and I’ve made every mistake you can make. I’ve created images so uncanny they made me uncomfortable. I’ve also created ones that fooled photographer friends. The difference between those outcomes isn’t random, and it isn’t just about having a better prompt. It’s about understanding what’s actually happening under the hood.</p>
+                <p>The fake-looking AI image problem is getting weirder, not simpler. Early AI images looked fake because they were blurry and distorted. Now they look fake because they’re too perfect, or because the imperfections are in precisely the wrong places. It’s a strange inversion. We’ve crossed the valley where the technology isn’t capable enough, and landed in a valley where it’s capable in ways that don’t match reality.</p>
+                <p>Let me walk through what I’ve learned about why this happens and what you can actually do about it.</p>
+                <h2>The cleanliness problem no one talks about</h2>
+                <p>Here’s something I noticed after generating thousands of images: reality is messy in ways we don’t consciously register. AI doesn’t know this.</p>
+                <p>Take a portrait of a real person. Look closely at their skin. There are tiny asymmetries, slight variations in texture, maybe a faint scar or a pore that’s slightly larger than the others. There’s a stray hair that catches the light differently. The edge of their shirt has a tiny wrinkle from the way they’re sitting. None of this registers consciously when you look at the photo, but your brain catalogs all of it as “real.”</p>
+                <p>AI images, especially from earlier models or lazy prompts, tend to smooth all this away. The skin is uniform. The hair flows too perfectly. Every edge is crisp. Every shadow falls exactly where physics says it should, but with none of the micro-variations that actual light creates when bouncing off an irregular surface.</p>
+                <p>What I realized is that the fakeness isn’t about big obvious flaws anymore. It’s about an absence. A lack of entropy. The image lacks the noise of reality, and your brain flags that absence as wrong even if you can’t explain why.</p>
+                <p>This is why simply adding “photorealistic” to your prompt often makes things worse. You’re telling the model to double down on perfection, when what you actually need is controlled imperfection.</p>
+                <h2>Skin like butter, eyes like glass</h2>
+                <p>The single biggest tell, still, is skin texture. I see it constantly even in images people proudly share as “indistinguishable from photography.” The skin has a slight waxy quality, like a Madame Tussauds figure brought to life. Pores are either entirely absent or too uniformly distributed. The subsurface scattering — the way light penetrates skin slightly and bounces back out — is either missing or exaggerated.</p>
+                <p>Real skin is translucent at the edges. Hold your hand up to a strong light and you’ll see a slight red glow at the edges of your fingers. That’s light traveling through your flesh. AI models are getting better at this, but they still struggle with the subtlety of it. They either overdo it, making people look like they’re made of candle wax, or underdo it, making skin look like painted ceramic.</p>
+                <p>Eyes have a parallel problem. In real photographs, eyes have depth. The cornea reflects light as a sharp catchlight, but there’s also a slight wetness, a meniscus where the eyelid meets the eye. AI often renders eyes as flat discs with a white dot painted on. The catchlight is too perfect, too round, too uniformly bright. Real catchlights are shaped by the light source — a window makes a rectangle, a softbox makes a shape, and it’s never a mathematically perfect circle unless you’re shooting with a ring flash.</p>
+                <p>I’ve found that the best way to address this isn’t to describe skin in more detail. It’s to introduce language that implies imperfection. Words like “visible pores,” “natural skin texture,” “candid lighting,” “imperfect complexion.” These nudge the model away from its default tendency to airbrush everything into mannequin territory.</p>
+                <div class="pull-quote">
+                    <i class="fas fa-quote-left"></i> The fakeness isn’t about big obvious flaws anymore. It’s about an absence. A lack of entropy.
+                </div>
+                <h2>The anatomy of wrongness</h2>
+                <p>We need to talk about hands. Everyone jokes about AI hands, and for good reason. But understanding why hands go wrong tells you something important about how these models think.</p>
+                <p>AI image generators don’t understand what a hand is. They don’t know it has five fingers, that those fingers have three segments each, that they articulate in specific ways. They know that in their training data, certain visual patterns appear near other visual patterns. A hand is just a collection of shapes that statistically tend to appear at the end of an arm, near other arms, often holding things.</p>
+                <p>When the model generates a hand, it’s not counting to five. It’s painting a probability distribution of pixels. Sometimes that distribution lands on four fingers. Sometimes six. Sometimes the fingers blend together because in the training data, fingers often overlap, and the model doesn’t understand occlusion as a physical phenomenon — it only understands it as a visual pattern.</p>
+                <p>This is why hands get worse when they’re doing something specific. A hand just hanging at someone’s side has a relatively constrained set of likely appearances. A hand holding a coffee cup while simultaneously making a gesture? Now you’re asking the model to combine multiple low-probability patterns, and the result is often a nightmare of merged digits and impossible angles.</p>
+                <p>The fix isn’t just “say ‘perfect hands’ in your prompt,” because the model doesn’t know what perfect hands are. What actually helps is reducing complexity. Give hands something simple to do. Or crop them out. Or use inpainting to regenerate just the hand area multiple times until you get a lucky roll. I’ve spent forty minutes regenerating a single hand before. Sometimes that’s just the cost of the shot.</p>
+                <h2>Lighting that makes no sense</h2>
+                <p>This is the tell that took me longest to consciously notice, but once I saw it, I couldn’t unsee it. AI images often have lighting that is individually beautiful but collectively impossible.</p>
+                <p>You’ll see an image where the main light source is clearly coming from the left, casting warm golden light across the subject’s face. But then you notice the shadows on the background fall in a completely different direction. Or the color temperature of the highlights doesn’t match the supposed light source. Or there’s a rim light that seems to come from nowhere, illuminating the edge of the subject with no visible source in the scene.</p>
+                <p>Real lighting has logic. Even in studio photography with multiple lights, each light has a position, a color, a quality. Those lights interact with surfaces in predictable ways. AI models don’t simulate light physics. They reproduce patterns of light and shadow that they’ve seen, and they’ll happily combine a Rembrandt lighting pattern with a clamshell lighting pattern with a sunset backlight, all in the same image, because each of those patterns individually looks “right.”</p>
+                <p>The most common version of this is the “magic glow” problem. AI loves adding a soft, flattering glow to everything, especially portraits. It looks nice at first glance, but your brain eventually registers that there’s no reason for that glow to exist. The subject is standing in a gray overcast scene but their face is lit like they’re in golden hour. The mismatch creates the uncanny feeling.</p>
+                <p>Specifying your lighting in the prompt helps, but you have to be specific about the entire scene. Don’t just say “soft lighting.” Say “single window light from the left, overcast day, no fill light.” Give the model constraints that prevent it from mixing and matching.</p>
+                <h2>The depth and focus disconnect</h2>
+                <p>Real photographs have depth of field. Some things are in focus, others are not. This is a function of aperture, focal length, and distance from the lens. AI images simulate this effect, but often incorrectly.</p>
+                <p>I’ve seen AI portraits where the subject’s eyes are sharp but the tip of their nose is blurred, while their ears, which are on the same focal plane as the eyes, are also blurred. That doesn’t happen with a real lens. If the eyes are in focus, the ears should be too — they’re roughly the same distance from the camera. The AI applies blur based on what looks “portrait-like” rather than based on geometric reality.</p>
+                <p>Similarly, AI often struggles with the transition between in-focus and out-of-focus areas. Real lens blur, or bokeh, has specific characteristics based on the lens design. The transition is gradual. AI blur tends to have sharp edges or uniform application that doesn’t correspond to the depth relationships in the scene.</p>
+                <p>This matters more than you’d think. Our visual systems are exquisitely sensitive to depth cues. We might not be able to articulate focal plane logic, but we can feel when it’s wrong. The image looks like a flat collage with selective blur applied as an afterthought, which is essentially what it is.</p>
+                <h2>What I’ve learned about fixing it</h2>
+                <p>I’ve experimented with a lot of approaches, and some work better than others. Here’s what’s actually made a difference in my results, beyond just hoping for a lucky seed.</p>
+                <h3>Stop chasing perfection in your prompts.</h3>
+                <p>The more you describe an idealized version of something, the more the model gravitates toward an uncanny ideal. Instead of “beautiful woman with perfect skin,” try “woman with freckles and slightly uneven complexion, candid portrait.” The imperfections give the model something real to anchor to.</p>
+                <h3>Use photographic references indirectly.</h3>
+                <p>Most models have been trained on specific photographic styles, lighting setups, and even camera and film stocks. Saying “shot on Kodak Portra 400, natural window light” gives the model a coherent visual reference that includes specific imperfection patterns — the grain structure, the color rendition, the dynamic range limitations of that film.</p>
+                <h3>Think like a photographer, not a painter.</h3>
+                <p>When I started thinking about prompts in terms of camera position, lens choice, lighting setup, and environmental conditions rather than just visual description, my results improved dramatically. “35mm lens, f/2.8, subject lit by single key light at 45 degrees, fill from a white wall” produces more coherent results than “dramatic lighting.”</p>
+                <h3>Post-processing is not cheating.</h3>
+                <p>I used to think the goal was to get a perfect image straight out of the generator. That’s a trap. Some of the most convincing AI images I’ve made involved bringing the output into Lightroom and adding grain, slightly desaturating, adjusting the contrast curve to match a specific film stock’s response. The slight degradation — and I mean that positively — adds the noise of reality back into the too-clean AI output.</p>
+                <h3>Know when to quit a generation.</h3>
+                <p>Sometimes the seed is just bad. The composition is off, the anatomy is fundamentally broken, the lighting contradictions are too severe. You can spend an hour trying to fix it with inpainting and prompt tweaks, or you can generate a new seed in thirty seconds. Learning to recognize when something is fundamentally unsalvageable saves so much time and frustration.</p>
+                <blockquote>
+                    <p>We’re essentially teaching ourselves to see reality more clearly by studying its artificial reproduction.</p>
+                </blockquote>
+                <p>The strangest part of all this, and the thing I keep coming back to, is that we’re essentially teaching ourselves to see reality more clearly by studying its artificial reproduction. I notice light and texture and anatomy now in ways I never did before, because I’ve spent so much time looking at images that get them subtly wrong. There’s something almost meditative about it. You learn to see the world by studying its absence.</p>
+                <p>The fake-looking AI image problem isn’t going to last forever. The models are improving rapidly, and many of the tells I’ve described here will be resolved in the next generation or two. But the deeper lesson — that realism isn’t about perfection, that authenticity lives in the imperfections, that our brains are constantly performing an astonishingly complex analysis of visual reality without our conscious awareness — that’s going to be relevant for a long time.</p>
+                <p>In the meantime, if you’re generating images and they look wrong, step back. Look at the skin. Look at where the light is coming from. Look at what’s in focus. Somewhere in there, the model is telling you what it doesn’t understand about the physical world. Your job is to meet it halfway.</p>
+            </div>
+        </article>
+    </main>
+    <!-- FOOTER (exactly from uploaded ecosystem) -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>BRAINLOOM</h3>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/policy">Privacy policy</a>
+                <a href="/term">Terms of use</a>
+                <a href="/sitemap.xml">Sitemap</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-list">
+                    <div class="social-item"><a href="https://www.facebook.com/profile.php?id=61556686528782" target="_blank"><i class="fab fa-facebook-f"></i> Facebook page</a></div>
+                    <div class="social-item"><a href="https://www.facebook.com/sanvi.al.evan" target="_blank"><i class="fab fa-facebook-messenger"></i> My profile</a></div>
+                    <div class="social-item"><a href="https://github.com/sanvi009" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                    <div class="social-item"><a href="https://www.tiktok.com/@brainloom.online" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></div>
+                    <div class="social-item"><a href="https://www.instagram.com/_brainloom.online/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></div>
+                    <div class="social-item"><a href="https://t.me/brainloomonline" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></div>
+                    <div class="social-item"><a href="https://www.youtube.com/@brainloom.online" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Brainloom. All rights reserved.</span>
+        </div>
+    </footer>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GH0DLY6H1F');
+    </script>
+    <!-- Mobile menu toggle script -->
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('mobileMenu');
+            if (toggle && menu) {
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('active');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                        menu.classList.remove('active');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
