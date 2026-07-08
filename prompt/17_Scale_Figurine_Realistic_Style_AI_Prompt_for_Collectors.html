@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <script src="https://pl27949322.profitablecpmratenetwork.com/76/d2/f7/76d2f72fc1d39ece31f162d9c3c8641d.js"></script>
-
-
-    
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.highperformanceformat.com">
+    <link rel="preconnect" href="https://pl27490254.effectivecpmnetwork.com">
+    <link rel="preconnect" href="https://pl27949322.effectivecpmnetwork.com">
 
     <!-- Preload first image for LCP optimization -->
     <link rel="preload" as="image" href="/images/113.jpeg">
@@ -85,6 +82,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
 
+    <!-- Social Bar & Popunder Scripts (loaded async) -->
+    <script async src="https://pl27490254.effectivecpmnetwork.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js"></script>
+    <script async src="https://pl27949322.effectivecpmnetwork.com/76/d2/f7/76d2f72fc1d39ece31f162d9c3c8641d.js"></script>
+
     <style>
         /* ----- RESET & BASE ----- */
         * {
@@ -101,7 +102,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            padding-bottom: 90px; /* Space for sticky banner on desktop */
+            padding-bottom: 150px; /* Space for sticky bar + social bar */
         }
 
         /* Custom scrollbar */
@@ -517,41 +518,77 @@
             display: none;
         }
 
-        /* Sticky Bottom Banner */
-        .sticky-bottom-ad {
+        /* Sticky Bottom Ad + Social Bar Container */
+        .sticky-bottom-area {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: transparent;
             z-index: 999;
-            text-align: center;
-            pointer-events: none; /* Allows clicking through the container */
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            padding-bottom: 6px;
         }
 
-        .sticky-bottom-ad .ad-container {
+        .sticky-bottom-area .ad-container,
+        .sticky-bottom-area .social-bar-container {
+            pointer-events: auto;
             display: flex;
             justify-content: center;
-            align-items: center;
-            pointer-events: auto; /* Re-enables clicking on the ad itself */
+            width: 100%;
         }
 
-        .sticky-bottom-ad .ad-desktop-bottom,
-        .sticky-bottom-ad .ad-mobile-bottom {
-            display: flex;
+        /* Social Bar Styles */
+        .social-bar-wrapper {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(4px);
+            border-radius: 40px;
+            padding: 6px 18px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255,255,255,0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
             justify-content: center;
+            transition: all 0.2s;
+            margin: 0 12px;
+        }
+
+        .social-bar-wrapper a {
+            color: #1a2c3e;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            display: inline-flex;
             align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.03);
+            text-decoration: none;
         }
 
-        .sticky-bottom-ad .ad-desktop-bottom {
-            display: block;
+        .social-bar-wrapper a:hover {
+            background: #1a5cff;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(26, 92, 255, 0.25);
         }
 
-        .sticky-bottom-ad .ad-mobile-bottom {
-            display: none;
+        .social-bar-wrapper .social-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #5a6e7c;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-right: 4px;
         }
 
-        /* Close button for sticky ad */
+        /* Sticky Ad close button */
         .sticky-ad-close {
             position: absolute;
             top: -12px;
@@ -576,9 +613,32 @@
             background: rgba(0, 0, 0, 0.9);
         }
 
+        .sticky-ad-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            pointer-events: auto;
+        }
+
+        .sticky-ad-wrapper .ad-desktop-bottom,
+        .sticky-ad-wrapper .ad-mobile-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sticky-ad-wrapper .ad-desktop-bottom {
+            display: block;
+        }
+
+        .sticky-ad-wrapper .ad-mobile-bottom {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             body {
-                padding-bottom: 50px; /* Space for sticky banner on mobile */
+                padding-bottom: 130px;
             }
 
             .ad-desktop {
@@ -591,11 +651,43 @@
                 min-height: 50px;
             }
 
-            .sticky-bottom-ad .ad-desktop-bottom {
+            .sticky-ad-wrapper .ad-desktop-bottom {
                 display: none;
             }
-            .sticky-bottom-ad .ad-mobile-bottom {
+            .sticky-ad-wrapper .ad-mobile-bottom {
                 display: block;
+            }
+
+            .social-bar-wrapper {
+                padding: 4px 12px;
+                gap: 6px;
+                border-radius: 30px;
+            }
+            .social-bar-wrapper a {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+            .social-bar-wrapper .social-label {
+                font-size: 0.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-bottom: 120px;
+            }
+            .social-bar-wrapper {
+                gap: 4px;
+                padding: 4px 10px;
+            }
+            .social-bar-wrapper a {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+            }
+            .social-bar-wrapper .social-label {
+                display: none;
             }
         }
 
@@ -1106,19 +1198,6 @@
             <pre class="prompt-code">Create a 1/7 scale commercialized figurine of (the character in the picture) , realistic style, in a real environment. Figurine placed on a computer desk. has a round transparent acrylic base. Next to the desk is the real person in the picture, in the real life size with the same attire as in the picture and the figurine, cleaning the figurine carefully with a fine brush. in a modern styled studio room, brightly lit. With some collection of toys and action figures.</pre>
             <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
         </div>
-
-        <!-- ============================================ -->
-        <!-- NEW: Gemini & ChatGPT Buttons Added Here -->
-        <!-- ============================================ -->
-        <div style="display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap;">
-            <button onclick="openWithGemini()" style="background: #1a5cff; color: white; border: none; padding: 10px 24px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s;">
-                <i class="fas fa-robot"></i> Try with Gemini
-            </button>
-            <button onclick="openWithChatGPT()" style="background: #10a37f; color: white; border: none; padding: 10px 24px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s;">
-                <i class="fas fa-comment"></i> Try with ChatGPT
-            </button>
-        </div>
-        <!-- ============================================ -->
     </div>
 
     <div class="card-section">
@@ -1160,10 +1239,26 @@
     </div>
 </main>
 
-<!-- STICKY BOTTOM AD BANNER -->
-<div class="sticky-bottom-ad" id="stickyAd">
-    <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
-    <div class="ad-container">
+<!-- STICKY BOTTOM AREA: SOCIAL BAR + AD -->
+<div class="sticky-bottom-area" id="stickyBottomArea">
+    <!-- Social Bar -->
+    <div class="social-bar-container">
+        <div class="social-bar-wrapper">
+            <span class="social-label"><i class="fas fa-share-alt"></i> Share</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors&text=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" target="_blank" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://pinterest.com/pin/create/button/?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors&media=https://brainloom.online/images/113.jpeg&description=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" target="_blank" aria-label="Share on Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="https://www.reddit.com/submit?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors&title=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" target="_blank" aria-label="Share on Reddit"><i class="fab fa-reddit-alien"></i></a>
+            <a href="https://wa.me/?text=Check out this AI prompt: 1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/share/url?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors&text=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" target="_blank" aria-label="Share on Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="mailto:?subject=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup&body=Check out this AI prompt: https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors" aria-label="Share via Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <!-- Sticky Ad -->
+    <div class="sticky-ad-wrapper" id="stickyAdWrapper">
+        <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
         <div class="ad-desktop-bottom" id="desktopStickyAd">
             <script>
                 atOptions = {
@@ -1221,12 +1316,11 @@
         });
     }
 
-    // Copy function with link opening
+    // Copy function
     function copyPrompt(btn) {
         const box = btn.closest('.prompt-box');
         const text = box.querySelector('.prompt-code').innerText;
 
-        // Copy text to clipboard
         navigator.clipboard.writeText(text).then(() => {
             const orig = btn.innerHTML;
             btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
@@ -1238,9 +1332,7 @@
         }).catch(() => {
             alert('Copy failed');
         });
-
-        // Open the link in a new window
-        }
+    }
 
     // Lightbox
     const lightbox = document.getElementById('lightbox');
@@ -1262,114 +1354,14 @@
     lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeLightbox(); });
 
-    // Sticky Bottom Ad functionality
-    const stickyAd = document.getElementById('stickyAd');
-    const closeStickyAd = document.getElementById('closeStickyAd');
-    let adInterval;
-    let isAdClosed = false;
-
-    // Function to refresh the ad
-    function refreshStickyAd() {
-        if (isAdClosed) return;
-
-        const desktopAd = document.getElementById('desktopStickyAd');
-        const mobileAd = document.getElementById('mobileStickyAd');
-
-        // Clear existing content
-        if (desktopAd) desktopAd.innerHTML = '';
-        if (mobileAd) mobileAd.innerHTML = '';
-
-        // Reload desktop ad
-        if (desktopAd) {
-            const desktopScript1 = document.createElement('script');
-            desktopScript1.textContent = `
-                atOptions = {
-                    'key' : '656dbda48a53949d938bbe0fb5bd50f5',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                };
-            `;
-            const desktopScript2 = document.createElement('script');
-            desktopScript2.src = 'https://www.highperformanceformat.com/656dbda48a53949d938bbe0fb5bd50f5/invoke.js';
-            desktopAd.appendChild(desktopScript1);
-            desktopAd.appendChild(desktopScript2);
-        }
-
-        // Reload mobile ad
-        if (mobileAd) {
-            const mobileScript1 = document.createElement('script');
-            mobileScript1.textContent = `
-                atOptions = {
-                    'key' : '5e36d6ec4c18137d44d7d612e18ea3a8',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                };
-            `;
-            const mobileScript2 = document.createElement('script');
-            mobileScript2.src = 'https://www.highperformanceformat.com/5e36d6ec4c18137d44d7d612e18ea3a8/invoke.js';
-            mobileAd.appendChild(mobileScript1);
-            mobileAd.appendChild(mobileScript2);
-        }
-    }
-
-    // Close ad function
-    if (closeStickyAd) {
-        closeStickyAd.addEventListener('click', function() {
-            stickyAd.style.display = 'none';
-            isAdClosed = true;
-            document.body.style.paddingBottom = '0';
-            if (adInterval) {
-                clearInterval(adInterval);
-            }
+    // Sticky Ad close
+    const closeStickyBtn = document.getElementById('closeStickyAd');
+    const stickyWrapper = document.getElementById('stickyAdWrapper');
+    if(closeStickyBtn && stickyWrapper) {
+        closeStickyBtn.addEventListener('click', function() {
+            stickyWrapper.style.display = 'none';
+            document.body.style.paddingBottom = '80px'; // adjust for social bar only
         });
-    }
-
-    // Start refresh interval (30 seconds)
-    adInterval = setInterval(refreshStickyAd, 30000);
-
-    // Clean up interval when page unloads
-    window.addEventListener('beforeunload', function() {
-        if (adInterval) {
-            clearInterval(adInterval);
-        }
-    });
-
-    // ============================================
-    // NEW: Gemini & ChatGPT Functions
-    // ============================================
-    function getPromptText() {
-        // Get the prompt text from the .prompt-code element
-        const promptElement = document.querySelector('.prompt-code');
-        if (promptElement) {
-            return promptElement.innerText.trim();
-        }
-        return '';
-    }
-
-    function openWithGemini() {
-        const prompt = getPromptText();
-        if (!prompt) {
-            alert('Prompt not found!');
-            return;
-        }
-        // Gemini URL with the prompt prefilled
-        const url = `https://gemini.google.com/app?q=${encodeURIComponent(prompt)}`;
-        window.open(url, '_blank');
-    }
-
-    function openWithChatGPT() {
-        const prompt = getPromptText();
-        if (!prompt) {
-            alert('Prompt not found!');
-            return;
-        }
-        // ChatGPT URL with the prompt prefilled
-        const url = `https://chat.openai.com/?q=${encodeURIComponent(prompt)}`;
-        window.open(url, '_blank');
     }
 </script>
 </body>
