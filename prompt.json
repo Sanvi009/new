@@ -3606,6 +3606,62 @@
   "image": "456.jpeg",
   "file_path": "/prompt/minimalist-studio-spotlight-portrait-in-tailored-black-turtleneck",
   "key": "SAE456"
+},
+  {
+  "id": 457,
+  "description": "This prompt generates an incredibly moody, neon-noir portrait of a character leaning against a weathered concrete pillar in a dimly lit urban alleyway. You will see a striking contrast of warm amber and cool cyan lighting highlighting the subject's face against a backdrop of blurred city lights. The final image captures a gritty, cinematic aesthetic reminiscent of high-end thriller films, focusing on sharp facial details and the raw texture of the denim work jacket and concrete surroundings.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, neon noir portrait, cinematic alleyway photography, cyberpunk lighting aesthetic, moody urban street scene, cyan and amber lighting, high contrast photography, bokeh city lights, gritty texture focus, dark atmospheric portrait",
+  "image": "450.jpeg",
+  "file_path": "/prompt/neon-noir-cinematic-alleyway-portrait",
+  "key": "SAE450"
+},
+{
+  "id": 458,
+  "description": "This prompt seamlessly blends your real-life portrait with a whimsical world of adorable 3D-animated miniatures. By leaving the original photo untouched, it generates tiny, expressive clones of the subject exploring the environment—sitting on bags, climbing shoulders, and copying poses. The result is a highly engaging, story-rich image featuring realistic shadows, depth of field, and a soft, magical aesthetic perfect for captivating social media feeds.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, mini me miniature world, 3D animated characters, social media aesthetic portrait, magical tiny clones, playful augmented reality style, soft cinematic shadows, interactive character design, cute miniature photography, whimsical digital art",
+  "image": "451.jpeg",
+  "file_path": "/prompt/magical-3d-mini-me-social-media-world-portrait",
+  "key": "SAE451"
+},
+{
+  "id": 459,
+  "description": "This dynamic AI image prompt generates a stunning, ultra-realistic luxury magazine cover featuring a masculine subject dressed in high-end streetwear. The composition highlights a distressed blue denim jacket over a classic white t-shirt, elevated by layered silver necklaces and chain accessories. What sets this prompt apart is the striking torn paper collage effect, which seamlessly blends extreme close-up facial fragments into a deep navy blue background. Expect a gritty, rebel energy combined with premium editorial fashion aesthetics, delivering a photorealistic output with dramatic shadows, sharp focus, and bold oversized typography reminiscent of top-tier menswear campaigns.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, luxury magazine cover, streetwear fashion, torn paper collage art, photorealistic portrait, editorial photography, menswear aesthetic, deep navy background, denim jacket style, gritty rebel fashion",
+  "image": "452.webp",
+  "file_path": "/prompt/ultra-realistic-streetwear-magazine-cover-ai-prompt-with-torn-paper-collage",
+  "key": "SAE452"
+},
+{
+  "id": 460,
+  "description": "This prompt generates a hyper-realistic, dreamlike portrait featuring an individual bathed in warm amber sunlight against a neutral cream background. The subject is styled in an oversized earthy brown shirt with silver jewelry and dark sunglasses. What makes this generation truly unique is the integrated Spotify-style vertical playlist overlay positioned on the left side of the frame. The UI elements include album icons, track titles in classic Spotify green, and clean white artist text, creating a perfect blend of high-end editorial photography and modern digital music interfaces.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, cinematic portrait prompt, spotify playlist overlay, music ui interface art, editorial fashion photography, warm amber lighting portrait, aesthetic music poster design, hyper-realistic character generation, digital interface overlay art, aesthetic playlist cover maker",
+  "image": "453.jpeg",
+  "file_path": "/prompt/hyper-realistic-cinematic-portrait-with-spotify-playlist-interface-overlay",
+  "key": "SAE453"
+},
+{
+  "id": 461,
+  "description": "This prompt generates an artful, side-angle portrait featuring a subject lounging casually next to a vintage analog television set. The scene is heavily styled with nostalgic props, including scattered CDs and retro audio cassettes resting on a cool-toned surface. Wearing a sleek black turtleneck and distinctive white-framed round sunglasses, the subject exudes a relaxed, conceptual aesthetic. Soft indoor studio lighting with defined shadows emphasizes the textures of the old media and creates a clean, minimalist contrast against a plain grey background.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, retro television portrait, vintage analog aesthetic, 90s nostalgia photography, minimalist studio lighting, cassette tape art, cd scatter props, black turtleneck fashion, conceptual portrait photography, cool toned aesthetic, vintage tech portrait",
+  "image": "454.jpeg",
+  "file_path": "/prompt/nostalgic-retro-television-portrait-with-analog-media-props",
+  "key": "SAE454"
+},
+{
+  "id": 462,
+  "description": "This dynamic image generation prompt creates a striking double-exposure portrait centered around football fandom. It features a subject wearing a long-sleeved Brazil national team jersey, captured mid-celebration with an intense, triumphant shout and clenched fist. The artistic twist comes from a faded, larger silhouette of the subject in the background, showcasing a custom name and the number seven on the back of the shirt. A clean, light gray textured backdrop with a subtle watermark perfectly balances the high-energy sports aesthetic.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, football jersey portrait, double exposure effect, brazil national team, sports celebration photography, athletic silhouette art, custom jersey number, dynamic sports portrait, textured gray background, personalized football art",
+  "image": "455.jpeg",
+  "file_path": "/prompt/double-exposure-brazil-football-jersey-celebration-portrait",
+  "key": "SAE455"
+},
+{
+  "id": 463,
+  "description": "This prompt generates a sophisticated, full-body studio portrait centered around minimalist elegance. The subject is positioned directly within a bright, sharp circular spotlight that completely isolates them against a pitch-dark background. Dressed entirely in a sleek black turtleneck and tailored trousers, the aesthetic is heavily focused on clean lines and modern fashion. Strong directional lighting carves out distinct facial contours and casts a dramatic shadow, creating a powerful, high-contrast visual that immediately draws the viewer's eye to the subject's confident posture.",
+  "keywords": "ai image prompt, image generation prompt, gemini ai prompt, minimalist studio portrait, circular spotlight photography, tailored black turtleneck, high contrast lighting, full body editorial portrait, elegant fashion photography, dramatic shadow portrait, sophisticated menswear aesthetic, professional studio lighting",
+  "image": "456.jpeg",
+  "file_path": "/prompt/minimalist-studio-spotlight-portrait-in-tailored-black-turtleneck",
+  "key": "SAE456"
 }
 
 ]
