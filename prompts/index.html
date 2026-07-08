@@ -1121,6 +1121,47 @@
     </div>
   </footer>
 
+  <!-- 10 AD ZONES (Preloaded for faster loading) -->
+  <!-- Ad Zone 1 -->
+  <script async="async" data-cfasync="false" src="https://pl28052024.effectivecpmnetwork.com/f9c331ef7d861102f3412494f9633852/invoke.js"></script>
+  <div id="container-f9c331ef7d861102f3412494f9633852" style="display:none;"></div>
+
+  <!-- Ad Zone 2 -->
+  <script async="async" data-cfasync="false" src="https://pl28052037.effectivecpmnetwork.com/78d7c4546065e09780f202119b4cdf60/invoke.js"></script>
+  <div id="container-78d7c4546065e09780f202119b4cdf60" style="display:none;"></div>
+
+  <!-- Ad Zone 3 -->
+  <script async="async" data-cfasync="false" src="https://pl28052052.effectivecpmnetwork.com/08f69106b01cf648fb2519fab7635420/invoke.js"></script>
+  <div id="container-08f69106b01cf648fb2519fab7635420" style="display:none;"></div>
+
+  <!-- Ad Zone 4 -->
+  <script async="async" data-cfasync="false" src="https://pl28052071.effectivecpmnetwork.com/44c81b95b59644eb70d472ce63d80c55/invoke.js"></script>
+  <div id="container-44c81b95b59644eb70d472ce63d80c55" style="display:none;"></div>
+
+  <!-- Ad Zone 5 -->
+  <script async="async" data-cfasync="false" src="https://pl28052082.effectivecpmnetwork.com/94eb646ad633a324c767ee7bea631d10/invoke.js"></script>
+  <div id="container-94eb646ad633a324c767ee7bea631d10" style="display:none;"></div>
+
+  <!-- Ad Zone 6 -->
+  <script async="async" data-cfasync="false" src="https://pl28052102.effectivecpmnetwork.com/53e735d786d2876a71aa7334d1c87be8/invoke.js"></script>
+  <div id="container-53e735d786d2876a71aa7334d1c87be8" style="display:none;"></div>
+
+  <!-- Ad Zone 7 -->
+  <script async="async" data-cfasync="false" src="https://pl27936266.effectivecpmnetwork.com/9bdd34d9a96a7b5e7a40a6a5b31bfaa5/invoke.js"></script>
+  <div id="container-9bdd34d9a96a7b5e7a40a6a5b31bfaa5" style="display:none;"></div>
+
+  <!-- Ad Zone 8 -->
+  <script async="async" data-cfasync="false" src="https://pl27925023.effectivecpmnetwork.com/2545f92bc79abdf7da2f2d3e95230cc4/invoke.js"></script>
+  <div id="container-2545f92bc79abdf7da2f2d3e95230cc4" style="display:none;"></div>
+
+  <!-- Ad Zone 9 -->
+  <script async="async" data-cfasync="false" src="https://pl27595517.effectivecpmnetwork.com/3455e3acf51a2681e3b7a266c42c9509/invoke.js"></script>
+  <div id="container-3455e3acf51a2681e3b7a266c42c9509" style="display:none;"></div>
+
+  <!-- Ad Zone 10 -->
+  <script async="async" data-cfasync="false" src="https://pl28052017.effectivecpmnetwork.com/87c5a54c469859a57bf24f85b03c596d/invoke.js"></script>
+  <div id="container-87c5a54c469859a57bf24f85b03c596d" style="display:none;"></div>
+
   <!-- SCRIPTS -->
   <script>
     // AD LINK CONFIGURATION
@@ -1131,6 +1172,20 @@
     let currentSearch = '';
     let searchTimeout = null;
     let imageObserver = null;
+
+    // List of ad container IDs (exactly the 10 you provided)
+    const adContainerIds = [
+      'container-f9c331ef7d861102f3412494f9633852',
+      'container-78d7c4546065e09780f202119b4cdf60',
+      'container-08f69106b01cf648fb2519fab7635420',
+      'container-44c81b95b59644eb70d472ce63d80c55',
+      'container-94eb646ad633a324c767ee7bea631d10',
+      'container-53e735d786d2876a71aa7334d1c87be8',
+      'container-9bdd34d9a96a7b5e7a40a6a5b31bfaa5',
+      'container-2545f92bc79abdf7da2f2d3e95230cc4',
+      'container-3455e3acf51a2681e3b7a266c42c9509',
+      'container-87c5a54c469859a57bf24f85b03c596d'
+    ];
 
     function extractTitle(filePath) {
       let fileName = filePath.split('/').pop().replace('.html', '');
@@ -1247,30 +1302,18 @@
       setupLazyLoading();
 
       const immediateCount = Math.min(15, prompts.length);
-      
-      // Your 10 ad zones
-      const adZones = [
-        { id: 'container-f9c331ef7d861102f3412494f9633852', src: 'https://pl28052024.effectivecpmnetwork.com/f9c331ef7d861102f3412494f9633852/invoke.js' },
-        { id: 'container-78d7c4546065e09780f202119b4cdf60', src: 'https://pl28052037.effectivecpmnetwork.com/78d7c4546065e09780f202119b4cdf60/invoke.js' },
-        { id: 'container-08f69106b01cf648fb2519fab7635420', src: 'https://pl28052052.effectivecpmnetwork.com/08f69106b01cf648fb2519fab7635420/invoke.js' },
-        { id: 'container-44c81b95b59644eb70d472ce63d80c55', src: 'https://pl28052071.effectivecpmnetwork.com/44c81b95b59644eb70d472ce63d80c55/invoke.js' },
-        { id: 'container-94eb646ad633a324c767ee7bea631d10', src: 'https://pl28052082.effectivecpmnetwork.com/94eb646ad633a324c767ee7bea631d10/invoke.js' },
-        { id: 'container-53e735d786d2876a71aa7334d1c87be8', src: 'https://pl28052102.effectivecpmnetwork.com/53e735d786d2876a71aa7334d1c87be8/invoke.js' },
-        { id: 'container-9bdd34d9a96a7b5e7a40a6a5b31bfaa5', src: 'https://pl27936266.effectivecpmnetwork.com/9bdd34d9a96a7b5e7a40a6a5b31bfaa5/invoke.js' },
-        { id: 'container-2545f92bc79abdf7da2f2d3e95230cc4', src: 'https://pl27925023.effectivecpmnetwork.com/2545f92bc79abdf7da2f2d3e95230cc4/invoke.js' },
-        { id: 'container-3455e3acf51a2681e3b7a266c42c9509', src: 'https://pl27595517.effectivecpmnetwork.com/3455e3acf51a2681e3b7a266c42c9509/invoke.js' },
-        { id: 'container-87c5a54c469859a57bf24f85b03c596d', src: 'https://pl28052017.effectivecpmnetwork.com/87c5a54c469859a57bf24f85b03c596d/invoke.js' }
-      ];
-
       let adIndex = 0;
 
       prompts.forEach((prompt, index) => {
         // Insert ad after every 10th card (after cards 10, 20, 30...)
-        if (index > 0 && index % 10 === 0) {
-          // Get the next ad zone (cycle through them)
-          const adZone = adZones[adIndex % adZones.length];
+        if (index > 0 && index % 10 === 0 && adIndex < adContainerIds.length) {
+          // Get the next ad container ID
+          const containerId = adContainerIds[adIndex];
           adIndex++;
 
+          // Get the ad container element (which is already loaded in the DOM)
+          const adContainer = document.getElementById(containerId);
+          
           // Create ad card
           const adCard = document.createElement('div');
           adCard.className = 'ad-card';
@@ -1286,17 +1329,11 @@
           adInner.className = 'ad-container-inner';
           adCard.appendChild(adInner);
           
-          // Add the ad container div with the unique ID
-          const adDiv = document.createElement('div');
-          adDiv.id = adZone.id;
-          adInner.appendChild(adDiv);
-          
-          // Add the script for this ad zone
-          const adScript = document.createElement('script');
-          adScript.async = true;
-          adScript.setAttribute('data-cfasync', 'false');
-          adScript.src = adZone.src;
-          adInner.appendChild(adScript);
+          // Move the ad container into the card (it already has the ad loaded)
+          if (adContainer) {
+            adContainer.style.display = 'block';
+            adInner.appendChild(adContainer);
+          }
           
           gridContainer.appendChild(adCard);
         }
