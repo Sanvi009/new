@@ -1247,11 +1247,12 @@
       setupLazyLoading();
 
       const immediateCount = Math.min(15, prompts.length);
+      let adCounter = 1;
 
-      // We'll insert an ad after every 5th card
+      // We'll insert an ad after every 10th card
       prompts.forEach((prompt, index) => {
-        // Insert ad after every 5th card (after cards 5, 10, 15, 20...)
-        if (index > 0 && index % 5 === 0) {
+        // Insert ad after every 10th card (after cards 10, 20, 30, 40...)
+        if (index > 0 && index % 10 === 0) {
           // Create ad card
           const adCard = document.createElement('div');
           adCard.className = 'ad-card';
@@ -1267,19 +1268,37 @@
           adInner.className = 'ad-container-inner';
           adCard.appendChild(adInner);
           
-          // Add the ad container div (Adsterra will inject into this)
+          // Add the ad container div with UNIQUE ID for each ad
           const adDiv = document.createElement('div');
-          adDiv.id = 'container-3872d0ade3fb1fd6bf5b02095d576f6f';
+          const uniqueId = `container-3872d0ade3fb1fd6bf5b02095d576f6f-${adCounter}`;
+          adDiv.id = uniqueId;
           adInner.appendChild(adDiv);
           
-          // Add the script
+          // Add the script with UNIQUE container ID
           const adScript = document.createElement('script');
           adScript.async = true;
           adScript.setAttribute('data-cfasync', 'false');
-          adScript.src = 'https://pl27490395.effectivecpmnetwork.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js';
+          adScript.textContent = `
+            atOptions = {
+              'key' : '3872d0ade3fb1fd6bf5b02095d576f6f',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 250,
+              'params' : {
+                'containerId' : '${uniqueId}'
+              }
+            };
+          `;
           adInner.appendChild(adScript);
           
+          const adScript2 = document.createElement('script');
+          adScript2.async = true;
+          adScript2.setAttribute('data-cfasync', 'false');
+          adScript2.src = 'https://pl27490395.effectivecpmnetwork.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js';
+          adInner.appendChild(adScript2);
+          
           gridContainer.appendChild(adCard);
+          adCounter++;
         }
 
         // Create prompt card
