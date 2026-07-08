@@ -575,6 +575,76 @@
       aspect-ratio: 1;
     }
 
+    /* ---- NATIVE AD STYLING ---- */
+    .ad-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: block;
+      border: 3px solid #333;
+      aspect-ratio: 1;
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+
+    .ad-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      border-color: #007AFF;
+    }
+
+    .ad-card .ad-label {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.6);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .ad-card .ad-container-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+    }
+
+    .ad-card .ad-container-inner iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    .ad-card .ad-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+      color: #999;
+      font-size: 14px;
+      gap: 8px;
+    }
+
+    .ad-card .ad-placeholder i {
+      font-size: 32px;
+      color: #ccc;
+    }
+
     /* Skeleton cards */
     .skeleton-card {
       background: #f0f0f0;
@@ -1178,7 +1248,46 @@
 
       const immediateCount = Math.min(15, prompts.length);
 
+      // We'll insert an ad after every 5th card
+      let adInserted = false;
+      let cardIndex = 0;
+
       prompts.forEach((prompt, index) => {
+        // Check if we need to insert an ad before this card (every 5th card starting from position 5)
+        if (index > 0 && index % 5 === 0 && !adInserted) {
+          // Create ad card
+          const adCard = document.createElement('div');
+          adCard.className = 'ad-card';
+          adCard.id = 'container-3872d0ade3fb1fd6bf5b02095d576f6f';
+          
+          // Add a small "Ad" label
+          const adLabel = document.createElement('div');
+          adLabel.className = 'ad-label';
+          adLabel.textContent = 'Ad';
+          adCard.appendChild(adLabel);
+          
+          // Create inner container for the ad
+          const adInner = document.createElement('div');
+          adInner.className = 'ad-container-inner';
+          adCard.appendChild(adInner);
+          
+          // Add the ad container div (Adsterra will inject into this)
+          const adDiv = document.createElement('div');
+          adDiv.id = 'container-3872d0ade3fb1fd6bf5b02095d576f6f';
+          adInner.appendChild(adDiv);
+          
+          // Add the script
+          const adScript = document.createElement('script');
+          adScript.async = true;
+          adScript.setAttribute('data-cfasync', 'false');
+          adScript.src = 'https://pl27490395.effectivecpmnetwork.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js';
+          adInner.appendChild(adScript);
+          
+          gridContainer.appendChild(adCard);
+          adInserted = true;
+        }
+
+        // Create prompt card
         const card = document.createElement('div');
         card.className = 'prompt-card';
         card.style.cursor = 'pointer';
@@ -1216,6 +1325,7 @@
 
         card.appendChild(img);
         gridContainer.appendChild(card);
+        cardIndex++;
       });
     }
 
