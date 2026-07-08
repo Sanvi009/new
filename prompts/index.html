@@ -1249,16 +1249,12 @@
       const immediateCount = Math.min(15, prompts.length);
 
       // We'll insert an ad after every 5th card
-      let adInserted = false;
-      let cardIndex = 0;
-
       prompts.forEach((prompt, index) => {
-        // Check if we need to insert an ad before this card (every 5th card starting from position 5)
-        if (index > 0 && index % 5 === 0 && !adInserted) {
+        // Insert ad after every 5th card (after cards 5, 10, 15, 20...)
+        if (index > 0 && index % 5 === 0) {
           // Create ad card
           const adCard = document.createElement('div');
           adCard.className = 'ad-card';
-          adCard.id = 'container-3872d0ade3fb1fd6bf5b02095d576f6f';
           
           // Add a small "Ad" label
           const adLabel = document.createElement('div');
@@ -1284,7 +1280,6 @@
           adInner.appendChild(adScript);
           
           gridContainer.appendChild(adCard);
-          adInserted = true;
         }
 
         // Create prompt card
@@ -1325,7 +1320,6 @@
 
         card.appendChild(img);
         gridContainer.appendChild(card);
-        cardIndex++;
       });
     }
 
