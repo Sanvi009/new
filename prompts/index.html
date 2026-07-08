@@ -1247,12 +1247,30 @@
       setupLazyLoading();
 
       const immediateCount = Math.min(15, prompts.length);
-      let adCounter = 1;
+      
+      // Your 10 ad zones
+      const adZones = [
+        { id: 'container-f9c331ef7d861102f3412494f9633852', src: 'https://pl28052024.effectivecpmnetwork.com/f9c331ef7d861102f3412494f9633852/invoke.js' },
+        { id: 'container-78d7c4546065e09780f202119b4cdf60', src: 'https://pl28052037.effectivecpmnetwork.com/78d7c4546065e09780f202119b4cdf60/invoke.js' },
+        { id: 'container-08f69106b01cf648fb2519fab7635420', src: 'https://pl28052052.effectivecpmnetwork.com/08f69106b01cf648fb2519fab7635420/invoke.js' },
+        { id: 'container-44c81b95b59644eb70d472ce63d80c55', src: 'https://pl28052071.effectivecpmnetwork.com/44c81b95b59644eb70d472ce63d80c55/invoke.js' },
+        { id: 'container-94eb646ad633a324c767ee7bea631d10', src: 'https://pl28052082.effectivecpmnetwork.com/94eb646ad633a324c767ee7bea631d10/invoke.js' },
+        { id: 'container-53e735d786d2876a71aa7334d1c87be8', src: 'https://pl28052102.effectivecpmnetwork.com/53e735d786d2876a71aa7334d1c87be8/invoke.js' },
+        { id: 'container-9bdd34d9a96a7b5e7a40a6a5b31bfaa5', src: 'https://pl27936266.effectivecpmnetwork.com/9bdd34d9a96a7b5e7a40a6a5b31bfaa5/invoke.js' },
+        { id: 'container-2545f92bc79abdf7da2f2d3e95230cc4', src: 'https://pl27925023.effectivecpmnetwork.com/2545f92bc79abdf7da2f2d3e95230cc4/invoke.js' },
+        { id: 'container-3455e3acf51a2681e3b7a266c42c9509', src: 'https://pl27595517.effectivecpmnetwork.com/3455e3acf51a2681e3b7a266c42c9509/invoke.js' },
+        { id: 'container-87c5a54c469859a57bf24f85b03c596d', src: 'https://pl28052017.effectivecpmnetwork.com/87c5a54c469859a57bf24f85b03c596d/invoke.js' }
+      ];
 
-      // We'll insert an ad after every 10th card
+      let adIndex = 0;
+
       prompts.forEach((prompt, index) => {
-        // Insert ad after every 10th card (after cards 10, 20, 30, 40...)
+        // Insert ad after every 10th card (after cards 10, 20, 30...)
         if (index > 0 && index % 10 === 0) {
+          // Get the next ad zone (cycle through them)
+          const adZone = adZones[adIndex % adZones.length];
+          adIndex++;
+
           // Create ad card
           const adCard = document.createElement('div');
           adCard.className = 'ad-card';
@@ -1268,37 +1286,19 @@
           adInner.className = 'ad-container-inner';
           adCard.appendChild(adInner);
           
-          // Add the ad container div with UNIQUE ID for each ad
+          // Add the ad container div with the unique ID
           const adDiv = document.createElement('div');
-          const uniqueId = `container-3872d0ade3fb1fd6bf5b02095d576f6f-${adCounter}`;
-          adDiv.id = uniqueId;
+          adDiv.id = adZone.id;
           adInner.appendChild(adDiv);
           
-          // Add the script with UNIQUE container ID
+          // Add the script for this ad zone
           const adScript = document.createElement('script');
           adScript.async = true;
           adScript.setAttribute('data-cfasync', 'false');
-          adScript.textContent = `
-            atOptions = {
-              'key' : '3872d0ade3fb1fd6bf5b02095d576f6f',
-              'format' : 'iframe',
-              'height' : 250,
-              'width' : 250,
-              'params' : {
-                'containerId' : '${uniqueId}'
-              }
-            };
-          `;
+          adScript.src = adZone.src;
           adInner.appendChild(adScript);
           
-          const adScript2 = document.createElement('script');
-          adScript2.async = true;
-          adScript2.setAttribute('data-cfasync', 'false');
-          adScript2.src = 'https://pl27490395.effectivecpmnetwork.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js';
-          adInner.appendChild(adScript2);
-          
           gridContainer.appendChild(adCard);
-          adCounter++;
         }
 
         // Create prompt card
@@ -1306,7 +1306,6 @@
         card.className = 'prompt-card';
         card.style.cursor = 'pointer';
         
-        // Add click event to handle both actions
         card.addEventListener('click', function() {
           handleCardClick(prompt.file_path);
         });
