@@ -106,6 +106,7 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      padding-bottom: 90px; /* Space for sticky banner on desktop */
     }
 
     .container {
@@ -662,6 +663,55 @@
       flex: 1;
     }
 
+    /* ----- STICKY BOTTOM AD BANNER ----- */
+    .sticky-bottom-ad {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      z-index: 999;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .sticky-bottom-ad .ad-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: auto;
+    }
+
+    .sticky-ad-close {
+      position: absolute;
+      top: -12px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+      z-index: 1000;
+      transition: background 0.2s;
+    }
+
+    .sticky-ad-close:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 50px;
+      }
+    }
+
     /* ----- FOOTER ----- */
     .footer {
       background: #0f1a26;
@@ -877,6 +927,9 @@
   </style>
 </head>
 <body>
+  <!-- Social Bar Ad (placed at top of body) -->
+  <script src="https://pl27490254.effectivecpmnetwork.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js"></script>
+
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container nav-container">
@@ -1086,6 +1139,14 @@
 
   <main class="main-content"></main>
 
+  <!-- STICKY BOTTOM AD BANNER -->
+  <div class="sticky-bottom-ad" id="stickyAd">
+    <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
+    <div class="ad-container" id="stickyAdContainer">
+      <!-- Ad will be injected here -->
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -1168,6 +1229,58 @@
           observer.observe(img);
         }
       });
+    });
+  </script>
+
+  <!-- Sticky Ad script -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      const stickyAd = document.getElementById('stickyAd');
+      const closeBtn = document.getElementById('closeStickyAd');
+      const adContainer = document.getElementById('stickyAdContainer');
+      let isAdClosed = false;
+
+      // Load the sticky ad
+      function loadStickyAd() {
+        if (isAdClosed) return;
+        
+        // Create and append the ad script
+        const script = document.createElement('script');
+        script.textContent = `
+          atOptions = {
+            'key' : '656dbda48a53949d938bbe0fb5bd50f5',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        `;
+        adContainer.appendChild(script);
+
+        const script2 = document.createElement('script');
+        script2.src = 'https://www.highperformanceformat.com/656dbda48a53949d938bbe0fb5bd50f5/invoke.js';
+        adContainer.appendChild(script2);
+      }
+
+      // Close ad function
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+          stickyAd.style.display = 'none';
+          isAdClosed = true;
+          document.body.style.paddingBottom = '0';
+        });
+      }
+
+      // Load the ad initially
+      loadStickyAd();
+
+      // Refresh ad every 30 seconds (optional, to keep it fresh)
+      setInterval(function() {
+        if (!isAdClosed) {
+          adContainer.innerHTML = '';
+          loadStickyAd();
+        }
+      }, 30000);
     });
   </script>
 </body>
