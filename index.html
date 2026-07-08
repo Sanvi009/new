@@ -928,7 +928,7 @@
 </head>
 <body>
   <!-- Social Bar Ad (placed at top of body) -->
-  <script src="https://pl27490254.effectivecpmnetwork.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js"></script>
+  <script data-cfasync="false" src="https://pl27490254.effectivecpmnetwork.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js"></script>
 
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -1246,6 +1246,7 @@
         
         // Create and append the ad script
         const script = document.createElement('script');
+        script.setAttribute('data-cfasync', 'false');
         script.textContent = `
           atOptions = {
             'key' : '656dbda48a53949d938bbe0fb5bd50f5',
@@ -1258,6 +1259,7 @@
         adContainer.appendChild(script);
 
         const script2 = document.createElement('script');
+        script2.setAttribute('data-cfasync', 'false');
         script2.src = 'https://www.highperformanceformat.com/656dbda48a53949d938bbe0fb5bd50f5/invoke.js';
         adContainer.appendChild(script2);
       }
