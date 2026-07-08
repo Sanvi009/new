@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 
-    <!-- ADSTERRA SCRIPTS RESTORED -->
     <script src="https://pl27949322.profitablecpmratenetwork.com/76/d2/f7/76d2f72fc1d39ece31f162d9c3c8641d.js"></script>
 
+
+    
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -1031,7 +1032,7 @@
         <p class="hero-description">Generate high-quality AI renders with this prompt that creates a 1/7 scale commercialized figurine of any chosen character in a realistic style. The figurine is displayed on a computer desk with a transparent acrylic base, placed next to the life-sized real person in matching attire who carefully cleans the figure with a fine brush. Set in a modern, brightly lit studio room with a collection of toys and action figures, this prompt is perfect for collectors, hobbyists, and realistic figure photography projects.</p>
     </div>
 
-    <!-- AD BANNER 1 - ADSTERRA RESTORED -->
+    <!-- AD BANNER 1 - Before Generated Images -->
     <div class="ad-banner">
         <div class="ad-desktop">
             <script>
@@ -1071,7 +1072,7 @@
         </div>
     </div>
 
-    <!-- AD BANNER 2 - ADSTERRA RESTORED -->
+    <!-- AD BANNER 2 - After Generated Images -->
     <div class="ad-banner-bottom">
         <div class="ad-desktop">
             <script>
@@ -1105,6 +1106,19 @@
             <pre class="prompt-code">Create a 1/7 scale commercialized figurine of (the character in the picture) , realistic style, in a real environment. Figurine placed on a computer desk. has a round transparent acrylic base. Next to the desk is the real person in the picture, in the real life size with the same attire as in the picture and the figurine, cleaning the figurine carefully with a fine brush. in a modern styled studio room, brightly lit. With some collection of toys and action figures.</pre>
             <button class="copy-btn" onclick="copyPrompt(this)"><i class="fas fa-copy"></i> Copy</button>
         </div>
+
+        <!-- ============================================ -->
+        <!-- NEW: Gemini & ChatGPT Buttons Added Here -->
+        <!-- ============================================ -->
+        <div style="display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap;">
+            <button onclick="openWithGemini()" style="background: #1a5cff; color: white; border: none; padding: 10px 24px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s;">
+                <i class="fas fa-robot"></i> Try with Gemini
+            </button>
+            <button onclick="openWithChatGPT()" style="background: #10a37f; color: white; border: none; padding: 10px 24px; border-radius: 40px; font-size: 0.9rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s;">
+                <i class="fas fa-comment"></i> Try with ChatGPT
+            </button>
+        </div>
+        <!-- ============================================ -->
     </div>
 
     <div class="card-section">
@@ -1146,7 +1160,7 @@
     </div>
 </main>
 
-<!-- STICKY BOTTOM AD BANNER - ADSTERRA RESTORED -->
+<!-- STICKY BOTTOM AD BANNER -->
 <div class="sticky-bottom-ad" id="stickyAd">
     <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
     <div class="ad-container">
@@ -1325,48 +1339,38 @@
     });
 
     // ============================================
-    // SMART ENGAGEMENT TRACKER (Added back)
-    // This helps boost your CPM signals to Adsterra
+    // NEW: Gemini & ChatGPT Functions
     // ============================================
-    (function() {
-        // Track scroll depth (proves user reads content)
-        let maxScroll = 0;
-        window.addEventListener('scroll', function() {
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            if (scrollPercent > maxScroll) {
-                maxScroll = scrollPercent;
-                // Store in cookie for Adsterra's algorithms to detect (if they scan cookies)
-                if (maxScroll >= 50) {
-                    document.cookie = "engaged_scroll=50; path=/; max-age=86400";
-                }
-                if (maxScroll >= 80) {
-                    document.cookie = "engaged_scroll=80; path=/; max-age=86400";
-                }
-            }
-        });
+    function getPromptText() {
+        // Get the prompt text from the .prompt-code element
+        const promptElement = document.querySelector('.prompt-code');
+        if (promptElement) {
+            return promptElement.innerText.trim();
+        }
+        return '';
+    }
 
-        // Track time on page (proves user stays)
-        let startTime = Date.now();
-        window.addEventListener('beforeunload', function() {
-            const timeSpent = Math.floor((Date.now() - startTime) / 1000);
-            if (timeSpent > 60) {
-                document.cookie = "time_spent=60; path=/; max-age=86400";
-            }
-            if (timeSpent > 180) {
-                document.cookie = "time_spent=180; path=/; max-age=86400";
-            }
-        });
+    function openWithGemini() {
+        const prompt = getPromptText();
+        if (!prompt) {
+            alert('Prompt not found!');
+            return;
+        }
+        // Gemini URL with the prompt prefilled
+        const url = `https://gemini.google.com/app?q=${encodeURIComponent(prompt)}`;
+        window.open(url, '_blank');
+    }
 
-        // Track mouse hover over ad areas (proves user saw ads)
-        const adSpots = document.querySelectorAll('.ad-banner, .ad-banner-bottom, .sticky-bottom-ad');
-        adSpots.forEach(spot => {
-            spot.addEventListener('mouseenter', function() {
-                document.cookie = "ad_viewed=yes; path=/; max-age=86400";
-            });
-        });
-
-        console.log("Brainloom Engagement Tracker Active ✅");
-    })();
+    function openWithChatGPT() {
+        const prompt = getPromptText();
+        if (!prompt) {
+            alert('Prompt not found!');
+            return;
+        }
+        // ChatGPT URL with the prompt prefilled
+        const url = `https://chat.openai.com/?q=${encodeURIComponent(prompt)}`;
+        window.open(url, '_blank');
+    }
 </script>
 </body>
 </html>
