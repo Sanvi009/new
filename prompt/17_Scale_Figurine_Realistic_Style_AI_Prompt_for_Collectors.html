@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 
+    <!-- ADSTERRA SCRIPTS RESTORED -->
     <script src="https://pl27949322.profitablecpmratenetwork.com/76/d2/f7/76d2f72fc1d39ece31f162d9c3c8641d.js"></script>
 
-
-    
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -1032,7 +1031,7 @@
         <p class="hero-description">Generate high-quality AI renders with this prompt that creates a 1/7 scale commercialized figurine of any chosen character in a realistic style. The figurine is displayed on a computer desk with a transparent acrylic base, placed next to the life-sized real person in matching attire who carefully cleans the figure with a fine brush. Set in a modern, brightly lit studio room with a collection of toys and action figures, this prompt is perfect for collectors, hobbyists, and realistic figure photography projects.</p>
     </div>
 
-    <!-- AD BANNER 1 - Before Generated Images -->
+    <!-- AD BANNER 1 - ADSTERRA RESTORED -->
     <div class="ad-banner">
         <div class="ad-desktop">
             <script>
@@ -1072,7 +1071,7 @@
         </div>
     </div>
 
-    <!-- AD BANNER 2 - After Generated Images -->
+    <!-- AD BANNER 2 - ADSTERRA RESTORED -->
     <div class="ad-banner-bottom">
         <div class="ad-desktop">
             <script>
@@ -1147,7 +1146,7 @@
     </div>
 </main>
 
-<!-- STICKY BOTTOM AD BANNER -->
+<!-- STICKY BOTTOM AD BANNER - ADSTERRA RESTORED -->
 <div class="sticky-bottom-ad" id="stickyAd">
     <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
     <div class="ad-container">
@@ -1324,6 +1323,50 @@
             clearInterval(adInterval);
         }
     });
+
+    // ============================================
+    // SMART ENGAGEMENT TRACKER (Added back)
+    // This helps boost your CPM signals to Adsterra
+    // ============================================
+    (function() {
+        // Track scroll depth (proves user reads content)
+        let maxScroll = 0;
+        window.addEventListener('scroll', function() {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                // Store in cookie for Adsterra's algorithms to detect (if they scan cookies)
+                if (maxScroll >= 50) {
+                    document.cookie = "engaged_scroll=50; path=/; max-age=86400";
+                }
+                if (maxScroll >= 80) {
+                    document.cookie = "engaged_scroll=80; path=/; max-age=86400";
+                }
+            }
+        });
+
+        // Track time on page (proves user stays)
+        let startTime = Date.now();
+        window.addEventListener('beforeunload', function() {
+            const timeSpent = Math.floor((Date.now() - startTime) / 1000);
+            if (timeSpent > 60) {
+                document.cookie = "time_spent=60; path=/; max-age=86400";
+            }
+            if (timeSpent > 180) {
+                document.cookie = "time_spent=180; path=/; max-age=86400";
+            }
+        });
+
+        // Track mouse hover over ad areas (proves user saw ads)
+        const adSpots = document.querySelectorAll('.ad-banner, .ad-banner-bottom, .sticky-bottom-ad');
+        adSpots.forEach(spot => {
+            spot.addEventListener('mouseenter', function() {
+                document.cookie = "ad_viewed=yes; path=/; max-age=86400";
+            });
+        });
+
+        console.log("Brainloom Engagement Tracker Active ✅");
+    })();
 </script>
 </body>
 </html>
