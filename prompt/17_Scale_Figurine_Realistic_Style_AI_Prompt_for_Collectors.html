@@ -948,69 +948,66 @@
 <body>
 
 <nav class="navbar">
-    <div class="container nav-container">
-      <a href="/" class="logo-link">
-        <img src="/images/logo1.png" alt="Brainloom" class="logo-img" width="36" height="36">
-        <span class="logo-text">Brainloom</span>
-      </a>
-
-      <div class="desktop-nav">
-        <a href="/" class="nav-link">Home</a>
-
-        <div class="tools-dropdown">
-          <span class="nav-link tools-trigger">
-            Tools <i class="fas fa-chevron-down"></i>
-            <span class="new-badge">NEW</span>
-          </span>
-          <div class="dropdown-menu">
-            <a href="/gemini-watermark-remover.html">
-              Gemini Watermark Remover
-              <span class="new-badge" style="margin-left: 8px; font-size: 0.6rem;">✨</span>
-            </a>
-          </div>
-        </div>
-
-        <a href="/about" class="nav-link">About</a>
-        <a href="/contact" class="nav-link">Contact</a>
-
-        <div class="legal-dropdown">
-          <span class="nav-link legal-trigger">
-            Legal <i class="fas fa-chevron-down"></i>
-          </span>
-          <div class="dropdown-menu">
-            <a href="/policy">Privacy policy</a>
-            <a href="/term">Terms of use</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="mobile-btn" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
     <div class="container">
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="/">Home</a>
-        <div class="mobile-tools">
-          <p>Tools <span class="mobile-new-badge">NEW</span></p>
-          <a href="/gemini-watermark-remover.html">
-            Gemini Watermark Remover 
-            <span class="mobile-new-badge" style="margin-left: 8px;">✨</span>
-          </a>
+        <div class="nav-inner">
+            <a href="/" class="logo">
+    <img src="/images/logo1.png" alt="Brainloom" width="38" height="38" style="border-radius:12px; object-fit:contain; background:#0f2b45;">
+    <span class="logo-text">Brainloom</span>
+</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+
+                <!-- TOOLS DROPDOWN WITH NEW BADGE -->
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        Tools <i class="fas fa-chevron-down"></i>
+                        <span class="new-badge">NEW</span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="/gemini-watermark-remover.html">
+                            Gemini Watermark Remover
+                            <span class="new-badge" style="margin-left: 8px; font-size: 0.6rem;">✨</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="/prompts" class="nav-link">Prompts</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
+                <div class="dropdown legal-dropdown">
+                    <div class="dropdown-trigger">Legal <i class="fas fa-chevron-down"></i></div>
+                    <div class="dropdown-menu">
+                        <a href="/policy">Privacy policy</a>
+                        <a href="/term">Terms of use</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="mobile-nav" id="mobileNav">
+                <a href="/">Home</a>
+                <div class="mobile-tools">
+                    <p>Tools <span class="mobile-new-badge">NEW</span></p>
+                    <a href="/gemini-watermark-remover.html">
+                        Gemini Watermark Remover 
+                        <span class="mobile-new-badge" style="margin-left: 8px;">✨</span>
+                    </a>
+                </div>
+                <a href="/prompts">Prompts</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+                <div class="mobile-legal">
+                    <p>Legal</p>
+                    <a href="/policy">Privacy policy</a>
+                    <a href="/term">Terms of use</a>
+                </div>
+            </div>
         </div>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <div class="mobile-legal">
-          <p>Legal</p>
-          <a href="/policy">Privacy policy</a>
-          <a href="/term">Terms of use</a>
-        </div>
-      </div>
     </div>
-  </nav>
+</nav>
 
 <div class="lightbox" id="lightbox">
     <div class="lightbox-content">
