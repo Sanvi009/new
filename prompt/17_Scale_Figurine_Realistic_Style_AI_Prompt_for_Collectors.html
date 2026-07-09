@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <script src="https://pl27949322.profitablecpmratenetwork.com/76/d2/f7/76d2f72fc1d39ece31f162d9c3c8641d.js"></script>
+
+
+    
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.highperformanceformat.com">
-    <link rel="preconnect" href="https://pl27490254.effectivecpmnetwork.com">
-    <link rel="preconnect" href="https://pl27949322.effectivecpmnetwork.com">
 
     <!-- Preload first image for LCP optimization -->
     <link rel="preload" as="image" href="/images/113.jpeg">
@@ -82,10 +85,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
 
-    <!-- Social Bar & Popunder Scripts (loaded async) -->
-    <script async src="https://pl27490254.effectivecpmnetwork.com/7b/4d/7e/7b4d7e8e2328f57c91e0bfcf604906d6.js"></script>
-    <script async src="https://pl27949322.effectivecpmnetwork.com/76/d2/f7/76d2f72fc1d39ece31f162d9c3c8641d.js"></script>
-
     <style>
         /* ----- RESET & BASE ----- */
         * {
@@ -102,7 +101,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            padding-bottom: 150px; /* Space for sticky bar + social bar */
+            padding-bottom: 90px; /* Space for sticky banner on desktop */
         }
 
         /* Custom scrollbar */
@@ -518,77 +517,41 @@
             display: none;
         }
 
-        /* Sticky Bottom Ad + Social Bar Container */
-        .sticky-bottom-area {
+        /* Sticky Bottom Banner */
+        .sticky-bottom-ad {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
+            background: transparent;
             z-index: 999;
-            pointer-events: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            padding-bottom: 6px;
+            text-align: center;
+            pointer-events: none; /* Allows clicking through the container */
         }
 
-        .sticky-bottom-area .ad-container,
-        .sticky-bottom-area .social-bar-container {
-            pointer-events: auto;
+        .sticky-bottom-ad .ad-container {
             display: flex;
             justify-content: center;
-            width: 100%;
-        }
-
-        /* Social Bar Styles */
-        .social-bar-wrapper {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(4px);
-            border-radius: 40px;
-            padding: 6px 18px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            border: 1px solid rgba(255,255,255,0.3);
-            display: inline-flex;
             align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-            transition: all 0.2s;
-            margin: 0 12px;
+            pointer-events: auto; /* Re-enables clicking on the ad itself */
         }
 
-        .social-bar-wrapper a {
-            color: #1a2c3e;
-            font-size: 1.2rem;
-            transition: all 0.2s;
-            display: inline-flex;
+        .sticky-bottom-ad .ad-desktop-bottom,
+        .sticky-bottom-ad .ad-mobile-bottom {
+            display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: rgba(0,0,0,0.03);
-            text-decoration: none;
         }
 
-        .social-bar-wrapper a:hover {
-            background: #1a5cff;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(26, 92, 255, 0.25);
+        .sticky-bottom-ad .ad-desktop-bottom {
+            display: block;
         }
 
-        .social-bar-wrapper .social-label {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: #5a6e7c;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-right: 4px;
+        .sticky-bottom-ad .ad-mobile-bottom {
+            display: none;
         }
 
-        /* Sticky Ad close button */
+        /* Close button for sticky ad */
         .sticky-ad-close {
             position: absolute;
             top: -12px;
@@ -613,32 +576,9 @@
             background: rgba(0, 0, 0, 0.9);
         }
 
-        .sticky-ad-wrapper {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            pointer-events: auto;
-        }
-
-        .sticky-ad-wrapper .ad-desktop-bottom,
-        .sticky-ad-wrapper .ad-mobile-bottom {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .sticky-ad-wrapper .ad-desktop-bottom {
-            display: block;
-        }
-
-        .sticky-ad-wrapper .ad-mobile-bottom {
-            display: none;
-        }
-
         @media (max-width: 768px) {
             body {
-                padding-bottom: 130px;
+                padding-bottom: 50px; /* Space for sticky banner on mobile */
             }
 
             .ad-desktop {
@@ -651,43 +591,11 @@
                 min-height: 50px;
             }
 
-            .sticky-ad-wrapper .ad-desktop-bottom {
+            .sticky-bottom-ad .ad-desktop-bottom {
                 display: none;
             }
-            .sticky-ad-wrapper .ad-mobile-bottom {
+            .sticky-bottom-ad .ad-mobile-bottom {
                 display: block;
-            }
-
-            .social-bar-wrapper {
-                padding: 4px 12px;
-                gap: 6px;
-                border-radius: 30px;
-            }
-            .social-bar-wrapper a {
-                width: 30px;
-                height: 30px;
-                font-size: 1rem;
-            }
-            .social-bar-wrapper .social-label {
-                font-size: 0.6rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding-bottom: 120px;
-            }
-            .social-bar-wrapper {
-                gap: 4px;
-                padding: 4px 10px;
-            }
-            .social-bar-wrapper a {
-                width: 28px;
-                height: 28px;
-                font-size: 0.9rem;
-            }
-            .social-bar-wrapper .social-label {
-                display: none;
             }
         }
 
@@ -1043,9 +951,9 @@
     <div class="container">
         <div class="nav-inner">
             <a href="/" class="logo">
-                <div class="logo-icon">B</div>
-                <span class="logo-text">Brainloom</span>
-            </a>
+    <img src="/images/logo1.png" alt="Brainloom" width="38" height="38" style="border-radius:12px; object-fit:contain; background:#0f2b45;">
+    <span class="logo-text">Brainloom</span>
+</a>
             <div class="nav-links">
                 <a href="/" class="nav-link">Home</a>
 
@@ -1239,26 +1147,10 @@
     </div>
 </main>
 
-<!-- STICKY BOTTOM AREA: SOCIAL BAR + AD -->
-<div class="sticky-bottom-area" id="stickyBottomArea">
-    <!-- Social Bar -->
-    <div class="social-bar-container">
-        <div class="social-bar-wrapper">
-            <span class="social-label"><i class="fas fa-share-alt"></i> Share</span>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/intent/tweet?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors&text=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" target="_blank" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://pinterest.com/pin/create/button/?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors&media=https://brainloom.online/images/113.jpeg&description=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" target="_blank" aria-label="Share on Pinterest"><i class="fab fa-pinterest-p"></i></a>
-            <a href="https://www.reddit.com/submit?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors&title=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" target="_blank" aria-label="Share on Reddit"><i class="fab fa-reddit-alien"></i></a>
-            <a href="https://wa.me/?text=Check out this AI prompt: 1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://t.me/share/url?url=https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors&text=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup" target="_blank" aria-label="Share on Telegram"><i class="fab fa-telegram-plane"></i></a>
-            <a href="mailto:?subject=1/7 Scale Figurine Prompt – Realistic Character Model with Studio Setup&body=Check out this AI prompt: https://brainloom.online/prompt/17_Scale_Figurine_Realistic_Style_AI_Prompt_for_Collectors" aria-label="Share via Email"><i class="fas fa-envelope"></i></a>
-        </div>
-    </div>
-
-    <!-- Sticky Ad -->
-    <div class="sticky-ad-wrapper" id="stickyAdWrapper">
-        <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
+<!-- STICKY BOTTOM AD BANNER -->
+<div class="sticky-bottom-ad" id="stickyAd">
+    <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
+    <div class="ad-container">
         <div class="ad-desktop-bottom" id="desktopStickyAd">
             <script>
                 atOptions = {
@@ -1316,11 +1208,12 @@
         });
     }
 
-    // Copy function
+    // Copy function with link opening
     function copyPrompt(btn) {
         const box = btn.closest('.prompt-box');
         const text = box.querySelector('.prompt-code').innerText;
 
+        // Copy text to clipboard
         navigator.clipboard.writeText(text).then(() => {
             const orig = btn.innerHTML;
             btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
@@ -1332,7 +1225,9 @@
         }).catch(() => {
             alert('Copy failed');
         });
-    }
+
+        // Open the link in a new window
+        }
 
     // Lightbox
     const lightbox = document.getElementById('lightbox');
@@ -1354,15 +1249,81 @@
     lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeLightbox(); });
 
-    // Sticky Ad close
-    const closeStickyBtn = document.getElementById('closeStickyAd');
-    const stickyWrapper = document.getElementById('stickyAdWrapper');
-    if(closeStickyBtn && stickyWrapper) {
-        closeStickyBtn.addEventListener('click', function() {
-            stickyWrapper.style.display = 'none';
-            document.body.style.paddingBottom = '80px'; // adjust for social bar only
+    // Sticky Bottom Ad functionality
+    const stickyAd = document.getElementById('stickyAd');
+    const closeStickyAd = document.getElementById('closeStickyAd');
+    let adInterval;
+    let isAdClosed = false;
+
+    // Function to refresh the ad
+    function refreshStickyAd() {
+        if (isAdClosed) return;
+
+        const desktopAd = document.getElementById('desktopStickyAd');
+        const mobileAd = document.getElementById('mobileStickyAd');
+
+        // Clear existing content
+        if (desktopAd) desktopAd.innerHTML = '';
+        if (mobileAd) mobileAd.innerHTML = '';
+
+        // Reload desktop ad
+        if (desktopAd) {
+            const desktopScript1 = document.createElement('script');
+            desktopScript1.textContent = `
+                atOptions = {
+                    'key' : '656dbda48a53949d938bbe0fb5bd50f5',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            `;
+            const desktopScript2 = document.createElement('script');
+            desktopScript2.src = 'https://www.highperformanceformat.com/656dbda48a53949d938bbe0fb5bd50f5/invoke.js';
+            desktopAd.appendChild(desktopScript1);
+            desktopAd.appendChild(desktopScript2);
+        }
+
+        // Reload mobile ad
+        if (mobileAd) {
+            const mobileScript1 = document.createElement('script');
+            mobileScript1.textContent = `
+                atOptions = {
+                    'key' : '5e36d6ec4c18137d44d7d612e18ea3a8',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            `;
+            const mobileScript2 = document.createElement('script');
+            mobileScript2.src = 'https://www.highperformanceformat.com/5e36d6ec4c18137d44d7d612e18ea3a8/invoke.js';
+            mobileAd.appendChild(mobileScript1);
+            mobileAd.appendChild(mobileScript2);
+        }
+    }
+
+    // Close ad function
+    if (closeStickyAd) {
+        closeStickyAd.addEventListener('click', function() {
+            stickyAd.style.display = 'none';
+            isAdClosed = true;
+            document.body.style.paddingBottom = '0';
+            if (adInterval) {
+                clearInterval(adInterval);
+            }
         });
     }
+
+    // Start refresh interval (30 seconds)
+    adInterval = setInterval(refreshStickyAd, 30000);
+
+    // Clean up interval when page unloads
+    window.addEventListener('beforeunload', function() {
+        if (adInterval) {
+            clearInterval(adInterval);
+        }
+    });
 </script>
 </body>
 </html>
