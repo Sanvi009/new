@@ -1275,16 +1275,6 @@
       window.location.href = AD_LINK;
     }
 
-    // Fisher-Yates shuffle function
-    function shuffleArray(array) {
-      const shuffled = [...array];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-      return shuffled;
-    }
-
     function displayPrompts(prompts) {
       const gridContainer = document.getElementById('promptsGrid');
 
@@ -1306,17 +1296,10 @@
       // Step 1: Sort all prompts by ID (highest to lowest)
       const sortedById = [...prompts].sort((a, b) => b.id - a.id);
 
-      // Step 2: Take first 10 (highest IDs)
-      const top10 = sortedById.slice(0, 10);
+      // Step 2: All cards stay in order — highest ID first, lowest ID last
+      const finalOrder = sortedById;
 
-      // Step 3: Take remaining and shuffle them
-      const remaining = sortedById.slice(10);
-      const shuffledRemaining = shuffleArray(remaining);
-
-      // Step 4: Combine: top10 (ordered) + shuffledRemaining (random)
-      const finalOrder = [...top10, ...shuffledRemaining];
-
-      // Step 5: Display in this order
+      // Step 3: Display in this order
       finalOrder.forEach((prompt, index) => {
         // Insert ad after every 10th card (after cards 10, 20, 30...)
         if (index > 0 && index % 10 === 0 && adIndex < adContainerIds.length) {
