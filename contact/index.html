@@ -40,10 +40,10 @@
             min-height: 100vh;
         }
 
-        /* ----- PROFESSIONAL NAVBAR (from your existing pages) ----- */
+        /* ----- NAVBAR (EXACTLY from home/prompts pages) ----- */
         .navbar {
             background: #ffffff;
-            border-bottom: 1px solid #d0d7e0;
+            border-bottom: 1px solid #eaeef2;
             padding: 12px 0;
             position: sticky;
             top: 0;
@@ -82,7 +82,7 @@
         .logo-text {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #0b1a2c;
+            color: #1e2b3c;
             letter-spacing: -0.02em;
         }
 
@@ -94,25 +94,94 @@
 
         .nav-link {
             padding: 8px 18px;
-            color: #1e3a5f;
+            color: #2d4059;
             text-decoration: none;
             font-weight: 500;
             font-size: 1rem;
             border-radius: 40px;
             transition: background 0.2s;
-            border-bottom: 2px solid transparent;
         }
 
         .nav-link:hover {
-            background: #e9ecf0;
-            border-bottom-color: #1a5cff;
+            background: #f5f7fa;
         }
 
-        .nav-link.active {
-            background: #e9ecf0;
-            border-bottom-color: #1a5cff;
-            color: #1a5cff;
-            font-weight: 600;
+        .tools-dropdown {
+            position: relative;
+        }
+
+        .tools-trigger {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-weight: 500;
+            color: #2d4059;
+            cursor: default;
+            border-radius: 40px;
+        }
+
+        .tools-trigger i {
+            font-size: 12px;
+            color: #6b7f9a;
+            transition: transform 0.2s;
+        }
+
+        .tools-dropdown:hover .tools-trigger i {
+            transform: rotate(180deg);
+        }
+
+        .tools-dropdown:hover .tools-trigger {
+            background: #f5f7fa;
+        }
+
+        .tools-dropdown .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            min-width: 260px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #edf2f7;
+            padding: 8px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-5px);
+            transition: all 0.2s;
+            z-index: 1000;
+        }
+
+        .tools-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .tools-dropdown .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #2d4059;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .tools-dropdown .dropdown-menu a:hover {
+            background: #f8fafd;
+        }
+
+        .new-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 30px;
+            margin-left: 8px;
+            letter-spacing: 0.3px;
+            vertical-align: middle;
+            box-shadow: 0 2px 4px rgba(249,115,22,0.3);
         }
 
         .legal-dropdown {
@@ -125,15 +194,14 @@
             gap: 6px;
             padding: 8px 18px;
             font-weight: 500;
-            color: #1e3a5f;
+            color: #2d4059;
             cursor: default;
             border-radius: 40px;
-            border-bottom: 2px solid transparent;
         }
 
         .legal-trigger i {
             font-size: 12px;
-            color: #2d4b6e;
+            color: #6b7f9a;
             transition: transform 0.2s;
         }
 
@@ -142,18 +210,18 @@
         }
 
         .legal-dropdown:hover .legal-trigger {
-            background: #e9ecf0;
+            background: #f5f7fa;
         }
 
-        .dropdown-menu {
+        .legal-dropdown .dropdown-menu {
             position: absolute;
             top: calc(100% + 8px);
             right: 0;
             min-width: 200px;
             background: white;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            border: 1px solid #d0d7e0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #edf2f7;
             padding: 8px 0;
             opacity: 0;
             visibility: hidden;
@@ -168,18 +236,16 @@
             transform: translateY(0);
         }
 
-        .dropdown-menu a {
+        .legal-dropdown .dropdown-menu a {
             display: block;
             padding: 10px 20px;
-            color: #1e3a5f;
+            color: #2d4059;
             text-decoration: none;
             font-size: 0.95rem;
-            border-left: 3px solid transparent;
         }
 
-        .dropdown-menu a:hover {
-            background: #f0f4fa;
-            border-left-color: #1a5cff;
+        .legal-dropdown .dropdown-menu a:hover {
+            background: #f8fafd;
         }
 
         .mobile-btn {
@@ -189,18 +255,35 @@
             align-items: center;
             width: 44px;
             height: 44px;
-            background: #eef2f6;
+            background: #f8fafd;
             border-radius: 40px;
             cursor: pointer;
-            border: 1px solid #d0d7e0;
+            border: 1px solid #eef2f6;
+            position: relative;
         }
 
         .mobile-btn span {
             width: 20px;
             height: 2px;
-            background: #1e3a5f;
+            background: #2d4059;
             margin: 3px 0;
             border-radius: 2px;
+        }
+
+        .mobile-btn::after {
+            content: "NEW";
+            position: absolute;
+            top: -6px;
+            right: -8px;
+            background: #f97316;
+            color: white;
+            font-size: 0.55rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-family: monospace;
         }
 
         .mobile-menu {
@@ -209,47 +292,52 @@
             border-radius: 20px;
             margin-top: 16px;
             padding: 20px 16px;
-            border: 1px solid #d0d7e0;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border: 1px solid #e9ecf0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.04);
         }
 
         .mobile-menu a {
             display: block;
-            padding: 12px 16px;
-            color: #1e2b3c;
+            padding: 10px 16px;
+            color: #2c3e50;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
+            font-weight: 450;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            letter-spacing: 0.01em;
             border-radius: 12px;
-            border-left: 3px solid transparent;
+            transition: background 0.15s;
         }
 
         .mobile-menu a:hover {
-            background: #eef2f6;
-            border-left-color: #1a5cff;
+            background: #f5f7fa;
         }
 
-        .mobile-menu a.active {
-            background: #eef2f6;
-            border-left-color: #1a5cff;
-            color: #1a5cff;
-            font-weight: 600;
-        }
-
-        .mobile-legal {
+        .mobile-tools, .mobile-legal {
             margin-top: 8px;
         }
 
-        .mobile-legal p {
-            padding: 8px 16px 4px;
-            color: #2d4b6e;
-            font-size: 0.8rem;
+        .mobile-tools p, .mobile-legal p {
+            padding: 12px 16px 4px;
+            color: #7f8fa4;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.4px;
         }
 
-        /* Main Content */
+        .mobile-new-badge {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 30px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        /* ----- MAIN CONTENT (contact page specific - untouched) ----- */
         .main-content {
             max-width: 1200px;
             margin: 40px auto 40px;
@@ -257,7 +345,6 @@
             flex: 1;
         }
 
-        /* Contact Page Specific Styles */
         .page-header {
             text-align: center;
             margin-bottom: 40px;
@@ -503,13 +590,13 @@
             margin-top: 10px;
         }
 
-        /* ----- PROFESSIONAL FOOTER (from your existing pages) ----- */
+        /* ----- FOOTER (EXACTLY from home/prompts pages) ----- */
         .footer {
             background: #0f1a26;
             color: #e1eaf2;
             padding: 40px 0 24px;
             margin-top: auto;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.03);
         }
 
         .footer-grid {
@@ -517,8 +604,10 @@
             grid-template-columns: 1fr 1.5fr 1.8fr;
             gap: 40px 50px;
             align-items: start;
+            margin-bottom: 24px;
             max-width: 1300px;
-            margin: 0 auto 24px;
+            margin-left: auto;
+            margin-right: auto;
             padding: 0 24px;
         }
 
@@ -540,16 +629,14 @@
         .footer-links a {
             color: #c7d9ec;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: color 0.15s;
             display: inline-block;
             padding: 4px 0;
-            border-bottom: 1px solid transparent;
         }
 
         .footer-links a:hover {
             color: white;
-            border-bottom-color: #5c8dff;
         }
 
         .footer-social h4 {
@@ -575,23 +662,22 @@
         .social-item a {
             color: #c7d9ec;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: color 0.15s;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            border-bottom: 1px solid transparent;
         }
 
         .social-item a:hover {
             color: white;
-            border-bottom-color: #5c8dff;
         }
 
         .social-item i {
             width: 20px;
             font-size: 1.1rem;
             color: #8fadcf;
+            transition: color 0.15s;
         }
 
         .social-item a:hover i {
@@ -599,7 +685,7 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.05);
             padding-top: 18px;
             display: flex;
             justify-content: space-between;
@@ -607,13 +693,24 @@
             flex-wrap: wrap;
             gap: 12px;
             color: #8ba0b9;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             max-width: 1300px;
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
             padding: 18px 24px 0;
         }
 
-        /* Responsive */
+        /* ----- RESPONSIVE (EXACTLY from home/prompts pages) ----- */
+        @media (max-width: 1024px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
         @media (max-width: 992px) {
             .contact-container {
                 grid-template-columns: 1fr;
@@ -621,27 +718,7 @@
             }
         }
 
-        @media (max-width: 900px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 30px;
-            }
-        }
-
         @media (max-width: 768px) {
-            .main-content {
-                padding: 0 20px;
-                margin: 30px auto;
-            }
-
-            .page-title {
-                font-size: 24px;
-            }
-
-            .contact-info, .contact-form {
-                padding: 30px 25px;
-            }
-
             .desktop-nav {
                 display: none;
             }
@@ -651,9 +728,10 @@
             .mobile-menu.active {
                 display: block;
             }
-        }
-
-        @media (max-width: 650px) {
+            .main-content {
+                margin-top: 30px;
+                padding: 0 20px;
+            }
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 28px;
@@ -664,6 +742,7 @@
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
+                gap: 12px;
             }
         }
 
@@ -672,43 +751,42 @@
                 padding: 0 16px;
                 margin: 25px auto;
             }
-
             .page-title {
                 font-size: 22px;
             }
-
             .contact-info, .contact-form {
                 padding: 25px 20px;
             }
-
             .contact-method {
                 padding: 15px;
             }
-
             .contact-icon {
                 width: 40px;
                 height: 40px;
                 font-size: 16px;
             }
-
             .social-buttons {
                 flex-direction: column;
             }
-
             .social-buttons .contact-link {
                 width: 100%;
                 text-align: center;
                 justify-content: center;
             }
-
             .social-links {
                 justify-content: center;
+            }
+            .mobile-btn::after {
+                font-size: 0.5rem;
+                padding: 1px 4px;
+                top: -4px;
+                right: -6px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- PROFESSIONAL NAVBAR (from your existing pages) -->
+    <!-- NAVBAR (EXACTLY from home/prompts pages) -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="/" class="logo-link">
@@ -718,9 +796,24 @@
 
             <div class="desktop-nav">
                 <a href="/" class="nav-link">Home</a>
-
+                
+                <!-- TOOLS DROPDOWN WITH NEW BADGE -->
+                <div class="tools-dropdown">
+                    <span class="nav-link tools-trigger">
+                        Tools <i class="fas fa-chevron-down"></i>
+                        <span class="new-badge">NEW</span>
+                    </span>
+                    <div class="dropdown-menu">
+                        <a href="/gemini-watermark-remover.html">
+                            Gemini Watermark Remover
+                            <span class="new-badge" style="margin-left: 8px; font-size: 0.6rem;">✨</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="/prompts" class="nav-link">Prompts</a>
                 <a href="/about" class="nav-link">About</a>
-                <a href="/contact" class="nav-link active">Contact</a>
+                <a href="/contact" class="nav-link">Contact</a>
                 <div class="legal-dropdown">
                     <span class="nav-link legal-trigger">Legal <i class="fas fa-chevron-down"></i></span>
                     <div class="dropdown-menu">
@@ -740,9 +833,16 @@
         <div class="container">
             <div class="mobile-menu" id="mobileMenu">
                 <a href="/">Home</a>
-
+                <div class="mobile-tools">
+                    <p>Tools <span class="mobile-new-badge">NEW</span></p>
+                    <a href="/gemini-watermark-remover.html">
+                        Gemini Watermark Remover 
+                        <span class="mobile-new-badge" style="margin-left: 8px;">✨</span>
+                    </a>
+                </div>
+                <a href="/prompts">Prompts</a>
                 <a href="/about">About</a>
-                <a href="/contact" class="active">Contact</a>
+                <a href="/contact">Contact</a>
                 <div class="mobile-legal">
                     <p>Legal</p>
                     <a href="/policy">Privacy policy</a>
@@ -752,6 +852,7 @@
         </div>
     </nav>
 
+    <!-- MAIN CONTENT (contact page specific - untouched) -->
     <main class="main-content">
         <div class="page-header">
             <h1 class="page-title">Get in Touch</h1>
@@ -888,7 +989,7 @@
         </div>
     </main>
 
-    <!-- PROFESSIONAL FOOTER (from your existing pages) -->
+    <!-- FOOTER (EXACTLY from home/prompts pages) -->
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-brand">
@@ -897,14 +998,13 @@
 
             <div class="footer-links">
                 <a href="/">Home</a>
-
+                <a href="/prompts">Prompts</a>
                 <a href="/about">About</a>
                 <a href="/contact">Contact</a>
                 <a href="/policy">Privacy policy</a>
                 <a href="/term">Terms of use</a>
                 <a href="/sitemap.xml">Sitemap</a>
-                <a href="/links.html">directory</a>
-
+                <a href="/links.html">Directory</a>
             </div>
 
             <div class="footer-social">
@@ -929,10 +1029,10 @@
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GH0DLY6H1F');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GH0DLY6H1F');
     </script>
 
     <!-- Mobile menu toggle script -->
