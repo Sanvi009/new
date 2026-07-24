@@ -542,6 +542,7 @@
       height: auto;
       will-change: transform;
       cursor: pointer;
+      position: relative;
     }
 
     .prompt-card:hover {
@@ -1058,14 +1059,12 @@
 
       // Step 3: Display in this order
       finalOrder.forEach((prompt, index) => {
-        // Create prompt card
-        const card = document.createElement('div');
+        // Create anchor tag instead of div
+        const card = document.createElement('a');
         card.className = 'prompt-card';
-        card.style.cursor = 'pointer';
-        
-        card.addEventListener('click', function() {
-          window.open(prompt.file_path, '_blank', 'noopener,noreferrer');
-        });
+        card.href = prompt.file_path;
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
 
         const img = document.createElement('img');
         img.className = 'card-image';
