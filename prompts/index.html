@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5114578174657429" crossorigin="anonymous"></script>
-  <meta name="google-adsense-account" content="ca-pub-5114578174657429">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH0DLY6H1F"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GH0DLY6H1F');
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brainloom | Unlimited AI Prompts Gallery</title>
@@ -32,9 +20,6 @@
   
   <!-- Preconnect to important domains -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://www.highperformanceformat.com">
   <link rel="dns-prefetch" href="https://brainloom.online">
 
   <!-- Font Awesome 6 (deferred) -->
@@ -77,7 +62,6 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      padding-bottom: 90px; /* Space for sticky banner on desktop */
     }
 
     .main-wrapper {
@@ -575,58 +559,6 @@
       aspect-ratio: 1;
     }
 
-    /* ---- NATIVE AD STYLING ---- */
-    .ad-card {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: block;
-      border: 3px solid #333;
-      aspect-ratio: 1;
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-
-    .ad-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      border-color: #007AFF;
-    }
-
-    .ad-card .ad-label {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background: rgba(0, 0, 0, 0.6);
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 10px;
-      padding: 2px 8px;
-      border-radius: 12px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .ad-card .ad-container-inner {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f5f5f5;
-    }
-
-    .ad-card .ad-container-inner iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-
     /* Skeleton cards */
     .skeleton-card {
       background: #f0f0f0;
@@ -668,65 +600,6 @@
       border-radius: 12px;
       margin: 20px 0;
       grid-column: 1 / -1;
-    }
-
-    /* Sticky Bottom Ad Banner */
-    .sticky-bottom-ad {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: transparent;
-      z-index: 999;
-      text-align: center;
-      pointer-events: none;
-    }
-
-    .sticky-bottom-ad .ad-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      pointer-events: auto;
-    }
-
-    .sticky-bottom-ad .ad-desktop-bottom,
-    .sticky-bottom-ad .ad-mobile-bottom {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .sticky-bottom-ad .ad-desktop-bottom {
-      display: block;
-    }
-
-    .sticky-bottom-ad .ad-mobile-bottom {
-      display: none;
-    }
-
-    /* Close button for sticky ad */
-    .sticky-ad-close {
-      position: absolute;
-      top: -12px;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.7);
-      color: white;
-      border: none;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: auto;
-      z-index: 1000;
-      transition: background 0.2s;
-    }
-
-    .sticky-ad-close:hover {
-      background: rgba(0, 0, 0, 0.9);
     }
 
     /* ----- FOOTER ----- */
@@ -861,10 +734,6 @@
     }
 
     @media (max-width: 768px) {
-      body {
-        padding-bottom: 50px; /* Space for sticky banner on mobile */
-      }
-      
       .desktop-nav {
         display: none;
       }
@@ -893,13 +762,6 @@
         flex-direction: column;
         text-align: center;
         gap: 12px;
-      }
-      
-      .sticky-bottom-ad .ad-desktop-bottom {
-        display: none;
-      }
-      .sticky-bottom-ad .ad-mobile-bottom {
-        display: block;
       }
     }
 
@@ -1035,84 +897,6 @@
     </main>
   </div>
 
-  <!-- STICKY BOTTOM AD BANNER -->
-  <div class="sticky-bottom-ad" id="stickyAd">
-    <button class="sticky-ad-close" id="closeStickyAd" aria-label="Close ad">×</button>
-    <div class="ad-container">
-      <div class="ad-desktop-bottom" id="desktopStickyAd">
-        <script>
-          atOptions = {
-            'key' : 'b75dc01633443b14f77dc29cc7f9bd23',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        </script>
-        <script src="https://www.highperformanceformat.com/b75dc01633443b14f77dc29cc7f9bd23/invoke.js"></script>
-      </div>
-      <div class="ad-mobile-bottom" id="mobileStickyAd">
-        <script>
-          atOptions = {
-            'key' : '479576db2af273889a99b868e84c0ea0',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-          };
-        </script>
-        <script src="https://www.highperformanceformat.com/479576db2af273889a99b868e84c0ea0/invoke.js"></script>
-      </div>
-    </div>
-  </div>
-
-  <!-- 11 AD ZONES (Preloaded for faster loading - visible but outside grid) -->
-  <div id="ad-storage" style="display: none;">
-    <!-- Ad Zone 1 -->
-    <script async="async" data-cfasync="false" src="https://pl28052024.effectivecpmnetwork.com/f9c331ef7d861102f3412494f9633852/invoke.js"></script>
-    <div id="container-f9c331ef7d861102f3412494f9633852"></div>
-
-    <!-- Ad Zone 2 -->
-    <script async="async" data-cfasync="false" src="https://pl28052037.effectivecpmnetwork.com/78d7c4546065e09780f202119b4cdf60/invoke.js"></script>
-    <div id="container-78d7c4546065e09780f202119b4cdf60"></div>
-
-    <!-- Ad Zone 3 -->
-    <script async="async" data-cfasync="false" src="https://pl28052052.effectivecpmnetwork.com/08f69106b01cf648fb2519fab7635420/invoke.js"></script>
-    <div id="container-08f69106b01cf648fb2519fab7635420"></div>
-
-    <!-- Ad Zone 4 -->
-    <script async="async" data-cfasync="false" src="https://pl28052071.effectivecpmnetwork.com/44c81b95b59644eb70d472ce63d80c55/invoke.js"></script>
-    <div id="container-44c81b95b59644eb70d472ce63d80c55"></div>
-
-    <!-- Ad Zone 5 -->
-    <script async="async" data-cfasync="false" src="https://pl28052082.effectivecpmnetwork.com/94eb646ad633a324c767ee7bea631d10/invoke.js"></script>
-    <div id="container-94eb646ad633a324c767ee7bea631d10"></div>
-
-    <!-- Ad Zone 6 -->
-    <script async="async" data-cfasync="false" src="https://pl28052102.effectivecpmnetwork.com/53e735d786d2876a71aa7334d1c87be8/invoke.js"></script>
-    <div id="container-53e735d786d2876a71aa7334d1c87be8"></div>
-
-    <!-- Ad Zone 7 -->
-    <script async="async" data-cfasync="false" src="https://pl27936266.effectivecpmnetwork.com/9bdd34d9a96a7b5e7a40a6a5b31bfaa5/invoke.js"></script>
-    <div id="container-9bdd34d9a96a7b5e7a40a6a5b31bfaa5"></div>
-
-    <!-- Ad Zone 8 -->
-    <script async="async" data-cfasync="false" src="https://pl27925023.effectivecpmnetwork.com/2545f92bc79abdf7da2f2d3e95230cc4/invoke.js"></script>
-    <div id="container-2545f92bc79abdf7da2f2d3e95230cc4"></div>
-
-    <!-- Ad Zone 9 -->
-    <script async="async" data-cfasync="false" src="https://pl27595517.effectivecpmnetwork.com/3455e3acf51a2681e3b7a266c42c9509/invoke.js"></script>
-    <div id="container-3455e3acf51a2681e3b7a266c42c9509"></div>
-
-    <!-- Ad Zone 10 -->
-    <script async="async" data-cfasync="false" src="https://pl28052017.effectivecpmnetwork.com/87c5a54c469859a57bf24f85b03c596d/invoke.js"></script>
-    <div id="container-87c5a54c469859a57bf24f85b03c596d"></div>
-
-    <!-- Ad Zone 11 -->
-    <script async="async" data-cfasync="false" src="https://pl27490395.effectivecpmnetwork.com/3872d0ade3fb1fd6bf5b02095d576f6f/invoke.js"></script>
-    <div id="container-3872d0ade3fb1fd6bf5b02095d576f6f"></div>
-  </div>
-
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-grid">
@@ -1152,29 +936,11 @@
 
   <!-- SCRIPTS -->
   <script>
-    // AD LINK CONFIGURATION
-    const AD_LINK = 'https://www.profitablecpmratenetwork.com/k8ss6qs8?key=9767be64a42ff16ff8e6469c6efd9007';
-
     // Global variables
     let allPrompts = [];
     let currentSearch = '';
     let searchTimeout = null;
     let imageObserver = null;
-
-    // List of ad container IDs (exactly the 11 you provided)
-    const adContainerIds = [
-      'container-f9c331ef7d861102f3412494f9633852',
-      'container-78d7c4546065e09780f202119b4cdf60',
-      'container-08f69106b01cf648fb2519fab7635420',
-      'container-44c81b95b59644eb70d472ce63d80c55',
-      'container-94eb646ad633a324c767ee7bea631d10',
-      'container-53e735d786d2876a71aa7334d1c87be8',
-      'container-9bdd34d9a96a7b5e7a40a6a5b31bfaa5',
-      'container-2545f92bc79abdf7da2f2d3e95230cc4',
-      'container-3455e3acf51a2681e3b7a266c42c9509',
-      'container-87c5a54c469859a57bf24f85b03c596d',
-      'container-3872d0ade3fb1fd6bf5b02095d576f6f'
-    ];
 
     function extractTitle(filePath) {
       let fileName = filePath.split('/').pop().replace('.html', '');
@@ -1239,7 +1005,7 @@
           </div>
         `;
         suggestion.addEventListener('click', () => {
-          handleCardClick(prompt.file_path);
+          window.open(prompt.file_path, '_blank', 'noopener,noreferrer');
         });
         suggestionsContainer.appendChild(suggestion);
       });
@@ -1267,14 +1033,6 @@
       });
     }
 
-    // HANDLE CARD CLICK - Load ad link in current page, open prompt in new tab
-    function handleCardClick(filePath) {
-      // Open the prompt page in a new tab
-      window.open(filePath, '_blank', 'noopener,noreferrer');
-      // Navigate current page to ad link
-      window.location.href = AD_LINK;
-    }
-
     function displayPrompts(prompts) {
       const gridContainer = document.getElementById('promptsGrid');
 
@@ -1291,7 +1049,6 @@
       setupLazyLoading();
 
       const immediateCount = Math.min(15, prompts.length);
-      let adIndex = 0;
 
       // Step 1: Sort all prompts by ID (highest to lowest)
       const sortedById = [...prompts].sort((a, b) => b.id - a.id);
@@ -1301,46 +1058,13 @@
 
       // Step 3: Display in this order
       finalOrder.forEach((prompt, index) => {
-        // Insert ad after every 10th card (after cards 10, 20, 30...)
-        if (index > 0 && index % 10 === 0 && adIndex < adContainerIds.length) {
-          // Get the next ad container ID
-          const containerId = adContainerIds[adIndex];
-          adIndex++;
-
-          // Get the ad container element (which is already loaded in the DOM)
-          const adContainer = document.getElementById(containerId);
-          
-          // Create ad card
-          const adCard = document.createElement('div');
-          adCard.className = 'ad-card';
-          
-          // Add a small "Ad" label
-          const adLabel = document.createElement('div');
-          adLabel.className = 'ad-label';
-          adLabel.textContent = 'Ad';
-          adCard.appendChild(adLabel);
-          
-          // Create inner container for the ad
-          const adInner = document.createElement('div');
-          adInner.className = 'ad-container-inner';
-          adCard.appendChild(adInner);
-          
-          // Move the ad container into the card (it already has the ad loaded)
-          if (adContainer) {
-            adContainer.style.display = 'block';
-            adInner.appendChild(adContainer);
-          }
-          
-          gridContainer.appendChild(adCard);
-        }
-
         // Create prompt card
         const card = document.createElement('div');
         card.className = 'prompt-card';
         card.style.cursor = 'pointer';
         
         card.addEventListener('click', function() {
-          handleCardClick(prompt.file_path);
+          window.open(prompt.file_path, '_blank', 'noopener,noreferrer');
         });
 
         const img = document.createElement('img');
@@ -1444,82 +1168,6 @@
       });
 
       loadPrompts();
-    });
-
-    // Sticky Bottom Ad functionality
-    const stickyAd = document.getElementById('stickyAd');
-    const closeStickyAd = document.getElementById('closeStickyAd');
-    let adInterval;
-    let isAdClosed = false;
-
-    // Function to refresh the ad
-    function refreshStickyAd() {
-      if (isAdClosed) return;
-
-      const desktopAd = document.getElementById('desktopStickyAd');
-      const mobileAd = document.getElementById('mobileStickyAd');
-
-      // Clear existing content
-      if (desktopAd) desktopAd.innerHTML = '';
-      if (mobileAd) mobileAd.innerHTML = '';
-
-      // Reload desktop ad
-      if (desktopAd) {
-        const desktopScript1 = document.createElement('script');
-        desktopScript1.textContent = `
-          atOptions = {
-            'key' : 'b75dc01633443b14f77dc29cc7f9bd23',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        `;
-        const desktopScript2 = document.createElement('script');
-        desktopScript2.src = 'https://www.highperformanceformat.com/b75dc01633443b14f77dc29cc7f9bd23/invoke.js';
-        desktopAd.appendChild(desktopScript1);
-        desktopAd.appendChild(desktopScript2);
-      }
-
-      // Reload mobile ad
-      if (mobileAd) {
-        const mobileScript1 = document.createElement('script');
-        mobileScript1.textContent = `
-          atOptions = {
-            'key' : '479576db2af273889a99b868e84c0ea0',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-          };
-        `;
-        const mobileScript2 = document.createElement('script');
-        mobileScript2.src = 'https://www.highperformanceformat.com/479576db2af273889a99b868e84c0ea0/invoke.js';
-        mobileAd.appendChild(mobileScript1);
-        mobileAd.appendChild(mobileScript2);
-      }
-    }
-
-    // Close ad function
-    if (closeStickyAd) {
-      closeStickyAd.addEventListener('click', function() {
-        stickyAd.style.display = 'none';
-        isAdClosed = true;
-        document.body.style.paddingBottom = '0';
-        if (adInterval) {
-          clearInterval(adInterval);
-        }
-      });
-    }
-
-    // Start refresh interval (30 seconds)
-    adInterval = setInterval(refreshStickyAd, 30000);
-
-    // Clean up interval when page unloads
-    window.addEventListener('beforeunload', function() {
-      if (adInterval) {
-        clearInterval(adInterval);
-      }
     });
   </script>
 
